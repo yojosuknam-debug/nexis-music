@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="yojosuknam music archive. Choose a genre, browse albums, and open the matching YouTube playlist on mobile.">
+  <title>yojosuknam Music Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260308d">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOJOSUKNAM MUSIC ARCHIVE</p>
+        <h1>&#51109;&#47476;&#47484; &#44256;&#47476;&#47732;, &#44536; &#51109;&#47476;&#51032; &#50536;&#48276;&#44284; &#51116;&#49373;&#47785;&#47197;&#51004;&#47196; &#48148;&#47196; &#46308;&#50612;&#44049;&#45768;&#45796;.</h1>
+        <div class="hero-stats" id="hero-stats"></div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#genre-browser">&#51109;&#47476;&#48324; &#50536;&#48276; &#48372;&#44592;</a>
+          <a class="button button-secondary" href="https://www.youtube.com/channel/UCl_D2zwR6AfgTBAJ6jQq00Q" target="_blank" rel="noreferrer">Topic &#52292;&#45328; &#48372;&#44592;</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section-compact" id="genre-browser">
+        <div class="section-heading">
+          <p class="section-kicker">&#51109;&#47476; &#48652;&#46972;&#50864;&#51200;</p>
+          <h2>&#51109;&#47476;&#47484; &#47676;&#51200; &#44256;&#47476;&#49464;&#50836;</h2>
+          <p>&#50500;&#47000; &#50536;&#48276; &#47785;&#47197;&#51008; &#51109;&#47476;&#47484; &#44256;&#47476;&#47732; &#44536;&#50640; &#47582;&#44172; &#48148;&#44965;&#45705;&#45768;&#45796;.</p>
+        </div>
+        <div class="filter-grid" id="genre-filters"></div>
+      </section>
+
+      <section class="section album-browser">
+        <div class="section-heading album-heading">
+          <div>
+            <p class="section-kicker">Albums</p>
+            <h2 id="album-section-title">All Albums</h2>
+          </div>
+          <p id="album-section-meta"></p>
+        </div>
+        <div class="album-grid" id="album-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data.js?v=20260308d"></script>
+  <script src="app.js?v=20260308d"></script>
+</body>
+</html>
