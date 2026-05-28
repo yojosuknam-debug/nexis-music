@@ -99,21 +99,37 @@ def get_playlists(channel_id: str, default_genre: str) -> list[dict]:
     return result
 
 
+def load_static_albums() -> list[dict]:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(script_dir, "static_albums.json")
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8-sig") as f:
+        data = json.load(f)
+    print(f"Static albums: {len(data)}")
+    return data
+
+
 def main() -> None:
     if not YOUTUBE_API_KEY:
         print("ERROR: YOUTUBE_API_KEY environment variable not set", file=sys.stderr)
         sys.exit(1)
 
-    all_albums: list[dict] = []
+    static_albums = load_static_albums()
+    existing_urls = {a["playlist_url"] for a in static_albums}
+
+    fetched: list[dict] = []
     for ch in CHANNELS:
         channel_id = get_channel_id(ch["handle"])
         if not channel_id:
             continue
         playlists = get_playlists(channel_id, ch["default_genre"])
-        print(f"@{ch['handle']}: {len(playlists)} playlists")
-        all_albums.extend(playlists)
+        new_only = [p for p in playlists if p["playlist_url"] not in existing_urls]
+        print(f"@{ch['handle']}: {len(playlists)} playlists ({len(new_only)} new)")
+        fetched.extend(new_only)
 
-    print(f"Total: {len(all_albums)} playlists")
+    all_albums = static_albums + fetched
+    print(f"Total: {len(all_albums)} ({len(static_albums)} static + {len(fetched)} from YouTube)")
 
     json_str = json.dumps(all_albums, ensure_ascii=False)
     b64 = base64.b64encode(json_str.encode("utf-8")).decode("ascii")
