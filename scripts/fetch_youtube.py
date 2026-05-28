@@ -43,37 +43,42 @@ def yt_get(endpoint: str, params: dict) -> dict:
         return json.loads(resp.read().decode())
 
 
-def get_channel_id(handle: str) -> str | None:
+def get_channel_info(handle: str) -> tuple[str, str] | tuple[None, None]:
     try:
-        data = yt_get("channels", {"part": "id", "forHandle": handle})
+        data = yt_get("channels", {"part": "id,contentDetails", "forHandle": handle})
     except Exception as e:
         print(f"ERROR fetching channel @{handle}: {e}", file=sys.stderr)
-        return None
+        return None, None
     items = data.get("items", [])
     if not items:
         print(f"WARNING: channel not found for handle @{handle}", file=sys.stderr)
-        return None
-    return items[0]["id"]
+        return None, None
+    channel_id = items[0]["id"]
+    uploads_id = items[0].get("contentDetails", {}).get("relatedPlaylists", {}).get("uploads", "")
+    return channel_id, uploads_id
 
 
-def get_playlists(channel_id: str, default_genre: str) -> list[dict]:
+def get_videos(uploads_playlist_id: str, default_genre: str) -> list[dict]:
     result = []
     page_token = None
     while True:
         params: dict = {
-            "part": "snippet,contentDetails",
-            "channelId": channel_id,
+            "part": "snippet",
+            "playlistId": uploads_playlist_id,
             "maxResults": 50,
         }
         if page_token:
             params["pageToken"] = page_token
         try:
-            data = yt_get("playlists", params)
+            data = yt_get("playlistItems", params)
         except Exception as e:
-            print(f"ERROR fetching playlists: {e}", file=sys.stderr)
+            print(f"ERROR fetching videos: {e}", file=sys.stderr)
             break
         for item in data.get("items", []):
             snippet = item["snippet"]
+            video_id = snippet.get("resourceId", {}).get("videoId", "")
+            if not video_id:
+                continue
             thumbs = snippet.get("thumbnails", {})
             thumb = (
                 thumbs.get("maxres")
@@ -86,8 +91,8 @@ def get_playlists(channel_id: str, default_genre: str) -> list[dict]:
             result.append({
                 "genre": default_genre,
                 "title": title,
-                "playlist_url": f"https://www.youtube.com/playlist?list={item['id']}",
-                "track_count": str(item.get("contentDetails", {}).get("itemCount", 0)),
+                "playlist_url": f"https://www.youtube.com/watch?v={video_id}",
+                "track_count": "1",
                 "thumbnail_url": thumb,
                 "source": "youtube-api",
                 "status": "confirmed",
@@ -120,12 +125,12 @@ def main() -> None:
 
     fetched: list[dict] = []
     for ch in CHANNELS:
-        channel_id = get_channel_id(ch["handle"])
-        if not channel_id:
+        channel_id, uploads_id = get_channel_info(ch["handle"])
+        if not uploads_id:
             continue
-        playlists = get_playlists(channel_id, ch["default_genre"])
-        new_only = [p for p in playlists if p["playlist_url"] not in existing_urls]
-        print(f"@{ch['handle']}: {len(playlists)} playlists ({len(new_only)} new)")
+        videos = get_videos(uploads_id, ch["default_genre"])
+        new_only = [v for v in videos if v["playlist_url"] not in existing_urls]
+        print(f"@{ch['handle']}: {len(videos)} videos ({len(new_only)} new)")
         fetched.extend(new_only)
 
     all_albums = static_albums + fetched

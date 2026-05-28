@@ -167,7 +167,7 @@
         '<div class="album-card-body">',
         '<p class="album-count">' + album.count + '\uACE1</p>',
         '<h3>' + album.title + '</h3>',
-        '<a href="' + album.url + '" target="_blank" rel="noreferrer">\uC7AC\uC0DD\uBAA9\uB85D \uC5F4\uAE30</a>',
+        '<a href="' + album.url + '" target="_blank" rel="noreferrer">' + (album.isChannel ? '\uC601\uC0C1 \uBCF4\uAE30' : '\uC7AC\uC0DD\uBAA9\uB85D \uC5F4\uAE30') + '</a>',
         '</div>',
         '</article>'
       ].join('');
