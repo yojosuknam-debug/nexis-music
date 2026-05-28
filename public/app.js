@@ -8,6 +8,7 @@
 
   var activeGenre = 'all';
   var genres = [];
+  var channels = [];
   var albums = [];
 
   function decodeBase64Utf8(value) {
@@ -45,15 +46,25 @@
 
   function buildCatalog(rows) {
     var genreMap = new Map();
+    var channelMap = new Map();
     var items = rows.map(function (row, index) {
       var rawGenre = row.genre || 'Misc';
       var genreId = slugifyGenre(rawGenre);
-      if (!genreMap.has(genreId)) {
-        genreMap.set(genreId, formatGenreLabel(rawGenre));
+      var isChannel = row.source === 'youtube-api';
+
+      if (isChannel) {
+        if (!channelMap.has(genreId)) {
+          channelMap.set(genreId, formatGenreLabel(rawGenre));
+        }
+      } else {
+        if (!genreMap.has(genreId)) {
+          genreMap.set(genreId, formatGenreLabel(rawGenre));
+        }
       }
 
       return {
         genre: genreId,
+        isChannel: isChannel,
         title: row.title,
         count: row.track_count || '',
         url: row.playlist_url,
@@ -69,7 +80,12 @@
       genreItems.push({ id: id, label: label });
     });
 
-    return { genres: genreItems, albums: items };
+    var channelItems = [];
+    channelMap.forEach(function (label, id) {
+      channelItems.push({ id: id, label: label });
+    });
+
+    return { genres: genreItems, channels: channelItems, albums: items };
   }
 
   function renderStats() {
@@ -91,10 +107,22 @@
   }
 
   function renderGenreFilters() {
-    genreFilters.innerHTML = genres.map(function (genre) {
+    var genreChips = genres.map(function (genre) {
       var activeClass = genre.id === activeGenre ? ' is-active' : '';
       return '<button type="button" class="filter-chip' + activeClass + '" data-genre="' + genre.id + '">' + genre.label + '</button>';
     }).join('');
+
+    var channelChips = channels.map(function (ch) {
+      var activeClass = ch.id === activeGenre ? ' is-active' : '';
+      return '<button type="button" class="filter-chip filter-chip--channel' + activeClass + '" data-genre="' + ch.id + '">' + ch.label + '</button>';
+    }).join('');
+
+    var channelSection = channels.length
+      ? '<p class="filter-section-label">내 채널</p>' + channelChips
+      : '';
+
+    genreFilters.innerHTML =
+      '<p class="filter-section-label">장르</p>' + genreChips + channelSection;
 
     Array.prototype.forEach.call(genreFilters.querySelectorAll('button'), function (button) {
       button.addEventListener('click', function () {
@@ -121,11 +149,10 @@
 
   function renderAlbums() {
     var filtered = getFilteredAlbums();
-    var genre = genres.find(function (item) {
-      return item.id === activeGenre;
-    });
+    var genre = genres.find(function (item) { return item.id === activeGenre; });
+    var channel = channels.find(function (item) { return item.id === activeGenre; });
 
-    albumSectionTitle.textContent = genre ? genre.label : '\uC804\uCCB4 \uC568\uBC94';
+    albumSectionTitle.textContent = channel ? channel.label : (genre ? genre.label : '\uC804\uCCB4 \uC568\uBC94');
     albumSectionMeta.textContent = filtered.length + '\uAC1C \uC568\uBC94';
 
     if (!filtered.length) {
@@ -156,6 +183,7 @@
   var catalog = JSON.parse(decodeBase64Utf8(encoded));
   var parsed = buildCatalog(catalog);
   genres = parsed.genres;
+  channels = parsed.channels;
   albums = parsed.albums;
   renderStats();
   renderGenreFilters();

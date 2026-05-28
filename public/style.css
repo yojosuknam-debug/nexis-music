@@ -63,10 +63,16 @@ main { display: grid; gap: 10px; margin-top: 10px; }
 .section-heading p, #album-section-meta { color: var(--muted); font-size: 0.82rem; }
 .filter-grid, .album-grid { display: grid; }
 .filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.filter-section-label {
+  grid-column: 1 / -1; margin: 10px 0 2px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); opacity: 0.7;
+}
+.filter-section-label:first-child { margin-top: 0; }
 .filter-chip {
   min-height: 40px; padding: 8px 6px; border: 0; border-radius: 12px; background: #fff8ef; border: 1px solid rgba(185, 90, 26, 0.16); color: var(--accent-strong); font-weight: 700; font-size: 0.78rem; cursor: pointer;
 }
 .filter-chip.is-active { background: linear-gradient(135deg, #b95a1a, #8b3d07); color: #fff7ef; }
+.filter-chip--channel { background: #f0f7ff; border-color: rgba(26, 90, 185, 0.2); color: #1a4a8b; }
+.filter-chip--channel.is-active { background: linear-gradient(135deg, #1a5ab9, #0d3a8b); color: #eff7ff; }
 .album-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; }
 #album-grid.album-grid,
 .album-grid {

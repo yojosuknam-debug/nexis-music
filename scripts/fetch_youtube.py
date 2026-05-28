@@ -84,7 +84,7 @@ def get_playlists(channel_id: str, default_genre: str) -> list[dict]:
             ).get("url", "")
             title = snippet.get("title", "")
             result.append({
-                "genre": guess_genre(title, default_genre),
+                "genre": default_genre,
                 "title": title,
                 "playlist_url": f"https://www.youtube.com/playlist?list={item['id']}",
                 "track_count": str(item.get("contentDetails", {}).get("itemCount", 0)),
