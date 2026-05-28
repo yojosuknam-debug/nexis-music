@@ -1,0 +1,129 @@
+#!/usr/bin/env python3
+"""Fetch YouTube playlists from configured channels and regenerate public/data.js"""
+
+import json
+import base64
+import urllib.request
+import urllib.parse
+import os
+import sys
+
+YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", "")
+
+CHANNELS = [
+    {"handle": "Hanguk-Sounds",     "default_genre": "Hanguk Sounds"},
+    {"handle": "MidnightRadio-h3t", "default_genre": "Midnight Radio"},
+    {"handle": "Miso-Beats",        "default_genre": "Miso Beats"},
+]
+
+GENRE_KEYWORDS = {
+    "CCM":          ["ccm", "worship", "praise", "hymn", "gospel", "찬양"],
+    "K-Metal":      ["metal", "neon", "heavy", "rock"],
+    "Lofi":         ["lofi", "lo-fi", "chill", "midnight", "radio", "sleep"],
+    "Fusion":       ["fusion", "jazz", "blend"],
+    "Instrumental": ["instrumental", "strings", "season", "piano", "acoustic"],
+    "Beats":        ["beats", "hip-hop", "trap", "drill", "boom bap"],
+    "K-Fusion":     ["korean", "hanguk", "한국", "traditional", "가야금"],
+}
+
+
+def guess_genre(title: str, default: str) -> str:
+    lower = title.lower()
+    for genre, keywords in GENRE_KEYWORDS.items():
+        if any(kw in lower for kw in keywords):
+            return genre
+    return default
+
+
+def yt_get(endpoint: str, params: dict) -> dict:
+    params["key"] = YOUTUBE_API_KEY
+    url = "https://www.googleapis.com/youtube/v3/" + endpoint + "?" + urllib.parse.urlencode(params)
+    req = urllib.request.Request(url, headers={"Accept": "application/json"})
+    with urllib.request.urlopen(req) as resp:
+        return json.loads(resp.read().decode())
+
+
+def get_channel_id(handle: str) -> str | None:
+    try:
+        data = yt_get("channels", {"part": "id", "forHandle": handle})
+    except Exception as e:
+        print(f"ERROR fetching channel @{handle}: {e}", file=sys.stderr)
+        return None
+    items = data.get("items", [])
+    if not items:
+        print(f"WARNING: channel not found for handle @{handle}", file=sys.stderr)
+        return None
+    return items[0]["id"]
+
+
+def get_playlists(channel_id: str, default_genre: str) -> list[dict]:
+    result = []
+    page_token = None
+    while True:
+        params: dict = {
+            "part": "snippet,contentDetails",
+            "channelId": channel_id,
+            "maxResults": 50,
+        }
+        if page_token:
+            params["pageToken"] = page_token
+        try:
+            data = yt_get("playlists", params)
+        except Exception as e:
+            print(f"ERROR fetching playlists: {e}", file=sys.stderr)
+            break
+        for item in data.get("items", []):
+            snippet = item["snippet"]
+            thumbs = snippet.get("thumbnails", {})
+            thumb = (
+                thumbs.get("maxres")
+                or thumbs.get("high")
+                or thumbs.get("medium")
+                or thumbs.get("default")
+                or {}
+            ).get("url", "")
+            title = snippet.get("title", "")
+            result.append({
+                "genre": guess_genre(title, default_genre),
+                "title": title,
+                "playlist_url": f"https://www.youtube.com/playlist?list={item['id']}",
+                "track_count": str(item.get("contentDetails", {}).get("itemCount", 0)),
+                "thumbnail_url": thumb,
+                "source": "youtube-api",
+                "status": "confirmed",
+                "notes": "",
+            })
+        page_token = data.get("nextPageToken")
+        if not page_token:
+            break
+    return result
+
+
+def main() -> None:
+    if not YOUTUBE_API_KEY:
+        print("ERROR: YOUTUBE_API_KEY environment variable not set", file=sys.stderr)
+        sys.exit(1)
+
+    all_albums: list[dict] = []
+    for ch in CHANNELS:
+        channel_id = get_channel_id(ch["handle"])
+        if not channel_id:
+            continue
+        playlists = get_playlists(channel_id, ch["default_genre"])
+        print(f"@{ch['handle']}: {len(playlists)} playlists")
+        all_albums.extend(playlists)
+
+    print(f"Total: {len(all_albums)} playlists")
+
+    json_str = json.dumps(all_albums, ensure_ascii=False)
+    b64 = base64.b64encode(json_str.encode("utf-8")).decode("ascii")
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    out_path = os.path.join(script_dir, "..", "public", "data.js")
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(f"window.SITE_DATA_B64='{b64}';\n")
+    print(f"Written: {os.path.normpath(out_path)}")
+
+
+if __name__ == "__main__":
+    main()
