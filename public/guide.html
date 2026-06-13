@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="yojosuknam Music Archive — 소개와 사용법">
+  <title>Music Archive · 소개·사용법</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .g-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+    .g-back { text-decoration: none; font-weight: 800; font-size: 13px; color: var(--accent); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; background: var(--card); }
+    .g-badges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+    .g-badge { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px; text-align: center; }
+    .g-badge b { display: block; color: var(--accent); font-size: 14px; }
+    .g-badge span { font-size: 11px; color: var(--muted); }
+    .g-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-lg, 20px); padding: 20px; margin-top: 18px; box-shadow: var(--shadow); }
+    .g-card h2 { margin: 0 0 10px; color: var(--text); font-size: 18px; }
+    .g-steps { display: flex; flex-direction: column; gap: 12px; }
+    .g-step { display: flex; gap: 12px; }
+    .g-step .n { flex: 0 0 28px; height: 28px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 800; display: grid; place-items: center; }
+    .g-step h3 { margin: 0 0 3px; font-size: 15px; color: var(--text); }
+    .g-step p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .g-list { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <div class="g-top">
+      <p class="eyebrow" style="margin:0;">YOJOSUKNAM MUSIC ARCHIVE · 소개·사용법</p>
+      <a class="g-back" href="index.html">← 아카이브로</a>
+    </div>
+
+    <!-- 광고 — 매력 -->
+    <header class="hero">
+      <div class="hero-copy">
+        <h1 style="font-size:26px; line-height:1.4;">장르로 고르고, 바로 유튜브로 듣는 음악 아카이브.</h1>
+        <p style="color:var(--muted); font-size:15px; line-height:1.7; margin:10px 0 0;">
+          직접 만든 음악을 <strong>장르별로 정리</strong>해 모았습니다. 마음에 드는 장르를 고르면 앨범이 펼쳐지고,
+          누르면 <strong>그 장르의 유튜브 재생목록</strong>으로 바로 이어져 모바일에서 편하게 감상할 수 있어요.
+        </p>
+        <div class="g-badges">
+          <div class="g-badge"><b>장르별</b><span>골라 듣기</span></div>
+          <div class="g-badge"><b>유튜브 연동</b><span>재생목록 바로</span></div>
+          <div class="g-badge"><b>자동 갱신</b><span>새 곡 반영</span></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="g-card">
+      <h2>이런 분께</h2>
+      <ul class="g-list">
+        <li>직접 만든 음악을 장르별로 모아 듣고 싶은 분</li>
+        <li>유튜브에서 재생목록을 빠르게 찾아 틀고 싶은 분</li>
+        <li>모바일에서 가볍게 배경음악을 고르고 싶은 분</li>
+      </ul>
+    </div>
+
+    <div class="g-card">
+      <h2>사용법</h2>
+      <div class="g-steps">
+        <div class="g-step"><div class="n">1</div><div><h3>장르 고르기</h3><p>‘장르별 앨범 보기’에서 듣고 싶은 <strong>장르 필터</strong>를 누릅니다.</p></div></div>
+        <div class="g-step"><div class="n">2</div><div><h3>앨범 둘러보기</h3><p>그 장르의 <strong>앨범·곡 목록</strong>이 펼쳐집니다.</p></div></div>
+        <div class="g-step"><div class="n">3</div><div><h3>유튜브로 재생</h3><p>앨범을 누르면 <strong>해당 유튜브 재생목록</strong>이 열려 바로 감상할 수 있어요.</p></div></div>
+      </div>
+    </div>
+
+    <div class="g-card">
+      <h2>자주 묻는 질문</h2>
+      <p style="margin:0 0 6px; color:var(--text); font-weight:700;">Q. 어떤 음악인가요?</p>
+      <p style="margin:0 0 14px; color:var(--muted); font-size:14px; line-height:1.6;">직접 제작·큐레이션한 음악을 장르별로 정리한 개인 아카이브입니다.</p>
+      <p style="margin:0 0 6px; color:var(--text); font-weight:700;">Q. 새 곡은 어떻게 올라오나요?</p>
+      <p style="margin:0; color:var(--muted); font-size:14px; line-height:1.6;">연결된 채널의 새 업로드가 자동으로 반영됩니다.</p>
+    </div>
+
+    <div style="text-align:center; margin-top:22px;">
+      <a class="button button-primary" href="index.html">장르별 앨범 보러 가기 →</a>
+    </div>
+  </div>
+</body>
+</html>
