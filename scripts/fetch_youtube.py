@@ -101,6 +101,7 @@ def get_videos(uploads_playlist_id: str, default_genre: str) -> list[dict]:
                 "source": "youtube-api",
                 "status": "confirmed",
                 "notes": "",
+                "published_at": snippet.get("publishedAt", ""),
             })
         page_token = data.get("nextPageToken")
         if not page_token:

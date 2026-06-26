@@ -69,7 +69,8 @@
         count: row.track_count || '',
         url: row.playlist_url,
         thumbnail: row.thumbnail_url || '',
-        localThumbnail: row.local_cover || getLocalCoverPath(index)
+        localThumbnail: row.local_cover || getLocalCoverPath(index),
+        published: row.published_at || ''
       };
     }).filter(function (item) {
       return item.title && item.url;
@@ -137,9 +138,18 @@
     if (activeGenre === 'all') {
       return albums.slice().reverse();
     }
-    return albums.filter(function (album) {
+    var filtered = albums.filter(function (album) {
       return album.genre === activeGenre;
-    }).reverse();
+    });
+    // 채널(YouTube 업로드) 보기는 최신이 위로(업로드 날짜 내림차순).
+    // published 값이 없으면(아직 미수집) 수집 순서(최신순)를 유지한다.
+    var isChannelView = channels.some(function (ch) { return ch.id === activeGenre; });
+    if (isChannelView) {
+      return filtered.slice().sort(function (a, b) {
+        return (b.published || '').localeCompare(a.published || '');
+      });
+    }
+    return filtered.reverse();
   }
 
   function buildCoverTag(album) {
