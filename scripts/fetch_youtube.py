@@ -14,6 +14,10 @@ CHANNELS = [
     {"handle": "Hanguk-Sounds",     "default_genre": "Hanguk Sounds"},
     {"handle": "MidnightRadio-h3t", "default_genre": "Midnight Radio"},
     {"handle": "Miso-Beats",        "default_genre": "Miso Beats"},
+    # autovid/youtube-playlist 음악 채널 (2026-06-27 추가)
+    {"handle": "nexis-song",        "default_genre": "굳이 송"},
+    {"handle": "nexis-music",       "default_genre": "쉬어가는 감성 음악"},
+    {"handle": "stillwaters-r7m",   "default_genre": "Still Waters"},
 ]
 
 GENRE_KEYWORDS = {
