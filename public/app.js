@@ -177,14 +177,14 @@
 
     albumGrid.innerHTML = filtered.map(function (album) {
       return [
-        '<article class="album-card">',
+        '<a class="album-card" href="' + album.url + '" target="_blank" rel="noreferrer">',
         buildCoverTag(album),
         '<div class="album-card-body">',
         '<p class="album-count">' + album.count + '\uACE1</p>',
         '<h3>' + album.title + '</h3>',
-        '<a href="' + album.url + '" target="_blank" rel="noreferrer">' + (album.isChannel ? '\uC601\uC0C1 \uBCF4\uAE30' : '\uC7AC\uC0DD\uBAA9\uB85D \uC5F4\uAE30') + '</a>',
+        '<span class="album-card-link">' + (album.isChannel ? '\uC601\uC0C1 \uBCF4\uAE30' : '\uC7AC\uC0DD\uBAA9\uB85D \uC5F4\uAE30') + '</span>',
         '</div>',
-        '</article>'
+        '</a>'
       ].join('');
     }).join('');
   }
