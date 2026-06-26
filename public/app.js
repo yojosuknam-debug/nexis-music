@@ -134,9 +134,16 @@
     });
   }
 
+  function sortNewestFirst(list) {
+    // 업로드 날짜 내림차순(최신이 위로). 날짜 없는 항목(정적 앨범)은 아래로.
+    return list.slice().sort(function (a, b) {
+      return (b.published || '').localeCompare(a.published || '');
+    });
+  }
+
   function getFilteredAlbums() {
     if (activeGenre === 'all') {
-      return albums.slice().reverse();
+      return sortNewestFirst(albums);
     }
     var filtered = albums.filter(function (album) {
       return album.genre === activeGenre;
@@ -145,9 +152,7 @@
     // published 값이 없으면(아직 미수집) 수집 순서(최신순)를 유지한다.
     var isChannelView = channels.some(function (ch) { return ch.id === activeGenre; });
     if (isChannelView) {
-      return filtered.slice().sort(function (a, b) {
-        return (b.published || '').localeCompare(a.published || '');
-      });
+      return sortNewestFirst(filtered);
     }
     return filtered.reverse();
   }
