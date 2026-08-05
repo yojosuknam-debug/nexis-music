@@ -20,12 +20,19 @@
     return new TextDecoder('utf-8').decode(bytes);
   }
 
+  // 필터 버튼의 id 를 만든다.
+  //
+  // ⚠️ 한글을 지우면 안 된다. 예전엔 [^a-z0-9] 를 전부 '-' 로 바꿨는데, 그러면
+  // 한글로만 된 채널명이 통째로 사라져 빈 문자열이 되고 전부 'misc' 로 떨어졌다.
+  // 실제로 '굳이 송'과 '쉬어가는 감성 음악'이 같은 id 를 갖게 되어, 먼저 온 쪽만
+  // 버튼이 생기고 나머지 21편이 그 버튼에 흡수됐다(감성 음악 버튼이 아예 안 보임).
+  // \p{L}(문자)·\p{N}(숫자)을 유니코드 단위로 남겨 한글 채널명도 고유 id 를 갖게 한다.
   function slugifyGenre(value) {
     return (value || '')
       .toLowerCase()
       .trim()
       .replace(/&/g, ' and ')
-      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/[^\p{L}\p{N}]+/gu, '-')
       .replace(/^-+|-+$/g, '') || 'misc';
   }
 
