@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>옥탑 데모 (Rooftop Demo) — 넥시스 뮤직</title>
+<meta name="description" content="옥탑 데모 (Rooftop Demo) — 7곡 · 17분 · 가사 수록 7곡">
+<link rel="canonical" href="https://music.yojosuknam.com/album/옥탑-데모-rooftop-demo.html">
+<meta property="og:type" content="music.album">
+<meta property="og:title" content="옥탑 데모 (Rooftop Demo)">
+<meta property="og:description" content="옥탑 데모 (Rooftop Demo) — 7곡 · 17분 · 가사 수록 7곡">
+<meta property="og:image" content="https://audio.yojosuknam.com/cover/옥탑-데모-rooftop-demo.jpg">
+<meta property="og:url" content="https://music.yojosuknam.com/album/옥탑-데모-rooftop-demo.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="./jukebox.css">
+<style>:root{--accent:rgb(200,129,65);--accent-rgb:200,129,65}</style>
+</head>
+<body>
+<div class="bg" style="background-image:url('https://audio.yojosuknam.com/cover/옥탑-데모-rooftop-demo.jpg')"></div>
+<div class="veil"></div>
+
+<header class="top">
+  <a class="back" href="/index.html">← 아카이브</a>
+</header>
+
+<main class="wrap">
+  <div class="art">
+    <img src="https://audio.yojosuknam.com/cover/옥탑-데모-rooftop-demo.jpg" alt="옥탑 데모 (Rooftop Demo) 앨범 커버" width="800" height="800">
+    <p class="genre">K-R&amp;B / Neo-Soul / Boom-Bap</p>
+    <p class="mood">가사 수록 7곡</p>
+  </div>
+
+  <div class="main">
+    <h1>옥탑 데모 (Rooftop Demo)</h1>
+    <p class="sub"><b>7곡</b> · 17분</p>
+
+    <div class="transport">
+      <button class="play" id="play" aria-label="재생"></button>
+      <div class="scrub">
+        <div class="now" id="now"></div>
+        <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+        <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+
+    <div class="seg">
+      <button id="tabList" aria-selected="true">수록곡</button>
+      <button id="tabLyr" aria-selected="false">가사</button>
+    </div>
+    <div class="list" id="list"></div>
+    <div class="list lyr" id="lyrics" hidden></div>
+  </div>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script>window.ALBUM = {"title": "옥탑 데모 (Rooftop Demo)", "cover": "https://audio.yojosuknam.com/cover/옥탑-데모-rooftop-demo.jpg", "tracks": [{"n": 1, "title": "데모 1번 (Demo Take 1)", "ms": 119640, "url": "https://audio.yojosuknam.com/audio/옥탑-데모-rooftop-demo/01.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "vinyl crackle, Rhodes", "lines": []}, {"tag": "0:00-0:12", "lines": []}, {"tag": "Verse 1 - half-rap", "lines": []}, {"tag": "0:12-0:42", "lines": ["낡은 노트북 불을 켜고", "비트 하나 다시 짜봐", "방은 좁아도 꿈은 넓어", "오늘 데모 첫 테이크"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "0:42-1:00", "lines": []}, {"tag": "soft: one two, check", "lines": ["숨을 고르고 손을 얹어"]}, {"tag": "Chorus", "lines": []}, {"tag": "1:02-1:30", "lines": ["데모 원 데모 원 가 봐", "서툴러도 멋있어", "처음이라 반짝여", "이 소리가 나야 야"]}, {"tag": "Verse 2 - half-rap", "lines": []}, {"tag": "1:30-2:00", "lines": ["헤드폰 속에 나를 담아", "하나둘씩 쌓아 가", "실수해도 다시 눌러", "녹음 버튼 빛나"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "2:00-2:18", "lines": []}, {"tag": "soft: one two, check", "lines": ["숨을 고르고 손을 얹어"]}, {"tag": "Chorus", "lines": []}, {"tag": "2:20-2:48", "lines": ["데모 원 데모 원 가 봐", "서툴러도 멋있어", "처음이라 반짝여", "이 소리가 나야 야"]}, {"tag": "Bridge", "lines": []}, {"tag": "2:48-3:16", "lines": ["아무도 안 들어도 돼", "나를 위해 남긴 소리", "언젠가 크게 울려 야"]}, {"tag": "Final Chorus", "lines": []}, {"tag": "3:18-3:52", "lines": ["데모 원 데모 원 가 봐", "서툴러도 멋있어", "처음이라 반짝여", "이 소리가 나야 야"]}, {"tag": "Outro", "lines": []}, {"tag": "Rhodes fades, vinyl crackle", "lines": []}, {"tag": "3:52-4:06", "lines": ["라라라 나의 첫 데모"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 2, "title": "옥탑 (Rooftop)", "ms": 166480, "url": "https://audio.yojosuknam.com/audio/옥탑-데모-rooftop-demo/02.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "Rhodes, soft snaps", "lines": []}, {"tag": "0:00-0:14", "lines": []}, {"tag": "Verse 1", "lines": []}, {"tag": "0:14-0:44", "lines": ["옥탑 문을 열고 나가", "도시 위로 해가 져", "빨래 사이 바람 불어", "여기 나의 작은 하늘"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "0:44-1:02", "lines": ["좁은 방을 나와 보면", "세상 전부 내 발밑에"]}, {"tag": "Chorus", "lines": []}, {"tag": "1:04-1:32", "lines": ["옥탑 위에 나 홀로 오", "노을빛에 나를 놔", "높은 곳에 앉아 봐", "바람 결에 웃어 봐 야"]}, {"tag": "Verse 2", "lines": []}, {"tag": "1:32-2:02", "lines": ["화분 하나 나를 닮아", "좁은 자리 꽃을 피워", "라면 냄새 노을 냄새", "이 순간이 다 좋아"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "2:02-2:20", "lines": ["좁은 방을 나와 보면", "세상 전부 내 발밑에"]}, {"tag": "Chorus", "lines": []}, {"tag": "2:22-2:50", "lines": ["옥탑 위에 나 홀로 오", "노을빛에 나를 놔", "높은 곳에 앉아 봐", "바람 결에 웃어 봐 야"]}, {"tag": "Bridge", "lines": []}, {"tag": "2:50-3:18", "lines": ["낮은 데서 올라왔어", "한 계단씩 밟아 왔어", "이 옥상이 나의 별 야"]}, {"tag": "Final Chorus", "lines": []}, {"tag": "3:20-3:54", "lines": ["옥탑 위에 나 홀로 오", "노을빛에 나를 놔", "높은 곳에 앉아 봐", "바람 결에 웃어 봐 야"]}, {"tag": "Outro", "lines": []}, {"tag": "warm harmonies fade", "lines": []}, {"tag": "3:54-4:08", "lines": ["라라라 나의 옥탑"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 3, "title": "반지하 (Half-Basement)", "ms": 133680, "url": "https://audio.yojosuknam.com/audio/옥탑-데모-rooftop-demo/03.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "vibraphone, boom-bap drums", "lines": []}, {"tag": "0:00-0:12", "lines": []}, {"tag": "Verse 1 - rap", "lines": []}, {"tag": "0:12-0:42", "lines": ["반지하 창은 반쯤 열려", "발소리가 위를 지나", "햇빛 조금 아껴 마셔", "그래도 나는 웃어"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "0:42-1:00", "lines": ["좁은 방도 내 왕국이야", "비트 하나 크게 틀어"]}, {"tag": "Chorus", "lines": []}, {"tag": "1:02-1:30", "lines": ["반지하 반지하 좋아 오", "낮아도 나는 커", "울림통이 딱 좋아", "이 소리가 나야 야"]}, {"tag": "Verse 2 - rap", "lines": []}, {"tag": "1:30-2:00", "lines": ["곰팡이랑 인사하고", "벽에 스티커 하나 붙여", "월세 걱정 잠깐 접어", "오늘 만든 게 최고"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "2:00-2:18", "lines": ["좁은 방도 내 왕국이야", "비트 하나 크게 틀어"]}, {"tag": "Chorus", "lines": []}, {"tag": "2:20-2:48", "lines": ["반지하 반지하 좋아 오", "낮아도 나는 커", "울림통이 딱 좋아", "이 소리가 나야 야"]}, {"tag": "Bridge", "lines": []}, {"tag": "2:48-3:16", "lines": ["바닥에서 시작해도", "소리는 위로 퍼져", "언젠가 옥탑 갈 거야"]}, {"tag": "Final Chorus", "lines": []}, {"tag": "3:18-3:52", "lines": ["반지하 반지하 좋아 오", "낮아도 나는 커", "울림통이 딱 좋아", "이 소리가 나야 야"]}, {"tag": "Outro", "lines": []}, {"tag": "bass fades, vinyl crackle", "lines": []}, {"tag": "3:52-4:04", "lines": ["라라라 나의 반지하"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 4, "title": "새벽 세 시 (3 A.M.) (Instrumental)", "ms": 162680, "url": "https://audio.yojosuknam.com/audio/옥탑-데모-rooftop-demo/04.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "vinyl crackle, soft Rhodes", "lines": []}, {"tag": "0:00-0:20", "lines": []}, {"tag": "Main Groove", "lines": []}, {"tag": "dusty boom-bap drums enter, upright bass", "lines": []}, {"tag": "0:20-1:10", "lines": []}, {"tag": "Section B", "lines": []}, {"tag": "muted trumpet sample, faint rain texture", "lines": []}, {"tag": "1:10-2:00", "lines": []}, {"tag": "Break", "lines": []}, {"tag": "drums drop, lone Rhodes chords", "lines": []}, {"tag": "2:00-2:30", "lines": []}, {"tag": "Main Groove 2", "lines": []}, {"tag": "drums return warmer, subtle sampler clicks", "lines": []}, {"tag": "2:30-3:20", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "cassette hiss, chords fade out", "lines": []}, {"tag": "3:20-4:00", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 5, "title": "우리 (My People)", "ms": 139640, "url": "https://audio.yojosuknam.com/audio/옥탑-데모-rooftop-demo/05.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "horn stabs, claps", "lines": []}, {"tag": "0:00-0:12", "lines": []}, {"tag": "Verse 1", "lines": []}, {"tag": "0:12-0:42", "lines": ["옥상 위로 다 모여라"]}, {"tag": "group: 여기", "lines": ["음료 하나씩 나눠"]}, {"tag": "group: 좋아", "lines": ["각자 꿈은 다 달라도", "같은 비트 위에 서"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "0:42-1:00", "lines": ["혼자였던 밤은 가고", "이제 우리 함께 가"]}, {"tag": "Chorus", "lines": []}, {"tag": "1:02-1:32", "lines": ["우리 우리 다 같이 오", "어깨 걸고 노래해", "높이 없이 다 친구야", "이 밤이 다 우리야 야"]}, {"tag": "Verse 2", "lines": []}, {"tag": "1:32-2:02", "lines": ["서로 비트 들려주고"]}, {"tag": "group: 오", "lines": ["박수로 힘을 실어"]}, {"tag": "group: 가", "lines": ["넘어져도 손을 잡아", "다시 일어나게 해"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "2:02-2:20", "lines": ["혼자였던 밤은 가고", "이제 우리 함께 가"]}, {"tag": "Chorus", "lines": []}, {"tag": "2:22-2:52", "lines": ["우리 우리 다 같이 오", "어깨 걸고 노래해", "높이 없이 다 친구야", "이 밤이 다 우리야 야"]}, {"tag": "Bridge", "lines": []}, {"tag": "2:52-3:20", "lines": ["각자 길을 걷더라도", "이 옥상은 안 잊어", "우린 서로의 별 야"]}, {"tag": "Final Chorus", "lines": []}, {"tag": "3:22-3:56", "lines": ["우리 우리 다 같이 오", "어깨 걸고 노래해", "높이 없이 다 친구야", "이 밤이 다 우리야 야"]}, {"tag": "Outro", "lines": []}, {"tag": "group cheer, horns fade", "lines": []}, {"tag": "3:56-4:08", "lines": ["라라라 우리 모두"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 6, "title": "초록불 (Green Light)", "ms": 159400, "url": "https://audio.yojosuknam.com/audio/옥탑-데모-rooftop-demo/06.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "Rhodes, soft snaps", "lines": []}, {"tag": "0:00-0:14", "lines": []}, {"tag": "Verse 1 - male", "lines": []}, {"tag": "0:14-0:42", "lines": ["긴 밤 지나 아침이 와", "창문 너머 해가 떠", "멈춰 있던 신호등이", "드디어 초록불 켜"]}, {"tag": "Verse 2 - female", "lines": []}, {"tag": "0:42-1:02", "lines": ["망설이던 발을 떼고", "한 걸음씩 나아가"]}, {"tag": "Chorus - duet", "lines": []}, {"tag": "1:04-1:34", "lines": ["초록불 초록불 가 오", "이제 앞만 보고 가", "길은 열려 다 우리 거", "빛을 향해 달려 야"]}, {"tag": "Verse 3 - male", "lines": []}, {"tag": "1:34-2:00", "lines": ["느려도 괜찮아 나", "멈추지만 않으면 돼"]}, {"tag": "female", "lines": ["어제보다 조금 멀리", "오늘 다시 나아가"]}, {"tag": "Chorus - duet", "lines": []}, {"tag": "2:02-2:32", "lines": ["초록불 초록불 가 오", "이제 앞만 보고 가", "길은 열려 다 우리 거", "빛을 향해 달려 야"]}, {"tag": "Bridge - duet", "lines": []}, {"tag": "2:32-3:00", "lines": ["빨간불에 멈춘 날도", "다 지나가 버렸어", "이제 우리 초록불 야"]}, {"tag": "Final Chorus - duet", "lines": []}, {"tag": "3:02-3:40", "lines": ["초록불 초록불 가 오", "이제 앞만 보고 가", "길은 열려 다 우리 거", "빛을 향해 달려 야"]}, {"tag": "Outro", "lines": []}, {"tag": "harmonies, Rhodes fade", "lines": []}, {"tag": "3:40-4:00", "lines": ["라라라 나의 초록불"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 7, "title": "데모의 끝 (End of the Demo)", "ms": 168040, "url": "https://audio.yojosuknam.com/audio/옥탑-데모-rooftop-demo/07.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "saxophone sample, soft drums", "lines": []}, {"tag": "0:00-0:14", "lines": []}, {"tag": "Verse 1 - half-rap", "lines": []}, {"tag": "0:14-0:44", "lines": ["마지막 트랙 불을 줄여", "지나온 밤을 세어 봐", "반지하서 옥탑까지", "한 장 한 장 쌓아 왔어"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "0:44-1:02", "lines": ["서툰 소리 다 모아서", "여기까지 걸어왔어"]}, {"tag": "Chorus", "lines": []}, {"tag": "1:04-1:32", "lines": ["데모의 끝 데모의 끝 오", "끝이 아닌 시작이야", "다음 곡을 향해 가", "아직 할 게 많아 야"]}, {"tag": "Verse 2 - half-rap", "lines": []}, {"tag": "1:32-2:02", "lines": ["헤드폰을 벗어 놓고", "창밖 새벽 바람 마셔", "고마웠어 이 방들아", "나를 키운 이 소리"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "2:02-2:20", "lines": ["서툰 소리 다 모아서", "여기까지 걸어왔어"]}, {"tag": "Chorus", "lines": []}, {"tag": "2:22-2:50", "lines": ["데모의 끝 데모의 끝 오", "끝이 아닌 시작이야", "다음 곡을 향해 가", "아직 할 게 많아 야"]}, {"tag": "Bridge", "lines": []}, {"tag": "2:50-3:18", "lines": ["언젠가 큰 무대에서", "이 데모를 떠올릴게", "그날까지 계속 가 야"]}, {"tag": "Final Chorus", "lines": []}, {"tag": "3:20-3:54", "lines": ["데모의 끝 데모의 끝 오", "끝이 아닌 시작이야", "다음 곡을 향해 가", "아직 할 게 많아 야"]}, {"tag": "Outro", "lines": []}, {"tag": "sax fades, vinyl stops", "lines": []}, {"tag": "3:54-4:08", "lines": ["라라라 데모의 끝"]}, {"tag": "End", "lines": []}], "instrumental": false}]};</script>
+<script src="./jukebox.js"></script>
+</body>
+</html>

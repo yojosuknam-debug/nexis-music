@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Postmarked — 넥시스 뮤직</title>
+<meta name="description" content="Postmarked — 8곡 · 22분 · 가사 수록 8곡">
+<link rel="canonical" href="https://music.yojosuknam.com/album/postmarked.html">
+<meta property="og:type" content="music.album">
+<meta property="og:title" content="Postmarked">
+<meta property="og:description" content="Postmarked — 8곡 · 22분 · 가사 수록 8곡">
+<meta property="og:image" content="https://audio.yojosuknam.com/cover/postmarked.jpg">
+<meta property="og:url" content="https://music.yojosuknam.com/album/postmarked.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="./jukebox.css">
+<style>:root{--accent:rgb(200,138,65);--accent-rgb:200,138,65}</style>
+</head>
+<body>
+<div class="bg" style="background-image:url('https://audio.yojosuknam.com/cover/postmarked.jpg')"></div>
+<div class="veil"></div>
+
+<header class="top">
+  <a class="back" href="/index.html">← 아카이브</a>
+</header>
+
+<main class="wrap">
+  <div class="art">
+    <img src="https://audio.yojosuknam.com/cover/postmarked.jpg" alt="Postmarked 앨범 커버" width="800" height="800">
+    <p class="genre">Lo-fi Hip-hop / Jazz Hop / Chillhop</p>
+    <p class="mood">가사 수록 8곡</p>
+  </div>
+
+  <div class="main">
+    <h1>Postmarked</h1>
+    <p class="sub"><b>8곡</b> · 22분</p>
+
+    <div class="transport">
+      <button class="play" id="play" aria-label="재생"></button>
+      <div class="scrub">
+        <div class="now" id="now"></div>
+        <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+        <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+
+    <div class="seg">
+      <button id="tabList" aria-selected="true">수록곡</button>
+      <button id="tabLyr" aria-selected="false">가사</button>
+    </div>
+    <div class="list" id="list"></div>
+    <div class="list lyr" id="lyrics" hidden></div>
+  </div>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script>window.ALBUM = {"title": "Postmarked", "cover": "https://audio.yojosuknam.com/cover/postmarked.jpg", "tracks": [{"n": 1, "title": "First Round", "ms": 168319, "url": "https://audio.yojosuknam.com/audio/postmarked/01.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "soft vinyl crackle, Rhodes chords fade in", "lines": []}, {"tag": "0:00-0:25", "lines": []}, {"tag": "Theme A", "lines": []}, {"tag": "dusty boom-bap drums enter, upright bass", "lines": []}, {"tag": "0:25-1:10", "lines": []}, {"tag": "Theme B", "lines": []}, {"tag": "muted trumpet melody", "lines": []}, {"tag": "1:10-2:00", "lines": []}, {"tag": "Break", "lines": []}, {"tag": "drums drop, Rhodes and bass only", "lines": []}, {"tag": "2:00-2:30", "lines": []}, {"tag": "Theme A Reprise", "lines": []}, {"tag": "full groove returns", "lines": []}, {"tag": "2:30-3:15", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "trumpet swell, vinyl crackle lingers", "lines": []}, {"tag": "3:15-3:30", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 2, "title": "Bicycle Bell", "ms": 196919, "url": "https://audio.yojosuknam.com/audio/postmarked/02.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "vibraphone bell accents, vinyl crackle", "lines": []}, {"tag": "0:00-0:20", "lines": []}, {"tag": "Theme A", "lines": []}, {"tag": "crisp boom-bap drums, walking bass", "lines": []}, {"tag": "0:20-1:05", "lines": []}, {"tag": "Theme B", "lines": []}, {"tag": "jazzy electric piano riff", "lines": []}, {"tag": "1:05-1:55", "lines": []}, {"tag": "Break", "lines": []}, {"tag": "shaker and bass, bell chime", "lines": []}, {"tag": "1:55-2:20", "lines": []}, {"tag": "Theme A Reprise", "lines": []}, {"tag": "rolling groove returns", "lines": []}, {"tag": "2:20-3:05", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "bicycle-bell chime, crackle fades", "lines": []}, {"tag": "3:05-3:20", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 3, "title": "Return to Sender", "ms": 197599, "url": "https://audio.yojosuknam.com/audio/postmarked/03.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "soft Rhodes, vinyl crackle", "lines": []}, {"tag": "0:00-0:20", "lines": []}, {"tag": "Verse 1", "lines": ["Every Tuesday, same white envelope", "Same blue ink, a name I've come to know", "Third house down, but she moved away", "Still I carry it back home each day"]}, {"tag": "0:20-1:00", "lines": []}, {"tag": "Chorus", "lines": ["Return to sender, but I hold it slow", "Wondering where the years all go", "Some letters wait, some never stay", "Return to sender, one more day"]}, {"tag": "1:00-1:40", "lines": []}, {"tag": "Verse 2", "lines": ["Maybe someday there'll be a new address", "A forwarding line to fix the emptiness", "Till then it rides here in my worn-out bag", "A quiet little corner, a folded flag"]}, {"tag": "1:40-2:20", "lines": []}, {"tag": "Chorus", "lines": ["Return to sender, but I hold it slow", "Wondering where the years all go", "Some letters wait, some never stay", "Return to sender, one more day"]}, {"tag": "2:20-3:00", "lines": []}, {"tag": "Bridge", "lines": []}, {"tag": "soft trumpet, gentle", "lines": ["Maybe love just needs a longer road"]}, {"tag": "3:00-3:25", "lines": []}, {"tag": "Outro", "lines": ["Return to sender, one more day"]}, {"tag": "vinyl crackle fades", "lines": []}, {"tag": "3:25-3:45", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 4, "title": "The Long Driveway", "ms": 101039, "url": "https://audio.yojosuknam.com/audio/postmarked/04.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "dreamy Rhodes, vinyl crackle", "lines": []}, {"tag": "0:00-0:25", "lines": []}, {"tag": "Theme A", "lines": []}, {"tag": "laid-back drums, upright bass", "lines": []}, {"tag": "0:25-1:15", "lines": []}, {"tag": "Theme B", "lines": []}, {"tag": "electric guitar licks over chords", "lines": []}, {"tag": "1:15-2:05", "lines": []}, {"tag": "Break", "lines": []}, {"tag": "drums drop, distant dog-bark ambience, Rhodes", "lines": []}, {"tag": "2:05-2:35", "lines": []}, {"tag": "Theme A Reprise", "lines": []}, {"tag": "full groove", "lines": []}, {"tag": "2:35-3:20", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "guitar fades, crackle lingers", "lines": []}, {"tag": "3:20-3:35", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 5, "title": "Lunch on the Curb", "ms": 182999, "url": "https://audio.yojosuknam.com/audio/postmarked/05.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "street ambience, Rhodes stabs", "lines": []}, {"tag": "0:00-0:20", "lines": []}, {"tag": "Theme A", "lines": []}, {"tag": "snappy drums, funky bass", "lines": []}, {"tag": "0:20-1:05", "lines": []}, {"tag": "Theme B", "lines": []}, {"tag": "muted trumpet, brass swells", "lines": []}, {"tag": "1:05-1:55", "lines": []}, {"tag": "Break", "lines": []}, {"tag": "finger snaps, bass groove", "lines": []}, {"tag": "1:55-2:20", "lines": []}, {"tag": "Theme A Reprise", "lines": []}, {"tag": "full band", "lines": []}, {"tag": "2:20-3:00", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "trumpet tag, crackle", "lines": []}, {"tag": "3:00-3:15", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 6, "title": "Signed For", "ms": 154679, "url": "https://audio.yojosuknam.com/audio/postmarked/06.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "warm Rhodes, vinyl crackle", "lines": []}, {"tag": "0:00-0:20", "lines": []}, {"tag": "Verse 1", "lines": ["Corner apartment, second floor", "Been a package waiting three days more", "She opens up before I even knock", "Been counting down on every clock"]}, {"tag": "0:20-1:00", "lines": []}, {"tag": "Chorus", "lines": ["Sign it here, and here's your name", "Something small that mends the same", "A little box, a little grace", "A little light across her face"]}, {"tag": "1:00-1:40", "lines": []}, {"tag": "Verse 2", "lines": ["Don't know the sender, don't know what's inside", "But I know the wait, I've seen the tired", "Some things travel far to find a door", "And someone smiling like they hoped for more"]}, {"tag": "1:40-2:25", "lines": []}, {"tag": "Chorus", "lines": ["Sign it here, and here's your name", "Something small that mends the same", "A little box, a little grace", "A little light across her face"]}, {"tag": "2:25-3:05", "lines": []}, {"tag": "Bridge", "lines": []}, {"tag": "trumpet swell, warm", "lines": ["Every stop's a story I don't own"]}, {"tag": "3:05-3:30", "lines": []}, {"tag": "Outro", "lines": ["Sign it here, you're not alone"]}, {"tag": "vinyl crackle lingers", "lines": []}, {"tag": "3:30-3:50", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 7, "title": "Third Street Overflow", "ms": 143999, "url": "https://audio.yojosuknam.com/audio/postmarked/07.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "paper-shuffle texture, quirky piano", "lines": []}, {"tag": "0:00-0:20", "lines": []}, {"tag": "Theme A", "lines": []}, {"tag": "busy boom-bap drums, bouncy bass", "lines": []}, {"tag": "0:20-1:10", "lines": []}, {"tag": "Theme B", "lines": []}, {"tag": "vibraphone and trumpet pokes", "lines": []}, {"tag": "1:10-2:00", "lines": []}, {"tag": "Break", "lines": []}, {"tag": "drums stutter, piano riff", "lines": []}, {"tag": "2:00-2:30", "lines": []}, {"tag": "Theme A Reprise", "lines": []}, {"tag": "lively groove", "lines": []}, {"tag": "2:30-3:05", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "ritard, crackle", "lines": []}, {"tag": "3:05-3:20", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 8, "title": "Empty Bag", "ms": 177639, "url": "https://audio.yojosuknam.com/audio/postmarked/08.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "warm Rhodes, golden-hour pads, crackle", "lines": []}, {"tag": "0:00-0:30", "lines": []}, {"tag": "Theme A", "lines": []}, {"tag": "slow boom-bap drums, upright bass", "lines": []}, {"tag": "0:30-1:20", "lines": []}, {"tag": "Theme B", "lines": []}, {"tag": "mellow muted trumpet melody", "lines": []}, {"tag": "1:20-2:10", "lines": []}, {"tag": "Break", "lines": []}, {"tag": "drums soften, Rhodes and vibraphone", "lines": []}, {"tag": "2:10-2:45", "lines": []}, {"tag": "Theme A Reprise", "lines": []}, {"tag": "gentle full groove", "lines": []}, {"tag": "2:45-3:25", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "trumpet swell, spacious reverb, fade out", "lines": []}, {"tag": "3:25-3:40", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}]};</script>
+<script src="./jukebox.js"></script>
+</body>
+</html>

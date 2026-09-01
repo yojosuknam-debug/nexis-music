@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COPPER COAST — 넥시스 뮤직</title>
+<meta name="description" content="COPPER COAST — 7곡 · 17분 · 가사 수록 7곡">
+<link rel="canonical" href="https://music.yojosuknam.com/album/copper-coast.html">
+<meta property="og:type" content="music.album">
+<meta property="og:title" content="COPPER COAST">
+<meta property="og:description" content="COPPER COAST — 7곡 · 17분 · 가사 수록 7곡">
+<meta property="og:image" content="https://audio.yojosuknam.com/cover/copper-coast.jpg">
+<meta property="og:url" content="https://music.yojosuknam.com/album/copper-coast.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="./jukebox.css">
+<style>:root{--accent:rgb(200,134,65);--accent-rgb:200,134,65}</style>
+</head>
+<body>
+<div class="bg" style="background-image:url('https://audio.yojosuknam.com/cover/copper-coast.jpg')"></div>
+<div class="veil"></div>
+
+<header class="top">
+  <a class="back" href="/index.html">← 아카이브</a>
+</header>
+
+<main class="wrap">
+  <div class="art">
+    <img src="https://audio.yojosuknam.com/cover/copper-coast.jpg" alt="COPPER COAST 앨범 커버" width="800" height="800">
+    <p class="genre">Bossa Nova × Jazz Hop Fusion (Coastal Travelogue)</p>
+    <p class="mood">가사 수록 7곡</p>
+  </div>
+
+  <div class="main">
+    <h1>COPPER COAST</h1>
+    <p class="sub"><b>7곡</b> · 17분</p>
+
+    <div class="transport">
+      <button class="play" id="play" aria-label="재생"></button>
+      <div class="scrub">
+        <div class="now" id="now"></div>
+        <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+        <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+
+    <div class="seg">
+      <button id="tabList" aria-selected="true">수록곡</button>
+      <button id="tabLyr" aria-selected="false">가사</button>
+    </div>
+    <div class="list" id="list"></div>
+    <div class="list lyr" id="lyrics" hidden></div>
+  </div>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script>window.ALBUM = {"title": "COPPER COAST", "cover": "https://audio.yojosuknam.com/cover/copper-coast.jpg", "tracks": [{"n": 1, "title": "Morning Tide (Instrumental)", "ms": 117919, "url": "https://audio.yojosuknam.com/audio/copper-coast/01.mp3", "lyrics": [{"tag": "Intro - Morning Light", "lines": ["(Soft nylon guitar arpeggio)", "(Gentle brushed drum swing entering)", "(Sunlight warmth atmosphere)"]}, {"tag": "Theme - Coastal Groove", "lines": ["(Rhodes piano chords join)", "(Upright bass walking line)", "(Shaker percussion light)", "(Seagulls distant call)"]}, {"tag": "Bridge - Horn Accent", "lines": ["(Muted trumpet stab phrase)", "(Groove settles into pocket)", "(Tape warmth thickening)"]}, {"tag": "Outro - Fade to Coast", "lines": ["(Instruments thinning gradually)", "(Guitar arpeggio lingering)", "(Wave ambience rising softly)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 2, "title": "Copper Coast", "ms": 203839, "url": "https://audio.yojosuknam.com/audio/copper-coast/02.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Nylon guitar bossa strum entering)", "(Soft brushed drum swing)", "(Warm tape crackle)"]}, {"tag": "Verse 1", "lines": ["Copper light on the water line", "Salt on my skin, the hours unwind", "Postcards folded in my coat", "A melody hums, a distant boat"]}, {"tag": "Pre-Chorus", "lines": ["(Rhodes piano lifts softly)", "(Bass walking gentle climb)", "Every wave a page I keep", "Every gull a song I meet"]}, {"tag": "Chorus", "lines": ["Copper coast, take me slow", "Where the tide forgets to go", "Copper coast, hold the light", "Til the sun folds into night"]}, {"tag": "Verse 2", "lines": ["Painted shutters, faded blue", "A cafe hums an old tune through", "Strangers passing, warm and kind", "Leave their footprints in my mind"]}, {"tag": "Chorus", "lines": ["Copper coast, take me slow", "Where the tide forgets to go", "Copper coast, hold the light", "Til the sun folds into night"]}, {"tag": "Bridge", "lines": ["(Muted trumpet solo entering)", "(Vocal drops to a whisper)", "Maybe home is just a feeling", "Maybe here is close enough"]}, {"tag": "Final Chorus", "lines": ["Copper coast, take me slow", "Where the tide forgets to go", "Copper coast, hold the light", "Til the sun folds into night"]}, {"tag": "Outro", "lines": ["(Guitar arpeggio fading)", "(Wave ambience rising)", "(Vocal hums softly, wordless)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 3, "title": "Salt Air (Interlude, Instrumental)", "ms": 59199, "url": "https://audio.yojosuknam.com/audio/copper-coast/03.mp3", "lyrics": [{"tag": "Intro - Salt Air", "lines": ["(Solo nylon guitar fingerpicking)", "(Ocean wave ambience distant)"]}, {"tag": "Theme - Drift", "lines": ["(Rhodes piano sparse chords)", "(Shaker soft texture)", "(Seagulls calling far off)"]}, {"tag": "Outro - Wind Fades", "lines": ["(Guitar arpeggio lingering)", "(Wave sound rising, fading)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 4, "title": "Postcards From Nowhere", "ms": 183039, "url": "https://audio.yojosuknam.com/audio/copper-coast/04.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Nylon guitar bossa strum)", "(Soft flute phrase entering)"]}, {"tag": "Verse 1", "lines": ["A stamp unstuck, an address gone", "Somewhere between the dusk and dawn", "I write to no one, just to send", "A feeling that I can't quite mend"]}, {"tag": "Pre-Chorus", "lines": ["(Strings pad rising softly)", "Saudade, whispered under breath", "A kind of love that outlives distance"]}, {"tag": "Chorus", "lines": ["Postcards from nowhere, sent to you", "Written in colors no one knew", "Amor, I fold it in the mail", "A paper boat that will not sail"]}, {"tag": "Verse 2", "lines": ["The ink runs soft in evening rain", "A street I'll maybe walk again", "Every stranger has your eyes", "In every quiet, your goodbyes"]}, {"tag": "Chorus", "lines": ["Postcards from nowhere, sent to you", "Written in colors no one knew", "Amor, I fold it in the mail", "A paper boat that will not sail"]}, {"tag": "Bridge", "lines": ["(Horn swells gently)", "(Vocal softens to near-whisper)", "Maybe nowhere is a place", "Where I still keep your face"]}, {"tag": "Outro", "lines": ["(Guitar fading slow)", "(Flute phrase lingering)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 5, "title": "Afternoon Static (Instrumental)", "ms": 118399, "url": "https://audio.yojosuknam.com/audio/copper-coast/05.mp3", "lyrics": [{"tag": "Intro - Dusty Groove", "lines": ["(Boom bap breakbeat entering)", "(Vinyl scratch texture)"]}, {"tag": "Theme - Head Nod", "lines": ["(Upright bass walking)", "(Rhodes chords looping)", "(Muted trumpet phrase)"]}, {"tag": "Bridge - Sax Break", "lines": ["(Mellow saxophone solo)", "(Drums drop to half-time)"]}, {"tag": "Outro - Static Fade", "lines": ["(Radio static texture rising)", "(Groove thinning gradually)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 6, "title": "Slow Return", "ms": 184879, "url": "https://audio.yojosuknam.com/audio/copper-coast/06.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Soft nylon guitar strum)", "(Warm tape crackle)"]}, {"tag": "Verse 1", "lines": ["The sun leans low against the pier", "The season folding, soft and clear", "I used to run from quiet days", "Now I let the evening stay"]}, {"tag": "Pre-Chorus", "lines": ["(Strings pad gentle swell)", "Maybe slow is not defeat", "Maybe stillness has its own heartbeat"]}, {"tag": "Chorus", "lines": ["This is my slow return", "To the version I unlearned", "Not a rush, not a race", "Just the tide finding its place"]}, {"tag": "Verse 2", "lines": ["The lights come on in windows near", "A stranger's laughter, warm and clear", "I don't need answers, only this", "The hour where the light won't miss"]}, {"tag": "Chorus", "lines": ["This is my slow return", "To the version I unlearned", "Not a rush, not a race", "Just the tide finding its place"]}, {"tag": "Bridge", "lines": ["(Vocal drops soft, minor shift)", "And if I never get there fast", "At least I loved the slower path"]}, {"tag": "Final Chorus", "lines": ["This is my slow return", "To the version I unlearned", "Not a rush, not a race", "Just the tide finding its place"]}, {"tag": "Outro", "lines": ["(Guitar fading with strings)", "(Vocal hums wordless, soft)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 7, "title": "Copper Coast (Reprise, Instrumental)", "ms": 154879, "url": "https://audio.yojosuknam.com/audio/copper-coast/07.mp3", "lyrics": [{"tag": "Intro - Recall", "lines": ["(Nylon guitar recalling main theme)", "(Soft Rhodes entering)"]}, {"tag": "Theme - Sunset Glow", "lines": ["(Brushed drums soft swing)", "(Upright bass sparse)", "(Muted trumpet swell)"]}, {"tag": "Development - Warmth Deepens", "lines": ["(Strings pad rising)", "(Tape warmth thickening)", "(Wave ambience entering)"]}, {"tag": "Descent - Thinning", "lines": ["(Instruments dropping one by one)", "(Guitar arpeggio alone)"]}, {"tag": "Outro - Farewell Coast", "lines": ["(Wave ambience alone)", "(Seagulls distant, fading)", "(Silence settling)"]}, {"tag": "End", "lines": []}], "instrumental": false}]};</script>
+<script src="./jukebox.js"></script>
+</body>
+</html>

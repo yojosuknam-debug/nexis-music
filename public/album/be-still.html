@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BE STILL — 넥시스 뮤직</title>
+<meta name="description" content="BE STILL — 8곡 · 28분 · 가사 수록 8곡">
+<link rel="canonical" href="https://music.yojosuknam.com/album/be-still.html">
+<meta property="og:type" content="music.album">
+<meta property="og:title" content="BE STILL">
+<meta property="og:description" content="BE STILL — 8곡 · 28분 · 가사 수록 8곡">
+<meta property="og:image" content="https://audio.yojosuknam.com/cover/be-still.jpg">
+<meta property="og:url" content="https://music.yojosuknam.com/album/be-still.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="./jukebox.css">
+<style>:root{--accent:rgb(200,115,65);--accent-rgb:200,115,65}</style>
+</head>
+<body>
+<div class="bg" style="background-image:url('https://audio.yojosuknam.com/cover/be-still.jpg')"></div>
+<div class="veil"></div>
+
+<header class="top">
+  <a class="back" href="/index.html">← 아카이브</a>
+</header>
+
+<main class="wrap">
+  <div class="art">
+    <img src="https://audio.yojosuknam.com/cover/be-still.jpg" alt="BE STILL 앨범 커버" width="800" height="800">
+    <p class="genre">Soaking Worship × CCM Ballad × Christian Lofi × Contemporary Worship</p>
+    <p class="mood">가사 수록 8곡</p>
+  </div>
+
+  <div class="main">
+    <h1>BE STILL</h1>
+    <p class="sub"><b>8곡</b> · 28분</p>
+
+    <div class="transport">
+      <button class="play" id="play" aria-label="재생"></button>
+      <div class="scrub">
+        <div class="now" id="now"></div>
+        <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+        <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+
+    <div class="seg">
+      <button id="tabList" aria-selected="true">수록곡</button>
+      <button id="tabLyr" aria-selected="false">가사</button>
+    </div>
+    <div class="list" id="list"></div>
+    <div class="list lyr" id="lyrics" hidden></div>
+  </div>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script>window.ALBUM = {"title": "BE STILL", "cover": "https://audio.yojosuknam.com/cover/be-still.jpg", "tracks": [{"n": 1, "title": "Be Still (Instrumental)", "ms": 208919, "url": "https://audio.yojosuknam.com/audio/be-still/01.mp3", "lyrics": [{"tag": "Intro - Silence Descending", "lines": ["(Distant ambient pad entering)", "(Sacred space reverb)"]}, {"tag": "Theme - Stillness", "lines": ["(Piano motif gentle)", "(Reverb tail long)"]}, {"tag": "Outro - Settling", "lines": ["(Pads sustaining)", "(Fade to near silence)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 2, "title": "In The Waiting", "ms": 189959, "url": "https://audio.yojosuknam.com/audio/be-still/02.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Piano arpeggio entering)", "(Soft breath before singing)"]}, {"tag": "Verse 1", "lines": ["The waves keep coming, one by one", "I count the hours till this is done", "You said You're near but I can't see", "The ground beneath is shifting under me"]}, {"tag": "Pre-Chorus", "lines": ["(Strings entering softly)", "Still I whisper Your name", "In the waiting, in the ache"]}, {"tag": "Chorus", "lines": ["I'm learning to be still", "Even when I don't feel Your will", "Learning that You're holding me", "Even in the waiting, You're all I need"]}, {"tag": "Verse 2", "lines": ["The phone stays quiet, the plans fall through", "I don't know what I'm supposed to do", "But somewhere underneath the fear", "A quiet voice says I am here"]}, {"tag": "Chorus", "lines": ["I'm learning to be still", "Even when I don't feel Your will", "Learning that You're holding me", "Even in the waiting, You're all I need"]}, {"tag": "Bridge", "lines": ["(Vocal softens, strings swell)", "You're not late, You're not far", "Even now, You know where we are"]}, {"tag": "Outro", "lines": ["(Piano lingering)", "(Vocal hums fading)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 3, "title": "Storm Around Me", "ms": 282039, "url": "https://audio.yojosuknam.com/audio/be-still/03.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Electric guitar swell entering)", "(Drums building)"]}, {"tag": "Verse 1", "lines": ["The storm is loud, the sky is gray", "Every headline steals my day", "I've tried to hold it all together", "But my hands are shaking like a feather"]}, {"tag": "Pre-Chorus", "lines": ["(Drums intensify)", "(Choir voices layering)", "But You spoke to the wind before", "You can speak to this and so much more"]}, {"tag": "Chorus", "lines": ["Be still, my soul, be still", "Even the storm bows to Your will", "I will not fear what I cannot see", "You are the calm inside of me"]}, {"tag": "Verse 2", "lines": ["I used to think that strength was loud", "Fists up high above the crowd", "But now I know the strongest stand", "Is a soul surrendered to Your hand"]}, {"tag": "Chorus", "lines": ["Be still, my soul, be still", "Even the storm bows to Your will", "I will not fear what I cannot see", "You are the calm inside of me"]}, {"tag": "Bridge", "lines": ["(Full band, choir swell)", "(Anthemic energy)", "Peace, be still, You said it once", "Say it now over everyone", "Peace, be still, over this fear", "Let Your quiet be all we hear"]}, {"tag": "Final Chorus", "lines": ["Be still, my soul, be still", "Even the storm bows to Your will", "I will not fear what I cannot see", "You are the calm inside of me"]}, {"tag": "Outro", "lines": ["(Guitar swells fading)", "(Choir hum sustained)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 4, "title": "Hands Open (Instrumental)", "ms": 193239, "url": "https://audio.yojosuknam.com/audio/be-still/04.mp3", "lyrics": [{"tag": "Intro - Surrender Begins", "lines": ["(Piano motif entering)", "(Strings pad soft)"]}, {"tag": "Theme - Open Hands", "lines": ["(Ambient pad sustaining)", "(Reverb tail extending)"]}, {"tag": "Outro - Quiet Release", "lines": ["(Sounds thinning)", "(Silence approaching)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 5, "title": "Not Afraid Anymore", "ms": 209319, "url": "https://audio.yojosuknam.com/audio/be-still/05.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Piano chords entering)"]}, {"tag": "Verse 1", "lines": ["I used to run from every silence", "Filled the quiet just to feel less scared", "But now I'm learning that You're in it", "The stillness where You've always been there"]}, {"tag": "Pre-Chorus", "lines": ["(Strings rising gently)", "I don't need the noise to know You're near", "You've been speaking all this time, so clear"]}, {"tag": "Chorus", "lines": ["I'm not afraid anymore", "Not of the dark, not of the door", "You go before me, You stand behind", "I'm not afraid, I've made up my mind"]}, {"tag": "Verse 2", "lines": ["The future used to keep me frozen", "Every maybe turned into a mountain", "But grace has opened up a doorway", "And peace became my daily fountain"]}, {"tag": "Chorus", "lines": ["I'm not afraid anymore", "Not of the dark, not of the door", "You go before me, You stand behind", "I'm not afraid, I've made up my mind"]}, {"tag": "Bridge", "lines": ["(Vocal ad-lib, strings swell)", "Even if the mountain shakes", "Even if the water breaks", "I'm not afraid, I'm not afraid"]}, {"tag": "Outro", "lines": ["(Piano fading with strings)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 6, "title": "Even When It's Loud", "ms": 157919, "url": "https://audio.yojosuknam.com/audio/be-still/06.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Vinyl crackle entering)", "(Soft piano melody)"]}, {"tag": "Verse 1", "lines": ["Even when it's loud outside my door", "I find a quiet I've not known before", "A whisper softer than the noise", "A steady, gentle, holy voice"]}, {"tag": "Chorus", "lines": ["(Soft whispered vocal)", "Be still, be still, be still my heart", "You've been near me from the start", "Be still, be still, be still my mind", "Peace like this is hard to find"]}, {"tag": "Verse 2", "lines": ["The world keeps shouting, keeps demanding", "But here I sit, just understanding", "That stillness isn't empty space", "It's Your quiet, steady grace"]}, {"tag": "Chorus", "lines": ["Be still, be still, be still my heart", "You've been near me from the start", "Be still, be still, be still my mind", "Peace like this is hard to find"]}, {"tag": "Outro", "lines": ["(Vinyl crackle lingering)", "(Vocal hums fading)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 7, "title": "Rest In The Chaos (Instrumental)", "ms": 189839, "url": "https://audio.yojosuknam.com/audio/be-still/07.mp3", "lyrics": [{"tag": "Intro - Chaos Settling", "lines": ["(Ambient pad entering)", "(Distant sound texture)"]}, {"tag": "Theme - Deep Rest", "lines": ["(Piano motif slow)", "(Reverb cathedral-length)"]}, {"tag": "Outro - Stillness Complete", "lines": ["(Pads sustaining softly)", "(Fade to silence)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 8, "title": "Be Still (Reprise)", "ms": 228119, "url": "https://audio.yojosuknam.com/audio/be-still/08.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Piano echoing Track 1 motif)"]}, {"tag": "Verse 1", "lines": ["I came here anxious, came here afraid", "Looking for a peace that wouldn't fade", "But You were waiting, You were near", "Speaking soft into my fear"]}, {"tag": "Pre-Chorus", "lines": ["(Strings entering warm)", "Be still, and know that I am God", "A whisper louder than the storm"]}, {"tag": "Chorus", "lines": ["I am still, I am still", "Resting now inside Your will", "I am still, I am still", "Every fear You came to kill"]}, {"tag": "Verse 2", "lines": ["The waiting taught me how to listen", "The silence taught me what I'm missing", "Not answers, not a perfect plan", "Just You, holding my trembling hand"]}, {"tag": "Chorus", "lines": ["I am still, I am still", "Resting now inside Your will", "I am still, I am still", "Every fear You came to kill"]}, {"tag": "Bridge", "lines": ["(Vocal softens to near-whisper)", "(Piano alone)", "Be still, my soul", "Be still, and know"]}, {"tag": "Final Chorus", "lines": ["I am still, I am still", "Resting now inside Your will", "I am still, I am still", "Every fear You came to kill"]}, {"tag": "Outro", "lines": ["(Piano fading with strings)", "(Vocal hums, wordless)"]}, {"tag": "End", "lines": []}], "instrumental": false}]};</script>
+<script src="./jukebox.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>웃프다 (UTPEUDA) — 넥시스 뮤직</title>
+<meta name="description" content="웃프다 (UTPEUDA) — 6곡 · 23분 · 가사 수록 6곡">
+<link rel="canonical" href="https://music.yojosuknam.com/album/웃프다-utpeuda.html">
+<meta property="og:type" content="music.album">
+<meta property="og:title" content="웃프다 (UTPEUDA)">
+<meta property="og:description" content="웃프다 (UTPEUDA) — 6곡 · 23분 · 가사 수록 6곡">
+<meta property="og:image" content="https://audio.yojosuknam.com/cover/웃프다-utpeuda.jpg">
+<meta property="og:url" content="https://music.yojosuknam.com/album/웃프다-utpeuda.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="./jukebox.css">
+<style>:root{--accent:rgb(164,65,200);--accent-rgb:164,65,200}</style>
+</head>
+<body>
+<div class="bg" style="background-image:url('https://audio.yojosuknam.com/cover/웃프다-utpeuda.jpg')"></div>
+<div class="veil"></div>
+
+<header class="top">
+  <a class="back" href="/index.html">← 아카이브</a>
+</header>
+
+<main class="wrap">
+  <div class="art">
+    <img src="https://audio.yojosuknam.com/cover/웃프다-utpeuda.jpg" alt="웃프다 (UTPEUDA) 앨범 커버" width="800" height="800">
+    <p class="genre">트로트 × 클레즈머(Klezmer) 퓨전</p>
+    <p class="mood">가사 수록 6곡</p>
+  </div>
+
+  <div class="main">
+    <h1>웃프다 (UTPEUDA)</h1>
+    <p class="sub"><b>6곡</b> · 23분</p>
+
+    <div class="transport">
+      <button class="play" id="play" aria-label="재생"></button>
+      <div class="scrub">
+        <div class="now" id="now"></div>
+        <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+        <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+
+    <div class="seg">
+      <button id="tabList" aria-selected="true">수록곡</button>
+      <button id="tabLyr" aria-selected="false">가사</button>
+    </div>
+    <div class="list" id="list"></div>
+    <div class="list lyr" id="lyrics" hidden></div>
+  </div>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script>window.ALBUM = {"title": "웃프다 (UTPEUDA)", "cover": "https://audio.yojosuknam.com/cover/웃프다-utpeuda.jpg", "tracks": [{"n": 1, "title": "택배 대참사 (Delivery Disaster)", "ms": 182279, "url": "https://audio.yojosuknam.com/audio/웃프다-utpeuda/01.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Clarinet manic trill entering)", "(Accordion frantic runs)"]}, {"tag": "Verse 1", "lines": ["분명히 우리 집이라고 써 있는데", "왜 남의 집 문 앞에 놓여 있나", "사진은 분명 우리 집인데", "현관은 낯선 얼굴, 이게 무슨 일"]}, {"tag": "Pre-Chorus", "lines": ["(Brass stab accents)", "배송 완료 문자만 믿었던 내가", "바보였다는 걸 이제야 알았네"]}, {"tag": "Chorus", "lines": ["택배 대참사, 어디로 갔나", "내 소포는 지금 어디를 떠도나", "택배 대참사, 웃어야 하나", "울어야 하나, 나도 잘 모르겠네"]}, {"tag": "Verse 2", "lines": ["고객센터에 전화를 걸어도", "음악만 나오고 사람은 없고", "반나절을 이렇게 흘려보내니", "이것도 인생 수업이란 걸 알았네"]}, {"tag": "Chorus", "lines": ["택배 대참사, 어디로 갔나", "내 소포는 지금 어디를 떠도나", "택배 대참사, 웃어야 하나", "울어야 하나, 나도 잘 모르겠네"]}, {"tag": "Bridge", "lines": ["(Klezmer clarinet cadenza, dramatic)", "(Tempo doubling)", "결국 찾았다, 옆집 강아지가", "박스를 물고 마당에 앉아있었네"]}, {"tag": "Outro", "lines": ["(Brass fading with laugh-like clarinet slide)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 2, "title": "알람과의 전쟁 (War With The Alarm)", "ms": 166916, "url": "https://audio.yojosuknam.com/audio/웃프다-utpeuda/02.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Accordion entering fast)", "(Clarinet trill)"]}, {"tag": "Verse 1", "lines": ["다섯 번을 눌러도 다시 울리는", "이 작은 기계가 나의 원수", "분명 어제는 굳게 다짐했는데", "오늘 아침 또 지고 마는 나"]}, {"tag": "Pre-Chorus", "lines": ["(Brass building)", "십 분만, 딱 십 분만 더", "그 말이 벌써 세 번째라니"]}, {"tag": "Chorus", "lines": ["알람과의 전쟁, 매일 아침 전쟁", "나는 오늘도 지고 마는 전쟁", "알람과의 전쟁, 승자는 없는 전쟁", "그래도 내일 또 싸워볼 전쟁"]}, {"tag": "Verse 2", "lines": ["창밖은 벌써 환해졌는데", "나는 아직도 이불 속 참호에서", "버티고 버티다 결국 일어나", "지각이라는 훈장을 달고 나가네"]}, {"tag": "Chorus", "lines": ["알람과의 전쟁, 매일 아침 전쟁", "나는 오늘도 지고 마는 전쟁", "알람과의 전쟁, 승자는 없는 전쟁", "그래도 내일 또 싸워볼 전쟁"]}, {"tag": "Bridge", "lines": ["(Violin manic run entering)", "(Tempo pushing faster)", "내일은 다를 거야, 정말일 거야", "매일 아침 하는 이 거짓말"]}, {"tag": "Outro", "lines": ["(Full ensemble fading fast)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 3, "title": "충전기 실종사건 (The Case of the Missing Charger)", "ms": 221559, "url": "https://audio.yojosuknam.com/audio/웃프다-utpeuda/03.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Clarinet slow mournful entering)", "(Accordion sparse)"]}, {"tag": "Verse 1", "lines": ["분명 어제 여기 꽂아뒀는데", "오늘 아침엔 흔적도 없이", "집안 구석구석 다 뒤져봐도", "그 하얀 선은 보이질 않네"]}, {"tag": "Pre-Chorus", "lines": ["(Brass entering slowly)", "배터리는 벌써 일 퍼센트", "나는 지금 초 단위로 초조해"]}, {"tag": "Chorus", "lines": ["충전기 실종사건, 범인은 누구", "가족 모두가 용의자가 되는 아침", "충전기 실종사건, 진실은 하나", "분명 내가 어딘가에 흘렸겠지"]}, {"tag": "Verse 2", "lines": ["소파 밑에도 가방 속에도", "신발장 안에도 다 찾아봤는데", "결국 발견한 곳은 다름 아닌", "바지 주머니 속, 어이가 없네"]}, {"tag": "Chorus", "lines": ["충전기 실종사건, 범인은 누구", "가족 모두가 용의자가 되는 아침", "충전기 실종사건, 진실은 하나", "분명 내가 어딘가에 흘렸겠지"]}, {"tag": "Bridge", "lines": ["(Clarinet laughing slide)", "(Tempo speeding up comically)", "허탈하게 웃어버렸네, 나 자신에게", "이런 아침이 또 올 걸 알면서도"]}, {"tag": "Outro", "lines": ["(Ensemble fading with comic flourish)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 4, "title": "와이파이 비번을 잊었다 (I Forgot The WiFi Password)", "ms": 170765, "url": "https://audio.yojosuknam.com/audio/웃프다-utpeuda/04.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Violin entering dramatically)", "(Accordion frantic)"]}, {"tag": "Verse 1", "lines": ["손님이 오셨는데 비번을 몰라", "내 집인데도 내가 손님 같네", "숫자와 특수문자 조합이었는데", "그게 무엇이었는지 기억이 안 나"]}, {"tag": "Pre-Chorus", "lines": ["(Brass comedic stab)", "공유기 뒤편을 뜯어봐야 하나", "이 무슨 첩보 작전 같은 상황"]}, {"tag": "Chorus", "lines": ["와이파이 비번을 잊었다, 잊었다", "내 손으로 만든 비번을 잊었다", "와이파이 비번을 잊었다, 잊었다", "결국 공유기를 초기화했다"]}, {"tag": "Verse 2", "lines": ["초기화하니 모든 기기가", "다시 비번을 물어보기 시작해", "집안 전체가 인터넷 난민이 되어", "서로를 원망하며 하루를 보내네"]}, {"tag": "Chorus", "lines": ["와이파이 비번을 잊었다, 잊었다", "내 손으로 만든 비번을 잊었다", "와이파이 비번을 잊었다, 잊었다", "결국 공유기를 초기화했다"]}, {"tag": "Bridge", "lines": ["(Klezmer ensemble peak, chaotic joy)", "이제부턴 적어두자, 어딘가에", "아니, 또 그 어딘가를 잊겠지"]}, {"tag": "Outro", "lines": ["(Ensemble fading with laugh)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 5, "title": "냉장고 파먹기 (Fridge Archaeology)", "ms": 388406, "url": "https://audio.yojosuknam.com/audio/웃프다-utpeuda/05.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Accordion slow mysterious entering)", "(Clarinet low)"]}, {"tag": "Verse 1", "lines": ["냉장고 문을 열어 들여다보니", "정체 모를 반찬통이 줄지어 있네", "이건 언제 만든 건지 기억도 안 나", "용기 내어 뚜껑을 열어봐야 하나"]}, {"tag": "Pre-Chorus", "lines": ["(Brass building tension comically)", "월급날은 아직 멀었고", "냉장고는 나의 마지막 보물창고"]}, {"tag": "Chorus", "lines": ["냉장고 파먹기, 오늘의 미션", "남은 재료로 만드는 요리 대회", "냉장고 파먹기, 나 홀로 심사위원", "살아남은 자만이 저녁을 먹으리"]}, {"tag": "Verse 2", "lines": ["계란 두 개와 정체불명의 소스", "어제 먹다 남은 밥 반 공기", "이걸로 뭘 만들 수 있을까", "셰프의 마음으로 도전해보네"]}, {"tag": "Chorus", "lines": ["냉장고 파먹기, 오늘의 미션", "남은 재료로 만드는 요리 대회", "냉장고 파먹기, 나 홀로 심사위원", "살아남은 자만이 저녁을 먹으리"]}, {"tag": "Bridge", "lines": ["(Violin triumphant flourish)", "(Tempo lifting)", "의외로 맛있어서 놀란 나", "월급날까지 이렇게 살아남으리"]}, {"tag": "Outro", "lines": ["(Ensemble fading warm)"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 6, "title": "웃프다 (Utpeuda)", "ms": 249901, "url": "https://audio.yojosuknam.com/audio/웃프다-utpeuda/06.mp3", "lyrics": [{"tag": "Intro", "lines": ["(Clarinet slow mournful solo)", "(Accordion sparse chords)"]}, {"tag": "Verse 1", "lines": ["택배도 잃어버리고 알람도 지고", "충전기도 와이파이도 다 말썽인", "이런 하루가 뭐가 좋다고", "나는 오늘도 웃으며 얘기하네"]}, {"tag": "Pre-Chorus", "lines": ["(Violin entering warm)", "돌아보면 다 별거 아닌 일들", "근데 왜 이렇게 마음이 따뜻할까"]}, {"tag": "Chorus", "lines": ["웃프다, 이 말이 딱 맞는 하루", "울 것 같은데 자꾸 웃음이 나", "웃프다, 그게 사는 거겠지", "작은 소동들이 모여 하루가 되네"]}, {"tag": "Verse 2", "lines": ["내일도 분명 뭔가 사고가 나겠지", "그래도 나는 또 웃으며 얘기할 거야", "이 사소한 소동들이 있어서", "어쩌면 하루가 덜 심심한 걸지도"]}, {"tag": "Chorus", "lines": ["웃프다, 이 말이 딱 맞는 하루", "울 것 같은데 자꾸 웃음이 나", "웃프다, 그게 사는 거겠지", "작은 소동들이 모여 하루가 되네"]}, {"tag": "Bridge", "lines": ["(Full ensemble warm swell)", "(Tempo softening)", "굳이 진지할 것도 굳이 슬플 것도 없이", "그냥 오늘 하루도 웃프게 살아보자"]}, {"tag": "Outro", "lines": ["(Clarinet and accordion fading together)"]}, {"tag": "End", "lines": []}], "instrumental": false}]};</script>
+<script src="./jukebox.js"></script>
+</body>
+</html>

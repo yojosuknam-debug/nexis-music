@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>물길 (Waterway) — 넥시스 뮤직</title>
+<meta name="description" content="물길 (Waterway) — 7곡 · 21분 · 가사 수록 7곡">
+<link rel="canonical" href="https://music.yojosuknam.com/album/물길-waterway.html">
+<meta property="og:type" content="music.album">
+<meta property="og:title" content="물길 (Waterway)">
+<meta property="og:description" content="물길 (Waterway) — 7곡 · 21분 · 가사 수록 7곡">
+<meta property="og:image" content="https://audio.yojosuknam.com/cover/물길-waterway.jpg">
+<meta property="og:url" content="https://music.yojosuknam.com/album/물길-waterway.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="./jukebox.css">
+<style>:root{--accent:rgb(200,144,65);--accent-rgb:200,144,65}</style>
+</head>
+<body>
+<div class="bg" style="background-image:url('https://audio.yojosuknam.com/cover/물길-waterway.jpg')"></div>
+<div class="veil"></div>
+
+<header class="top">
+  <a class="back" href="/index.html">← 아카이브</a>
+</header>
+
+<main class="wrap">
+  <div class="art">
+    <img src="https://audio.yojosuknam.com/cover/물길-waterway.jpg" alt="물길 (Waterway) 앨범 커버" width="800" height="800">
+    <p class="genre">국악 (가야금·해금·대금·거문고·장구 / 민요·산조·정악)</p>
+    <p class="mood">가사 수록 7곡</p>
+  </div>
+
+  <div class="main">
+    <h1>물길 (Waterway)</h1>
+    <p class="sub"><b>7곡</b> · 21분</p>
+
+    <div class="transport">
+      <button class="play" id="play" aria-label="재생"></button>
+      <div class="scrub">
+        <div class="now" id="now"></div>
+        <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+        <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+
+    <div class="seg">
+      <button id="tabList" aria-selected="true">수록곡</button>
+      <button id="tabLyr" aria-selected="false">가사</button>
+    </div>
+    <div class="list" id="list"></div>
+    <div class="list lyr" id="lyrics" hidden></div>
+  </div>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script>window.ALBUM = {"title": "물길 (Waterway)", "cover": "https://audio.yojosuknam.com/cover/물길-waterway.jpg", "tracks": [{"n": 1, "title": "물안개 나루", "ms": 159240, "url": "https://audio.yojosuknam.com/audio/물길-waterway/01.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "river fog ambience, faint daegeum breath", "lines": []}, {"tag": "0:00-0:35", "lines": []}, {"tag": "Theme - Jinyangjo", "lines": []}, {"tag": "daegeum long sustained lead enters, plaintive", "lines": []}, {"tag": "0:35-1:30", "lines": []}, {"tag": "Development", "lines": []}, {"tag": "gayageum sparse picking answers, heterophonic", "lines": []}, {"tag": "1:30-2:25", "lines": []}, {"tag": "Haegeum Entry", "lines": []}, {"tag": "haegeum faint nasal counterline weaves in", "lines": []}, {"tag": "2:25-3:15", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "daegeum long tone, janggu fades to silence", "lines": []}, {"tag": "3:15-3:50", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 2, "title": "삿대 젓는 노래", "ms": 228399, "url": "https://audio.yojosuknam.com/audio/물길-waterway/02.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "janggu rowing pulse, haegeum cry", "lines": []}, {"tag": "0:00-0:16", "lines": ["어야디야 어야디야"]}, {"tag": "Verse 1", "lines": []}, {"tag": "0:16-0:50", "lines": ["해가 뜨면 배를 밀어", "삿대 잡고 강에 서네", "물살이 세도 좋아", "어깨에 힘을 주고", "하나 둘 밀어보자", "어야 어야디야"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "0:50-1:06", "lines": ["노를 저어 저어라", "물이 우리 길이다", "바람이 등을 밀어", "어야 어야디야"]}, {"tag": "Chorus", "lines": []}, {"tag": "1:06-1:36", "lines": ["어야디야 어야디야", "삿대 밀고 노를 저어", "어야디야 어야디야", "나루까지 가보자", "물도 좋고 바람 좋다", "오늘도 강을 가른다", "어야디야 어야디야", "어야 어야디야"]}, {"tag": "Verse 2", "lines": []}, {"tag": "1:36-2:10", "lines": ["여울목이 가까워", "소리 높여 불러라", "돌부리를 피해 가", "삿대 깊이 박아라", "힘을 모아 넘어가", "어야 어야디야"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "2:10-2:26", "lines": ["노를 저어 저어라", "물이 우리 길이다", "바람이 등을 밀어", "어야 어야디야"]}, {"tag": "Chorus", "lines": []}, {"tag": "2:26-2:56", "lines": ["어야디야 어야디야", "삿대 밀고 노를 저어", "어야디야 어야디야", "나루까지 가보자", "물도 좋고 바람 좋다", "오늘도 강을 가른다", "어야디야 어야디야", "어야 어야디야"]}, {"tag": "Bridge", "lines": []}, {"tag": "chuimsae shouts, taepyeongso distant cry", "lines": []}, {"tag": "2:56-3:18", "lines": ["어이 어이 좋다", "물결이 춤을 춘다", "노 젓는 이 마음이", "강보다 넓어라"]}, {"tag": "Final Chorus", "lines": []}, {"tag": "3:18-3:46", "lines": ["어야디야 어야디야", "삿대 밀고 노를 저어", "나루까지 가보자", "어야 어야디야", "오늘도 강을 가른다", "어야 어야디야"]}, {"tag": "Outro", "lines": []}, {"tag": "janggu fade, water splash", "lines": []}, {"tag": "3:46-4:00", "lines": ["어야 어야디야"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 3, "title": "여울을 건너", "ms": 176440, "url": "https://audio.yojosuknam.com/audio/물길-waterway/03.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "cold current, geomungo low thock", "lines": []}, {"tag": "0:00-0:25", "lines": []}, {"tag": "Theme - Jungmori", "lines": []}, {"tag": "haegeum wailing lead enters, wide bends", "lines": []}, {"tag": "0:25-1:20", "lines": []}, {"tag": "Development", "lines": []}, {"tag": "janggu insistent tread, haegeum climbs", "lines": []}, {"tag": "1:20-2:20", "lines": []}, {"tag": "Crossing", "lines": []}, {"tag": "geomungo and haegeum tighten, resolute", "lines": []}, {"tag": "2:20-3:05", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "haegeum long bend, current recedes", "lines": []}, {"tag": "3:05-3:30", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 4, "title": "물레방아 도는 마을", "ms": 107920, "url": "https://audio.yojosuknam.com/audio/물길-waterway/04.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "waterwheel creak and splash, janggu pickup", "lines": []}, {"tag": "0:00-0:20", "lines": []}, {"tag": "Theme - Jajinmori", "lines": []}, {"tag": "gayageum crisp rapid picking, bright", "lines": []}, {"tag": "0:20-1:10", "lines": []}, {"tag": "Development", "lines": []}, {"tag": "daegeum playful countermelody joins", "lines": []}, {"tag": "1:10-2:05", "lines": []}, {"tag": "Sanjo Break", "lines": []}, {"tag": "gayageum solo flourish, janggu chuimsae", "lines": []}, {"tag": "2:05-2:55", "lines": []}, {"tag": "Finale", "lines": []}, {"tag": "sogeum high trills, full ensemble drive", "lines": []}, {"tag": "2:55-3:25", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "waterwheel turning, gradual fade", "lines": []}, {"tag": "3:25-3:40", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 5, "title": "강 건너 그 마을", "ms": 297999, "url": "https://audio.yojosuknam.com/audio/물길-waterway/05.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "haegeum long cry, gayageum sparse", "lines": []}, {"tag": "0:00-0:20", "lines": ["강 건너 저 마을"]}, {"tag": "Verse 1", "lines": []}, {"tag": "0:20-0:54", "lines": ["물안개가 걷히면", "지붕이 보이는데", "배는 아직 안 오고", "나루에 나 혼자", "손을 들어 불러도", "소리가 안 닿아"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "0:54-1:10", "lines": ["강물이 좁아 뵈도", "건너기 참 머오", "한 걸음 저 편인데", "닿지를 못하오"]}, {"tag": "Chorus", "lines": []}, {"tag": "1:10-1:40", "lines": ["강 건너 그 마을아", "아아 잘 있느냐", "물길은 하나인데", "오오 멀기도 하다", "강 건너 그 마을아", "아아 기다려라", "오늘도 나는 본다", "오오 아아아"]}, {"tag": "Verse 2", "lines": []}, {"tag": "1:40-2:14", "lines": ["사공은 낮잠 자고", "노을만 붉어 온다", "연기가 피어나면", "저녁밥 짓나 보다", "누가 나를 부르나", "바람만 지나가"]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "2:14-2:30", "lines": ["강물이 좁아 뵈도", "건너기 참 머오", "한 걸음 저 편인데", "닿지를 못하오"]}, {"tag": "Chorus", "lines": []}, {"tag": "2:30-3:00", "lines": ["강 건너 그 마을아", "아아 잘 있느냐", "물길은 하나인데", "오오 멀기도 하다", "강 건너 그 마을아", "아아 기다려라", "오늘도 나는 본다", "오오 아아아"]}, {"tag": "Bridge", "lines": []}, {"tag": "haegeum wide bend, janggu deep gung", "lines": []}, {"tag": "3:00-3:22", "lines": ["물이 무슨 죄가 있나", "길을 내어 흐를 뿐", "내 마음이 먼저 가", "저 마을에 닿는다"]}, {"tag": "Final Chorus", "lines": []}, {"tag": "3:22-3:48", "lines": ["강 건너 그 마을아", "아아 잘 있느냐", "오늘도 나는 본다", "오오 아아아", "강 건너 그 마을아", "오오 아아아"]}, {"tag": "Outro", "lines": []}, {"tag": "haegeum fades, water lapping", "lines": []}, {"tag": "3:48-4:00", "lines": ["오오 아아아"]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 6, "title": "소나기 지나는 강", "ms": 126800, "url": "https://audio.yojosuknam.com/audio/물길-waterway/06.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "first drops on water, janggu light patter", "lines": []}, {"tag": "0:00-0:18", "lines": []}, {"tag": "Theme - Hwimori", "lines": []}, {"tag": "gayageum raindrop tremolo rushes in", "lines": []}, {"tag": "0:18-1:05", "lines": []}, {"tag": "Development", "lines": []}, {"tag": "daegeum darting figures, rain thickens", "lines": []}, {"tag": "1:05-1:55", "lines": []}, {"tag": "Peak", "lines": []}, {"tag": "piri nasal cry, full sweeping shower", "lines": []}, {"tag": "1:55-2:40", "lines": []}, {"tag": "Clearing", "lines": []}, {"tag": "tempo eases, janggu thins out", "lines": []}, {"tag": "2:40-3:15", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "last drops on water, fade", "lines": []}, {"tag": "3:15-3:35", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 7, "title": "노을 진 뱃길", "ms": 157680, "url": "https://audio.yojosuknam.com/audio/물길-waterway/07.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "oar drip, distant janggu", "lines": []}, {"tag": "0:00-0:30", "lines": []}, {"tag": "Theme - Jinyangjo", "lines": []}, {"tag": "daegeum breathy sustained lead", "lines": []}, {"tag": "0:30-1:25", "lines": []}, {"tag": "Development", "lines": []}, {"tag": "gayageum slow arpeggios beneath", "lines": []}, {"tag": "1:25-2:20", "lines": []}, {"tag": "Haegeum Answer", "lines": []}, {"tag": "haegeum soulful answering phrases", "lines": []}, {"tag": "2:20-3:10", "lines": []}, {"tag": "Outro", "lines": []}, {"tag": "daegeum long tone, current fades", "lines": []}, {"tag": "3:10-3:55", "lines": []}, {"tag": "End", "lines": []}], "instrumental": false}]};</script>
+<script src="./jukebox.js"></script>
+</body>
+</html>

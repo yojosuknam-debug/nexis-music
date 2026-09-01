@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ordinary Altars — 넥시스 뮤직</title>
+<meta name="description" content="Ordinary Altars — 8곡 · 24분 · 가사 수록 3곡">
+<link rel="canonical" href="https://music.yojosuknam.com/album/ordinary-altars.html">
+<meta property="og:type" content="music.album">
+<meta property="og:title" content="Ordinary Altars">
+<meta property="og:description" content="Ordinary Altars — 8곡 · 24분 · 가사 수록 3곡">
+<meta property="og:image" content="https://audio.yojosuknam.com/cover/ordinary-altars.jpg">
+<meta property="og:url" content="https://music.yojosuknam.com/album/ordinary-altars.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="./jukebox.css">
+<style>:root{--accent:rgb(201,135,64);--accent-rgb:201,135,64}</style>
+</head>
+<body>
+<div class="bg" style="background-image:url('https://audio.yojosuknam.com/cover/ordinary-altars.jpg')"></div>
+<div class="veil"></div>
+
+<header class="top">
+  <a class="back" href="/index.html">← 아카이브</a>
+</header>
+
+<main class="wrap">
+  <div class="art">
+    <img src="https://audio.yojosuknam.com/cover/ordinary-altars.jpg" alt="Ordinary Altars 앨범 커버" width="800" height="800">
+    <p class="genre">Christian Lofi / CCM Ballad / Contemporary Worship / Soaking</p>
+    <p class="mood">가사 수록 3곡</p>
+  </div>
+
+  <div class="main">
+    <h1>Ordinary Altars</h1>
+    <p class="sub"><b>8곡</b> · 24분</p>
+
+    <div class="transport">
+      <button class="play" id="play" aria-label="재생"></button>
+      <div class="scrub">
+        <div class="now" id="now"></div>
+        <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+        <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+
+    <div class="seg">
+      <button id="tabList" aria-selected="true">수록곡</button>
+      <button id="tabLyr" aria-selected="false">가사</button>
+    </div>
+    <div class="list" id="list"></div>
+    <div class="list lyr" id="lyrics" hidden></div>
+  </div>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script>window.ALBUM = {"title": "Ordinary Altars", "cover": "https://audio.yojosuknam.com/cover/ordinary-altars.jpg", "tracks": [{"n": 1, "title": "Dish Soap Doxology", "ms": 224460, "url": "https://audio.yojosuknam.com/audio/ordinary-altars/01.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "soft upright piano, faint faucet ambience", "lines": []}, {"tag": "0:00-0:22", "lines": []}, {"tag": "Verse 1", "lines": []}, {"tag": "warm female alto, gentle", "lines": []}, {"tag": "0:22-1:02", "lines": ["He keeps the small hours no one applauds,", "counting the plates and the crumbs on the floor,", "He is the bread that the hungry are fed,", "He is the hand at the kitchen door."]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "0:22 lift, soft brushes enter", "lines": []}, {"tag": "1:02-1:24", "lines": ["And the water runs warm, and the steam fills the room,", "and my worn-out hands remember —"]}, {"tag": "Chorus", "lines": []}, {"tag": "fuller, heartfelt", "lines": []}, {"tag": "1:24-2:06", "lines": ["You are here in the suds and the steam,", "You are near where the ordinary gleams,", "every dish is a small hallelujah,", "every plate a quiet amen —", "You meet me at this sink again."]}, {"tag": "Verse 2", "lines": []}, {"tag": "2:06-2:44", "lines": ["No robe and no organ, no stained-glass light,", "just a dish towel damp on my shoulder tonight,", "but the mundane is holy, the humble is heard,", "He leans on the counter and stays."]}, {"tag": "Chorus", "lines": []}, {"tag": "2:44-3:24", "lines": ["You are here in the suds and the steam,", "You are near where the ordinary gleams,", "every dish is a small hallelujah,", "every plate a quiet amen —", "You meet me at this sink again."]}, {"tag": "Bridge", "lines": []}, {"tag": "intimate, 1st person", "lines": []}, {"tag": "3:24-3:52", "lines": ["I have no altar but this counter,", "no incense but the soap and the grace,", "I will worship while the water is running,", "I will thank You in this ordinary place."]}, {"tag": "Outro", "lines": []}, {"tag": "piano and pads soften", "lines": []}, {"tag": "3:52-4:08", "lines": ["You meet me at this sink again."]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 2, "title": "Fluorescent Hallway", "ms": 143759, "url": "https://audio.yojosuknam.com/audio/ordinary-altars/02.mp3", "lyrics": [], "instrumental": true}, {"n": 3, "title": "Tax Season", "ms": 213119, "url": "https://audio.yojosuknam.com/audio/ordinary-altars/03.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "soft piano, muted guitar", "lines": []}, {"tag": "0:00-0:20", "lines": []}, {"tag": "Verse 1", "lines": []}, {"tag": "warm male baritone, conversational", "lines": []}, {"tag": "0:20-1:00", "lines": ["He owns the cattle, the hills, the gold,", "keeps no ledger of all that I lack,", "He fed the sparrow through winters cold,", "He never once asked the ravens back."]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "strings begin to rise", "lines": []}, {"tag": "1:00-1:22", "lines": ["So why do I count what I cannot keep,", "adding my fear line by line —"]}, {"tag": "Chorus", "lines": []}, {"tag": "fuller, settled", "lines": []}, {"tag": "1:22-2:04", "lines": ["You are the portion the columns can't hold,", "You are the wealth that no rust ever stole,", "when the numbers run red and the season is long,", "You are enough, You are enough,", "the only sum I lean upon."]}, {"tag": "Verse 2", "lines": []}, {"tag": "2:04-2:42", "lines": ["The forms and the folders, the dread of the mail,", "the total that looms like a debt I can't pay,", "but the One who clothed lilies is not going to fail,", "He balances more than a spreadsheet can weigh."]}, {"tag": "Chorus", "lines": []}, {"tag": "2:42-3:24", "lines": ["You are the portion the columns can't hold,", "You are the wealth that no rust ever stole,", "when the numbers run red and the season is long,", "You are enough, You are enough,", "the only sum I lean upon."]}, {"tag": "Bridge", "lines": []}, {"tag": "intimate, 1st person", "lines": []}, {"tag": "3:24-3:54", "lines": ["I lay the receipts on the table like prayers,", "I hand You the total, the debt, and the years,", "take my anxious account, take the rent and the strain —", "I am spent, but in You I'm not drained."]}, {"tag": "Outro", "lines": []}, {"tag": "piano resolves", "lines": []}, {"tag": "3:54-4:08", "lines": ["You are enough, You are enough."]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 4, "title": "The 7:15 Train", "ms": 148799, "url": "https://audio.yojosuknam.com/audio/ordinary-altars/04.mp3", "lyrics": [], "instrumental": true}, {"n": 5, "title": "Harvest Field, Late Light", "ms": 174799, "url": "https://audio.yojosuknam.com/audio/ordinary-altars/05.mp3", "lyrics": [], "instrumental": true}, {"n": 6, "title": "Mother Forgets My Name", "ms": 224399, "url": "https://audio.yojosuknam.com/audio/ordinary-altars/06.mp3", "lyrics": [{"tag": "Intro", "lines": []}, {"tag": "delicate felt piano", "lines": []}, {"tag": "0:00-0:26", "lines": []}, {"tag": "Verse 1", "lines": []}, {"tag": "tender female soprano, soft", "lines": []}, {"tag": "0:26-1:08", "lines": ["He wrote her name on the back of His hand,", "long before mine, long before now,", "He holds every year she can't understand,", "He keeps what she lost, though she can't say how."]}, {"tag": "Pre-Chorus", "lines": []}, {"tag": "strings begin to swell", "lines": []}, {"tag": "1:08-1:32", "lines": ["She looks through my face like a window to snow,", "asks who I am, and I quietly know —"]}, {"tag": "Chorus", "lines": []}, {"tag": "fuller, aching but steady", "lines": []}, {"tag": "1:32-2:14", "lines": ["You remember her, You remember it all,", "every birthday, every fall,", "when her mind is a house with the lights going out,", "You are the One who still knows every room,", "You call her by name in the dark."]}, {"tag": "Verse 2", "lines": []}, {"tag": "brushed drums enter softly", "lines": []}, {"tag": "2:14-2:52", "lines": ["I bring her the photographs, one by one,", "name the faces she used to adore,", "and the woman who taught me the words that I sung", "now reaches for someone I was years before."]}, {"tag": "Chorus", "lines": []}, {"tag": "2:52-3:34", "lines": ["You remember her, You remember it all,", "every birthday, every fall,", "when her mind is a house with the lights going out,", "You are the One who still knows every room,", "You call her by name in the dark."]}, {"tag": "Bridge", "lines": []}, {"tag": "intimate, 1st person", "lines": []}, {"tag": "3:34-4:00", "lines": ["So I'll be her memory, I'll hold her hand,", "I'll be the child she can't understand,", "and if I forget how to carry this weight,", "You'll remember me too, You'll remember me."]}, {"tag": "Outro", "lines": []}, {"tag": "piano and pads dissolve", "lines": []}, {"tag": "4:00-4:09", "lines": ["You'll remember me."]}, {"tag": "End", "lines": []}], "instrumental": false}, {"n": 7, "title": "Laundromat, 11pm", "ms": 155999, "url": "https://audio.yojosuknam.com/audio/ordinary-altars/07.mp3", "lyrics": [], "instrumental": true}, {"n": 8, "title": "Bread on the Counter", "ms": 157199, "url": "https://audio.yojosuknam.com/audio/ordinary-altars/08.mp3", "lyrics": [], "instrumental": true}]};</script>
+<script src="./jukebox.js"></script>
+</body>
+</html>
