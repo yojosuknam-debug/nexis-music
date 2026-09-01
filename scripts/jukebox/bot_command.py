@@ -56,6 +56,11 @@ def _work(send) -> None:
     try:
         send("🎧 주크박스 갱신 시작…")
 
+        # 지난 실행이 남긴 생성물(카탈로그·커버) 변경을 먼저 되돌린다.
+        # 그러지 않으면 pull 이 "local changes would be overwritten" 으로 막혀
+        # 코드가 영영 낡은 채로 돈다(2026-09-02 실제 발생).
+        _run(["git", "checkout", "--", "scripts/jukebox/catalog.json",
+              "scripts/jukebox/assets"], 60)
         ok, out = _run(["git", "pull", "--ff-only", "-q"], 180)
         if not ok:
             send(f"⚠️ 코드 최신화 실패 — 그대로 진행합니다\n{out[:200]}")
