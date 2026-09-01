@@ -27,6 +27,10 @@ import sys
 import time
 from pathlib import Path
 
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _env
+
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 PY = sys.executable
@@ -58,7 +62,10 @@ def main() -> int:
     a = ap.parse_args()
     d = ["--dry-run"] if a.dry_run else []
 
-    if not a.skip_sync:
+    # 미니PC 는 앨범 원본이 있는 기계라 받아올 곳이 없다
+    if _env.is_source_host():
+        print("(원본 기계에서 실행 중 — 동기화 단계 생략)")
+    elif not a.skip_sync:
         if not step("0/4 미니PC에서 새 앨범 받기", ["scripts/jukebox/sync_from_minipc.py", *d],
                     optional=True):
             return 1

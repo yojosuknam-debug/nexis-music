@@ -28,8 +28,12 @@ import sys
 import unicodedata
 from pathlib import Path
 
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _env
+
 REPO = Path(__file__).resolve().parents[2]
-INPUT_DIR = Path(r"d:/YH/APP/youtube-playlist/suno-playlist-video/input")
+INPUT_DIR = _env.input_dir()      # 미니PC면 원본, 데스크탑이면 사본
 LIVE_DATA = REPO / "public" / "data.js"
 OUT = REPO / "scripts" / "jukebox" / "catalog.json"
 

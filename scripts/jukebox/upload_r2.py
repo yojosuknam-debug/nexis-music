@@ -23,6 +23,10 @@ import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _env
+
 import boto3
 from botocore.config import Config
 from botocore.exceptions import ClientError
@@ -30,7 +34,6 @@ from botocore.exceptions import ClientError
 HERE = Path(__file__).resolve().parent
 CATALOG = HERE / "catalog.json"
 COVERS = HERE / "assets" / "covers"
-VAULT = Path(r"d:/YH/APP/nexis-lab-home/vault.env")
 
 WORKERS = 6
 # 파일 이름에 슬러그(불변)가 들어가고 내용이 바뀌면 이름도 바뀌므로 길게 캐시해도 안전하다
@@ -38,10 +41,9 @@ CACHE = "public, max-age=31536000, immutable"
 
 
 def load_vault() -> dict[str, str]:
-    """vault 는 UTF-8 BOM 파일이다. 반드시 utf-8-sig 로 읽는다."""
-    text = VAULT.read_text(encoding="utf-8-sig")
-    return {m.group(1): m.group(2).strip()
-            for m in re.finditer(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=(.*)$", text, re.M)}
+    """자격증명을 읽는다. 미니PC 는 ~/.config/nexis/r2.env, 데스크탑은 vault.env.
+    값은 메모리에만 두고 어디에도 출력하지 않는다."""
+    return _env.load_secrets()
 
 
 def client(v: dict[str, str]):
