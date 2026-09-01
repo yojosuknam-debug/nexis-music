@@ -183,7 +183,14 @@ def duration_ms(path: Path) -> int:
 
 
 # ── 앨범 하나 ─────────────────────────────────────────────────────────────
+SKIP_MARKER = ".nojukebox"
+
+
 def scan_album(folder: Path, index, track_index) -> dict | None:
+    # 작업 중인 앨범을 공개하지 않으려면 폴더에 .nojukebox 빈 파일을 두면 된다.
+    # 이 파이프라인은 유튜브가 아니라 폴더를 보고 발행하므로, 표시가 없으면 전부 공개된다.
+    if (folder / SKIP_MARKER).exists():
+        return None
     mds = sorted(folder.glob("*album*.md"))
     if not mds:
         return None
@@ -254,8 +261,11 @@ def main() -> int:
     live = load_live()
     index = [(album_candidates(r.get("title", "")), r) for r in live]
     track_index = [(track_candidates(r.get("title", "")), r) for r in live]
-    albums, seen = [], {}
+    albums, seen, skipped = [], {}, []
     for d in sorted(p for p in INPUT_DIR.iterdir() if p.is_dir()):
+        if (d / SKIP_MARKER).exists():
+            skipped.append(d.name)
+            continue
         a = scan_album(d, index, track_index)
         if not a:
             continue
@@ -272,6 +282,9 @@ def main() -> int:
     n_cover = sum(1 for a in albums if a["cover_source"])
 
     print(f"앨범 {len(albums)}개 · 트랙 {n_tracks}곡")
+    if skipped:
+        print(f"  제외됨({SKIP_MARKER}) {len(skipped)}개: " + ", ".join(skipped[:6])
+              + (" …" if len(skipped) > 6 else ""))
     print(f"  음원 연결   {n_audio:>4}곡  ({n_audio*100//max(n_tracks,1)}%)")
     print(f"  가사 있음   {n_lyrics:>4}곡  · 연주곡 {n_inst}곡 · 미확인 {n_tracks-n_lyrics-n_inst}곡")
     print(f"  커버 확보   {n_cover:>4}앨범 ({n_cover*100//max(len(albums),1)}%)")

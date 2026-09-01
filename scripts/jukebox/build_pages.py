@@ -232,10 +232,23 @@ def main() -> int:
         (OUT / f"{a['slug']}.html").write_text(album_page(a, accents[a["slug"]]), encoding="utf-8")
     (OUT / "index.html").write_text(index_page(ready, accents), encoding="utf-8")
 
+    # 더 이상 발행 대상이 아닌 페이지를 지운다.
+    # 이게 없으면 .nojukebox 를 붙여도 예전 페이지가 그대로 살아 있어 "비공개"가 되지 않는다.
+    keep = {f"{a['slug']}.html" for a in ready} | {"index.html"}
+    removed = []
+    for f in OUT.glob("*.html"):
+        if f.name not in keep:
+            f.unlink()
+            removed.append(f.name)
+
     skipped = len(albums) - len(ready)
     print(f"앨범 페이지 {len(ready)}개 생성 → public/album/")
     if skipped:
         print(f"  (업로드 안 된 앨범 {skipped}개는 건너뜀)")
+    if removed:
+        print(f"  제외되어 페이지 삭제 {len(removed)}개: " + ", ".join(removed[:5])
+              + (" …" if len(removed) > 5 else ""))
+        print("   ※ R2 의 음원 파일은 남아 있습니다(페이지에서 링크만 끊김).")
     return 0
 
 

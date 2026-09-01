@@ -28,6 +28,9 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 HERE = Path(__file__).resolve().parent
 CATALOG = HERE / "catalog.json"
 COVERS = HERE / "assets" / "covers"
+# 커버가 유튜브 아트인지 자동 생성한 타이포인지 기록한다.
+# catalog.json 은 scan 때마다 새로 만들어져 이 정보가 사라지므로 별도 파일에 남긴다.
+META = COVERS / "_meta.json"
 SIZE = 800
 
 # 유튜브가 파이썬 UA 를 막는 경우가 있어 브라우저 UA 로 요청한다
@@ -155,32 +158,52 @@ def main() -> int:
 
     albums = json.loads(CATALOG.read_text(encoding="utf-8"))
     COVERS.mkdir(parents=True, exist_ok=True)
+    meta = json.loads(META.read_text(encoding="utf-8")) if META.exists() else {}
 
-    made = {"downloaded": 0, "generated": 0, "skipped": 0, "failed": []}
+    made = {"downloaded": 0, "generated": 0, "skipped": 0, "upgraded": 0, "failed": []}
     for a in albums:
-        out = COVERS / f"{a['slug']}.jpg"
-        if out.exists() and not args.force:
-            made["skipped"] += 1
-            a["cover_file"] = out.name
-            continue
+        slug, src = a["slug"], a.get("cover_source", "")
+        out = COVERS / f"{slug}.jpg"
+        rec = meta.get(slug)
+        if rec is None and out.exists():
+            # 기록이 없는 예전 커버 — 타이포는 유튜브 주소가 없을 때만 만들어지므로 이렇게 추정할 수 있다
+            rec = {"kind": "youtube" if src else "generated", "src": src}
 
-        im = fetch_cover(a["cover_source"]) if a.get("cover_source") else None
+        if out.exists() and not args.force:
+            upgradable = rec and rec.get("kind") == "generated" and src
+            changed = rec and rec.get("kind") == "youtube" and src and rec.get("src") != src
+            if not (upgradable or changed):
+                made["skipped"] += 1
+                a["cover_file"] = out.name
+                meta[slug] = rec or {"kind": "generated", "src": src}
+                continue
+            # 타이포 커버였는데 유튜브 아트가 생겼다 → 이제 진짜 커버로 바꾼다
+
+        im = fetch_cover(src) if src else None
         if im is not None:
-            made["downloaded"] += 1
+            if out.exists() and rec and rec.get("kind") == "generated":
+                made["upgraded"] += 1
+            else:
+                made["downloaded"] += 1
+            kind = "youtube"
         else:
-            if a.get("cover_source"):
+            if src:
                 made["failed"].append(a["folder"])          # 주소는 있었는데 못 받은 경우
             im = make_placeholder(a["title"], a.get("genre", ""))
             made["generated"] += 1
+            kind = "generated"
 
         im.save(out, "JPEG", quality=86, optimize=True)
         a["cover_file"] = out.name
+        meta[slug] = {"kind": kind, "src": src}
 
     CATALOG.write_text(json.dumps(albums, ensure_ascii=False, indent=1), encoding="utf-8")
+    META.write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
 
     total = sum(f.stat().st_size for f in COVERS.glob("*.jpg"))
     print(f"커버 {len(albums)}장")
     print(f"  유튜브에서 내려받음  {made['downloaded']:>3}")
+    print(f"  타이포 → 유튜브 교체 {made['upgraded']:>3}")
     print(f"  타이포로 생성        {made['generated']:>3}")
     print(f"  이미 있어 건너뜀     {made['skipped']:>3}")
     if made["failed"]:

@@ -16,6 +16,7 @@ catalog.json 의 mp3·커버를 Cloudflare R2 로 올리고, 공개 URL 을 cata
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -147,7 +148,11 @@ def main() -> int:
 
     for a in albums:
         if a.get("cover_file"):
-            a["cover_url"] = f"{base}/cover/{a['slug']}.jpg"
+            # 커버는 파일 이름이 그대로라, 내용이 바뀌어도 1년 캐시 때문에 옛 그림이 계속 보인다.
+            # 내용 해시를 쿼리로 붙여 바뀐 커버는 새 주소가 되게 한다(Cloudflare 는 쿼리까지 보고 캐시).
+            cf = COVERS / a["cover_file"]
+            tag = hashlib.sha256(cf.read_bytes()).hexdigest()[:8] if cf.exists() else "0"
+            a["cover_url"] = f"{base}/cover/{a['slug']}.jpg?v={tag}"
         for t in a["tracks"]:
             if t.get("src"):
                 t["url"] = f"{base}/audio/{a['slug']}/{t['n']:02d}.mp3"
