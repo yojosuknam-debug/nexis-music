@@ -10,6 +10,10 @@ catalog.json → public/album/ 아래 정적 HTML.
 
 Next.js 라우팅을 건드리지 않는다. public/ 아래 정적 파일이라 그대로 서비스된다.
 
+🔴 CSS·JS·링크는 **루트 절대경로(/album/...)** 로 쓴다. 상대경로(./)로 쓰면
+   Vercel 이 /album/ → /album 으로 리다이렉트할 때 한 단계 위로 해석돼
+   목록 페이지가 통째로 무스타일이 된다(2026-09-02 실제 발생).
+
 강조색은 **빌드 시점에 커버에서 뽑아 CSS 변수로 박는다.** 브라우저에서 canvas 로 뽑으면
 이미지가 다른 도메인(R2)이라 CORS 설정에 의존하게 되고, 첫 화면이 무채색으로 깜빡인다.
 
@@ -61,6 +65,20 @@ def accent_of(path: Path) -> tuple[int, int, int]:
     return (round(r * 255), round(g * 255), round(b * 255))
 
 
+def clean_album_title(title: str) -> str:
+    """제목 끝의 채널 설명을 뗀다 — 'ABOVE THE TREELINE — Lo-fi & Chill Album' → 'ABOVE THE TREELINE'.
+    'Bible Pansori Vol.1 — Three Sacred Tales' 처럼 진짜 부제는 남긴다:
+    'Album/앨범' 로 끝나거나 'Channel/채널' 이 든 꼬리만 제거한다.
+    슬러그는 건드리지 않으므로 URL 은 그대로다."""
+    parts = re.split(r"\s+[—–]\s+", title)
+    if len(parts) < 2:
+        return title.strip()
+    tail = parts[-1].strip()
+    if re.search(r"(?:Album|앨범)$", tail, re.I) or re.search(r"(?:Channel|채널)", tail, re.I):
+        return " — ".join(x.strip() for x in parts[:-1]).strip() or title.strip()
+    return title.strip()
+
+
 def mmss(ms: int) -> str:
     s = round(ms / 1000)
     return f"{s // 60}:{s % 60:02d}"
@@ -73,14 +91,15 @@ def esc(s: str) -> str:
 # ── 페이지 ────────────────────────────────────────────────────────────────
 def album_page(a: dict, accent: tuple[int, int, int]) -> str:
     # 음원이 없는 트랙은 목록에 넣지 않는다 — 눌러도 안 나는 곡은 고장으로 보인다
+    disp = clean_album_title(a["title"])
     playable = [t for t in a["tracks"] if t.get("url")]
     sung = sum(1 for t in playable if t.get("lyrics"))
     total_ms = sum(t["ms"] for t in playable)
     runtime = f"{round(total_ms/60000)}분"
-    desc = (f"{a['title']} — {len(playable)}곡 · {runtime}"
+    desc = (f"{disp} — {len(playable)}곡 · {runtime}"
             + (f" · 가사 수록 {sung}곡" if sung else " · 전곡 연주"))
     data = {
-        "title": a["title"],
+        "title": disp,
         "cover": a.get("cover_url", ""),
         "tracks": [{"n": t["n"], "title": t["title"], "ms": t["ms"],
                     "url": t["url"], "lyrics": t.get("lyrics", []),
@@ -93,17 +112,17 @@ def album_page(a: dict, accent: tuple[int, int, int]) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(a['title'])} — 넥시스 뮤직</title>
+<title>{esc(disp)} — 넥시스 뮤직</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{SITE}/album/{a['slug']}.html">
 <meta property="og:type" content="music.album">
-<meta property="og:title" content="{esc(a['title'])}">
+<meta property="og:title" content="{esc(disp)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:image" content="{esc(a.get('cover_url',''))}">
 <meta property="og:url" content="{SITE}/album/{a['slug']}.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{FONTS}">
-<link rel="stylesheet" href="./jukebox.css">
+<link rel="stylesheet" href="/album/jukebox.css">
 <style>:root{{--accent:rgb({r},{g},{b});--accent-rgb:{r},{g},{b}}}</style>
 </head>
 <body>
@@ -116,13 +135,13 @@ def album_page(a: dict, accent: tuple[int, int, int]) -> str:
 
 <main class="wrap">
   <div class="art">
-    <img src="{esc(a.get('cover_url',''))}" alt="{esc(a['title'])} 앨범 커버" width="800" height="800">
+    <img src="{esc(a.get('cover_url',''))}" alt="{esc(disp)} 앨범 커버" width="800" height="800">
     <p class="genre">{esc(a.get('genre',''))}</p>
     <p class="mood">{esc('가사 수록 ' + str(sung) + '곡' if sung else '전곡 연주')}</p>
   </div>
 
   <div class="main">
-    <h1>{esc(a['title'])}</h1>
+    <h1>{esc(disp)}</h1>
     <p class="sub"><b>{len(playable)}곡</b> · {runtime}</p>
 
     <div class="transport">
@@ -145,7 +164,7 @@ def album_page(a: dict, accent: tuple[int, int, int]) -> str:
 
 <audio id="audio" preload="none"></audio>
 <script>window.ALBUM = {json.dumps(data, ensure_ascii=False)};</script>
-<script src="./jukebox.js"></script>
+<script src="/album/jukebox.js"></script>
 </body>
 </html>
 """
@@ -161,12 +180,12 @@ def playable_ms(a: dict) -> int:
 
 def index_page(albums: list[dict], accents: dict[str, tuple]) -> str:
     cards = []
-    for a in sorted(albums, key=lambda x: x["title"].lower()):
+    for a in sorted(albums, key=lambda x: clean_album_title(x["title"]).lower()):
         r, g, b = accents[a["slug"]]
         cards.append(
-            f'<a class="card" href="./{a["slug"]}.html" style="--accent-rgb:{r},{g},{b}">'
+            f'<a class="card" href="/album/{a["slug"]}.html" style="--accent-rgb:{r},{g},{b}">'
             f'<img src="{esc(a.get("cover_url",""))}" alt="" loading="lazy" width="800" height="800">'
-            f'<span class="t">{esc(a["title"])}</span>'
+            f'<span class="t">{esc(clean_album_title(a["title"]))}</span>'
             f'<span class="m">{playable_count(a)}곡 · {round(playable_ms(a)/60000)}분</span></a>')
     total_tracks = sum(playable_count(a) for a in albums)
     return f"""<!doctype html>
@@ -178,7 +197,7 @@ def index_page(albums: list[dict], accents: dict[str, tuple]) -> str:
 <meta name="description" content="앨범 {len(albums)}장 · {total_tracks}곡. 곡을 눌러 바로 듣고 가사를 봅니다.">
 <link rel="canonical" href="{SITE}/album/">
 <link rel="stylesheet" href="{FONTS}">
-<link rel="stylesheet" href="./jukebox.css">
+<link rel="stylesheet" href="/album/jukebox.css">
 </head>
 <body class="gallery">
 <header class="top"><a class="back" href="/index.html">← 아카이브</a></header>
@@ -321,6 +340,10 @@ h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;
 .card:hover img{transform:translateY(-4px);box-shadow:0 18px 40px -14px rgba(var(--accent-rgb),.6)}
 .card .t{font-size:14px;line-height:1.4;overflow-wrap:anywhere}
 .card .m{font-size:11.5px;color:rgba(255,255,255,.48)}
+/* 폰에서 minmax(170px,1fr)+gap 20 은 390px 폭에 2열이 안 들어가 1열로 떨어진다.
+   107장이 세로로 늘어서면 목록 구실을 못 하므로 폰은 2열로 못박는다. */
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .card .t{font-size:13px}.gwrap{padding-bottom:60px}}
 """
 
 JS = r"""
