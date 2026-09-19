@@ -24,12 +24,12 @@
   "src": "https://i.ytimg.com/vi/OXRk4_MI8EM/maxresdefault.jpg"
  },
  "bible-pansori-vol-1-three-sacred-tales": {
-  "kind": "generated",
-  "src": ""
+  "kind": "designed_cover",
+  "src": "designed from bible_pansori_vol1_album.md cover prompt"
  },
  "bible-pansori-vol-2-three-sacred-tales": {
-  "kind": "generated",
-  "src": ""
+  "kind": "designed_cover",
+  "src": "designed from bible_pansori_vol2_album.md cover prompt"
  },
  "bone-deep": {
   "kind": "youtube",
@@ -52,8 +52,10 @@
   "src": "https://i.ytimg.com/vi/XEamGLPzAmQ/maxresdefault.jpg"
  },
  "폭풍의-산조-storm-sanjo-vol-1-한의-폭풍": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Storm_Sanjo_Vol.1_project/thumbnail.png",
+  "project": "Storm_Sanjo_Vol.1_project",
+  "match_score": 1.0
  },
  "dawn-and-stone-새벽과-돌": {
   "kind": "youtube",
@@ -80,8 +82,10 @@
   "src": "https://i.ytimg.com/vi/kPOoVnuyCCw/maxresdefault.jpg"
  },
  "외신-foreign-gods": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/FOREIGN_GODS_project/thumbnail.png",
+  "project": "FOREIGN_GODS_project",
+  "match_score": 1.0
  },
  "fragments-i-don-t-remember-in-order": {
   "kind": "youtube",
@@ -92,16 +96,22 @@
   "src": "https://i.ytimg.com/vi/npxE6-9y7Bk/maxresdefault.jpg"
  },
  "냉장고-습격-작전-operation-fridge-raid": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Operation_Fridge_Raid_project/thumbnail.png",
+  "project": "Operation_Fridge_Raid_project",
+  "match_score": 1.0
  },
  "산-위에서-from-the-mountain": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/FROM_THE_MOUNTAIN_project/thumbnail.png",
+  "project": "FROM_THE_MOUNTAIN_project",
+  "match_score": 1.0
  },
  "안녕-오렌지족-goodbye-orange-tribe": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Goodbye,_Orange_Tribe_project/thumbnail.png",
+  "project": "Goodbye,_Orange_Tribe_project",
+  "match_score": 1.0
  },
  "gray-window": {
   "kind": "youtube",
@@ -120,24 +130,30 @@
   "src": "https://i.ytimg.com/vi/-ypFOLQ1M7c/maxresdefault.jpg"
  },
  "한과-두엔데-han-y-duende": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Han_y_Duende_project/thumbnail.png",
+  "project": "Han_y_Duende_project",
+  "match_score": 1.0
  },
  "han-and-hallelujah-still-waters-channel-album": {
   "kind": "youtube",
   "src": "https://i.ytimg.com/vi/WeDWMn7jKXU/maxresdefault.jpg"
  },
  "한지-바람-hanji-wind-korean-wind-instrument-solo-series": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/HANJI_WIND_-_Korean_Wind_Instrument_Solo_Series_project/thumbnail.png",
+  "project": "HANJI_WIND_-_Korean_Wind_Instrument_Solo_Series_project",
+  "match_score": 1.0
  },
  "hanpuri-songs-of-release-한풀이": {
   "kind": "youtube",
   "src": "https://i.ytimg.com/vi/FnPsaOPYlOQ/maxresdefault.jpg"
  },
  "한양-애비뉴-hanyang-avenue": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/HANYANG_AVENUE_project/thumbnail.png",
+  "project": "HANYANG_AVENUE_project",
+  "match_score": 1.0
  },
  "쉬어가는-감성음악-miso-channel-새-앨범": {
   "kind": "youtube",
@@ -156,8 +172,10 @@
   "src": "https://i.ytimg.com/vi/oTnQJGWcJaM/maxresdefault.jpg"
  },
  "조선-힙합-클럽-joseon-hip-hop-club": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/JOSEON_HIP-HOP_CLUB_project/thumbnail.png",
+  "project": "JOSEON_HIP-HOP_CLUB_project",
+  "match_score": 1.0
  },
  "kkwaenggwari-disco": {
   "kind": "youtube",
@@ -168,8 +186,10 @@
   "src": "https://i.ytimg.com/vi/90ByWq8CetA/maxresdefault.jpg"
  },
  "비의-언어-language-of-rain": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/LANGUAGE_OF_RAIN_project/thumbnail.png",
+  "project": "LANGUAGE_OF_RAIN_project",
+  "match_score": 1.0
  },
  "last-light-café": {
   "kind": "youtube",
@@ -204,8 +224,10 @@
   "src": "https://i.ytimg.com/vi/gK1wN41KRG8/maxresdefault.jpg"
  },
  "midnight-han-한의-밤": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/MIDNIGHT_HAN_project/thumbnail.png",
+  "project": "MIDNIGHT_HAN_project",
+  "match_score": 1.0
  },
  "자정의-부두-midnight-harbor": {
   "kind": "youtube",
@@ -220,20 +242,28 @@
   "src": "https://i.ytimg.com/vi/T1jpA4y5isQ/maxresdefault.jpg"
  },
  "민초-mincho-조선-힙합-vol-2": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/MINCHO_project/thumbnail.png",
+  "project": "MINCHO_project",
+  "match_score": 1.0
  },
  "미소-miso": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/MISO_project/thumbnail.png",
+  "project": "MISO_project",
+  "match_score": 1.0
  },
  "그-시절-믹스테이프-that-era-s-mixtape": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/그_시절_믹스테이프_(That_Era's_Mixtape)_project/thumbnail.png",
+  "project": "그_시절_믹스테이프_(That_Era's_Mixtape)_project",
+  "match_score": 1.0
  },
  "못-잊어-cannot-forget": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Cannot_Forget_project/thumbnail.png",
+  "project": "Cannot_Forget_project",
+  "match_score": 1.0
  },
  "neon-echoes-album-production-complete-guide": {
   "kind": "youtube",
@@ -244,20 +274,24 @@
   "src": "https://i.ytimg.com/vi/T6sSdXoVDKA/maxresdefault.jpg"
  },
  "neon_hours-네온-아워스": {
-  "kind": "generated",
-  "src": ""
+  "kind": "designed_cover",
+  "src": "designed from NEON_HOURS_album.md cover prompt"
  },
  "니가-좋아-vol-2-세계의-고백-world-confessions": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/NIGA2_WORLD_CONFESSIONS_-_Niga_Joha_Vol.2_project/thumbnail.png",
+  "project": "NIGA2_WORLD_CONFESSIONS_-_Niga_Joha_Vol.2_project",
+  "match_score": 1.0
  },
  "니가-좋아-i-like-you-v2-남성-보컬-전곡": {
   "kind": "youtube",
   "src": "https://i.ytimg.com/vi/8RBd_mOrdLE/maxresdefault.jpg"
  },
  "niga-lo-fi-melody-series": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/NIGA_-_Lo-fi_Melody_Series_project/thumbnail.png",
+  "project": "NIGA_-_Lo-fi_Melody_Series_project",
+  "match_score": 1.0
  },
  "심야-주파수-night-frequency": {
   "kind": "youtube",
@@ -272,8 +306,10 @@
   "src": "https://i.ytimg.com/vi/OXVoznk0NRQ/maxresdefault.jpg"
  },
  "그리움의-항구-porto-da-saudade": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Porto_Da_Saudade_project/thumbnail.png",
+  "project": "Porto_Da_Saudade_project",
+  "match_score": 1.0
  },
  "postmarked": {
   "kind": "youtube",
@@ -368,8 +404,10 @@
   "src": "https://i.ytimg.com/vi/oSmBscWBWmE/maxresdefault.jpg"
  },
  "정전-신호-static-signal": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Static_Signal_project/thumbnail.png",
+  "project": "Static_Signal_project",
+  "match_score": 1.0
  },
  "still-waters": {
   "kind": "youtube",
@@ -396,8 +434,10 @@
   "src": "https://i.ytimg.com/vi/4gStO-YboW4/maxresdefault.jpg"
  },
  "그날의-온도": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/That_Day's_Temperature_project/thumbnail.png",
+  "project": "That_Day's_Temperature_project",
+  "match_score": 1.0
  },
  "the-cello-café": {
   "kind": "youtube",
@@ -416,12 +456,16 @@
   "src": "https://i.ytimg.com/vi/WeDWMn7jKXU/maxresdefault.jpg"
  },
  "미확인-주파수": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Unidentified_Frequency_project/thumbnail.png",
+  "project": "Unidentified_Frequency_project",
+  "match_score": 1.0
  },
  "웃프다-utpeuda": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Utpeuda_project/thumbnail.png",
+  "project": "Utpeuda_project",
+  "match_score": 1.0
  },
  "vote-buster-선거-뽕짝-대폭발-v2": {
   "kind": "youtube",
@@ -444,32 +488,44 @@
   "src": "https://i.ytimg.com/vi/6k5ojLYYbiY/maxresdefault.jpg"
  },
  "夜光都市-yako-toshi-city-of-glowing-nights": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/YAKO_TOSHI_project/thumbnail.png",
+  "project": "YAKO_TOSHI_project",
+  "match_score": 1.0
  },
  "경우의-수-the-odds-v2": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Gyeonguui_Su_(The_Odds)_project/thumbnail.png",
+  "project": "Gyeonguui_Su_(The_Odds)_project",
+  "match_score": 1.0
  },
  "small-joys-café": {
   "kind": "youtube",
   "src": "https://i.ytimg.com/vi/SuQq4ELQ980/maxresdefault.jpg"
  },
  "gallery-three-lo-fi-chill-album": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Gallery_Three_(3전시실,_비_오는_오후)_project/thumbnail.png",
+  "project": "Gallery_Three_(3전시실,_비_오는_오후)_project",
+  "match_score": 1.0
  },
  "도깨비-고객센터-goblin-customer-service": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/도깨비_고객센터_(Goblin_Customer_Service)_project/thumbnail.png",
+  "project": "도깨비_고객센터_(Goblin_Customer_Service)_project",
+  "match_score": 1.0
  },
  "굳이-이걸-노래로-did-it-really-need-a-song": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Gudi_Igeol_Noraero_project/thumbnail.png",
+  "project": "Gudi_Igeol_Noraero_project",
+  "match_score": 1.0
  },
  "lane-four-lo-fi-chill-album": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Lane_Four_project/thumbnail.png",
+  "project": "Lane_Four_project",
+  "match_score": 1.0
  },
  "the-old-trades-still-waters-album": {
   "kind": "youtube",
