@@ -27,9 +27,7 @@ import hashlib
 import html
 import json
 import re
-import shutil
 import sys
-from urllib.parse import quote
 from pathlib import Path
 
 from PIL import Image
@@ -98,13 +96,28 @@ def esc(s: str) -> str:
     return html.escape(str(s), quote=True)
 
 
-def cover_asset(a: dict) -> str:
+def cover_source_path(a: dict) -> Path | None:
     cover_file = a.get("cover_file", "")
     src = COVERS / cover_file
     if not cover_file or not src.exists():
+        return None
+    return src
+
+
+def cover_asset_name(a: dict) -> str | None:
+    src = cover_source_path(a)
+    if not src:
+        return None
+    digest = hashlib.sha256(src.read_bytes()).hexdigest()[:12]
+    suffix = src.suffix.lower() if src.suffix else ".jpg"
+    return f"cover-{digest}{suffix}"
+
+
+def cover_asset(a: dict) -> str:
+    asset_name = cover_asset_name(a)
+    if not asset_name:
         return a.get("cover_url", "")
-    digest = hashlib.sha256(src.read_bytes()).hexdigest()[:8]
-    return f"/album/covers/{quote(cover_file)}?v={digest}"
+    return f"/album/covers/{asset_name}"
 
 
 def absolute_site_url(path_or_url: str) -> str:
@@ -307,14 +320,14 @@ def sync_cover_assets(albums: list[dict]) -> int:
     copied = 0
 
     for a in albums:
-        cover_file = a.get("cover_file", "")
-        src = COVERS / cover_file
-        if not cover_file or not src.exists():
+        src = cover_source_path(a)
+        asset_name = cover_asset_name(a)
+        if not src or not asset_name:
             continue
-        dst = COVER_OUT / cover_file
-        keep.add(cover_file)
-        if not dst.exists() or dst.stat().st_size != src.stat().st_size:
-            shutil.copy2(src, dst)
+        dst = COVER_OUT / asset_name
+        keep.add(asset_name)
+        if not dst.exists() or dst.read_bytes() != src.read_bytes():
+            dst.write_bytes(src.read_bytes())
             copied += 1
 
     for stale in COVER_OUT.iterdir():
