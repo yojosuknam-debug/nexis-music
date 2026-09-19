@@ -73,11 +73,63 @@ main { display: grid; gap: 10px; margin-top: 10px; }
 .filter-chip.is-active { background: linear-gradient(135deg, #b95a1a, #8b3d07); color: #fff7ef; }
 .filter-chip--channel { background: #f0f7ff; border-color: rgba(26, 90, 185, 0.2); color: #1a4a8b; }
 .filter-chip--channel.is-active { background: linear-gradient(135deg, #1a5ab9, #0d3a8b); color: #eff7ff; }
-.album-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; }
+.album-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.sort-controls {
+  display: inline-flex;
+  gap: 3px;
+  padding: 3px;
+  border-radius: 12px;
+  background: rgba(255, 248, 239, 0.82);
+  border: 1px solid rgba(185, 90, 26, 0.16);
+}
+.sort-chip {
+  min-height: 34px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+.sort-chip.is-active {
+  background: #1f5d78;
+  color: #f4fbff;
+  box-shadow: 0 6px 16px rgba(31, 93, 120, 0.22);
+}
 #album-grid.album-grid,
 .album-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   gap: 6px !important;
+}
+.album-grid.is-grouped {
+  display: block;
+}
+.album-group { margin-top: 18px; }
+.album-group:first-child { margin-top: 0; }
+.album-group-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 0 2px;
+}
+.album-group-head h3 {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.25;
+}
+.album-group-head span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+.album-group-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
 }
 .album-card {
   display: block; text-decoration: none; color: inherit; cursor: pointer;
@@ -100,10 +152,12 @@ main { display: grid; gap: 10px; margin-top: 10px; }
   .filter-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   #album-grid.album-grid,
   .album-grid { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 8px !important; }
+  .album-group-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
   .album-card-body h3, .album-count, .album-card-link { font-size: 0.72rem; }
 }
 @media (min-width: 1040px) {
   .page-shell { padding: 22px 22px 44px; }
   #album-grid.album-grid,
   .album-grid { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; gap: 10px !important; }
+  .album-group-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
 }

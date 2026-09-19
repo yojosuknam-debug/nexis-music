@@ -5,11 +5,18 @@
   var albumGrid = document.getElementById('album-grid');
   var albumSectionTitle = document.getElementById('album-section-title');
   var albumSectionMeta = document.getElementById('album-section-meta');
+  var sortControls = document.getElementById('sort-controls');
 
   var activeGenre = 'all';
+  var sortMode = 'latest';
   var genres = [];
   var channels = [];
   var albums = [];
+  var sortModes = [
+    { id: 'latest', label: '\uCD5C\uC2E0\uC21C' },
+    { id: 'oldest', label: '\uC624\uB798\uB41C\uC21C' },
+    { id: 'category', label: '\uCE74\uD14C\uACE0\uB9AC' }
+  ];
 
   function decodeBase64Utf8(value) {
     var binary = atob(value);
@@ -51,6 +58,18 @@
     return 'assets/covers/album-' + String(index + 1).padStart(3, '0') + '.jpg';
   }
 
+  function escapeHtml(value) {
+    return String(value || '').replace(/[&<>"']/g, function (char) {
+      return {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }[char];
+    });
+  }
+
   function buildCatalog(rows) {
     var genreMap = new Map();
     var channelMap = new Map();
@@ -77,7 +96,9 @@
         url: row.playlist_url,
         thumbnail: row.thumbnail_url || '',
         localThumbnail: row.local_cover || getLocalCoverPath(index),
-        published: row.published_at || ''
+        published: row.published_at || '',
+        categoryLabel: formatGenreLabel(rawGenre),
+        order: index
       };
     }).filter(function (item) {
       return item.title && item.url;
@@ -114,6 +135,21 @@
     }).join('');
   }
 
+  function renderSortControls() {
+    sortControls.innerHTML = sortModes.map(function (mode) {
+      var activeClass = mode.id === sortMode ? ' is-active' : '';
+      return '<button type="button" class="sort-chip' + activeClass + '" data-sort="' + mode.id + '">' + mode.label + '</button>';
+    }).join('');
+
+    Array.prototype.forEach.call(sortControls.querySelectorAll('button'), function (button) {
+      button.addEventListener('click', function () {
+        sortMode = button.getAttribute('data-sort');
+        renderSortControls();
+        renderAlbums();
+      });
+    });
+  }
+
   function renderGenreFilters() {
     var genreChips = genres.map(function (genre) {
       var activeClass = genre.id === activeGenre ? ' is-active' : '';
@@ -141,32 +177,93 @@
     });
   }
 
-  function sortNewestFirst(list) {
-    // 업로드 날짜 내림차순(최신이 위로). 날짜 없는 항목(정적 앨범)은 아래로.
+  function sortByPublished(list, newestFirst) {
+    // 업로드 날짜 있는 YouTube 항목을 먼저 정렬한다. 날짜 없는 정적 앨범은 뒤에서 기존 순서를 유지한다.
     return list.slice().sort(function (a, b) {
-      return (b.published || '').localeCompare(a.published || '');
+      var aHasDate = Boolean(a.published);
+      var bHasDate = Boolean(b.published);
+      if (aHasDate && bHasDate) {
+        return newestFirst
+          ? b.published.localeCompare(a.published)
+          : a.published.localeCompare(b.published);
+      }
+      if (aHasDate !== bHasDate) {
+        return aHasDate ? -1 : 1;
+      }
+      return a.order - b.order;
+    });
+  }
+
+  function getBaseAlbums() {
+    if (activeGenre === 'all') {
+      return albums.slice();
+    }
+    return albums.filter(function (album) {
+      return album.genre === activeGenre;
     });
   }
 
   function getFilteredAlbums() {
-    if (activeGenre === 'all') {
-      return sortNewestFirst(albums);
+    var filtered = getBaseAlbums();
+    if (sortMode === 'oldest') {
+      return sortByPublished(filtered, false);
     }
-    var filtered = albums.filter(function (album) {
-      return album.genre === activeGenre;
-    });
-    // 채널(YouTube 업로드) 보기는 최신이 위로(업로드 날짜 내림차순).
-    // published 값이 없으면(아직 미수집) 수집 순서(최신순)를 유지한다.
-    var isChannelView = channels.some(function (ch) { return ch.id === activeGenre; });
-    if (isChannelView) {
-      return sortNewestFirst(filtered);
+    if (sortMode === 'category') {
+      return filtered.slice().sort(function (a, b) {
+        var group = a.categoryLabel.localeCompare(b.categoryLabel, 'ko');
+        if (group) {
+          return group;
+        }
+        return sortByPublished([a, b], true)[0] === a ? -1 : 1;
+      });
     }
-    return filtered.reverse();
+    return sortByPublished(filtered, true);
   }
 
   function buildCoverTag(album) {
-    var remote = album.thumbnail ? ' data-remote-src="' + album.thumbnail + '"' : '';
-    return '<img src="' + album.localThumbnail + '" alt="' + album.title + ' \uC568\uBC94 \uCEE4\uBC84" loading="lazy" referrerpolicy="no-referrer"' + remote + ' onerror="var r=this.getAttribute(\'data-remote-src\'); if(r && this.src.indexOf(r)===-1){ this.src=r; this.removeAttribute(\'data-remote-src\'); } else { this.onerror=null; this.src=\'assets/cover-placeholder.svg\'; }">';
+    var remote = album.thumbnail ? ' data-remote-src="' + escapeHtml(album.thumbnail) + '"' : '';
+    return '<img src="' + escapeHtml(album.localThumbnail) + '" alt="' + escapeHtml(album.title) + ' \uC568\uBC94 \uCEE4\uBC84" loading="lazy" referrerpolicy="no-referrer"' + remote + ' onerror="var r=this.getAttribute(\'data-remote-src\'); if(r && this.src.indexOf(r)===-1){ this.src=r; this.removeAttribute(\'data-remote-src\'); } else { this.onerror=null; this.src=\'assets/cover-placeholder.svg\'; }">';
+  }
+
+  function renderAlbumCard(album) {
+    return [
+      '<a class="album-card" href="' + escapeHtml(album.url) + '" target="_blank" rel="noreferrer">',
+      buildCoverTag(album),
+      '<div class="album-card-body">',
+      '<p class="album-count">' + escapeHtml(album.count) + '\uACE1</p>',
+      '<h3>' + escapeHtml(album.title) + '</h3>',
+      '<span class="album-card-link">' + (album.isChannel ? '\uC601\uC0C1 \uBCF4\uAE30' : '\uC7AC\uC0DD\uBAA9\uB85D \uC5F4\uAE30') + '</span>',
+      '</div>',
+      '</a>'
+    ].join('');
+  }
+
+  function renderGroupedAlbums(filtered) {
+    var groups = new Map();
+    filtered.forEach(function (album) {
+      if (!groups.has(album.genre)) {
+        groups.set(album.genre, {
+          label: album.categoryLabel,
+          isChannel: album.isChannel,
+          items: []
+        });
+      }
+      groups.get(album.genre).items.push(album);
+    });
+
+    return Array.from(groups.values()).map(function (group) {
+      return [
+        '<section class="album-group">',
+        '<div class="album-group-head">',
+        '<h3>' + escapeHtml(group.label) + '</h3>',
+        '<span>' + group.items.length + '\uAC1C</span>',
+        '</div>',
+        '<div class="album-group-grid">',
+        group.items.map(renderAlbumCard).join(''),
+        '</div>',
+        '</section>'
+      ].join('');
+    }).join('');
   }
 
   function renderAlbums() {
@@ -175,25 +272,17 @@
     var channel = channels.find(function (item) { return item.id === activeGenre; });
 
     albumSectionTitle.textContent = channel ? channel.label : (genre ? genre.label : '\uC804\uCCB4 \uC568\uBC94');
-    albumSectionMeta.textContent = filtered.length + '\uAC1C \uC568\uBC94';
+    albumSectionMeta.textContent = filtered.length + '\uAC1C \uC568\uBC94 \u00B7 ' + sortModes.find(function (mode) { return mode.id === sortMode; }).label;
+    albumGrid.classList.toggle('is-grouped', sortMode === 'category');
 
     if (!filtered.length) {
       albumGrid.innerHTML = '<div class="album-empty">\uC774 \uC7A5\uB974\uC5D0\uB294 \uC544\uC9C1 \uD45C\uC2DC\uD560 \uC568\uBC94\uC774 \uC5C6\uC2B5\uB2C8\uB2E4.</div>';
       return;
     }
 
-    albumGrid.innerHTML = filtered.map(function (album) {
-      return [
-        '<a class="album-card" href="' + album.url + '" target="_blank" rel="noreferrer">',
-        buildCoverTag(album),
-        '<div class="album-card-body">',
-        '<p class="album-count">' + album.count + '\uACE1</p>',
-        '<h3>' + album.title + '</h3>',
-        '<span class="album-card-link">' + (album.isChannel ? '\uC601\uC0C1 \uBCF4\uAE30' : '\uC7AC\uC0DD\uBAA9\uB85D \uC5F4\uAE30') + '</span>',
-        '</div>',
-        '</a>'
-      ].join('');
-    }).join('');
+    albumGrid.innerHTML = sortMode === 'category'
+      ? renderGroupedAlbums(filtered)
+      : filtered.map(renderAlbumCard).join('');
   }
 
   if (!encoded) {
@@ -209,5 +298,6 @@
   albums = parsed.albums;
   renderStats();
   renderGenreFilters();
+  renderSortControls();
   renderAlbums();
 }());
