@@ -454,5 +454,33 @@
  "small-joys-café": {
   "kind": "youtube",
   "src": "https://i.ytimg.com/vi/SuQq4ELQ980/maxresdefault.jpg"
+ },
+ "gallery-three-lo-fi-chill-album": {
+  "kind": "generated",
+  "src": ""
+ },
+ "도깨비-고객센터-goblin-customer-service": {
+  "kind": "generated",
+  "src": ""
+ },
+ "굳이-이걸-노래로-did-it-really-need-a-song": {
+  "kind": "generated",
+  "src": ""
+ },
+ "lane-four-lo-fi-chill-album": {
+  "kind": "generated",
+  "src": ""
+ },
+ "the-old-trades-still-waters-album": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/WeDWMn7jKXU/maxresdefault.jpg"
+ },
+ "played-from-memory-still-waters-album": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/WeDWMn7jKXU/maxresdefault.jpg"
+ },
+ "바다밭-the-sea-field-hanguk-sounds-album": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/fvCvFjTY--w/maxresdefault.jpg"
  }
 }

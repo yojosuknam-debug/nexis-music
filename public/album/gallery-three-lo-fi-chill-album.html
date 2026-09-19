@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GALLERY THREE — 넥시스 뮤직</title>
+<meta name="description" content="GALLERY THREE — 8곡 · 25분 · 전곡 연주">
+<link rel="canonical" href="https://music.yojosuknam.com/album/gallery-three-lo-fi-chill-album.html">
+<meta property="og:type" content="music.album">
+<meta property="og:title" content="GALLERY THREE">
+<meta property="og:description" content="GALLERY THREE — 8곡 · 25분 · 전곡 연주">
+<meta property="og:image" content="https://audio.yojosuknam.com/cover/gallery-three-lo-fi-chill-album.jpg?v=ef01b4ed">
+<meta property="og:url" content="https://music.yojosuknam.com/album/gallery-three-lo-fi-chill-album.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="/album/jukebox.css">
+<style>:root{--accent:rgb(65,77,200);--accent-rgb:65,77,200}</style>
+</head>
+<body>
+<div class="bg" style="background-image:url('https://audio.yojosuknam.com/cover/gallery-three-lo-fi-chill-album.jpg?v=ef01b4ed')"></div>
+<div class="veil"></div>
+
+<header class="top">
+  <a class="back" href="/index.html">← 아카이브</a>
+</header>
+
+<main class="wrap">
+  <div class="art">
+    <img src="https://audio.yojosuknam.com/cover/gallery-three-lo-fi-chill-album.jpg?v=ef01b4ed" alt="GALLERY THREE 앨범 커버" width="800" height="800">
+    <p class="genre">Neo-classical Lo-fi / Piano Chillhop / Ambient Lo-fi (felt-hammer piano · museum room tone · no cymbals)</p>
+    <p class="mood">전곡 연주</p>
+  </div>
+
+  <div class="main">
+    <h1>GALLERY THREE</h1>
+    <p class="sub"><b>8곡</b> · 25분</p>
+
+    <div class="transport">
+      <button class="play" id="play" aria-label="재생"></button>
+      <div class="scrub">
+        <div class="now" id="now"></div>
+        <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+        <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+
+    <div class="seg">
+      <button id="tabList" aria-selected="true">수록곡</button>
+      <button id="tabLyr" aria-selected="false">가사</button>
+    </div>
+    <div class="list" id="list"></div>
+    <div class="list lyr" id="lyrics" hidden></div>
+  </div>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script>window.ALBUM = {"title": "GALLERY THREE", "cover": "https://audio.yojosuknam.com/cover/gallery-three-lo-fi-chill-album.jpg?v=ef01b4ed", "tracks": [{"n": 1, "title": "Umbrella Stand", "ms": 168816, "url": "https://audio.yojosuknam.com/audio/gallery-three-lo-fi-chill-album/01.mp3", "lyrics": [], "instrumental": true}, {"n": 2, "title": "Pencils Only", "ms": 167976, "url": "https://audio.yojosuknam.com/audio/gallery-three-lo-fi-chill-album/02.mp3", "lyrics": [], "instrumental": true}, {"n": 3, "title": "The Bench in Gallery Three", "ms": 213480, "url": "https://audio.yojosuknam.com/audio/gallery-three-lo-fi-chill-album/03.mp3", "lyrics": [], "instrumental": true}, {"n": 4, "title": "Wall Label", "ms": 170616, "url": "https://audio.yojosuknam.com/audio/gallery-three-lo-fi-chill-album/04.mp3", "lyrics": [], "instrumental": true}, {"n": 5, "title": "The Guard's Corner", "ms": 187056, "url": "https://audio.yojosuknam.com/audio/gallery-three-lo-fi-chill-album/05.mp3", "lyrics": [], "instrumental": true}, {"n": 6, "title": "Skylight, Overcast", "ms": 202560, "url": "https://audio.yojosuknam.com/audio/gallery-three-lo-fi-chill-album/06.mp3", "lyrics": [], "instrumental": true}, {"n": 7, "title": "Between Two Rooms", "ms": 192000, "url": "https://audio.yojosuknam.com/audio/gallery-three-lo-fi-chill-album/07.mp3", "lyrics": [], "instrumental": true}, {"n": 8, "title": "Coat Check at Five", "ms": 189720, "url": "https://audio.yojosuknam.com/audio/gallery-three-lo-fi-chill-album/08.mp3", "lyrics": [], "instrumental": true}]};</script>
+<script src="/album/jukebox.js"></script>
+</body>
+</html>
