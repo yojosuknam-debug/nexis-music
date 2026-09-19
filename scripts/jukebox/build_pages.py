@@ -38,6 +38,11 @@ COVERS = HERE / "assets" / "covers"
 OUT = REPO / "public" / "album"
 ROOT_INDEX = REPO / "public" / "index.html"
 
+sys.path.insert(0, str(HERE))
+import _env
+
+INPUT_DIR = _env.input_dir()
+
 SITE = "https://music.yojosuknam.com"
 FONTS = ("https://fonts.googleapis.com/css2?"
          "family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap")
@@ -179,14 +184,58 @@ def playable_ms(a: dict) -> int:
     return sum(t["ms"] for t in a["tracks"] if t.get("url"))
 
 
+def source_album_timestamp(a: dict) -> int:
+    folder = INPUT_DIR / a.get("folder", "")
+    if not folder.exists():
+        return 0
+
+    times = []
+    for pattern in ("*album*.md", "tracks/*.mp3", "*.mp3"):
+        for p in folder.glob(pattern):
+            try:
+                times.append(p.stat().st_mtime)
+            except OSError:
+                pass
+    try:
+        times.append(folder.stat().st_mtime)
+    except OSError:
+        pass
+    return round(max(times)) if times else 0
+
+
+def album_timestamp(a: dict) -> int:
+    try:
+        return int(a.get("updated_at") or 0) or source_album_timestamp(a)
+    except (TypeError, ValueError):
+        return source_album_timestamp(a)
+
+
+def category_label(a: dict) -> str:
+    raw = (a.get("channel") or a.get("genre") or "").strip()
+    raw = re.sub(r"`[^`]*`", "", raw)
+    raw = re.sub(r"\([^)]*\)", "", raw)
+    raw = re.split(r"[·×/|]", raw)[0]
+    raw = raw.strip(" -—–")
+    return raw or "기타"
+
+
 def index_page(albums: list[dict], accents: dict[str, tuple]) -> str:
     cards = []
-    for a in sorted(albums, key=lambda x: clean_album_title(x["title"]).lower()):
+    sorted_albums = sorted(
+        albums,
+        key=lambda x: (-album_timestamp(x), clean_album_title(x["title"]).lower()),
+    )
+    for a in sorted_albums:
         r, g, b = accents[a["slug"]]
+        disp = clean_album_title(a["title"])
+        cover = a.get("cover_url", "")
+        category = category_label(a)
         cards.append(
-            f'<a class="card" href="/album/{a["slug"]}.html" style="--accent-rgb:{r},{g},{b}">'
-            f'<img src="{esc(a.get("cover_url",""))}" alt="" loading="lazy" width="800" height="800">'
-            f'<span class="t">{esc(clean_album_title(a["title"]))}</span>'
+            f'<a class="card" href="/album/{a["slug"]}.html" style="--accent-rgb:{r},{g},{b}" '
+            f'data-title="{esc(disp.lower())}" data-category="{esc(category)}" data-updated="{album_timestamp(a)}">'
+            f'<img src="{esc(cover)}" alt="{esc(disp)} 앨범 커버" loading="lazy" width="800" height="800" '
+            f'onerror="this.onerror=null;this.src=\'/assets/cover-placeholder.svg\';">'
+            f'<span class="t">{esc(disp)}</span>'
             f'<span class="m">{playable_count(a)}곡 · {round(playable_ms(a)/60000)}분</span></a>')
     total_tracks = sum(playable_count(a) for a in albums)
     return f"""<!doctype html>
@@ -205,8 +254,14 @@ def index_page(albums: list[dict], accents: dict[str, tuple]) -> str:
 <div class="gwrap">
   <h1 class="gtitle">앨범</h1>
   <p class="gsub">{len(albums)}장 · {total_tracks}곡</p>
-  <div class="grid">{''.join(cards)}</div>
+  <div class="gallery-controls" aria-label="앨범 정렬">
+    <button type="button" class="gallery-chip is-active" data-gallery-sort="latest">최신순</button>
+    <button type="button" class="gallery-chip" data-gallery-sort="oldest">오래된순</button>
+    <button type="button" class="gallery-chip" data-gallery-sort="category">카테고리</button>
+  </div>
+  <div class="grid" id="albumGrid">{''.join(cards)}</div>
 </div>
+<script>{GALLERY_JS}</script>
 </body>
 </html>
 """
@@ -266,6 +321,101 @@ def main() -> int:
               + (" …" if len(removed) > 5 else ""))
         print("   ※ R2 의 음원 파일은 남아 있습니다(페이지에서 링크만 끊김).")
     return 0
+
+
+GALLERY_JS = r"""
+(function () {
+  "use strict";
+  var grid = document.getElementById("albumGrid");
+  var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-gallery-sort]"));
+  if (!grid || !buttons.length) return;
+
+  var cards = Array.prototype.slice.call(grid.querySelectorAll(".card"));
+  var collator = new Intl.Collator("ko", { numeric: true, sensitivity: "base" });
+
+  function updated(card) {
+    return Number(card.dataset.updated || 0);
+  }
+
+  function title(card) {
+    return card.dataset.title || "";
+  }
+
+  function category(card) {
+    return card.dataset.category || "기타";
+  }
+
+  function sortCards(mode) {
+    return cards.slice().sort(function (a, b) {
+      if (mode === "oldest") {
+        return updated(a) - updated(b) || collator.compare(title(a), title(b));
+      }
+      if (mode === "category") {
+        return collator.compare(category(a), category(b)) ||
+          updated(b) - updated(a) ||
+          collator.compare(title(a), title(b));
+      }
+      return updated(b) - updated(a) || collator.compare(title(a), title(b));
+    });
+  }
+
+  function clearGrid(grouped) {
+    grid.innerHTML = "";
+    grid.classList.toggle("is-grouped", grouped);
+  }
+
+  function drawFlat(items) {
+    clearGrid(false);
+    items.forEach(function (card) {
+      grid.appendChild(card);
+    });
+  }
+
+  function drawGrouped(items) {
+    clearGrid(true);
+    var current = "";
+    var wrap = null;
+    items.forEach(function (card) {
+      var group = category(card);
+      if (group !== current) {
+        current = group;
+        var section = document.createElement("section");
+        section.className = "album-group";
+        section.innerHTML = '<div class="album-group-head"><h2></h2><span></span></div><div class="album-group-grid"></div>';
+        section.querySelector("h2").textContent = group;
+        wrap = section.querySelector(".album-group-grid");
+        grid.appendChild(section);
+      }
+      wrap.appendChild(card);
+    });
+
+    Array.prototype.forEach.call(grid.querySelectorAll(".album-group"), function (section) {
+      section.querySelector("span").textContent = section.querySelectorAll(".card").length + "장";
+    });
+  }
+
+  function setMode(mode) {
+    buttons.forEach(function (button) {
+      button.classList.toggle("is-active", button.dataset.gallerySort === mode);
+    });
+
+    var items = sortCards(mode);
+    if (mode === "category") {
+      drawGrouped(items);
+    } else {
+      drawFlat(items);
+    }
+  }
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      setMode(button.dataset.gallerySort);
+    });
+  });
+
+  setMode("latest");
+})();
+"""
 
 
 CSS = r"""
@@ -361,8 +511,21 @@ h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;
 .gallery .bg,.gallery .veil{display:none}
 .gwrap{max-width:1180px;margin:0 auto;padding:24px clamp(16px,4vw,40px) 80px}
 .gtitle{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(34px,7vw,60px);margin:14px 0 0}
-.gsub{color:rgba(255,255,255,.55);font-size:13px;margin:6px 0 30px;font-weight:300}
+.gsub{color:rgba(255,255,255,.55);font-size:13px;margin:6px 0 16px;font-weight:300}
+.gallery-controls{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+.gallery-chip{height:34px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.13);color:rgba(255,255,255,.70);font-size:12.5px;
+  transition:background .16s,color .16s,border-color .16s}
+.gallery-chip:hover{color:#fff;border-color:rgba(255,255,255,.28)}
+.gallery-chip.is-active{background:#fff;color:#11151c;border-color:#fff;font-weight:600}
 .grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
+.grid.is-grouped{display:block}
+.album-group{margin:0 0 34px}
+.album-group-head{display:flex;align-items:end;justify-content:space-between;gap:16px;
+  margin:0 0 14px;border-bottom:1px solid rgba(255,255,255,.10);padding-bottom:10px}
+.album-group-head h2{font-size:17px;line-height:1.3;margin:0;font-weight:500;overflow-wrap:anywhere}
+.album-group-head span{font-size:12px;color:rgba(255,255,255,.48);white-space:nowrap}
+.album-group-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
 .card{display:flex;flex-direction:column;gap:9px}
 .card img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:14px;display:block;
   background:rgba(255,255,255,.05);transition:transform .2s,box-shadow .2s}
@@ -372,6 +535,8 @@ h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;
 /* 폰에서 minmax(170px,1fr)+gap 20 은 390px 폭에 2열이 안 들어가 1열로 떨어진다.
    107장이 세로로 늘어서면 목록 구실을 못 하므로 폰은 2열로 못박는다. */
 @media(max-width:560px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .album-group-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .gallery-controls{margin-bottom:22px}
   .card .t{font-size:13px}.gwrap{padding-bottom:60px}}
 """
 

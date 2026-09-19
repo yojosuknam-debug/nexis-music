@@ -182,6 +182,16 @@ def duration_ms(path: Path) -> int:
         return 0
 
 
+def newest_mtime(paths: list[Path]) -> int:
+    times = []
+    for p in paths:
+        try:
+            times.append(p.stat().st_mtime)
+        except OSError:
+            pass
+    return round(max(times)) if times else 0
+
+
 # ── 앨범 하나 ─────────────────────────────────────────────────────────────
 SKIP_MARKER = ".nojukebox"
 
@@ -242,6 +252,7 @@ def scan_album(folder: Path, index, track_index) -> dict | None:
         "genre": meta("Genre"),
         "channel": meta("Channel"),
         "tracks": tracks,
+        "updated_at": newest_mtime([folder, md, *audio.values()]),
         "cover_source": cover_url,
         "cover_match": score,
         "cover_how": how,
