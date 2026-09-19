@@ -23,10 +23,13 @@ Next.js 라우팅을 건드리지 않는다. public/ 아래 정적 파일이라 
 from __future__ import annotations
 
 import colorsys
+import hashlib
 import html
 import json
 import re
+import shutil
 import sys
+from urllib.parse import quote
 from pathlib import Path
 
 from PIL import Image
@@ -36,6 +39,7 @@ REPO = HERE.parents[1]
 CATALOG = HERE / "catalog.json"
 COVERS = HERE / "assets" / "covers"
 OUT = REPO / "public" / "album"
+COVER_OUT = OUT / "covers"
 ROOT_INDEX = REPO / "public" / "index.html"
 
 sys.path.insert(0, str(HERE))
@@ -94,6 +98,21 @@ def esc(s: str) -> str:
     return html.escape(str(s), quote=True)
 
 
+def cover_asset(a: dict) -> str:
+    cover_file = a.get("cover_file", "")
+    src = COVERS / cover_file
+    if not cover_file or not src.exists():
+        return a.get("cover_url", "")
+    digest = hashlib.sha256(src.read_bytes()).hexdigest()[:8]
+    return f"/album/covers/{quote(cover_file)}?v={digest}"
+
+
+def absolute_site_url(path_or_url: str) -> str:
+    if path_or_url.startswith("http://") or path_or_url.startswith("https://"):
+        return path_or_url
+    return f"{SITE}{path_or_url}"
+
+
 # ── 페이지 ────────────────────────────────────────────────────────────────
 def album_page(a: dict, accent: tuple[int, int, int]) -> str:
     # 음원이 없는 트랙은 목록에 넣지 않는다 — 눌러도 안 나는 곡은 고장으로 보인다
@@ -104,9 +123,10 @@ def album_page(a: dict, accent: tuple[int, int, int]) -> str:
     runtime = f"{round(total_ms/60000)}분"
     desc = (f"{disp} — {len(playable)}곡 · {runtime}"
             + (f" · 가사 수록 {sung}곡" if sung else " · 전곡 연주"))
+    cover = cover_asset(a)
     data = {
         "title": disp,
-        "cover": a.get("cover_url", ""),
+        "cover": cover,
         "tracks": [{"n": t["n"], "title": t["title"], "ms": t["ms"],
                     "url": t["url"], "lyrics": t.get("lyrics", []),
                     "instrumental": t.get("instrumental", False)}
@@ -124,7 +144,7 @@ def album_page(a: dict, accent: tuple[int, int, int]) -> str:
 <meta property="og:type" content="music.album">
 <meta property="og:title" content="{esc(disp)}">
 <meta property="og:description" content="{esc(desc)}">
-<meta property="og:image" content="{esc(a.get('cover_url',''))}">
+<meta property="og:image" content="{esc(absolute_site_url(cover))}">
 <meta property="og:url" content="{SITE}/album/{a['slug']}.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{FONTS}">
@@ -132,7 +152,7 @@ def album_page(a: dict, accent: tuple[int, int, int]) -> str:
 <style>:root{{--accent:rgb({r},{g},{b});--accent-rgb:{r},{g},{b}}}</style>
 </head>
 <body>
-<div class="bg" style="background-image:url('{esc(a.get('cover_url',''))}')"></div>
+<div class="bg" style="background-image:url('{esc(cover)}')"></div>
 <div class="veil"></div>
 
 <header class="top">
@@ -141,7 +161,7 @@ def album_page(a: dict, accent: tuple[int, int, int]) -> str:
 
 <main class="wrap">
   <div class="art">
-    <img src="{esc(a.get('cover_url',''))}" alt="{esc(disp)} 앨범 커버" width="800" height="800">
+    <img src="{esc(cover)}" alt="{esc(disp)} 앨범 커버" width="800" height="800" onerror="this.onerror=null;this.src='/assets/cover-placeholder.svg';">
     <p class="genre">{esc(a.get('genre',''))}</p>
     <p class="mood">{esc('가사 수록 ' + str(sung) + '곡' if sung else '전곡 연주')}</p>
   </div>
@@ -228,7 +248,7 @@ def index_page(albums: list[dict], accents: dict[str, tuple]) -> str:
     for a in sorted_albums:
         r, g, b = accents[a["slug"]]
         disp = clean_album_title(a["title"])
-        cover = a.get("cover_url", "")
+        cover = cover_asset(a)
         category = category_label(a)
         cards.append(
             f'<a class="card" href="/album/{a["slug"]}.html" style="--accent-rgb:{r},{g},{b}" '
@@ -281,6 +301,29 @@ def update_root_album_link(count: int) -> None:
         ROOT_INDEX.write_text(next_text, encoding="utf-8")
 
 
+def sync_cover_assets(albums: list[dict]) -> int:
+    COVER_OUT.mkdir(parents=True, exist_ok=True)
+    keep = set()
+    copied = 0
+
+    for a in albums:
+        cover_file = a.get("cover_file", "")
+        src = COVERS / cover_file
+        if not cover_file or not src.exists():
+            continue
+        dst = COVER_OUT / cover_file
+        keep.add(cover_file)
+        if not dst.exists() or dst.stat().st_size != src.stat().st_size:
+            shutil.copy2(src, dst)
+            copied += 1
+
+    for stale in COVER_OUT.iterdir():
+        if stale.is_file() and stale.name not in keep:
+            stale.unlink()
+
+    return copied
+
+
 def main() -> int:
     if not CATALOG.exists():
         print("[에러] catalog.json 이 없습니다.")
@@ -292,6 +335,7 @@ def main() -> int:
         return 1
 
     OUT.mkdir(parents=True, exist_ok=True)
+    n_copied = sync_cover_assets(ready)
     (OUT / "jukebox.css").write_text(CSS, encoding="utf-8")
     (OUT / "jukebox.js").write_text(JS, encoding="utf-8")
 
@@ -314,6 +358,8 @@ def main() -> int:
 
     skipped = len(albums) - len(ready)
     print(f"앨범 페이지 {len(ready)}개 생성 → public/album/")
+    print(f"  커버 파일 동기화 {len(list(COVER_OUT.glob('*')))}장"
+          + (f" (새로 복사 {n_copied}장)" if n_copied else ""))
     if skipped:
         print(f"  (업로드 안 된 앨범 {skipped}개는 건너뜀)")
     if removed:
