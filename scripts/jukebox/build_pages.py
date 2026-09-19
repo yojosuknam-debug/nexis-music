@@ -36,6 +36,7 @@ REPO = HERE.parents[1]
 CATALOG = HERE / "catalog.json"
 COVERS = HERE / "assets" / "covers"
 OUT = REPO / "public" / "album"
+ROOT_INDEX = REPO / "public" / "index.html"
 
 SITE = "https://music.yojosuknam.com"
 FONTS = ("https://fonts.googleapis.com/css2?"
@@ -211,6 +212,20 @@ def index_page(albums: list[dict], accents: dict[str, tuple]) -> str:
 """
 
 
+def update_root_album_link(count: int) -> None:
+    if not ROOT_INDEX.exists():
+        return
+    text = ROOT_INDEX.read_text(encoding="utf-8")
+    next_text, changed = re.subn(
+        r"(&#50536;&#48276; )\d+(&#51109; &#46307;&#44592;)",
+        rf"\g<1>{count}\g<2>",
+        text,
+        count=1,
+    )
+    if changed:
+        ROOT_INDEX.write_text(next_text, encoding="utf-8")
+
+
 def main() -> int:
     if not CATALOG.exists():
         print("[에러] catalog.json 이 없습니다.")
@@ -231,6 +246,7 @@ def main() -> int:
         accents[a["slug"]] = accent_of(cf) if cf.exists() else (143, 179, 164)
         (OUT / f"{a['slug']}.html").write_text(album_page(a, accents[a["slug"]]), encoding="utf-8")
     (OUT / "index.html").write_text(index_page(ready, accents), encoding="utf-8")
+    update_root_album_link(len(ready))
 
     # 더 이상 발행 대상이 아닌 페이지를 지운다.
     # 이게 없으면 .nojukebox 를 붙여도 예전 페이지가 그대로 살아 있어 "비공개"가 되지 않는다.
