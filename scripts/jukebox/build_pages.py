@@ -285,6 +285,7 @@ def index_page(albums: list[dict], accents: dict[str, tuple]) -> str:
 <body class="gallery">
 <header class="top"><a class="back" href="/index.html">← 아카이브</a></header>
 <div class="gwrap">
+  <a class="radio-link" href="/radio/">📻 24시간 방송 듣기 — yojosuknam Radio</a>
   <h1 class="gtitle">앨범</h1>
   <p class="gsub">{len(albums)}장 · {total_tracks}곡</p>
   <div class="gallery-controls" aria-label="앨범 정렬">
@@ -602,6 +603,9 @@ h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;
 .gallery .bg,.gallery .veil{display:none}
 .gwrap{max-width:1180px;margin:0 auto;padding:24px clamp(16px,4vw,40px) 80px}
 .gtitle{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(34px,7vw,60px);margin:14px 0 0}
+.radio-link{display:inline-flex;align-items:center;margin-top:14px;padding:10px 16px;border-radius:999px;font-size:14px;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);transition:background .15s}
+.radio-link:hover{background:rgba(255,255,255,.18)}
 .gsub{color:rgba(255,255,255,.55);font-size:13px;margin:6px 0 16px;font-weight:300}
 .gallery-controls{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
 .gallery-chip{height:34px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.08);

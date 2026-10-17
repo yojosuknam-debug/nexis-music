@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>yojosuknam Radio — 24시간 방송</title>
+<meta name="description" content="yojosuknam 의 앨범을 하루 24시간 이어서 틀어 주는 음악 방송. 앨범 117장, 871곡.">
+<meta property="og:title" content="yojosuknam Radio — 24시간 방송">
+<meta property="og:description" content="앨범을 무작위로 골라 처음부터 끝까지, 하루 종일 이어서 틉니다.">
+<meta property="og:url" content="https://music.yojosuknam.com/radio/">
+<meta name="theme-color" content="#0d0f14">
+<link rel="canonical" href="https://music.yojosuknam.com/radio/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;600&family=Instrument+Serif&display=swap">
+<style>
+*{box-sizing:border-box}
+:root{--accent:#8fb3a4}
+html,body{background:#0d0f14}
+body{margin:0;min-height:100vh;color:#fff;font-family:"IBM Plex Sans KR","Malgun Gothic",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
+.bg{position:fixed;inset:-25%;z-index:-2;background:#1b2330 center/cover;
+  filter:blur(90px) saturate(190%) brightness(.8);transform:scale(1.25);transition:background-image .8s}
+.veil{position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 90% at 20% 0%,rgba(0,0,0,.08),rgba(0,0,0,.76) 75%)}
+.top{max-width:1000px;margin:0 auto;padding:20px 16px 0;display:flex;justify-content:space-between;gap:12px;font-size:13px}
+.top a{color:rgba(255,255,255,.62)}.top a:hover{color:#fff}
+.wrap{max-width:1000px;margin:0 auto;padding:28px 16px 80px;display:grid;gap:clamp(24px,4vw,52px);
+  grid-template-columns:minmax(0,360px) minmax(0,1fr);align-items:start}
+@media(max-width:820px){.wrap{grid-template-columns:1fr}}
+.art{position:relative}
+.art img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:22px;display:block;background:rgba(255,255,255,.06);
+  box-shadow:0 30px 70px -20px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.10) inset}
+.live{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.18em;font-weight:600;
+  padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.10);backdrop-filter:blur(10px)}
+.dot{width:8px;height:8px;border-radius:50%;background:#777}
+.on .dot{background:#ff4d5e;box-shadow:0 0 0 0 rgba(255,77,94,.6);animation:pulse 1.6s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(255,77,94,0)}100%{box-shadow:0 0 0 0 rgba(255,77,94,0)}}
+h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(34px,6vw,54px);margin:14px 0 4px;line-height:1.05}
+.sub{color:rgba(255,255,255,.6);font-size:13px;margin:0 0 26px;font-weight:300}
+.player{display:flex;align-items:center;gap:18px;padding:18px;border-radius:22px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.10);backdrop-filter:blur(18px)}
+.play{flex:none;width:68px;height:68px;border-radius:50%;background:#fff;color:#0d0f14;display:grid;place-items:center;
+  box-shadow:0 10px 30px -8px rgba(0,0,0,.6);transition:transform .15s}
+.play:hover{transform:scale(1.05)}.play svg{width:28px;height:28px}
+.np{min-width:0;flex:1}
+.np .k{font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.55);text-transform:uppercase}
+.np .t{font-size:clamp(17px,2.4vw,21px);font-weight:600;margin:4px 0 2px;overflow-wrap:anywhere}
+.np .a{font-size:13px;color:rgba(255,255,255,.7);overflow-wrap:anywhere}
+.bar{height:3px;border-radius:3px;background:rgba(255,255,255,.14);margin-top:10px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width 1s linear}
+.vol{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:12px;color:rgba(255,255,255,.55)}
+.vol input{flex:1;max-width:160px;accent-color:var(--accent)}
+.msg{min-height:20px;font-size:12px;color:#ffd38a;margin:10px 2px 0}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border-radius:999px;font-size:14px;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12);transition:background .15s}
+.btn:hover{background:rgba(255,255,255,.18)}
+.btn.yt{background:#fff;color:#0d0f14;font-weight:600;border-color:#fff}
+.btn[hidden]{display:none}
+h2{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:600;margin:34px 0 10px}
+ol{list-style:none;margin:0;padding:0}
+li{display:flex;gap:12px;align-items:center;padding:10px 4px;border-bottom:1px solid rgba(255,255,255,.07);font-size:14px}
+li img{width:40px;height:40px;border-radius:8px;object-fit:cover;flex:none;background:rgba(255,255,255,.06)}
+li .m{min-width:0;flex:1}li .m b{display:block;font-weight:500;overflow-wrap:anywhere}
+li .m span{font-size:12px;color:rgba(255,255,255,.55);overflow-wrap:anywhere}
+li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08)}
+.share{margin-top:34px;padding:16px;border-radius:16px;background:rgba(255,255,255,.05);font-size:13px;color:rgba(255,255,255,.7);line-height:1.7}
+.share code{display:block;margin:8px 0;padding:10px 12px;border-radius:10px;background:rgba(0,0,0,.35);color:#fff;font-size:12px;overflow-wrap:anywhere}
+.share button{font-size:13px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12)}
+</style>
+</head>
+<body>
+<div class="bg" id="bg"></div><div class="veil"></div>
+<header class="top"><a href="/index.html">← 아카이브</a><a href="/album/">앨범 전체 보기 →</a></header>
+<main class="wrap">
+  <div class="art"><img id="cover" src="/assets/cover-placeholder.svg" alt="지금 나오는 앨범 커버" width="800" height="800"></div>
+  <section>
+    <span class="live" id="live"><span class="dot"></span>LIVE · 24H</span>
+    <h1>yojosuknam Radio</h1>
+    <p class="sub">앨범을 무작위로 골라 처음부터 끝까지, 하루 종일 이어서 틉니다.</p>
+
+    <div class="player">
+      <button class="play" id="play" type="button" aria-label="방송 듣기">
+        <svg id="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div class="np">
+        <div class="k">지금 나오는 곡</div>
+        <div class="t" id="title">불러오는 중…</div>
+        <div class="a" id="album"></div>
+        <div class="bar"><i id="prog"></i></div>
+        <label class="vol">음량 <input id="vol" type="range" min="0" max="1" step="0.05" value="1"></label>
+      </div>
+    </div>
+    <p class="msg" id="msg" role="status"></p>
+
+    <div class="links">
+      <a class="btn yt" id="yt" href="#" target="_blank" rel="noopener" hidden>▶ 유튜브 뮤직에서 이 곡 듣기</a>
+      <a class="btn" id="video" href="#" target="_blank" rel="noopener" hidden>앨범 영상</a>
+      <a class="btn" id="page" href="#" hidden>가사 · 앨범 페이지</a>
+      <a class="btn" href="https://www.youtube.com/channel/UCl_D2zwR6AfgTBAJ6jQq00Q" target="_blank" rel="noopener">yojosuknam 채널에서 더 듣기</a>
+    </div>
+
+    <h2>다음 곡</h2>
+    <ol id="next"></ol>
+    <h2>방금 나온 곡</h2>
+    <ol id="recent"></ol>
+
+    <div class="share">
+      다른 앱(VLC, 라디오 앱 등)에서 들으려면 이 주소를 넣으세요.
+      <code id="url">https://audio.yojosuknam.com/radio/live.m3u8</code>
+      <button type="button" id="copy">주소 복사</button>
+    </div>
+  </section>
+</main>
+<audio id="audio" preload="none"></audio>
+<script src="/radio/hls.light.min.js"></script>
+<script>
+(() => {
+  const STREAM = 'https://audio.yojosuknam.com/radio/live.m3u8';
+  const NOW = 'https://audio.yojosuknam.com/radio/nowplaying.json';
+  const $ = (id) => document.getElementById(id);
+  const audio = $('audio');
+  let hls = null, playing = false, items = [], delay = 30, shown = '';
+
+  try { const v = localStorage.getItem('radio.vol'); if (v !== null) { audio.volume = +v; $('vol').value = v; } } catch (e) { /* */ }
+  $('vol').addEventListener('input', (e) => { audio.volume = +e.target.value; try { localStorage.setItem('radio.vol', e.target.value); } catch (er) { /* */ } });
+
+  function setIcon(on) {
+    $('ico').innerHTML = on ? '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>' : '<path d="M8 5v14l11-7z"/>';
+    $('play').setAttribute('aria-label', on ? '멈춤' : '방송 듣기');
+    $('live').classList.toggle('on', on);
+  }
+
+  function start() {
+    $('msg').textContent = '';
+    if (window.Hls && Hls.isSupported()) {
+      hls = new Hls({ liveSyncDurationCount: 3, manifestLoadingMaxRetry: 6, levelLoadingMaxRetry: 6, fragLoadingMaxRetry: 6 });
+      hls.on(Hls.Events.ERROR, (_, d) => {
+        if (!d.fatal) return;
+        $('msg').textContent = '방송 연결이 잠시 끊겼어요 — 다시 연결하는 중…';
+        if (d.type === Hls.ErrorTypes.NETWORK_ERROR) setTimeout(() => hls && hls.startLoad(), 3000);
+        else if (d.type === Hls.ErrorTypes.MEDIA_ERROR) hls.recoverMediaError();
+        else { stop(); $('msg').textContent = '재생할 수 없어요. 잠시 뒤 다시 눌러 주세요.'; }
+      });
+      hls.loadSource(STREAM);
+      hls.attachMedia(audio);
+    } else {
+      audio.src = STREAM;     // 사파리(아이폰) 기본 재생
+    }
+    audio.play().then(() => { playing = true; setIcon(true); }).catch(() => {
+      $('msg').textContent = '재생이 막혔어요. 버튼을 한 번 더 눌러 주세요.';
+    });
+  }
+  function stop() {
+    playing = false; setIcon(false);
+    audio.pause();
+    if (hls) { hls.destroy(); hls = null; }
+    audio.removeAttribute('src'); audio.load();
+  }
+  $('play').addEventListener('click', () => (playing ? stop() : start()));
+  audio.addEventListener('waiting', () => { if (playing) $('msg').textContent = '불러오는 중…'; });
+  audio.addEventListener('playing', () => { $('msg').textContent = ''; });
+
+  // 지금 귀에 들리는 소리의 방송 시각 — 조각에 박힌 EXT-X-PROGRAM-DATE-TIME 으로 맞춘다
+  function heardAt() {
+    if (playing) {
+      if (hls && hls.playingDate) return hls.playingDate.getTime();
+      if (audio.getStartDate) {
+        const d = audio.getStartDate();
+        if (d && !isNaN(d.getTime())) return d.getTime() + audio.currentTime * 1000;
+      }
+    }
+    return Date.now() - delay * 1000;
+  }
+
+  function row(it, linkText) {
+    const li = document.createElement('li');
+    const img = document.createElement('img'); img.src = it.cover; img.alt = ''; img.loading = 'lazy';
+    const m = document.createElement('div'); m.className = 'm';
+    const b = document.createElement('b'); b.textContent = it.title;
+    const s = document.createElement('span'); s.textContent = it.album;
+    m.append(b, s); li.append(img, m);
+    if (it.youtube) {
+      const a = document.createElement('a'); a.href = it.youtube; a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = linkText; li.append(a);
+    }
+    return li;
+  }
+
+  function render() {
+    if (!items.length) return;
+    const t = heardAt();
+    let i = 0;
+    for (let k = 0; k < items.length; k++) if (items[k].at <= t) i = k;
+    const it = items[i];
+    $('prog').style.width = Math.max(0, Math.min(100, (t - it.at) / it.ms * 100)) + '%';
+    const key = it.at + '|' + it.title;
+    if (key === shown) return;
+    shown = key;
+    $('title').textContent = it.title;
+    $('album').textContent = it.album;
+    $('cover').src = it.cover;
+    $('bg').style.backgroundImage = `url("${it.cover}")`;
+    for (const [id, url] of [['yt', it.youtube], ['video', it.video], ['page', it.page]]) {
+      $(id).hidden = !url; if (url) $(id).href = url;
+    }
+    document.title = `${it.title} — yojosuknam Radio`;
+    $('next').replaceChildren(...items.slice(i + 1, i + 4).map((x) => row(x, '유튜브 뮤직')));
+    $('recent').replaceChildren(...items.slice(Math.max(0, i - 5), i).reverse().map((x) => row(x, '다시 듣기')));
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: it.title, artist: 'yojosuknam Radio', album: it.album,
+        artwork: [{ src: it.cover, sizes: '800x800', type: 'image/jpeg' }],
+      });
+    }
+  }
+
+  async function poll() {
+    try {
+      const r = await fetch(NOW + '?t=' + Date.now(), { cache: 'no-store' });
+      const d = await r.json();
+      delay = d.delay_hint_s || 30;
+      const all = [...(d.recent || []).slice().reverse(), d.now, ...(d.next || [])].filter(Boolean);
+      const seen = new Map(items.map((x) => [x.at, x]));
+      for (const x of all) seen.set(x.at, x);
+      items = [...seen.values()].sort((a, b) => a.at - b.at).slice(-20);
+      render();
+    } catch (e) { /* 다음 차례에 다시 */ }
+  }
+  poll(); setInterval(poll, 15000); setInterval(render, 1000);
+
+  if ('mediaSession' in navigator) {
+    navigator.mediaSession.setActionHandler('play', () => { if (!playing) start(); });
+    navigator.mediaSession.setActionHandler('pause', () => { if (playing) stop(); });
+  }
+  $('copy').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(STREAM); $('copy').textContent = '복사됨 ✓'; }
+    catch (e) { $('copy').textContent = '길게 눌러 복사하세요'; }
+  });
+})();
+</script>
+</body>
+</html>

@@ -167,8 +167,19 @@ def parse_lyrics(block: str) -> tuple[list[dict], bool]:
 
 
 def clean_track_title(s: str) -> str:
-    """'쨍과리 디스코 (Kkwaenggwari Disco) — 🎤 Vocal' 의 제작용 꼬리표를 뗀다."""
-    return re.split(r"\s+[—–]\s+", s)[0].strip() or s
+    """'쨍과리 디스코 (Kkwaenggwari Disco) — 🎤 Vocal' 의 제작용 꼬리표를 뗀다.
+    괄호 안의 대시는 제목의 일부다 — '살풀이 (Salpuri — Dance of Release)' 를 자르면
+    '살풀이 (Salpuri' 가 된다(2026-10-17 9곡 실측). 괄호 밖 대시에서만 자른다."""
+    depth = 0
+    for m in re.finditer(r"[(\[（]|[)\]）]|\s+[—–]\s+", s):
+        tok = m.group()
+        if tok in "([（":
+            depth += 1
+        elif tok in ")]）":
+            depth = max(0, depth - 1)
+        elif depth == 0:
+            return s[: m.start()].strip() or s
+    return s.strip()
 
 
 def duration_ms(path: Path) -> int:
