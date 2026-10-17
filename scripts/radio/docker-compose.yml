@@ -96,4 +96,7 @@ services:
 
 networks:
   radio:
-    name: nexis-radio
+    # 미니PC Docker 주소 풀이 가득 차 새 네트워크를 못 만든다(10-17 실측) → 첫 설치 때 생긴 네트워크를 그대로 쓴다.
+    # 정리(network prune)는 공용 인프라 변경이라 하지 않는다.
+    name: radio_default
+    external: true
