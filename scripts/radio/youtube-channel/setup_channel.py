@@ -8,9 +8,12 @@ autovid-bot 컨테이너 안에서 nexis-horror 토큰(scope youtube)으로 돈�
 - liveStream(재사용, rtmp) + liveBroadcast(공개, 자동 시작, 음악) 연결, 썸네일
 - 스트림 키는 /tmp/ytkey (600) 에만 쓴다 — 화면에 찍지 않는다. 호출한 쪽이 radio.env 로 옮기고 지운다.
 이미 만든 방송·스트림이 있으면 새로 만들지 않고 재사용한다.
+--live-only : 채널 꾸미기(배너 업로드 등 할당량 큰 호출)를 건너뛴다 — 자동 재시도(youtube-go.sh)용.
+  유튜브 API 하루 할당량을 autovid 업로드와 같이 쓰므로 재시도에서 아낀다.
 """
 import os
 import pickle
+import sys
 
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
@@ -53,6 +56,14 @@ def main() -> None:
     y = build("youtube", "v3", credentials=c, cache_discovery=False)
 
     # 1) 채널 소개·키워드·배너 (brandingSettings 는 통째로 다시 보내야 다른 값이 안 지워진다)
+    if "--live-only" in sys.argv:
+        print("채널 꾸미기 건너뜀(--live-only)")
+    else:
+        brand(y)
+    live(y)
+
+
+def brand(y) -> None:
     ch = y.channels().list(part="brandingSettings", mine=True).execute()["items"][0]
     bs = ch["brandingSettings"]
     bs.setdefault("channel", {})
@@ -64,6 +75,8 @@ def main() -> None:
     y.channels().update(part="brandingSettings", body={"id": ch["id"], "brandingSettings": bs}).execute()
     print("채널 소개글·키워드·배너 적용")
 
+
+def live(y) -> None:
     # 2) 스트림(재사용)
     streams = y.liveStreams().list(part="id,snippet,cdn", mine=True, maxResults=50).execute().get("items", [])
     st = next((s for s in streams if s["snippet"]["title"] == STREAM_TITLE), None)
