@@ -75,6 +75,10 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
 .share{margin-top:34px;padding:16px;border-radius:16px;background:rgba(255,255,255,.05);font-size:13px;color:rgba(255,255,255,.7);line-height:1.7}
 .share code{display:block;margin:8px 0;padding:10px 12px;border-radius:10px;background:rgba(0,0,0,.35);color:#fff;font-size:12px;overflow-wrap:anywhere}
 .share button{font-size:13px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12)}
+.share .alt{display:block;margin-top:10px;font-size:12px;color:rgba(255,255,255,.5)}
+.share code.inline{display:inline;margin:0;padding:2px 6px;font-size:11px;background:rgba(0,0,0,.25)}
+.contact{margin:18px 2px 0;font-size:12px;line-height:1.8;color:rgba(255,255,255,.55)}
+.contact a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -114,10 +118,13 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
     <ol id="recent"></ol>
 
     <div class="share">
-      다른 앱(VLC, 라디오 앱 등)에서 들으려면 이 주소를 넣으세요.
-      <code id="url">https://audio.yojosuknam.com/radio/live.m3u8</code>
-      <button type="button" id="copy">주소 복사</button>
+      다른 앱(VLC, 라디오 앱, 스마트 스피커 등)에서 들으려면 이 주소를 넣으세요.
+      <code id="url">https://stream.yojosuknam.com/live.mp3</code>
+      <button type="button" class="copy" data-url="https://stream.yojosuknam.com/live.mp3">주소 복사</button>
+      <span class="alt">HLS 주소: <code class="inline">https://audio.yojosuknam.com/radio/live.m3u8</code></span>
     </div>
+    <p class="contact">방송 문의 <a href="mailto:support@nexis-lab.com">support@nexis-lab.com</a><br>
+      운영 yojosuknam · 대한민국 경기도 의정부</p>
   </section>
 </main>
 <audio id="audio" preload="none"></audio>
@@ -241,10 +248,10 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
     navigator.mediaSession.setActionHandler('play', () => { if (!playing) start(); });
     navigator.mediaSession.setActionHandler('pause', () => { if (playing) stop(); });
   }
-  $('copy').addEventListener('click', async () => {
-    try { await navigator.clipboard.writeText(STREAM); $('copy').textContent = '복사됨 ✓'; }
-    catch (e) { $('copy').textContent = '길게 눌러 복사하세요'; }
-  });
+  document.querySelectorAll('.copy').forEach((b) => b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(b.dataset.url); b.textContent = '복사됨 ✓'; }
+    catch (e) { b.textContent = '길게 눌러 복사하세요'; }
+  }));
 })();
 </script>
 </body>
