@@ -529,14 +529,30 @@
  },
  "the-old-trades-still-waters-album": {
   "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/WeDWMn7jKXU/maxresdefault.jpg"
+  "src": "https://i.ytimg.com/vi/EwDy3hbpdK8/maxresdefault.jpg"
  },
  "played-from-memory-still-waters-album": {
   "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/WeDWMn7jKXU/maxresdefault.jpg"
+  "src": "https://i.ytimg.com/vi/XotpZWov3OM/maxresdefault.jpg"
  },
  "바다밭-the-sea-field-hanguk-sounds-album": {
   "kind": "youtube",
   "src": "https://i.ytimg.com/vi/fvCvFjTY--w/maxresdefault.jpg"
+ },
+ "euljiro-after-hours-miso-channel-album": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/geuHyaaQhoM/maxresdefault.jpg"
+ },
+ "an-hour-before-the-world-still-waters-album": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/izm35hRVbX4/maxresdefault.jpg"
+ },
+ "남이섬-nami-island-album": {
+  "kind": "generated",
+  "src": ""
+ },
+ "softer-every-set-lo-fi-chill-album": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/1WhbDptmD3s/maxresdefault.jpg"
  }
 }
