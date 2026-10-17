@@ -1,7 +1,18 @@
 # 넥시스 뮤직 24시간 방송 — 미니PC
 #   cd /mnt/external/nexis-music/scripts/radio && docker compose up -d --build
-#   끄기: docker compose down   (다른 컨테이너·터널과 무관)
-# 밖으로 R2 에 올리기만 한다. 포트를 열지 않고, 기존 터널·DNS 를 쓰지 않는다.
+#   유튜브 라이브까지:            docker compose --profile youtube up -d --build
+#   끄기: docker compose down   (다른 컨테이너·공용 터널과 무관)
+#
+# nexis-radio   HLS 조각 → R2 (밖으로 올리기만)            https://audio.yojosuknam.com/radio/live.m3u8
+#               + 같은 소리를 MP3 로 icecast 에
+# icecast       MP3 직통(라디오 가든·TuneIn·radio.net 용)
+# radio-tunnel  방송 전용 Cloudflare 터널(공용 터널 0ae4cdc2 와 별개)  https://stream.yojosuknam.com/live.mp3
+#               터널 설정은 /live.mp3 만 밖으로 연다(관리 화면은 안 열림)
+# radio-youtube 유튜브 24시간 라이브(--profile youtube 일 때만)
+#
+# 비밀값 = ~/.config/nexis/radio.env (600, 레포 밖)
+#   RADIO_ICECAST_PASSWORD · ICECAST_SOURCE_PASSWORD(같은 값) · ICECAST_ADMIN_PASSWORD
+#   TUNNEL_TOKEN · YOUTUBE_STREAM_KEY
 services:
   nexis-radio:
     build: .
@@ -12,14 +23,77 @@ services:
       - /mnt/external/nexis-music/scripts:/app/scripts:ro
       - /mnt/external/suno-playlist/input:/mnt/external/suno-playlist/input:ro
       - ${HOME}/.config/nexis/r2.env:/run/secrets/r2.env:ro
+    env_file: [ "${HOME}/.config/nexis/radio.env" ]
     environment:
       JUKEBOX_ENV_FILE: /run/secrets/r2.env
       JUKEBOX_INPUT_DIR: /mnt/external/suno-playlist/input
+      RADIO_ICECAST_HOST: icecast:8000
+      TZ: Asia/Seoul
     tmpfs:
       - /tmp:size=64m
     dns: [1.1.1.1, 8.8.8.8]       # 미니PC 공유 DNS 에 기대지 않음 (10-13 DNS 사고 교훈)
-    mem_limit: 256m
-    cpus: 0.5
+    mem_limit: 320m
+    cpus: 0.7
+    networks: [radio]
     logging:
       driver: json-file
       options: { max-size: "5m", max-file: "2" }
+
+  icecast:
+    build: ./icecast
+    image: nexis-radio-icecast:latest
+    container_name: nexis-radio-icecast
+    restart: unless-stopped
+    env_file: [ "${HOME}/.config/nexis/radio.env" ]
+    environment:
+      ICECAST_MAX_CLIENTS: "60"
+    mem_limit: 96m
+    cpus: 0.3
+    networks: [radio]
+    logging:
+      driver: json-file
+      options: { max-size: "2m", max-file: "2" }
+
+  radio-tunnel:
+    image: cloudflare/cloudflared:latest
+    pull_policy: missing          # 미니PC 에 이미 있는 이미지 그대로(다른 터널과 같은 것)
+    container_name: nexis-radio-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    env_file: [ "${HOME}/.config/nexis/radio.env" ]
+    depends_on: [icecast]
+    dns: [1.1.1.1, 8.8.8.8]
+    mem_limit: 128m
+    networks: [radio]
+    logging:
+      driver: json-file
+      options: { max-size: "2m", max-file: "2" }
+
+  radio-youtube:
+    profiles: [youtube]
+    build:
+      context: .
+      dockerfile: Dockerfile.youtube
+    image: nexis-radio-youtube:latest
+    container_name: nexis-radio-youtube
+    restart: unless-stopped
+    volumes:
+      - /mnt/external/nexis-music/scripts:/app/scripts:ro
+    env_file: [ "${HOME}/.config/nexis/radio.env" ]
+    environment:
+      RADIO_AUDIO_URL: http://icecast:8000/live.mp3
+      TZ: Asia/Seoul
+    depends_on: [icecast]
+    tmpfs:
+      - /tmp:size=64m
+    dns: [1.1.1.1, 8.8.8.8]
+    mem_limit: 384m
+    cpus: 1.0
+    networks: [radio]
+    logging:
+      driver: json-file
+      options: { max-size: "5m", max-file: "2" }
+
+networks:
+  radio:
+    name: nexis-radio

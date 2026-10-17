@@ -19,14 +19,18 @@
     RADIO_LIST_URL   곡 목록 주소 (기본 https://music.yojosuknam.com/album/radio.json)
     RADIO_BITRATE    기본 128k
     RADIO_CHANNEL    채널 이름 일부 — 지정하면 그 채널 앨범만 (장르별 방송용)
+    RADIO_ICECAST_PASSWORD  있으면 같은 소리를 MP3 직통으로도 Icecast 에 보낸다(라디오 가든·TuneIn 용)
+    RADIO_ICECAST_HOST      기본 icecast:8000,  RADIO_ICECAST_MOUNT 기본 /live.mp3
     JUKEBOX_INPUT_DIR / JUKEBOX_ENV_FILE  → ../jukebox/_env.py 참고
 자격증명 값은 메모리에만 두고 출력하지 않는다.
 """
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import os
+import queue
 import random
 import re
 import signal
@@ -35,6 +39,7 @@ import sys
 import tempfile
 import threading
 import time
+import urllib.parse
 import urllib.request
 from collections import deque
 from pathlib import Path
@@ -251,13 +256,96 @@ def decoder(src: str) -> subprocess.Popen:
     return subprocess.Popen(cmd, stdout=subprocess.PIPE)
 
 
+class Mirror(threading.Thread):
+    """같은 소리를 MP3 직통으로 Icecast 에 보낸다(라디오 가든·TuneIn·radio.net 은 HLS 를 받지 않는다).
+    본방송(HLS)을 절대 막지 않도록 큐로 떼어 놓는다 — 밀리면 버리고, 끊기면 5초 뒤 다시 붙는다.
+    비밀번호가 ffmpeg 오류 메시지에 섞여 로그로 새지 않게 가린다."""
+
+    def __init__(self) -> None:
+        super().__init__(daemon=True)
+        self.pw = os.environ.get("RADIO_ICECAST_PASSWORD", "").strip()
+        self.host = os.environ.get("RADIO_ICECAST_HOST", "icecast:8000")
+        self.mount = os.environ.get("RADIO_ICECAST_MOUNT", "/live.mp3")
+        self.q: queue.Queue[bytes] = queue.Queue(maxsize=40)      # 0.25초 × 40 = 10초
+        self.dropped = 0
+
+    @property
+    def on(self) -> bool:
+        return bool(self.pw)
+
+    def put(self, data: bytes) -> None:
+        if not self.on:
+            return
+        try:
+            self.q.put_nowait(data)
+        except queue.Full:
+            self.dropped += 1
+
+    def _mask(self, line: str) -> str:
+        return line.replace(self.pw, "***") if self.pw else line
+
+    def _log_stderr(self, proc: subprocess.Popen) -> None:
+        for raw in proc.stderr:
+            line = raw.decode("utf-8", "replace").rstrip()
+            if line:
+                log("  [직통] " + self._mask(line))
+
+    def run(self) -> None:
+        if not self.on:
+            return
+        url = f"icecast://source:{self.pw}@{self.host}{self.mount}"
+        while not stop.is_set():
+            proc = subprocess.Popen(
+                ["ffmpeg", "-hide_banner", "-loglevel", "error", "-nostats",
+                 "-f", "s16le", "-ar", str(RATE), "-ac", str(CH), "-i", "pipe:0",
+                 "-c:a", "libmp3lame", "-b:a", "128k", "-content_type", "audio/mpeg",
+                 "-ice_name", "yojosuknam Radio", "-ice_genre", "Various",
+                 "-ice_description", "yojosuknam 의 앨범을 24시간 이어서 틉니다",
+                 "-ice_url", "https://music.yojosuknam.com/radio", "-f", "mp3", url],
+                stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+            threading.Thread(target=self._log_stderr, args=(proc,), daemon=True).start()
+            log(f"직통 송출 연결 → {self.host}{self.mount}")
+            try:
+                while not stop.is_set() and proc.poll() is None:
+                    try:
+                        proc.stdin.write(self.q.get(timeout=1))
+                    except queue.Empty:
+                        continue
+            except (BrokenPipeError, OSError):
+                pass
+            finally:
+                proc.kill()
+                proc.wait()
+            if not stop.is_set():
+                log("[경고] 직통 송출이 끊겼습니다 — 5초 뒤 다시 연결 (본방송은 그대로)")
+                with self.q.mutex:
+                    self.q.queue.clear()
+                stop.wait(5)
+
+    def meta(self, text: str) -> None:
+        """라디오 앱에 보이는 '지금 곡' 제목(Icecast metadata) — 실패해도 무시."""
+        if not self.on:
+            return
+
+        def go() -> None:
+            q = urllib.parse.urlencode({"mount": self.mount, "mode": "updinfo", "song": text})
+            req = urllib.request.Request(f"http://{self.host}/admin/metadata?{q}")
+            req.add_header("Authorization", "Basic " + base64.b64encode(f"source:{self.pw}".encode()).decode())
+            try:
+                urllib.request.urlopen(req, timeout=5).read()
+            except Exception:  # noqa: BLE001
+                pass
+        threading.Thread(target=go, daemon=True).start()
+
+
 class Clock:
     """보낸 소리 길이를 실제 시각에 맞춰 흘려보낸다(LEAD 초만큼만 앞서게)."""
 
-    def __init__(self) -> None:
+    def __init__(self, mirror: "Mirror | None" = None) -> None:
         self.t0 = time.monotonic()
         self.wall0 = time.time()
         self.sent = 0
+        self.mirror = mirror
 
     def stream_wall(self) -> float:
         """지금 밀어 넣는 소리가 방송 시각으로 언제인가."""
@@ -265,6 +353,8 @@ class Clock:
 
     def feed(self, enc: subprocess.Popen, data: bytes) -> None:
         enc.stdin.write(data)
+        if self.mirror:
+            self.mirror.put(data)
         self.sent += len(data)
         ahead = self.sent / BPS - (time.monotonic() - self.t0)
         if ahead > LEAD:
@@ -313,7 +403,9 @@ def main() -> int:
     up = Uploader(s3, bucket, prefix, outdir)
     up.start()
     now = NowPlaying(s3, bucket, prefix)
-    picker, clock = Picker(), Clock()
+    mirror = Mirror()
+    mirror.start()
+    picker, clock = Picker(), Clock(mirror)
     deadline = time.time() + a.minutes * 60 if a.minutes else 0
     fails = 0
 
@@ -325,6 +417,7 @@ def main() -> int:
                 if stop.is_set():
                     break
                 now.publish(album, i, clock.stream_wall())
+                mirror.meta(f"{t['title']} — {album['title']}")
                 src = source_of(album, t)
                 log(f"  {t['n']:02d} {t['title']}  [{'원본' if not src.startswith('http') else 'R2'}]")
                 if play_track(enc, clock, src):
@@ -358,7 +451,8 @@ def main() -> int:
             enc.wait(timeout=15)
         except subprocess.TimeoutExpired:
             enc.kill()
-        log(f"종료 — 조각 {up.uploaded_segments}개 올림")
+        log(f"종료 — 조각 {up.uploaded_segments}개 올림"
+            + (f" · 직통 밀려서 버린 소리 {mirror.dropped * 0.25:.0f}초" if mirror.dropped else ""))
     return 0
 
 
