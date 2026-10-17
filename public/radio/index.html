@@ -52,6 +52,9 @@ h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(
 .play:hover{transform:scale(1.05)}.play svg{width:28px;height:28px}
 .np{min-width:0;flex:1}
 .np .k{font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.55);text-transform:uppercase}
+.np .st{display:inline-flex;align-items:center;gap:6px;margin-left:8px;padding:2px 9px;border-radius:999px;
+  letter-spacing:.02em;text-transform:none;font-size:11px;font-weight:600;color:#fff;border:1px solid var(--sc);background:color-mix(in srgb,var(--sc) 22%,transparent)}
+.np .st::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sc)}
 .np .t{font-size:clamp(17px,2.4vw,21px);font-weight:600;margin:4px 0 2px;overflow-wrap:anywhere}
 .np .a{font-size:13px;color:rgba(255,255,255,.7);overflow-wrap:anywhere}
 .bar{height:3px;border-radius:3px;background:rgba(255,255,255,.14);margin-top:10px;overflow:hidden}
@@ -99,7 +102,7 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
         <svg id="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
       </button>
       <div class="np">
-        <div class="k">지금 나오는 곡</div>
+        <div class="k">지금 나오는 곡 <span class="st" id="station" hidden></span></div>
         <div class="t" id="title">불러오는 중…</div>
         <div class="a" id="album"></div>
         <div class="bar"><i id="prog"></i></div>
@@ -223,6 +226,11 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
     const key = it.at + '|' + it.title;
     if (key === shown) return;
     shown = key;
+    // 곡이 원래 올라간 유튜브 채널(라이브 화면과 같은 색)
+    const SC = { 'Midnight Radio': '#7084ff', 'Hanguk Sounds': '#46be96', 'Miso Beats': '#ff965a',
+      'Still Waters': '#8cc4ff', '쉬어가는 감성 음악': '#f092aa', '굳이 송': '#ffce46' };
+    $('station').hidden = !it.station;
+    if (it.station) { $('station').textContent = it.station; $('station').style.setProperty('--sc', SC[it.station] || '#c8ced4'); }
     $('title').textContent = it.title;
     $('album').textContent = it.album;
     $('cover').src = it.cover;

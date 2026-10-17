@@ -362,7 +362,8 @@ def radio_list(albums: list[dict]) -> dict:
                         "title": clean_album_title(a["title"]), "channel": a.get("channel", ""),
                         "cover": absolute_site_url(cover_asset(a)),
                         "page": absolute_site_url(f"/album/{a['slug']}.html"),
-                        "video": video, "tracks": tracks})
+                        "video": video, "station": yt.station(video, a.get("channel", "")),
+                        "tracks": tracks})
     return {"version": 1, "albums": out}
 
 

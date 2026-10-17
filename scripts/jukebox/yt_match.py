@@ -17,6 +17,23 @@ import unicodedata
 from pathlib import Path
 
 ASSETS = Path(__file__).resolve().parent / "assets"
+# 유튜브 채널 6곳 — 방송 화면에서 채널별 색·소개가 바뀐다(scripts/radio/youtube_live.py THEMES 와 이름이 같아야 함)
+STATIONS = ("Miso Beats", "Midnight Radio", "Hanguk Sounds", "굳이 송", "Still Waters", "쉬어가는 감성 음악")
+
+
+def station_from_hint(hint: str) -> str:
+    """album.md 의 채널 표기(제각각)를 6개 채널 이름으로. 모르면 ''."""
+    h = (hint or "").lower()
+    rules = (("still", "Still Waters"), ("굳이", "굳이 송"), ("gudi", "굳이 송"), ("guji", "굳이 송"),
+             ("hanji", "Hanguk Sounds"), ("한지", "Hanguk Sounds"), ("한국전통", "Hanguk Sounds"),
+             ("hanguk", "Hanguk Sounds"), ("korean traditional", "Hanguk Sounds"),
+             ("감성", "쉬어가는 감성 음악"), ("gamseong", "쉬어가는 감성 음악"), ("retro", "쉬어가는 감성 음악"),
+             ("복고", "쉬어가는 감성 음악"), ("miso channel", "쉬어가는 감성 음악"),
+             ("miso", "Miso Beats"), ("lofi", "Midnight Radio"), ("lo-fi", "Midnight Radio"))
+    for key, name in rules:
+        if key in h:
+            return name
+    return ""
 SINGLE_MIN_MS = 120_000           # 이보다 짧은 영상은 쇼츠·예고편
 
 
@@ -43,6 +60,7 @@ def _load(name: str) -> list[dict]:
 class Links:
     def __init__(self) -> None:
         vids = _load("yt_videos.json")
+        self.channel_of = {v["id"]: v.get("ch", "") for v in vids}
         self.albums = [v for v in vids if v.get("chapters")]
         self.singles: dict[str, list[dict]] = {}
         for v in vids:
@@ -98,3 +116,9 @@ class Links:
                 if tp:
                     links[t["n"]] = f"https://music.youtube.com/watch?v={tp['id']}"
         return (f"https://www.youtube.com/watch?v={video['id']}" if video else ""), links
+
+    def station(self, video_url: str, hint: str = "") -> str:
+        """앨범이 원래 올라간 유튜브 채널 — 영상이 있으면 그 채널, 없으면 album.md 표기로."""
+        m = re.search(r"v=([\w-]{11})", video_url or "")
+        ch = self.channel_of.get(m.group(1), "") if m else ""
+        return ch if ch in STATIONS else station_from_hint(hint)

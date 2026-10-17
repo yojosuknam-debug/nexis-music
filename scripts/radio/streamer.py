@@ -214,7 +214,7 @@ class NowPlaying:
             return {"at": int(start * 1000), "ms": t["ms"], "n": t["n"], "title": t["title"],
                     "youtube": t.get("youtube", ""), "album": album["title"],
                     "channel": album.get("channel", ""), "cover": album["cover"], "page": album["page"],
-                    "video": album.get("video", "")}
+                    "video": album.get("video", ""), "station": album.get("station", "")}
 
         tracks = album["tracks"]
         cur = item(tracks[idx], at)

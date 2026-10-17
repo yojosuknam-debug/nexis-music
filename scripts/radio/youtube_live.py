@@ -36,6 +36,16 @@ FRAME = OUT / "frame.jpg"
 UA = "Mozilla/5.0 (X11; Linux x86_64) NexisRadio/1.0"
 FONT_B = "/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf"
 FONT_R = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
+# 곡이 원래 올라간 유튜브 채널별 화면 색·소개 (scripts/jukebox/yt_match.py STATIONS 와 이름이 같아야 함)
+THEMES = {
+    "Midnight Radio":     ((112, 132, 255), "Midnight Radio", "Lo-fi · Jazz Hop · 깊은 밤의 라디오"),
+    "Hanguk Sounds":      ((70, 190, 150), "Hanguk Sounds", "국악 퓨전 · 가야금·해금·대금의 오늘"),
+    "Miso Beats":         ((255, 150, 90), "Miso Beats", "K-어반 팝 · R&B · 비트"),
+    "Still Waters":       ((140, 196, 255), "Still Waters", "Christian Lofi · CCM · 쉼과 묵상"),
+    "쉬어가는 감성 음악":  ((240, 146, 170), "쉬어가는 감성 음악", "감성 발라드 · 레트로 · 잠깐 쉬어가요"),
+    "굳이 송":            ((255, 206, 70), "굳이 송", "코믹 송 · 굳이 이걸 노래로"),
+}
+DEFAULT_THEME = ((200, 206, 212), "yojosuknam Radio", "yojosuknam 의 앨범을 24시간")
 AUDIO_LAG = 3.0          # Icecast 소리가 송출기 시각보다 늦게 오는 정도(초)
 stop = threading.Event()
 
@@ -65,20 +75,33 @@ def font(path: str, size: int) -> ImageFont.FreeTypeFont:
 
 
 def wrap(d: ImageDraw.ImageDraw, text: str, f, width: int, lines: int) -> list[str]:
-    """글자 단위로 줄을 나눈다(한글은 띄어쓰기가 적다). 넘치면 마지막 줄 끝을 … 로."""
+    """띄어쓰기 단위로 줄을 나눈다(영어 단어가 중간에서 끊기지 않게).
+    한 단어가 한 줄보다 길 때만 글자 단위로 자른다. 넘치면 마지막 줄 끝을 … 로."""
+    fits = lambda s: d.textlength(s, font=f) <= width
     out, cur = [], ""
-    for ch in text:
-        if d.textlength(cur + ch, font=f) > width:
+    for word in text.split():
+        cand = f"{cur} {word}".strip()
+        if fits(cand):
+            cur = cand
+            continue
+        if cur:
             out.append(cur)
-            cur = ch.lstrip()
-            if len(out) == lines:
-                out[-1] = out[-1][:-1] + "…"
-                return out
-        else:
-            cur += ch
+            cur = ""
+        while not fits(word):                      # 너무 긴 한 단어
+            i = len(word)
+            while i > 1 and not fits(word[:i]):
+                i -= 1
+            out.append(word[:i])
+            word = word[i:]
+        cur = word
     if cur:
         out.append(cur)
-    return out[:lines] or [""]
+    if len(out) > lines:
+        last = out[lines - 1]
+        while last and not fits(last + "…"):
+            last = last[:-1]
+        out = out[:lines - 1] + [last.rstrip() + "…"]
+    return out or [""]
 
 
 _cover_cache: dict[str, Image.Image] = {}
@@ -97,7 +120,9 @@ def cover(url: str) -> Image.Image:
 def render(now: dict, nxt: dict | None) -> None:
     c = cover(now.get("cover", ""))
     bg = c.resize((W, W)).crop((0, (W - H) // 2, W, (W + H) // 2)).filter(ImageFilter.GaussianBlur(40))
+    color, label, tagline = THEMES.get(now.get("station", ""), DEFAULT_THEME)
     bg = Image.blend(bg, Image.new("RGB", (W, H), (10, 12, 16)), 0.55)
+    bg = Image.blend(bg, Image.new("RGB", (W, H), tuple(c // 3 for c in color)), 0.28)   # 채널 색으로 물들임
     d = ImageDraw.Draw(bg)
     art = c.resize((440, 440), Image.LANCZOS)
     m = Image.new("L", art.size, 0)
@@ -106,7 +131,14 @@ def render(now: dict, nxt: dict | None) -> None:
     x, tw = 580, W - 580 - 80
     d.ellipse((x, 150, x + 16, 166), fill=(255, 77, 94))
     d.text((x + 28, 144), "LIVE · 24H   yojosuknam Radio", font=font(FONT_B, 24), fill=(255, 255, 255))
-    y = 210
+    # 채널 배지: 색 점 + 채널 이름, 아래 한 줄 소개
+    fb, ft = font(FONT_B, 26), font(FONT_R, 22)
+    bw_ = int(d.textlength(label, font=fb)) + 64
+    d.rounded_rectangle((x, 188, x + bw_, 232), radius=22, fill=tuple(c // 4 for c in color), outline=color, width=2)
+    d.ellipse((x + 18, 202, x + 34, 218), fill=color)
+    d.text((x + 46, 194), label, font=fb, fill=(255, 255, 255))
+    d.text((x + bw_ + 16, 199), tagline, font=ft, fill=color)
+    y = 250
     for line in wrap(d, now.get("title", ""), font(FONT_B, 50), tw, 3):
         d.text((x, y), line, font=font(FONT_B, 50), fill=(255, 255, 255))
         y += 64
@@ -114,9 +146,10 @@ def render(now: dict, nxt: dict | None) -> None:
     for line in wrap(d, now.get("album", ""), font(FONT_R, 28), tw, 2):
         d.text((x, y), line, font=font(FONT_R, 28), fill=(220, 226, 232))
         y += 38
+    d.line((x, y + 10, x + 120, y + 10), fill=color, width=4)
     if nxt:
-        d.text((x, 500), "다음 곡", font=font(FONT_B, 22), fill=(170, 180, 190))
-        d.text((x, 530), wrap(d, nxt.get("title", ""), font(FONT_R, 26), tw, 1)[0],
+        d.text((x, 520), "다음 곡", font=font(FONT_B, 22), fill=(170, 180, 190))
+        d.text((x, 550), wrap(d, nxt.get("title", ""), font(FONT_R, 26), tw, 1)[0],
                font=font(FONT_R, 26), fill=(230, 234, 238))
     d.text((90, 630), "music.yojosuknam.com/radio  ·  곡별 유튜브 링크·가사는 방송 페이지에서",
            font=font(FONT_R, 24), fill=(200, 208, 214))
