@@ -1,0 +1,25 @@
+# 넥시스 뮤직 24시간 방송 — 미니PC
+#   cd /mnt/external/nexis-music/scripts/radio && docker compose up -d --build
+#   끄기: docker compose down   (다른 컨테이너·터널과 무관)
+# 밖으로 R2 에 올리기만 한다. 포트를 열지 않고, 기존 터널·DNS 를 쓰지 않는다.
+services:
+  nexis-radio:
+    build: .
+    image: nexis-radio:latest
+    container_name: nexis-radio
+    restart: unless-stopped
+    volumes:
+      - /mnt/external/nexis-music/scripts:/app/scripts:ro
+      - /mnt/external/suno-playlist/input:/mnt/external/suno-playlist/input:ro
+      - ${HOME}/.config/nexis/r2.env:/run/secrets/r2.env:ro
+    environment:
+      JUKEBOX_ENV_FILE: /run/secrets/r2.env
+      JUKEBOX_INPUT_DIR: /mnt/external/suno-playlist/input
+    tmpfs:
+      - /tmp:size=64m
+    dns: [1.1.1.1, 8.8.8.8]       # 미니PC 공유 DNS 에 기대지 않음 (10-13 DNS 사고 교훈)
+    mem_limit: 256m
+    cpus: 0.5
+    logging:
+      driver: json-file
+      options: { max-size: "5m", max-file: "2" }

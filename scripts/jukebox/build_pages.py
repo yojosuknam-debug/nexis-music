@@ -337,6 +337,36 @@ def sync_cover_assets(albums: list[dict]) -> int:
     return copied
 
 
+ARTIST = "yojosuknam"
+
+
+def yt_music_search(title: str) -> str:
+    """곡별 '유튜브 뮤직에서 듣기' — 아티스트명+곡 제목 검색 주소.
+    곡별 정확한 링크가 생기면 catalog 의 track['youtube'] 가 우선한다."""
+    from urllib.parse import quote_plus
+    return f"https://music.youtube.com/search?q={quote_plus(f'{ARTIST} {title}')}"
+
+
+def radio_list(albums: list[dict]) -> dict:
+    """24시간 방송(scripts/radio/streamer.py)이 읽는 공개 곡 목록.
+    페이지와 같은 ready 목록에서 만들므로 '사이트에 공개된 앨범 = 방송에 나오는 앨범'이 된다.
+    로컬 경로(src)·가사는 넣지 않는다."""
+    out = []
+    for a in albums:
+        tracks = [{"n": int(t["n"]), "title": t["title"], "ms": int(t["ms"]), "url": t["url"],
+                   "file": t.get("file", ""), "youtube": t.get("youtube") or yt_music_search(t["title"])}
+                  for t in a["tracks"] if t.get("url")]
+        if tracks:
+            m = re.search(r"i\.ytimg\.com/vi/([\w-]{11})/", a.get("cover_source", ""))
+            out.append({"slug": a["slug"], "folder": a.get("folder", ""),
+                        "title": clean_album_title(a["title"]), "channel": a.get("channel", ""),
+                        "cover": absolute_site_url(cover_asset(a)),
+                        "page": absolute_site_url(f"/album/{a['slug']}.html"),
+                        "video": f"https://www.youtube.com/watch?v={m.group(1)}" if m else "",
+                        "tracks": tracks})
+    return {"version": 1, "albums": out}
+
+
 def main() -> int:
     if not CATALOG.exists():
         print("[에러] catalog.json 이 없습니다.")
@@ -359,6 +389,8 @@ def main() -> int:
         (OUT / f"{a['slug']}.html").write_text(album_page(a, accents[a["slug"]]), encoding="utf-8")
     (OUT / "index.html").write_text(index_page(ready, accents), encoding="utf-8")
     update_root_album_link(len(ready))
+    (OUT / "radio.json").write_text(json.dumps(radio_list(ready), ensure_ascii=False),
+                                    encoding="utf-8")
 
     # 더 이상 발행 대상이 아닌 페이지를 지운다.
     # 이게 없으면 .nojukebox 를 붙여도 예전 페이지가 그대로 살아 있어 "비공개"가 되지 않는다.
