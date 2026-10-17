@@ -1,0 +1,14 @@
+{
+  "name": "yojosuknam Radio",
+  "short_name": "yojosuknam",
+  "description": "yojosuknam 의 앨범을 하루 24시간 이어서 틀어 주는 음악 방송",
+  "start_url": "/radio",
+  "scope": "/radio",
+  "display": "standalone",
+  "background_color": "#0d0f14",
+  "theme_color": "#0d0f14",
+  "icons": [
+    { "src": "/radio/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/radio/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
