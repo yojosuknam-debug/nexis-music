@@ -338,33 +338,31 @@ def sync_cover_assets(albums: list[dict]) -> int:
     return copied
 
 
-ARTIST = "yojosuknam"
-
-
-def yt_music_search(title: str) -> str:
-    """곡별 '유튜브 뮤직에서 듣기' — 아티스트명+곡 제목 검색 주소.
-    곡별 정확한 링크가 생기면 catalog 의 track['youtube'] 가 우선한다."""
-    from urllib.parse import quote_plus
-    return f"https://music.youtube.com/search?q={quote_plus(f'{ARTIST} {title}')}"
-
-
 def radio_list(albums: list[dict]) -> dict:
     """24시간 방송(scripts/radio/streamer.py)이 읽는 공개 곡 목록.
     페이지와 같은 ready 목록에서 만들므로 '사이트에 공개된 앨범 = 방송에 나오는 앨범'이 된다.
-    로컬 경로(src)·가사는 넣지 않는다."""
+    로컬 경로(src)·가사는 넣지 않는다.
+    youtube = 곡별 정확한 유튜브 링크(yt_match.py — 곡 영상 / 앨범 영상의 그 곡 시작 지점 / Topic 음원).
+    짝이 없으면 비운다(주크박스 곡 대부분은 유튜브 뮤직에 없어 검색 링크가 헛걸음이 된다)."""
+    from yt_match import Links
+    yt = Links()
     out = []
     for a in albums:
         tracks = [{"n": int(t["n"]), "title": t["title"], "ms": int(t["ms"]), "url": t["url"],
-                   "file": t.get("file", ""), "youtube": t.get("youtube") or yt_music_search(t["title"])}
+                   "file": t.get("file", "")}
                   for t in a["tracks"] if t.get("url")]
         if tracks:
-            m = re.search(r"i\.ytimg\.com/vi/([\w-]{11})/", a.get("cover_source", ""))
+            video, links = yt.album(tracks)
+            for t in tracks:
+                t["youtube"] = links.get(t["n"], "")
+            if not video:      # 전체 영상을 못 찾으면 커버를 가져온 영상(쇼츠일 수 있음)
+                m = re.search(r"i\.ytimg\.com/vi/([\w-]{11})/", a.get("cover_source", ""))
+                video = f"https://www.youtube.com/watch?v={m.group(1)}" if m else ""
             out.append({"slug": a["slug"], "folder": a.get("folder", ""),
                         "title": clean_album_title(a["title"]), "channel": a.get("channel", ""),
                         "cover": absolute_site_url(cover_asset(a)),
                         "page": absolute_site_url(f"/album/{a['slug']}.html"),
-                        "video": f"https://www.youtube.com/watch?v={m.group(1)}" if m else "",
-                        "tracks": tracks})
+                        "video": video, "tracks": tracks})
     return {"version": 1, "albums": out}
 
 

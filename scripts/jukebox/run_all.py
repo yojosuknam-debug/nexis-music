@@ -12,6 +12,7 @@
     2 assets  커버 확보(유튜브 썸네일 / 없으면 타이포 생성)
     3 upload  R2 업로드(크기 같으면 건너뜀)
     4 pages   Aurora Glass 페이지 생성
+      yt      곡별 유튜브 링크 재료(키 있을 때만)
       audit   구멍·중복 검사 (보고만, 실패시켜도 진행)
 
 옵션:
@@ -78,6 +79,8 @@ def main() -> int:
     if a.dry_run:
         print("\n(--dry-run: 페이지 생성·배포는 하지 않았습니다)")
         return 0
+    # 곡별 유튜브 링크 재료 — 키 없는 기계(미니PC)에선 지난 목록으로 진행
+    step("유튜브 링크 갱신", ["scripts/jukebox/fetch_yt_music.py"], optional=True)
     if not step("4/4 페이지 생성", ["scripts/jukebox/build_pages.py"]):
         return 1
     step("검사 (보고용)", ["scripts/jukebox/audit.py"], optional=True)

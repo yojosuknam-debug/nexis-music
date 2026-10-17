@@ -95,7 +95,7 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
     <p class="msg" id="msg" role="status"></p>
 
     <div class="links">
-      <a class="btn yt" id="yt" href="#" target="_blank" rel="noopener" hidden>▶ 유튜브 뮤직에서 이 곡 듣기</a>
+      <a class="btn yt" id="yt" href="#" target="_blank" rel="noopener" hidden>▶ 유튜브에서 이 곡 듣기</a>
       <a class="btn" id="video" href="#" target="_blank" rel="noopener" hidden>앨범 영상</a>
       <a class="btn" id="page" href="#" hidden>가사 · 앨범 페이지</a>
       <a class="btn" href="https://www.youtube.com/channel/UCl_D2zwR6AfgTBAJ6jQq00Q" target="_blank" rel="noopener">yojosuknam 채널에서 더 듣기</a>
@@ -206,8 +206,8 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
       $(id).hidden = !url; if (url) $(id).href = url;
     }
     document.title = `${it.title} — yojosuknam Radio`;
-    $('next').replaceChildren(...items.slice(i + 1, i + 4).map((x) => row(x, '유튜브 뮤직')));
-    $('recent').replaceChildren(...items.slice(Math.max(0, i - 5), i).reverse().map((x) => row(x, '다시 듣기')));
+    $('next').replaceChildren(...items.slice(i + 1, i + 4).map((x) => row(x, '유튜브')));
+    $('recent').replaceChildren(...items.slice(Math.max(0, i - 5), i).reverse().map((x) => row(x, '유튜브')));
     if ('mediaSession' in navigator) {
       navigator.mediaSession.metadata = new MediaMetadata({
         title: it.title, artist: 'yojosuknam Radio', album: it.album,
