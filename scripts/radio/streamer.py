@@ -268,6 +268,7 @@ class Mirror(threading.Thread):
         self.mount = os.environ.get("RADIO_ICECAST_MOUNT", "/live.mp3")
         self.q: queue.Queue[bytes] = queue.Queue(maxsize=40)      # 0.25초 × 40 = 10초
         self.dropped = 0
+        self.last_meta = ""
 
     @property
     def on(self) -> bool:
@@ -305,6 +306,8 @@ class Mirror(threading.Thread):
                 stdin=subprocess.PIPE, stderr=subprocess.PIPE)
             threading.Thread(target=self._log_stderr, args=(proc,), daemon=True).start()
             log(f"직통 송출 연결 → {self.host}{self.mount}")
+            # 연결되기 전에 보낸 곡 제목은 버려진다 → 붙은 뒤 지금 곡을 다시 알린다
+            threading.Timer(4.0, lambda: self.meta(self.last_meta)).start()
             try:
                 while not stop.is_set() and proc.poll() is None:
                     try:
@@ -324,11 +327,13 @@ class Mirror(threading.Thread):
 
     def meta(self, text: str) -> None:
         """라디오 앱에 보이는 '지금 곡' 제목(Icecast metadata) — 실패해도 무시."""
-        if not self.on:
+        if not self.on or not text:
             return
+        self.last_meta = text
 
         def go() -> None:
-            q = urllib.parse.urlencode({"mount": self.mount, "mode": "updinfo", "song": text})
+            # charset 을 빼면 한글 제목이 조용히 버려진다(10-17 실측)
+            q = urllib.parse.urlencode({"mount": self.mount, "mode": "updinfo", "song": text, "charset": "UTF-8"})
             req = urllib.request.Request(f"http://{self.host}/admin/metadata?{q}")
             req.add_header("Authorization", "Basic " + base64.b64encode(f"source:{self.pw}".encode()).decode())
             try:
