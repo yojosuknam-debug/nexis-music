@@ -17,6 +17,7 @@ from __future__ import annotations
 import io
 import json
 import os
+import re
 import subprocess
 import sys
 import threading
@@ -25,6 +26,11 @@ import urllib.request
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
+
+try:
+    import segno          # 곡별 원곡 영상 QR (없으면 QR 없이 그린다)
+except ImportError:
+    segno = None
 
 KEY = os.environ.get("YOUTUBE_STREAM_KEY", "").strip()
 RTMP = os.environ.get("YOUTUBE_RTMP", "rtmp://a.rtmp.youtube.com/live2").rstrip("/")
@@ -120,6 +126,36 @@ def split_title(title: str) -> tuple[str, str]:
     return title, ""
 
 
+RADIO_PAGE = "https://music.yojosuknam.com/radio"
+
+
+def short_yt(url: str) -> str:
+    """watch?v=ID&t=1002s → https://youtu.be/ID?t=1002 (QR 칸 수를 줄여 화면에서 잘 찍히게). 링크 없으면 방송 페이지."""
+    m = re.search(r"[?&]v=([\w-]{11})", url or "")
+    if not m:
+        return RADIO_PAGE
+    t = re.search(r"[?&]t=(\d+)", url)
+    return f"https://youtu.be/{m.group(1)}" + (f"?t={t.group(1)}" if t and t.group(1) != "0" else "")
+
+
+def draw_qr(bg: Image.Image, url: str, x: int, y: int, size: int) -> None:
+    """흰 둥근 판 위에 QR. 칸은 정수 픽셀로 맞춰 영상 압축에도 또렷하게."""
+    if segno is None:
+        return
+    rows = [list(r) for r in segno.make(url, error="m", micro=False).matrix]
+    n = len(rows)
+    cell = max(2, (size - 16) // n)
+    q = n * cell
+    pad = (size - q) // 2
+    d = ImageDraw.Draw(bg)
+    d.rounded_rectangle((x, y, x + size, y + size), radius=12, fill=(255, 255, 255))
+    for r, row in enumerate(rows):
+        for c, v in enumerate(row):
+            if v:
+                d.rectangle((x + pad + c * cell, y + pad + r * cell,
+                             x + pad + (c + 1) * cell - 1, y + pad + (r + 1) * cell - 1), fill=(12, 14, 18))
+
+
 _cover_cache: dict[str, Image.Image] = {}
 
 
@@ -179,16 +215,25 @@ def render(now: dict, nxt: dict | None) -> None:
 
     # 아래(표지 아랫선 580 에 맞춤): 구분선 → 다음 곡
     d.line((x, 498, x + tw, 498), fill=tuple(min(255, c // 2 + 30) for c in color), width=1)
+    # 오른쪽 아래: 지금 곡 원곡 영상 QR (화면은 클릭이 안 되니 폰으로 찍게)
+    qs, nw = 132, tw
+    if segno is not None:
+        qx, qy = x + tw - qs, 512
+        draw_qr(bg, short_yt(now.get("youtube", "")), qx, qy, qs)
+        cap = "이 곡 원곡 영상" if "youtu" in (now.get("youtube") or "") else "곡별 링크 모음"
+        fc = font(FONT_R, 16)
+        d.text((qx + (qs - d.textlength(cap, font=fc)) / 2, qy + qs + 8), cap, font=fc, fill=(170, 178, 188))
+        nw = tw - qs - 24
     if nxt:
         d.text((x, 516), "다음 곡", font=font(FONT_B, 18), fill=(150, 160, 172))
         n_main, n_sub = split_title(clean(nxt.get("title", "")))
         fn, fns = font(FONT_R, 26), font(FONT_R, 20)
-        n_main = wrap(d, n_main, fn, tw, 1)[0]
+        n_main = wrap(d, n_main, fn, nw, 1)[0]
         d.text((x, 544), n_main, font=fn, fill=(230, 234, 238))
         if n_sub:
             nx = x + int(d.textlength(n_main, font=fn)) + 12
-            if nx < x + tw - 60:
-                d.text((nx, 550), wrap(d, n_sub, fns, x + tw - nx, 1)[0], font=fns, fill=(150, 160, 172))
+            if nx < x + nw - 60:
+                d.text((nx, 550), wrap(d, n_sub, fns, x + nw - nx, 1)[0], font=fns, fill=(150, 160, 172))
     d.text((90, 630), "music.yojosuknam.com/radio  ·  곡별 유튜브 링크·가사는 방송 페이지에서",
            font=font(FONT_R, 24), fill=(200, 208, 214))
     tmp = OUT / "frame.tmp.jpg"

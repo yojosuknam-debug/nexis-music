@@ -41,9 +41,12 @@ KEYWORDS = ('yojosuknam "yojosuknam Radio" "24/7 radio" lofi "jazz hop" gugak "k
             '"study music" "relaxing music" 라디오 로파이 국악 재즈 음악방송')
 
 LIVE_TITLE = "yojosuknam Radio 📻 24/7 Lo-fi · Jazz Hop · 국악 퓨전 · K-Pop · CCM | 쉬지 않는 음악 방송"
-LIVE_DESC = DESC + """
+LIVE_DESC = """▶ 지금 곡 원곡 영상 바로가기: https://music.yojosuknam.com/radio
+📱 화면 오른쪽 아래 QR 을 폰으로 찍으면 지금 나오는 곡의 원곡 영상이 열려요.
 
-지금 나오는 곡과 다음 곡은 화면에, 곡별 원곡 영상 링크는 방송 페이지에 있어요.
+""" + DESC + """
+
+지금 나오는 곡과 다음 곡은 화면에, 곡별 원곡 영상 링크는 방송 페이지와 화면 QR 에 있어요.
 화면 색과 배지는 그 곡이 원래 올라간 채널(Midnight Radio · Hanguk Sounds · Miso Beats · Still Waters · 쉬어가는 감성 음악 · 굳이 송)을 뜻합니다.
 
 #yojosuknam #lofi #24시간라디오"""
