@@ -572,5 +572,17 @@
   "src": "/mnt/external/suno-playlist/output/캐럴이_들리기_시작하면_(When_the_Carols_Start_Playing)_project/thumbnail.png",
   "project": "캐럴이_들리기_시작하면_(When_the_Carols_Start_Playing)_project",
   "match_score": 1.0
+ },
+ "sixty-days-till-a-lo-fi-christmas-countdown": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Sixty_Days_Till_(A_Lo-fi_Christmas_Countdown)_project/thumbnail.png",
+  "project": "Sixty_Days_Till_(A_Lo-fi_Christmas_Countdown)_project",
+  "match_score": 1.0
+ },
+ "한옥-위의-별-star-over-hanok": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/한옥_위의_별_(Star_over_Hanok)_project/thumbnail.png",
+  "project": "한옥_위의_별_(Star_over_Hanok)_project",
+  "match_score": 1.0
  }
 }
