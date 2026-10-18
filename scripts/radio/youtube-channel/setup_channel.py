@@ -90,9 +90,9 @@ def live(y) -> None:
         print("라이브 스트림 재사용")
 
     # 3) 방송(자동 시작·자동 종료 없음)
-    bcs = y.liveBroadcasts().list(part="id,snippet,status,contentDetails", mine=True,
+    bcs = y.liveBroadcasts().list(part="id,snippet,status,contentDetails",  # broadcastStatus 는 mine 과 함께 못 씀(내 방송만 반환)
                                   broadcastStatus="upcoming", maxResults=50).execute().get("items", [])
-    bcs += y.liveBroadcasts().list(part="id,snippet,status,contentDetails", mine=True,
+    bcs += y.liveBroadcasts().list(part="id,snippet,status,contentDetails",
                                    broadcastStatus="active", maxResults=50).execute().get("items", [])
     bc = next((b for b in bcs if b["snippet"]["title"].startswith("yojosuknam Radio")), None)
     if not bc:
