@@ -584,5 +584,11 @@
   "src": "/mnt/external/suno-playlist/output/한옥_위의_별_(Star_over_Hanok)_project/thumbnail.png",
   "project": "한옥_위의_별_(Star_over_Hanok)_project",
   "match_score": 1.0
+ },
+ "advent-the-long-night": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Advent,_the_Long_Night_project/thumbnail.png",
+  "project": "Advent,_the_Long_Night_project",
+  "match_score": 1.0
  }
 }
