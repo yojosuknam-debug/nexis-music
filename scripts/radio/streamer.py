@@ -439,7 +439,8 @@ def main() -> int:
                 if deadline and time.time() > deadline:
                     stop.set()
             if not stop.is_set():
-                clock.feed(enc, b"\0" * int(BPS * ALBUM_GAP) // 4 * 4)
+                # 괄호 필수: 없으면 (bytes // 4) 로 묶여 앨범이 끝날 때마다 TypeError 로 송출기가 죽었다
+                clock.feed(enc, b"\0" * (int(BPS * ALBUM_GAP) // 4 * 4))
     except BrokenPipeError:
         log("[에러] 인코더 연결이 끊겼습니다")
         return 1
