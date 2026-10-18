@@ -1,0 +1,50 @@
+{
+  "_": "yojosuknam Radio 시간대 편성표(한국 시간). 이 파일 하나가 송출기·라이브 화면·채팅·방송 페이지 편성표의 원본이다. start 순서대로, 다음 칸 start 까지가 그 칸이다. 앨범 단위라 실제 전환은 10~20분 앞뒤로 움직인다.",
+  "regular": ["07:00", "22:00"],
+  "stations": {
+    "Midnight Radio":    {"icon": "🌙", "genre": "로파이 · 재즈합",        "url": "https://www.youtube.com/@MidnightRadio-h3t"},
+    "Hanguk Sounds":     {"icon": "🎋", "genre": "국악 퓨전",             "url": "https://www.youtube.com/@Hanguk-Sounds"},
+    "Miso Beats":        {"icon": "🎧", "genre": "K-어반 팝 · R&B",       "url": "https://www.youtube.com/@Miso-Beats"},
+    "Still Waters":      {"icon": "☀️", "genre": "묵상 · CCM · 크리스천 로파이", "url": "https://www.youtube.com/@StillWaters-r7m"},
+    "쉬어가는 감성 음악": {"icon": "🌸", "genre": "감성 발라드 · 레트로",     "url": "https://www.youtube.com/@nexis-music"},
+    "굳이 송":           {"icon": "😂", "genre": "코믹 송",               "url": "https://www.youtube.com/@nexis-song"}
+  },
+  "assign": {
+    "_": "채널이 비어 있는 앨범(폴더 이름) → 편성 채널",
+    "bible_pansori_vol1": "Hanguk Sounds",
+    "bible_pansori_vol2": "Hanguk Sounds",
+    "NAMISEOM": "Hanguk Sounds",
+    "MINCHO": "Miso Beats",
+    "yako_toshi": "쉬어가는 감성 음악",
+    "NIGA2_WORLD": "굳이 송"
+  },
+  "blocks": [
+    {"start": "00:00", "station": "Still Waters"},
+    {"start": "00:30", "station": "Hanguk Sounds"},
+    {"start": "01:15", "station": "Midnight Radio"},
+    {"start": "03:15", "station": "Hanguk Sounds"},
+    {"start": "04:00", "station": "Midnight Radio"},
+    {"start": "05:30", "station": "Still Waters"},
+    {"start": "06:00", "station": "Midnight Radio"},
+
+    {"start": "07:00", "station": "Still Waters"},
+    {"start": "08:00", "station": "Hanguk Sounds"},
+    {"start": "09:20", "station": "Miso Beats"},
+    {"start": "10:45", "station": "쉬어가는 감성 음악"},
+    {"start": "11:35", "station": "굳이 송"},
+
+    {"start": "12:00", "station": "Still Waters"},
+    {"start": "13:00", "station": "Hanguk Sounds"},
+    {"start": "14:20", "station": "Miso Beats"},
+    {"start": "15:45", "station": "쉬어가는 감성 음악"},
+    {"start": "16:35", "station": "굳이 송"},
+
+    {"start": "17:00", "station": "Still Waters"},
+    {"start": "18:00", "station": "Hanguk Sounds"},
+    {"start": "19:20", "station": "Miso Beats"},
+    {"start": "20:45", "station": "쉬어가는 감성 음악"},
+    {"start": "21:35", "station": "굳이 송"},
+
+    {"start": "22:00", "station": "Midnight Radio"}
+  ]
+}

@@ -26,7 +26,8 @@ STREAM_TITLE = "yojosuknam Radio main"
 
 DESC = """🐻📻 yojosuknam Radio — 24시간 음악 방송
 
-yojosuknam 의 앨범을 무작위로 골라 처음부터 끝까지, 하루 종일 이어서 틉니다.
+yojosuknam 의 앨범을 시간대별 편성에 따라 골라 처음부터 끝까지, 하루 종일 이어서 틉니다.
+낮(07–22시)은 채널별 정규 방송이 하루 3번 돌고, 밤(22–07시)은 로파이 위주 심야 방송이에요.
 Lo-fi · 재즈합 · 국악 퓨전 · K-팝 · CCM · 감성 발라드 — 광고·멘트 없이 음악만.
 
 yojosuknam Radio plays original albums by yojosuknam around the clock —
@@ -40,6 +41,13 @@ lo-fi, jazz hop, Korean gugak fusion, K-pop, CCM and ballads. No ads, no talk, j
 KEYWORDS = ('yojosuknam "yojosuknam Radio" "24/7 radio" lofi "jazz hop" gugak "korean music" kpop ccm '
             '"study music" "relaxing music" 라디오 로파이 국악 재즈 음악방송')
 
+try:     # 편성표(youtube-chat.sh 가 schedule.py/json 을 /tmp 에 같이 넣는다)
+    sys.path.insert(0, "/tmp")
+    import schedule
+    TIMETABLE = "\n\n" + schedule.timetable_text()
+except Exception:  # noqa: BLE001
+    TIMETABLE = ""
+
 LIVE_TITLE = "yojosuknam Radio 📻 24/7 Lo-fi · Jazz Hop · 국악 퓨전 · K-Pop · CCM | 쉬지 않는 음악 방송"
 LIVE_DESC = """▶ 지금 곡 원곡 영상 바로가기: https://music.yojosuknam.com/radio
 📱 화면 오른쪽 아래 QR 을 폰으로 찍으면 지금 나오는 곡의 원곡 영상이 열려요.
@@ -47,7 +55,7 @@ LIVE_DESC = """▶ 지금 곡 원곡 영상 바로가기: https://music.yojosukn
 """ + DESC + """
 
 지금 나오는 곡과 다음 곡은 화면에, 곡별 원곡 영상 링크는 방송 페이지와 화면 QR 에 있어요.
-화면 색과 배지는 그 곡이 원래 올라간 채널(Midnight Radio · Hanguk Sounds · Miso Beats · Still Waters · 쉬어가는 감성 음악 · 굳이 송)을 뜻합니다.
+화면 색과 배지는 그 곡이 원래 올라간 채널(Midnight Radio · Hanguk Sounds · Miso Beats · Still Waters · 쉬어가는 감성 음악 · 굳이 송)을 뜻합니다.""" + TIMETABLE + """
 
 #yojosuknam #lofi #24시간라디오"""
 

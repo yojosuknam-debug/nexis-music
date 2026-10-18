@@ -82,6 +82,16 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
 .share code.inline{display:inline;margin:0;padding:2px 6px;font-size:11px;background:rgba(0,0,0,.25)}
 .contact{margin:18px 2px 0;font-size:12px;line-height:1.8;color:rgba(255,255,255,.55)}
 .contact a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.tt-note{font-size:12px;color:rgba(255,255,255,.5);margin:-4px 2px 10px;line-height:1.6}
+.tt h3{font-size:12px;font-weight:600;color:rgba(255,255,255,.7);margin:16px 2px 8px}
+.tt .row{display:flex;align-items:center;gap:12px;padding:10px 12px;margin-bottom:6px;border-radius:12px;
+  background:rgba(255,255,255,.05);border:1px solid transparent;font-size:14px}
+.tt .row.now{background:color-mix(in srgb,var(--sc) 20%,transparent);border-color:var(--sc)}
+.tt .tm{flex:none;min-width:64px;font-variant-numeric:tabular-nums;font-size:12px;color:rgba(255,255,255,.75);line-height:1.5}
+.tt .nm{flex:1;min-width:0;overflow-wrap:anywhere}
+.tt .nm b{font-weight:600}.tt .nm span{display:block;font-size:12px;color:rgba(255,255,255,.55)}
+.tt .nm i{font-style:normal;font-size:10px;letter-spacing:.08em;margin-left:6px;padding:1px 6px;border-radius:999px;background:var(--sc);color:#0d0f14;font-weight:700}
+.tt a{flex:none;font-size:12px;color:rgba(255,255,255,.75);white-space:nowrap;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08)}
 .about-en{margin-top:30px;padding-top:6px;border-top:1px solid rgba(255,255,255,.08);font-size:13px;line-height:1.7;color:rgba(255,255,255,.7)}
 .about-en p{margin:8px 0;overflow-wrap:anywhere}.about-en b{color:#fff;font-weight:600}
 .about-en a{color:#fff;text-decoration:underline;text-underline-offset:3px}
@@ -95,7 +105,7 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
   <section>
     <span class="live" id="live"><span class="dot"></span>LIVE · 24H</span>
     <h1>yojosuknam Radio</h1>
-    <p class="sub">앨범을 무작위로 골라 처음부터 끝까지, 하루 종일 이어서 틉니다.</p>
+    <p class="sub">시간대별 편성에 따라 앨범을 골라 처음부터 끝까지, 하루 종일 이어서 틉니다.</p>
 
     <div class="player">
       <button class="play" id="play" type="button" aria-label="방송 듣기">
@@ -123,6 +133,13 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
     <h2>방금 나온 곡</h2>
     <ol id="recent"></ol>
 
+    <section class="tt" id="tt" hidden>
+      <h2>편성표</h2>
+      <p class="tt-note">한국 시간 · 앨범을 끝까지 트느라 전환은 10~20분 앞뒤로 움직여요.</p>
+      <h3 id="tt-day-h"></h3><div id="tt-day"></div>
+      <h3 id="tt-night-h"></h3><div id="tt-night"></div>
+    </section>
+
     <div class="share">
       다른 앱(VLC, 라디오 앱, 스마트 스피커 등)에서 들으려면 이 주소를 넣으세요.
       <code id="url">https://stream.yojosuknam.com/live.mp3</code>
@@ -134,8 +151,9 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
     <div class="about-en" lang="en">
       <h2>About this station</h2>
       <p><b>yojosuknam Radio</b> — original albums by yojosuknam, broadcast from Uijeongbu, South Korea.</p>
-      <p><b>Schedule:</b> 24/7 non-stop music. Albums (lo-fi, jazz hop, Korean gugak fusion, K-pop, CCM, ballads)
-        are picked at random and played in full, from the first track to the last. No ads, no talk.</p>
+      <p><b>Schedule:</b> 24/7 non-stop music, programmed by time of day (Korea time). Daytime (07–22) rotates
+        CCM, Korean gugak fusion, K-urban pop, ballads and comic songs three times a day; overnight (22–07) is mostly
+        lo-fi and jazz hop with gugak and meditation blocks. Albums are played in full. No ads, no talk.</p>
       <p><b>Stream:</b> MP3 128 kbps — https://stream.yojosuknam.com/live.mp3</p>
       <p><b>Contact:</b> <a href="mailto:support@nexis-lab.com">support@nexis-lab.com</a></p>
     </div>
@@ -150,6 +168,9 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
   const $ = (id) => document.getElementById(id);
   const audio = $('audio');
   let hls = null, playing = false, items = [], delay = 30, shown = '';
+  // 곡이 원래 올라간 유튜브 채널(라이브 화면과 같은 색)
+  const SC = { 'Midnight Radio': '#7084ff', 'Hanguk Sounds': '#46be96', 'Miso Beats': '#ff965a',
+    'Still Waters': '#8cc4ff', '쉬어가는 감성 음악': '#f092aa', '굳이 송': '#ffce46' };
 
   try { const v = localStorage.getItem('radio.vol'); if (v !== null) { audio.volume = +v; $('vol').value = v; } } catch (e) { /* */ }
   $('vol').addEventListener('input', (e) => { audio.volume = +e.target.value; try { localStorage.setItem('radio.vol', e.target.value); } catch (er) { /* */ } });
@@ -226,9 +247,6 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
     const key = it.at + '|' + it.title;
     if (key === shown) return;
     shown = key;
-    // 곡이 원래 올라간 유튜브 채널(라이브 화면과 같은 색)
-    const SC = { 'Midnight Radio': '#7084ff', 'Hanguk Sounds': '#46be96', 'Miso Beats': '#ff965a',
-      'Still Waters': '#8cc4ff', '쉬어가는 감성 음악': '#f092aa', '굳이 송': '#ffce46' };
     $('station').hidden = !it.station;
     if (it.station) { $('station').textContent = it.station; $('station').style.setProperty('--sc', SC[it.station] || '#c8ced4'); }
     $('title').textContent = it.title;
@@ -262,6 +280,50 @@ li a{font-size:12px;color:rgba(255,255,255,.7);white-space:nowrap;padding:6px 10
     } catch (e) { /* 다음 차례에 다시 */ }
   }
   poll(); setInterval(poll, 15000); setInterval(render, 1000);
+
+  // ── 편성표: 송출기가 올리는 schedule.json(원본은 레포 scripts/radio/schedule.json) ──
+  let sched = null;
+  const mins = (s) => { const [h, m] = s.split(':').map(Number); return h * 60 + m; };
+  function ttRow(times, name, now) {
+    const st = (sched.stations || {})[name] || {};
+    const div = document.createElement('div');
+    div.className = 'row' + (now ? ' now' : '');
+    div.style.setProperty('--sc', SC[name] || '#c8ced4');
+    const tm = document.createElement('div'); tm.className = 'tm'; tm.textContent = times;
+    const nm = document.createElement('div'); nm.className = 'nm';
+    const b = document.createElement('b'); b.textContent = `${st.icon || ''} ${name}`.trim();
+    if (now) { const i = document.createElement('i'); i.textContent = 'ON AIR'; b.append(i); }
+    const g = document.createElement('span'); g.textContent = st.genre || '';
+    nm.append(b, g); div.append(tm, nm);
+    if (st.url) {
+      const a = document.createElement('a'); a.href = st.url; a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = '채널'; div.append(a);
+    }
+    return div;
+  }
+  function renderSchedule() {
+    if (!sched || !sched.blocks) return;
+    const blocks = [...sched.blocks].sort((a, b) => mins(a.start) - mins(b.start));
+    const [r0, r1] = (sched.regular || ['07:00', '22:00']).map(mins);
+    const d = new Date(), cur = (d.getUTCHours() * 60 + d.getUTCMinutes() + 540) % 1440;   // 한국 시간
+    let ci = blocks.length - 1;
+    blocks.forEach((b, k) => { if (mins(b.start) <= cur) ci = k; });
+    const nowB = blocks[ci], nowRegular = mins(nowB.start) >= r0 && mins(nowB.start) < r1;
+    const day = new Map();
+    for (const b of blocks) if (mins(b.start) >= r0 && mins(b.start) < r1) {
+      if (!day.has(b.station)) day.set(b.station, []);
+      day.get(b.station).push(b.start);
+    }
+    $('tt-day-h').textContent = `☀ 정규 방송 ${sched.regular[0]}–${sched.regular[1]} · 하루 3회전`;
+    $('tt-day').replaceChildren(...[...day].map(([name, ts]) => ttRow(ts.join(' · '), name, nowRegular && nowB.station === name)));
+    const night = [...blocks.filter((b) => mins(b.start) >= r1), ...blocks.filter((b) => mins(b.start) < r0)];
+    $('tt-night-h').textContent = `🌙 심야 방송 ${sched.regular[1]}–${sched.regular[0]} · 로파이 위주`;
+    $('tt-night').replaceChildren(...night.map((b) => ttRow(b.start, b.station, !nowRegular && b === nowB)));
+    $('tt').hidden = false;
+  }
+  fetch('https://audio.yojosuknam.com/radio/schedule.json', { cache: 'no-cache' })
+    .then((r) => r.json()).then((s) => { sched = s; renderSchedule(); setInterval(renderSchedule, 60000); })
+    .catch(() => { /* 편성표 없으면 숨긴 채로 */ });
 
   if ('mediaSession' in navigator) {
     navigator.mediaSession.setActionHandler('play', () => { if (!playing) start(); });

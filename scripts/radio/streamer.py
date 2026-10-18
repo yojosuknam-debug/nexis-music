@@ -45,7 +45,9 @@ from collections import deque
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "jukebox"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _env  # noqa: E402
+import schedule  # noqa: E402  — 시간대 편성(schedule.json)
 
 import boto3  # noqa: E402
 from botocore.config import Config  # noqa: E402
@@ -110,21 +112,38 @@ def source_of(album: dict, track: dict) -> str:
     return track["url"]
 
 
+def album_ms(album: dict) -> int:
+    return sum(int(t.get("ms") or 0) for t in album["tracks"])
+
+
 class Picker:
-    """앨범을 무작위로 고르되 최근에 나온 앨범은 피한다."""
+    """시간대 편성(schedule.json)의 지금 칸 채널에서 앨범을 고른다.
+    - 칸이 6분도 안 남았으면 다음 칸 채널로 일찍 넘어간다
+    - 남은 시간 + 10분 안에 끝나는 앨범을 우선(경계에서 앨범을 자르지 않는다)
+    - 채널마다 최근에 나온 앨범(그 채널 앨범의 절반)은 피한다
+    편성이 비었거나 그 채널 앨범이 없으면 전체에서 고른다."""
 
     def __init__(self) -> None:
-        self.recent: deque[str] = deque()
+        self.recent: dict[str, deque[str]] = {}
 
-    def next(self) -> dict:
-        pool = albums()
-        keep = max(1, min(len(pool) // 2, 40))
-        while len(self.recent) > keep:
-            self.recent.popleft()
-        fresh = [a for a in pool if a["slug"] not in self.recent] or pool
-        a = random.choice(fresh)
-        self.recent.append(a["slug"])
-        return a
+    def next(self, t: float) -> dict:
+        pool_all = albums()
+        b = schedule.block_at(t)
+        if b["end"] - t < 6 * 60:
+            b = schedule.block_at(b["end"] + 1)
+        st = b["station"] if not CHANNEL else ""
+        pool = [a for a in pool_all if st and schedule.station_of(a) == st] or pool_all
+        seen = self.recent.setdefault(st, deque())
+        while len(seen) > max(1, min(len(pool) // 2, 40)):
+            seen.popleft()
+        fresh = [a for a in pool if a["slug"] not in seen] or pool
+        room = max(0.0, b["end"] - t) * 1000 + 10 * 60 * 1000
+        fit = [a for a in fresh if album_ms(a) <= room]
+        a = random.choice(fit) if fit else min(fresh, key=album_ms)
+        seen.append(a["slug"])
+        log(f"편성 {schedule.hhmm(b['start'])}~{schedule.hhmm(b['end'])} {st or '(전체)'}"
+            f" · 후보 {len(fit) or len(fresh)}장")
+        return {**a, "station": schedule.station_of(a)}
 
 
 # ── R2 ────────────────────────────────────────────────────────────────────
@@ -402,6 +421,18 @@ def main() -> int:
     s3, bucket, public = r2()
     clean_old_segments(s3, bucket, prefix)
     log(f"방송 주소 {public}/{prefix}/live.m3u8")
+    sched_sent = [0.0]
+
+    def send_schedule() -> None:
+        """방송 페이지 편성표가 읽는 사본(원본은 레포 scripts/radio/schedule.json). 파일이 바뀌었을 때만."""
+        try:
+            mtime = schedule.PATH.stat().st_mtime
+            if mtime != sched_sent[0]:
+                put(s3, bucket, f"{prefix}/schedule.json", schedule.PATH.read_bytes(),
+                    "application/json; charset=utf-8", "public, max-age=300")
+                sched_sent[0] = mtime
+        except Exception as e:  # noqa: BLE001
+            log(f"[경고] 편성표 올리기 실패({type(e).__name__})")
 
     outdir = Path(tempfile.mkdtemp(prefix="nexis-radio-"))
     enc = encoder(outdir)
@@ -416,7 +447,8 @@ def main() -> int:
 
     try:
         while not stop.is_set():
-            album = picker.next()
+            send_schedule()
+            album = picker.next(clock.stream_wall())
             log(f"▶ 앨범 {album['title']} ({len(album['tracks'])}곡)")
             for i, t in enumerate(album["tracks"]):
                 if stop.is_set():

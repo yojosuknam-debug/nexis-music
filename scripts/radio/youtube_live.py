@@ -28,6 +28,8 @@ from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
+import schedule   # 시간대 편성(schedule.json) — 같은 폴더
+
 try:
     import segno          # 곡별 원곡 영상 QR (없으면 QR 없이 그린다)
 except ImportError:
@@ -303,7 +305,10 @@ def render(now: dict, nxt: dict | None) -> tuple[Image.Image, Lyrics | None]:
     x, tw = 580, W - 580 - 80
     # 맨 위(표지 윗선 140 에 맞춤): LIVE 줄 → 채널 배지 + 한 줄 소개
     d.ellipse((x, 148, x + 14, 162), fill=(255, 77, 94))
-    d.text((x + 26, 141), "LIVE · 24H  ·  yojosuknam Radio", font=font(FONT_B, 22), fill=(236, 240, 244))
+    cur, nxt_b = schedule.program(int(now.get("at") or 0) / 1000, now.get("station", ""))
+    part = "정규 방송" if cur["regular"] else "심야 방송"
+    d.text((x + 26, 141), f"LIVE · {part} {schedule.hhmm(cur['start'])}–{schedule.hhmm(cur['end'])}  ·  yojosuknam Radio",
+           font=font(FONT_B, 22), fill=(236, 240, 244))
     fb, ft = font(FONT_B, 22), font(FONT_R, 20)
     bw_ = int(d.textlength(label, font=fb)) + 54
     d.rounded_rectangle((x, 182, x + bw_, 218), radius=18, fill=tuple(c // 4 for c in color), outline=color, width=2)
@@ -364,8 +369,15 @@ def render(now: dict, nxt: dict | None) -> tuple[Image.Image, Lyrics | None]:
             nx = x + int(d.textlength(n_main, font=fn)) + 12
             if nx < x + nw - 60:
                 d.text((nx, 550), wrap(d, n_sub, fns, x + nw - nx, 1)[0], font=fns, fill=(150, 160, 172))
-    d.text((90, 630), "music.yojosuknam.com/radio  ·  곡별 유튜브 링크·가사는 방송 페이지에서",
-           font=font(FONT_R, 24), fill=(200, 208, 214))
+    # 맨 아래: 다음 편성
+    nst = nxt_b["station"]
+    foot = f"다음 편성  {schedule.hhmm(nxt_b['start'])}  {nst}"
+    ff = font(FONT_R, 24)
+    d.text((90, 630), "music.yojosuknam.com/radio", font=ff, fill=(200, 208, 214))
+    fx = 90 + int(d.textlength("music.yojosuknam.com/radio", font=ff)) + 18
+    d.text((fx, 630), "·", font=ff, fill=(120, 130, 142))
+    d.text((fx + 22, 630), wrap(d, foot, ff, (x + tw - 132 - 24) - (fx + 22), 1)[0], font=ff,
+           fill=THEMES.get(nst, DEFAULT_THEME)[0])
     return bg, lyr
 
 

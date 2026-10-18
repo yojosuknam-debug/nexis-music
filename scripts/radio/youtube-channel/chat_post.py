@@ -1,9 +1,10 @@
 """
-yojosuknam Radio 유튜브 라이브 채팅에 '지금 곡 원곡 링크'를 올린다 (미니PC 크론, 3시간마다).
+yojosuknam Radio 유튜브 라이브 채팅 (youtube-chat.sh 가 부른다).
 autovid-bot 컨테이너 안에서 nexis-horror 토큰(scope youtube)으로 돈다 — setup_channel.py 와 같은 방식.
-    docker exec autovid-bot python /tmp/chat_post.py          # 채팅 1건
-    docker exec autovid-bot python /tmp/chat_post.py --desc   # 설명란만 다시 적용(setup_channel.py 도 /tmp 에 있어야 함)
-할당량(하루 10,000, autovid 와 공유): 방송 조회 1 + 채팅 50 = 1회 51단위 → 3시간마다 하루 8회 ≈ 410단위.
+    docker exec autovid-bot python /tmp/chat_post.py --program # 편성이 바뀌었을 때: 지금 장르·채널 주소 (schedule.py/json 도 /tmp 에)
+    docker exec autovid-bot python /tmp/chat_post.py           # 지금 곡 원곡 링크 1건(수동용)
+    docker exec autovid-bot python /tmp/chat_post.py --desc    # 설명란만 다시 적용(setup_channel.py 도 /tmp 에 있어야 함)
+할당량(하루 10,000, autovid 와 공유): 방송 조회 1 + 채팅 50 = 1회 51단위 → 편성 전환 하루 약 23회 ≈ 1,200단위.
 진행 중인 방송이 없으면 '방송 없음'을 출력하고 끝낸다(감시 겸용 — 로그에서 확인).
 """
 import json
@@ -44,6 +45,21 @@ def message(now: dict) -> str:
     return f"🎧 지금 흐르는 곡: {title}{tail}"
 
 
+def program_message(now: dict) -> str:
+    sys.path.insert(0, "/tmp")
+    import schedule
+    st = now.get("station", "")
+    cur, nxt = schedule.program(int(now.get("at") or 0) / 1000, st)
+    i, n = schedule.info(st), schedule.info(nxt["station"])
+    part = "정규 방송" if cur["regular"] else "심야 방송"
+    text = (f"📻 {part} 편성 전환 — 지금은 {i.get('icon', '')} {st} · {i.get('genre', '')}"
+            f" ({schedule.hhmm(cur['start'])}~{schedule.hhmm(cur['end'])})")
+    if i.get("url"):
+        text += f" ▶ 채널 {i['url']}"
+    text += f" · 다음 {schedule.hhmm(nxt['start'])} {n.get('icon', '')} {nxt['station']} · 편성표 {RADIO_PAGE}"
+    return text[:200]
+
+
 def main() -> None:
     c = pickle.load(open(TOKEN, "rb"))
     if not c.valid:
@@ -68,7 +84,7 @@ def main() -> None:
 
     req = urllib.request.Request(NOW_URL, headers={"User-Agent": "NexisRadio/1.0"})
     now = json.load(urllib.request.urlopen(req, timeout=15)).get("now") or {}
-    text = message(now)
+    text = program_message(now) if "--program" in sys.argv else message(now)
     y.liveChatMessages().insert(part="snippet", body={"snippet": {
         "liveChatId": bc["snippet"]["liveChatId"], "type": "textMessageEvent",
         "textMessageDetails": {"messageText": text}}}).execute()
