@@ -554,5 +554,23 @@
  "softer-every-set-lo-fi-chill-album": {
   "kind": "youtube",
   "src": "https://i.ytimg.com/vi/1WhbDptmD3s/maxresdefault.jpg"
+ },
+ "12월이-오는-소리-the-sound-of-december-coming": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/12월이_오는_소리_(The_Sound_of_December_Coming)_project/thumbnail.png",
+  "project": "12월이_오는_소리_(The_Sound_of_December_Coming)_project",
+  "match_score": 1.0
+ },
+ "크리스마스-준비위원회-the-christmas-prep-committee": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/크리스마스_준비위원회_(The_Christmas_Prep_Committee)_project/thumbnail.png",
+  "project": "크리스마스_준비위원회_(The_Christmas_Prep_Committee)_project",
+  "match_score": 1.0
+ },
+ "캐럴이-들리기-시작하면-when-the-carols-start-playing": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/캐럴이_들리기_시작하면_(When_the_Carols_Start_Playing)_project/thumbnail.png",
+  "project": "캐럴이_들리기_시작하면_(When_the_Carols_Start_Playing)_project",
+  "match_score": 1.0
  }
 }

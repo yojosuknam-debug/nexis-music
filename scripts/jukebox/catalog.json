@@ -10267,6 +10267,739 @@
   "cover_url": "https://audio.yojosuknam.com/cover/euljiro-after-hours-miso-channel-album.jpg?v=97bd5e11"
  },
  {
+  "folder": "FIRST_CAROL_DAY",
+  "slug": "12월이-오는-소리-the-sound-of-december-coming",
+  "title": "12월이 오는 소리 (The Sound of December Coming)",
+  "genre": "K-R&B / Korean Winter R&B Pop (발라드 R&B·R&B 비트 연주곡·듀엣 R&B 팝)",
+  "channel": "Miso Beats (miso)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "한 장 남은 달력",
+    "file": "01_one_page_left.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\FIRST_CAROL_DAY\\tracks\\01_one_page_left.mp3",
+    "ms": 186800,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "celesta, warm electric piano, finger snaps",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": [
+       "Ooh, one page left"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:44",
+      "lines": [
+       "십일월 마지막 밤",
+       "냉장고 옆 달력 앞",
+       "얇아진 종이 한 장",
+       "손끝에 걸려 있어",
+       "올해도 금방이었지",
+       "버틴 날이 더 많았고"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:44-0:58",
+      "lines": [
+       "내일이면 넘겨질",
+       "마지막 그 한 장이",
+       "왠지 꼭 문 같아서"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:28",
+      "lines": [
+       "One page left, turn it slow",
+       "December's waiting at the door",
+       "One page left, let it go",
+       "Something warm is coming home",
+       "한 장만 넘기면 돼",
+       "One page left, oh"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:28-1:58",
+      "lines": [
+       "빨간 동그라미 하나",
+       "스물넷에 그려 넣고",
+       "아무 약속 없어도",
+       "괜히 웃음이 나네",
+       "창밖엔 아직 가을",
+       "그래도 마음은 겨울"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:58-2:12",
+      "lines": [
+       "내일이면 넘겨질",
+       "마지막 그 한 장이",
+       "왠지 꼭 문 같아서"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:12-2:42",
+      "lines": [
+       "One page left, turn it slow",
+       "December's waiting at the door",
+       "One page left, let it go",
+       "Something warm is coming home",
+       "한 장만 넘기면 돼",
+       "One page left, oh"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "soft synth bells, choir ooh pad",
+      "lines": []
+     },
+     {
+      "tag": "2:42-3:06",
+      "lines": [
+       "수고했어 올해의 나",
+       "남은 건 서른한 칸",
+       "하루씩 지워 가며",
+       "천천히 기다려 볼까"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "3:06-3:34",
+      "lines": [
+       "One page left, turn it slow",
+       "December's waiting at the door",
+       "One page left, let it go",
+       "Something warm is coming home",
+       "자 이제 넘겨 볼까",
+       "One page left, oh"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "celesta fade, finger snaps",
+      "lines": []
+     },
+     {
+      "tag": "3:34-3:46",
+      "lines": [
+       "Hello, December"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/12월이-오는-소리-the-sound-of-december-coming/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "Last Winter's Pocket",
+    "file": "02_last_winters_pocket.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\FIRST_CAROL_DAY\\tracks\\02_last_winters_pocket.mp3",
+    "ms": 156400,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells, warm electric piano",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": [
+       "Mm, yeah"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "첫 추위가 온 저녁",
+       "세탁소 비닐 벗겨",
+       "작년 코트 꺼내 입고",
+       "손을 넣어 봤는데",
+       "식어 버린 핫팩 하나",
+       "구겨진 쪽지 한 장"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "내 글씨로 적혀 있네",
+       "내년엔 덜 외롭기",
+       "그 약속 이제 기억나"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:24",
+      "lines": [
+       "Last winter's pocket",
+       "Kept a little hope inside",
+       "Last winter's pocket",
+       "Told me hold on one more time",
+       "This year, I won't be cold",
+       "This year, you won't be alone",
+       "Ooh, last winter's pocket"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:52",
+      "lines": [
+       "올해 나는 조금 달라",
+       "너라는 사람이 생겨",
+       "퇴근길 전화 너머",
+       "같이 걷자 하던 말",
+       "쪽지를 다시 펴서",
+       "그 밑에 한 줄 더 써"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:06",
+      "lines": [
+       "이번엔 너랑 둘이서",
+       "따뜻하게 보내기",
+       "주머니에 다시 넣어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:34",
+      "lines": [
+       "Last winter's pocket",
+       "Kept a little hope inside",
+       "Last winter's pocket",
+       "Told me hold on one more time",
+       "This year, I won't be cold",
+       "This year, you won't be alone",
+       "Ooh, last winter's pocket"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "half-time, finger snaps, choir ooh",
+      "lines": []
+     },
+     {
+      "tag": "2:34-2:58",
+      "lines": [
+       "식은 핫팩 버리지 않고",
+       "새 핫팩 옆에 두고",
+       "작년의 외로운 나에게",
+       "고마워 말해 줄래"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells return",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:30",
+      "lines": [
+       "Last winter's pocket",
+       "Kept a little hope inside",
+       "Last winter's pocket",
+       "Told me hold on one more time",
+       "This year, I won't be cold",
+       "This year, you won't be alone",
+       "Ooh, last winter's pocket"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:42",
+      "lines": [
+       "Pocket full of you"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/12월이-오는-소리-the-sound-of-december-coming/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "온열 의자",
+    "file": "03_warm_seat.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\FIRST_CAROL_DAY\\tracks\\03_warm_seat.mp3",
+    "ms": 222680,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "soft chimes, electric piano, city hush",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": [
+       "Ooh"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:50",
+      "lines": [
+       "밤 열한 시 정류장",
+       "버스는 아직 십 분",
+       "거리는 벌써 반짝여",
+       "나만 아직 회색이야",
+       "앉은 자리 따뜻해서",
+       "조금 놀라 버렸어"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:06",
+      "lines": [
+       "누가 켜 둔 온기일까",
+       "모르는 누군가의",
+       "작고 다정한 배려"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir ooh pad",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:38",
+      "lines": [
+       "Warm seat on a cold night",
+       "Somebody left a little light",
+       "I'm alone, but I'm alright",
+       "Warm seat, hold me tight",
+       "괜찮아 오늘 밤은",
+       "Warm seat, alright"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:38-2:10",
+      "lines": [
+       "옆자리 할머니가",
+       "사탕 하나 건네주네",
+       "좋은 꿈 꾸라는 말",
+       "낯선 사람의 인사",
+       "이 도시도 가끔은",
+       "이렇게 다정하구나"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:26",
+      "lines": [
+       "버스가 오는 불빛",
+       "일어서기 싫을 만큼",
+       "따뜻한 이 작은 자리"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir ooh pad",
+      "lines": []
+     },
+     {
+      "tag": "2:26-2:58",
+      "lines": [
+       "Warm seat on a cold night",
+       "Somebody left a little light",
+       "I'm alone, but I'm alright",
+       "Warm seat, hold me tight",
+       "괜찮아 오늘 밤은",
+       "Warm seat, alright"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "chimes, choir pad rising",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:24",
+      "lines": [
+       "크리스마스까지 열흘",
+       "혼자여도 괜찮을 걸",
+       "누군가 남긴 온기",
+       "이번엔 나도 남길게"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "emotional crescendo",
+      "lines": []
+     },
+     {
+      "tag": "3:24-3:54",
+      "lines": [
+       "Warm seat on a cold night",
+       "Somebody left a little light",
+       "I'm alone, but I'm alright",
+       "I'll leave it warm for you tonight",
+       "괜찮아 오늘 밤은",
+       "Warm seat, alright"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "chimes fade, bus doors hiss",
+      "lines": []
+     },
+     {
+      "tag": "3:54-4:06",
+      "lines": [
+       "Alright"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/12월이-오는-소리-the-sound-of-december-coming/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "Two Sleeps Left",
+    "file": "04_two_sleeps_left.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\FIRST_CAROL_DAY\\tracks\\04_two_sleeps_left.mp3",
+    "ms": 197080,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/12월이-오는-소리-the-sound-of-december-coming/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "도착하면 크리스마스",
+    "file": "05_when_you_land.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\FIRST_CAROL_DAY\\tracks\\05_when_you_land.mp3",
+    "ms": 168000,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells, finger snaps, electric piano",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": [
+       "[Female] Landing at seven",
+       "[Male] I'll be there soon"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "Female",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:40",
+      "lines": [
+       "전광판 맨 아래 줄",
+       "네 비행기 이름 하나",
+       "지연이란 글자 대신",
+       "도착이 떠오를 때",
+       "석 달 동안 화면으로",
+       "보던 얼굴 이제 진짜"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "Male",
+      "lines": []
+     },
+     {
+      "tag": "0:40-1:04",
+      "lines": [
+       "창밖으로 불빛 바다",
+       "서울이 가까워져",
+       "안전벨트 표시 켜져",
+       "심장도 같이 뛰어"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "Duet",
+      "lines": []
+     },
+     {
+      "tag": "1:04-1:18",
+      "lines": [
+       "문이 열리는 순간",
+       "우리 이브가 시작돼"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "Duet, sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "1:18-1:48",
+      "lines": [
+       "When you land, it's Christmas",
+       "When you land, I'm home",
+       "Every mile was worth it",
+       "Now I'm not alone",
+       "도착하면 크리스마스",
+       "When you land, oh"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "Female",
+      "lines": []
+     },
+     {
+      "tag": "1:48-2:12",
+      "lines": [
+       "꽁꽁 언 손 녹이려고",
+       "커피 두 잔 사 들고"
+      ]
+     },
+     {
+      "tag": "Male",
+      "lines": [
+       "짐은 작은 가방 하나",
+       "선물은 내 두 팔이야"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "Duet",
+      "lines": []
+     },
+     {
+      "tag": "2:12-2:26",
+      "lines": [
+       "문이 열리는 순간",
+       "우리 이브가 시작돼"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "Duet, sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "2:26-2:56",
+      "lines": [
+       "When you land, it's Christmas",
+       "When you land, I'm home",
+       "Every mile was worth it",
+       "Now I'm not alone",
+       "도착하면 크리스마스",
+       "When you land, oh"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "half-time, choir ooh, soft synth bells",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:20",
+      "lines": [
+       "[Male] 기다려 줘서 고마워",
+       "[Female] 와 줘서 더 고마워",
+       "[Duet] 떨어져 있던 날들",
+       "오늘 밤에 다 녹아"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "Duet, key change up, sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:52",
+      "lines": [
+       "When you land, it's Christmas",
+       "When you land, I'm home",
+       "Every mile was worth it",
+       "Now I'm not alone",
+       "도착하면 크리스마스",
+       "Merry, you're home"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells fade, soft airport chime",
+      "lines": []
+     },
+     {
+      "tag": "3:52-4:04",
+      "lines": [
+       "[Female] You're home",
+       "[Male] I'm home"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/12월이-오는-소리-the-sound-of-december-coming/05.mp3"
+   }
+  ],
+  "updated_at": 1792332377,
+  "cover_source": "",
+  "cover_match": 0.0,
+  "cover_how": "",
+  "total_ms": 930960,
+  "cover_file": "12월이-오는-소리-the-sound-of-december-coming.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/12월이-오는-소리-the-sound-of-december-coming.jpg?v=d39bf834"
+ },
+ {
   "folder": "fivehouses",
   "slug": "그-골목-다섯-집-five-houses-on-that-alley-쉬어가는-감성-음악-album",
   "title": "그 골목 다섯 집 (FIVE HOUSES ON THAT ALLEY) — 쉬어가는 감성 음악 Album",
@@ -18288,6 +19021,871 @@
   "total_ms": 1356873,
   "cover_file": "굳이-이게-명곡이야-is-this-really-a-masterpiece-gudi_song2.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/굳이-이게-명곡이야-is-this-really-a-masterpiece-gudi_song2.jpg?v=32958477"
+ },
+ {
+  "folder": "GUDI_XMAS_COUNTDOWN",
+  "slug": "크리스마스-준비위원회-the-christmas-prep-committee",
+  "title": "크리스마스 준비위원회 (The Christmas Prep Committee)",
+  "genre": "코믹/패러디 송 (스윙 빅밴드·80년대 뽕짝 디스코 트로트·폴카·두왑·60년대 모타운 소울)",
+  "channel": "굳이 송 (gudi)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "벌써 캐럴이야",
+    "file": "01_carols_already.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\GUDI_XMAS_COUNTDOWN\\tracks\\01_carols_already.mp3",
+    "ms": 228840,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells, brass jingle stab",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": [
+       "Hey hey hey 잠깐만요",
+       "아직 십일월 일일인데"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "어제 호박 치웠잖아",
+       "분장도 아직 남았어",
+       "마트 문이 열리자마자",
+       "트리가 반짝 서 있네",
+       "계산대 옆 스피커에선",
+       "방울 소리 딸랑딸랑"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "사장님 이건 반칙",
+       "달력 좀 보시라고요",
+       "두 달이나 남았는데",
+       "벌써 이러기 있기 없기"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:24",
+      "lines": [
+       "벌써 캐럴이야 오 마이 갓",
+       "Too early 너무 빨라",
+       "낙엽도 아직 안 떨어졌어",
+       "벌써 캐럴이야 왜 벌써야",
+       "Jingle 소리 멈춰 봐",
+       "근데 내 발이 왜 까딱까딱",
+       "벌써 캐럴이야 아 몰라",
+       "Merry 십일월 쏘 굿"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:52",
+      "lines": [
+       "카페에 가도 똑같아",
+       "컵에는 눈사람 그림",
+       "엘리베이터 안에서도",
+       "종소리가 날 따라와",
+       "귀를 막고 걸어봐도",
+       "머릿속엔 자동 재생"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:06",
+      "lines": [
+       "사장님 이건 반칙",
+       "달력 좀 보시라고요",
+       "두 달이나 남았는데",
+       "벌써 이러기 있기 없기"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:34",
+      "lines": [
+       "벌써 캐럴이야 오 마이 갓",
+       "Too early 너무 빨라",
+       "낙엽도 아직 안 떨어졌어",
+       "벌써 캐럴이야 왜 벌써야",
+       "Jingle 소리 멈춰 봐",
+       "근데 내 발이 왜 까딱까딱",
+       "벌써 캐럴이야 아 몰라",
+       "Merry 십일월 쏘 굿"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "brass break, swing piano solo, then hush",
+      "lines": []
+     },
+     {
+      "tag": "2:34-2:58",
+      "lines": [
+       "솔직히 말할게",
+       "싫은 척만 한 거야",
+       "작년 이십육일 아침",
+       "제일 허전했거든"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "half-step key change, full big band",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:30",
+      "lines": [
+       "벌써 캐럴이야 오 좋아",
+       "Too early 그래도 좋아",
+       "두 달 내내 들을 거야",
+       "벌써 캐럴이야 볼륨 업",
+       "Jingle 소리 더 크게",
+       "내가 먼저 흥얼흥얼",
+       "벌써 캐럴이야 아 몰라",
+       "Merry 십일월 쏘 굿"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells fade, celesta",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:42",
+      "lines": [
+       "그럼 내일 트리 사러 갈까"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/크리스마스-준비위원회-the-christmas-prep-committee/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "자정의 새로고침",
+    "file": "02_midnight_refresh.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\GUDI_XMAS_COUNTDOWN\\tracks\\02_midnight_refresh.mp3",
+    "ms": 215600,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "cheap organ riff, handbells on offbeat",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": [
+       "[Male] 자기야 준비됐어",
+       "[Female] 폰 두 개 노트북 하나"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "[Male] 열한 시 오십구 분",
+       "[Female] 와이파이 빵빵하고",
+       "[Male] 손가락 스트레칭",
+       "[Female] 심장이 쿵짝쿵짝",
+       "[Male] 이브의 창가 자리",
+       "[Female] 오늘 밤 꼭 잡아야 해"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "[Both] 오 사 삼 이 일",
+       "[Female] 땡 하면 눌러요",
+       "[Male] 망설이면 끝이야",
+       "[Both] 자 간다 간다"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:24",
+      "lines": [
+       "새로고침 새로고침",
+       "누르고 또 눌러",
+       "빙글빙글 돌아가는",
+       "동그라미 야속해라",
+       "새로고침 새로고침",
+       "대기 번호 삼천 번",
+       "Merry 마감 안 돼요",
+       "아 아 아 제발 열려라"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:52",
+      "lines": [
+       "[Female] 이 집은 벌써 매진",
+       "[Male] 저 집은 대기 오천",
+       "[Female] 결제 창 뜨자마자",
+       "[Male] 카드 번호 틀렸네",
+       "[Female] 아이고 이 사람아",
+       "[Male] 손이 덜덜 떨려서"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:06",
+      "lines": [
+       "[Both] 오 사 삼 이 일",
+       "[Female] 땡 하면 눌러요",
+       "[Male] 망설이면 끝이야",
+       "[Both] 자 간다 간다"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:34",
+      "lines": [
+       "새로고침 새로고침",
+       "누르고 또 눌러",
+       "빙글빙글 돌아가는",
+       "동그라미 야속해라",
+       "새로고침 새로고침",
+       "대기 번호 삼천 번",
+       "Merry 마감 안 돼요",
+       "아 아 아 제발 열려라"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "synth sax solo, then sudden stop",
+      "lines": []
+     },
+     {
+      "tag": "2:34-2:58",
+      "lines": [
+       "[Female] 어 잠깐 떴어 떴어",
+       "[Male] 예약 확정 진짜야",
+       "[Both] 만세 만세 우리가 해냈어",
+       "[Female] 근데 날짜가 왜 이래",
+       "[Male] 이천이십칠 년"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "half-step key change, crowd claps",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:30",
+      "lines": [
+       "새로고침 새로고침",
+       "일 년 먼저 잡았네",
+       "빙글빙글 돌고 돌아",
+       "내년 이브 예약 완료",
+       "새로고침 새로고침",
+       "올해는 편의점 케이크",
+       "Merry 마감 괜찮아",
+       "아 아 아 둘이면 됐어"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "handbells, organ fade",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:42",
+      "lines": [
+       "[Both] 내년엔 창가 자리"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/크리스마스-준비위원회-the-christmas-prep-committee/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "삼만 원의 고뇌",
+    "file": "03_thirty_thousand_won.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\GUDI_XMAS_COUNTDOWN\\tracks\\03_thirty_thousand_won.mp3",
+    "ms": 176000,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "accordion oom-pah, toy piano",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": [
+       "제비뽑기 펼쳤더니",
+       "하필이면 부장님"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:40",
+      "lines": [
+       "한도는 딱 삼만 원",
+       "넘으면 아부 같고",
+       "모자라면 성의 없지",
+       "이 선은 외줄 타기",
+       "양말은 너무 가볍고",
+       "넥타이는 너무 무거워"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-0:54",
+      "lines": [
+       "장바구니 담았다가",
+       "뺐다가 또 담았다가",
+       "점심시간 다 지나도",
+       "아직도 결정 못 해"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:54-1:22",
+      "lines": [
+       "삼만 원 삼만 원 딱 삼만 원",
+       "일 원도 넘지 마",
+       "삼만 원 삼만 원 오 삼만 원",
+       "고민은 백만 원어치",
+       "Hey 마니또 마니또",
+       "누군지 몰라도",
+       "Hey 마니또 마니또",
+       "포장지는 빨간색"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:22-1:50",
+      "lines": [
+       "머그컵은 이만 팔천",
+       "배송비가 삼천 원",
+       "초콜릿은 너무 흔해",
+       "디퓨저는 취향 타고",
+       "드디어 찾은 핸드크림",
+       "이만 구천 구백 원"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:50-2:04",
+      "lines": [
+       "백 원 남은 거스름돈",
+       "리본 하나 더 묶고",
+       "카드에는 딱 한 줄",
+       "늘 고생 많으십니다"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:04-2:32",
+      "lines": [
+       "삼만 원 삼만 원 딱 삼만 원",
+       "일 원도 넘지 마",
+       "삼만 원 삼만 원 오 삼만 원",
+       "고민은 백만 원어치",
+       "Hey 마니또 마니또",
+       "누군지 몰라도",
+       "Hey 마니또 마니또",
+       "포장지는 빨간색"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "tuba solo, then sudden hush",
+      "lines": []
+     },
+     {
+      "tag": "2:32-2:56",
+      "lines": [
+       "선물 교환 그 시간",
+       "떨리는 손 열어 보니",
+       "어 이거 내가 산 거",
+       "똑같은 핸드크림",
+       "부장님 손에도 하나"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "faster polka, group shouts",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:28",
+      "lines": [
+       "삼만 원 삼만 원 딱 삼만 원",
+       "서로 바꿔 쥔 크림",
+       "삼만 원 삼만 원 오 삼만 원",
+       "웃음은 백만 원어치",
+       "Hey 마니또 마니또",
+       "우리 손 촉촉해",
+       "Hey 마니또 마니또",
+       "내년엔 사만 원"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "accordion trill, final tuba",
+      "lines": []
+     },
+     {
+      "tag": "3:28-3:38",
+      "lines": [
+       "Hey"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/크리스마스-준비위원회-the-christmas-prep-committee/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "All I Want Is 연차",
+    "file": "04_all_i_want_is_day_off.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\GUDI_XMAS_COUNTDOWN\\tracks\\04_all_i_want_is_day_off.mp3",
+    "ms": 206400,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "music box twinkle, group ooh-wah",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": [
+       "[Bass vocal] Bom bom bom 팀장님",
+       "Oh 팀장님"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:48",
+      "lines": [
+       "시월의 어느 오후",
+       "결재함에 띄운 편지",
+       "십이월 이십사일",
+       "단 하루면 되는데",
+       "두 달 먼저 올렸어요",
+       "제일 먼저 줄 섰지요"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:02",
+      "lines": [
+       "반려만은 말아 줘",
+       "보류도 아파요",
+       "읽음 표시 떴는데",
+       "왜 아무 말 없나요"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:02-1:32",
+      "lines": [
+       "All I want is 연차",
+       "오직 그 하루만",
+       "선물도 필요 없어",
+       "승인 버튼 하나만",
+       "All I want is 연차",
+       "Oh oh 팀장님",
+       "제 마음 받아 주세요",
+       "이브의 그 하루"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:32-2:02",
+      "lines": [
+       "옆자리 김 대리도",
+       "똑같이 올렸대요",
+       "누가 먼저 받을지",
+       "사무실은 조용하고",
+       "탕비실서 눈 마주쳐",
+       "서로 웃고 말았죠"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:16",
+      "lines": [
+       "반려만은 말아 줘",
+       "보류도 아파요",
+       "읽음 표시 떴는데",
+       "왜 아무 말 없나요"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "celesta and chimes, spoken bass vocal",
+      "lines": []
+     },
+     {
+      "tag": "2:16-2:44",
+      "lines": [
+       "[Bass vocal] 띵동 알림이 왔어",
+       "떨리는 손가락",
+       "승인 그 두 글자",
+       "Oh 하늘이 열렸네",
+       "[Bass vocal] 단 이십오일엔",
+       "당직 부탁해요"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "half-step key change, full harmonies",
+      "lines": []
+     },
+     {
+      "tag": "2:44-3:20",
+      "lines": [
+       "All I got is 연차",
+       "드디어 그 하루",
+       "대신 크리스마스엔",
+       "당직 서게 됐지만",
+       "All I got is 연차",
+       "Oh oh 팀장님",
+       "사랑해요 진심이에요",
+       "이브의 그 하루"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "music box, bass vocal",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:34",
+      "lines": [
+       "Bom bom bom 감사합니다"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/크리스마스-준비위원회-the-christmas-prep-committee/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "산타 알바 면접",
+    "file": "05_santa_job_interview.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\GUDI_XMAS_COUNTDOWN\\tracks\\05_santa_job_interview.mp3",
+    "ms": 159200,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells, Motown drum fill, glockenspiel",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": [
+       "[Children's choir] 다음 분 들어오세요",
+       "[Male] 네 안녕하십니까"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "[Children's choir] 호호호 한번 해 보세요",
+       "[Male] 호 호 호 배에 힘주고",
+       "[Children's choir] 수염은 진짜인가요",
+       "[Male] 붙인 지 이틀째요",
+       "[Children's choir] 썰매 운전 경력은요",
+       "[Male] 마을버스 십 년이죠"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "[Male] 굴뚝 없는 아파트도",
+       "현관 비번 몰라도",
+       "살금살금 조용히",
+       "선물만 두고 올게"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:24",
+      "lines": [
+       "[Male] 뽑아 주세요 산타로",
+       "이번 겨울 딱 한 번",
+       "[Children's choir] 착한 아이 명단은",
+       "[Male] 전부 외워 왔어요",
+       "[Male] 뽑아 주세요 산타로",
+       "빨간 옷이 딱 맞아",
+       "[Children's choir] 합격일까 아닐까",
+       "[Male] 오늘 밤엔 알려 줘"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:52",
+      "lines": [
+       "[Children's choir] 루돌프랑 친한가요",
+       "[Male] 동물원 연간 회원",
+       "[Children's choir] 쿠키는 다 먹나요",
+       "[Male] 반은 남겨 둘게요",
+       "[Children's choir] 왜 산타가 되고 싶죠",
+       "[Male] 잠깐만 생각할게"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:06",
+      "lines": [
+       "[Male] 굴뚝 없는 아파트도",
+       "현관 비번 몰라도",
+       "살금살금 조용히",
+       "선물만 두고 올게"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:34",
+      "lines": [
+       "[Male] 뽑아 주세요 산타로",
+       "이번 겨울 딱 한 번",
+       "[Children's choir] 착한 아이 명단은",
+       "[Male] 전부 외워 왔어요",
+       "[Male] 뽑아 주세요 산타로",
+       "빨간 옷이 딱 맞아",
+       "[Children's choir] 합격일까 아닐까",
+       "[Male] 오늘 밤엔 알려 줘"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "soft gospel organ, glockenspiel",
+      "lines": []
+     },
+     {
+      "tag": "2:34-2:58",
+      "lines": [
+       "[Male] 어릴 적 이브 밤에",
+       "문틈으로 훔쳐본",
+       "빨간 모자 쓴 아빠",
+       "이번엔 내 차례라서",
+       "[Children's choir] 합격 합격 합격이에요"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, full choir and horns",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:30",
+      "lines": [
+       "[Male] 뽑혔어요 산타로",
+       "이브 밤에 첫 출근",
+       "[Children's choir] 착한 아이 명단엔",
+       "[Male] 너희 이름 다 있어",
+       "[Male] 뽑혔어요 산타로",
+       "썰매 대신 마을버스",
+       "[Children's choir] 일찍 자고 기다려",
+       "[Male] 내가 곧 갈게"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells, choir hum",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:44",
+      "lines": [
+       "[Children's choir] 호 호 호",
+       "[Male] 메리 크리스마스"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/크리스마스-준비위원회-the-christmas-prep-committee/05.mp3"
+   }
+  ],
+  "updated_at": 1792329520,
+  "cover_source": "",
+  "cover_match": 0.0,
+  "cover_how": "",
+  "total_ms": 986040,
+  "cover_file": "크리스마스-준비위원회-the-christmas-prep-committee.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/크리스마스-준비위원회-the-christmas-prep-committee.jpg?v=4555020c"
  },
  {
   "folder": "han_heung_jeong",
@@ -73484,6 +75082,752 @@
   "total_ms": 1837792,
   "cover_file": "굳이-그렇게까지-why-bother-but-i-do.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/굳이-그렇게까지-why-bother-but-i-do.jpg?v=aa3a34aa"
+ },
+ {
+  "folder": "WINTER_RADIO_CAROLS",
+  "slug": "캐럴이-들리기-시작하면-when-the-carols-start-playing",
+  "title": "캐럴이 들리기 시작하면 (When the Carols Start Playing)",
+  "genre": "90s–00s 한국 '겨울 스페셜 앨범' 시대 정서 × 대비 장르 (보사노바 · 뉴잭스윙 · 빅밴드 스윙 · 재즈 왈츠 · 챔버 포크)",
+  "channel": "쉬어가는 감성 음악 (gamseong)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "가게 앞 스피커",
+    "file": "01_shop_front_speaker.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\WINTER_RADIO_CAROLS\\tracks\\01_shop_front_speaker.mp3",
+    "ms": 242000,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar, celesta twinkle, distant handbells",
+      "lines": []
+     },
+     {
+      "tag": "filtered like a small shop speaker",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:46",
+      "lines": [
+       "퇴근길 모퉁이 돌다",
+       "레코드 가게 앞에서",
+       "낡은 스피커 하나가",
+       "목을 가다듬더니",
+       "작년 그 노랫결로",
+       "골목을 흔들어 놓네"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:46-1:02",
+      "lines": [
+       "달력은 한 장 남고",
+       "코트 깃은 얇은데",
+       "발끝이 먼저 알아",
+       "그 계절이 오는 걸"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "glockenspiel sparkle, soft shaker",
+      "lines": []
+     },
+     {
+      "tag": "1:02-1:34",
+      "lines": [
+       "들려와 들려와 저 종소리",
+       "가게 앞 작은 스피커",
+       "올해도 거기 있었구나",
+       "나보다 먼저 와 있던",
+       "Here it comes again",
+       "천천히 걸어도 돼",
+       "크리스마스 오는 쪽으로",
+       "반 박자 느리게 가요"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:34-2:02",
+      "lines": [
+       "진열대 맨 앞줄에는",
+       "빨간 띠 두른 음반들",
+       "주인은 계산대 너머",
+       "장갑 낀 채 졸고",
+       "유리문에 입김 불어",
+       "이름 하나 써 볼까"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:16",
+      "lines": [
+       "누구랑 들을지는",
+       "아직 정하지 못해도",
+       "이 노래가 먼저 와",
+       "자리를 맡아 두네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:16-2:48",
+      "lines": [
+       "들려와 들려와 저 종소리",
+       "가게 앞 작은 스피커",
+       "올해도 거기 있었구나",
+       "나보다 먼저 와 있던",
+       "Here it comes again",
+       "천천히 걸어도 돼",
+       "크리스마스 오는 쪽으로",
+       "반 박자 느리게 가요"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar solo, celesta answers",
+      "lines": []
+     },
+     {
+      "tag": "2:48-3:10",
+      "lines": [
+       "셔터가 반쯤 내려도",
+       "노래는 길로 새어 나와",
+       "내 등을 살짝 밀어",
+       "December, slow down"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, warm backing hums",
+      "lines": []
+     },
+     {
+      "tag": "3:10-3:34",
+      "lines": [
+       "들려와 들려와 저 종소리",
+       "가게 앞 작은 스피커",
+       "Here it comes again",
+       "크리스마스 오는 쪽으로",
+       "반 박자 느리게 가요"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "handbells fade, last celesta note",
+      "lines": []
+     },
+     {
+      "tag": "3:34-3:44",
+      "lines": [
+       "아직 한 달 남았네"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/캐럴이-들리기-시작하면-when-the-carols-start-playing/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "Play When Opened",
+    "file": "02_play_when_opened.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\WINTER_RADIO_CAROLS\\tracks\\02_play_when_opened.mp3",
+    "ms": 167560,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "tinny greeting-card chime, then swingbeat drops in",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": [
+       "Play when opened",
+       "Play when opened, yeah"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "학교 앞 문구점 안쪽",
+       "카드 벽이 반짝여",
+       "펼치면 노래하는",
+       "얇은 칩이 숨은 거",
+       "천 원짜리 몇 장 들고",
+       "한 시간째 서성대"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "열었다 닫았다",
+       "주인 눈치 보면서",
+       "제일 맑은 소리로",
+       "너한테 골라 줄게"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells, group chant",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:24",
+      "lines": [
+       "Play when opened 열어 봐",
+       "네 손끝에서 울리게",
+       "Play when opened 살짝만",
+       "종소리 쏟아지게",
+       "삐뚤빼뚤 내 글씨도",
+       "노래 덕에 괜찮아",
+       "Play when opened, oh",
+       "크리스마스 미리 배달"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:52",
+      "lines": [
+       "반짝이 풀을 짜다가",
+       "책상 위가 은하수",
+       "첫 줄만 열 번 고쳐",
+       "결국 쓴 건 안녕",
+       "나머지 할 말들은",
+       "칩 속 노래에 맡겨"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:06",
+      "lines": [
+       "열었다 닫았다",
+       "건전지 닳을까 봐",
+       "한 번만 더 듣고",
+       "봉투를 꼭 붙여"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:34",
+      "lines": [
+       "Play when opened 열어 봐",
+       "네 손끝에서 울리게",
+       "Play when opened 살짝만",
+       "종소리 쏟아지게",
+       "삐뚤빼뚤 내 글씨도",
+       "노래 덕에 괜찮아",
+       "Play when opened, oh",
+       "크리스마스 미리 배달"
+      ]
+     },
+     {
+      "tag": "Rap",
+      "lines": []
+     },
+     {
+      "tag": "spoken-flow rap, group chant answers",
+      "lines": []
+     },
+     {
+      "tag": "2:34-3:00",
+      "lines": [
+       "이십사 일 전엔 꼭",
+       "네 책상 서랍 속에",
+       "몰래 넣고 돌아서",
+       "심장은 쿵짝쿵짝",
+       "Open it, open it",
+       "넌 웃을까 놀랄까",
+       "Open it, open it",
+       "그 얼굴이 내 선물"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "orchestra hit, full harmony stack",
+      "lines": []
+     },
+     {
+      "tag": "3:00-3:28",
+      "lines": [
+       "Play when opened 열어 봐",
+       "네 손끝에서 울리게",
+       "Play when opened 살짝만",
+       "종소리 쏟아지게",
+       "Play when opened, oh",
+       "크리스마스 미리 배달"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "greeting-card chime slows down like a weak battery",
+      "lines": []
+     },
+     {
+      "tag": "3:28-3:36",
+      "lines": [
+       "Play when opened"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/캐럴이-들리기-시작하면-when-the-carols-start-playing/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "줄 서는 밤",
+    "file": "03_night_in_line.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\WINTER_RADIO_CAROLS\\tracks\\03_night_in_line.mp3",
+    "ms": 182760,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "big-band brass swell, sleigh bells on ride, finger snaps",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "Female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "매표소 셔터 앞에",
+       "은박 돗자리 깔고",
+       "손등에 적은 번호",
+       "백열여섯 번째",
+       "첫차보다 일찍 와",
+       "별보다 늦게 자지"
+      ]
+     },
+     {
+      "tag": "Male vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:42-1:06",
+      "lines": [
+       "옆자리 낯선 너는",
+       "보온병을 열더니",
+       "종이컵 두 개 꺼내",
+       "한 잔 먼저 내밀어",
+       "고맙단 말 대신에",
+       "귤 하나 건네주고"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "Duet",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:20",
+      "lines": [
+       "아침이 오면 열려",
+       "그 창구 작은 구멍",
+       "그때까진 우리",
+       "같은 줄의 식구야"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "Duet, brass shout",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:50",
+      "lines": [
+       "Stand in line, stand in line",
+       "줄 서는 밤이 좋아",
+       "입김으로 박자 세며",
+       "동그랗게 몸을 말아",
+       "Stand in line, stand in line",
+       "크리스마스 그날 밤",
+       "같은 노래 아래서",
+       "우리 다시 만나"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "call and response",
+      "lines": []
+     },
+     {
+      "tag": "1:50-2:18",
+      "lines": [
+       "[Male vocal] 새벽 세 시 골목에",
+       "[Female vocal] 누가 캐럴 흥얼대",
+       "[Male vocal] 맨 끝줄까지 번져",
+       "[Female vocal] 백 명이 합창하네",
+       "[Male vocal] 경비 아저씨마저",
+       "[Female vocal] 발을 까딱이는 걸"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "Duet",
+      "lines": []
+     },
+     {
+      "tag": "2:18-2:32",
+      "lines": [
+       "아침이 오면 열려",
+       "그 창구 작은 구멍",
+       "그때까진 우리",
+       "같은 줄의 식구야"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "Duet, brass shout",
+      "lines": []
+     },
+     {
+      "tag": "2:32-3:02",
+      "lines": [
+       "Stand in line, stand in line",
+       "줄 서는 밤이 좋아",
+       "입김으로 박자 세며",
+       "동그랗게 몸을 말아",
+       "Stand in line, stand in line",
+       "크리스마스 그날 밤",
+       "같은 노래 아래서",
+       "우리 다시 만나"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "brass shout chorus, R&B ad-libs, tubular chimes",
+      "lines": []
+     },
+     {
+      "tag": "3:02-3:24",
+      "lines": [
+       "셔터가 올라가",
+       "누군가 먼저 외쳐",
+       "Two tickets in my hand",
+       "너도 한 장 받았니"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "Duet, key change up",
+      "lines": []
+     },
+     {
+      "tag": "3:24-3:52",
+      "lines": [
+       "Stand in line, stand in line",
+       "줄 서는 밤이 좋아",
+       "크리스마스 그날 밤",
+       "같은 노래 아래서",
+       "우리 다시 만나"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "brass button ending",
+      "lines": []
+     },
+     {
+      "tag": "3:52-3:58",
+      "lines": [
+       "그날 봐, 꼭"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/캐럴이-들리기-시작하면-when-the-carols-start-playing/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "쇼윈도 왈츠",
+    "file": "04_shop_window_waltz.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\WINTER_RADIO_CAROLS\\tracks\\04_shop_window_waltz.mp3",
+    "ms": 188000,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/캐럴이-들리기-시작하면-when-the-carols-start-playing/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "케이크 상자 끈",
+    "file": "05_cake_box_string.mp3",
+    "src": "d:\\YH\\APP\\youtube-playlist\\suno-playlist-video\\input\\WINTER_RADIO_CAROLS\\tracks\\05_cake_box_string.mp3",
+    "ms": 200920,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "fingerpicked guitar, string quartet, soft tubular chime",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:50",
+      "lines": [
+       "이브라고 반차 내고",
+       "제과점 줄에 섰지",
+       "접힌 예약 번호표",
+       "주머니 속 꼭 쥐고",
+       "흰 상자에 빨간 끈",
+       "열십자로 묶어 줘"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "brushed snare enters",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:20",
+      "lines": [
+       "버스는 꽉 찼는데",
+       "상자만은 무릎 위",
+       "급정거 한 번마다",
+       "두 팔로 감싸 안아",
+       "옆자리 할머니가",
+       "웃으며 자릴 넓혀"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:36",
+      "lines": [
+       "끈 자국 붉은 손가락",
+       "하나도 안 아파",
+       "집까지 정거장 셋",
+       "천천히 가도 될걸"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir pad swells, tubular chimes",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:10",
+      "lines": [
+       "조심조심 가자",
+       "크림 장식 안 무너지게",
+       "창마다 불 켜진",
+       "저 동네가 다 기다려",
+       "Easy road, steady hands",
+       "오늘은 이브니까",
+       "흔들려도 괜찮아",
+       "이 무게가 좋아"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:40",
+      "lines": [
+       "현관 앞에 다다르면",
+       "작은 발소리 둘",
+       "문 열리기 전부터",
+       "아빠 왔어 소리쳐",
+       "끈을 풀 사람은",
+       "가위 들고 줄 서고"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "strings rise, guitar drops out",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:06",
+      "lines": [
+       "내일 아침 상자엔",
+       "부스러기만 남겠지",
+       "그래도 오늘 밤",
+       "나는 배달부였어"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, full choir pad",
+      "lines": []
+     },
+     {
+      "tag": "3:06-3:46",
+      "lines": [
+       "조심조심 가자",
+       "크림 장식 안 무너지게",
+       "창마다 불 켜진",
+       "저 동네가 다 기다려",
+       "Easy road, steady hands",
+       "오늘은 이브니까",
+       "흔들려도 괜찮아",
+       "이 무게가 좋아"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "chimes, string harmonics fade",
+      "lines": []
+     },
+     {
+      "tag": "3:46-4:06",
+      "lines": [
+       "빨간 끈 풀리는 소리",
+       "메리 크리스마스"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/캐럴이-들리기-시작하면-when-the-carols-start-playing/05.mp3"
+   }
+  ],
+  "updated_at": 1792331117,
+  "cover_source": "",
+  "cover_match": 0.0,
+  "cover_how": "",
+  "total_ms": 981240,
+  "cover_file": "캐럴이-들리기-시작하면-when-the-carols-start-playing.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/캐럴이-들리기-시작하면-when-the-carols-start-playing.jpg?v=cac22770"
  },
  {
   "folder": "YAHAENG_NIGHT_PROCESSION",
