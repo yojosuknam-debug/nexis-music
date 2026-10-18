@@ -127,10 +127,15 @@ def absolute_site_url(path_or_url: str) -> str:
 
 
 # ── 페이지 ────────────────────────────────────────────────────────────────
-def album_page(a: dict, accent: tuple[int, int, int]) -> str:
+def album_page(a: dict, accent: tuple[int, int, int], yt=None) -> str:
     # 음원이 없는 트랙은 목록에 넣지 않는다 — 눌러도 안 나는 곡은 고장으로 보인다
     disp = clean_album_title(a["title"])
     playable = [t for t in a["tracks"] if t.get("url")]
+    # 곡별 유튜브 링크 — radio_list 와 같은 매칭(yt_match). 짝이 없으면 앨범 영상, 그것도 없으면 숨김
+    video, links = "", {}
+    if yt is not None and playable:
+        video, links = yt.album([{"n": int(t["n"]), "title": t["title"], "ms": int(t["ms"])}
+                                 for t in playable])
     sung = sum(1 for t in playable if t.get("lyrics"))
     total_ms = sum(t["ms"] for t in playable)
     runtime = f"{round(total_ms/60000)}분"
@@ -140,9 +145,11 @@ def album_page(a: dict, accent: tuple[int, int, int]) -> str:
     data = {
         "title": disp,
         "cover": cover,
+        "video": video,
         "tracks": [{"n": t["n"], "title": t["title"], "ms": t["ms"],
                     "url": t["url"], "lyrics": t.get("lyrics", []),
-                    "instrumental": t.get("instrumental", False)}
+                    "instrumental": t.get("instrumental", False),
+                    "youtube": links.get(int(t["n"]), "")}
                    for t in playable],
     }
     r, g, b = accent
@@ -191,6 +198,10 @@ def album_page(a: dict, accent: tuple[int, int, int]) -> str:
         <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
       </div>
     </div>
+    <a class="yt" id="yt" href="#" target="_blank" rel="noopener" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg>
+      <span id="ytText">YouTube에서 이 곡 듣기</span>
+    </a>
 
     <div class="seg">
       <button id="tabList" aria-selected="true">수록곡</button>
@@ -382,11 +393,13 @@ def main() -> int:
     (OUT / "jukebox.css").write_text(CSS, encoding="utf-8")
     (OUT / "jukebox.js").write_text(JS, encoding="utf-8")
 
+    from yt_match import Links
+    yt = Links()
     accents = {}
     for a in ready:
         cf = COVERS / a.get("cover_file", "")
         accents[a["slug"]] = accent_of(cf) if cf.exists() else (143, 179, 164)
-        (OUT / f"{a['slug']}.html").write_text(album_page(a, accents[a["slug"]]), encoding="utf-8")
+        (OUT / f"{a['slug']}.html").write_text(album_page(a, accents[a["slug"]], yt), encoding="utf-8")
     (OUT / "index.html").write_text(index_page(ready, accents), encoding="utf-8")
     update_root_album_link(len(ready))
     (OUT / "radio.json").write_text(json.dumps(radio_list(ready), ensure_ascii=False),
@@ -561,6 +574,14 @@ h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;
 .fill{position:absolute;inset:0 auto 0 0;width:0%;border-radius:99px;background:var(--accent)}
 .clock{display:flex;justify-content:space-between;font-size:11px;margin-top:7px;
   color:rgba(255,255,255,.52);font-variant-numeric:tabular-nums}
+.yt{display:flex;width:fit-content;align-items:center;gap:8px;margin:-6px 0 22px;padding:7px 14px 7px 11px;
+  border-radius:99px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+  color:rgba(255,255,255,.86);font-size:12.5px;text-decoration:none;max-width:100%;
+  transition:background .16s,border-color .16s}
+.yt:hover{background:rgba(255,255,255,.14);border-color:rgba(var(--accent-rgb),.55)}
+.yt svg{width:18px;height:18px;fill:#ff3d3d;flex:0 0 auto}
+.yt span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.yt[hidden]{display:none}
 
 .seg{display:inline-flex;gap:2px;background:rgba(255,255,255,.10);padding:3px;
   border-radius:99px;margin-bottom:14px}
@@ -695,6 +716,16 @@ JS = r"""
       row.setAttribute("aria-current", Number(row.dataset.i) === i ? "true" : "false");
     });
     $("now").textContent = t.title;
+    // 이 곡의 유튜브 — 곡 링크가 없으면 앨범 영상, 둘 다 없으면 숨김
+    var yt = $("yt");
+    if (yt) {
+      var href = t.youtube || A.video || "";
+      yt.hidden = !href;
+      if (href) {
+        yt.href = href;
+        $("ytText").textContent = t.youtube ? "YouTube에서 이 곡 듣기" : "YouTube에서 앨범 영상 보기";
+      }
+    }
     $("dur").textContent = mmss(t.ms / 1000);
     $("cur").textContent = "0:00";
     $("fill").style.width = "0%";
@@ -747,6 +778,10 @@ JS = r"""
     $("tabList").setAttribute("aria-selected", which === "list" ? "true" : "false");
     $("tabLyr").setAttribute("aria-selected", which === "lyrics" ? "true" : "false");
   }
+  // 유튜브로 넘어가면 여기 재생은 멈춘다(두 소리가 겹치지 않게)
+  if ($("yt")) $("yt").addEventListener("click", function () {
+    if (!audio.paused) { audio.pause(); setPlaying(false); }
+  });
   $("tabList").addEventListener("click", function () { pane("list"); });
   $("tabLyr").addEventListener("click", function () { pane("lyrics"); });
 

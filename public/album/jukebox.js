@@ -59,6 +59,16 @@
       row.setAttribute("aria-current", Number(row.dataset.i) === i ? "true" : "false");
     });
     $("now").textContent = t.title;
+    // 이 곡의 유튜브 — 곡 링크가 없으면 앨범 영상, 둘 다 없으면 숨김
+    var yt = $("yt");
+    if (yt) {
+      var href = t.youtube || A.video || "";
+      yt.hidden = !href;
+      if (href) {
+        yt.href = href;
+        $("ytText").textContent = t.youtube ? "YouTube에서 이 곡 듣기" : "YouTube에서 앨범 영상 보기";
+      }
+    }
     $("dur").textContent = mmss(t.ms / 1000);
     $("cur").textContent = "0:00";
     $("fill").style.width = "0%";
@@ -111,6 +121,10 @@
     $("tabList").setAttribute("aria-selected", which === "list" ? "true" : "false");
     $("tabLyr").setAttribute("aria-selected", which === "lyrics" ? "true" : "false");
   }
+  // 유튜브로 넘어가면 여기 재생은 멈춘다(두 소리가 겹치지 않게)
+  if ($("yt")) $("yt").addEventListener("click", function () {
+    if (!audio.paused) { audio.pause(); setPlaying(false); }
+  });
   $("tabList").addEventListener("click", function () { pane("list"); });
   $("tabLyr").addEventListener("click", function () { pane("lyrics"); });
 
