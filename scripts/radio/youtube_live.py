@@ -22,10 +22,11 @@ import subprocess
 import sys
 import threading
 import time
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 try:
     import segno          # 곡별 원곡 영상 QR (없으면 QR 없이 그린다)
@@ -169,17 +170,136 @@ def cover(url: str) -> Image.Image:
     return _cover_cache[url]
 
 
-def render(now: dict, nxt: dict | None) -> None:
+# ───────── 가사 (곡이 바뀔 때마다 앨범 페이지의 window.ALBUM 에서 읽는다) ─────────
+_album_cache: dict[str, dict] = {}
+NOTE = re.compile(r"^[(\[].*[)\]]$")              # 줄 전체가 (연주 메모)·[구간 표시]
+LEAD = re.compile(r"^\s*(?:\[[^\]]*\]|\([^)]*\))\s*")   # 줄 앞 [Male]·(Heung) 같은 표시
+
+
+def album_data(page: str) -> dict:
+    if page and page not in _album_cache:
+        try:
+            html = fetch(urllib.parse.quote(page, safe=":/?=&%#")).decode("utf-8")
+            m = re.search(r"window\.ALBUM = (\{.*?\});</script>", html)
+            if len(_album_cache) > 8:
+                _album_cache.clear()
+            _album_cache[page] = json.loads(m.group(1)) if m else {}
+        except Exception as e:  # noqa: BLE001  — 실패는 저장 안 함(다음 곡 때 다시)
+            log(f"[경고] 가사 받기 실패({type(e).__name__})")
+            return {}
+    return _album_cache.get(page, {})
+
+
+def lyric_lines(now: dict) -> list[str]:
+    """부르는 가사 줄만. 구간 사이는 '' 한 줄. 연주 메모만 있는 곡·4줄 미만은 [] (= 가사 없는 화면)."""
+    t = next((t for t in album_data(now.get("page", "")).get("tracks", [])
+              if str(t.get("n")) == str(now.get("n"))), None)
+    if not t or t.get("instrumental"):
+        return []
+    out: list[str] = []
+    for sec in t.get("lyrics") or []:
+        got = []
+        for line in sec.get("lines") or []:
+            line = clean(line)
+            if NOTE.match(line):
+                continue
+            while LEAD.match(line) and LEAD.sub("", line, count=1) != line:
+                line = LEAD.sub("", line, count=1)
+            if line:
+                got.append(line)
+        if got:
+            out += ([""] if out else []) + got
+    return out if sum(1 for x in out if x) >= 4 else []
+
+
+PANEL = (90, 140, 530, 580)     # 큰 표지 자리 → 가사 칸
+
+
+class Lyrics:
+    """가사 전체를 긴 띠(글자 마스크)로 한 번 그려 두고, 곡 진행에 맞춰 창만 내린다.
+    전주(약 8%, 최대 15초) 동안은 첫 줄에 머물고, 끝(약 10%, 최대 20초)엔 마지막 줄에서 멈춘다."""
+    LH, GAP = 36, 16
+
+    def __init__(self, lines: list[str], ms: int) -> None:
+        x0, y0, x1, y1 = PANEL
+        self.wx, self.wy = x0 + 30, y0 + 58
+        self.ww, self.wh = (x1 - 30) - self.wx, (y1 - 18) - self.wy
+        f = font(FONT_R, 23)
+        d = ImageDraw.Draw(Image.new("L", (1, 1)))
+        rows: list[tuple[str, int] | None] = []     # (글, 들여쓰기) — 넘어간 줄은 조금 들여 쓴다
+        for line in lines:
+            if not line:
+                rows.append(None)
+                continue
+            if d.textlength(line, font=f) <= self.ww:
+                rows.append((line, 0))
+            else:
+                parts = wrap(d, line, f, self.ww - 18, 3)
+                rows += [(parts[0], 0)] + [(part, 18) for part in parts[1:]]
+        self.focal = int(self.wh * 0.40)
+        hgt = sum(self.GAP if r is None else self.LH for r in rows)
+        self.strip = Image.new("L", (self.ww, hgt + 2 * self.wh), 0)
+        sd, y = ImageDraw.Draw(self.strip), self.wh
+        for r in rows:
+            if r is None:
+                y += self.GAP
+                continue
+            sd.text((r[1], y + 6), r[0], font=f, fill=255)
+            y += self.LH
+        self.first, self.last = self.LH // 2, max(self.LH // 2, hgt - self.LH // 2)
+        self.ms = max(ms, 30000)
+        # 가운데(지금 읽는 높이) 밝게, 위·아래로 갈수록 흐리게
+        self.fade = Image.new("L", (self.ww, self.wh))
+        fd = ImageDraw.Draw(self.fade)
+        for yy in range(self.wh):
+            dist = abs(yy - self.focal) / max(self.focal, self.wh - self.focal)
+            a = 255 if dist < 0.12 else int(255 - (dist - 0.12) / 0.88 * 200)
+            edge = min(yy, self.wh - 1 - yy)
+            a = int(a * min(1.0, edge / 56))
+            fd.line((0, yy, self.ww, yy), fill=max(0, a))
+
+    def frame(self, base: Image.Image, elapsed_ms: float) -> Image.Image:
+        t0 = min(15000, self.ms * 0.08)
+        t1 = self.ms - min(20000, self.ms * 0.10)
+        p = min(1.0, max(0.0, (elapsed_ms - t0) / max(1.0, t1 - t0)))
+        o = self.first + p * (self.last - self.first)
+        top = int(self.wh + o - self.focal)
+        win = self.strip.crop((0, top, self.ww, top + self.wh))
+        img = base.copy()
+        img.paste((244, 246, 250), (self.wx, self.wy, self.wx + self.ww, self.wy + self.wh),
+                  ImageChops.multiply(win, self.fade))
+        return img
+
+
+def save(img: Image.Image) -> None:
+    tmp = OUT / "frame.tmp.jpg"
+    img.save(tmp, quality=88)
+    os.replace(tmp, FRAME)
+
+
+def render(now: dict, nxt: dict | None) -> tuple[Image.Image, Lyrics | None]:
+    """곡 하나의 바탕 화면을 그린다. 가사가 있으면 표지 자리를 가사 칸으로 비워 두고 Lyrics 를 돌려준다."""
     c = cover(now.get("cover", ""))
+    lines = lyric_lines(now)
+    lyr = Lyrics(lines, int(now.get("ms") or 0)) if lines else None
     bg = c.resize((W, W)).crop((0, (W - H) // 2, W, (W + H) // 2)).filter(ImageFilter.GaussianBlur(40))
     color, label, tagline = THEMES.get(now.get("station", ""), DEFAULT_THEME)
     bg = Image.blend(bg, Image.new("RGB", (W, H), (10, 12, 16)), 0.55)
     bg = Image.blend(bg, Image.new("RGB", (W, H), tuple(c // 3 for c in color)), 0.28)   # 채널 색으로 물들임
     d = ImageDraw.Draw(bg)
-    art = c.resize((440, 440), Image.LANCZOS)
-    m = Image.new("L", art.size, 0)
-    ImageDraw.Draw(m).rounded_rectangle((0, 0, 439, 439), radius=26, fill=255)
-    bg.paste(art, (90, 140), m)
+    x0, y0, x1, y1 = PANEL
+    if lyr:
+        # 가사 칸: 어두운 반투명 판 + 위에 '가사' 표시
+        m = Image.new("L", (x1 - x0, y1 - y0), 0)
+        ImageDraw.Draw(m).rounded_rectangle((0, 0, x1 - x0 - 1, y1 - y0 - 1), radius=26, fill=150)
+        bg.paste((8, 10, 14), (x0, y0, x1, y1), m)
+        d.text((x0 + 30, y0 + 20), "가사", font=font(FONT_B, 18), fill=color)
+        d.text((x0 + 76, y0 + 21), "LYRICS", font=font(FONT_R, 16), fill=(130, 140, 152))
+    else:
+        art = c.resize((x1 - x0, y1 - y0), Image.LANCZOS)
+        m = Image.new("L", art.size, 0)
+        ImageDraw.Draw(m).rounded_rectangle((0, 0, art.width - 1, art.height - 1), radius=26, fill=255)
+        bg.paste(art, (x0, y0), m)
     x, tw = 580, W - 580 - 80
     # 맨 위(표지 윗선 140 에 맞춤): LIVE 줄 → 채널 배지 + 한 줄 소개
     d.ellipse((x, 148, x + 14, 162), fill=(255, 77, 94))
@@ -197,8 +317,9 @@ def render(now: dict, nxt: dict | None) -> None:
     ftt, fsub, falb = font(FONT_B, 48), font(FONT_R, 28), font(FONT_R, 22)
     tl = wrap(d, main, ftt, tw, 2)
     sl = wrap(d, sub, fsub, tw, 1) if sub else []
-    al = wrap(d, album, falb, tw - 46, 1) if album else []
-    block = len(tl) * 60 + (10 + len(sl) * 38 if sl else 0) + (22 + 30 if al else 0)
+    th = 64 if lyr else 0                        # 가사 화면이면 앨범 줄에 작은 표지
+    al = wrap(d, album, falb, tw - (th + 16 if th else 46), 1) if album else []
+    block = len(tl) * 60 + (10 + len(sl) * 38 if sl else 0) + ((22 + (th or 30)) if al or th else 0)
     y = 236 + max(0, (480 - 236 - block) // 2)
     for line in tl:
         d.text((x, y), line, font=ftt, fill=(255, 255, 255))
@@ -208,7 +329,16 @@ def render(now: dict, nxt: dict | None) -> None:
         for line in sl:
             d.text((x, y), line, font=fsub, fill=(206, 212, 220))
             y += 38
-    if al:
+    if th:
+        y += 22
+        art = c.resize((th, th), Image.LANCZOS)
+        m = Image.new("L", art.size, 0)
+        ImageDraw.Draw(m).rounded_rectangle((0, 0, th - 1, th - 1), radius=10, fill=255)
+        bg.paste(art, (x, y), m)
+        d.text((x + th + 16, y + 6), "앨범", font=font(FONT_B, 18), fill=color)
+        if al:
+            d.text((x + th + 16, y + 32), al[0], font=falb, fill=(170, 178, 188))
+    elif al:
         y += 22
         d.text((x, y + 1), "앨범", font=font(FONT_B, 18), fill=color)
         d.text((x + 46, y), al[0], font=falb, fill=(170, 178, 188))
@@ -236,9 +366,7 @@ def render(now: dict, nxt: dict | None) -> None:
                 d.text((nx, 550), wrap(d, n_sub, fns, x + nw - nx, 1)[0], font=fns, fill=(150, 160, 172))
     d.text((90, 630), "music.yojosuknam.com/radio  ·  곡별 유튜브 링크·가사는 방송 페이지에서",
            font=font(FONT_R, 24), fill=(200, 208, 214))
-    tmp = OUT / "frame.tmp.jpg"
-    bg.save(tmp, quality=90)
-    os.replace(tmp, FRAME)
+    return bg, lyr
 
 
 class Schedule(threading.Thread):
@@ -248,6 +376,9 @@ class Schedule(threading.Thread):
         super().__init__(daemon=True)
         self.items: list[dict] = []
         self.shown = ""
+        self.base: Image.Image | None = None
+        self.lyr: Lyrics | None = None
+        self.at = 0
 
     def run(self) -> None:
         last_poll = 0.0
@@ -270,12 +401,22 @@ class Schedule(threading.Thread):
                 key = f"{self.items[i]['at']}"
                 if key != self.shown:
                     try:
-                        render(self.items[i], self.items[i + 1] if i + 1 < len(self.items) else None)
+                        self.base, self.lyr = render(self.items[i], self.items[i + 1] if i + 1 < len(self.items) else None)
+                        self.at = self.items[i]["at"]
+                        if not self.lyr:
+                            save(self.base)
                         self.shown = key
-                        log(f"화면 ▶ {self.items[i]['title']}")
+                        log(f"화면 ▶ {self.items[i]['title']}" + (" (가사)" if self.lyr else ""))
                     except Exception as e:  # noqa: BLE001
+                        self.lyr = None
                         log(f"[경고] 화면 그리기 실패({type(e).__name__})")
-            stop.wait(1)
+                if self.lyr:
+                    try:
+                        save(self.lyr.frame(self.base, heard - self.at))
+                    except Exception as e:  # noqa: BLE001
+                        self.lyr = None
+                        log(f"[경고] 가사 그리기 실패({type(e).__name__})")
+            stop.wait(1 / FPS if self.lyr else 1)
 
 
 def ffmpeg_cmd() -> list[str]:
@@ -284,7 +425,7 @@ def ffmpeg_cmd() -> list[str]:
             "-reconnect", "1", "-reconnect_streamed", "1", "-reconnect_delay_max", "10",
             "-i", AUDIO,
             "-map", "0:v", "-map", "1:a",
-            "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage", "-pix_fmt", "yuv420p",
+            "-c:v", "libx264", "-preset", "veryfast", "-pix_fmt", "yuv420p",
             "-r", str(FPS), "-g", str(FPS * 2), "-b:v", "1500k", "-maxrate", "1500k", "-bufsize", "3000k",
             "-c:a", "aac", "-b:a", "128k", "-ar", "44100",
             "-f", "flv", f"{RTMP}/{KEY}"]
