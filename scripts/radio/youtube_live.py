@@ -379,6 +379,7 @@ class Schedule(threading.Thread):
         self.base: Image.Image | None = None
         self.lyr: Lyrics | None = None
         self.at = 0
+        self.fails = 0
 
     def run(self) -> None:
         last_poll = 0.0
@@ -413,9 +414,14 @@ class Schedule(threading.Thread):
                 if self.lyr:
                     try:
                         save(self.lyr.frame(self.base, heard - self.at))
-                    except Exception as e:  # noqa: BLE001
-                        self.lyr = None
-                        log(f"[경고] 가사 그리기 실패({type(e).__name__})")
+                        self.fails = 0
+                    except Exception as e:  # noqa: BLE001  — 한두 번은 건너뛰고, 계속 실패하면 표지 화면으로
+                        self.fails += 1
+                        if self.fails == 1:
+                            log(f"[경고] 가사 그리기 실패({type(e).__name__})")
+                        if self.fails >= 50:
+                            self.lyr = None
+                            log("[경고] 가사 그리기 계속 실패 — 이 곡은 가사 칸 멈춘 채로")
             stop.wait(1 / FPS if self.lyr else 1)
 
 
