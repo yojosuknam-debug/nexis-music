@@ -104,6 +104,22 @@ def wrap(d: ImageDraw.ImageDraw, text: str, f, width: int, lines: int) -> list[s
     return out or [""]
 
 
+def clean(text: str) -> str:
+    """나눔고딕에 없는 이모지(🎹 ⭐ 등)를 뺀다 — 그대로 그리면 ☒ 로 나온다."""
+    keep = (ch for ch in text if not (ord(ch) >= 0x1F000 or 0x2600 <= ord(ch) <= 0x27BF
+                                       or 0x2B00 <= ord(ch) <= 0x2BFF or ch in "️‍"))
+    return " ".join("".join(keep).split())
+
+
+def split_title(title: str) -> tuple[str, str]:
+    """'회전목마의 꿈 (Carousel Dream)' → ('회전목마의 꿈', 'Carousel Dream'). 괄호가 없으면 그대로."""
+    if title.endswith(")") and " (" in title:
+        main, sub = title.rsplit(" (", 1)
+        if main.strip():
+            return main.strip(), sub[:-1].strip()
+    return title, ""
+
+
 _cover_cache: dict[str, Image.Image] = {}
 
 
@@ -129,28 +145,50 @@ def render(now: dict, nxt: dict | None) -> None:
     ImageDraw.Draw(m).rounded_rectangle((0, 0, 439, 439), radius=26, fill=255)
     bg.paste(art, (90, 140), m)
     x, tw = 580, W - 580 - 80
-    d.ellipse((x, 150, x + 16, 166), fill=(255, 77, 94))
-    d.text((x + 28, 144), "LIVE · 24H   yojosuknam Radio", font=font(FONT_B, 24), fill=(255, 255, 255))
-    # 채널 배지: 색 점 + 채널 이름, 아래 한 줄 소개
-    fb, ft = font(FONT_B, 26), font(FONT_R, 22)
-    bw_ = int(d.textlength(label, font=fb)) + 64
-    d.rounded_rectangle((x, 188, x + bw_, 232), radius=22, fill=tuple(c // 4 for c in color), outline=color, width=2)
-    d.ellipse((x + 18, 202, x + 34, 218), fill=color)
-    d.text((x + 46, 194), label, font=fb, fill=(255, 255, 255))
-    d.text((x + bw_ + 16, 199), tagline, font=ft, fill=color)
-    y = 250
-    for line in wrap(d, now.get("title", ""), font(FONT_B, 50), tw, 3):
-        d.text((x, y), line, font=font(FONT_B, 50), fill=(255, 255, 255))
-        y += 64
-    y += 6
-    for line in wrap(d, now.get("album", ""), font(FONT_R, 28), tw, 2):
-        d.text((x, y), line, font=font(FONT_R, 28), fill=(220, 226, 232))
-        y += 38
-    d.line((x, y + 10, x + 120, y + 10), fill=color, width=4)
+    # 맨 위(표지 윗선 140 에 맞춤): LIVE 줄 → 채널 배지 + 한 줄 소개
+    d.ellipse((x, 148, x + 14, 162), fill=(255, 77, 94))
+    d.text((x + 26, 141), "LIVE · 24H  ·  yojosuknam Radio", font=font(FONT_B, 22), fill=(236, 240, 244))
+    fb, ft = font(FONT_B, 22), font(FONT_R, 20)
+    bw_ = int(d.textlength(label, font=fb)) + 54
+    d.rounded_rectangle((x, 182, x + bw_, 218), radius=18, fill=tuple(c // 4 for c in color), outline=color, width=2)
+    d.ellipse((x + 16, 194, x + 28, 206), fill=color)
+    d.text((x + 38, 187), label, font=fb, fill=(255, 255, 255))
+    d.text((x + bw_ + 14, 189), wrap(d, tagline, ft, tw - bw_ - 14, 1)[0], font=ft, fill=color)
+
+    # 가운데: 곡 제목(한글) / 괄호 속 영어 제목 / 앨범 — 블록 전체를 배지와 구분선 사이 가운데에
+    main, sub = split_title(clean(now.get("title", "")))
+    album = clean(now.get("album", ""))
+    ftt, fsub, falb = font(FONT_B, 48), font(FONT_R, 28), font(FONT_R, 22)
+    tl = wrap(d, main, ftt, tw, 2)
+    sl = wrap(d, sub, fsub, tw, 1) if sub else []
+    al = wrap(d, album, falb, tw - 46, 1) if album else []
+    block = len(tl) * 60 + (10 + len(sl) * 38 if sl else 0) + (22 + 30 if al else 0)
+    y = 236 + max(0, (480 - 236 - block) // 2)
+    for line in tl:
+        d.text((x, y), line, font=ftt, fill=(255, 255, 255))
+        y += 60
+    if sl:
+        y += 10
+        for line in sl:
+            d.text((x, y), line, font=fsub, fill=(206, 212, 220))
+            y += 38
+    if al:
+        y += 22
+        d.text((x, y + 1), "앨범", font=font(FONT_B, 18), fill=color)
+        d.text((x + 46, y), al[0], font=falb, fill=(170, 178, 188))
+
+    # 아래(표지 아랫선 580 에 맞춤): 구분선 → 다음 곡
+    d.line((x, 498, x + tw, 498), fill=tuple(min(255, c // 2 + 30) for c in color), width=1)
     if nxt:
-        d.text((x, 520), "다음 곡", font=font(FONT_B, 22), fill=(170, 180, 190))
-        d.text((x, 550), wrap(d, nxt.get("title", ""), font(FONT_R, 26), tw, 1)[0],
-               font=font(FONT_R, 26), fill=(230, 234, 238))
+        d.text((x, 516), "다음 곡", font=font(FONT_B, 18), fill=(150, 160, 172))
+        n_main, n_sub = split_title(clean(nxt.get("title", "")))
+        fn, fns = font(FONT_R, 26), font(FONT_R, 20)
+        n_main = wrap(d, n_main, fn, tw, 1)[0]
+        d.text((x, 544), n_main, font=fn, fill=(230, 234, 238))
+        if n_sub:
+            nx = x + int(d.textlength(n_main, font=fn)) + 12
+            if nx < x + tw - 60:
+                d.text((nx, 550), wrap(d, n_sub, fns, x + tw - nx, 1)[0], font=fns, fill=(150, 160, 172))
     d.text((90, 630), "music.yojosuknam.com/radio  ·  곡별 유튜브 링크·가사는 방송 페이지에서",
            font=font(FONT_R, 24), fill=(200, 208, 214))
     tmp = OUT / "frame.tmp.jpg"
