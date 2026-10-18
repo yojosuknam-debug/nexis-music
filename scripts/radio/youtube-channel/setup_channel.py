@@ -36,6 +36,7 @@ lo-fi, jazz hop, Korean gugak fusion, K-pop, CCM and ballads. No ads, no talk, j
 ▶ 방송 페이지 (곡별 유튜브 링크·가사): https://music.yojosuknam.com/radio
 📻 라디오 앱·VLC 로 듣기: https://stream.yojosuknam.com/live.mp3
 🎵 앨범 전체: https://music.yojosuknam.com/album
+🎤 아티스트 yojosuknam 정식 음원 (유튜브 뮤직): https://www.youtube.com/channel/UCl_D2zwR6AfgTBAJ6jQq00Q
 ✉ 문의: support@nexis-lab.com"""
 
 KEYWORDS = ('yojosuknam "yojosuknam Radio" "24/7 radio" lofi "jazz hop" gugak "korean music" kpop ccm '
