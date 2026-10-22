@@ -45,3 +45,6 @@ next-env.d.ts
 # python
 __pycache__/
 *.pyc
+
+# 예배 제작 결과물(음성·영상, 사용자 목소리 포함)
+output/
