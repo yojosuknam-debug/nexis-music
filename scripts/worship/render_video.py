@@ -161,8 +161,8 @@ def main() -> int:
     lst = folder / "frames.txt"
     with lst.open("w", encoding="utf-8") as f:
         for path, sec in seq:
-            f.write(f"file '{path.as_posix()}'\nduration {sec:.3f}\n")
-        f.write(f"file '{seq[-1][0].as_posix()}'\n")
+            f.write(f"file '{path.resolve().as_posix()}'\nduration {sec:.3f}\n")
+        f.write(f"file '{seq[-1][0].resolve().as_posix()}'\n")
     dst = folder / f"worship_{date}_{lang}.mp4"
     audio = ["-i", str(mp3)]
     afilter = ["-af", f"adelay={a.preroll * 1000}|{a.preroll * 1000}"] if a.preroll else []
