@@ -147,6 +147,20 @@ def speak_ref(ref: str, lang: str) -> str:
     return f"{book} chapter {en_num(ch)}, " + (f"verses {en_num(v1)} to {en_num(int(v2))}" if v2 else f"verse {en_num(v1)}")
 
 
+def display_ref(text: str, lang: str) -> str:
+    """자막용 — speak_ref 로 풀어 쓴 장·절을 숫자로 되돌린다(10-24 '민수기이십육장' 자막 지적).
+    '민수기 육장 이십사절에서 이십육절' → '민수기 6장 24절에서 26절' / 'chapter six, verses twenty-four to twenty-six' → '6:24-26'"""
+    if lang == "ko":
+        nums = {sino(n): n for n in range(1, 200)}
+        alt = "|".join(sorted(nums, key=len, reverse=True))
+        return re.sub(rf"({alt})장 ({alt})절(?:에서 ({alt})절)?",
+                      lambda m: f"{nums[m[1]]}장 {nums[m[2]]}절" + (f"에서 {nums[m[3]]}절" if m[3] else ""), text)
+    nums = {en_num(n): n for n in range(1, 200)}
+    alt = "|".join(sorted(map(re.escape, nums), key=len, reverse=True))
+    return re.sub(rf"\bchapter ({alt}), verses? ({alt})(?: to ({alt}))?",
+                  lambda m: f"{nums[m[1]]}:{nums[m[2]]}" + (f"-{nums[m[3]]}" if m[3] else ""), text)
+
+
 # ── 1) 원고 ───────────────────────────────────────────────────────────────
 PROMPT = {
     "ko": """당신은 작은 교회의 따뜻하고 담백한 목회자입니다. 아래 오늘의 큐티 자료로, 라디오처럼 혼자 듣는 사람을 위한
@@ -407,20 +421,41 @@ class Voice:
         hyp = "".join(s.text for s in self.asr.transcribe(a, language=self.lang, beam_size=5)[0])
         return err_rate(norm_words(text, self.lang), norm_words(hyp, self.lang))
 
+    def clicks(self, wav) -> int:
+        """'칙' 튐 수 — 주변 음량보다 훨씬 큰 급격한 샘플 변화(엔진이 가끔 문장 안에 남긴다, 10-24 사용자 지적)."""
+        import numpy as np
+        x = wav[0].numpy().astype(np.float32)
+        d = np.abs(np.diff(x))
+        w = int(self.sr * 0.02)
+        rms = np.sqrt(np.convolve(x ** 2, np.ones(w) / w, "same"))[1:] + 1e-4
+        hit = np.where((d > 0.15) & (d > 8 * rms))[0]
+        return int(np.sum(np.diff(hit) > self.sr * 0.1) + 1) if len(hit) else 0
+
     def say(self, text: str):
         best = None
         for k in range(TRIES):
             self.torch.manual_seed(1000 + k)
             wav = self.tts.generate(text, language_id=self.lang, audio_prompt_path=self.ref,
                                     exaggeration=EXAGGERATION, cfg_weight=CFG)
-            e = self.check(wav, text)
-            if best is None or e < best[0]:
-                best = (e, wav)
-            if e <= MAX_ERR:
+            e, c = self.check(wav, text), self.clicks(wav)
+            if best is None or (c > 0, e) < (best[2] > 0, best[0]):   # 튐 없는 것 먼저, 그다음 오류 낮은 것
+                best = (e, wav, c)
+            if e <= MAX_ERR and c == 0:
                 break
         if best[0] > MAX_ERR:
             log(f"  [경고] 되읽기 오류 {best[0]:.0%} (가장 나은 것 사용): {text[:40]}…")
-        return best
+        if best[2]:
+            log(f"  [경고] '칙' 튐 {best[2]}곳 남음({TRIES}번 시도): {text[:40]}…")
+        return best[0], best[1]
+
+    def fade(self, wav):
+        """문장 앞뒤 20·30ms 페이드 — 문장 경계의 '틱' 방지."""
+        n_in, n_out = int(self.sr * 0.02), int(self.sr * 0.03)
+        if wav.shape[1] > n_in + n_out:
+            wav = wav.clone()
+            wav[0, :n_in] *= self.torch.linspace(0, 1, n_in)
+            wav[0, -n_out:] *= self.torch.linspace(1, 0, n_out)
+        return wav
 
     def part(self, text: str, dst: Path) -> dict:
         import torchaudio
@@ -428,6 +463,7 @@ class Voice:
         gap = self.torch.zeros(1, int(self.sr * GAP))
         for c in chunks(text, self.lang):
             e, wav = self.say(c)
+            wav = self.fade(wav)
             pieces += [wav, gap]
             errs.append(e)
             secs.append(round((wav.shape[1] + gap.shape[1]) / self.sr, 3))   # 화면 자막 시간표용(늘리기 전 길이)
@@ -444,7 +480,7 @@ def make_voice(script: dict, out: Path) -> None:
         if "text" not in p:
             continue
         if p.get("fixed"):
-            h = hashlib.sha1(f"{lang}|{REF[lang]}|{EXAGGERATION}|{CFG}|{GAP}|{p['text']}".encode()).hexdigest()[:12]
+            h = hashlib.sha1(f"{lang}|{REF[lang]}|{EXAGGERATION}|{CFG}|{GAP}|clk|{p['text']}".encode()).hexdigest()[:12]
             dst = CACHE / f"{p['id']}_{lang}_{h}.wav"
             if dst.exists():
                 p["audio"] = str(dst)
@@ -475,8 +511,19 @@ def dur(f: Path) -> float:
     return float(r.stdout.strip() or 0)
 
 
+def loudness(f: Path) -> float:
+    """통합 음량(LUFS) 측정 — ffmpeg loudnorm 1차 측정값."""
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(f), "-af",
+                        "loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    m = re.search(r'"input_i"\s*:\s*"(-?[\d.]+|-inf)"', r.stderr)
+    return float(m.group(1)) if m and m.group(1) != "-inf" else -16.0
+
+
 def mix(script: dict, out: Path) -> Path:
-    """순서대로 이어 붙이고 음량을 맞춘다. 20분을 넘으면 응답 찬양을 뺀다."""
+    """순서대로 이어 붙이고 음량을 맞춘다. 20분을 넘으면 응답 찬양을 뺀다.
+    음량은 부분마다 한 번 재서 고정 배율로 맞춘다 — loudnorm 동적 모드는 문장 사이 0.8초 쉼에서 음량을 끌어올렸다가
+    다음 문장 첫소리에서 리미터가 급히 눌러 '칙' 소리를 냈다(10-24 사용자 지적). 부분 앞뒤는 20ms 페이드."""
     files = []
     for p in script["parts"]:
         if "song" in p:
@@ -492,10 +539,14 @@ def mix(script: dict, out: Path) -> Path:
     for i, (p, f) in enumerate(files):
         inputs += ["-i", str(f)]
         slow = "song" not in p and SPEED != 1
+        body = dur(f) / (SPEED if slow else 1)
+        gain = max(-20.0, min(20.0, -16.0 - loudness(f)))
         filters.append(f"[{i}:a]aresample=44100,aformat=channel_layouts=stereo,"
                        + (f"atempo={SPEED}," if slow else "")
-                       + f"loudnorm=I=-16:TP=-1.5:LRA=11,apad=pad_dur=1.5[a{i}]")
-        d = dur(f) / (SPEED if slow else 1) + 1.5
+                       + f"volume={gain:.2f}dB,alimiter=limit=0.84:attack=5:release=80:level=disabled,"
+                       + f"afade=t=in:d=0.02,afade=t=out:st={max(0.0, body - 0.02):.3f}:d=0.02,"
+                       + f"apad=pad_dur=1.5[a{i}]")
+        d = body + 1.5
         timeline.append({"id": p["id"], "title": p["title"], "start": round(t, 1), "sec": round(d, 1),
                          **({"song": {k: p["song"][k] for k in ("title", "album", "youtube", "cover") if k in p["song"]}}
                             if "song" in p else {})})

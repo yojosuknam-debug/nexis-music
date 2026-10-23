@@ -63,7 +63,7 @@ def split_long(s: str, lim: int) -> list[str]:
 
 def sentences(chunk: str, lang: str) -> list[str]:
     out = []
-    for s in re.split(r"(?<=[.!?])\s+", chunk):
+    for s in re.split(r"(?<=[.!?])\s+", bw.display_ref(chunk, lang)):   # 자막은 장·절을 숫자로
         if s.strip():
             out += split_long(s.strip(), 80 if lang == "ko" else 140)
     return out
