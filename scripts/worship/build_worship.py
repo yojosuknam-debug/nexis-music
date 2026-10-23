@@ -35,7 +35,7 @@ CACHE = OUT / "cache"
 VOICE_DIR = Path(os.environ.get("WORSHIP_REF_DIR", r"D:\YH\voice-lab\ref"))   # 사용자 녹음(레포 밖, 비공개)
 THREADS = int(os.environ.get("WORSHIP_THREADS", "8"))   # 미니PC 는 3 (다른 서비스 몫을 남긴다)
 DEVICE = os.environ.get("WORSHIP_DEVICE", "cpu")   # 맥미니 = mps(Apple GPU). Whisper 는 MPS 미지원이라 늘 CPU
-REF = {"ko": "my_ko2.wav", "en": "my_en.wav"}   # 한국어 = 새로운 녹음 29(10-23 사용자 선택 '억양 3')
+REF = {"ko": "my_ko3.wav", "en": "my_en.wav"}   # 한국어 = 녹음_261024 뒷부분 3문장(10-24 다시 녹음, 되읽기 오류 0%)
 QT_URL = "https://qt.yojosuknam.com/api/generate-qt"
 # 한국어 원고의 바탕 = 말씀Log 큐티 2,000개(autovid data/qt_data.json) 중 개역한글 검증 항목(qt-insta eligible_ids).
 # qt-insta 와 같은 순서표라 같은 날 인스타 카드와 같은 본문이 된다(10-23 사용자). 파일이 없으면 위 API.
