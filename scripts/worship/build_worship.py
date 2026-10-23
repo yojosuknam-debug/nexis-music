@@ -47,9 +47,11 @@ TEXT_MODEL = "gemini-3.1-pro-preview"   # 2.5-pro 는 신규 사용 불가(10-22
 MAX_MIN = 20.0
 UA = "Mozilla/5.0 NexisWorship/1.0"
 
-# 억양: '구연동화 같다'(10-22) → 감정 강도를 낮추고 2~3문장씩 묶어 만든다
-EXAGGERATION, CFG = 0.25, 0.5
-CHUNK_CHARS = {"ko": 150, "en": 260}
+# 억양: '구연동화 같다'(10-22) → 감정 강도를 낮춘다.
+# '쉼 없이 빠르다'(10-23) → 한 문장씩 만들고 문장 사이 0.8초 쉼, cfg 0.4(서두르지 않게) — 비교 샘플 '내목소리_천천히' 방식
+EXAGGERATION, CFG = 0.25, 0.4
+GAP = 0.8               # 문장 사이 쉼(초)
+CHUNK_CHARS = {"ko": 150, "en": 260}   # 이보다 긴 문장은 쉼표에서 나눈다
 SPEED = 0.92            # "조금 느리게"(10-23) — 다 만든 음성을 음높이 그대로 늘린다(atempo)
 MAX_ERR = 0.12          # 되읽기 오류율이 이보다 높으면 다시 만든다
 TRIES = 3
@@ -357,25 +359,17 @@ def make_script_en(ko: dict, day: dt.date, out: Path) -> dict:
 
 # ── 2) 목소리 ─────────────────────────────────────────────────────────────
 def chunks(text: str, lang: str) -> list[str]:
-    """2~3문장씩 묶는다(문장마다 따로 만들면 매번 힘주어 시작해 구연동화처럼 들린다)."""
+    """한 문장씩(10-23 '쉼 없이 빠르다' — 묶으면 엔진이 문장 사이를 쉬지 않고 이어 읽는다). 사이 쉼은 GAP."""
     sents = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
-    out, cur, lim = [], "", CHUNK_CHARS[lang]
+    out, lim = [], CHUNK_CHARS[lang]
     for s in sents:
         while len(s) > lim:                       # 아주 긴 문장은 쉼표에서 자른다
             cut = s.rfind(",", 0, lim)
             cut = cut if cut > lim // 3 else max(s.rfind(" ", 0, lim), lim // 3)   # 쉼표 없으면 띄어쓰기에서
-            if cur:
-                out.append(cur)
-                cur = ""
             out.append(s[: cut + 1].strip())
             s = s[cut + 1:].strip()
-        if cur and len(cur) + 1 + len(s) > lim:
-            out.append(cur)
-            cur = s
-        else:
-            cur = f"{cur} {s}".strip()
-    if cur:
-        out.append(cur)
+        if s:
+            out.append(s)
     return out
 
 
@@ -431,7 +425,7 @@ class Voice:
     def part(self, text: str, dst: Path) -> dict:
         import torchaudio
         pieces, errs, secs = [], [], []
-        gap = self.torch.zeros(1, int(self.sr * 0.6))
+        gap = self.torch.zeros(1, int(self.sr * GAP))
         for c in chunks(text, self.lang):
             e, wav = self.say(c)
             pieces += [wav, gap]
@@ -450,7 +444,7 @@ def make_voice(script: dict, out: Path) -> None:
         if "text" not in p:
             continue
         if p.get("fixed"):
-            h = hashlib.sha1(f"{lang}|{REF[lang]}|{EXAGGERATION}|{CFG}|{p['text']}".encode()).hexdigest()[:12]
+            h = hashlib.sha1(f"{lang}|{REF[lang]}|{EXAGGERATION}|{CFG}|{GAP}|{p['text']}".encode()).hexdigest()[:12]
             dst = CACHE / f"{p['id']}_{lang}_{h}.wav"
             if dst.exists():
                 p["audio"] = str(dst)
