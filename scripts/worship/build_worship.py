@@ -199,7 +199,8 @@ def gemini_json(key: str, prompt: str) -> dict:
             "generationConfig": {"responseMimeType": "application/json", "temperature": 0.7}}
     d = http_json(f"https://generativelanguage.googleapis.com/v1beta/models/{TEXT_MODEL}:generateContent",
                   body, {"x-goog-api-key": key}, timeout=600)
-    return json.loads(d["candidates"][0]["content"]["parts"][0]["text"])
+    g = json.loads(d["candidates"][0]["content"]["parts"][0]["text"])
+    return g[0] if isinstance(g, list) and g and isinstance(g[0], dict) else g   # 가끔 [{...}] 로 감싸서 준다(10-23)
 
 
 def clean_speech(s: str) -> str:
