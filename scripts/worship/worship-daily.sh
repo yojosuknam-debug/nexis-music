@@ -9,6 +9,8 @@ REPO=/mnt/external/nexis-music
 W="$REPO/scripts/worship"
 export WORSHIP_OUT=$B/output WORSHIP_REF_DIR=$B/ref WORSHIP_BG_DIR=$HOME/autovid/assets/qt_images
 export WORSHIP_THREADS=3 HF_HOME=$B/hf PYTHONIOENCODING=utf-8
+# 한국어 원고 바탕 = 말씀Log 큐티 2,000개 — qt-insta 와 같은 파일·순서표(같은 날 같은 본문)
+export WORSHIP_QT_DATA=$HOME/autovid/data/qt_data.json WORSHIP_QT_ELIGIBLE=$HOME/qt-insta/data/eligible_ids.json
 D=$(date -d tomorrow +%F)
 mkdir -p "$B/logs" "$WORSHIP_OUT"
 exec >>"$B/logs/daily-$D.log" 2>&1

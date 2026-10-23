@@ -1,5 +1,5 @@
 """
-말씀 묵상 예배(20분 이내) 한 편 만들기 — 말씀Log 오늘 본문 → 원고 → 내 목소리 낭독 → 찬양 2곡과 이어 붙인 mp3.
+말씀 묵상 예배(20분 이내) 한 편 만들기 — 말씀Log 큐티(2,000개 자료 또는 API) → 원고 → 내 목소리 낭독 → 찬양 2곡과 이어 붙인 mp3.
 
     python scripts/worship/build_worship.py --lang ko            # 원고만(script.json)
     D:/YH/voice-lab/.venv/Scripts/python scripts/worship/build_worship.py --lang ko --voice --mix
@@ -19,6 +19,7 @@ import os
 import datetime as dt
 import hashlib
 import json
+import random
 import re
 import subprocess
 import sys
@@ -33,8 +34,14 @@ OUT = Path(os.environ.get("WORSHIP_OUT", ROOT / "output" / "worship"))
 CACHE = OUT / "cache"
 VOICE_DIR = Path(os.environ.get("WORSHIP_REF_DIR", r"D:\YH\voice-lab\ref"))   # 사용자 녹음(레포 밖, 비공개)
 THREADS = int(os.environ.get("WORSHIP_THREADS", "8"))   # 미니PC 는 3 (다른 서비스 몫을 남긴다)
+DEVICE = os.environ.get("WORSHIP_DEVICE", "cpu")   # 맥미니 = mps(Apple GPU). Whisper 는 MPS 미지원이라 늘 CPU
 REF = {"ko": "my_ko2.wav", "en": "my_en.wav"}   # 한국어 = 새로운 녹음 29(10-23 사용자 선택 '억양 3')
 QT_URL = "https://qt.yojosuknam.com/api/generate-qt"
+# 한국어 원고의 바탕 = 말씀Log 큐티 2,000개(autovid data/qt_data.json) 중 개역한글 검증 항목(qt-insta eligible_ids).
+# qt-insta 와 같은 순서표라 같은 날 인스타 카드와 같은 본문이 된다(10-23 사용자). 파일이 없으면 위 API.
+QT_DATA = os.environ.get("WORSHIP_QT_DATA", "")
+QT_ELIGIBLE = os.environ.get("WORSHIP_QT_ELIGIBLE", "")
+QT_START, QT_ORDER_SEED = dt.date(2026, 9, 15), "malsseumlog-insta-v1"   # qt_insta.py 의 START·ORDER_SEED 와 같아야 함
 RADIO_JSON = "https://music.yojosuknam.com/album/radio.json"
 TEXT_MODEL = "gemini-3.1-pro-preview"   # 2.5-pro 는 신규 사용 불가(10-22 404)
 MAX_MIN = 20.0
@@ -220,8 +227,37 @@ def pick_songs(lang: str, day: dt.date) -> list[dict]:
     return [cand[i], cand[(i + 1) % len(cand)]]
 
 
+def qt_from_data(day: dt.date) -> dict:
+    """그날의 큐티 1개 — qt_insta.py schedule()·adapt() 와 같은 규칙(구절 표기를 '책 장:절'로 통일)."""
+    items = {i["id"]: i for i in json.loads(Path(QT_DATA).read_text(encoding="utf-8"))["items"]}
+    ids = json.loads(Path(QT_ELIGIBLE).read_text(encoding="utf-8")) if QT_ELIGIBLE else list(items)
+    seq = sorted(ids)
+    random.Random(QT_ORDER_SEED).shuffle(seq)
+    item = items[seq[(day - QT_START).days % len(seq)]]
+    m = re.match(r"^(.+?)\s+(\d+)[:：]", item["passageReference"])
+    book, ch = m.group(1), m.group(2)
+    verses, nums = [], []
+    for v in item["verses"]:
+        mv = re.search(r"(\d+)[:：](\d+)\s*$", v["reference"])
+        c, n = (mv.group(1), mv.group(2)) if mv else (ch, re.search(r"(\d+)", v["reference"]).group(1))
+        verses.append({"reference": f"{book} {c}:{n}", "text": v["text"].strip()})
+        nums.append((int(c), int(n)))
+    (c1, v1), (c2, v2) = nums[0], nums[-1]
+    shown = (f"{book} {c1}:{v1}" if (c1, v1) == (c2, v2) else
+             f"{book} {c1}:{v1}-{v2}" if c1 == c2 else f"{book} {c1}:{v1}-{c2}:{v2}")
+    log(f"큐티 자료 #{item['id']} {shown} — {item['title'].strip()}")
+    return {"id": item["id"], "title": item["title"].strip(), "passageReference": shown, "verses": verses,
+            "summary": item.get("summary", ""), "sermon": item.get("sermon", ""),
+            "meditation": item.get("meditation", ""),
+            "application": [a for a in item.get("application", []) if a and a.strip()],
+            "prayer": item.get("prayer", "")}
+
+
 def make_script(lang: str, day: dt.date, out: Path) -> dict:
-    qt = http_json(QT_URL, {"mode": "today", "language": lang})["qt"]
+    if lang == "ko" and QT_DATA:
+        qt = qt_from_data(day)
+    else:
+        qt = http_json(QT_URL, {"mode": "today", "language": lang})["qt"]
     verses = "\n".join(f"{v['reference']} {v['text']}" for v in qt["verses"])
     p = PROMPT[lang].format(title=qt["title"], ref=qt["passageReference"], verses=verses, summary=qt["summary"],
                             sermon=qt["sermon"], meditation=qt["meditation"], application=" ".join(qt["application"]))
@@ -249,7 +285,7 @@ def make_script(lang: str, day: dt.date, out: Path) -> dict:
         {"id": "blessing", "title": "축복의 말씀" if lang == "ko" else "Words of Blessing",
          "text": FIXED[lang]["blessing"], "fixed": True},
     ]
-    script = {"date": day.isoformat(), "lang": lang, "title": qt["title"], "passage": qt["passageReference"],
+    script = {"date": day.isoformat(), "lang": lang, "qt_id": qt.get("id"), "title": qt["title"], "passage": qt["passageReference"],
               "verses": qt["verses"], "parts": parts}
     out.mkdir(parents=True, exist_ok=True)
     (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -364,7 +400,7 @@ class Voice:
         self.torch, self.lang = torch, lang
         self.ref = str(VOICE_DIR / REF[lang])
         t0 = time.time()
-        self.tts = ChatterboxMultilingualTTS.from_pretrained(device="cpu")
+        self.tts = ChatterboxMultilingualTTS.from_pretrained(device=DEVICE)
         self.asr = WhisperModel("small", device="cpu", compute_type="int8", cpu_threads=THREADS)
         self.sr = self.tts.sr
         log(f"목소리 모델 준비 {time.time() - t0:.0f}초")
