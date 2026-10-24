@@ -35,7 +35,8 @@ CACHE = OUT / "cache"
 VOICE_DIR = Path(os.environ.get("WORSHIP_REF_DIR", r"D:\YH\voice-lab\ref"))   # 사용자 녹음(레포 밖, 비공개)
 THREADS = int(os.environ.get("WORSHIP_THREADS", "8"))   # 미니PC 는 3 (다른 서비스 몫을 남긴다)
 DEVICE = os.environ.get("WORSHIP_DEVICE", "cpu")   # 맥미니 = mps(Apple GPU). Whisper 는 MPS 미지원이라 늘 CPU
-REF = {"ko": "my_ko4.wav", "en": "my_en.wav"}   # 한국어 = 녹음_261024 뒷부분 3문장 + 음색 보정(1.3kHz↓·저음·4kHz↑, '막힌 느낌' 10-24 사용자 선택 E)
+REF = {"ko": os.environ.get("WORSHIP_REF_KO", "my_ko2.wav"),   # 한국어 = 처음 확정 '억양 3'(10-23). 10-24 B 확정(E=my_ko4 는 '칙' 잦음)
+       "en": os.environ.get("WORSHIP_REF_EN", "my_en.wav")}    # 다른 사람 목소리는 docs/voice-onboarding.md — 파일만 바꿔 끼운다
 QT_URL = "https://qt.yojosuknam.com/api/generate-qt"
 # 한국어 원고의 바탕 = 말씀Log 큐티 2,000개(autovid data/qt_data.json) 중 개역한글 검증 항목(qt-insta eligible_ids).
 # qt-insta 와 같은 순서표라 같은 날 인스타 카드와 같은 본문이 된다(10-23 사용자). 파일이 없으면 위 API.
@@ -50,8 +51,27 @@ UA = "Mozilla/5.0 NexisWorship/1.0"
 # 억양: '구연동화 같다'(10-22) → 감정 강도를 낮춘다.
 # '쉼 없이 빠르다'(10-23) → 한 문장씩 만들고 문장 사이 0.8초 쉼, cfg 0.4(서두르지 않게) — 비교 샘플 '내목소리_천천히' 방식
 EXAGGERATION, CFG = 0.25, 0.4
-GAP = 0.8               # 문장 사이 쉼(초)
-CHUNK_CHARS = {"ko": 150, "en": 260}   # 이보다 긴 문장은 쉼표에서 나눈다
+# 비교 시험(10-24 조사 docs/research/2026-10-24_내목소리-TTS-자연스럽게.md): WORSHIP_TUNE=1 → 탐색 시작값
+TUNE = os.environ.get("WORSHIP_TUNE", "") == "1"
+if TUNE:
+    EXAGGERATION, CFG = 0.20, 0.35
+GEN_KW = {"temperature": 0.75, "repetition_penalty": 1.2, "min_p": 0.05} if TUNE else {}   # 1.2 = chatterbox master 기본값
+MPS_LIMIT_GB = float(os.environ.get("WORSHIP_MPS_LIMIT_GB", "9"))   # 넘으면 저장해 둔 문장부터 프로세스를 새로 띄워 이어 만든다
+GAP = 0.8               # 문장 사이 쉼(초) — 고정 방식
+# '더 자연스럽게'(10-24, 무료 범위) — WORSHIP_NATURAL=1 일 때: 문장부호별 쉼(물음표는 생각할 틈),
+# 엔진이 문장 앞뒤에 들쭉날쭉 남기는 무음을 다듬고, 아주 짧은 문장('사랑하는 여러분.')은 다음 문장과 함께 만든다
+NATURAL = os.environ.get("WORSHIP_NATURAL", "1") == "1"   # 10-24 사용자 B 확정 → 기본 켬(0 이면 옛 고정 쉼)
+# 완성 음성에서 들리는 '총' 쉼(초, trim 이 남긴 앞뒤 여백 포함) — 10-24 조사: 물음표를 기능별로 나눈다.
+# 생각을 청하는 질문은 길게, 바로 답·다음 질문이 이어지면 짧게. 마침표는 B 확정 때 들은 0.8초 그대로
+PAUSE = {".": 0.80, "!": 0.80, ",": 0.30, "?think": 1.00, "?ans": 0.60}
+EDGE = 0.03 + 0.06   # trim 이 남기는 앞 30ms·뒤 60ms
+ANSWER_START = ("그것은", "그건", "바로", "왜냐하면", "그렇습니다", "아닙니다", "네,", "네.", "아니요", "답은", "그 이유는")
+PARA = os.environ.get("WORSHIP_CHUNK", "") == "para"   # 비교 시험: 1~3문장 의미 묶음(110자 이내, 질문에서 끊음)
+SHORT = {"ko": 12, "en": 25}   # 이보다 짧은 문장은 다음 문장과 붙인다
+CHUNK_CHARS = {"ko": 60, "en": 130}   # 이보다 긴 문장은 쉼표·절 끝에서 나눈다(길면 엔진이 갑자기 빨라진다, 10-24)
+CLAUSE_END = tuple("고 며 서 니 면 지 도 만 데 라 요".split())   # 쉼표 없을 때 끊어도 자연스러운 어절 끝(1분 묵상 _breathe 참고)
+# 엔진이 잘못 읽는 말 — 낭독에 넣는 글만 바꾸고 자막은 그대로(10-24 '말씀으그'·'아이' 지적). 긴 것부터 바꾼다
+SPEAK_KO = {"말씀 Log": "말씀로그", "말씀Log": "말씀로그", "Log": "로그", "AI": "에이아이", "QT": "큐티"}
 SPEED = 0.92            # "조금 느리게"(10-23) — 다 만든 음성을 음높이 그대로 늘린다(atempo)
 MAX_ERR = 0.12          # 되읽기 오류율이 이보다 높으면 다시 만든다
 TRIES = 3
@@ -113,8 +133,11 @@ def sino(n: int) -> str:
     d = "영일이삼사오육칠팔구"
     if n == 0:
         return "영"
+    if n >= 10000:                                   # 만 단위(연도·큰 수)
+        q, n = divmod(n, 10000)
+        return ("" if q == 1 else sino(q)) + "만" + (sino(n) if n else "")
     out = ""
-    for unit, name in ((100, "백"), (10, "십")):
+    for unit, name in ((1000, "천"), (100, "백"), (10, "십")):
         q, n = divmod(n, unit)
         if q:
             out += ("" if q == 1 else d[q]) + name
@@ -153,8 +176,10 @@ def display_ref(text: str, lang: str) -> str:
     if lang == "ko":
         nums = {sino(n): n for n in range(1, 200)}
         alt = "|".join(sorted(nums, key=len, reverse=True))
-        return re.sub(rf"({alt})장 ({alt})절(?:에서 ({alt})절)?",
+        text = re.sub(rf"({alt})장 ({alt})절(?:에서 ({alt})절)?",
                       lambda m: f"{nums[m[1]]}장 {nums[m[2]]}절" + (f"에서 {nums[m[3]]}절" if m[3] else ""), text)
+        books = "|".join(sorted(BOOKS_EN, key=len, reverse=True))   # 책 이름 뒤 '육장'·'이십삼편'(시편)만
+        return re.sub(rf"({books}) ({alt})(장|편)", lambda m: f"{m[1]} {nums[m[2]]}{m[3]}", text)
     nums = {en_num(n): n for n in range(1, 200)}
     alt = "|".join(sorted(map(re.escape, nums), key=len, reverse=True))
     return re.sub(rf"\bchapter ({alt}), verses? ({alt})(?: to ({alt}))?",
@@ -176,7 +201,7 @@ PROMPT = {
 - 숫자는 아라비아 숫자를 쓰지 말고 한글로 쓰세요. 성경 장절 표기(4:13 등)는 쓰지 마세요.
 - 오늘 본문 말고 다른 성경 구절을 직접 인용하지 마세요(틀린 인용 방지).
 - 과장된 감탄, 설교 상투어 반복, 특정 교단·정치·헌금 이야기를 피하세요. 담담하고 따뜻하게.
-- 문장은 짧게(한 문장 60자 안팎).
+- 문장은 짧게(한 문장 40자 안팎, 길어도 60자를 넘기지 마세요 — 긴 문장은 낭독이 갑자기 빨라집니다).
 
 제목: {title}
 본문: {ref}
@@ -198,7 +223,7 @@ Rules:
 - Write numbers as words. Do not write chapter:verse notation.
 - Do not quote any Bible verse other than today's passage (to avoid misquotes).
 - Avoid exaggerated exclamations, cliches, denominational, political or offering talk. Calm and warm.
-- Keep sentences short.
+- Keep sentences short (about 15 words, never more than 25).
 
 Title: {title}
 Passage: {ref}
@@ -377,14 +402,78 @@ def chunks(text: str, lang: str) -> list[str]:
     sents = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
     out, lim = [], CHUNK_CHARS[lang]
     for s in sents:
-        while len(s) > lim:                       # 아주 긴 문장은 쉼표에서 자른다
-            cut = s.rfind(",", 0, lim)
-            cut = cut if cut > lim // 3 else max(s.rfind(" ", 0, lim), lim // 3)   # 쉼표 없으면 띄어쓰기에서
-            out.append(s[: cut + 1].strip())
-            s = s[cut + 1:].strip()
+        while len(s) > lim:                       # 긴 문장은 쉼표에서, 없으면 절 끝(…고·…며·…서) 띄어쓰기에서 자른다
+            cut = s.rfind(",", lim // 3, lim)
+            if cut > 0:
+                out.append(s[: cut + 1].strip())
+                s = s[cut + 1:].strip()
+                continue
+            sp = [i for i in range(lim // 3, min(lim, len(s))) if s[i] == " " and s[i - 1] in CLAUSE_END]
+            cut = sp[-1] if sp else max(s.rfind(" ", 0, lim), lim // 3)
+            out.append(s[:cut].strip() + ",")      # 쉼표를 붙여 짧게 쉬게(PAUSE[','])
+            s = s[cut:].strip()
         if s:
             out.append(s)
+    if NATURAL:
+        merged = []
+        for s in out:
+            if merged and len(merged[-1]) < SHORT[lang] and len(merged[-1]) + 1 + len(s) <= lim:
+                merged[-1] = f"{merged[-1]} {s}"
+            else:
+                merged.append(s)
+        out = merged
+    if PARA:                                       # 1~3문장씩 묶되 110자·질문에서 끊는다
+        grouped, n = [], 0
+        for s in out:
+            if grouped and n < 3 and not grouped[-1].endswith("?") and len(grouped[-1]) + 1 + len(s) <= 110:
+                grouped[-1], n = f"{grouped[-1]} {s}", n + 1
+            else:
+                grouped.append(s)
+                n = 1
+        out = grouped
     return out
+
+
+def pause_after(chunk: str, nxt: str | None) -> float:
+    """이 묶음 뒤에 넣을 무음(초) = PAUSE 총 쉼 − trim 여백. 고정 방식이면 GAP."""
+    if not NATURAL:
+        return GAP
+    end = chunk.rstrip()[-1:]
+    if end == "?":
+        key = "?ans" if nxt and (nxt.rstrip().endswith("?") or nxt.lstrip().startswith(ANSWER_START)) else "?think"
+    else:
+        key = end if end in PAUSE else "."
+    return max(0.1, PAUSE[key] - EDGE)
+
+
+NATIVE_TENS = ["", "열", "스물", "서른", "마흔", "쉰", "예순", "일흔", "여든", "아흔"]
+NATIVE_ONES = ["", "한", "두", "세", "네", "다섯", "여섯", "일곱", "여덟", "아홉"]
+COUNTERS = "시간|명|개|사람|살|권|마리|가지|번|잔|송이|분께|군데|달|주일"
+
+
+def native(n: int) -> str:
+    """고유어 수(단위 앞): 3명 → 세 명, 20살 → 스무 살. 100 이상은 한자어."""
+    if not 0 < n < 100:
+        return sino(n)
+    t, o = divmod(n, 10)
+    return "스무" if n == 20 else NATIVE_TENS[t] + NATIVE_ONES[o]
+
+
+def normalize_ko(text: str) -> str:
+    """낭독용 숫자 읽기(10-24 조사 표 기준) — 성경 장절 → 날짜·시각 → 개수 → 퍼센트 → 남은 숫자. 자막에는 쓰지 않는다."""
+    books = "|".join(sorted(BOOKS_EN, key=len, reverse=True))
+    t = re.sub(rf"({books})\s*(\d+)\s*[:：]\s*(\d+)(?:\s*[-–~∼]\s*(\d+))?",
+               lambda m: speak_ref(f"{m[1]} {m[2]}:{m[3]}" + (f"-{m[4]}" if m[4] else ""), "ko"), text)
+    t = re.sub(rf"({books})\s*(\d+)\s*(장|편)", lambda m: f"{m[1]} {sino(int(m[2]))}{m[3]}", t)
+    t = re.sub(r"(\d+)\s*년", lambda m: f"{sino(int(m[1]))} 년", t)
+    t = re.sub(r"(\d+)\s*월", lambda m: {6: "유월", 10: "시월"}.get(int(m[1]), f"{sino(int(m[1]))}월"), t)
+    t = re.sub(r"(\d+)\s*일(?![가-힣])", lambda m: f"{sino(int(m[1]))} 일", t)
+    t = re.sub(rf"(\d+)\s*({COUNTERS})", lambda m: f"{native(int(m[1]))} {m[2]}", t)   # '3시간'을 '시' 앞에서 먼저
+    t = re.sub(r"(\d+)\s*시(?![작간])", lambda m: f"{native(int(m[1]))} 시", t)
+    t = re.sub(r"(\d+)\s*분", lambda m: f"{sino(int(m[1]))} 분", t)
+    t = re.sub(r"(\d+)(?:\.(\d+))?\s*%",
+               lambda m: sino(int(m[1])) + (" 점 " + " ".join(sino(int(d)) for d in m[2]) if m[2] else "") + " 퍼센트", t)
+    return re.sub(r"\d+", lambda m: sino(int(m[0])), t)
 
 
 def norm_words(s: str, lang: str):
@@ -410,6 +499,8 @@ class Voice:
         self.ref = str(VOICE_DIR / REF[lang])
         t0 = time.time()
         self.tts = ChatterboxMultilingualTTS.from_pretrained(device=DEVICE)
+        # 참조 녹음 분석은 한 번만 — 문장마다 audio_prompt_path 로 다시 분석하면 MPS 메모리가 쌓여 14~26GB 까지 컸다(10-24)
+        self.tts.prepare_conditionals(self.ref, exaggeration=EXAGGERATION)
         self.asr = WhisperModel("small", device="cpu", compute_type="int8", cpu_threads=THREADS)
         self.sr = self.tts.sr
         log(f"목소리 모델 준비 {time.time() - t0:.0f}초")
@@ -419,34 +510,53 @@ class Voice:
         import torchaudio.functional as F
         a = F.resample(wav, self.sr, 16000)[0].numpy().astype(np.float32)
         hyp = "".join(s.text for s in self.asr.transcribe(a, language=self.lang, beam_size=5)[0])
+        if self.lang == "ko":                     # Whisper 는 '6장'처럼 숫자로 적는다 → 낭독문과 같은 방식으로 맞춰 비교
+            hyp = normalize_ko(hyp)
         return err_rate(norm_words(text, self.lang), norm_words(hyp, self.lang))
 
-    def clicks(self, wav) -> int:
-        """'칙' 튐 수 — 주변 음량보다 훨씬 큰 급격한 샘플 변화(엔진이 가끔 문장 안에 남긴다, 10-24 사용자 지적)."""
-        import numpy as np
-        x = wav[0].numpy().astype(np.float32)
-        d = np.abs(np.diff(x))
-        w = int(self.sr * 0.02)
-        rms = np.sqrt(np.convolve(x ** 2, np.ones(w) / w, "same"))[1:] + 1e-4
-        hit = np.where((d > 0.15) & (d > 8 * rms))[0]
-        return int(np.sum(np.diff(hit) > self.sr * 0.1) + 1) if len(hit) else 0
-
     def say(self, text: str):
+        import gc
+        speak = text
+        if self.lang == "ko":                     # 엔진이 잘못 읽는 말·숫자만 바꿔 넣는다(자막은 text 그대로)
+            for k_, v_ in SPEAK_KO.items():
+                speak = speak.replace(k_, v_)
+            speak = normalize_ko(speak)
         best = None
         for k in range(TRIES):
             self.torch.manual_seed(1000 + k)
-            wav = self.tts.generate(text, language_id=self.lang, audio_prompt_path=self.ref,
-                                    exaggeration=EXAGGERATION, cfg_weight=CFG)
-            e, c = self.check(wav, text), self.clicks(wav)
-            if best is None or (c > 0, e) < (best[2] > 0, best[0]):   # 튐 없는 것 먼저, 그다음 오류 낮은 것
-                best = (e, wav, c)
-            if e <= MAX_ERR and c == 0:
+            with self.torch.inference_mode():
+                out = self.tts.generate(speak, language_id=self.lang, exaggeration=EXAGGERATION, cfg_weight=CFG,
+                                        **GEN_KW)
+            wav = out.detach().to("cpu").contiguous()   # GPU 에 결과를 쌓지 않는다(10-24 조사: CPU 로 옮겨 보관)
+            del out
+            gc.collect()
+            if DEVICE == "mps":
+                self.torch.mps.synchronize()
+                self.torch.mps.empty_cache()
+            e = self.check(wav, speak)
+            if best is None or e < best[0]:
+                best = (e, wav)
+            if e <= MAX_ERR:                      # '칙' 때문엔 다시 만들지 않는다(B 목소리엔 없음, 10-24 사용자)
                 break
         if best[0] > MAX_ERR:
             log(f"  [경고] 되읽기 오류 {best[0]:.0%} (가장 나은 것 사용): {text[:40]}…")
-        if best[2]:
-            log(f"  [경고] '칙' 튐 {best[2]}곳 남음({TRIES}번 시도): {text[:40]}…")
-        return best[0], best[1]
+        return best
+
+    def mps_gb(self) -> float:
+        return self.torch.mps.driver_allocated_memory() / 2 ** 30 if DEVICE == "mps" else 0.0
+
+    def restart_if_heavy(self) -> None:
+        """GPU 메모리가 MPS_LIMIT_GB 를 넘으면 같은 명령으로 프로세스를 새로 띄운다 — 문장 저장본(_chunks)부터 이어 만든다."""
+        gb = self.mps_gb()
+        if gb <= MPS_LIMIT_GB:
+            return
+        n = int(os.environ.get("WORSHIP_RESTARTS", "0")) + 1
+        if n > 40:
+            raise RuntimeError(f"GPU 메모리 {gb:.1f}GB — 다시 띄우기 {n - 1}번 넘음")
+        log(f"  GPU 메모리 {gb:.1f}GB > {MPS_LIMIT_GB:g}GB → 저장한 데서 이어 만들도록 다시 띄움({n}번째)")
+        os.environ["WORSHIP_RESTARTS"] = str(n)
+        sys.stdout.flush()
+        os.execv(sys.executable, [sys.executable] + sys.argv)
 
     def fade(self, wav):
         """문장 앞뒤 20·30ms 페이드 — 문장 경계의 '틱' 방지."""
@@ -457,19 +567,43 @@ class Voice:
             wav[0, -n_out:] *= self.torch.linspace(1, 0, n_out)
         return wav
 
+    def trim(self, wav):
+        """문장 앞뒤에 엔진이 남긴 무음을 다듬는다(앞 30ms·뒤 60ms 여유) — 쉼을 PAUSE 대로 고르게."""
+        x = wav[0].abs()
+        idx = (x > max(0.01, float(x.max()) * 0.02)).nonzero()
+        if len(idx) == 0:
+            return wav
+        a = max(0, int(idx[0]) - int(self.sr * 0.03))
+        b = min(x.shape[0], int(idx[-1]) + int(self.sr * 0.06))
+        return wav[:, a:b]
+
     def part(self, text: str, dst: Path) -> dict:
         import torchaudio
         pieces, errs, secs = [], [], []
-        gap = self.torch.zeros(1, int(self.sr * GAP))
-        for c in chunks(text, self.lang):
-            e, wav = self.say(c)
-            wav = self.fade(wav)
+        ck = dst.parent / "_chunks"               # 문장 저장본 — 중간에 멈추거나 다시 띄워도 여기부터 이어 만든다
+        ck.mkdir(parents=True, exist_ok=True)
+        cs = chunks(text, self.lang)
+        for i, c in enumerate(cs):
+            key = hashlib.sha1(f"{self.lang}|{REF[self.lang]}|{EXAGGERATION}|{CFG}|{GEN_KW}|{NATURAL}|n1|{c}"
+                               .encode()).hexdigest()[:16]
+            f, meta = ck / f"{key}.wav", ck / f"{key}.json"
+            if f.exists() and meta.exists():
+                wav, _ = torchaudio.load(str(f))
+                e = json.loads(meta.read_text(encoding="utf-8"))["err"]
+            else:
+                e, wav = self.say(c)
+                wav = self.fade(self.trim(wav) if NATURAL else wav)
+                torchaudio.save(str(f), wav, self.sr)
+                meta.write_text(json.dumps({"err": e, "text": c}, ensure_ascii=False), encoding="utf-8")
+                self.restart_if_heavy()
+            gap = self.torch.zeros(1, int(self.sr * pause_after(c, cs[i + 1] if i + 1 < len(cs) else None)))
             pieces += [wav, gap]
             errs.append(e)
             secs.append(round((wav.shape[1] + gap.shape[1]) / self.sr, 3))   # 화면 자막 시간표용(늘리기 전 길이)
         out = self.torch.cat(pieces, dim=1)
         torchaudio.save(str(dst), out, self.sr)
-        return {"sec": out.shape[1] / self.sr, "max_err": max(errs), "chunks": len(errs), "chunk_secs": secs}
+        return {"sec": out.shape[1] / self.sr, "max_err": max(errs), "chunks": len(errs), "chunk_secs": secs,
+                "gpu_gb": round(self.mps_gb(), 1)}
 
 
 def make_voice(script: dict, out: Path) -> None:
@@ -480,7 +614,7 @@ def make_voice(script: dict, out: Path) -> None:
         if "text" not in p:
             continue
         if p.get("fixed"):
-            h = hashlib.sha1(f"{lang}|{REF[lang]}|{EXAGGERATION}|{CFG}|{GAP}|clk|{p['text']}".encode()).hexdigest()[:12]
+            h = hashlib.sha1(f"{lang}|{REF[lang]}|{EXAGGERATION}|{CFG}|{GAP}|clk|{'nat' if NATURAL else ''}|sp1|{p['text']}".encode()).hexdigest()[:12]
             dst = CACHE / f"{p['id']}_{lang}_{h}.wav"
             if dst.exists():
                 p["audio"] = str(dst)
@@ -491,7 +625,8 @@ def make_voice(script: dict, out: Path) -> None:
         t0 = time.time()
         info = v.part(p["text"], dst)
         p["audio"], p["qc"] = str(dst), info
-        log(f"{p['title']}: {info['sec']:.0f}초 · {time.time() - t0:.0f}초 걸림 · 최대 오류 {info['max_err']:.0%}")
+        log(f"{p['title']}: {info['sec']:.0f}초 · {time.time() - t0:.0f}초 걸림 · 최대 오류 {info['max_err']:.0%}"
+            f" · GPU {info['gpu_gb']}GB")
         (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
@@ -542,6 +677,7 @@ def mix(script: dict, out: Path) -> Path:
         body = dur(f) / (SPEED if slow else 1)
         gain = max(-20.0, min(20.0, -16.0 - loudness(f)))
         filters.append(f"[{i}:a]aresample=44100,aformat=channel_layouts=stereo,"
+                       + ("adeclick," if "song" not in p else "")      # 낭독에 남은 '칙' 고치기
                        + (f"atempo={SPEED}," if slow else "")
                        + f"volume={gain:.2f}dB,alimiter=limit=0.84:attack=5:release=80:level=disabled,"
                        + f"afade=t=in:d=0.02,afade=t=out:st={max(0.0, body - 0.02):.3f}:d=0.02,"
