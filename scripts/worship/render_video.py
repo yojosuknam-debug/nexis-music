@@ -169,7 +169,7 @@ def main() -> int:
                     seq[-1] = (last, sec + rest)
                 if mk["k"].startswith("topic"):
                     add(f"pm-{mk['k']}-pray", lambda lead=lead: sl.caption(lang, date, "prayer_meeting", pray, p["title"],
-                                                                         sentences(lead, lang)[0],
+                                                                         sentences(lead, lang),   # 세 문장 모두
                                                                          sl.BG_DIR / "기도.png"), mk["end"] - mk["speak_end"])
                 used = mk["end"]
             if seq:

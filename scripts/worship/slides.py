@@ -142,8 +142,9 @@ def sermon(lang: str, date: str, title: str, sentence: str, bg: Path, point: str
     return caption(lang, date, "sermon", LABELS[lang]["sermon"] + (f"  ·  {point}" if point else ""), title, sentence, bg)
 
 
-def caption(lang: str, date: str, current: str, label: str, title: str, sentence: str, bg: Path) -> Image.Image:
-    """자막 화면(부름·기도·말씀·주기도문·축복) — 위에 순서 제목(명조), 아래 지금 문장(고딕, 반투명 띠)."""
+def caption(lang: str, date: str, current: str, label: str, title: str, sentence: str | list[str], bg: Path) -> Image.Image:
+    """자막 화면(부름·기도·말씀·주기도문·축복) — 위에 순서 제목(명조), 아래 지금 문장(고딕, 반투명 띠).
+    sentence 가 목록이면 문장마다 새 줄로 모두 보인다(기도회 '함께 기도합니다' 화면 — 제목의 세 문장 전부, 10-24)."""
     im = background(bg, 0.5, 4)
     d = chrome(im, lang, date, current)
     ft = font(SERIF_B, 64)
@@ -155,10 +156,20 @@ def caption(lang: str, date: str, current: str, label: str, title: str, sentence
     d.text(((W - fl.getlength(lab)) // 2, 252), lab, font=fl, fill=GOLD)
     d.rounded_rectangle((W // 2 - 60, 404, W // 2 + 60, 407), 2, fill=GOLD)
     fs = font(SANS_B, 50 if lang == "ko" else 46)
-    lines = wrap(sentence, fs, 1500)[:3]
-    lh = int(fs.size * 1.5)
-    box_h = lh * len(lines) + 70
-    y0 = 800 - box_h
+    if isinstance(sentence, list):                 # 여러 문장 — 띠가 제목 줄(407) 아래·화면 아래쪽 안에 들어가게 글씨를 줄인다
+        while True:
+            lines = [ln for x in sentence for ln in wrap(x, fs, 1500)]
+            lh = int(fs.size * 1.45)
+            if lh * len(lines) + 70 <= 860 - 440 or fs.size <= 32:
+                break
+            fs = font(SANS_B, fs.size - 2)
+        box_h = lh * len(lines) + 70
+        y0 = max(440, 820 - box_h)
+    else:
+        lines = wrap(sentence, fs, 1500)[:3]
+        lh = int(fs.size * 1.5)
+        box_h = lh * len(lines) + 70
+        y0 = 800 - box_h
     band = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(band).rounded_rectangle((170, y0, W - 170, y0 + box_h), 22, fill=(10, 10, 14, 150))
     im.paste(band, (0, 0), band)
