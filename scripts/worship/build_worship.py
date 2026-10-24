@@ -32,6 +32,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 OUT = Path(os.environ.get("WORSHIP_OUT", ROOT / "output" / "worship"))
 CACHE = OUT / "cache"
+MUSIC_DIR = Path(os.environ.get("WORSHIP_MUSIC_DIR", OUT.parent / "music"))   # 직접 연주·자작 곡 폴더(맥미니 ~/Work/nexis-worship/music)
 VOICE_DIR = Path(os.environ.get("WORSHIP_REF_DIR", r"D:\YH\voice-lab\ref"))   # 사용자 녹음(레포 밖, 비공개)
 THREADS = int(os.environ.get("WORSHIP_THREADS", "8"))   # 미니PC 는 3 (다른 서비스 몫을 남긴다)
 DEVICE = os.environ.get("WORSHIP_DEVICE", "cpu")   # 맥미니 = mps(Apple GPU). Whisper 는 MPS 미지원이라 늘 CPU
@@ -45,7 +46,7 @@ QT_ELIGIBLE = os.environ.get("WORSHIP_QT_ELIGIBLE", "")
 QT_START, QT_ORDER_SEED = dt.date(2026, 9, 15), "malsseumlog-insta-v1"   # qt_insta.py 의 START·ORDER_SEED 와 같아야 함
 RADIO_JSON = "https://music.yojosuknam.com/album/radio.json"
 TEXT_MODEL = "gemini-3.1-pro-preview"   # 2.5-pro 는 신규 사용 불가(10-22 404)
-MAX_MIN = 20.0
+MAX_MIN = 25.0   # 기도회(약 3~4분)가 들어가 20 → 25분(10-24). 넘으면 응답 찬양을 뺀다
 UA = "Mozilla/5.0 NexisWorship/1.0"
 
 # 억양: '구연동화 같다'(10-22) → 감정 강도를 낮춘다.
@@ -194,7 +195,12 @@ PROMPT = {
 {{"call": "예배의 부름 — 3~4문장. 듣는 이를 예배로 초대하고 마지막 문장은 찬양으로 마음을 열자는 말",
   "prayer": "여는 기도 — 350~450자. 감사·고백·말씀을 사모하는 마음, '예수님의 이름으로 기도합니다. 아멘.'으로 끝",
   "sermon": "말씀 — 2,000~2,300자. 도입 → 세 가지 요점 → 맺음. 오늘 본문 구절만 인용",
-  "song2_intro": "결단 기도 뒤 응답 찬양으로 넘어가는 한 문장"}}
+  "song2_intro": "결단 기도 뒤 응답 찬양으로 넘어가는 한 문장",
+  "prayer_meeting": {{"intro": "기도회로 초대하는 1~2문장 — 함께 마음을 모아 기도하자는 말",
+                      "topics": ["'첫째,'로 시작 — 오늘 말씀을 삶에서 살아 내도록 기도하자는 인도 2문장",
+                                 "'둘째,'로 시작 — 가정과 이웃, 아프고 지친 이들을 위해 기도하자는 인도 2문장",
+                                 "'셋째,'로 시작 — 교회와 나라, 세상을 위해 기도하자는 인도 2문장"],
+                      "close": "기도회를 맺으며 주님 가르쳐 주신 기도로 이어 가자는 한 문장"}}}}
 
 규칙:
 - 소리 내어 읽을 글입니다. 괄호·따옴표·번호표·'첫째:' 같은 표기·이모지를 쓰지 말고 말로 풀어 쓰세요.
@@ -216,7 +222,12 @@ script for a 20-minute worship service for someone listening alone, like radio. 
 {{"call": "call to worship — 3 to 4 sentences, ending with an invitation to open our hearts in song",
   "prayer": "opening prayer — 150 to 200 words, thanksgiving, confession, longing for the word; end with 'In Jesus' name we pray. Amen.'",
   "sermon": "sermon — 1,000 to 1,150 words. introduction, three points, conclusion. Quote only today's verses",
-  "song2_intro": "one sentence leading from the closing prayer into a response song"}}
+  "song2_intro": "one sentence leading from the closing prayer into a response song",
+  "prayer_meeting": {{"intro": "1 to 2 sentences inviting everyone into a time of prayer together",
+                      "topics": ["starts with 'First,' — 2 sentences leading prayer to live out today's word",
+                                 "starts with 'Second,' — 2 sentences leading prayer for families, neighbors, the sick and weary",
+                                 "starts with 'Third,' — 2 sentences leading prayer for the church, the nation and the world"],
+                      "close": "one sentence closing the prayer time and leading into the Lord's Prayer"}}}}
 
 Rules:
 - This will be read aloud. No brackets, quotation marks, bullet labels like 'First:', or emoji; write it as speech.
@@ -250,23 +261,31 @@ def clean_speech(s: str) -> str:
     return s
 
 
-def pick_songs(lang: str, day: dt.date) -> list[dict]:
-    """찬양 2곡 — Still Waters 채널의 가사 있는 곡. 한국어 날은 한국어 가사 곡(지금은 '천막 아래' 7곡)."""
-    data = http_json(RADIO_JSON)
-    pool = []
-    for a in data["albums"]:
-        if a.get("station") != "Still Waters":
-            continue
-        for t in a["tracks"]:
-            pool.append({**t, "album": a["title"], "slug": a["slug"], "page": a["page"], "cover": a["cover"]})
-    lyr = json.loads((HERE / "songs.json").read_text(encoding="utf-8"))   # 가사 언어 표(곡 고르기용)
-    ok = {(s["slug"], s["n"]) for s in lyr if s["lang"] == lang}
-    cand = [t for t in pool if (t["slug"], t["n"]) in ok and 120_000 <= int(t.get("ms") or 0) <= 300_000]
-    cand.sort(key=lambda t: (t["slug"], t["n"]))
-    if len(cand) < 2:
-        raise RuntimeError(f"{lang} 찬양 후보가 부족합니다({len(cand)}곡)")
-    i = day.toordinal() * 2 % len(cand)
-    return [cand[i], cand[(i + 1) % len(cand)]]
+def pick_songs(lang: str, day: dt.date) -> dict:
+    """예배 자리별 곡 — music.json 대장에서 권리 확인(verified)된 곡만(docs/worship-order.md).
+    open = 함께 부르는 찬송(저작권 만료 곡 직접 반주 → 자작 찬송가 → 없으면 CCM), response = 응답 찬양(자작 찬송가·CCM),
+    prayer = 기도회 배경 연주곡."""
+    import music_library as ml
+    o = day.toordinal()
+    first = ml.pick("open", lang, o)
+    return {"open": first, "response": ml.pick("response", lang, o, {first["id"]}), "prayer": ml.pick("prayer", lang, o)}
+
+
+SONG_TITLE = {"hymn_pd": ("함께 찬송", "Hymn"), "hymn_own": ("찬송", "Hymn"), "ccm": ("찬양", "Song of Praise")}
+PRAY_SEC = float(os.environ.get("WORSHIP_PRAY_SEC", "40"))   # 기도회 제목마다 함께 기도하는 시간(초)
+
+
+def song_title(song: dict, lang: str, response: bool = False) -> str:
+    if response:
+        return "응답 찬양" if lang == "ko" else "Response Song"
+    return SONG_TITLE.get(song.get("type", "ccm"), SONG_TITLE["ccm"])[0 if lang == "ko" else 1]
+
+
+def pm_part(lang: str, pm: dict, bed: dict) -> dict:
+    """기도회 — 운영자 목소리로 '첫째, …를 위해 기도합시다' 인도 → 연주곡 위에서 PRAY_SEC 초 함께 기도(×3)."""
+    return {"id": "prayer_meeting", "title": "기도회" if lang == "ko" else "Prayer Time", "music": bed,
+            "pm": {"intro": clean_speech(pm["intro"]), "topics": [clean_speech(t) for t in pm["topics"]][:3],
+                   "close": clean_speech(pm["close"])}}
 
 
 def qt_from_data(day: dt.date) -> dict:
@@ -311,7 +330,7 @@ def make_script(lang: str, day: dt.date, out: Path) -> dict:
     parts = [
         {"id": "call", "title": "예배의 부름" if lang == "ko" else "Call to Worship",
          "text": OPENING[lang] + " " + clean_speech(g["call"])},
-        {"id": "song1", "title": "찬양" if lang == "ko" else "Song of Praise", "song": songs[0]},
+        {"id": "song1", "title": song_title(songs["open"], lang), "song": songs["open"]},
         {"id": "prayer", "title": "기도" if lang == "ko" else "Prayer", "text": clean_speech(g["prayer"])},
         {"id": "reading", "title": "성경 봉독" if lang == "ko" else "Scripture Reading",
          # 옛 성경체는 마침표가 없어 절마다 끊어 읽는다(글자는 그대로, 괄호 기호만 뺀다)
@@ -321,7 +340,8 @@ def make_script(lang: str, day: dt.date, out: Path) -> dict:
         {"id": "sermon", "title": qt["title"], "text": clean_speech(g["sermon"])},
         {"id": "closing", "title": "결단 기도" if lang == "ko" else "Closing Prayer",
          "text": clean_speech(qt["prayer"]) + " " + clean_speech(g["song2_intro"])},
-        {"id": "song2", "title": "응답 찬양" if lang == "ko" else "Response Song", "song": songs[1]},
+        {"id": "song2", "title": song_title(songs["response"], lang, True), "song": songs["response"]},
+        pm_part(lang, g["prayer_meeting"], songs["prayer"]),
         {"id": "lords_prayer", "title": "주기도문" if lang == "ko" else "The Lord's Prayer",
          "text": FIXED[lang]["lords_prayer"], "fixed": True},
         {"id": "blessing", "title": "축복의 말씀" if lang == "ko" else "Words of Blessing",
@@ -332,7 +352,8 @@ def make_script(lang: str, day: dt.date, out: Path) -> dict:
     out.mkdir(parents=True, exist_ok=True)
     (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
     n = sum(len(p.get("text", "")) for p in parts)
-    log(f"원고 {n}자 · 찬양 {songs[0]['title']} / {songs[1]['title']}")
+    log(f"원고 {n}자 · 찬송 {songs['open']['title']}({songs['open']['type']}) / 응답 {songs['response']['title']}"
+        f"({songs['response']['type']}) / 기도회 배경 {songs['prayer']['title']}")
     return script
 
 
@@ -353,7 +374,8 @@ BOOKS_EN = dict(zip(
 TRANSLATE = """Translate this Korean worship script into natural, warm American English for spoken delivery by a calm pastor.
 Keep the meaning and structure; do not add content. Write numbers as words; no brackets, quotation marks or emoji.
 Do not quote Bible verses in any translation of your own beyond what the Korean text says.
-Return one JSON object with exactly these keys: title, call, prayer, sermon, closing.
+Return one JSON object with exactly these keys: title, call, prayer, sermon, closing, pm_intro, pm_topics, pm_close.
+pm_topics is an array of three strings that start with "First,", "Second," and "Third,".
 
 {body}"""
 
@@ -371,20 +393,23 @@ def make_script_en(ko: dict, day: dt.date, out: Path) -> dict:
     P = {p["id"]: p for p in ko["parts"]}
     strip_open = lambda t: t.replace(OPENING["ko"], "").strip()
     body = json.dumps({"title": ko["title"], "call": strip_open(P["call"]["text"]), "prayer": P["prayer"]["text"],
-                       "sermon": P["sermon"]["text"], "closing": P["closing"]["text"]}, ensure_ascii=False)
+                       "sermon": P["sermon"]["text"], "closing": P["closing"]["text"],
+                       "pm_intro": P["prayer_meeting"]["pm"]["intro"], "pm_topics": P["prayer_meeting"]["pm"]["topics"],
+                       "pm_close": P["prayer_meeting"]["pm"]["close"]}, ensure_ascii=False)
     g = gemini_json(env()["GEMINI_API_KEY"], TRANSLATE.format(body=body))
     ref, verses = kjv(ko["passage"])
     songs = pick_songs("en", day)
     parts = [
         {"id": "call", "title": "Call to Worship", "text": OPENING["en"] + " " + clean_speech(g["call"])},
-        {"id": "song1", "title": "Song of Praise", "song": songs[0]},
+        {"id": "song1", "title": song_title(songs["open"], "en"), "song": songs["open"]},
         {"id": "prayer", "title": "Prayer", "text": clean_speech(g["prayer"])},
         {"id": "reading", "title": "Scripture Reading", "verbatim": True,
          "text": f"Hear the word of the Lord from {speak_ref(ref, 'en')}. "
                  + " ".join(clean_speech(v["text"]) for v in verses) + " This is the word of the Lord."},
         {"id": "sermon", "title": clean_speech(g["title"]), "text": clean_speech(g["sermon"])},
         {"id": "closing", "title": "Closing Prayer", "text": clean_speech(g["closing"])},
-        {"id": "song2", "title": "Response Song", "song": songs[1]},
+        {"id": "song2", "title": "Response Song", "song": songs["response"]},
+        pm_part("en", {"intro": g["pm_intro"], "topics": g["pm_topics"], "close": g["pm_close"]}, songs["prayer"]),
         {"id": "lords_prayer", "title": "The Lord's Prayer", "text": FIXED["en"]["lords_prayer"], "fixed": True},
         {"id": "blessing", "title": "Words of Blessing", "text": FIXED["en"]["blessing"], "fixed": True},
     ]
@@ -392,7 +417,8 @@ def make_script_en(ko: dict, day: dt.date, out: Path) -> dict:
               "verses": verses, "parts": parts, "from": "ko"}
     out.mkdir(parents=True, exist_ok=True)
     (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
-    log(f"영어판 원고 {sum(len(p.get('text', '')) for p in parts)}자 · {ref} · 찬양 {songs[0]['title']} / {songs[1]['title']}")
+    log(f"영어판 원고 {sum(len(p.get('text', '')) for p in parts)}자 · {ref} · 찬송 {songs['open']['title']} / 응답 {songs['response']['title']}"
+        f" / 기도회 배경 {songs['prayer']['title']}")
     return script
 
 
@@ -611,6 +637,18 @@ def make_voice(script: dict, out: Path) -> None:
     v = Voice(lang)
     CACHE.mkdir(parents=True, exist_ok=True)
     for p in script["parts"]:
+        if "pm" in p:                             # 기도회 인도 — 여는 말·제목 셋·맺는 말을 따로 만든다(사이에 함께 기도하는 시간)
+            t0, pa = time.time(), {}
+            items = [("intro", p["pm"]["intro"])] + [(f"topic{i + 1}", x) for i, x in enumerate(p["pm"]["topics"])] \
+                + [("close", p["pm"]["close"])]
+            for k, txt in items:
+                dst = out / f"pm_{k}.wav"
+                pa[k] = {"audio": str(dst), "qc": v.part(txt, dst)}
+            p["pm_audio"] = pa
+            log(f"{p['title']}: 인도 {len(items)}마디 · {time.time() - t0:.0f}초 걸림 · 최대 오류 "
+                f"{max(x['qc']['max_err'] for x in pa.values()):.0%}")
+            (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
+            continue
         if "text" not in p:
             continue
         if p.get("fixed"):
@@ -655,37 +693,87 @@ def loudness(f: Path) -> float:
     return float(m.group(1)) if m and m.group(1) != "-inf" else -16.0
 
 
+def song_audio(s: dict) -> Path:
+    """대장의 곡 → 음원 파일. 채널 곡은 내려받아 cache/, 직접 연주·자작 곡은 MUSIC_DIR/<폴더>/<파일>."""
+    if s.get("source") == "local":
+        return MUSIC_DIR / s["folder"] / s["file"]
+    return download(s["url"], CACHE / f"song_{s['slug'][:40]}_{int(s['n']):02d}.mp3")
+
+
+def build_prayer_meeting(p: dict, out: Path) -> Path:
+    """기도회 한 덩어리 — 인도 목소리(여는 말 → 제목마다 인도 + PRAY_SEC 초 함께 기도 → 맺는 말)를
+    연주곡 위에 얹는다. 말할 때는 연주가 저절로 낮아진다(sidechaincompress). 화면용 시각표는 p['pm_marks']."""
+    pa = p["pm_audio"]
+    order = ["intro"] + [f"topic{i + 1}" for i in range(len(p["pm"]["topics"]))] + ["close"]
+    inputs, filt, marks, t = [], [], [], 0.0
+    for i, k in enumerate(order):
+        f = Path(pa[k]["audio"])
+        body = dur(f) / SPEED
+        gain = max(-20.0, min(20.0, -16.0 - loudness(f)))
+        pad = PRAY_SEC if k.startswith("topic") else (2.0 if k == "intro" else 0.0)
+        inputs += ["-i", str(f)]
+        filt.append(f"[{i}:a]aresample=44100,aformat=channel_layouts=stereo,adeclick,atempo={SPEED},"
+                    f"volume={gain:.2f}dB,alimiter=limit=0.84:attack=5:release=80:level=disabled,"
+                    f"afade=t=in:d=0.02,afade=t=out:st={max(0.0, body - 0.02):.3f}:d=0.02,apad=pad_dur={pad}[v{i}]")
+        marks.append({"k": k, "start": round(t, 2), "speak_end": round(t + body, 2), "end": round(t + body + pad, 2)})
+        t += body + pad
+    total = t + 3.0
+    bed = song_audio(p["music"])
+    bgain = max(-30.0, min(10.0, -27.0 - loudness(bed)))          # 배경은 낭독(-16)보다 약 11LU 작게
+    inputs += ["-stream_loop", "-1", "-i", str(bed)]
+    n = len(order)
+    filt += ["".join(f"[v{i}]" for i in range(n)) + f"concat=n={n}:v=0:a=1,apad=pad_dur=3[voice]",
+             "[voice]asplit[vs][vm]",
+             f"[{n}:a]aresample=44100,aformat=channel_layouts=stereo,volume={bgain:.2f}dB,atrim=duration={total:.2f},"
+             f"afade=t=in:d=2.5,afade=t=out:st={max(0.0, total - 4):.2f}:d=4[bed]",
+             "[bed][vs]sidechaincompress=threshold=0.02:ratio=6:attack=40:release=900[duck]",
+             "[duck][vm]amix=inputs=2:duration=longest:normalize=0[out]"]
+    dst = out / "prayer_meeting.wav"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", ";".join(filt),
+                    "-map", "[out]", "-t", f"{total:.2f}", str(dst)], check=True)
+    p["audio"], p["pm_marks"] = str(dst), marks
+    return dst
+
+
 def mix(script: dict, out: Path) -> Path:
     """순서대로 이어 붙이고 음량을 맞춘다. 20분을 넘으면 응답 찬양을 뺀다.
     음량은 부분마다 한 번 재서 고정 배율로 맞춘다 — loudnorm 동적 모드는 문장 사이 0.8초 쉼에서 음량을 끌어올렸다가
     다음 문장 첫소리에서 리미터가 급히 눌러 '칙' 소리를 냈다(10-24 사용자 지적). 부분 앞뒤는 20ms 페이드."""
+    import music_library as ml
     files = []
     for p in script["parts"]:
         if "song" in p:
             s = p["song"]
-            p["audio"] = str(download(s["url"], CACHE / f"song_{s['slug'][:40]}_{s['n']:02d}.mp3"))
+            p["audio"] = str(song_audio(s))
+            if s.get("source") == "local" and s.get("lyrics"):     # 직접 연주 찬송 — 가사.txt 로 자막 시각표
+                s["lyrics_cues"] = ml.lyrics_cues(MUSIC_DIR / s["folder"], s["lyrics"], dur(Path(p["audio"])))
+        elif "pm" in p:
+            build_prayer_meeting(p, out)
         files.append((p, Path(p["audio"])))
-    total = sum(dur(f) / (1 if "song" in p else SPEED) for p, f in files) + 1.5 * len(files)
+    whole = lambda p: "song" in p or "pm" in p                       # 이미 완성된 소리(느리게 하지 않음)
+    total = sum(dur(f) / (1 if whole(p) else SPEED) for p, f in files) + 1.5 * len(files)
     if total > MAX_MIN * 60:
         files = [(p, f) for p, f in files if p["id"] != "song2"]
-        log(f"20분 초과({total / 60:.1f}분) → 응답 찬양 뺌")
+        log(f"{MAX_MIN:g}분 초과({total / 60:.1f}분) → 응답 찬양 뺌")
     t, timeline = 0.0, []
     inputs, filters = [], []
     for i, (p, f) in enumerate(files):
         inputs += ["-i", str(f)]
-        slow = "song" not in p and SPEED != 1
+        slow = not whole(p) and SPEED != 1
         body = dur(f) / (SPEED if slow else 1)
-        gain = max(-20.0, min(20.0, -16.0 - loudness(f)))
+        gain = 0.0 if "pm" in p else max(-20.0, min(20.0, -16.0 - loudness(f)))   # 기도회는 안에서 이미 맞춤
         filters.append(f"[{i}:a]aresample=44100,aformat=channel_layouts=stereo,"
-                       + ("adeclick," if "song" not in p else "")      # 낭독에 남은 '칙' 고치기
+                       + ("adeclick," if not whole(p) else "")       # 낭독에 남은 '칙' 고치기
                        + (f"atempo={SPEED}," if slow else "")
                        + f"volume={gain:.2f}dB,alimiter=limit=0.84:attack=5:release=80:level=disabled,"
                        + f"afade=t=in:d=0.02,afade=t=out:st={max(0.0, body - 0.02):.3f}:d=0.02,"
                        + f"apad=pad_dur=1.5[a{i}]")
         d = body + 1.5
         timeline.append({"id": p["id"], "title": p["title"], "start": round(t, 1), "sec": round(d, 1),
-                         **({"song": {k: p["song"][k] for k in ("title", "album", "youtube", "cover") if k in p["song"]}}
-                            if "song" in p else {})})
+                         **({"song": {k: p["song"][k] for k in ("title", "album", "youtube", "cover", "type", "source",
+                                                                 "credits") if k in p["song"]}} if "song" in p else {}),
+                         **({"music": {k: p["music"][k] for k in ("title", "album", "youtube", "type", "source", "credits")
+                                       if k in p["music"]}, "pm_marks": p["pm_marks"]} if "pm" in p else {})})
         t += d
     concat = "".join(f"[a{i}]" for i in range(len(files))) + f"concat=n={len(files)}:v=0:a=1[out]"
     dst = out / f"worship_{script['date']}_{script['lang']}.mp3"

@@ -25,6 +25,24 @@ def stamp(sec: float) -> str:
     return f"{sec // 3600}:{sec % 3600 // 60:02d}:{sec % 60:02d}" if sec >= 3600 else f"{sec // 60:02d}:{sec % 60:02d}"
 
 
+def credits(s: dict, lang: str) -> list[str]:
+    """설명란 음악 출처 — 곡마다 종류·작사·작곡·권리 근거(docs/research/2026-10-24_예배-찬송가-저작권.md: 곡명·작사·작곡·출처 표기)."""
+    out = []
+    for t in s["timeline"]:
+        m = t.get("song") or t.get("music")
+        if not m:
+            continue
+        c = m.get("credits") or {}
+        if m.get("type") == "hymn_pd":
+            who = (f"작사 {c.get('lyricist', '')} · 작곡 {c.get('composer', '')} · 반주 운영자 직접 연주 · 공개저작물"
+                   if lang == "ko" else
+                   f"words {c.get('lyricist', '')} · music {c.get('composer', '')} · piano by the host · public domain")
+        else:
+            who = "Still Waters (yojosuknam)" + (f" {m['youtube']}" if m.get("youtube") else "")
+        out.append(f"🎵 {t['title']}: {m['title']} — {who}")
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("folder")
@@ -42,19 +60,25 @@ def main() -> int:
         name = t["title"] if t["id"] != "sermon" else (("말씀 — " if lang == "ko" else "Sermon — ") + t["title"])
         if "song" in t:
             name += f" · {t['song']['title']}"
+        if t.get("pm_marks"):                     # 기도회는 제목마다 챕터
+            chap.append(f"{stamp(t['start'] + a.preroll)} {name}")
+            chap += [f"{stamp(t['start'] + mk['start'] + a.preroll)} "
+                     + (f"기도 제목 {mk['k'][-1]}" if lang == "ko" else f"Prayer {mk['k'][-1]}")
+                     for mk in t["pm_marks"] if mk["k"].startswith("topic")]
+            continue
         chap.append(f"{stamp(t['start'] + a.preroll)} {name}")
     if lang == "ko":
         title = f"[말씀 묵상 예배] {s['title']} · {s['passage']} | {s['date'][5:].replace('-', '/')} 아침 6시"
-        desc = [f"오늘의 말씀: {s['passage']}", "매일 아침 6시, 20분 실시간 예배입니다. 언제든 다시 보며 함께 예배하세요.", "",
+        desc = [f"오늘의 말씀: {s['passage']}", "매일 아침 6시, 25분 안팎 실시간 예배입니다. 언제든 다시 보며 함께 예배하세요.", "",
                 "📖 순서"] + chap + ["", "설교와 기도는 AI의 도움으로 준비되었고, 낭독은 운영자의 목소리를 AI로 합성했습니다.",
-                                     "성경: 개역한글 · 찬양: Still Waters (yojosuknam)", "",
+                                     "성경: 개역한글(저작권 만료)", *credits(s, lang), "",
                                      f"📱 7섹션 큐티를 더 깊이 → 말씀Log {QT_LINK}", "", "#말씀묵상 #실시간예배 #큐티 #말씀Log"]
     else:
         title = f"[Worship in the Word] {s['title']} · {s['passage']} | Daily Live Worship"
-        desc = [f"Today's passage: {s['passage']}", "A 20-minute live worship service every day "
+        desc = [f"Today's passage: {s['passage']}", "A 25-minute live worship service every day "
                 "(9 PM Eastern / 6 PM Pacific). Join anytime.", "", "📖 Order of Worship"] + chap + [
                 "", "The sermon and prayers were prepared with the help of AI; the reading voice is an AI synthesis "
-                "of the host's own voice.", "Scripture: King James Version · Music: Still Waters (yojosuknam)", "",
+                "of the host's own voice.", "Scripture: King James Version (public domain)", *credits(s, lang), "",
                 f"📱 Go deeper with Malsseum Log {QT_LINK}", "", "#DailyDevotion #LiveWorship #BibleStudy"]
     json.dump({"lang": lang, "start": start.isoformat(), "title": title, "description": "\n".join(desc),
                "privacy": "public"}, sys.stdout, ensure_ascii=False, indent=1)

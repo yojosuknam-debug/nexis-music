@@ -31,13 +31,14 @@ UA = "Mozilla/5.0 NexisWorship/1.0"
 
 LABELS = {
     "ko": {"service": "말씀 묵상 예배", "ai": "설교와 기도는 AI의 도움으로 준비되었습니다 · 말씀Log",
-           "order": [("call", "부름"), ("song1", "찬양"), ("prayer", "기도"), ("reading", "봉독"), ("sermon", "말씀"),
-                     ("closing", "결단 기도"), ("song2", "응답 찬양"), ("lords_prayer", "주기도문"), ("blessing", "축복")],
+           "order": [("call", "부름"), ("song1", "찬송"), ("prayer", "기도"), ("reading", "봉독"), ("sermon", "말씀"),
+                     ("closing", "결단 기도"), ("song2", "응답 찬양"), ("prayer_meeting", "기도회"),
+                     ("lords_prayer", "주기도문"), ("blessing", "축복")],
            "sermon": "말씀", "song": "찬양", "qr": "원곡 듣기"},
     "en": {"service": "Worship in the Word", "ai": "Sermon and prayers prepared with the help of AI · Malsseum Log",
-           "order": [("call", "Call"), ("song1", "Praise"), ("prayer", "Prayer"), ("reading", "Scripture"),
-                     ("sermon", "Sermon"), ("closing", "Response"), ("song2", "Song"), ("lords_prayer", "Lord's Prayer"),
-                     ("blessing", "Blessing")],
+           "order": [("call", "Call"), ("song1", "Hymn"), ("prayer", "Prayer"), ("reading", "Scripture"),
+                     ("sermon", "Sermon"), ("closing", "Response"), ("song2", "Song"), ("prayer_meeting", "Prayer Time"),
+                     ("lords_prayer", "Lord's Prayer"), ("blessing", "Blessing")],
            "sermon": "Sermon", "song": "Praise", "qr": "Listen"},
 }
 

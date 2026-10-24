@@ -113,7 +113,7 @@ def main() -> int:
         if "song" in p:
             sp = p["song"]
             try:
-                lyr = sl.song_lyrics(sp["page"], sp["n"])
+                lyr = sp.get("lyrics_cues") or sl.song_lyrics(sp["page"], sp["n"])   # 직접 연주 찬송은 가사.txt 시각표
             except Exception:  # noqa: BLE001
                 lyr = []
             name = re.sub(r"\s*\(.*\)\s*$", "", sp["title"]) if lang == "ko" else (
@@ -127,6 +127,30 @@ def main() -> int:
                                                                sl.BG_DIR / "예배.png", sp.get("youtube", "")), en - st)
                 cur = max(cur, en)
             add(f"{t['id']}title", title_card, sec_total - cur)
+            continue
+
+        if "pm" in p:                             # 기도회 — 인도 문장(자막) → 함께 기도하는 동안 제목을 띄워 둔다
+            pray = "함께 기도합니다" if lang == "ko" else "Let us pray together"
+            texts = {"intro": p["pm"]["intro"], "close": p["pm"]["close"],
+                     **{f"topic{i + 1}": x for i, x in enumerate(p["pm"]["topics"])}}
+            cur = 0.0
+            for mk in t["pm_marks"]:
+                lead = texts[mk["k"]]
+                sents = sentences(lead, lang)
+                speak = mk["speak_end"] - mk["start"]
+                total_chars = sum(len(x) for x in sents) or 1
+                for si, sent in enumerate(sents):
+                    add(f"pm-{mk['k']}-{si}", lambda sent=sent: sl.caption(lang, date, "prayer_meeting", L["service"],
+                                                                        p["title"], sent, sl.BG_DIR / "기도.png"),
+                        speak * len(sent) / total_chars)
+                if mk["k"].startswith("topic"):
+                    add(f"pm-{mk['k']}-pray", lambda lead=lead: sl.caption(lang, date, "prayer_meeting", pray, p["title"],
+                                                                         sentences(lead, lang)[0],
+                                                                         sl.BG_DIR / "기도.png"), mk["end"] - mk["speak_end"])
+                cur = mk["end"]
+            if seq:
+                last, sec = seq[-1]
+                seq[-1] = (last, sec + max(0.0, sec_total - cur))
             continue
 
         slow = bw.SPEED
