@@ -71,8 +71,8 @@ PARA = os.environ.get("WORSHIP_CHUNK", "") == "para"   # 비교 시험: 1~3문�
 SHORT = {"ko": 12, "en": 25}   # 이보다 짧은 문장은 다음 문장과 붙인다
 CHUNK_CHARS = {"ko": 60, "en": 130}   # 이보다 긴 문장은 쉼표·절 끝에서 나눈다(길면 엔진이 갑자기 빨라진다, 10-24)
 CLAUSE_END = tuple("고 며 서 니 면 지 도 만 데 라 요".split())
-# 기도회 인도는 숨 쉬듯 짧은 마디로(10-24 '첫째, …삶을 살게 하옵소서 같은 문장은 너무 빨리 읽는다' — 긴 문장은 엔진이 몰아 읽는다)
-PM_CHUNK = {"ko": 26, "en": 60}
+# 기도회 인도는 원고를 처음부터 짧은 문장으로 쓰고(프롬프트) 원고의 쉼표·마침표에서만 넉넉히 쉰다.
+# 마디를 억지로 잘라 쉼표를 붙였더니 '어떤 상황에서도, / 그리고,'처럼 쉼 자리가 어색했다(10-24 사용자) → 자르지 않는다.
 PM_PAUSE = {",": 0.45, ".": 1.00, "!": 1.00}   # 쉼표 없을 때 끊어도 자연스러운 어절 끝(1분 묵상 _breathe 참고)
 # 엔진이 잘못 읽는 말 — 낭독에 넣는 글만 바꾸고 자막은 그대로(10-24 '말씀으그'·'아이' 지적). 긴 것부터 바꾼다
 SPEAK_KO = {"말씀 Log": "말씀로그", "말씀Log": "말씀로그", "Log": "로그", "AI": "에이아이", "QT": "큐티"}
@@ -200,13 +200,14 @@ PROMPT = {
   "sermon": "말씀 — 2,000~2,300자. 도입 → 세 가지 요점 → 맺음. 오늘 본문 구절만 인용",
   "song2_intro": "결단 기도 뒤 응답 찬양으로 넘어가는 한 문장",
   "prayer_meeting": {{"intro": "기도회로 초대하는 1~2문장 — 함께 마음을 모아 기도하자는 말",
-                      "topics": ["'첫째,'로 시작해 '…을 위해 기도합시다.'로 맺는 인도 2문장 — 오늘 말씀을 삶에서 살아 내도록",
-                                 "'둘째,'로 시작해 '…을 위해 기도합시다.'로 맺는 인도 2문장 — 가정과 이웃, 아프고 지친 이들",
-                                 "'셋째,'로 시작해 '…을 위해 기도합시다.'로 맺는 인도 2문장 — 교회와 나라, 세상"],
+                      "topics": ["'첫째,'로 시작하는 짧은 인도 3문장 — 오늘 말씀을 삶에서 살아 내도록. 마지막은 '…을 위해 기도합시다.'",
+                                 "'둘째,'로 시작하는 짧은 인도 3문장 — 가정과 이웃, 아프고 지친 이들. 마지막은 '…을 위해 기도합시다.'",
+                                 "'셋째,'로 시작하는 짧은 인도 3문장 — 교회와 나라, 세상. 마지막은 '…을 위해 기도합시다.'"],
                       "close": "기도회를 맺고 '이어서 주님 가르쳐 주신 기도로 함께 기도하겠습니다'로 넘어가는 한 문장"}}}}
 
 기도회 인도 문장은 회중에게 기도 제목을 알려 주는 말입니다. '…하옵소서'처럼 기도문 자체를 쓰지 마세요.
-기도회 문장은 특히 짧게 — 한 문장 40자 안팎(천천히 읽고 자막 두 줄 안에 들어가게).
+기도회 문장은 특히 짧게 — 한 문장 15~30자, 소리 내어 천천히 읽기 좋은 말로. 쉼표는 말하다 실제로 숨을 쉬는 자리에만(한 문장에 많아야 하나).
+  예) "첫째, 오늘 말씀을 붙들고 기도합시다. 어떤 형편에서도 기뻐하고 감사하도록. 주님 뜻대로 사는 하루를 위해 기도합시다."
 기도회 뒤에 주기도문과 축복의 말씀이 이어지므로 '예배를 마칩니다'라고 쓰지 마세요.
 
 규칙:
@@ -231,12 +232,13 @@ script for a 20-minute worship service for someone listening alone, like radio. 
   "sermon": "sermon — 1,000 to 1,150 words. introduction, three points, conclusion. Quote only today's verses",
   "song2_intro": "one sentence leading from the closing prayer into a response song",
   "prayer_meeting": {{"intro": "1 to 2 sentences inviting everyone into a time of prayer together",
-                      "topics": ["starts with 'First,' and ends with 'Let us pray for …' — 2 sentences: living out today's word",
-                                 "starts with 'Second,' and ends with 'Let us pray for …' — 2 sentences: families, neighbors, the sick and weary",
-                                 "starts with 'Third,' and ends with 'Let us pray for …' — 2 sentences: the church, the nation and the world"],
+                      "topics": ["starts with 'First,' and ends with 'Let us pray for …' — 3 short sentences: living out today's word",
+                                 "starts with 'Second,' and ends with 'Let us pray for …' — 3 short sentences: families, neighbors, the sick and weary",
+                                 "starts with 'Third,' and ends with 'Let us pray for …' — 3 short sentences: the church, the nation and the world"],
                       "close": "one sentence closing the prayer time and leading into the Lord's Prayer"}}}}
 
 The prayer-time lines guide the listeners on what to pray for; do not write the prayer itself.
+Keep prayer-time sentences short (5 to 12 words) and easy to read aloud slowly; use a comma only where a speaker would breathe.
 The Lord's Prayer and a blessing follow, so do not say the service is ending.
 
 Rules:
@@ -438,27 +440,14 @@ def make_script_en(ko: dict, day: dt.date, out: Path) -> dict:
 
 
 # ── 2) 목소리 ─────────────────────────────────────────────────────────────
-def split_phrases(s: str, lim: int, short: int = 8) -> list[str]:
-    """긴 문장을 가운데에 가까운 쉼표·절 끝(…고·…며·…처럼)에서 반씩 나눈다 — 앞뒤 마디 길이가 고르게."""
-    if len(s) <= lim:
-        return [s]
-    rng = range(short, len(s) - short)
-    cut = [i for i in rng if s[i] == " " and (s[i - 1] == "," or s[i - 1] in CLAUSE_END or s[i - 2:i] == "처럼")]         or [i for i in rng if s[i] == " " and s[i - 1] in "을를이가에게로"]         or [i for i in rng if s[i] == " " and s[i - 1] != "의"] or [i for i in rng if s[i] == " "]   # '믿음의, 자녀가'처럼 꾸밈말 뒤는 피한다
-    if not cut:
-        return [s]
-    i = min(cut, key=lambda x: abs(x - len(s) / 2))
-    left = s[:i].strip()
-    return split_phrases(left if left.endswith(",") else left + ",", lim, short) + split_phrases(s[i:].strip(), lim, short)
-
-
 def chunks(text: str, lang: str, pm: bool = False) -> list[str]:
     """한 문장씩(10-23 '쉼 없이 빠르다' — 묶으면 엔진이 문장 사이를 쉬지 않고 이어 읽는다). 사이 쉼은 GAP.
-    pm=True(기도회 인도)는 PM_CHUNK 안쪽의 고른 마디로 나눈다."""
+    pm=True(기도회 인도)는 원고의 쉼표에서도 끊어 PM_PAUSE 만큼 쉰다(문장 안 마디를 따로 읽어 몰아 읽지 않게)."""
     sents = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
-    out, lim = [], (PM_CHUNK if pm else CHUNK_CHARS)[lang]
+    out, lim = [], CHUNK_CHARS[lang]
     for s in sents:
         if pm:
-            out += split_phrases(s, lim)
+            out += [x.strip() for x in re.split(r"(?<=,)\s+", s) if x.strip()]
             continue
         while len(s) > lim:                       # 긴 문장은 쉼표에서, 없으면 절 끝(…고·…며·…서) 띄어쓰기에서 자른다
             cut = s.rfind(",", lim // 3, lim)
