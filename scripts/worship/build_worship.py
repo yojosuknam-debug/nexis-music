@@ -680,6 +680,7 @@ def make_voice(script: dict, out: Path) -> None:
 # ── 3) 이어 붙이기 ────────────────────────────────────────────────────────
 def download(url: str, dst: Path) -> Path:
     if not dst.exists():
+        dst.parent.mkdir(parents=True, exist_ok=True)   # 미니PC 조립은 목소리를 안 만들어 cache/ 가 없다
         p = urllib.parse.urlsplit(url)
         url = p._replace(path=urllib.parse.quote(p.path)).geturl()
         with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=120) as r:

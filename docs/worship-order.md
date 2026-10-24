@@ -19,6 +19,18 @@
 | 9 | 주기도문 `lords_prayer` | 고정 낭독(저장본 재사용) | 목소리 |
 | 10 | 축복의 말씀 `blessing` | 민수기 6:24-26 | 목소리 |
 
+## 나눠 맡기 (10-24 확정)
+
+| | 맥미니 `worship-mac.sh` | 미니PC `worship-assemble.sh` |
+|---|---|---|
+| 하는 일 | 원고(Gemini) + **목소리**(낭독·기도회 인도) — 한 편 약 35분 | 찬송·기도회 배경 받기 → **합치기 → 자막 화면 → 영상** → 방송 정보 → (선택) 유튜브 예약 |
+| 넘기는 것 | 목소리 묶음 `outbox/worship-voice/<날짜>_<언어>/`(script.json + 낭독 wav + bundle.json) → 자동 이관(10분 주기) | 받는 곳 `/mnt/external/macmini/<이관 묶음>/worship-voice/<날짜>_<언어>/` |
+| 자막 | 문장마다 걸린 시간(qc.chunk_secs)을 script.json 에 담아 보냄 | 그 시간표로 화면·자막을 만든다(장·절 숫자 표기 포함) |
+| 직접 연주 곡 | — | **`/mnt/external/nexis-worship/music/<곡>/`** 에 둔다(조립하는 곳) |
+
+- 유튜브 방송 예약은 `SCHEDULE=1` 일 때만, 송출은 `worship-stream.sh`. **매일 자동 실행(크론)·유튜브 송출은 아직 끔**(사용자 10-24: 수동 시험까지만).
+- 맥미니에서 전부 해 보려면 `FULL=1 bash worship-mac.sh …`(비교·비상용). 옛 미니PC 단독 방식 `worship-daily.sh` 는 비상용.
+
 ## 음악 대장 `scripts/worship/music.json`
 
 곡마다 **종류·언어·권리 근거**를 적고, `license.status` 가 `verified` 인 곡만 예배에 나온다.
@@ -36,7 +48,7 @@
 
 ## 곡 보내는 법 (직접 연주 · 자작곡)
 
-맥미니 `~/Work/nexis-worship/music/<곡-id>/` 에 아래를 둔다(보내 주시면 제가 넣음).
+**미니PC** `/mnt/external/nexis-worship/music/<곡-id>/` 에 아래를 둔다(조립을 미니PC 가 하므로 — 보내 주시면 제가 넣음).
 
 ```
 music/amazing-grace-piano/
