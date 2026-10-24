@@ -51,8 +51,8 @@ UA = "Mozilla/5.0 NexisWorship/1.0"
 # 억양: '구연동화 같다'(10-22) → 감정 강도를 낮춘다.
 # '쉼 없이 빠르다'(10-23) → 한 문장씩 만들고 문장 사이 0.8초 쉼, cfg 0.4(서두르지 않게) — 비교 샘플 '내목소리_천천히' 방식
 EXAGGERATION, CFG = 0.25, 0.4
-# 비교 시험(10-24 조사 docs/research/2026-10-24_내목소리-TTS-자연스럽게.md): WORSHIP_TUNE=1 → 탐색 시작값
-TUNE = os.environ.get("WORSHIP_TUNE", "") == "1"
+# 조사(docs/research/2026-10-24_내목소리-TTS-자연스럽게.md) 탐색 시작값 — 10-24 비교 샘플 ③ 사용자 확정 → 기본 켬(0 이면 옛 값)
+TUNE = os.environ.get("WORSHIP_TUNE", "1") == "1"
 if TUNE:
     EXAGGERATION, CFG = 0.20, 0.35
 GEN_KW = {"temperature": 0.75, "repetition_penalty": 1.2, "min_p": 0.05} if TUNE else {}   # 1.2 = chatterbox master 기본값
