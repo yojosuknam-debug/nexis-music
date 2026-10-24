@@ -197,10 +197,13 @@ PROMPT = {
   "sermon": "말씀 — 2,000~2,300자. 도입 → 세 가지 요점 → 맺음. 오늘 본문 구절만 인용",
   "song2_intro": "결단 기도 뒤 응답 찬양으로 넘어가는 한 문장",
   "prayer_meeting": {{"intro": "기도회로 초대하는 1~2문장 — 함께 마음을 모아 기도하자는 말",
-                      "topics": ["'첫째,'로 시작 — 오늘 말씀을 삶에서 살아 내도록 기도하자는 인도 2문장",
-                                 "'둘째,'로 시작 — 가정과 이웃, 아프고 지친 이들을 위해 기도하자는 인도 2문장",
-                                 "'셋째,'로 시작 — 교회와 나라, 세상을 위해 기도하자는 인도 2문장"],
-                      "close": "기도회를 맺으며 주님 가르쳐 주신 기도로 이어 가자는 한 문장"}}}}
+                      "topics": ["'첫째,'로 시작해 '…을 위해 기도합시다.'로 맺는 인도 2문장 — 오늘 말씀을 삶에서 살아 내도록",
+                                 "'둘째,'로 시작해 '…을 위해 기도합시다.'로 맺는 인도 2문장 — 가정과 이웃, 아프고 지친 이들",
+                                 "'셋째,'로 시작해 '…을 위해 기도합시다.'로 맺는 인도 2문장 — 교회와 나라, 세상"],
+                      "close": "기도회를 맺고 '이어서 주님 가르쳐 주신 기도로 함께 기도하겠습니다'로 넘어가는 한 문장"}}}}
+
+기도회 인도 문장은 회중에게 기도 제목을 알려 주는 말입니다. '…하옵소서'처럼 기도문 자체를 쓰지 마세요.
+기도회 뒤에 주기도문과 축복의 말씀이 이어지므로 '예배를 마칩니다'라고 쓰지 마세요.
 
 규칙:
 - 소리 내어 읽을 글입니다. 괄호·따옴표·번호표·'첫째:' 같은 표기·이모지를 쓰지 말고 말로 풀어 쓰세요.
@@ -224,10 +227,13 @@ script for a 20-minute worship service for someone listening alone, like radio. 
   "sermon": "sermon — 1,000 to 1,150 words. introduction, three points, conclusion. Quote only today's verses",
   "song2_intro": "one sentence leading from the closing prayer into a response song",
   "prayer_meeting": {{"intro": "1 to 2 sentences inviting everyone into a time of prayer together",
-                      "topics": ["starts with 'First,' — 2 sentences leading prayer to live out today's word",
-                                 "starts with 'Second,' — 2 sentences leading prayer for families, neighbors, the sick and weary",
-                                 "starts with 'Third,' — 2 sentences leading prayer for the church, the nation and the world"],
+                      "topics": ["starts with 'First,' and ends with 'Let us pray for …' — 2 sentences: living out today's word",
+                                 "starts with 'Second,' and ends with 'Let us pray for …' — 2 sentences: families, neighbors, the sick and weary",
+                                 "starts with 'Third,' and ends with 'Let us pray for …' — 2 sentences: the church, the nation and the world"],
                       "close": "one sentence closing the prayer time and leading into the Lord's Prayer"}}}}
+
+The prayer-time lines guide the listeners on what to pray for; do not write the prayer itself.
+The Lord's Prayer and a blessing follow, so do not say the service is ending.
 
 Rules:
 - This will be read aloud. No brackets, quotation marks, bullet labels like 'First:', or emoji; write it as speech.
