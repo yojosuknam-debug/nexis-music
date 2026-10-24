@@ -49,6 +49,7 @@ def chunk_times(p: dict, n: int) -> list[float]:
 
 
 def split_long(s: str, lim: int) -> list[str]:
+    """자막은 화면에 3줄까지만 그려져 넘치면 잘렸다(10-24 '안녕하…') → 쉼표에서, 그래도 길면 띄어쓰기에서 lim 안으로 나눈다."""
     if len(s) <= lim:
         return [s]
     out, cur = [], ""
@@ -58,14 +59,23 @@ def split_long(s: str, lim: int) -> list[str]:
             cur = piece
         else:
             cur = f"{cur} {piece}".strip()
-    return out + ([cur] if cur else [])
+    out += [cur] if cur else []
+    res = []
+    for x in out:                                  # 쉼표가 없는 긴 조각 — 가운데 가까운 띄어쓰기에서 반으로
+        while len(x) > lim:
+            cut = x.rfind(" ", 0, min(lim, len(x) // 2 + 1))
+            cut = cut if cut > 0 else lim
+            res.append(x[:cut].strip())
+            x = x[cut:].strip()
+        res.append(x)
+    return [x for x in res if x]
 
 
 def sentences(chunk: str, lang: str) -> list[str]:
     out = []
     for s in re.split(r"(?<=[.!?])\s+", bw.display_ref(chunk, lang)):   # 자막은 장·절을 숫자로
         if s.strip():
-            out += split_long(s.strip(), 80 if lang == "ko" else 140)
+            out += split_long(s.strip(), 56 if lang == "ko" else 110)   # 두 줄 안
     return out
 
 
@@ -133,24 +143,38 @@ def main() -> int:
             pray = "함께 기도합니다" if lang == "ko" else "Let us pray together"
             texts = {"intro": p["pm"]["intro"], "close": p["pm"]["close"],
                      **{f"topic{i + 1}": x for i, x in enumerate(p["pm"]["topics"])}}
-            cur = 0.0
+            pm_slow = p.get("pm_speed", bw.SPEED)
+            used = 0.0
             for mk in t["pm_marks"]:
                 lead = texts[mk["k"]]
-                sents = sentences(lead, lang)
                 speak = mk["speak_end"] - mk["start"]
-                total_chars = sum(len(x) for x in sents) or 1
-                for si, sent in enumerate(sents):
-                    add(f"pm-{mk['k']}-{si}", lambda sent=sent: sl.caption(lang, date, "prayer_meeting", L["service"],
-                                                                        p["title"], sent, sl.BG_DIR / "기도.png"),
-                        speak * len(sent) / total_chars)
+                # 마디 안은 실제 묶음 길이(chunk_secs)로 — 글자 수 비례만 쓰면 짧은 인사 뒤 긴 문장에서 어긋났다
+                cks = bw.chunks(lead, lang)
+                secs = ((p.get("pm_audio") or {}).get(mk["k"], {}).get("qc") or {}).get("chunk_secs")
+                times = [x / pm_slow for x in secs] if secs and len(secs) == len(cks) else \
+                    [speak * len(c) / (sum(len(x) for x in cks) or 1) for c in cks]
+                shown = 0.0
+                for ci, (ck, csec) in enumerate(zip(cks, times)):
+                    sents = sentences(ck, lang)
+                    total_chars = sum(len(x) for x in sents) or 1
+                    for si, sent in enumerate(sents):
+                        d = csec * len(sent) / total_chars
+                        add(f"pm-{mk['k']}-{ci}-{si}", lambda sent=sent: sl.caption(
+                            lang, date, "prayer_meeting", L["service"], p["title"], sent, sl.BG_DIR / "기도.png"), d)
+                        shown += d
+                # 마디 끝을 시각표(pm_marks)에 맞춘다 — 반올림·여는 말 뒤 2초 쉼이 쌓여 다음 제목이 일찍 뜨던 것
+                rest = (mk["end"] if not mk["k"].startswith("topic") else mk["speak_end"]) - mk["start"] - shown
+                if seq and rest > 0:
+                    last, sec = seq[-1]
+                    seq[-1] = (last, sec + rest)
                 if mk["k"].startswith("topic"):
                     add(f"pm-{mk['k']}-pray", lambda lead=lead: sl.caption(lang, date, "prayer_meeting", pray, p["title"],
                                                                          sentences(lead, lang)[0],
                                                                          sl.BG_DIR / "기도.png"), mk["end"] - mk["speak_end"])
-                cur = mk["end"]
+                used = mk["end"]
             if seq:
                 last, sec = seq[-1]
-                seq[-1] = (last, sec + max(0.0, sec_total - cur))
+                seq[-1] = (last, sec + max(0.0, sec_total - used))
             continue
 
         slow = bw.SPEED

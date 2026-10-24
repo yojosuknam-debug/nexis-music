@@ -203,6 +203,7 @@ PROMPT = {
                       "close": "기도회를 맺고 '이어서 주님 가르쳐 주신 기도로 함께 기도하겠습니다'로 넘어가는 한 문장"}}}}
 
 기도회 인도 문장은 회중에게 기도 제목을 알려 주는 말입니다. '…하옵소서'처럼 기도문 자체를 쓰지 마세요.
+기도회 문장은 특히 짧게 — 한 문장 40자 안팎(천천히 읽고 자막 두 줄 안에 들어가게).
 기도회 뒤에 주기도문과 축복의 말씀이 이어지므로 '예배를 마칩니다'라고 쓰지 마세요.
 
 규칙:
@@ -282,6 +283,8 @@ def pick_songs(lang: str, day: dt.date) -> dict:
 
 SONG_TITLE = {"hymn_pd": ("함께 찬송", "Hymn"), "hymn_own": ("찬송", "Hymn"), "ccm": ("찬양", "Song of Praise")}
 PRAY_SEC = float(os.environ.get("WORSHIP_PRAY_SEC", "40"))   # 기도회 제목마다 함께 기도하는 시간(초)
+# 기도회 인도는 다른 낭독(8%)보다 더 천천히 — 10-25 실측 6.7음절/초로 설교(5.7)보다 17% 빨랐다(10-24 사용자 '말이 너무 빠르다')
+PM_SPEED = float(os.environ.get("WORSHIP_PM_SPEED", "0.85"))
 
 
 def song_title(song: dict, lang: str, response: bool = False) -> str:
@@ -718,11 +721,11 @@ def build_prayer_meeting(p: dict, out: Path) -> Path:
     inputs, filt, marks, t = [], [], [], 0.0
     for i, k in enumerate(order):
         f = Path(pa[k]["audio"])
-        body = dur(f) / SPEED
+        body = dur(f) / PM_SPEED
         gain = max(-20.0, min(20.0, -16.0 - loudness(f)))
         pad = PRAY_SEC if k.startswith("topic") else (2.0 if k == "intro" else 0.0)
         inputs += ["-i", str(f)]
-        filt.append(f"[{i}:a]aresample=44100,aformat=channel_layouts=stereo,adeclick,atempo={SPEED},"
+        filt.append(f"[{i}:a]aresample=44100,aformat=channel_layouts=stereo,adeclick,atempo={PM_SPEED},"
                     f"volume={gain:.2f}dB,alimiter=limit=0.84:attack=5:release=80:level=disabled,"
                     f"afade=t=in:d=0.02,afade=t=out:st={max(0.0, body - 0.02):.3f}:d=0.02,apad=pad_dur={pad}[v{i}]")
         marks.append({"k": k, "start": round(t, 2), "speak_end": round(t + body, 2), "end": round(t + body + pad, 2)})
@@ -741,7 +744,7 @@ def build_prayer_meeting(p: dict, out: Path) -> Path:
     dst = out / "prayer_meeting.wav"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", ";".join(filt),
                     "-map", "[out]", "-t", f"{total:.2f}", str(dst)], check=True)
-    p["audio"], p["pm_marks"] = str(dst), marks
+    p["audio"], p["pm_marks"], p["pm_speed"] = str(dst), marks, PM_SPEED   # 화면은 이 속도로 문장 시각을 맞춘다
     return dst
 
 
