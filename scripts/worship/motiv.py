@@ -13,8 +13,10 @@ import argparse
 import datetime as dt
 import json
 import os
+import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 W = Path(os.environ.get("WORSHIP_DIR", Path(__file__).resolve().parent))   # 맥미니는 레포 밖에 두고 레포의 worship 폴더를 가리킨다
@@ -24,6 +26,7 @@ import slides as sl  # noqa: E402
 from PIL import Image, ImageDraw, ImageFilter  # noqa: E402
 
 OUT = Path(os.environ.get("MOTIV_OUT", Path.home() / "Work" / "nexis-motiv" / "output"))
+OUTBOX = Path(os.environ.get("MOTIV_OUTBOX", Path.home() / "Work" / "outbox" / "motiv"))   # archive-outbox 가 미니PC 로 옮긴다
 SPEED = float(os.environ.get("MOTIV_SPEED", "0.95"))   # 예배(0.92)보다 조금 힘 있게
 HEAD, TAIL = 0.5, 1.5        # 앞뒤 여백(초) — 끝은 맺는 문장을 잠시 띄워 둔다
 VW, VH, FPS = 1080, 1920, 30
@@ -158,12 +161,96 @@ def render(script: dict, audio: Path, out: Path) -> Path:
     return dst
 
 
+def make_one(v, script: dict, out: Path) -> Path:
+    for p in script["parts"]:
+        dst = out / f"{p['id']}.wav"
+        p["audio"], p["qc"] = str(dst), v.part(p["text"], dst)
+        bw.log(f"{p['id']}: {p['qc']['sec']:.0f}초 · 최대 오류 {p['qc']['max_err']:.0%}")
+    audio = mix(script, out)
+    dst = render(script, audio, out)
+    (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
+    return dst
+
+
+def worship_busy() -> bool:
+    r = subprocess.run(["pgrep", "-f", "build_worship.py|simbang.py"], capture_output=True)
+    return r.returncode == 0
+
+
+def run_bank(bank: Path, until: str | None, limit: int) -> int:
+    """은행(jsonl)의 안 만든 원고를 차례로 — 결과는 OUTBOX/motiv/<id>/ (mp4·script.json), 만든 id 는 done.txt.
+    GPU 메모리가 크면 restart_if_heavy 가 같은 명령으로 다시 띄우고, done.txt·_chunks 로 이어 간다."""
+    done_f = OUT / "done.txt"
+    done = set(done_f.read_text(encoding="utf-8").split()) if done_f.exists() else set()
+    files = sorted(bank.glob("*.jsonl")) if bank.is_dir() else [bank]
+    todo = [m for f in files for m in map(json.loads, filter(str.strip, f.read_text(encoding="utf-8-sig").splitlines()))
+            if m["id"] not in done]
+    stop = None
+    if until:
+        now = dt.datetime.now()
+        stop = now.replace(hour=int(until[:2]), minute=int(until[3:5]), second=0, microsecond=0)
+        if stop <= now:
+            stop += dt.timedelta(days=1)
+    bw.log(f"은행 {len(todo)}편 남음" + (f" · {stop:%H:%M} 까지" if stop else ""))
+    v, made, fails = None, 0, 0
+    for m in todo:
+        if stop and dt.datetime.now() >= stop or limit and made >= limit:
+            break
+        while worship_busy():                      # 예배 목소리가 우선 — GPU 를 나눠 쓰지 않는다
+            bw.log("예배 작업 중 — 1분 뒤 다시 확인")
+            time.sleep(60)
+        v = v or bw.Voice("ko")
+        out = OUT / m["id"]
+        script = {"date": dt.date.today().isoformat(), "kind": "motiv", "id": m["id"], "theme": m["theme"],
+                  "title": m["title"], "parts": [{"id": k, "text": m[k]} for k in ("line", "body", "close")]}
+        out.mkdir(parents=True, exist_ok=True)
+        try:
+            t0 = time.time()
+            dst = make_one(v, script, out)
+            box = out / "box"                       # 다 채운 뒤 한 번에 옮긴다 — 이관이 반쪽 묶음을 집어 가지 않게
+            box.mkdir(exist_ok=True)
+            sec = bw.dur(dst)
+            shutil.move(str(dst), box / f"{m['id']}.mp4")   # 맥에 사본을 남기지 않는다(10-25 사용자: 용량 부족)
+            (out / "motiv.m4a").unlink(missing_ok=True)
+            (box / "script.json").write_text(json.dumps(
+                {k: m[k] for k in ("id", "theme", "title", "line", "body", "close")}
+                | {"sec": round(sec, 1), "max_err": max(p["qc"]["max_err"] for p in script["parts"])},
+                ensure_ascii=False, indent=1), encoding="utf-8")
+            stamp = time.time()                     # 두 파일 시각을 같게 — 이관(5분 지난 파일만)이 둘을 같은 묶음으로 옮기게
+            for f in box.iterdir():
+                os.utime(f, (stamp, stamp))
+            OUTBOX.mkdir(parents=True, exist_ok=True)
+            shutil.rmtree(OUTBOX / m["id"], ignore_errors=True)
+            box.rename(OUTBOX / m["id"])
+            for junk in ("frames", "_chunks"):
+                shutil.rmtree(out / junk, ignore_errors=True)
+            for w in out.glob("*.wav"):
+                w.unlink()
+            with done_f.open("a", encoding="utf-8") as f:
+                f.write(m["id"] + "\n")
+            made, fails = made + 1, 0
+            bw.log(f"[{made}] {m['id']} 완성 {sec:.0f}초 · {time.time() - t0:.0f}초 걸림 · {m['title']}")
+        except Exception as e:  # noqa: BLE001 — 한 편 실패는 건너뛰고 이어 간다
+            fails += 1
+            bw.log(f"[실패] {m['id']} {type(e).__name__}: {e}")
+            if fails >= 3:
+                bw.log("연달아 3번 실패 — 멈춤")
+                return 1
+    bw.log(f"끝 — 이번에 {made}편")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--theme", default="일이 손에 안 잡히는 월요일 아침")
     ap.add_argument("--date", default=dt.date.today().isoformat())
     ap.add_argument("--run", help="이어 만들 결과 폴더 이름(없으면 새 번호)")
+    ap.add_argument("--bank", help="원고 은행 폴더 또는 jsonl — 안 만든 원고를 차례로 만든다")
+    ap.add_argument("--until", help="이 시각(HH:MM)이 지나면 새 편을 시작하지 않는다")
+    ap.add_argument("--max", type=int, default=0, help="이번에 만들 최대 편수(0=제한 없음)")
     a = ap.parse_args()
+    if a.bank:
+        return run_bank(Path(a.bank).expanduser(), a.until, a.max)
     if a.run:
         out = OUT / a.run
     else:
@@ -173,14 +260,7 @@ def main() -> int:
         out = OUT / f"{a.date}_{n:02d}"
     sp = out / "script.json"
     script = json.loads(sp.read_text(encoding="utf-8")) if sp.exists() else make_script(a.theme, a.date, out)
-    v = bw.Voice("ko")
-    for p in script["parts"]:
-        dst = out / f"{p['id']}.wav"
-        p["audio"], p["qc"] = str(dst), v.part(p["text"], dst)
-        bw.log(f"{p['id']}: {p['qc']['sec']:.0f}초 · 최대 오류 {p['qc']['max_err']:.0%}")
-    audio = mix(script, out)
-    dst = render(script, audio, out)
-    (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
+    dst = make_one(bw.Voice("ko"), script, out)
     bw.log(f"완성 {dst} · {bw.dur(dst):.1f}초 · {script['title']}")
     return 0
 
