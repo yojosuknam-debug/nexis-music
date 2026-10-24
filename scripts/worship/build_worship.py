@@ -268,7 +268,10 @@ def pick_songs(lang: str, day: dt.date) -> dict:
     import music_library as ml
     o = day.toordinal()
     first = ml.pick("open", lang, o)
-    return {"open": first, "response": ml.pick("response", lang, o, {first["id"]}), "prayer": ml.pick("prayer", lang, o)}
+    resp = ml.pick("response", lang, o, {first["id"]})
+    twin = next((x for x in ml.load() if x["id"] == resp.get("instrumental")
+                 and x.get("license", {}).get("status") == "verified"), None)   # 응답 찬송의 연주판이 있으면 기도회 배경으로
+    return {"open": first, "response": resp, "prayer": dict(twin) if twin else ml.pick("prayer", lang, o)}
 
 
 SONG_TITLE = {"hymn_pd": ("함께 찬송", "Hymn"), "hymn_own": ("찬송", "Hymn"), "ccm": ("찬양", "Song of Praise")}

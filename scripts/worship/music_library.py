@@ -26,6 +26,7 @@ HERE = Path(__file__).resolve().parent
 LEDGER = HERE / "music.json"
 RADIO_JSON = "https://music.yojosuknam.com/album/radio.json"
 OWN_BASIS = "자작곡(Still Waters 채널, Suno 유료 플랜 공식 다운로드 — 운영자 확인)"
+HYMN_ALBUM = re.compile(r"찬송|hymn", re.I)   # 앨범 제목에 있으면 그 앨범 보컬 곡 = 자작 찬송가(hymn.md 5장)
 
 # 예배 자리별 쓸 수 있는 종류(앞쪽 우선). 비면 FALLBACK 으로.
 SLOT_TYPES = {"open": ["hymn_pd", "hymn_own"], "response": ["hymn_own", "ccm"], "prayer": ["instrumental"]}
@@ -45,6 +46,26 @@ def save(items: list[dict]) -> None:
 def guess_lang(lines: list[str]) -> str:
     text = " ".join(lines)
     return "ko" if re.search(r"[가-힣]", text) else "en"
+
+
+def base_title(title: str) -> str:
+    return re.sub(r"\s*\((연주|instrumental|prayer instrumental)\)\s*$", "", title, flags=re.I).strip().lower()
+
+
+def pair(items: dict) -> None:
+    """같은 앨범의 '<제목> (연주)/(Instrumental)' 연주곡을 보컬판과 짝지운다 — 기도회 배경으로 먼저 쓰인다.
+    (youtube-playlist docs/album-system/40_genres/hymn.md 5장 제목 규칙)"""
+    by_album: dict[str, dict] = {}
+    for x in items.values():
+        by_album.setdefault(x.get("slug", x["id"]), {})
+    for x in items.values():
+        if x["type"] != "instrumental" and x.get("source") == "stillwaters":
+            by_album[x["slug"]][base_title(x["title"])] = x
+    for x in items.values():
+        if x["type"] == "instrumental" and x.get("source") == "stillwaters":
+            v = by_album.get(x["slug"], {}).get(base_title(x["title"]))
+            if v and base_title(x["title"]) != x["title"].strip().lower():
+                x["instrumental_of"], v["instrumental"] = v["id"], x["id"]
 
 
 def sync() -> None:
@@ -70,11 +91,13 @@ def sync() -> None:
             if key in have:
                 have[key].update(base)
                 continue
-            have[key] = {**base, "type": "instrumental" if inst else "ccm",
+            hymn_album = bool(HYMN_ALBUM.search(a["title"]))
+            have[key] = {**base, "type": "instrumental" if inst else ("hymn_own" if hymn_album else "ccm"),
                          "lang": "none" if inst else guess_lang(lines),
                          "credits": {"lyricist": "운영자", "composer": "운영자(Suno)", "arranger": "", "translator": ""},
                          "license": {"status": "verified", "basis": OWN_BASIS, "evidence": t.get("youtube", "")}}
             added += 1
+    pair(have)
     save(list(have.values()))
     kinds = {}
     for x in have.values():

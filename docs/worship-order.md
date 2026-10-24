@@ -31,7 +31,7 @@
 | `instrumental` | 연주곡 — 채널 연주곡(지금 43곡)·자작 찬송 연주판·직접 연주 | `prayer`(기도회 배경) |
 
 - 같은 날 같은 곡이 두 번 나오지 않고, 날짜마다 돌아가며 고른다(`music_library.pick`).
-- 채널 곡은 `python scripts/worship/music_library.py sync` 로 자동 반영(새 곡이 올라오면 다시 실행). 자작 찬송가로 올린 곡은 대장에서 `type` 을 `hymn_own` 으로 바꾼다(다음 sync 에도 유지).
+- 채널 곡은 `python scripts/worship/music_library.py sync` 로 자동 반영(새 곡이 올라오면 다시 실행). **앨범 제목에 `찬송`/`Hymn` 이 있으면 보컬 곡은 자동으로 `hymn_own`**, `<제목> (연주)`·`(Instrumental)` 은 보컬판과 짝(→ 기도회 배경 우선). 손으로 바꾼 `type` 은 다음 sync 에도 유지. 작곡 규칙: [hymn-writing-guide.md](hymn-writing-guide.md)
 - 현재 상태: `hymn_pd`·`hymn_own` 0곡 → 함께 찬송 자리는 당분간 CCM 이 대신 나온다.
 
 ## 곡 보내는 법 (직접 연주 · 자작곡)
