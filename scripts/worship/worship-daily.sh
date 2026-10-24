@@ -1,4 +1,6 @@
 #!/bin/bash
+# ⚠️ 옛 방식(미니PC 가 목소리까지 — 한 편 약 5시간). 10-24 부터는 나눠 맡는다:
+#    맥미니 worship-mac.sh(원고·목소리) → 미니PC worship-assemble.sh(조립·방송 예약). 이 파일은 비상용으로만 둔다.
 # 다음날 실시간 예배 두 편(한국어·영어) 만들기 + 방송 예약 — 미니PC 크론, 매일 21:30
 #   크론: 30 21 * * * bash /mnt/external/nexis-music/scripts/worship/worship-daily.sh   # nexis-worship-daily
 # 순서: 한국어 원고 → 같은 원고 영어판 → 각 언어 음성(내 목소리·Chatterbox, nice) → 찬양과 합치기 → 화면·영상 → 방송 예약

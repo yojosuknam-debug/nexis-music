@@ -809,6 +809,12 @@ def main() -> int:
     ko_sp = OUT / f"{a.date}_ko" / "script.json"
     if sp.exists():
         script = json.loads(sp.read_text(encoding="utf-8"))
+        for p in script["parts"]:                 # 맥미니 목소리 묶음(voice_bundle.py)은 파일 이름만 적혀 온다 → 이 폴더 기준
+            if p.get("audio") and not Path(p["audio"]).is_absolute():
+                p["audio"] = str(out / p["audio"])
+            for v in (p.get("pm_audio") or {}).values():
+                if not Path(v["audio"]).is_absolute():
+                    v["audio"] = str(out / v["audio"])
     elif a.lang == "en" and ko_sp.exists():          # 같은 원고 영어판
         script = make_script_en(json.loads(ko_sp.read_text(encoding="utf-8")), day, out)
     else:
