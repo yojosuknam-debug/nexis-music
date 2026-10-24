@@ -25,7 +25,7 @@ def pack(out: Path, dest: Path) -> None:
     def take(path: str) -> str:
         src = Path(path)
         name = src.name if src.parent == out else f"cache_{src.name}"   # 주기도문·축복 저장본은 cache/ 에 있다
-        shutil.copy2(src, dest / name)
+        shutil.copy(src, dest / name)   # 시각을 새로 — 옛 시각(저장본)이면 이관이 먼저 옮겨 묶음이 둘로 갈렸다(10-24)
         files.append(name)
         return name
 
@@ -58,14 +58,26 @@ def find(root: Path, key: str) -> Path:
     return hits[-1].parent
 
 
+def locate(src: Path, meta: dict) -> dict[str, Path]:
+    """묶음 파일 위치. 이관이 나눠 옮긴 경우 같은 묶음의 다른 이관 폴더(만든 시각 이후 것)에서도 찾는다."""
+    made = dt.datetime.fromisoformat(meta["made"]).strftime("%Y-%m-%d_%H%M%S")
+    sibs = [d for d in sorted(src.parent.parent.parent.glob(f"*/worship-voice/{src.name}"), reverse=True)
+            if d != src and d.parent.parent.name >= made]
+    where = {}
+    for f in meta["files"]:
+        where[f] = next((d / f for d in [src, *sibs] if (d / f).exists()), None)
+    return where
+
+
 def unpack(src: Path, out: Path) -> None:
     meta = json.loads((src / "bundle.json").read_text(encoding="utf-8"))
-    missing = [f for f in meta["files"] if not (src / f).exists()]
+    where = locate(src, meta)
+    missing = [f for f, w in where.items() if w is None]
     if missing:
         sys.exit(f"묶음이 덜 왔다: {missing[:5]}")
     out.mkdir(parents=True, exist_ok=True)
-    for f in meta["files"]:
-        shutil.copy2(src / f, out / f)
+    for f, w in where.items():
+        shutil.copy2(w, out / f)
     print(f"풀기 {out} · 파일 {len(meta['files'])}개 (맥 제작 {meta['made']})")
 
 
