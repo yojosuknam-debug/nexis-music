@@ -70,7 +70,10 @@ ANSWER_START = ("그것은", "그건", "바로", "왜냐하면", "그렇습니�
 PARA = os.environ.get("WORSHIP_CHUNK", "") == "para"   # 비교 시험: 1~3문장 의미 묶음(110자 이내, 질문에서 끊음)
 SHORT = {"ko": 12, "en": 25}   # 이보다 짧은 문장은 다음 문장과 붙인다
 CHUNK_CHARS = {"ko": 60, "en": 130}   # 이보다 긴 문장은 쉼표·절 끝에서 나눈다(길면 엔진이 갑자기 빨라진다, 10-24)
-CLAUSE_END = tuple("고 며 서 니 면 지 도 만 데 라 요".split())   # 쉼표 없을 때 끊어도 자연스러운 어절 끝(1분 묵상 _breathe 참고)
+CLAUSE_END = tuple("고 며 서 니 면 지 도 만 데 라 요".split())
+# 기도회 인도는 숨 쉬듯 짧은 마디로(10-24 '첫째, …삶을 살게 하옵소서 같은 문장은 너무 빨리 읽는다' — 긴 문장은 엔진이 몰아 읽는다)
+PM_CHUNK = {"ko": 26, "en": 60}
+PM_PAUSE = {",": 0.45, ".": 1.00, "!": 1.00}   # 쉼표 없을 때 끊어도 자연스러운 어절 끝(1분 묵상 _breathe 참고)
 # 엔진이 잘못 읽는 말 — 낭독에 넣는 글만 바꾸고 자막은 그대로(10-24 '말씀으그'·'아이' 지적). 긴 것부터 바꾼다
 SPEAK_KO = {"말씀 Log": "말씀로그", "말씀Log": "말씀로그", "Log": "로그", "AI": "에이아이", "QT": "큐티"}
 SPEED = 0.92            # "조금 느리게"(10-23) — 다 만든 음성을 음높이 그대로 늘린다(atempo)
@@ -435,11 +438,28 @@ def make_script_en(ko: dict, day: dt.date, out: Path) -> dict:
 
 
 # ── 2) 목소리 ─────────────────────────────────────────────────────────────
-def chunks(text: str, lang: str) -> list[str]:
-    """한 문장씩(10-23 '쉼 없이 빠르다' — 묶으면 엔진이 문장 사이를 쉬지 않고 이어 읽는다). 사이 쉼은 GAP."""
+def split_phrases(s: str, lim: int, short: int = 8) -> list[str]:
+    """긴 문장을 가운데에 가까운 쉼표·절 끝(…고·…며·…처럼)에서 반씩 나눈다 — 앞뒤 마디 길이가 고르게."""
+    if len(s) <= lim:
+        return [s]
+    rng = range(short, len(s) - short)
+    cut = [i for i in rng if s[i] == " " and (s[i - 1] == "," or s[i - 1] in CLAUSE_END or s[i - 2:i] == "처럼")]         or [i for i in rng if s[i] == " " and s[i - 1] in "을를이가에게로"]         or [i for i in rng if s[i] == " " and s[i - 1] != "의"] or [i for i in rng if s[i] == " "]   # '믿음의, 자녀가'처럼 꾸밈말 뒤는 피한다
+    if not cut:
+        return [s]
+    i = min(cut, key=lambda x: abs(x - len(s) / 2))
+    left = s[:i].strip()
+    return split_phrases(left if left.endswith(",") else left + ",", lim, short) + split_phrases(s[i:].strip(), lim, short)
+
+
+def chunks(text: str, lang: str, pm: bool = False) -> list[str]:
+    """한 문장씩(10-23 '쉼 없이 빠르다' — 묶으면 엔진이 문장 사이를 쉬지 않고 이어 읽는다). 사이 쉼은 GAP.
+    pm=True(기도회 인도)는 PM_CHUNK 안쪽의 고른 마디로 나눈다."""
     sents = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
-    out, lim = [], CHUNK_CHARS[lang]
+    out, lim = [], (PM_CHUNK if pm else CHUNK_CHARS)[lang]
     for s in sents:
+        if pm:
+            out += split_phrases(s, lim)
+            continue
         while len(s) > lim:                       # 긴 문장은 쉼표에서, 없으면 절 끝(…고·…며·…서) 띄어쓰기에서 자른다
             cut = s.rfind(",", lim // 3, lim)
             if cut > 0:
@@ -472,7 +492,7 @@ def chunks(text: str, lang: str) -> list[str]:
     return out
 
 
-def pause_after(chunk: str, nxt: str | None) -> float:
+def pause_after(chunk: str, nxt: str | None, pm: bool = False) -> float:
     """이 묶음 뒤에 넣을 무음(초) = PAUSE 총 쉼 − trim 여백. 고정 방식이면 GAP."""
     if not NATURAL:
         return GAP
@@ -481,7 +501,7 @@ def pause_after(chunk: str, nxt: str | None) -> float:
         key = "?ans" if nxt and (nxt.rstrip().endswith("?") or nxt.lstrip().startswith(ANSWER_START)) else "?think"
     else:
         key = end if end in PAUSE else "."
-    return max(0.1, PAUSE[key] - EDGE)
+    return max(0.1, (PM_PAUSE if pm and key in PM_PAUSE else PAUSE)[key] - EDGE)
 
 
 NATIVE_TENS = ["", "열", "스물", "서른", "마흔", "쉰", "예순", "일흔", "여든", "아흔"]
@@ -615,12 +635,12 @@ class Voice:
         b = min(x.shape[0], int(idx[-1]) + int(self.sr * 0.06))
         return wav[:, a:b]
 
-    def part(self, text: str, dst: Path) -> dict:
+    def part(self, text: str, dst: Path, pm: bool = False) -> dict:
         import torchaudio
         pieces, errs, secs = [], [], []
         ck = dst.parent / "_chunks"               # 문장 저장본 — 중간에 멈추거나 다시 띄워도 여기부터 이어 만든다
         ck.mkdir(parents=True, exist_ok=True)
-        cs = chunks(text, self.lang)
+        cs = chunks(text, self.lang, pm)
         for i, c in enumerate(cs):
             key = hashlib.sha1(f"{self.lang}|{REF[self.lang]}|{EXAGGERATION}|{CFG}|{GEN_KW}|{NATURAL}|n1|{c}"
                                .encode()).hexdigest()[:16]
@@ -634,7 +654,7 @@ class Voice:
                 torchaudio.save(str(f), wav, self.sr)
                 meta.write_text(json.dumps({"err": e, "text": c}, ensure_ascii=False), encoding="utf-8")
                 self.restart_if_heavy()
-            gap = self.torch.zeros(1, int(self.sr * pause_after(c, cs[i + 1] if i + 1 < len(cs) else None)))
+            gap = self.torch.zeros(1, int(self.sr * pause_after(c, cs[i + 1] if i + 1 < len(cs) else None, pm)))
             pieces += [wav, gap]
             errs.append(e)
             secs.append(round((wav.shape[1] + gap.shape[1]) / self.sr, 3))   # 화면 자막 시간표용(늘리기 전 길이)
@@ -655,7 +675,7 @@ def make_voice(script: dict, out: Path) -> None:
                 + [("close", p["pm"]["close"])]
             for k, txt in items:
                 dst = out / f"pm_{k}.wav"
-                pa[k] = {"audio": str(dst), "qc": v.part(txt, dst)}
+                pa[k] = {"audio": str(dst), "qc": v.part(txt, dst, pm=True)}
             p["pm_audio"] = pa
             log(f"{p['title']}: 인도 {len(items)}마디 · {time.time() - t0:.0f}초 걸림 · 최대 오류 "
                 f"{max(x['qc']['max_err'] for x in pa.values()):.0%}")

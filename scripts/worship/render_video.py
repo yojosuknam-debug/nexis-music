@@ -149,7 +149,7 @@ def main() -> int:
                 lead = texts[mk["k"]]
                 speak = mk["speak_end"] - mk["start"]
                 # 마디 안은 실제 묶음 길이(chunk_secs)로 — 글자 수 비례만 쓰면 짧은 인사 뒤 긴 문장에서 어긋났다
-                cks = bw.chunks(lead, lang)
+                cks = bw.chunks(lead, lang, pm=True)
                 secs = ((p.get("pm_audio") or {}).get(mk["k"], {}).get("qc") or {}).get("chunk_secs")
                 times = [x / pm_slow for x in secs] if secs and len(secs) == len(cks) else \
                     [speak * len(c) / (sum(len(x) for x in cks) or 1) for c in cks]
