@@ -57,6 +57,14 @@ TUNE = os.environ.get("WORSHIP_TUNE", "1") == "1"
 if TUNE:
     EXAGGERATION, CFG = 0.20, 0.35
 GEN_KW = {"temperature": 0.75, "repetition_penalty": 1.2, "min_p": 0.05} if TUNE else {}   # 1.2 = chatterbox master 기본값
+# 위 값은 한국어 목소리용. 영어에 쓰면 문장 중간에서 멈춰 말이 빠졌다(10-25 시험: 같은 10문장 중 9개 빠짐·평균 오류 63%,
+# 엔진 기본값 0.5·0.5 는 0개·1%) → 영어는 엔진 기본값.
+EN_GEN = (0.5, 0.5, {})
+
+
+def gen_settings(lang: str) -> tuple[float, float, dict]:
+    """언어별 (exaggeration, cfg_weight, 생성 옵션)."""
+    return (EXAGGERATION, CFG, GEN_KW) if lang == "ko" else EN_GEN
 MPS_LIMIT_GB = float(os.environ.get("WORSHIP_MPS_LIMIT_GB", "9"))   # 넘으면 저장해 둔 문장부터 프로세스를 새로 띄워 이어 만든다
 GAP = 0.8               # 문장 사이 쉼(초) — 고정 방식
 # '더 자연스럽게'(10-24, 무료 범위) — WORSHIP_NATURAL=1 일 때: 문장부호별 쉼(물음표는 생각할 틈),
@@ -547,7 +555,8 @@ class Voice:
         t0 = time.time()
         self.tts = ChatterboxMultilingualTTS.from_pretrained(device=DEVICE)
         # 참조 녹음 분석은 한 번만 — 문장마다 audio_prompt_path 로 다시 분석하면 MPS 메모리가 쌓여 14~26GB 까지 컸다(10-24)
-        self.tts.prepare_conditionals(self.ref, exaggeration=EXAGGERATION)
+        self.ex, self.cfg, self.kw = gen_settings(lang)
+        self.tts.prepare_conditionals(self.ref, exaggeration=self.ex)
         self.asr = WhisperModel("small", device="cpu", compute_type="int8", cpu_threads=THREADS)
         self.sr = self.tts.sr
         log(f"목소리 모델 준비 {time.time() - t0:.0f}초")
@@ -572,8 +581,8 @@ class Voice:
         for k in range(TRIES):
             self.torch.manual_seed(1000 + k)
             with self.torch.inference_mode():
-                out = self.tts.generate(speak, language_id=self.lang, exaggeration=EXAGGERATION, cfg_weight=CFG,
-                                        **GEN_KW)
+                out = self.tts.generate(speak, language_id=self.lang, exaggeration=self.ex, cfg_weight=self.cfg,
+                                        **self.kw)
             wav = out.detach().to("cpu").contiguous()   # GPU 에 결과를 쌓지 않는다(10-24 조사: CPU 로 옮겨 보관)
             del out
             gc.collect()
@@ -631,7 +640,7 @@ class Voice:
         ck.mkdir(parents=True, exist_ok=True)
         cs = chunks(text, self.lang, pm)
         for i, c in enumerate(cs):
-            key = hashlib.sha1(f"{self.lang}|{REF[self.lang]}|{EXAGGERATION}|{CFG}|{GEN_KW}|{NATURAL}|n1|{c}"
+            key = hashlib.sha1(f"{self.lang}|{REF[self.lang]}|{self.ex}|{self.cfg}|{self.kw}|{NATURAL}|n1|{c}"
                                .encode()).hexdigest()[:16]
             f, meta = ck / f"{key}.wav", ck / f"{key}.json"
             if f.exists() and meta.exists():
@@ -673,7 +682,7 @@ def make_voice(script: dict, out: Path) -> None:
         if "text" not in p:
             continue
         if p.get("fixed"):
-            h = hashlib.sha1(f"{lang}|{REF[lang]}|{EXAGGERATION}|{CFG}|{GAP}|clk|{'nat' if NATURAL else ''}|sp1|{p['text']}".encode()).hexdigest()[:12]
+            h = hashlib.sha1(f"{lang}|{REF[lang]}|{gen_settings(lang)[0]}|{gen_settings(lang)[1]}|{GAP}|clk|{'nat' if NATURAL else ''}|sp1|{p['text']}".encode()).hexdigest()[:12]
             dst = CACHE / f"{p['id']}_{lang}_{h}.wav"
             if dst.exists():
                 p["audio"] = str(dst)
