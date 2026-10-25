@@ -1,5 +1,20 @@
 # HANDOFF — 창 인계 기록 (최근 5개, 새 항목이 맨 위)
 
+## 2026-10-25 19:40 · 동기부여 쇼츠 — 배경 그림·100편 완성·미니PC 정리·유튜브 매일 자동 업로드 시작 (데스크탑)
+- 상태: 커밋 abedb70(+ 이 HANDOFF) · 배포 = 미니PC `~/bin` 사본·맥 `~/Work/nexis-motiv` 사본(레포와 같음) · **업로드 시작함**(사용자 지시) · 작업트리 깨끗
+- 한 일:
+  - 배경: Higgsfield 그림 20장(주제 10 × 장면·미소녀풍) + '시작' 주제 반복 영상 2개(20크레딧, 잔액 37.6). 장면·미소녀풍을 편 번호로 번갈아(사용자 확정). `motiv.py` 배경 합성·`--compare` 비교본.
+  - 남은 9편(m0092~m0100) 배경 넣어 제작 → 100편 완성. m0001~m0091 은 단색 화면(사용자: 둘 다 좋다, 그대로 씀).
+  - 미니PC `/mnt/external/nexis-motiv/`(영상 100·원고 100·이전본 13·목록.md/csv) 로 정리 — `motiv_collect.py`.
+  - 유튜브: 첫 편 m0017 https://youtu.be/sQmn6T-LWpc ('하루 한 줄, 동기부여', 공개, AI 합성 표시). 매일 07:40 한 편 자동 — `motiv_publish.py`(무작위 순서·중복 없음), 제목·첫 문장 100편 `data/motiv/hooks.jsonl` + `motiv_meta.py`.
+- 레포 밖 변경:
+  - **미니PC crontab 한 줄 추가** `40 7 * * * /usr/bin/python3 ~/bin/motiv_publish.py >> /mnt/external/nexis-motiv/업로드/upload.log` (백업 `~/crontab-backup-2026-10-25-motiv.txt`). `~/bin/motiv_collect.py`·`motiv_publish.py` 사본. docker·compose·터널은 안 건드림(autovid-bot 을 exec 로만 씀).
+  - 미니PC `/mnt/external/nexis-motiv/업로드/`(순서.txt·올린기록.csv·메타/100개), 임시 복사 폴더 `/mnt/external/autovid/output/motiv-upload/`(올린 뒤 비움).
+  - 맥미니 `~/Work/nexis-motiv/bg/`(그림 20·반복 영상 2), `run-bank.sh`. 원본 그림 데스크탑 `D:\YH\output\motiv-bg`.
+- 확인 못 한 것: 내일 07:40 첫 자동 업로드(크론으로 실제 도는지) · 업로드 실패 알림 없음(로그만) · 채널 설명이 아직 "매주 올립니다" · m0085·m0099 발음(사람이 안 들어 봄) · 새 영상 생기면 `motiv_collect.py` 를 손으로 돌려야 순서에 들어감.
+- 다음 할 일: 내일 upload.log·올린기록.csv 확인 → 실패 알림(텔레그램) 붙이기 → 채널 설명 '매일'로 → 원고 더 쓰기(hooks 도 함께).
+- 주의: 100편이면 약 100일치. 같은 편 다시 올리지 않게 `올린기록.csv` 지우지 말 것. 미니PC 설정 변경은 사용자 승인 후.
+
 ## 2026-10-25 09:20 · 동기부여(nexis-motiv) 내 목소리 쇼츠 — 시범·원고 은행·밤샘 91편·13편 다시 만들기 (데스크탑)
 - 상태: 커밋 95f25b5(+ 이 HANDOFF) · 배포 해당 없음 · 업로드 **안 함**(사용자 지시) · 작업트리 깨끗
 - 한 일:
