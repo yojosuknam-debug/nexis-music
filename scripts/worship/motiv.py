@@ -28,7 +28,8 @@ from PIL import Image, ImageDraw, ImageFilter  # noqa: E402
 OUT = Path(os.environ.get("MOTIV_OUT", Path.home() / "Work" / "nexis-motiv" / "output"))
 OUTBOX = Path(os.environ.get("MOTIV_OUTBOX", Path.home() / "Work" / "outbox" / "motiv"))   # archive-outbox 가 미니PC 로 옮긴다
 SPEED = float(os.environ.get("MOTIV_SPEED", "0.95"))   # 예배(0.92)보다 조금 힘 있게
-HEAD, TAIL = 0.5, 1.5        # 앞뒤 여백(초) — 끝은 맺는 문장을 잠시 띄워 둔다
+RESTART_EVERY = int(os.environ.get("MOTIV_RESTART_EVERY", "8"))   # 이만큼 만들 때마다 프로세스를 새로 띄운다(0=안 함)
+HEAD, TAIL = 0.5, 1.5       # 앞뒤 여백(초) — 끝은 맺는 문장을 잠시 띄워 둔다
 VW, VH, FPS = 1080, 1920, 30
 CHANNEL = "하루 한 줄, 동기부여"
 AI_NOTE = "목소리는 AI로 합성했습니다"
@@ -177,14 +178,20 @@ def worship_busy() -> bool:
     return r.returncode == 0
 
 
-def run_bank(bank: Path, until: str | None, limit: int) -> int:
+def run_bank(bank: Path, until: str | None, limit: int, redo: set[str] | None = None) -> int:
     """은행(jsonl)의 안 만든 원고를 차례로 — 결과는 OUTBOX/motiv/<id>/ (mp4·script.json), 만든 id 는 done.txt.
-    GPU 메모리가 크면 restart_if_heavy 가 같은 명령으로 다시 띄우고, done.txt·_chunks 로 이어 간다."""
-    done_f = OUT / "done.txt"
+    GPU 메모리가 크면 restart_if_heavy 가, RESTART_EVERY 편마다는 여기서 같은 명령으로 다시 띄우고 done.txt·_chunks 로 이어 간다.
+    redo: 이 id 들만 다른 씨앗으로 다시 만든다(기록은 redone.txt)."""
+    done_f = OUT / ("redone.txt" if redo else "done.txt")
     done = set(done_f.read_text(encoding="utf-8").split()) if done_f.exists() else set()
     files = sorted(bank.glob("*.jsonl")) if bank.is_dir() else [bank]
     todo = [m for f in files for m in map(json.loads, filter(str.strip, f.read_text(encoding="utf-8-sig").splitlines()))
-            if m["id"] not in done]
+            if m["id"] not in done and (redo is None or m["id"] in redo)]
+    if redo:                                       # 같은 씨앗이면 같은 소리가 나온다 — 씨앗을 옮기고 시도 횟수를 늘린다
+        import torch
+        seed = torch.manual_seed
+        torch.manual_seed = lambda s: seed(s + 500)
+        bw.TRIES = 5
     stop = None
     if until:
         now = dt.datetime.now()
@@ -192,8 +199,8 @@ def run_bank(bank: Path, until: str | None, limit: int) -> int:
         if stop <= now:
             stop += dt.timedelta(days=1)
     bw.log(f"은행 {len(todo)}편 남음" + (f" · {stop:%H:%M} 까지" if stop else ""))
-    v, made, fails = None, 0, 0
-    for m in todo:
+    v, made, fails = None, int(os.environ.get("MOTIV_MADE", "0")), 0
+    for i, m in enumerate(todo):
         if stop and dt.datetime.now() >= stop or limit and made >= limit:
             break
         while worship_busy():                      # 예배 목소리가 우선 — GPU 를 나눠 쓰지 않는다
@@ -214,7 +221,8 @@ def run_bank(bank: Path, until: str | None, limit: int) -> int:
             (out / "motiv.m4a").unlink(missing_ok=True)
             (box / "script.json").write_text(json.dumps(
                 {k: m[k] for k in ("id", "theme", "title", "line", "body", "close")}
-                | {"sec": round(sec, 1), "max_err": max(p["qc"]["max_err"] for p in script["parts"])},
+                | {"sec": round(sec, 1), "max_err": max(p["qc"]["max_err"] for p in script["parts"])}
+                | ({"redo": True} if redo else {}),
                 ensure_ascii=False, indent=1), encoding="utf-8")
             stamp = time.time()                     # 두 파일 시각을 같게 — 이관(5분 지난 파일만)이 둘을 같은 묶음으로 옮기게
             for f in box.iterdir():
@@ -229,7 +237,14 @@ def run_bank(bank: Path, until: str | None, limit: int) -> int:
             with done_f.open("a", encoding="utf-8") as f:
                 f.write(m["id"] + "\n")
             made, fails = made + 1, 0
-            bw.log(f"[{made}] {m['id']} 완성 {sec:.0f}초 · {time.time() - t0:.0f}초 걸림 · {m['title']}")
+            bw.log(f"[{made}] {m['id']} 완성 {sec:.0f}초 · {time.time() - t0:.0f}초 걸림 · 최대 오류 "
+                   f"{max(p['qc']['max_err'] for p in script['parts']):.0%} · {m['title']}")
+            if RESTART_EVERY and made % RESTART_EVERY == 0 and i + 1 < len(todo):
+                # 한 프로세스로 오래 돌리면 편당 86초 → 404초로 점점 느려졌다(10-25 밤샘) — 몇 편마다 새로 띄운다
+                bw.log(f"  {RESTART_EVERY}편마다 새로 띄움(지금까지 {made}편)")
+                os.environ["MOTIV_MADE"] = str(made)
+                sys.stdout.flush()
+                os.execv(sys.executable, [sys.executable] + sys.argv)
         except Exception as e:  # noqa: BLE001 — 한 편 실패는 건너뛰고 이어 간다
             fails += 1
             bw.log(f"[실패] {m['id']} {type(e).__name__}: {e}")
@@ -248,9 +263,11 @@ def main() -> int:
     ap.add_argument("--bank", help="원고 은행 폴더 또는 jsonl — 안 만든 원고를 차례로 만든다")
     ap.add_argument("--until", help="이 시각(HH:MM)이 지나면 새 편을 시작하지 않는다")
     ap.add_argument("--max", type=int, default=0, help="이번에 만들 최대 편수(0=제한 없음)")
+    ap.add_argument("--redo", help="다시 만들 id(쉼표로 구분) — 은행에서 이 편들만 다른 씨앗으로")
     a = ap.parse_args()
     if a.bank:
-        return run_bank(Path(a.bank).expanduser(), a.until, a.max)
+        redo = set(a.redo.split(",")) if a.redo else None
+        return run_bank(Path(a.bank).expanduser(), a.until, a.max, redo)
     if a.run:
         out = OUT / a.run
     else:
