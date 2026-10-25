@@ -66,6 +66,17 @@ python scripts/worship/motiv_check.py data/motiv/*.jsonl
 미니PC 에서 `python3 ~/bin/motiv_collect.py` 를 돌리면 `/mnt/external/nexis-motiv/` 의
 `영상/`(편마다 최신본)·`원고/`·`이전본/`·`목록.md`·`목록.csv` 로 모은다. 자동 실행은 아직 없음(미니PC 설정 변경은 승인 후).
 
+## 유튜브 업로드 (10-25 사용자 승인 — 매일 한 편)
+
+- 미니PC crontab `40 7 * * *` → `~/bin/motiv_publish.py`(레포 `scripts/worship/motiv_publish.py` 사본). 로그 `/mnt/external/nexis-motiv/업로드/upload.log`.
+- 순서 `업로드/순서.txt`(처음 한 번 무작위, 새 편은 섞어서 뒤에) · 기록 `업로드/올린기록.csv`(번호·시각·주소·제목) — 올린 편은 다시 안 올린다.
+- 제목·설명·태그: `data/motiv/hooks.jsonl`(편마다 제목·첫 문장, 사람이 씀) + `scripts/worship/motiv_meta.py`(주제별 해시태그·태그)
+  → `업로드/메타/<id>.json`. 새 원고를 넣으면 hooks 도 같이 쓰고 `python scripts/worship/motiv_meta.py <폴더>` 로 만들어 미니PC 로 복사.
+- 실제 업로드는 이미 돌고 있는 `autovid-bot` 컨테이너(nexis-motiv 토큰)를 `docker compose exec` 로 부른다 — 컨테이너·compose 는 바꾸지 않음.
+  영상은 컨테이너가 보는 `/mnt/external/autovid/output/motiv-upload/` 에 잠깐 복사했다가 지운다.
+- 공개(public), 아동용 아님, '변경·합성 콘텐츠'(AI 목소리) 표시 켬. 손으로 한 편: `python3 ~/bin/motiv_publish.py [--id m0001] [--dry-run]`.
+- 새로 만든 영상은 `motiv_collect.py` 로 nexis-motiv 에 모아야 순서에 들어간다.
+
 ## 맥미니 실행
 
 ```bash
