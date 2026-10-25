@@ -42,6 +42,30 @@ python scripts/worship/motiv_check.py data/motiv/*.jsonl
 | 몸·마음 | 아픈 날, 불안, 화가 날 때 |
 | 작은 기쁨 | 날씨, 계절, 소소한 성취 |
 
+## 배경 (10-25 사용자 확정)
+
+장면 그림과 미소녀풍 그림을 **번갈아** 쓴다. 맥미니 `~/Work/nexis-motiv/bg/<주제키>_<scene|girl>.<png|mp4>` 에서
+원고 주제로 고르고, 편 번호 홀수 = 장면 먼저, 짝수 = 미소녀풍 먼저. 같은 이름의 mp4(반복 영상)가 있으면 그것을 쓴다.
+
+| 주제 | 키 | | 주제 | 키 |
+|---|---|---|---|---|
+| 시작 | start | | 습관 | habit |
+| 지침 | tired | | 공부와 시험 | study |
+| 실패 뒤 | fail | | 돈과 일 | work |
+| 비교 | compare | | 몸과 마음 | mind |
+| 관계 | relation | | 작은 기쁨 | joy |
+
+- 그림 20장(Higgsfield GPT Image 2.5, 장당 0.25크레딧), 반복 영상은 **시작 주제 2개만**(Kling 표준·무음 5초 7.5크레딧, 앞뒤로 이어 붙여 10초 무한 반복). 더 늘리지 않는다.
+- 미소녀풍 = 25세 안팎 성인 여성, 단정한 일상복, 선정성 없음. 원본은 데스크탑 `D:\YH\output\motiv-bg`.
+- 그림은 천천히 확대(방향은 편마다 다르게), 글 뒤엔 옅은 그늘·그림자. `bg/` 가 없으면 예전 단색 바탕.
+- 비교본: `python motiv.py --bank bank --compare m0001 --bgs none,start_scene.png,start_girl.mp4`
+
+## 미니PC 외장하드 정리
+
+맥미니가 보낸 영상은 이관 폴더(`/mnt/external/macmini/<시각>/motiv/`)에 흩어져 들어온다.
+미니PC 에서 `python3 ~/bin/motiv_collect.py` 를 돌리면 `/mnt/external/nexis-motiv/` 의
+`영상/`(편마다 최신본)·`원고/`·`이전본/`·`목록.md`·`목록.csv` 로 모은다. 자동 실행은 아직 없음(미니PC 설정 변경은 승인 후).
+
 ## 맥미니 실행
 
 ```bash
