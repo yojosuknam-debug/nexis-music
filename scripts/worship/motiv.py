@@ -13,6 +13,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -23,12 +24,13 @@ W = Path(os.environ.get("WORSHIP_DIR", Path(__file__).resolve().parent))   # 맥
 sys.path.insert(0, str(W))
 import build_worship as bw  # noqa: E402
 import slides as sl  # noqa: E402
-from PIL import Image, ImageDraw, ImageFilter  # noqa: E402
+from PIL import Image, ImageChops, ImageDraw, ImageFilter  # noqa: E402
 
 OUT = Path(os.environ.get("MOTIV_OUT", Path.home() / "Work" / "nexis-motiv" / "output"))
 OUTBOX = Path(os.environ.get("MOTIV_OUTBOX", Path.home() / "Work" / "outbox" / "motiv"))   # archive-outbox 가 미니PC 로 옮긴다
 SPEED = float(os.environ.get("MOTIV_SPEED", "0.95"))   # 예배(0.92)보다 조금 힘 있게
-RESTART_EVERY = int(os.environ.get("MOTIV_RESTART_EVERY", "8"))   # 이만큼 만들 때마다 프로세스를 새로 띄운다(0=안 함)
+BG_DIR = Path(os.environ.get("MOTIV_BG_DIR", Path.home() / "Work" / "nexis-motiv" / "bg"))   # 주제별 배경 묶음(없으면 단색 바탕)
+RESTART_EVERY =int(os.environ.get("MOTIV_RESTART_EVERY", "8"))   # 이만큼 만들 때마다 프로세스를 새로 띄운다(0=안 함)
 HEAD, TAIL = 0.5, 1.5       # 앞뒤 여백(초) — 끝은 맺는 문장을 잠시 띄워 둔다
 VW, VH, FPS = 1080, 1920, 30
 CHANNEL = "하루 한 줄, 동기부여"
@@ -100,11 +102,20 @@ def backdrop() -> Image.Image:
     return Image.composite(Image.new("RGB", (VW, VH), (70, 62, 54)), im, glow)
 
 
-def card(text: str, big: bool) -> Image.Image:
-    im = backdrop()
+def scrim(y0: int, y1: int, peak: int) -> Image.Image:
+    """글 뒤에 깔 세로 그늘(위아래로 옅어짐) — 그림 배경 위에서도 글이 읽히게."""
+    a = Image.new("L", (1, VH), 0)
+    mid, half = (y0 + y1) / 2, max(1.0, (y1 - y0) / 2)
+    for y in range(VH):
+        t = abs(y - mid) / half
+        a.putpixel((0, y), int(peak * max(0.0, 1 - t * t)))
+    return a.resize((VW, VH))
+
+
+def card(text: str, big: bool, clear: bool = False) -> Image.Image:
+    """clear=True 면 투명 바탕(배경 그림·영상 위에 얹는 글 판) — 글 뒤 그늘과 그림자를 넣는다."""
+    im = Image.new("RGBA", (VW, VH), (0, 0, 0, 0)) if clear else backdrop()
     d = ImageDraw.Draw(im)
-    fh = sl.font("Pretendard-Bold", 34)
-    d.text(((VW - fh.getlength(CHANNEL)) // 2, 210), CHANNEL, font=fh, fill=GOLD)
     size = 84 if big else 64
     f = sl.font("GowunBatang-Bold" if big else "Pretendard-Bold", size)
     lines = sl.wrap(text, f, VW - 160)
@@ -114,16 +125,67 @@ def card(text: str, big: bool) -> Image.Image:
         lines = sl.wrap(text, f, VW - 160)
     lh = int(size * 1.55)
     y = (VH - lh * len(lines)) // 2 - 40
+    fh, fa = sl.font("Pretendard-Bold", 34), sl.font("Pretendard-Regular", 24)
+    if clear:
+        shade = Image.new("RGBA", (VW, VH), (8, 10, 18, 0))
+        alpha = scrim(y - 260, y + lh * len(lines) + 220, 175)
+        edge = Image.new("L", (1, VH), 0)          # 위·아래 가장자리로 갈수록 어둡게(채널 이름·AI 안내 뒤) — 띠가 지지 않게
+        for yy in range(VH):
+            edge.putpixel((0, yy), int(150 * max(0.0, 1 - yy / 460, 1 - (VH - yy) / 460)))
+        top = bottom = edge.resize((VW, VH))
+        shade.putalpha(ImageChops.lighter(ImageChops.lighter(alpha, top), bottom))
+        im = Image.alpha_composite(im, shade)
+        d = ImageDraw.Draw(im)
+
+    def put(xy, s, font, fill):
+        if clear:                                  # 옅은 그림자 — 밝은 그림 위에서도 글 테두리가 보이게
+            d.text((xy[0] + 3, xy[1] + 3), s, font=font, fill=(0, 0, 0, 150))
+        d.text(xy, s, font=font, fill=fill)
+
+    put(((VW - fh.getlength(CHANNEL)) // 2, 210), CHANNEL, fh, GOLD)
     for ln in lines:
-        d.text(((VW - f.getlength(ln)) // 2, y), ln, font=f, fill=GOLD if big else WHITE)
+        put(((VW - f.getlength(ln)) // 2, y), ln, f, GOLD if big else WHITE)
         y += lh
-    fa = sl.font("Pretendard-Regular", 24)
-    d.text(((VW - fa.getlength(AI_NOTE)) // 2, VH - 150), AI_NOTE, font=fa, fill=DIM)
+    put(((VW - fa.getlength(AI_NOTE)) // 2, VH - 150), AI_NOTE, fa, (200, 196, 188) if clear else DIM)
     return im
 
 
-def render(script: dict, audio: Path, out: Path) -> Path:
-    """묶음(chunk_secs)마다 화면 한 장 — 하루 한 줄은 크게, 나머지는 문장 자막. 끝은 하루 한 줄을 다시 띄운다."""
+THEME_KEY = {"시작": "start", "지침": "tired", "실패 뒤": "fail", "비교": "compare", "관계": "relation", "습관": "habit",
+             "공부와 시험": "study", "돈과 일": "work", "몸과 마음": "mind", "작은 기쁨": "joy"}
+
+
+def pick_bg(theme: str, mid: str) -> Path | None:
+    """주제별 배경 묶음(BG_DIR/<주제키>_<scene|girl>.<mp4|png>)에서 고른다 — 편 번호로 화풍을 번갈아, 움직이는 영상이 있으면 먼저."""
+    if not BG_DIR.is_dir():
+        return None
+    key = THEME_KEY.get(theme, "")
+    styles = ["scene", "girl"] if int(re.sub(r"\D", "", mid) or 0) % 2 else ["girl", "scene"]
+    for st in styles:
+        for ext in ("mp4", "png"):
+            p = BG_DIR / f"{key}_{st}.{ext}"
+            if p.exists():
+                return p
+    return None
+
+
+def bg_filter(bg: Path, mid: str, sec: float) -> list[str]:
+    """배경 입력 + 필터. 그림은 천천히 확대하며 흐르고(방향은 편마다 다르게), 영상은 끝없이 되풀이한다."""
+    if bg.suffix == ".mp4":
+        return ["-stream_loop", "-1", "-i", str(bg)], \
+            f"[0:v]scale={VW}:{VH}:force_original_aspect_ratio=increase,crop={VW}:{VH},fps={FPS},setsar=1"
+    n = int(re.sub(r"\D", "", mid) or 0)
+    fx, fy = [(0.5, 0.35), (0.2, 0.5), (0.8, 0.5), (0.5, 0.65)][n % 4]
+    frames = int(sec * FPS) + FPS
+    z = f"min(1+0.10*on/{frames},1.10)"
+    return ["-loop", "1", "-framerate", str(FPS), "-i", str(bg)], (
+        f"[0:v]scale={VW * 2}:{VH * 2}:force_original_aspect_ratio=increase,crop={VW * 2}:{VH * 2},"
+        f"zoompan=z='{z}':x='(iw-iw/zoom)*{fx}':y='(ih-ih/zoom)*{fy}':d=1:s={VW}x{VH}:fps={FPS},setsar=1")
+
+
+def render(script: dict, audio: Path, out: Path, bg: Path | None = None, name: str = "motiv.mp4") -> Path:
+    """묶음(chunk_secs)마다 화면 한 장 — 하루 한 줄은 크게, 나머지는 문장 자막. 끝은 하루 한 줄을 다시 띄운다.
+    bg 가 있으면 글 판을 투명하게 만들어 배경 그림(천천히 확대)·영상(되풀이) 위에 얹는다."""
+    clear = bg is not None
     fr = out / "frames"
     fr.mkdir(exist_ok=True)
     for old in fr.glob("*.png"):
@@ -136,7 +198,7 @@ def render(script: dict, audio: Path, out: Path) -> Path:
         seq.append((path, sec))
 
     line = script["parts"][0]["text"]
-    add(card(line, True), HEAD)
+    add(card(line, True, clear), HEAD)
     for p in script["parts"]:
         cks = bw.chunks(p["text"], "ko")
         secs = p["qc"]["chunk_secs"]
@@ -145,30 +207,40 @@ def render(script: dict, audio: Path, out: Path) -> Path:
             secs = [total * len(c) / sum(len(x) for x in cks) for c in cks]
         for i, (c, s) in enumerate(zip(cks, secs)):
             extra = p["gap"] if i == len(cks) - 1 else 0.0
-            add(card(c, p["id"] == "line"), s / SPEED + extra)
+            add(card(c, p["id"] == "line", clear), s / SPEED + extra)
     last, sec = seq[-1]
     seq[-1] = (last, sec - TAIL + 0.3)
-    add(card(line, True), TAIL - 0.3)
+    add(card(line, True, clear), TAIL - 0.3)
     lst = out / "frames.txt"
     with lst.open("w", encoding="utf-8") as f:
         for path, sec in seq:
             f.write(f"file '{path.resolve().as_posix()}'\nduration {max(0.05, sec):.3f}\n")
         f.write(f"file '{seq[-1][0].resolve().as_posix()}'\n")
-    dst = out / "motiv.mp4"
-    subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst),
-                    "-i", str(audio), "-map", "0:v", "-map", "1:a", "-vf", f"fps={FPS},format=yuv420p",
-                    "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage", "-g", str(FPS * 2),
-                    "-c:a", "copy", "-shortest", "-movflags", "+faststart", str(dst)], check=True)
+    dst = out / name
+    if not clear:
+        subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst),
+                        "-i", str(audio), "-map", "0:v", "-map", "1:a", "-vf", f"fps={FPS},format=yuv420p",
+                        "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage", "-g", str(FPS * 2),
+                        "-c:a", "copy", "-shortest", "-movflags", "+faststart", str(dst)], check=True)
+        return dst
+    sec = bw.dur(audio)
+    bin_, bf = bg_filter(bg, script.get("id", "m0"), sec)
+    fc = f"{bf},eq=brightness=-0.04:saturation=0.92[bg];[1:v]fps={FPS},format=rgba[ov];" \
+         f"[bg][ov]overlay=0:0:format=auto,format=yuv420p[v]"
+    subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", *bin_,
+                    "-f", "concat", "-safe", "0", "-i", str(lst), "-i", str(audio), "-filter_complex", fc,
+                    "-map", "[v]", "-map", "2:a", "-t", f"{sec:.3f}", "-c:v", "libx264", "-preset", "veryfast",
+                    "-crf", "21", "-g", str(FPS * 2), "-c:a", "copy", "-movflags", "+faststart", str(dst)], check=True)
     return dst
 
 
-def make_one(v, script: dict, out: Path) -> Path:
+def make_one(v, script: dict, out: Path, bg: Path | None = None) -> Path:
     for p in script["parts"]:
         dst = out / f"{p['id']}.wav"
         p["audio"], p["qc"] = str(dst), v.part(p["text"], dst)
         bw.log(f"{p['id']}: {p['qc']['sec']:.0f}초 · 최대 오류 {p['qc']['max_err']:.0%}")
     audio = mix(script, out)
-    dst = render(script, audio, out)
+    dst = render(script, audio, out, bg)
     (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
     return dst
 
@@ -213,7 +285,10 @@ def run_bank(bank: Path, until: str | None, limit: int, redo: set[str] | None = 
         out.mkdir(parents=True, exist_ok=True)
         try:
             t0 = time.time()
-            dst = make_one(v, script, out)
+            bg = pick_bg(m["theme"], m["id"])
+            dst = make_one(v, script, out, bg)
+            if bg:
+                script["bg"] = bg.name
             box = out / "box"                       # 다 채운 뒤 한 번에 옮긴다 — 이관이 반쪽 묶음을 집어 가지 않게
             box.mkdir(exist_ok=True)
             sec = bw.dur(dst)
@@ -222,7 +297,7 @@ def run_bank(bank: Path, until: str | None, limit: int, redo: set[str] | None = 
             (box / "script.json").write_text(json.dumps(
                 {k: m[k] for k in ("id", "theme", "title", "line", "body", "close")}
                 | {"sec": round(sec, 1), "max_err": max(p["qc"]["max_err"] for p in script["parts"])}
-                | ({"redo": True} if redo else {}),
+                | ({"redo": True} if redo else {}) | ({"bg": script["bg"]} if "bg" in script else {}),
                 ensure_ascii=False, indent=1), encoding="utf-8")
             stamp = time.time()                     # 두 파일 시각을 같게 — 이관(5분 지난 파일만)이 둘을 같은 묶음으로 옮기게
             for f in box.iterdir():
@@ -255,6 +330,29 @@ def run_bank(bank: Path, until: str | None, limit: int, redo: set[str] | None = 
     return 0
 
 
+def compare(bank: Path, mid: str, bgs: list[str]) -> int:
+    """같은 원고·같은 목소리로 배경만 바꾼 영상 여러 개 — OUT/compare-<id>/<배경 이름>.mp4."""
+    files = sorted(bank.glob("*.jsonl")) if bank.is_dir() else [bank]
+    m = next(x for f in files for x in map(json.loads, filter(str.strip, f.read_text(encoding="utf-8-sig").splitlines()))
+             if x["id"] == mid)
+    out = OUT / f"compare-{mid}"
+    out.mkdir(parents=True, exist_ok=True)
+    script = {"date": dt.date.today().isoformat(), "kind": "motiv", "id": mid, "theme": m["theme"], "title": m["title"],
+              "parts": [{"id": k, "text": m[k]} for k in ("line", "body", "close")]}
+    v = bw.Voice("ko")
+    for p in script["parts"]:
+        dst = out / f"{p['id']}.wav"
+        p["audio"], p["qc"] = str(dst), v.part(p["text"], dst)
+    audio = mix(script, out)
+    for b in bgs:
+        bg = None if b == "none" else BG_DIR / b
+        name = ("plain" if bg is None else bg.stem + ("_loop" if bg.suffix == ".mp4" else "_still")) + ".mp4"
+        t0 = time.time()
+        dst = render(script, audio, out, bg, name)
+        bw.log(f"비교본 {dst.name} · {bw.dur(dst):.1f}초 · 화면 만들기 {time.time() - t0:.0f}초")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--theme", default="일이 손에 안 잡히는 월요일 아침")
@@ -264,7 +362,11 @@ def main() -> int:
     ap.add_argument("--until", help="이 시각(HH:MM)이 지나면 새 편을 시작하지 않는다")
     ap.add_argument("--max", type=int, default=0, help="이번에 만들 최대 편수(0=제한 없음)")
     ap.add_argument("--redo", help="다시 만들 id(쉼표로 구분) — 은행에서 이 편들만 다른 씨앗으로")
+    ap.add_argument("--compare", help="비교본: 은행의 이 id 한 편을 목소리는 한 번만 만들고 --bgs 배경마다 영상으로")
+    ap.add_argument("--bgs", default="none", help="비교할 배경 파일들(쉼표, BG_DIR 기준 이름). none = 단색 바탕")
     a = ap.parse_args()
+    if a.compare:
+        return compare(Path(a.bank or "bank").expanduser(), a.compare, a.bgs.split(","))
     if a.bank:
         redo = set(a.redo.split(",")) if a.redo else None
         return run_bank(Path(a.bank).expanduser(), a.until, a.max, redo)
