@@ -118,15 +118,20 @@
   }
 
   function renderStats() {
-    var trackTotal = albums.reduce(function (sum, album) {
-      var count = parseInt(album.count, 10);
-      return Number.isNaN(count) ? sum : sum + count;
-    }, 0);
+    // 곡 수는 앨범 주크박스의 실제 재생 곡 수(build_pages.py 가 index.html 에 써 넣음).
+    // 예전엔 data.js 의 track_count 를 더했는데, 유튜브 영상 1개(앨범 전체 영상·숏츠 포함)를 1곡으로 세서 틀렸다.
+    var trackTotal = parseInt(heroStats.getAttribute('data-jukebox-tracks'), 10);
+    if (Number.isNaN(trackTotal)) {
+      trackTotal = albums.reduce(function (sum, album) {
+        var count = parseInt(album.count, 10);
+        return Number.isNaN(count) ? sum : sum + count;
+      }, 0);
+    }
 
     var stats = [
       { value: String(albums.length), label: '\uB4F1\uB85D \uC568\uBC94' },
       { value: String(Math.max(genres.length - 1, 0)), label: '\uC7A5\uB974 \uD544\uD130' },
-      { value: String(trackTotal), label: '\uD45C\uC2DC\uB41C \uC218\uB85D\uACE1 \uC218' },
+      { value: String(trackTotal), label: '\uBC14\uB85C \uB4E4\uC744 \uC218 \uC788\uB294 \uACE1' },
       { value: 'LOCAL', label: '\uCEE4\uBC84 \uC6B0\uC120 \uAD6C\uC870' }
     ];
 

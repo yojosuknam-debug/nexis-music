@@ -312,17 +312,24 @@ def index_page(albums: list[dict], accents: dict[str, tuple]) -> str:
 """
 
 
-def update_root_album_link(count: int) -> None:
+def update_root_album_link(count: int, tracks: int) -> None:
     if not ROOT_INDEX.exists():
         return
     text = ROOT_INDEX.read_text(encoding="utf-8")
-    next_text, changed = re.subn(
+    next_text, _ = re.subn(
         r"(&#50536;&#48276; )\d+(&#51109; &#46307;&#44592;)",
         rf"\g<1>{count}\g<2>",
         text,
         count=1,
     )
-    if changed:
+    # 루트 '바로 들을 수 있는 곡' 숫자 — app.js 가 이 속성을 읽는다.
+    next_text, _ = re.subn(
+        r'(data-jukebox-tracks=")\d+(")',
+        rf"\g<1>{tracks}\g<2>",
+        next_text,
+        count=1,
+    )
+    if next_text != text:
         ROOT_INDEX.write_text(next_text, encoding="utf-8")
 
 
@@ -401,7 +408,7 @@ def main() -> int:
         accents[a["slug"]] = accent_of(cf) if cf.exists() else (143, 179, 164)
         (OUT / f"{a['slug']}.html").write_text(album_page(a, accents[a["slug"]], yt), encoding="utf-8")
     (OUT / "index.html").write_text(index_page(ready, accents), encoding="utf-8")
-    update_root_album_link(len(ready))
+    update_root_album_link(len(ready), sum(playable_count(a) for a in ready))
     (OUT / "radio.json").write_text(json.dumps(radio_list(ready), ensure_ascii=False),
                                     encoding="utf-8")
 
