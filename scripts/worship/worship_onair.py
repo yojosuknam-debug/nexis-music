@@ -74,7 +74,7 @@ def tidy(title: str) -> str:
 def build_text(o: Path, lang: str, service: dt.datetime, rerun: bool, test: bool) -> tuple[str, str]:
     s = json.loads((o / "script.json").read_text(encoding="utf-8"))
     old = json.loads((o / "spec.json").read_text(encoding="utf-8"))["description"].splitlines()
-    chapters = [l for l in old if CHAPTER.match(l)]
+    chapters = [tidy(l) for l in old if CHAPTER.match(l)]
     credits = [l for l in old if l.startswith("🎵")]
     mins = round((s.get("total_sec") or 0) / 60)
     head = tidy(s["title"])
@@ -178,6 +178,13 @@ def send(y, bid: str, mp4: Path, url: str, limit: int | None) -> tuple[bool, str
     err = ops.clean((p.stderr.read() or "").strip()[-300:])
     if p.returncode != 0:
         return False, f"송출 오류 {time.time() - t0:.0f}초 만에: {err or p.returncode}"
+    if not live:  # 보내긴 했는데 유튜브에서 방송이 켜진 걸 한 번도 못 봤다
+        try:
+            state = lifecycle(y, bid)
+        except Exception as e:
+            state = type(e).__name__
+        if state not in ("live", "complete"):
+            return False, f"영상은 보냈지만 방송이 켜지지 않았어요(상태 {state})"
     return True, ""
 
 
@@ -280,18 +287,19 @@ def main() -> int:
         result = finish(y, bid, keep, lang, bool(a.test))
         if not ok:
             ev("fail", why, title=title, url=link)
-            ops.notify(f"🚨 {slot} {name} 예배 송출 실패: {why}\n{link}")
+            ops.notify(f"🚨 예배 시험 방송 실패 — 첫 방송 전에 확인 필요: {why}" if a.test else f"🚨 {slot} {name} 예배 송출 실패: {why}\n{link}")
             return 1
         ev("ok", result, title=title, url=link, keep=keep, rerun=rerun)
         if "실패" in result and not a.test:
             ops.notify(f"⚠️ {slot} {name} 예배: 방송은 끝났지만 {result}. {link}")
+        if a.test:
+            ops.notify(f"✅ 예배 시험 방송 성공({name} {a.test}초, 비공개): {result}. 첫 방송 준비 완료. {link}")
         print("끝", link, result)
         return 0
     except Exception as e:
         why = f"{type(e).__name__}: {ops.clean(str(e), 160)}"
         ev("fail", why, url=f"https://youtu.be/{bid}" if bid else "")
-        if not a.test:
-            ops.notify(f"🚨 {slot} {name} 예배 방송을 시작하지 못했습니다: {why}")
+        ops.notify(("🚨 예배 시험 방송 실패 — 첫 방송 전에 확인 필요: " if a.test else f"🚨 {slot} {name} 예배 방송을 시작하지 못했습니다: ") + why)
         print("실패", why)
         return 1
 
