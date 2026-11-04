@@ -164,15 +164,6 @@ def pick(slot: str, lang: str, ordinal: int, avoid: set[str] = frozenset()) -> d
     raise RuntimeError(f"'{slot}' 자리에 쓸 {lang} 곡이 대장에 없습니다(verified)")
 
 
-def sing_along(song: dict, items: list[dict]) -> dict:
-    """자작 찬송에 같은 선율 연주판(11~15번)이 있으면 소리는 연주판, 가사 자막은 보컬판 — 회중이 따라 부르도록(11-04 사용자)."""
-    twin = next((x for x in items if x["id"] == song.get("instrumental")
-                 and x.get("license", {}).get("status") == "verified"), None)
-    if song.get("type") != "hymn_own" or not twin:
-        return song
-    return {**song, "url": twin["url"], "audio_n": twin["n"], "sing_along": twin["id"]}
-
-
 def prayer_bed(lang: str, ordinal: int, items: list[dict]) -> dict | None:
     """기도회 배경 — 그 언어 찬송 앨범의 독립 기도 연주곡(6~10번, 보컬판 짝이 없는 연주곡)을 먼저(11-04 사용자)."""
     langs = {x["slug"]: x.get("lang") for x in items if x.get("type") == "hymn_own"}

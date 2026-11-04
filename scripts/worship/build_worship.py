@@ -295,7 +295,7 @@ def pick_songs(lang: str, day: dt.date) -> dict:
         twin = next((x for x in items if x["id"] == resp.get("instrumental")
                      and x.get("license", {}).get("status") == "verified"), None)   # 없으면 응답 찬송의 연주판
         bed = dict(twin) if twin else ml.pick("prayer", lang, o)
-    return {"open": ml.sing_along(first, items), "response": ml.sing_along(resp, items), "prayer": bed}
+    return {"open": first, "response": resp, "prayer": bed}   # 함께 찬송·응답 찬양 = 원곡(보컬) 그대로(11-04 사용자), 연주곡은 기도회 배경만
 
 
 SONG_TITLE = {"hymn_pd": ("함께 찬송", "Hymn"), "hymn_own": ("찬송", "Hymn"), "ccm": ("찬양", "Song of Praise")}
