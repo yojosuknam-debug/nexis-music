@@ -298,6 +298,20 @@ def pick_songs(lang: str, day: dt.date) -> dict:
     return {"open": first, "response": resp, "prayer": bed}   # 함께 찬송·응답 찬양 = 원곡(보컬) 그대로(11-04 사용자), 연주곡은 기도회 배경만
 
 
+# 가사 있는 찬양 앞 안내 한 줄(11-04 사용자) — 앞 순서(예배의 부름·결단 기도) 낭독 끝에 붙인다
+SING_CUE = {"ko": ("화면의 가사를 보며 함께 따라 부르세요. 소리 내기 어려우시면 마음속으로 가사를 음미하며 불러 보세요.",
+                   "이어지는 찬양도 가사를 따라 부르세요. 마음속으로 가사를 음미하며 불러 보셔도 좋습니다."),
+            "en": ("Sing along with the words on the screen. If you cannot sing aloud, sing quietly in your heart and savor the lyrics.",
+                   "Sing along with this song as well, or sing quietly in your heart, savoring each word.")}
+
+
+def sing_cue(song: dict, lang: str, second: bool = False) -> str:
+    """가사 있는 곡(연주곡·가사 없는 곡 제외)이면 안내 한 줄, 아니면 빈 문자열."""
+    if song.get("type") == "instrumental" or song.get("instrumental_of"):
+        return ""
+    return " " + SING_CUE[lang][1 if second else 0]
+
+
 SONG_TITLE = {"hymn_pd": ("함께 찬송", "Hymn"), "hymn_own": ("찬송", "Hymn"), "ccm": ("찬양", "Song of Praise")}
 PRAY_SEC = float(os.environ.get("WORSHIP_PRAY_SEC", "40"))   # 기도회 제목마다 함께 기도하는 시간(초)
 # 기도회 인도는 다른 낭독(8%)보다 더 천천히 — 10-25 실측 6.7음절/초로 설교(5.7)보다 17% 빨랐다(10-24 사용자 '말이 너무 빠르다')
@@ -358,7 +372,7 @@ def make_script(lang: str, day: dt.date, out: Path) -> dict:
     songs = pick_songs(lang, day)
     parts = [
         {"id": "call", "title": "예배의 부름" if lang == "ko" else "Call to Worship",
-         "text": OPENING[lang] + " " + clean_speech(g["call"])},
+         "text": OPENING[lang] + " " + clean_speech(g["call"]) + sing_cue(songs["open"], lang)},
         {"id": "song1", "title": song_title(songs["open"], lang), "song": songs["open"]},
         {"id": "prayer", "title": "기도" if lang == "ko" else "Prayer", "text": clean_speech(g["prayer"])},
         {"id": "reading", "title": "성경 봉독" if lang == "ko" else "Scripture Reading",
@@ -368,7 +382,7 @@ def make_script(lang: str, day: dt.date, out: Path) -> dict:
          "verbatim": True},
         {"id": "sermon", "title": qt["title"], "text": clean_speech(g["sermon"])},
         {"id": "closing", "title": "결단 기도" if lang == "ko" else "Closing Prayer",
-         "text": clean_speech(qt["prayer"]) + " " + clean_speech(g["song2_intro"])},
+         "text": clean_speech(qt["prayer"]) + " " + clean_speech(g["song2_intro"]) + sing_cue(songs["response"], lang, True)},
         {"id": "song2", "title": song_title(songs["response"], lang, True), "song": songs["response"]},
         pm_part(lang, g["prayer_meeting"], songs["prayer"]),
         {"id": "lords_prayer", "title": "주기도문" if lang == "ko" else "The Lord's Prayer",
@@ -420,23 +434,25 @@ def kjv(ref_ko: str) -> tuple[str, list[dict]]:
 
 def make_script_en(ko: dict, day: dt.date, out: Path) -> dict:
     P = {p["id"]: p for p in ko["parts"]}
+    cues = SING_CUE["ko"]
     strip_open = lambda t: t.replace(OPENING["ko"], "").strip()
-    body = json.dumps({"title": ko["title"], "call": strip_open(P["call"]["text"]), "prayer": P["prayer"]["text"],
-                       "sermon": P["sermon"]["text"], "closing": P["closing"]["text"],
+    strip_cue = lambda t: t.replace(" " + cues[0], "").replace(" " + cues[1], "").strip()   # 안내는 영어판에서 따로 붙인다
+    body = json.dumps({"title": ko["title"], "call": strip_cue(strip_open(P["call"]["text"])), "prayer": P["prayer"]["text"],
+                       "sermon": P["sermon"]["text"], "closing": strip_cue(P["closing"]["text"]),
                        "pm_intro": P["prayer_meeting"]["pm"]["intro"], "pm_topics": P["prayer_meeting"]["pm"]["topics"],
                        "pm_close": P["prayer_meeting"]["pm"]["close"]}, ensure_ascii=False)
     g = gemini_json(env()["GEMINI_API_KEY"], TRANSLATE.format(body=body))
     ref, verses = kjv(ko["passage"])
     songs = pick_songs("en", day)
     parts = [
-        {"id": "call", "title": "Call to Worship", "text": OPENING["en"] + " " + clean_speech(g["call"])},
+        {"id": "call", "title": "Call to Worship", "text": OPENING["en"] + " " + clean_speech(g["call"]) + sing_cue(songs["open"], "en")},
         {"id": "song1", "title": song_title(songs["open"], "en"), "song": songs["open"]},
         {"id": "prayer", "title": "Prayer", "text": clean_speech(g["prayer"])},
         {"id": "reading", "title": "Scripture Reading", "verbatim": True,
          "text": f"Hear the word of the Lord from {speak_ref(ref, 'en')}. "
                  + " ".join(clean_speech(v["text"]) for v in verses) + " This is the word of the Lord."},
         {"id": "sermon", "title": clean_speech(g["title"]), "text": clean_speech(g["sermon"])},
-        {"id": "closing", "title": "Closing Prayer", "text": clean_speech(g["closing"])},
+        {"id": "closing", "title": "Closing Prayer", "text": clean_speech(g["closing"]) + sing_cue(songs["response"], "en", True)},
         {"id": "song2", "title": "Response Song", "song": songs["response"]},
         pm_part("en", {"intro": g["pm_intro"], "topics": g["pm_topics"], "close": g["pm_close"]}, songs["prayer"]),
         {"id": "lords_prayer", "title": "The Lord's Prayer", "text": FIXED["en"]["lords_prayer"], "fixed": True},
