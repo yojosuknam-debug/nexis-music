@@ -704,8 +704,9 @@ def make_voice(script: dict, out: Path) -> None:
         if p.get("fixed"):
             h = hashlib.sha1(f"{lang}|{REF[lang]}|{gen_settings(lang)[0]}|{gen_settings(lang)[1]}|{GAP}|clk|{'nat' if NATURAL else ''}|sp1|{p['text']}".encode()).hexdigest()[:12]
             dst = CACHE / f"{p['id']}_{lang}_{h}.wav"
-            if dst.exists():
-                p["audio"] = str(dst)
+            qcf = dst.with_suffix(".qc.json")        # 문장별 시간표(chunk_secs) — 없으면 영상 자막이 쉼 추정에 기대 뒤로 갈수록 어긋났다(11-04)
+            if dst.exists() and qcf.exists():
+                p["audio"], p["qc"] = str(dst), json.loads(qcf.read_text(encoding="utf-8"))
                 log(f"{p['title']}: 저장된 음성 사용")
                 # 저장본만 쓰고 끝나면(주기도문·축복이 맨 끝) 경로가 script.json 에 안 남아 묶음이 실패했다(11-04)
                 (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -715,6 +716,8 @@ def make_voice(script: dict, out: Path) -> None:
         t0 = time.time()
         info = v.part(p["text"], dst)
         p["audio"], p["qc"] = str(dst), info
+        if p.get("fixed"):
+            dst.with_suffix(".qc.json").write_text(json.dumps(info, ensure_ascii=False), encoding="utf-8")
         log(f"{p['title']}: {info['sec']:.0f}초 · {time.time() - t0:.0f}초 걸림 · 최대 오류 {info['max_err']:.0%}"
             f" · GPU {info['gpu_gb']}GB")
         (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
