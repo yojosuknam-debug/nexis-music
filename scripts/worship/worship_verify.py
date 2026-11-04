@@ -59,7 +59,7 @@ def verify(folder: Path, preroll: int = 300) -> tuple[bool, dict]:
         if abs(dur - want) > 3:
             why.append(f"길이 {dur:.1f}초 ≠ 시간표+대기 {want:.1f}초")
         kf = [float(x) for x in probe(["-select_streams", "v:0", "-skip_frame", "nokey", "-show_entries", "frame=pts_time",
-                                       "-of", "csv=p=0", str(mp4)]).split() if x]
+                                       "-of", "csv=p=0", str(mp4)]).replace(",", " ").split() if x]
         gaps = [b - a for a, b in zip(kf, kf[1:])] + ([dur - kf[-1]] if kf else [])
         info["max_keyframe_gap_sec"] = round(max(gaps), 2) if gaps else None
         if not gaps or max(gaps) > 4.0:
