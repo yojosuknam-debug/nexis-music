@@ -1,5 +1,16 @@
 # HANDOFF — 창 인계 기록 (최근 5개, 새 항목이 맨 위)
 
+## 2026-11-04 13:30 · 실시간 예배 11-05 — 맥 목소리 묶음 실패 고침·미니PC 조립 완료 (맥미니)
+- 상태: 이 커밋(build_worship.py 한 줄 + 이 HANDOFF) · 맥·미니PC 둘 다 이 커밋 전 a5a17d0 으로 실행 · 방송 예약 **안 함**(SCHEDULE=0)
+- 한 일:
+  - 아침 10:01 `worship-mac.sh 2026-11-05` 이 ko·en 둘 다 `lords_prayer: 목소리 파일이 없다` 로 묶음 실패. 원인: `make_voice` 가 주기도문·축복 **저장본(cache/)을 쓰면 script.json 을 안 쓰고 continue** → 맨 끝 두 순서의 audio 가 저장 안 됨. 저장본 사용 때도 script.json 쓰도록 수정.
+  - 맥 다시 실행(문장 저장본 재사용, 1분) → 묶음 ko·en → 미니PC 이관 확인 → 미니PC `worship-assemble.sh 2026-11-05` 손으로 실행(16분).
+  - 결과: `/mnt/external/nexis-worship/output/2026-11-05_ko/worship_2026-11-05_ko.mp4`(20:30) · `…_en/worship_2026-11-05_en.mp4`(22:49), mp3 함께.
+- 레포 밖 변경: 미니PC 외장하드 `macmini/2026-11-04_105200`·`_114206` 에 실패 때 남은 **반쪽 묶음**(bundle.json 없음 → find 가 무시) — 지우려면 승인 필요.
+- 확인 못 한 것: 사람이 안 들어 봄. 되읽기 오류 높은 문장 — ko 설교 "본문 사절과 오절에서 시인은…" 62%, en 성경봉독 "Wilt thou be angry with us for ever?" 38%.
+- 다음 할 일: 위 두 문장 들어 보기 → 필요하면 해당 문장 다시 만들기 → 방송 예약(SCHEDULE=1)·송출은 사용자 결정.
+- 주의: `voice_bundle.py pack` 은 실패해도 반쪽 폴더를 outbox 에 남긴다(이관됨).
+
 ## 2026-10-26 19:40 · 동기부여 쇼츠 — 첫 자동 업로드 확인·실패 텔레그램 알림·채널 설명 '매일 아침' (데스크탑)
 - 상태: 이 커밋(motiv_publish.py 알림 + 이 HANDOFF) · 배포 = 미니PC `~/bin/motiv_publish.py` 교체(레포와 같음, LF) · 작업트리 깨끗
 - 한 일:

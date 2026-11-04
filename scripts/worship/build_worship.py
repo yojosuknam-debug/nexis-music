@@ -691,6 +691,8 @@ def make_voice(script: dict, out: Path) -> None:
             if dst.exists():
                 p["audio"] = str(dst)
                 log(f"{p['title']}: 저장된 음성 사용")
+                # 저장본만 쓰고 끝나면(주기도문·축복이 맨 끝) 경로가 script.json 에 안 남아 묶음이 실패했다(11-04)
+                (out / "script.json").write_text(json.dumps(script, ensure_ascii=False, indent=1), encoding="utf-8")
                 continue
         else:
             dst = out / f"{p['id']}.wav"
