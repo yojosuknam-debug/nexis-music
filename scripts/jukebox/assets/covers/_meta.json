@@ -592,8 +592,9 @@
   "match_score": 1.0
  },
  "between-two-midnights-sacred-chant-for-christmas-and-the-new-year": {
-  "kind": "generated",
-  "src": ""
+  "kind": "designed_cover",
+  "src": "designed from BETWEEN_TWO_MIDNIGHTS image.md",
+  "auto_replace": true
  },
  "성탄-메김소리-carols-in-minyo": {
   "kind": "project_thumbnail",

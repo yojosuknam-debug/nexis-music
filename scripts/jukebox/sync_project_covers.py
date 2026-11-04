@@ -258,7 +258,9 @@ def main() -> int:
 
     albums = json.loads(CATALOG.read_text(encoding="utf-8"))
     meta = json.loads(META.read_text(encoding="utf-8")) if META.exists() else {}
-    generated = [a for a in albums if meta.get(a["slug"], {}).get("kind") == "generated"]
+    generated = [a for a in albums
+                 if meta.get(a["slug"], {}).get("kind") == "generated"
+                 or meta.get(a["slug"], {}).get("auto_replace")]
     if not generated:
         print("generated covers: 0 (바꿀 임시 커버 없음)")
         return 0
