@@ -590,5 +590,33 @@
   "src": "/mnt/external/suno-playlist/output/Advent,_the_Long_Night_project/thumbnail.png",
   "project": "Advent,_the_Long_Night_project",
   "match_score": 1.0
+ },
+ "between-two-midnights-sacred-chant-for-christmas-and-the-new-year": {
+  "kind": "generated",
+  "src": ""
+ },
+ "성탄-메김소리-carols-in-minyo": {
+  "kind": "generated",
+  "src": ""
+ },
+ "hymns-for-the-daily-walk-vol-1": {
+  "kind": "generated",
+  "src": ""
+ },
+ "먼-종소리-distant-bells": {
+  "kind": "generated",
+  "src": ""
+ },
+ "merry-quietly-original-lo-fi-carols": {
+  "kind": "generated",
+  "src": ""
+ },
+ "아침-찬송-1집-morning-hymns-vol-1": {
+  "kind": "generated",
+  "src": ""
+ },
+ "눈-안-오는-나라에서-a-christmas-without-snow": {
+  "kind": "generated",
+  "src": ""
  }
 }
