@@ -214,10 +214,11 @@ def main() -> int:
     dst = folder / f"worship_{date}_{lang}.mp4"
     audio = ["-i", str(mp3)]
     afilter = ["-af", f"adelay={a.preroll * 1000}|{a.preroll * 1000}"] if a.preroll else []
+    # 음성 48kHz = 유튜브 송출 권장(11-04 완성 기준, worship_verify.py 가 확인)
     cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst), *audio,
            "-map", "0:v", "-map", "1:a", *afilter, "-vf", f"fps={FPS},format=yuv420p",
            "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage", "-g", str(FPS * 2),
-           "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", str(dst)]
+           "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-shortest", "-movflags", "+faststart", str(dst)]
     subprocess.run(cmd, check=True)
     print(f"영상 {dst.name} · 화면 {len(cache)}장 · {bw.dur(dst) / 60:.1f}분")
     return 0
