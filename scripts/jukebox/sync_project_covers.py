@@ -18,6 +18,7 @@ import difflib
 import hashlib
 import json
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -32,6 +33,9 @@ if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+import _env
+
 CATALOG = HERE / "catalog.json"
 COVERS = HERE / "assets" / "covers"
 META = COVERS / "_meta.json"
@@ -168,7 +172,36 @@ def score_keys(left: set[str], right: set[str]) -> float:
     return best
 
 
+def load_local_projects() -> list[dict]:
+    # 미니PC(원본 기계)에서 /jukebox 로 돌 때 — ssh 없이 바로 읽는다
+    items = []
+    for meta_path in sorted(Path(REMOTE_OUTPUT).glob("*/project_meta.json")):
+        project = meta_path.parent
+        thumb = project / "thumbnail.png"
+        if not thumb.exists():
+            continue
+        try:
+            data = json.loads(meta_path.read_text(encoding="utf-8"))
+        except Exception:
+            data = {}
+        items.append({
+            "project_dir": str(project),
+            "folder": project.name,
+            "thumbnail": str(thumb),
+            "album_name": data.get("album_name", ""),
+            "artist": data.get("artist", ""),
+            "input_dir": data.get("input_dir", ""),
+        })
+    return items
+
+
+def is_local() -> bool:
+    return _env.is_source_host() and Path(REMOTE_OUTPUT).is_dir()
+
+
 def load_remote_projects() -> list[dict]:
+    if is_local():
+        return load_local_projects()
     proc = subprocess.run(
         [SSH, "-o", "BatchMode=yes", "-o", "ConnectTimeout=20", HOST, REMOTE_INVENTORY],
         capture_output=True,
@@ -182,6 +215,9 @@ def load_remote_projects() -> list[dict]:
 
 
 def fetch_thumbnail(remote_path: str, local_path: Path) -> None:
+    if is_local():
+        shutil.copyfile(remote_path, local_path)
+        return
     # subprocess passes this as a single local argument, so shell metacharacters
     # in the remote path are not interpreted locally. Quoting here breaks
     # OpenSSH's SFTP-backed scp path handling on Windows for non-ASCII names.
@@ -223,6 +259,9 @@ def main() -> int:
     albums = json.loads(CATALOG.read_text(encoding="utf-8"))
     meta = json.loads(META.read_text(encoding="utf-8")) if META.exists() else {}
     generated = [a for a in albums if meta.get(a["slug"], {}).get("kind") == "generated"]
+    if not generated:
+        print("generated covers: 0 (바꿀 임시 커버 없음)")
+        return 0
     projects = load_remote_projects()
     pkey = {p["thumbnail"]: project_keys(p) for p in projects}
 

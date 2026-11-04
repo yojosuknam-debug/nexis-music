@@ -35,6 +35,8 @@ _running = False
 STEPS = [
     ("카탈로그 수집", ["scripts/jukebox/scan_albums.py"], 900, False),
     ("커버 준비", ["scripts/jukebox/prepare_assets.py"], 900, False),
+    # 유튜브 썸네일이 아직 없어 글자 커버가 된 앨범 → 영상 프로젝트 썸네일로 교체
+    ("프로젝트 썸네일 커버", ["scripts/jukebox/sync_project_covers.py"], 600, True),
     ("R2 업로드", ["scripts/jukebox/upload_r2.py"], 5400, False),
     ("페이지 생성", ["scripts/jukebox/build_pages.py"], 900, False),
 ]

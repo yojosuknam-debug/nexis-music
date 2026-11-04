@@ -10,6 +10,7 @@
     0 sync    미니PC → 데스크탑, 새 앨범만
     1 scan    album.md·mp3 → catalog.json
     2 assets  커버 확보(유튜브 썸네일 / 없으면 타이포 생성)
+      covers  타이포 커버 → 영상 프로젝트 썸네일로 교체(있을 때만)
     3 upload  R2 업로드(크기 같으면 건너뜀)
     4 pages   Aurora Glass 페이지 생성
       yt      곡별 유튜브 링크 재료(키 있을 때만)
@@ -74,6 +75,9 @@ def main() -> int:
         return 1
     if not step("2/4 커버 준비", ["scripts/jukebox/prepare_assets.py"]):
         return 1
+    # 유튜브 썸네일이 아직 없어 글자 커버가 된 앨범 → 영상 프로젝트 썸네일로 교체
+    if not a.dry_run:
+        step("프로젝트 썸네일 커버", ["scripts/jukebox/sync_project_covers.py"], optional=True)
     if not step("3/4 R2 업로드", ["scripts/jukebox/upload_r2.py", *d]):
         return 1
     if a.dry_run:
