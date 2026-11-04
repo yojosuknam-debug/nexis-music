@@ -1,5 +1,19 @@
 # HANDOFF — 창 인계 기록 (최근 5개, 새 항목이 맨 위)
 
+## 2026-11-04 22:50 · 실시간 예배 — 원곡·따라 부르기 안내·주기도문 싱크 수정, 매일 제작 도구 작성(크론 미등록) (데스크탑)
+- 상태: 커밋 44812af·d035bcb·(주기도문 qc)·(매일 제작 도구)·(verify 쉼표) 모두 push · 11-05 한·영 영상 수정판 텔레그램 전송(수정 전 영상은 폐기) · **미니PC 크론 미등록, 맥 반장 일감은 꺼짐 상태**
+- 한 일:
+  - 함께 찬송·응답 찬양 = 보컬 원곡 그대로(`sing_along` 제거), 기도회 배경만 연주곡. 가사 있는 찬양 앞 안내 문장(`SING_CUE`: 따라 부르기·마음속으로 음미)을 예배의 부름·결단 기도 끝에 붙임(영어판은 번역 때 한국어 안내를 빼고 영어 안내를 따로 붙임).
+  - 주기도문·축복 저장 음성(cache)에 문장 시간표가 없어 자막이 뒤로 갈수록 어긋나던 것 → `cache_*.qc.json` 사이드카 저장·재사용. 영상 총 길이=음성 길이+대기 300초 일치 확인(귀로는 미확인).
+  - 매일 제작 도구(미니PC): `worship_verify.py`(완성 판정·READY/FAILED.json·H.264 1080p30·AAC 48kHz·키프레임≤4초·길이±3초) · `worship_ops.py`(schedule.jsonl 로그·텔레그램, 토큰은 ~/autovid/.env.local 에서만) · `worship-nightly.sh`(기본=내일분/--check/--deadline/--date/--verify-only/--no-notify) · `render_video.py` 음성 48kHz 추가.
+  - 맥 반장 일감 `00-worship.sh`(book-summary-video/mac/foreman/jobs.d 원본 로컬 커밋만—원격 없음, 맥 ~/Work/foreman/jobs.d 에 복사). **`state/worship.enabled` 파일이 있어야 동작**(지금 없음=꺼짐).
+- 실측: 맥미니 낭독 한·영 합쳐 91분(10:01→11:32, 원고 생성 포함), 조립 편당 약 8분. 맥 낭독 21:30 시작 → 약 23:05 → 이관 ≤10분 → 미니PC 조립 시작은 23:40 권장.
+- 시험 중: 22:39 `worship-nightly.sh --date 2026-11-05 --no-notify` 를 미니PC 에 띄움(11-05 를 48kHz 로 다시 조립 → READY). **결과 확인 못 함**: `/mnt/external/nexis-worship/logs/nightly-2026-11-05.log`·`schedule.jsonl`·`output/2026-11-05_*/READY`. 시험 전 판정은 두 영상 모두 음성 44.1kHz 한 가지만 불합격(길이·키프레임 2초 통과).
+- 다음 할 일(승인 조건 그대로): ① 시험 통과 확인·보고 → ② 미니PC 크론 3줄 등록(`40 23`·`30 5 --check`·`20 9 --deadline`, 각 flock, 등록 전 `crontab -l > ~/crontab.bak-날짜`) → ③ 맥 `touch ~/Work/foreman/state/worship.enabled`(11-05분은 `state/worship-2026-11-05.done` 먼저 만들어 중복 방지) → ④ 매일 제작 안내(영상 위치·이름 규칙·길이·형식)를 다른 창에 전달. 방송 송출·토큰·`worship-stream.sh` 는 다른 창 몫(건드리지 않음). 09:20 미완성 시 다른 창이 '재방송' 처리(READY 안 만듦).
+- 레포 밖 변경: 맥미니 `~/Work/foreman/jobs.d/00-worship.sh`(꺼짐) · 미니PC `/mnt/external/nexis-worship/output/2026-11-05_*` 재조립 중 · 맥 `script.json.bak-cue` 백업 · 미니PC 외장 `macmini/2026-11-04_*` 묶음 여러 개.
+- 확인 못 한 것: 영상을 귀로 들어 보지 않음(싱크·영어 축복 인식 오류 56%) · 한국어 축복 자막 합이 음성보다 3.7초 짧게 나옴(계산 방식 탓인지 미확인) · 현황판 일정 탭의 로그 형식(schedule.jsonl 은 제안안).
+- 주의: 이 PC 의 미커밋 docs/research 4개는 다른 창 것(커밋 안 함). 맥에서 `nohup … &` 로 띄우면 로그 없이 안 돌았음 → 직접 실행.
+
 ## 2026-11-04 13:30 · 실시간 예배 11-05 — 맥 목소리 묶음 실패 고침·미니PC 조립 완료 (맥미니)
 - 상태: 이 커밋(build_worship.py 한 줄 + 이 HANDOFF) · 맥·미니PC 둘 다 이 커밋 전 a5a17d0 으로 실행 · 방송 예약 **안 함**(SCHEDULE=0)
 - 한 일:
