@@ -19,6 +19,7 @@
 """
 from __future__ import annotations
 
+import importlib.util
 import subprocess
 import threading
 import time
@@ -52,6 +53,20 @@ def _run(args: list[str], timeout: int) -> tuple[bool, str]:
     return r.returncode == 0, "\n".join(tail[-6:])
 
 
+def _fresh_steps() -> list:
+    """pull 로 받은 최신 파일에서 STEPS 를 다시 읽는다.
+    봇은 이 모듈을 처음 한 번만 import 해 메모리에 들고 있어서, pull 을 해도
+    옛 단계 목록으로 돈다(2026-11-04 새 커버 단계가 안 돌던 원인)."""
+    try:
+        spec = importlib.util.spec_from_file_location(
+            "_jukebox_fresh", REPO / "scripts" / "jukebox" / "bot_command.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        return list(mod.STEPS)
+    except Exception:
+        return STEPS
+
+
 def _work(send) -> None:
     global _running
     t0 = time.time()
@@ -67,7 +82,7 @@ def _work(send) -> None:
         if not ok:
             send(f"⚠️ 코드 최신화 실패 — 그대로 진행합니다\n{out[:200]}")
 
-        for name, args, limit, lenient in STEPS:
+        for name, args, limit, lenient in _fresh_steps():
             ok, out = _run([PY, *args], limit)
             if not ok and not lenient:
                 send(f"❌ '{name}' 단계에서 멈췄습니다.\n\n{out[:600]}\n\n"

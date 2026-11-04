@@ -596,27 +596,39 @@
   "src": ""
  },
  "성탄-메김소리-carols-in-minyo": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/성탄_메김소리_(Carols_in_Minyo)_project/thumbnail.png",
+  "project": "성탄_메김소리_(Carols_in_Minyo)_project",
+  "match_score": 1.0
  },
  "hymns-for-the-daily-walk-vol-1": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Hymns_for_the_Daily_Walk,_Vol._1_project/thumbnail.png",
+  "project": "Hymns_for_the_Daily_Walk,_Vol._1_project",
+  "match_score": 1.0
  },
  "먼-종소리-distant-bells": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/먼_종소리_(Distant_Bells)_project/thumbnail.png",
+  "project": "먼_종소리_(Distant_Bells)_project",
+  "match_score": 1.0
  },
  "merry-quietly-original-lo-fi-carols": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Merry,_Quietly_(Original_Lo-fi_Carols)_project/thumbnail.png",
+  "project": "Merry,_Quietly_(Original_Lo-fi_Carols)_project",
+  "match_score": 1.0
  },
  "아침-찬송-1집-morning-hymns-vol-1": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/아침_찬송_1집_(Morning_Hymns,_Vol._1)_project/thumbnail.png",
+  "project": "아침_찬송_1집_(Morning_Hymns,_Vol._1)_project",
+  "match_score": 1.0
  },
  "눈-안-오는-나라에서-a-christmas-without-snow": {
-  "kind": "generated",
-  "src": ""
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/눈_안_오는_나라에서_(A_Christmas_Without_Snow)_project/thumbnail.png",
+  "project": "눈_안_오는_나라에서_(A_Christmas_Without_Snow)_project",
+  "match_score": 1.0
  }
 }
