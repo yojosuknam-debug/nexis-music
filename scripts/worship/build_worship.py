@@ -287,11 +287,15 @@ def pick_songs(lang: str, day: dt.date) -> dict:
     prayer = 기도회 배경 연주곡."""
     import music_library as ml
     o = day.toordinal()
+    items = ml.load()
     first = ml.pick("open", lang, o)
     resp = ml.pick("response", lang, o, {first["id"]})
-    twin = next((x for x in ml.load() if x["id"] == resp.get("instrumental")
-                 and x.get("license", {}).get("status") == "verified"), None)   # 응답 찬송의 연주판이 있으면 기도회 배경으로
-    return {"open": first, "response": resp, "prayer": dict(twin) if twin else ml.pick("prayer", lang, o)}
+    bed = ml.prayer_bed(lang, o, items)                                         # 찬송 앨범의 기도 연주곡(6~10번) 먼저
+    if not bed:
+        twin = next((x for x in items if x["id"] == resp.get("instrumental")
+                     and x.get("license", {}).get("status") == "verified"), None)   # 없으면 응답 찬송의 연주판
+        bed = dict(twin) if twin else ml.pick("prayer", lang, o)
+    return {"open": ml.sing_along(first, items), "response": ml.sing_along(resp, items), "prayer": bed}
 
 
 SONG_TITLE = {"hymn_pd": ("함께 찬송", "Hymn"), "hymn_own": ("찬송", "Hymn"), "ccm": ("찬양", "Song of Praise")}
@@ -728,7 +732,7 @@ def song_audio(s: dict) -> Path:
     """대장의 곡 → 음원 파일. 채널 곡은 내려받아 cache/, 직접 연주·자작 곡은 MUSIC_DIR/<폴더>/<파일>."""
     if s.get("source") == "local":
         return MUSIC_DIR / s["folder"] / s["file"]
-    return download(s["url"], CACHE / f"song_{s['slug'][:40]}_{int(s['n']):02d}.mp3")
+    return download(s["url"], CACHE / f"song_{s['slug'][:40]}_{int(s.get('audio_n', s['n'])):02d}.mp3")
 
 
 def build_prayer_meeting(p: dict, out: Path) -> Path:
