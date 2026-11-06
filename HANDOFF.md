@@ -1,5 +1,15 @@
 # HANDOFF — 창 인계 기록 (최근 5개, 새 항목이 맨 위)
 
+## 2026-11-07 00:40 · end — 예배 채널에 예배 찬송 곡별 업로드(가사·해설) (DESKTOP-8ISD10M)
+- 상태: 이 커밋(`scripts/worship/hymn_upload.py` 신규 + 이 메모) · 미니PC 실행본은 `/mnt/external/nexis-worship/hymn_upload.py`(레포와 같은 내용, scp 복사)
+- 한 일: 예배에서 실제로 쓴 10곡(보컬 6 + 기도 연주 4: 1집·Daily Walk 각 2·4·5·6·8번)을 '매일 온라인 예배' 채널에 공개 업로드. 영상 = Still Waters 업로드 때 만든 `/mnt/external/suno-playlist/output/<앨범>_project/tracks_mp4/track_NN.mp4`(mp3와 길이 대조 OK). 설명 = 가사 전 절 + 곡 해설(album.md Track Notes 기준) + 방송 시간표 + AI 제작 표기. 재생목록 '예배 찬송 · 가사'·'Worship Hymns with Lyrics' 새로 만듦. 채널에 기존 찬송 영상 없음 → 중복 0.
+  - 11-07 00:20 2곡 올림: 마르지 않는 샘 https://youtu.be/Cc4u6xBvmZw · As Watchmen Wait for Morning https://youtu.be/NyPFIZWsJmE (public 확인)
+- 레포 밖 변경: 미니PC `/mnt/external/nexis-worship/hymn_upload.py`·`hymn_uploads_state.json`(올린 곡 기록)·`hymn_upload_loop.sh`(nohup 백그라운드, 매일 16:25 최대 5곡, 다 올리면 종료, 최대 7일) · 로그 `logs/hymn_upload.log`. 크론·컨테이너 안 건드림.
+- 할당량: 예배 토큰 = autovid GCP 프로젝트(16채널 공유), 업로드 1곡≈1,650유닛 → 송출 보호 위해 16:25(초기화 17:00 직전, 방송 없는 시간)에만 올림.
+- 확인 못 한 것: 남은 8곡 실제 업로드(11-07 16:25 5곡, 11-08 16:25 3곡 예정 — 텔레그램 알림) · containsSyntheticMedia 값이 조회 응답에 안 나옴(설명엔 AI 표기 있음) · 영상 처리 완료 후 화면·소리.
+- 다음 할 일: 텔레그램 알림 확인. 미니PC 재부팅되면 루프가 죽음 → `nohup setsid /mnt/external/nexis-worship/hymn_upload_loop.sh &` 다시(이미 올린 곡은 건너뜀). 새 찬송이 예배에 쓰이면 `SONGS`에 추가.
+- 주의: 미커밋 `docs/research/*`는 이 창 것 아님.
+
 ## 2026-11-05 23:35 · end — 온라인 예배 시험 방송 성공 확인 (DESKTOP-8ISD10M)
 - 상태: 확인만 함(코드 변경 없음) · 이 HANDOFF 커밋만
 - 한 일: 미니PC `logs/schedule.jsonl` 확인 — 11-05 23:05:08 시험 방송 시작 → 23:09:42 `ok`(다시보기 비공개), https://youtu.be/7vqT1tKntKI (한국어 180초). 텔레그램 성공 알림도 사용자 수신.
@@ -44,14 +54,3 @@
 - 텔레그램 전송: 받는 봇은 **@Nexis_file_bot**(미니PC 로컬 Bot API 서버 `telegram-bot-api` 컨테이너, 2GB). 이번엔 실수로 옛 @nexis_autovid_bot(api.telegram.org, 50MB 제한)으로 원본을 보내 봤고 결과 확인 못 함(아마 실패) → 사용자 "나중에". 720p 미리보기판(40·41MB)은 맥 스크래치에만 있음(세션 끝나면 사라짐).
 - 다음 할 일: 11-05 영상 2개를 @Nexis_file_bot 으로 보내기(chat_id·로컬 서버 주소는 미니PC `~/telegram-bot-api/` 설정에서 확인, 값 출력 금지) · 방송 예약(SCHEDULE=1)·송출은 사용자 결정. 개선 후보: `say()` 가 길이로 끊김을 못 잡음(오류율만 봄) — 원고 길이 대비 너무 짧으면 다른 씨앗으로 더 시도.
 - 주의: `voice_bundle.py pack` 은 실패해도 반쪽 폴더를 outbox 에 남긴다(이관됨).
-
-## 2026-10-26 19:40 · 동기부여 쇼츠 — 첫 자동 업로드 확인·실패 텔레그램 알림·채널 설명 '매일 아침' (데스크탑)
-- 상태: 이 커밋(motiv_publish.py 알림 + 이 HANDOFF) · 배포 = 미니PC `~/bin/motiv_publish.py` 교체(레포와 같음, LF) · 작업트리 깨끗
-- 한 일:
-  - 10-26 07:40 크론 첫 자동 업로드 **성공** — m0086 https://youtu.be/IoTs0RYTcuI (AI 합성 표시 ok). 남은 97편, 다음 m0056.
-  - `motiv_publish.py` 텔레그램 알림: 업로드 실패(원인 한 줄)·예상 못 한 오류(영상 없음·시간 초과 등)·남은 편 ≤7(`LOW`)·모두 올림. 토큰은 `~/autovid/.env.local` 에서만 읽어 POST(argv·로그 노출 없음, cron_guard 와 같은 방식). 시험 알림 1통 보냄(보내기 오류 없음).
-  - 유튜브 채널 설명 "매주 올립니다" → "매일 아침 올립니다"(API brandingSettings, 키워드 그대로). 반영 확인.
-- 레포 밖 변경: 미니PC `~/bin/motiv_publish.py` 교체, 이전본 `~/bin/motiv_publish.py.bak-20261026`(비밀값 없음). crontab·docker·터널은 안 건드림.
-- 확인 못 한 것: (시험 알림 텔레그램 도착은 사용자 확인 완료) · 실패 알림은 실제 실패 상황에서 아직 안 울려 봄 · m0085·m0099 발음.
-- 다음 할 일: 원고 더 쓰기(원고 품질 기준 먼저 정하기 → m0101~ 원고+hooks → 맥미니 제작 → `motiv_collect.py`). 남은 97편이라 급하지 않음(알림이 7편 남으면 알려 줌).
-- 주의: `올린기록.csv` 지우지 말 것. 미니PC 설정 변경은 사용자 승인 후.
