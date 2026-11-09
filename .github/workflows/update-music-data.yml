@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # 데이터가 바뀌면 배포 워크플로를 부른다
 
 jobs:
   update:
@@ -27,6 +28,8 @@ jobs:
         run: python scripts/fetch_youtube.py
 
       - name: Commit if changed
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
@@ -36,4 +39,6 @@ jobs:
           else
             git commit -m "chore: auto-update music data $(date -u +%Y-%m-%d)"
             git push
+            # 기본 토큰의 push 는 deploy.yml 의 push 트리거를 깨우지 못한다
+            gh workflow run deploy.yml --ref master
           fi

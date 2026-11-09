@@ -22,6 +22,7 @@ import argparse
 import base64
 import difflib
 import json
+import os
 import re
 import subprocess
 import sys
@@ -284,12 +285,21 @@ def main() -> int:
     index = [(album_candidates(r.get("title", "")), r) for r in live]
     track_index = [(track_candidates(r.get("title", "")), r) for r in live]
     albums, seen, skipped = [], {}, []
+    # 자동 발행(auto_publish.py)일 때만: 처음 나오는 앨범은 유튜브에 공개된 것만 통과시킨다
+    gate = None
+    if os.environ.get("JUKEBOX_RELEASED_ONLY") == "1":
+        import release_gate
+        gate = (release_gate.published_folders(), release_gate.load_videos())
+    held = []
     for d in sorted(p for p in INPUT_DIR.iterdir() if p.is_dir()):
         if (d / SKIP_MARKER).exists():
             skipped.append(d.name)
             continue
         a = scan_album(d, index, track_index)
         if not a:
+            continue
+        if gate and d.name not in gate[0] and not release_gate.is_released(a["title"], a["channel"], gate[1]):
+            held.append(d.name)
             continue
         # slug 충돌은 조용히 덮어쓰면 앨범이 사라진다 — 폴더명을 붙여 분리한다
         if a["slug"] in seen:
@@ -307,6 +317,8 @@ def main() -> int:
     if skipped:
         print(f"  제외됨({SKIP_MARKER}) {len(skipped)}개: " + ", ".join(skipped[:6])
               + (" …" if len(skipped) > 6 else ""))
+    if held:
+        print(f"  유튜브 공개 대기 {len(held)}개: " + ", ".join(held))
     print(f"  음원 연결   {n_audio:>4}곡  ({n_audio*100//max(n_tracks,1)}%)")
     print(f"  가사 있음   {n_lyrics:>4}곡  · 연주곡 {n_inst}곡 · 미확인 {n_tracks-n_lyrics-n_inst}곡")
     print(f"  커버 확보   {n_cover:>4}앨범 ({n_cover*100//max(len(albums),1)}%)")

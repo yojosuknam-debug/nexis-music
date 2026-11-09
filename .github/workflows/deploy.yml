@@ -1,0 +1,58 @@
+# master 의 사이트 파일이 바뀌면 Vercel 운영(music.yojosuknam.com)으로 배포한다.
+# Vercel GitHub 앱 연동이 끊겨 push 만으로는 배포되지 않아(2026-10 이후) 토큰 방식으로 바꿨다.
+# 비밀값 3개는 레포 Secrets: VERCEL_TOKEN · VERCEL_ORG_ID · VERCEL_PROJECT_ID
+#
+# 깨우는 쪽
+#   - 사람·미니PC(/jukebox, 자동 발행)의 push → 아래 push 트리거
+#   - 매일 유튜브 데이터 갱신(update-music-data.yml) → 기본 토큰의 push 는 다른 워크플로를
+#     깨우지 못하므로 그쪽에서 gh workflow run 으로 직접 부른다
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'public/**'
+      - 'app/**'
+      - 'next.config.ts'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Deploy (production)
+        run: npx --yes vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"
+
+      # "배포 성공"이 아니라 "사이트가 실제로 이 커밋의 데이터를 내보내는가"를 본다.
+      # 실패하면 워크플로가 빨갛게 끝나 GitHub 알림이 온다.
+      - name: Verify live site
+        run: |
+          for i in $(seq 1 12); do
+            curl -fsS "https://music.yojosuknam.com/data.js?check=$GITHUB_SHA" -o /tmp/live.js || true
+            if cmp -s /tmp/live.js public/data.js; then
+              echo "live data.js matches $GITHUB_SHA"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::live data.js does not match this commit"
+          exit 1
