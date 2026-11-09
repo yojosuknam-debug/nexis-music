@@ -631,5 +631,53 @@
   "src": "/mnt/external/suno-playlist/output/눈_안_오는_나라에서_(A_Christmas_Without_Snow)_project/thumbnail.png",
   "project": "눈_안_오는_나라에서_(A_Christmas_Without_Snow)_project",
   "match_score": 1.0
+ },
+ "arrivals-hall-lo-fi-chill-album": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/xF3g_cswmK0/maxresdefault.jpg"
+ },
+ "도시-굿판-city-gut-party": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/s0iOSKR63Os/maxresdefault.jpg"
+ },
+ "hymns-for-the-daily-walk-vol-2": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/HxysZ-IYcBM/maxresdefault.jpg"
+ },
+ "산타-할아버지-질문-있어요-dear-santa-quick-question": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/2LNYsBWZnIY/maxresdefault.jpg"
+ },
+ "김장-대작전-operation-kimjang": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/is3MO5P3kGU/maxresdefault.jpg"
+ },
+ "3번-출구에서-만나요-meet-me-at-exit-3": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/-WyPU0wa7R0/maxresdefault.jpg"
+ },
+ "아침-찬송-2집-morning-hymns-vol-2": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/7mYh2fJZIdo/maxresdefault.jpg"
+ },
+ "보부상-블루스-peddler-s-blues-hanguk-sounds-album": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/XM0tjfv0frg/maxresdefault.jpg"
+ },
+ "second-light": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/nL5zEqIRRV0/maxresdefault.jpg"
+ },
+ "thursday-night-live": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/P5cbSN0NdFw/maxresdefault.jpg"
+ },
+ "winter-menu-lo-fi-chill-album": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/NJhClQ01ocQ/maxresdefault.jpg"
+ },
+ "겨울-리조트-winter-resort": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/bE0LacfUi_M/maxresdefault.jpg"
  }
 }

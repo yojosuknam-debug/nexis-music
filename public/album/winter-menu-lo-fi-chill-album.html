@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WINTER MENU — 넥시스 뮤직</title>
+<meta name="description" content="WINTER MENU — 6곡 · 21분 · 전곡 연주">
+<link rel="canonical" href="https://music.yojosuknam.com/album/winter-menu-lo-fi-chill-album.html">
+<meta property="og:type" content="music.album">
+<meta property="og:title" content="WINTER MENU">
+<meta property="og:description" content="WINTER MENU — 6곡 · 21분 · 전곡 연주">
+<meta property="og:image" content="https://music.yojosuknam.com/album/covers/cover-c5b8550e65f5.jpg">
+<meta property="og:url" content="https://music.yojosuknam.com/album/winter-menu-lo-fi-chill-album.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="/album/jukebox.css">
+<style>:root{--accent:rgb(200,128,65);--accent-rgb:200,128,65}</style>
+</head>
+<body>
+<div class="bg" style="background-image:url('/album/covers/cover-c5b8550e65f5.jpg')"></div>
+<div class="veil"></div>
+
+<header class="top">
+  <a class="back" href="/index.html">← 아카이브</a>
+</header>
+
+<main class="wrap">
+  <div class="art">
+    <img src="/album/covers/cover-c5b8550e65f5.jpg" alt="WINTER MENU 앨범 커버" width="800" height="800" onerror="this.onerror=null;this.src='/assets/cover-placeholder.svg';">
+    <p class="genre">Cafe Jazz / Lo-fi Jazz Combo (six lead instruments · swing, organ shuffle, ballad, waltz · vinyl crackle &amp; tape warmth)</p>
+    <p class="mood">전곡 연주</p>
+  </div>
+
+  <div class="main">
+    <h1>WINTER MENU</h1>
+    <p class="sub"><b>6곡</b> · 21분</p>
+
+    <div class="transport">
+      <button class="play" id="play" aria-label="재생"></button>
+      <div class="scrub">
+        <div class="now" id="now"></div>
+        <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+        <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+    <a class="yt" id="yt" href="#" target="_blank" rel="noopener" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg>
+      <span id="ytText">YouTube에서 이 곡 듣기</span>
+    </a>
+
+    <div class="seg">
+      <button id="tabList" aria-selected="true">수록곡</button>
+      <button id="tabLyr" aria-selected="false">가사</button>
+    </div>
+    <div class="list" id="list"></div>
+    <div class="list lyr" id="lyrics" hidden></div>
+  </div>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script>window.ALBUM = {"title": "WINTER MENU", "cover": "/album/covers/cover-c5b8550e65f5.jpg", "video": "", "tracks": [{"n": 1, "title": "Chalk on the Board", "ms": 218784, "url": "https://audio.yojosuknam.com/audio/winter-menu-lo-fi-chill-album/01.mp3", "lyrics": [], "instrumental": true, "youtube": ""}, {"n": 2, "title": "Cinnamon, Not Too Much", "ms": 240000, "url": "https://audio.yojosuknam.com/audio/winter-menu-lo-fi-chill-album/02.mp3", "lyrics": [], "instrumental": true, "youtube": ""}, {"n": 3, "title": "Hot Chocolate for Two", "ms": 218664, "url": "https://audio.yojosuknam.com/audio/winter-menu-lo-fi-chill-album/03.mp3", "lyrics": [], "instrumental": true, "youtube": ""}, {"n": 4, "title": "Earl Grey and Orange Peel", "ms": 170400, "url": "https://audio.yojosuknam.com/audio/winter-menu-lo-fi-chill-album/04.mp3", "lyrics": [], "instrumental": true, "youtube": ""}, {"n": 5, "title": "Chestnuts in the Oven", "ms": 208824, "url": "https://audio.yojosuknam.com/audio/winter-menu-lo-fi-chill-album/05.mp3", "lyrics": [], "instrumental": true, "youtube": ""}, {"n": 6, "title": "Last Order Before Snow", "ms": 223104, "url": "https://audio.yojosuknam.com/audio/winter-menu-lo-fi-chill-album/06.mp3", "lyrics": [], "instrumental": true, "youtube": ""}]};</script>
+<script src="/album/jukebox.js"></script>
+</body>
+</html>
