@@ -1,27 +1,39 @@
 {
  "늦은-축가-a-late-toast": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/m7OYM8Dr6Yc/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/늦은_축가_(A_Late_Toast)_project/thumbnail.png",
+  "project": "늦은_축가_(A_Late_Toast)_project",
+  "match_score": 1.0
  },
  "above-the-treeline-lo-fi-chill-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/l3HK7IjOkHo/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Above_the_Treeline_project/thumbnail.png",
+  "project": "Above_the_Treeline_project",
+  "match_score": 1.0
  },
  "after-the-amen": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/eO5daDlt2kc/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/After_the_Amen_project/thumbnail.png",
+  "project": "After_the_Amen_project",
+  "match_score": 1.0
  },
  "bamboo-blue-korean-jazz-café-sessions": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/1LUIaptJoEo/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Bamboo_&_Blue:_Korean_Jazz_Cafe_Sessions_project/thumbnail.png",
+  "project": "Bamboo_&_Blue:_Korean_Jazz_Cafe_Sessions_project",
+  "match_score": 1.0
  },
  "be-still": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/5vceGebRsBo/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Be_Still_project/thumbnail.png",
+  "project": "Be_Still_project",
+  "match_score": 1.0
  },
  "환절기-between-seasons": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/OXRk4_MI8EM/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/환절기_(Between_Seasons)_project/thumbnail.png",
+  "project": "환절기_(Between_Seasons)_project",
+  "match_score": 1.0
  },
  "bible-pansori-vol-1-three-sacred-tales": {
   "kind": "designed_cover",
@@ -32,24 +44,34 @@
   "src": "designed from bible_pansori_vol2_album.md cover prompt"
  },
  "bone-deep": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/eXOvGlgJdMo/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/BONE_DEEP_project/thumbnail.png",
+  "project": "BONE_DEEP_project",
+  "match_score": 1.0
  },
  "컬러링-color-ring-감성-복고-채널-앨범": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/zcOtYsUlJIA/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/컬러링_(COLOR_RING)_project/thumbnail.png",
+  "project": "컬러링_(COLOR_RING)_project",
+  "match_score": 1.0
  },
  "copper-coast": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/kbolZUJZOSk/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Copper_Coast_project/thumbnail.png",
+  "project": "Copper_Coast_project",
+  "match_score": 1.0
  },
  "copper-skies-lofi-channel-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/ry930x7AhCs/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/COPPER_SKIES_project/thumbnail.png",
+  "project": "COPPER_SKIES_project",
+  "match_score": 1.0
  },
  "corner-seats-lofi-channel-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/XEamGLPzAmQ/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Corner_Seats_(Lofi_Study_Cafe)_project/thumbnail.png",
+  "project": "Corner_Seats_(Lofi_Study_Cafe)_project",
+  "match_score": 1.0
  },
  "폭풍의-산조-storm-sanjo-vol-1-한의-폭풍": {
   "kind": "project_thumbnail",
@@ -58,28 +80,40 @@
   "match_score": 1.0
  },
  "dawn-and-stone-새벽과-돌": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/_qJyOP97WLo/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/DAWN_AND_STONE_project/thumbnail.png",
+  "project": "DAWN_AND_STONE_project",
+  "match_score": 1.0
  },
  "낮-근무-day-shift": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/XPqgf-v4M3c/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/낮_근무_(Day_Shift)_project/thumbnail.png",
+  "project": "낮_근무_(Day_Shift)_project",
+  "match_score": 1.0
  },
  "dead-serious-about-nothing": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/ClH9mADcaN8/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Dead_Serious_About_Nothing_project/thumbnail.png",
+  "project": "Dead_Serious_About_Nothing_project",
+  "match_score": 1.0
  },
  "dust-soul": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/bMHOU_vM5Ck/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/DUST_&_SOUL_project/thumbnail.png",
+  "project": "DUST_&_SOUL_project",
+  "match_score": 1.0
  },
  "그-골목-다섯-집-five-houses-on-that-alley-쉬어가는-감성-음악-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/NFgSsgv1O9M/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/그_골목_다섯_집_(Five_Houses_on_That_Alley)_project/thumbnail.png",
+  "project": "그_골목_다섯_집_(Five_Houses_on_That_Alley)_project",
+  "match_score": 1.0
  },
  "folktale-kingpin": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/kPOoVnuyCCw/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Folktale_Kingpin_project/thumbnail.png",
+  "project": "Folktale_Kingpin_project",
+  "match_score": 1.0
  },
  "외신-foreign-gods": {
   "kind": "project_thumbnail",
@@ -88,12 +122,16 @@
   "match_score": 1.0
  },
  "fragments-i-don-t-remember-in-order": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/eON46dxkcSE/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/FRAGMENTS_I_DON'T_REMEMBER_IN_ORDER_project/thumbnail.png",
+  "project": "FRAGMENTS_I_DON'T_REMEMBER_IN_ORDER_project",
+  "match_score": 1.0
  },
  "free-indeed": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/npxE6-9y7Bk/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Free_Indeed_project/thumbnail.png",
+  "project": "Free_Indeed_project",
+  "match_score": 1.0
  },
  "냉장고-습격-작전-operation-fridge-raid": {
   "kind": "project_thumbnail",
@@ -114,20 +152,26 @@
   "match_score": 1.0
  },
  "gray-window": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/rjlxbJSrJ2U/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/GRAY_WINDOW_project/thumbnail.png",
+  "project": "GRAY_WINDOW_project",
+  "match_score": 1.0
  },
  "굳이-이게-명곡이야-is-this-really-a-masterpiece": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/aFe9q11aMBw/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Gudi_Ige_Myeonggogiya_project/thumbnail.png",
+  "project": "Gudi_Ige_Myeonggogiya_project",
+  "match_score": 1.0
  },
  "굳이-이게-명곡이야-is-this-really-a-masterpiece-gudi_song2": {
   "kind": "youtube",
   "src": "https://i.ytimg.com/vi/aFe9q11aMBw/maxresdefault.jpg"
  },
  "han-heung-jeong-한-흥-정": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/-ypFOLQ1M7c/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/HAN_·_HEUNG_·_JEONG_(한_·_흥_·_정):_The_Korean_Soul_in_Sound_project/thumbnail.png",
+  "project": "HAN_·_HEUNG_·_JEONG_(한_·_흥_·_정):_The_Korean_Soul_in_Sound_project",
+  "match_score": 1.0
  },
  "한과-두엔데-han-y-duende": {
   "kind": "project_thumbnail",
@@ -136,8 +180,10 @@
   "match_score": 1.0
  },
  "han-and-hallelujah-still-waters-channel-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/WeDWMn7jKXU/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/HAN_AND_HALLELUJAH_project/thumbnail.png",
+  "project": "HAN_AND_HALLELUJAH_project",
+  "match_score": 1.0
  },
  "한지-바람-hanji-wind-korean-wind-instrument-solo-series": {
   "kind": "project_thumbnail",
@@ -146,8 +192,10 @@
   "match_score": 1.0
  },
  "hanpuri-songs-of-release-한풀이": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/FnPsaOPYlOQ/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Hanpuri:_Songs_of_Release_(한풀이)_project/thumbnail.png",
+  "project": "Hanpuri:_Songs_of_Release_(한풀이)_project",
+  "match_score": 1.0
  },
  "한양-애비뉴-hanyang-avenue": {
   "kind": "project_thumbnail",
@@ -156,20 +204,28 @@
   "match_score": 1.0
  },
  "쉬어가는-감성음악-miso-channel-새-앨범": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/YfomEfdPvKs/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/맞바람_(HEADWIND)_project/thumbnail.png",
+  "project": "맞바람_(HEADWIND)_project",
+  "match_score": 1.0
  },
  "한지-채널-hanji-channel-신보-백번-a-hundred-hands": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/9G5_3ppD3w4/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/백번_(A_HUNDRED_HANDS)_project/thumbnail.png",
+  "project": "백번_(A_HUNDRED_HANDS)_project",
+  "match_score": 1.0
  },
  "먹과-스윙-ink-and-swing": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/qtXSJlvrczg/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/먹과_스윙_(Ink_and_Swing)_project/thumbnail.png",
+  "project": "먹과_스윙_(Ink_and_Swing)_project",
+  "match_score": 1.0
  },
  "inner-stillness-yoga-meditation-ambient": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/oTnQJGWcJaM/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/INNER_STILLNESS_project/thumbnail.png",
+  "project": "INNER_STILLNESS_project",
+  "match_score": 1.0
  },
  "조선-힙합-클럽-joseon-hip-hop-club": {
   "kind": "project_thumbnail",
@@ -178,12 +234,16 @@
   "match_score": 1.0
  },
  "kkwaenggwari-disco": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/vMBGhculhu0/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/KKWAENGGWARI_DISCO_project/thumbnail.png",
+  "project": "KKWAENGGWARI_DISCO_project",
+  "match_score": 1.0
  },
  "lake-of-silence": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/90ByWq8CetA/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Lake_of_Silence_project/thumbnail.png",
+  "project": "Lake_of_Silence_project",
+  "match_score": 1.0
  },
  "비의-언어-language-of-rain": {
   "kind": "project_thumbnail",
@@ -192,36 +252,52 @@
   "match_score": 1.0
  },
  "last-light-café": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/1TZ1vk1JmgQ/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/LAST_LIGHT_CAFE_project/thumbnail.png",
+  "project": "LAST_LIGHT_CAFE_project",
+  "match_score": 1.0
  },
  "last-seat-on-the-train": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/KJywzUQywHQ/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/LAST_SEAT_ON_THE_TRAIN_project/thumbnail.png",
+  "project": "LAST_SEAT_ON_THE_TRAIN_project",
+  "match_score": 1.0
  },
  "한지-채널-hanji-channel-신보-겹겹이-layered": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/yr5IvlOKxuQ/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/겹겹이_(LAYERED)_project/thumbnail.png",
+  "project": "겹겹이_(LAYERED)_project",
+  "match_score": 1.0
  },
  "곁에-오래-있던-것들-long-beside-me": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/Y5Vv5eMBLx4/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/곁에_오래_있던_것들_(Long_Beside_Me)_project/thumbnail.png",
+  "project": "곁에_오래_있던_것들_(Long_Beside_Me)_project",
+  "match_score": 1.0
  },
  "low-light-hours": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/aBzXtSxc44Y/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Low_Light_Hours_project/thumbnail.png",
+  "project": "Low_Light_Hours_project",
+  "match_score": 1.0
  },
  "manna-and-dust": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/Y1kNZJksXfA/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Manna_and_Dust_project/thumbnail.png",
+  "project": "Manna_and_Dust_project",
+  "match_score": 1.0
  },
  "margin_notes": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/9tybxc1US2E/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Margin_Notes_project/thumbnail.png",
+  "project": "Margin_Notes_project",
+  "match_score": 1.0
  },
  "midnight-frames": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/gK1wN41KRG8/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/MIDNIGHT_FRAMES_project/thumbnail.png",
+  "project": "MIDNIGHT_FRAMES_project",
+  "match_score": 1.0
  },
  "midnight-han-한의-밤": {
   "kind": "project_thumbnail",
@@ -230,16 +306,22 @@
   "match_score": 1.0
  },
  "자정의-부두-midnight-harbor": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/BoZA84I5zD4/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Midnight_Harbor_project/thumbnail.png",
+  "project": "Midnight_Harbor_project",
+  "match_score": 1.0
  },
  "midnight-lucille": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/FA602UiS3OM/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/MIDNIGHT_LUCILLE_project/thumbnail.png",
+  "project": "MIDNIGHT_LUCILLE_project",
+  "match_score": 1.0
  },
  "midnight-velvet-lofi-channel-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/T1jpA4y5isQ/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/MIDNIGHT_VELVET_project/thumbnail.png",
+  "project": "MIDNIGHT_VELVET_project",
+  "match_score": 1.0
  },
  "민초-mincho-조선-힙합-vol-2": {
   "kind": "project_thumbnail",
@@ -266,12 +348,16 @@
   "match_score": 1.0
  },
  "neon-echoes-album-production-complete-guide": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/Rnb3YEsEmps/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/NEON_ECHOES_project/thumbnail.png",
+  "project": "NEON_ECHOES_project",
+  "match_score": 1.0
  },
  "neon-hanjung-네온-한중": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/T6sSdXoVDKA/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/NEON_HANJUNG_project/thumbnail.png",
+  "project": "NEON_HANJUNG_project",
+  "match_score": 1.0
  },
  "neon_hours-네온-아워스": {
   "kind": "designed_cover",
@@ -284,8 +370,10 @@
   "match_score": 1.0
  },
  "니가-좋아-i-like-you-v2-남성-보컬-전곡": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/8RBd_mOrdLE/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/니가_좋아_-_장르_크로스오버_project/thumbnail.png",
+  "project": "니가_좋아_-_장르_크로스오버_project",
+  "match_score": 1.0
  },
  "niga-lo-fi-melody-series": {
   "kind": "project_thumbnail",
@@ -294,16 +382,22 @@
   "match_score": 1.0
  },
  "심야-주파수-night-frequency": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/zyUaNHur1mI/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/심야_주파수_(Night_Frequency)_project/thumbnail.png",
+  "project": "심야_주파수_(Night_Frequency)_project",
+  "match_score": 1.0
  },
  "나만-그런-거-아니지-not-just-me-right": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/910NroLa4f0/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/나만_그런_거_아니지?_(Not_Just_Me,_Right?)_project/thumbnail.png",
+  "project": "나만_그런_거_아니지?_(Not_Just_Me,_Right?)_project",
+  "match_score": 1.0
  },
  "ordinary-altars": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/OXVoznk0NRQ/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Ordinary_Altars_project/thumbnail.png",
+  "project": "Ordinary_Altars_project",
+  "match_score": 1.0
  },
  "그리움의-항구-porto-da-saudade": {
   "kind": "project_thumbnail",
@@ -312,96 +406,142 @@
   "match_score": 1.0
  },
  "postmarked": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/AcRwm0W5bno/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Postmarked_project/thumbnail.png",
+  "project": "Postmarked_project",
+  "match_score": 1.0
  },
  "비와-블루스-rain-and-blues": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/T_uteImCjQ0/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/비와_블루스_(Rain_and_Blues)_project/thumbnail.png",
+  "project": "비와_블루스_(Rain_and_Blues)_project",
+  "match_score": 1.0
  },
  "rain-on-the-eaves-처마-끝-빗소리": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/m0xmRI2Dy88/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/RAIN_ON_THE_EAVES_project/thumbnail.png",
+  "project": "RAIN_ON_THE_EAVES_project",
+  "match_score": 1.0
  },
  "rain-on-warm-tiles": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/T8xX9MzIbK4/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/RAIN_ON_WARM_TILES_project/thumbnail.png",
+  "project": "RAIN_ON_WARM_TILES_project",
+  "match_score": 1.0
  },
  "새로고침-refresh-감성-복고-채널-앨범": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/Z2Vxq9PaTIw/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/새로고침_(REFRESH)_project/thumbnail.png",
+  "project": "새로고침_(REFRESH)_project",
+  "match_score": 1.0
  },
  "쉬어가는-감성음악-miso-channel-새-앨범-rewind": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/YfomEfdPvKs/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/역주행_(REWIND)_project/thumbnail.png",
+  "project": "역주행_(REWIND)_project",
+  "match_score": 1.0
  },
  "호명-roll-call-miso-channel-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/g9niU7xjZmI/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/호명_(ROLL_CALL)_project/thumbnail.png",
+  "project": "호명_(ROLL_CALL)_project",
+  "match_score": 1.0
  },
  "옥탑-데모-rooftop-demo": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/hSDDKNIr9tE/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/옥탑_데모_(Rooftop_Demo)_project/thumbnail.png",
+  "project": "옥탑_데모_(Rooftop_Demo)_project",
+  "match_score": 1.0
  },
  "일곱-마당-seven-madang-gudi-channel-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/I47nqUYaz2s/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/일곱_마당_(SEVEN_MADANG)_project/thumbnail.png",
+  "project": "일곱_마당_(SEVEN_MADANG)_project",
+  "match_score": 1.0
  },
  "the-seventh-year-still-waters-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/FqtwAtlFG8s/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/The_Seventh_Year_project/thumbnail.png",
+  "project": "The_Seventh_Year_project",
+  "match_score": 1.0
  },
  "신명-shinmyeong-조선-힙합": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/UBmcplnLovs/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/신명_(SHINMYEONG)_project/thumbnail.png",
+  "project": "신명_(SHINMYEONG)_project",
+  "match_score": 1.0
  },
  "siesta-hour": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/tnQdJ-2nYS4/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Siesta_Hour_project/thumbnail.png",
+  "project": "Siesta_Hour_project",
+  "match_score": 1.0
  },
  "silk-road-of-sorrow-슬픔의-비단길": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/Gj9gsghH14k/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/SILK_ROAD_OF_SORROW_project/thumbnail.png",
+  "project": "SILK_ROAD_OF_SORROW_project",
+  "match_score": 1.0
  },
  "실-잣는-마을-the-silk-spinning-village": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/bEqNsMHYa-E/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/실_잣는_마을_(The_Silk-Spinning_Village)_project/thumbnail.png",
+  "project": "실_잣는_마을_(The_Silk-Spinning_Village)_project",
+  "match_score": 1.0
  },
  "하늘을-적는-사람들-the-sky-office-hanguk-sounds-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/uFRiR2zHj3I/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/하늘을_적는_사람들_(The_Sky_Office)_project/thumbnail.png",
+  "project": "하늘을_적는_사람들_(The_Sky_Office)_project",
+  "match_score": 1.0
  },
  "느린-일요일-slow-sunday": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/r4EyPPoHQCI/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/느린_일요일_(Slow_Sunday)_project/thumbnail.png",
+  "project": "느린_일요일_(Slow_Sunday)_project",
+  "match_score": 1.0
  },
  "느린-여행-slow-travel": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/4cYxoKHtF1U/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/느린_여행_(Slow_Travel)_project/thumbnail.png",
+  "project": "느린_여행_(Slow_Travel)_project",
+  "match_score": 1.0
  },
  "굳이-송-채널-사소한-게-큰일-small-but-serious": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/Xakr5Oirwko/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/사소한_게_큰일_(SMALL_BUT_SERIOUS)_project/thumbnail.png",
+  "project": "사소한_게_큰일_(SMALL_BUT_SERIOUS)_project",
+  "match_score": 1.0
  },
  "smoke-silk": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/Ulu4YoZdqwo/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/SMOKE_&_SILK_project/thumbnail.png",
+  "project": "SMOKE_&_SILK_project",
+  "match_score": 1.0
  },
  "눈-내리는-산사-snowfall-at-the-mountain-temple": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/2bJ6ZQ3OLqU/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/눈_내리는_산사_(Snowfall_at_the_Mountain_Temple)_project/thumbnail.png",
+  "project": "눈_내리는_산사_(Snowfall_at_the_Mountain_Temple)_project",
+  "match_score": 1.0
  },
  "손절일기-breakup-diary": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/S3OleIHA40c/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/손절일기_(Breakup_Diary)_project/thumbnail.png",
+  "project": "손절일기_(Breakup_Diary)_project",
+  "match_score": 1.0
  },
  "sparkling-keys-lofi-vol-1-건반의-안개": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/OOH5mD-BwG4/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Sparkling_Keys_Lofi_Vol.1_project/thumbnail.png",
+  "project": "Sparkling_Keys_Lofi_Vol.1_project",
+  "match_score": 1.0
  },
  "sparrow-and-lily": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/oSmBscWBWmE/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Sparrow_and_Lily_project/thumbnail.png",
+  "project": "Sparrow_and_Lily_project",
+  "match_score": 1.0
  },
  "정전-신호-static-signal": {
   "kind": "project_thumbnail",
@@ -410,28 +550,40 @@
   "match_score": 1.0
  },
  "still-waters": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/WeDWMn7jKXU/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/STILL_WATERS_project/thumbnail.png",
+  "project": "STILL_WATERS_project",
+  "match_score": 1.0
  },
  "still-waters-vol-2": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/WeDWMn7jKXU/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/STILL_WATERS,_Vol._2_project/thumbnail.png",
+  "project": "STILL_WATERS,_Vol._2_project",
+  "match_score": 1.0
  },
  "putting-summer-away-lo-fi-chill-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/5q5Z91geg2I/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/PUTTING_SUMMER_AWAY_project/thumbnail.png",
+  "project": "PUTTING_SUMMER_AWAY_project",
+  "match_score": 1.0
  },
  "sunlit-café-guitar-jazz-for-focus-flow": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/SEcWxZld5R8/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/SUNLIT_CAFÉ_—_Guitar_Jazz_for_Focus_&_Flow_project/thumbnail.png",
+  "project": "SUNLIT_CAFÉ_—_Guitar_Jazz_for_Focus_&_Flow_project",
+  "match_score": 1.0
  },
  "천막-아래-under-the-tent-still-waters-album-v2-전면-개정": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/KYVYj5nqvvQ/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/천막_아래_(Under_the_Tent)_project/thumbnail.png",
+  "project": "천막_아래_(Under_the_Tent)_project",
+  "match_score": 1.0
  },
  "그-이름을-아시나요-do-you-know-that-name-gamseong-channel-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/4gStO-YboW4/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/그_이름을_아시나요_(DO_YOU_KNOW_THAT_NAME)_project/thumbnail.png",
+  "project": "그_이름을_아시나요_(DO_YOU_KNOW_THAT_NAME)_project",
+  "match_score": 1.0
  },
  "그날의-온도": {
   "kind": "project_thumbnail",
@@ -440,20 +592,28 @@
   "match_score": 1.0
  },
  "the-cello-café": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/XRqskYt8xOQ/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/The_Cello_Cafe_project/thumbnail.png",
+  "project": "The_Cello_Cafe_project",
+  "match_score": 1.0
  },
  "작심삼일-복근-three-day-abs": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/xVh-A5qf988/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/작심삼일_복근_(Three-Day_Abs)_project/thumbnail.png",
+  "project": "작심삼일_복근_(Three-Day_Abs)_project",
+  "match_score": 1.0
  },
  "undertow": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/MLXhjEO6-Qo/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/UNDERTOW_project/thumbnail.png",
+  "project": "UNDERTOW_project",
+  "match_score": 1.0
  },
  "unhurried-still-waters-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/WeDWMn7jKXU/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/UNHURRIED_project/thumbnail.png",
+  "project": "UNHURRIED_project",
+  "match_score": 1.0
  },
  "미확인-주파수": {
   "kind": "project_thumbnail",
@@ -468,24 +628,34 @@
   "match_score": 1.0
  },
  "vote-buster-선거-뽕짝-대폭발-v2": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/1DoylIZNSs0/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/VOTE_BUSTER_-_Korean_Election_Song_Collection_2026_project/thumbnail.png",
+  "project": "VOTE_BUSTER_-_Korean_Election_Song_Collection_2026_project",
+  "match_score": 1.0
  },
  "물길-waterway": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/0YIyYvuoCXo/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/물길_(Waterway)_project/thumbnail.png",
+  "project": "물길_(Waterway)_project",
+  "match_score": 1.0
  },
  "weightless-still-waters-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/IUhvCBSQFZM/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/WEIGHTLESS_project/thumbnail.png",
+  "project": "WEIGHTLESS_project",
+  "match_score": 1.0
  },
  "굳이-그렇게까지-why-bother-but-i-do": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/Y6-9VG3Nfhc/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/굳이_그렇게까지_(Why_Bother,_But_I_Do)_project/thumbnail.png",
+  "project": "굳이_그렇게까지_(Why_Bother,_But_I_Do)_project",
+  "match_score": 1.0
  },
  "야행-夜行-night-procession": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/6k5ojLYYbiY/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Night_Procession_(Yahaeng)_project/thumbnail.png",
+  "project": "Night_Procession_(Yahaeng)_project",
+  "match_score": 1.0
  },
  "夜光都市-yako-toshi-city-of-glowing-nights": {
   "kind": "project_thumbnail",
@@ -500,8 +670,10 @@
   "match_score": 1.0
  },
  "small-joys-café": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/SuQq4ELQ980/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Small_Joys_Café_project/thumbnail.png",
+  "project": "Small_Joys_Café_project",
+  "match_score": 1.0
  },
  "gallery-three-lo-fi-chill-album": {
   "kind": "project_thumbnail",
@@ -528,32 +700,44 @@
   "match_score": 1.0
  },
  "the-old-trades-still-waters-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/EwDy3hbpdK8/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/The_Old_Trades_project/thumbnail.png",
+  "project": "The_Old_Trades_project",
+  "match_score": 1.0
  },
  "played-from-memory-still-waters-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/XotpZWov3OM/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Played_from_Memory_project/thumbnail.png",
+  "project": "Played_from_Memory_project",
+  "match_score": 1.0
  },
  "바다밭-the-sea-field-hanguk-sounds-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/fvCvFjTY--w/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/바다밭_(The_Sea_Field)_project/thumbnail.png",
+  "project": "바다밭_(The_Sea_Field)_project",
+  "match_score": 1.0
  },
  "euljiro-after-hours-miso-channel-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/geuHyaaQhoM/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/EULJIRO_AFTER_HOURS_project/thumbnail.png",
+  "project": "EULJIRO_AFTER_HOURS_project",
+  "match_score": 1.0
  },
  "an-hour-before-the-world-still-waters-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/izm35hRVbX4/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/An_Hour_Before_the_World_project/thumbnail.png",
+  "project": "An_Hour_Before_the_World_project",
+  "match_score": 1.0
  },
  "남이섬-nami-island-album": {
   "kind": "generated",
   "src": ""
  },
  "softer-every-set-lo-fi-chill-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/1WhbDptmD3s/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Softer_Every_Set_(연주자가_하나씩_사라진다)_project/thumbnail.png",
+  "project": "Softer_Every_Set_(연주자가_하나씩_사라진다)_project",
+  "match_score": 1.0
  },
  "12월이-오는-소리-the-sound-of-december-coming": {
   "kind": "project_thumbnail",
@@ -633,51 +817,75 @@
   "match_score": 1.0
  },
  "arrivals-hall-lo-fi-chill-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/xF3g_cswmK0/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Arrivals_Hall_(Smooth_Sax_Lo-fi)_project/thumbnail.png",
+  "project": "Arrivals_Hall_(Smooth_Sax_Lo-fi)_project",
+  "match_score": 1.0
  },
  "도시-굿판-city-gut-party": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/s0iOSKR63Os/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/도시_굿판_(City_Gut_Party)_project/thumbnail.png",
+  "project": "도시_굿판_(City_Gut_Party)_project",
+  "match_score": 1.0
  },
  "hymns-for-the-daily-walk-vol-2": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/HxysZ-IYcBM/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Hymns_for_the_Daily_Walk,_Vol._2_project/thumbnail.png",
+  "project": "Hymns_for_the_Daily_Walk,_Vol._2_project",
+  "match_score": 1.0
  },
  "산타-할아버지-질문-있어요-dear-santa-quick-question": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/2LNYsBWZnIY/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/산타_할아버지,_질문_있어요_(Dear_Santa,_Quick_Question)_project/thumbnail.png",
+  "project": "산타_할아버지,_질문_있어요_(Dear_Santa,_Quick_Question)_project",
+  "match_score": 1.0
  },
  "김장-대작전-operation-kimjang": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/is3MO5P3kGU/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/김장_대작전_(Operation_Kimjang)_project/thumbnail.png",
+  "project": "김장_대작전_(Operation_Kimjang)_project",
+  "match_score": 1.0
  },
  "3번-출구에서-만나요-meet-me-at-exit-3": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/-WyPU0wa7R0/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/3번_출구에서_만나요_(Meet_Me_at_Exit_3)_project/thumbnail.png",
+  "project": "3번_출구에서_만나요_(Meet_Me_at_Exit_3)_project",
+  "match_score": 1.0
  },
  "아침-찬송-2집-morning-hymns-vol-2": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/7mYh2fJZIdo/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/아침_찬송_2집_(Morning_Hymns,_Vol._2)_project/thumbnail.png",
+  "project": "아침_찬송_2집_(Morning_Hymns,_Vol._2)_project",
+  "match_score": 1.0
  },
  "보부상-블루스-peddler-s-blues-hanguk-sounds-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/XM0tjfv0frg/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/보부상_블루스_(Peddler's_Blues)_project/thumbnail.png",
+  "project": "보부상_블루스_(Peddler's_Blues)_project",
+  "match_score": 1.0
  },
  "second-light": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/nL5zEqIRRV0/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Second_Light_project/thumbnail.png",
+  "project": "Second_Light_project",
+  "match_score": 1.0
  },
  "thursday-night-live": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/P5cbSN0NdFw/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Thursday_Night_(Live)_project/thumbnail.png",
+  "project": "Thursday_Night_(Live)_project",
+  "match_score": 1.0
  },
  "winter-menu-lo-fi-chill-album": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/NJhClQ01ocQ/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Winter_Menu_(Cafe_Jazz_for_the_First_Cold_Week)_project/thumbnail.png",
+  "project": "Winter_Menu_(Cafe_Jazz_for_the_First_Cold_Week)_project",
+  "match_score": 1.0
  },
  "겨울-리조트-winter-resort": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/bE0LacfUi_M/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/겨울_리조트_(Winter_Resort)_project/thumbnail.png",
+  "project": "겨울_리조트_(Winter_Resort)_project",
+  "match_score": 1.0
  }
 }
