@@ -1,8 +1,11 @@
 """
-Replace generated album placeholder covers with miniPC project thumbnails.
+Replace generated placeholder covers and YouTube-sourced covers with miniPC
+project thumbnails.
 
-The music site catalog can contain albums whose cover is only a generated
-typographic/gradient placeholder. For finished video projects, miniPC keeps the
+YouTube covers are often vertical Shorts frames or another album's video, so an
+album with its own finished video project always uses that project's thumbnail.
+They are replaced only on an exact input-folder match; placeholders may also use
+the fuzzy title match. For finished video projects, miniPC keeps the
 real generated thumbnail at:
 
     /mnt/external/suno-playlist/output/*_project/thumbnail.png
@@ -70,6 +73,7 @@ for meta_path in sorted(root.glob('*/project_meta.json')):
         'album_name': data.get('album_name', ''),
         'artist': data.get('artist', ''),
         'input_dir': data.get('input_dir', ''),
+        'mtime': thumb.stat().st_mtime,
     })
 print(json.dumps(items, ensure_ascii=False))
 PY
@@ -191,12 +195,20 @@ def load_local_projects() -> list[dict]:
             "album_name": data.get("album_name", ""),
             "artist": data.get("artist", ""),
             "input_dir": data.get("input_dir", ""),
+            "mtime": thumb.stat().st_mtime,
         })
     return items
 
 
 def is_local() -> bool:
     return _env.is_source_host() and Path(REMOTE_OUTPUT).is_dir()
+
+
+def exact_project(album: dict, projects: list[dict]) -> dict | None:
+    """이 앨범 폴더로 만든 영상 프로젝트. 다시 만든 적이 있으면 가장 최근 것."""
+    same = [p for p in projects
+            if Path(p.get("input_dir", "").rstrip("/")).name == album["folder"]]
+    return max(same, key=lambda p: p["mtime"]) if same else None
 
 
 def load_remote_projects() -> list[dict]:
@@ -258,11 +270,14 @@ def main() -> int:
 
     albums = json.loads(CATALOG.read_text(encoding="utf-8"))
     meta = json.loads(META.read_text(encoding="utf-8")) if META.exists() else {}
-    generated = [a for a in albums
-                 if meta.get(a["slug"], {}).get("kind") == "generated"
-                 or meta.get(a["slug"], {}).get("auto_replace")]
-    if not generated:
-        print("generated covers: 0 (바꿀 임시 커버 없음)")
+    def is_placeholder(album: dict) -> bool:
+        rec = meta.get(album["slug"], {})
+        return rec.get("kind") == "generated" or bool(rec.get("auto_replace"))
+
+    targets = [a for a in albums
+               if is_placeholder(a) or meta.get(a["slug"], {}).get("kind") == "youtube"]
+    if not targets:
+        print("replaceable covers: 0")
         return 0
     projects = load_remote_projects()
     pkey = {p["thumbnail"]: project_keys(p) for p in projects}
@@ -271,7 +286,17 @@ def main() -> int:
     misses: list[tuple[float, dict, dict | None]] = []
     used: set[str] = set()
 
-    for album in generated:
+    # 정확히 같은 폴더의 프로젝트를 먼저 배정해야 비슷한 이름의 앨범이 가로채지 못한다
+    fuzzy_targets = []
+    for album in targets:
+        project = exact_project(album, projects)
+        if project:
+            used.add(project["thumbnail"])
+            matches.append((1.0, album, project))
+        elif is_placeholder(album):
+            fuzzy_targets.append(album)
+
+    for album in fuzzy_targets:
         akeys = album_keys(album)
         ranked = sorted(
             ((score_keys(akeys, pkey[p["thumbnail"]]), p) for p in projects),
@@ -285,7 +310,7 @@ def main() -> int:
         else:
             misses.append((score, album, project))
 
-    print(f"generated covers: {len(generated)}")
+    print(f"replaceable covers: {len(targets)}")
     print(f"matched thumbnails: {len(matches)}")
     print(f"unmatched: {len(misses)}")
 
