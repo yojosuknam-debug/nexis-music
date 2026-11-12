@@ -38,7 +38,14 @@ INPUT_DIR = _env.input_dir()      # 미니PC면 원본, 데스크탑이면 사�
 LIVE_DATA = REPO / "public" / "data.js"
 OUT = REPO / "scripts" / "jukebox" / "catalog.json"
 
-TRACK_RE = re.compile(r"^##\s*Track\s*(\d+)\s*[:.]?\s*(.*)$", re.M | re.I)
+# 옛 앨범은 '## 🎵 Track 01: …' 처럼 이모지가 앞에 붙는다(2026-11-12 못 잊어·NEON ECHOES 0곡 발견).
+TRACK_RE = re.compile(r"^##[ \t]*(?:[^\w\s#]+[ \t]*)?Track[ \t]*(\d+)[ \t]*[:.]?[ \t]*(.*)$", re.M | re.I)
+# mp3 이름: '01_x.mp3' 외에 'track01.mp3'·'Track 1_ x.mp3' 도 있다(옛 앨범 5개가 이 때문에 0곡이었다).
+AUDIO_NUM_RE = re.compile(r"(?:track[\s_-]*)?(\d+)", re.I)
+# 설명 파일 이름에 album 이 없는 옛 앨범(Moonflow_Night.md) — 이 이름들은 설명 파일이 아니다.
+NON_ALBUM_MD = {"concept.md", "image.md", "readme.md", "youtube_metadata.md"}
+# 제작 문서 꼬리표: '🎸 NEON ECHOES — Album Production Complete Guide'
+TITLE_SUFFIX_RE = re.compile(r"\s+[—–-]\s+Album Production.*$", re.I)
 # 가사 소제목은 영/한 변형이 둘 다 존재한다: "### Lyrics", "### Suno 가사", "### 가사"
 LYRICS_RE = re.compile(r"^###[^\n]*(?:Lyrics|가사)[^\n]*\n+```[a-z]*\n(.*?)```", re.S | re.M | re.I)
 INSTRUMENTAL_RE = re.compile(r"\[\s*(?:Instrumental|No vocals)\s*\]", re.I)
@@ -215,11 +222,14 @@ def scan_album(folder: Path, index, track_index) -> dict | None:
         return None
     mds = sorted(folder.glob("*album*.md"))
     if not mds:
+        mds = [p for p in folder.glob("*.md") if p.name.lower() not in NON_ALBUM_MD]
+    if not mds:
         return None
     md = max(mds, key=lambda p: p.stat().st_mtime)          # 개정본(V4 등) 우선
     text = md.read_text(encoding="utf-8", errors="replace")
 
     title = re.sub(r"^\s*Album\s*[:：]\s*", "", text.split("\n", 1)[0].lstrip("# ").strip())
+    title = TITLE_SUFFIX_RE.sub("", title).strip() or title
     def meta(field):
         m = re.search(rf"^\*\*{field}\*\*\s*[:：]\s*(.+)$", text, re.M)
         return m.group(1).strip() if m else ""
@@ -227,7 +237,7 @@ def scan_album(folder: Path, index, track_index) -> dict | None:
     # mp3 는 파일명 앞 숫자가 트랙 번호다 (tracks/01_....mp3)
     audio: dict[int, Path] = {}
     for f in sorted(folder.rglob("*.mp3")):
-        m = re.match(r"(\d+)", f.name)
+        m = AUDIO_NUM_RE.match(f.name)
         if m:
             audio.setdefault(int(m.group(1)), f)
 
