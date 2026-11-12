@@ -4338,6 +4338,1268 @@
   "cover_url": "https://audio.yojosuknam.com/cover/be-still.jpg?v=163eaaf1"
  },
  {
+  "folder": "BY_HEART",
+  "slug": "by-heart",
+  "title": "By Heart",
+  "genre": "Live Contemporary Worship × Christian Lofi (vocal) × CCM Piano Ballad",
+  "channel": "Still Waters (`stillwaters`)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "Come to Me, All Who Are Weary",
+    "file": "01_come_to_me_all_who_are_weary.mp3",
+    "src": "/mnt/external/suno-playlist/input/BY_HEART/tracks/01_come_to_me_all_who_are_weary.mp3",
+    "ms": 232920,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "room murmur, solo grand piano, ambient guitar swells",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male worship leader, warm and conversational, piano and pads",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:50",
+      "lines": [
+       "Forty doorsteps since the morning",
+       "Every package someone else's news",
+       "The van is parked half on the driveway",
+       "Engine ticking as it cools",
+       "I've been running on a borrowed second wind",
+       "And I'm running out of road"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "kick drum enters, five-string bass",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:04",
+      "lines": [
+       "Then I hear it like a doorbell",
+       "Soft enough to stop me where I stand",
+       "Lay it down, lay it down"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, congregation sings along",
+      "lines": []
+     },
+     {
+      "tag": "1:04-1:36",
+      "lines": [
+       "Come to Me, all who are weary",
+       "Come to Me, all who are worn",
+       "I will give you rest, I will give you rest",
+       "Trade your heavy load for Mine",
+       "Come to Me, all who are weary",
+       "There is room for you tonight"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "band pulls back, guitar delay",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:06",
+      "lines": [
+       "There's a mother with a double shift behind her",
+       "A student with a stack of overdue",
+       "A farmer reading clouds that never open",
+       "A father learning what his hands can't do",
+       "And the same voice carries through the room",
+       "Calling each of us by name"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "drums build",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:20",
+      "lines": [
+       "Then I hear it like a doorbell",
+       "Soft enough to stop me where I stand",
+       "Lay it down, lay it down"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, congregation sings along",
+      "lines": []
+     },
+     {
+      "tag": "2:20-2:52",
+      "lines": [
+       "Come to Me, all who are weary",
+       "Come to Me, all who are worn",
+       "I will give you rest, I will give you rest",
+       "Trade your heavy load for Mine",
+       "Come to Me, all who are weary",
+       "There is room for you tonight"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "half-time drums, soprano alto tenor harmonies, congregation joins",
+      "lines": []
+     },
+     {
+      "tag": "2:52-3:22",
+      "lines": [
+       "I set the scanner on the seat",
+       "I let my shoulders fall",
+       "I don't have to finish everything",
+       "To answer when You call",
+       "You are gentle, You are lowly",
+       "And You give rest to my soul"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, everyone singing",
+      "lines": []
+     },
+     {
+      "tag": "3:22-3:52",
+      "lines": [
+       "Come to Me, all who are weary",
+       "Come to Me, all who are worn",
+       "I will give you rest, I will give you rest",
+       "Trade your heavy load for Mine",
+       "Come to Me, all who are weary",
+       "There is room for you tonight"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "piano alone, soft room applause",
+      "lines": []
+     },
+     {
+      "tag": "3:52-4:02",
+      "lines": [
+       "Come to Me"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/by-heart/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "Cast Your Cares on Him",
+    "file": "02_cast_your_cares_on_him.mp3",
+    "src": "/mnt/external/suno-playlist/input/BY_HEART/tracks/02_cast_your_cares_on_him.mp3",
+    "ms": 220800,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "vinyl crackle, soft upright piano, single notes",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:22",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "breathy female vocal, intimate whisper",
+      "lines": []
+     },
+     {
+      "tag": "0:22-0:58",
+      "lines": [
+       "I unzip the bag I've carried all week long",
+       "And set it on the bed",
+       "The rent that's due on Friday",
+       "Words my brother never said",
+       "A letter from the clinic",
+       "That I haven't dared to read",
+       "Every pocket heavy",
+       "Every zipper full of need"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "fingerpicked guitar enters",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:12",
+      "lines": [
+       "You never asked me to be strong",
+       "You only asked me to let go"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft harmony, light brushed drums",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:44",
+      "lines": [
+       "Cast your cares on Him",
+       "For He cares for you",
+       "Every one, every one",
+       "Every little thing I'm holding to",
+       "Cast your cares on Him",
+       "Leave them where they fall",
+       "He is never too tired",
+       "To carry them all"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "upright bass enters, warm and slow",
+      "lines": []
+     },
+     {
+      "tag": "1:44-2:16",
+      "lines": [
+       "I take them out one at a time",
+       "And lay them in Your hands",
+       "Not tidy, not explained",
+       "Not knowing how it ends",
+       "You don't count them like a burden",
+       "You don't sigh or turn away",
+       "You lean in close and listen",
+       "Like You've cleared Your whole day"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft harmony, light brushed drums",
+      "lines": []
+     },
+     {
+      "tag": "2:16-2:48",
+      "lines": [
+       "Cast your cares on Him",
+       "For He cares for you",
+       "Every one, every one",
+       "Every little thing I'm holding to",
+       "Cast your cares on Him",
+       "Leave them where they fall",
+       "He is never too tired",
+       "To carry them all"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "piano and pads only, whispered",
+      "lines": []
+     },
+     {
+      "tag": "2:48-3:12",
+      "lines": [
+       "The bag is light, the lamp is low",
+       "The letter waits for day",
+       "I'm sleeping like a child again",
+       "Because You stay awake"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "vinyl crackle lingering, soft hums",
+      "lines": []
+     },
+     {
+      "tag": "3:12-3:40",
+      "lines": [
+       "Cast your cares",
+       "For He cares for you"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/by-heart/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "I Lift My Eyes to the Hills",
+    "file": "03_i_lift_my_eyes_to_the_hills.mp3",
+    "src": "/mnt/external/suno-playlist/input/BY_HEART/tracks/03_i_lift_my_eyes_to_the_hills.mp3",
+    "ms": 227736,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "solo grand piano chords, ambient guitar swells, floor tom pulse",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:22",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female worship leader, steady and clear, piano and pads",
+      "lines": []
+     },
+     {
+      "tag": "0:22-0:54",
+      "lines": [
+       "From the fourth-floor window of a rented room",
+       "Past the billboards and the power lines",
+       "Past the freeway humming through the dark",
+       "There's a ridge where the last light hides",
+       "And I ask what every heart has asked",
+       "Where my help is coming from"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "kick drum and five-string bass enter",
+      "lines": []
+     },
+     {
+      "tag": "0:54-1:08",
+      "lines": [
+       "Not the ridge and not the sky",
+       "But the One who set them there"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, congregation sings along",
+      "lines": []
+     },
+     {
+      "tag": "1:08-1:40",
+      "lines": [
+       "I lift my eyes to the hills",
+       "My help comes from the Lord",
+       "The Maker of the heavens and the earth",
+       "Is the One I'm looking toward",
+       "I lift my eyes to the hills",
+       "And He is lifting me"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "band pulls back, guitar delay",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:10",
+      "lines": [
+       "The streetlights blink on one by one",
+       "The neighbors' windows fold to black",
+       "I've counted every siren passing",
+       "Lying wide awake on my back",
+       "But the One who keeps me never slumbers",
+       "He is watching while I sleep"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "drums build",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:24",
+      "lines": [
+       "Not the ridge and not the sky",
+       "But the One who set them there"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, congregation sings along",
+      "lines": []
+     },
+     {
+      "tag": "2:24-2:56",
+      "lines": [
+       "I lift my eyes to the hills",
+       "My help comes from the Lord",
+       "The Maker of the heavens and the earth",
+       "Is the One I'm looking toward",
+       "I lift my eyes to the hills",
+       "And He is lifting me"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "half-time drums, male harmony joins, congregation joins",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:26",
+      "lines": [
+       "When I'm leaving, when I'm coming home",
+       "He keeps me, He keeps me",
+       "Every doorway, every road",
+       "He keeps me, He keeps me",
+       "From tonight to evermore",
+       "He keeps me"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, everyone singing",
+      "lines": []
+     },
+     {
+      "tag": "3:26-3:56",
+      "lines": [
+       "I lift my eyes to the hills",
+       "My help comes from the Lord",
+       "The Maker of the heavens and the earth",
+       "Is the One I'm looking toward",
+       "I lift my eyes to the hills",
+       "And He is lifting me"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "piano alone, ambient guitar, soft room applause",
+      "lines": []
+     },
+     {
+      "tag": "3:56-4:06",
+      "lines": [
+       "I lift my eyes"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/by-heart/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "My Grace Is Sufficient",
+    "file": "04_my_grace_is_sufficient.mp3",
+    "src": "/mnt/external/suno-playlist/input/BY_HEART/tracks/04_my_grace_is_sufficient.mp3",
+    "ms": 184704,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano arpeggio, soft breath before singing",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:20",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "tender female vocal, piano only",
+      "lines": []
+     },
+     {
+      "tag": "0:20-0:54",
+      "lines": [
+       "There's a cane beside the bed now",
+       "And a therapist who counts to ten",
+       "Fifteen steps used to be nothing",
+       "Now I'm learning them again",
+       "Three times I asked to have it gone",
+       "Three times I asked You why"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft pads enter",
+      "lines": []
+     },
+     {
+      "tag": "0:54-1:08",
+      "lines": [
+       "And You didn't take the weakness",
+       "You came closer than I thought"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft harmony, gentle swell",
+      "lines": []
+     },
+     {
+      "tag": "1:08-1:42",
+      "lines": [
+       "My grace is sufficient for you",
+       "I hear You say it soft and slow",
+       "Your strength is clearest where I'm weakest",
+       "In the places I can't go",
+       "My grace is sufficient for you",
+       "And it's enough, it's enough"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "warm strings enter softly, gentle acoustic guitar",
+      "lines": []
+     },
+     {
+      "tag": "1:42-2:14",
+      "lines": [
+       "I used to hide the shaking in my hands",
+       "Kept my best face for the room",
+       "Now I let the people see me",
+       "Leaning hard on something true",
+       "And the ones who needed me so strong",
+       "Are finding strength in You"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "strings rising gently",
+      "lines": []
+     },
+     {
+      "tag": "2:14-2:28",
+      "lines": [
+       "And You didn't take the weakness",
+       "You came closer than I thought"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft harmony, gentle swell",
+      "lines": []
+     },
+     {
+      "tag": "2:28-3:02",
+      "lines": [
+       "My grace is sufficient for you",
+       "I hear You say it soft and slow",
+       "Your strength is clearest where I'm weakest",
+       "In the places I can't go",
+       "My grace is sufficient for you",
+       "And it's enough, it's enough"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "soft kick enters, vocal rises, controlled",
+      "lines": []
+     },
+     {
+      "tag": "3:02-3:30",
+      "lines": [
+       "So I'll boast about the bars I hold",
+       "And the steps I barely make",
+       "If You live in all I cannot do",
+       "Then I'll let You have the weight"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "piano alone, fading",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:50",
+      "lines": [
+       "It's enough",
+       "Your grace is enough"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/by-heart/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "Nothing Can Separate Us",
+    "file": "05_nothing_can_separate_us.mp3",
+    "src": "/mnt/external/suno-playlist/input/BY_HEART/tracks/05_nothing_can_separate_us.mp3",
+    "ms": 205944,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "drum stick count-in, full band hits, hand claps",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "bright male worship leader, driving drums",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "Not the miles of a long-haul flight",
+       "Not a call that's breaking up at night",
+       "Not the years I spent away",
+       "Not the words I couldn't say",
+       "Not the door I slammed so loud",
+       "Nothing ever pulled Your hand from mine"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "toms build, organ swell, female worship leader joins",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "Every height and every depth",
+       "Every yesterday and every next"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, congregation sings along",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:26",
+      "lines": [
+       "Nothing can separate us",
+       "From the love of God",
+       "Nothing above us, nothing below",
+       "Nothing we've done and nothing we know",
+       "Nothing can separate us",
+       "Oh, from the love of God"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female worship leader, kick and bass, then builds back",
+      "lines": []
+     },
+     {
+      "tag": "1:26-1:54",
+      "lines": [
+       "Not the paper with the bad news on it",
+       "Not the empty chair at the holiday",
+       "Not the angels, not the powers",
+       "Not the long and lonely hours",
+       "Not the shadow of the grave",
+       "Nothing ever pulled Your hand from mine"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "toms build, organ swell",
+      "lines": []
+     },
+     {
+      "tag": "1:54-2:08",
+      "lines": [
+       "Every height and every depth",
+       "Every yesterday and every next"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, congregation sings along",
+      "lines": []
+     },
+     {
+      "tag": "2:08-2:38",
+      "lines": [
+       "Nothing can separate us",
+       "From the love of God",
+       "Nothing above us, nothing below",
+       "Nothing we've done and nothing we know",
+       "Nothing can separate us",
+       "Oh, from the love of God"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "four-on-the-floor kick, leaders call, congregation answers no",
+      "lines": []
+     },
+     {
+      "tag": "2:38-3:08",
+      "lines": [
+       "Can the past pull us apart, no",
+       "Can tomorrow break this heart, no",
+       "Can the grave hold what He won, no",
+       "Not now and not ever, no",
+       "We are more than conquerors",
+       "Held by the love of God"
+      ]
+     },
+     {
+      "tag": "Breakdown",
+      "lines": []
+     },
+     {
+      "tag": "drums out, claps and bass only, leaders sing together",
+      "lines": []
+     },
+     {
+      "tag": "3:08-3:22",
+      "lines": [
+       "Held by the love of God",
+       "Held by the love of God"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, everyone singing",
+      "lines": []
+     },
+     {
+      "tag": "3:22-3:52",
+      "lines": [
+       "Nothing can separate us",
+       "From the love of God",
+       "Nothing above us, nothing below",
+       "Nothing we've done and nothing we know",
+       "Nothing can separate us",
+       "Oh, from the love of God"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final band hit, crowd cheers",
+      "lines": []
+     },
+     {
+      "tag": "3:52-3:58",
+      "lines": [
+       "Nothing"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/by-heart/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "Trust in the Lord with All Your Heart",
+    "file": "06_trust_in_the_lord_with_all_your_heart.mp3",
+    "src": "/mnt/external/suno-playlist/input/BY_HEART/tracks/06_trust_in_the_lord_with_all_your_heart.mp3",
+    "ms": 239640,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "vinyl crackle, fingerpicked acoustic guitar, distant road wind",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:20",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "warm soft male vocal, conversational",
+      "lines": []
+     },
+     {
+      "tag": "0:20-0:52",
+      "lines": [
+       "No signal past the county line",
+       "The dashboard glowing green",
+       "A paper map that won't fold right",
+       "Spread across the passenger seat",
+       "I thought I had the whole route planned",
+       "I thought I knew the turns"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "light brushed drums enter, upright bass",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:06",
+      "lines": [
+       "But my understanding only reaches",
+       "Where my headlights burn"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "female harmony joins",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:38",
+      "lines": [
+       "Trust in the Lord with all your heart",
+       "When the map runs out of road",
+       "I don't have to see the whole way through",
+       "To know the One who knows",
+       "Trust in the Lord with all your heart",
+       "He'll straighten every bend"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "soft upright piano answers each line",
+      "lines": []
+     },
+     {
+      "tag": "1:38-2:10",
+      "lines": [
+       "There's a gravel road I didn't choose",
+       "A detour sign in orange paint",
+       "A farmhouse porch light burning late",
+       "Where the fields run out of shape",
+       "And I'm learning that the long way round",
+       "Still brings me home again"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "light brushed drums, upright bass",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:24",
+      "lines": [
+       "'Cause my understanding only reaches",
+       "Where my headlights burn"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "female harmony joins",
+      "lines": []
+     },
+     {
+      "tag": "2:24-2:56",
+      "lines": [
+       "Trust in the Lord with all your heart",
+       "When the map runs out of road",
+       "I don't have to see the whole way through",
+       "To know the One who knows",
+       "Trust in the Lord with all your heart",
+       "He'll straighten every bend"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "piano and guitar only, softer",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:20",
+      "lines": [
+       "In all my ways, in all my days",
+       "I'll lean on You and not my sight",
+       "Every turn I can't explain",
+       "You were steering it right"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "vinyl crackle, guitar fading, road wind",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:44",
+      "lines": [
+       "Trust in the Lord",
+       "With all my heart"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/by-heart/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "I Know the Plans I Have for You",
+    "file": "07_i_know_the_plans_i_have_for_you.mp3",
+    "src": "/mnt/external/suno-playlist/input/BY_HEART/tracks/07_i_know_the_plans_i_have_for_you.mp3",
+    "ms": 231984,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "solo grand piano, ambient pads, soft room hush",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:22",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "warm male worship leader, tender, piano and pads",
+      "lines": []
+     },
+     {
+      "tag": "0:22-0:54",
+      "lines": [
+       "There are pencil lines on the doorframe",
+       "Every birthday marked in gray",
+       "Some of them are close together",
+       "Some years leapt a hand's width in a day",
+       "I stood my back against the wood again",
+       "And wondered where the years had gone"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "female worship leader joins, ambient guitar swells",
+      "lines": []
+     },
+     {
+      "tag": "0:54-1:08",
+      "lines": [
+       "And I hear You through the measuring",
+       "You knew the height before the mark"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, five-string bass enters",
+      "lines": []
+     },
+     {
+      "tag": "1:08-1:40",
+      "lines": [
+       "I know the plans I have for you",
+       "Plans to give you hope",
+       "Not to harm you, not to lose you",
+       "A future you can hold",
+       "I know the plans I have for you",
+       "So grow, child, grow"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female worship leader, soft live drums enter",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:12",
+      "lines": [
+       "There's a box of letters in the closet",
+       "Applications marked declined",
+       "There's a dream I buried in the backyard",
+       "That came up the other side",
+       "And I'm learning every closing door",
+       "Was a turn You had in mind"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "drums build",
+      "lines": []
+     },
+     {
+      "tag": "2:12-2:26",
+      "lines": [
+       "And I hear You through the measuring",
+       "You knew the height before the mark"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, duet harmonies",
+      "lines": []
+     },
+     {
+      "tag": "2:26-2:58",
+      "lines": [
+       "I know the plans I have for you",
+       "Plans to give you hope",
+       "Not to harm you, not to lose you",
+       "A future you can hold",
+       "I know the plans I have for you",
+       "So grow, child, grow"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "half-time drums, congregation softly joins",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:28",
+      "lines": [
+       "Even far from where you started",
+       "Build your house and plant your seed",
+       "Pray for the city where you're living",
+       "For its peace will be your peace",
+       "Even far from where you started",
+       "You are planted, you are seen"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, everyone singing, soprano alto tenor harmonies",
+      "lines": []
+     },
+     {
+      "tag": "3:28-3:56",
+      "lines": [
+       "I know the plans I have for you",
+       "Plans to give you hope",
+       "Not to harm you, not to lose you",
+       "A future you can hold",
+       "I know the plans I have for you",
+       "So grow, child, grow"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "piano alone, soft room applause",
+      "lines": []
+     },
+     {
+      "tag": "3:56-4:06",
+      "lines": [
+       "Hope and a future",
+       "Grow, child, grow"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/by-heart/07.mp3"
+   }
+  ],
+  "updated_at": 1794414498,
+  "cover_source": "https://i.ytimg.com/vi/BxiiZJUX7eI/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1543728,
+  "cover_file": "by-heart.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/by-heart.jpg?v=4da7afff"
+ },
+ {
   "folder": "CAROLS_IN_MINYO",
   "slug": "성탄-메김소리-carols-in-minyo",
   "title": "성탄 메김소리 (Carols in Minyo)",
@@ -18394,6 +19656,924 @@
   "cover_url": "https://audio.yojosuknam.com/cover/한지-바람-hanji-wind-korean-wind-instrument-solo-series.jpg?v=26c3b045"
  },
  {
+  "folder": "HANPURI_SEOLHAN",
+  "slug": "한풀이-ii-설한-hanpuri-ii-songs-of-the-cold",
+  "title": "한풀이 II: 설한 (Hanpuri II: Songs of the Cold)",
+  "genre": "Korean Pansori Fusion / Gugak Bass Groove (한풀이 후속작 · 겨울)",
+  "channel": "Hanguk Sounds (hanji)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "곰의 노래 (Song of the Bear)",
+    "file": "01_song_of_the_bear.mp3",
+    "src": "/mnt/external/suno-playlist/input/HANPURI_SEOLHAN/tracks/01_song_of_the_bear.mp3",
+    "ms": 188112,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "janggu alone, building tension",
+      "lines": []
+     },
+     {
+      "tag": "heavy bass groove enters",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:20",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:20-0:58",
+      "lines": [
+       "눈 덮인 산 깊은 굴에",
+       "곰 한 마리 웅크렸네",
+       "쑥 한 줌에 마늘 스무 쪽",
+       "캄캄한 데 백 날이라",
+       "범은 참다 뛰쳐나가고",
+       "나만 홀로 남았구나",
+       "바람 소리 굴을 긁어도",
+       "이를 물고 버텨 보세"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:12",
+      "lines": [
+       "하루 가고 또 하루",
+       "쓴맛 삼켜 또 하루"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "call and response, group vocals",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:42",
+      "lines": [
+       "어허라 어허라",
+       "곰이 운다 굴 속에서",
+       "어허라 어허라",
+       "참은 한을 풀어 보자"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:42-2:20",
+      "lines": [
+       "얼음 같은 굴 바닥에",
+       "발바닥을 핥아 가며",
+       "어미 품도 불빛도 없이",
+       "겨울 한 철 다 견뎠지",
+       "눈물 대신 쑥을 씹고",
+       "울음 대신 숨을 고르고",
+       "백 번째 날 새벽이 오면",
+       "누가 나를 짐승이래"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:20-2:34",
+      "lines": [
+       "하루 가고 또 하루",
+       "쓴맛 삼켜 또 하루"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "call and response, group vocals",
+      "lines": []
+     },
+     {
+      "tag": "2:34-3:04",
+      "lines": [
+       "어허라 어허라",
+       "곰이 운다 굴 속에서",
+       "어허라 어허라",
+       "참은 한을 풀어 보자"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "bass breakdown, janggu accelerates to hwimori",
+      "lines": []
+     },
+     {
+      "tag": "3:04-3:34",
+      "lines": [
+       "얼씨구 굴 문 열렸네",
+       "절씨구 눈부신 아침",
+       "한판 놀아 보세",
+       "한판 놀아 보세"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full ensemble, explosive",
+      "lines": []
+     },
+     {
+      "tag": "3:34-4:00",
+      "lines": [
+       "어허라 어허라",
+       "곰이 걸어 나온다",
+       "어허라 어허라",
+       "백 날의 한 흥이 되어"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "bass groove fades, single janggu hit",
+      "lines": []
+     },
+     {
+      "tag": "4:00-4:10",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/한풀이-ii-설한-hanpuri-ii-songs-of-the-cold/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "북풍한설 (Northern Gale)",
+    "file": "02_northern_gale.mp3",
+    "src": "/mnt/external/suno-playlist/input/HANPURI_SEOLHAN/tracks/02_northern_gale.mp3",
+    "ms": 191832,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Gale Rising",
+      "lines": []
+     },
+     {
+      "tag": "kkwaenggwari call, fast janggu pattern",
+      "lines": []
+     },
+     {
+      "tag": "jing swells like wind",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:22",
+      "lines": []
+     },
+     {
+      "tag": "Bass Drops",
+      "lines": []
+     },
+     {
+      "tag": "heavy electric bass enters, locked with janggu",
+      "lines": []
+     },
+     {
+      "tag": "gayageum rapid plucked accents",
+      "lines": []
+     },
+     {
+      "tag": "0:22-0:58",
+      "lines": []
+     },
+     {
+      "tag": "Groove A",
+      "lines": []
+     },
+     {
+      "tag": "full ensemble driving forward",
+      "lines": []
+     },
+     {
+      "tag": "gayageum melodic runs over bass groove",
+      "lines": []
+     },
+     {
+      "tag": "kkwaenggwari sharp offbeat hits",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:40",
+      "lines": []
+     },
+     {
+      "tag": "Breakdown",
+      "lines": []
+     },
+     {
+      "tag": "bass and janggu only, howling wind texture",
+      "lines": []
+     },
+     {
+      "tag": "building tension",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:08",
+      "lines": []
+     },
+     {
+      "tag": "Groove B",
+      "lines": []
+     },
+     {
+      "tag": "full ensemble returns louder",
+      "lines": []
+     },
+     {
+      "tag": "gayageum trading riffs with bass",
+      "lines": []
+     },
+     {
+      "tag": "janggu pushing tempo",
+      "lines": []
+     },
+     {
+      "tag": "2:08-2:52",
+      "lines": []
+     },
+     {
+      "tag": "Climax",
+      "lines": []
+     },
+     {
+      "tag": "all instruments peak, jing crashes",
+      "lines": []
+     },
+     {
+      "tag": "polyrhythmic explosion, ecstatic",
+      "lines": []
+     },
+     {
+      "tag": "2:52-3:24",
+      "lines": []
+     },
+     {
+      "tag": "Wind Down",
+      "lines": []
+     },
+     {
+      "tag": "instruments drop out one by one",
+      "lines": []
+     },
+     {
+      "tag": "wind texture, final janggu hit",
+      "lines": []
+     },
+     {
+      "tag": "3:24-3:50",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/한풀이-ii-설한-hanpuri-ii-songs-of-the-cold/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "겨울 까마귀 (Winter Crow)",
+    "file": "03_winter_crow.mp3",
+    "src": "/mnt/external/suno-playlist/input/HANPURI_SEOLHAN/tracks/03_winter_crow.mp3",
+    "ms": 222600,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "haegeum alone, slow crying melody",
+      "lines": []
+     },
+     {
+      "tag": "bass enters softly",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:22",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:22-1:05",
+      "lines": [
+       "기러기 떼 남으로 가고",
+       "제비도 떠난 들판에",
+       "까마귀 하나 남았네",
+       "빈 가지 끝에 앉아서",
+       "눈발은 자꾸 굵어지고",
+       "먹을 것은 보이질 않아",
+       "그래도 이 땅 내 땅이라",
+       "날개 접고 버티는 거야"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:05-1:40",
+      "lines": [
+       "까악 까악 울어라",
+       "찬 하늘 다 들리게",
+       "까악 까악 울어라",
+       "내 한을 바람에 실어"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:22",
+      "lines": [
+       "누구는 검다 흉을 보고",
+       "누구는 재수 없대도",
+       "겨우내 이 들을 지킨 건",
+       "떠나지 않은 나였지",
+       "얼어붙은 밭고랑 위에",
+       "발자국 몇 개 찍어 두고",
+       "봄 오면 돌아올 새들아",
+       "너희 자리 비워 둘게"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:22-2:57",
+      "lines": [
+       "까악 까악 울어라",
+       "찬 하늘 다 들리게",
+       "까악 까악 울어라",
+       "내 한을 바람에 실어"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "haegeum solo, crying melody",
+      "lines": []
+     },
+     {
+      "tag": "2:57-3:25",
+      "lines": [
+       "떠나는 게 쉬웠을까",
+       "남는 게 쉬웠을까"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full voice, emotional crescendo",
+      "lines": []
+     },
+     {
+      "tag": "3:25-3:55",
+      "lines": [
+       "까악 까악 울어라",
+       "눈 그친 하늘 끝까지",
+       "까악 까악 울어라",
+       "남은 자의 노래를"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "haegeum trail fading, low humming",
+      "lines": []
+     },
+     {
+      "tag": "3:55-4:08",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/한풀이-ii-설한-hanpuri-ii-songs-of-the-cold/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "두루미 춤 (Dance of the Cranes)",
+    "file": "04_dance_of_the_cranes.mp3",
+    "src": "/mnt/external/suno-playlist/input/HANPURI_SEOLHAN/tracks/04_dance_of_the_cranes.mp3",
+    "ms": 188352,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "daegeum soft call, gayageum plucks",
+      "lines": []
+     },
+     {
+      "tag": "bass and janggu join, swaying",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:20",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:20-0:58",
+      "lines": [
+       "철새 내린 얼음 들판",
+       "하얀 날개 두 마리",
+       "붉은 정수리 고개 들고",
+       "마주 서서 절을 하네",
+       "한 발 들고 또 한 발",
+       "눈 위에다 수를 놓고",
+       "겨울 해가 짧다 해도",
+       "춤사위는 길기만 해"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "call and response, group vocals",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:30",
+      "lines": [
+       "두루미야 춤을 추자",
+       "훨훨 날개 펴고",
+       "두루미야 춤을 추자",
+       "언 땅 위가 마당이야"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:30-2:08",
+      "lines": [
+       "북쪽 바람 타고 넘어",
+       "천 리 길을 날아왔지",
+       "짝을 찾아 목을 놓아",
+       "뚜루루 길게 울면",
+       "얼었던 내 마음까지",
+       "사르르 풀리는구나",
+       "날개 끝에 묻은 서리",
+       "반짝반짝 떨어지네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "call and response, group vocals",
+      "lines": []
+     },
+     {
+      "tag": "2:08-2:40",
+      "lines": [
+       "두루미야 춤을 추자",
+       "훨훨 날개 펴고",
+       "두루미야 춤을 추자",
+       "언 땅 위가 마당이야"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "daegeum solo, soaring",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:05",
+      "lines": [
+       "얼쑤 날개 한 번",
+       "절쑤 고개 한 번"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full ensemble, bright",
+      "lines": []
+     },
+     {
+      "tag": "3:05-3:38",
+      "lines": [
+       "두루미야 춤을 추자",
+       "훨훨 하늘 높이",
+       "두루미야 춤을 추자",
+       "겨울 끝도 마당이야"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "daegeum fading, last gayageum pluck",
+      "lines": []
+     },
+     {
+      "tag": "3:38-3:52",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/한풀이-ii-설한-hanpuri-ii-songs-of-the-cold/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "상고대 (Rime Frost)",
+    "file": "05_rime_frost.mp3",
+    "src": "/mnt/external/suno-playlist/input/HANPURI_SEOLHAN/tracks/05_rime_frost.mp3",
+    "ms": 200040,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Dawn Frost",
+      "lines": []
+     },
+     {
+      "tag": "solo haegeum, slow, distant",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:35",
+      "lines": []
+     },
+     {
+      "tag": "Geomungo Enters",
+      "lines": []
+     },
+     {
+      "tag": "deep geomungo plucks, warm bass drone",
+      "lines": []
+     },
+     {
+      "tag": "0:35-1:20",
+      "lines": []
+     },
+     {
+      "tag": "Crystal Branches",
+      "lines": []
+     },
+     {
+      "tag": "haegeum wide pitch bends, crying",
+      "lines": []
+     },
+     {
+      "tag": "geomungo answers each phrase",
+      "lines": []
+     },
+     {
+      "tag": "1:20-2:15",
+      "lines": []
+     },
+     {
+      "tag": "Sun Touches Frost",
+      "lines": []
+     },
+     {
+      "tag": "haegeum lifts gently, bass softens",
+      "lines": []
+     },
+     {
+      "tag": "2:15-2:55",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "single haegeum long tone fades",
+      "lines": []
+     },
+     {
+      "tag": "2:55-3:25",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/한풀이-ii-설한-hanpuri-ii-songs-of-the-cold/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "매사냥 (The Falcon Hunt)",
+    "file": "06_the_falcon_hunt.mp3",
+    "src": "/mnt/external/suno-playlist/input/HANPURI_SEOLHAN/tracks/06_the_falcon_hunt.mp3",
+    "ms": 181752,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Falconer's Call",
+      "lines": []
+     },
+     {
+      "tag": "solo piri sharp call",
+      "lines": []
+     },
+     {
+      "tag": "fast janggu pattern",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:20",
+      "lines": []
+     },
+     {
+      "tag": "Release",
+      "lines": []
+     },
+     {
+      "tag": "bass drops in, buk driving pulse",
+      "lines": []
+     },
+     {
+      "tag": "0:20-0:55",
+      "lines": []
+     },
+     {
+      "tag": "Ridge Chase",
+      "lines": []
+     },
+     {
+      "tag": "piri and bass trading riffs",
+      "lines": []
+     },
+     {
+      "tag": "kkwaenggwari offbeat stabs",
+      "lines": []
+     },
+     {
+      "tag": "0:55-1:40",
+      "lines": []
+     },
+     {
+      "tag": "Circling",
+      "lines": []
+     },
+     {
+      "tag": "stripped bass and janggu, tension",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:10",
+      "lines": []
+     },
+     {
+      "tag": "The Dive",
+      "lines": []
+     },
+     {
+      "tag": "hwimori acceleration, full ensemble",
+      "lines": []
+     },
+     {
+      "tag": "piri piercing swoops",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:55",
+      "lines": []
+     },
+     {
+      "tag": "Return to the Glove",
+      "lines": []
+     },
+     {
+      "tag": "deceleration, final buk hit",
+      "lines": []
+     },
+     {
+      "tag": "2:55-3:30",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/한풀이-ii-설한-hanpuri-ii-songs-of-the-cold/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "화톳불 (Winter Bonfire)",
+    "file": "07_winter_bonfire.mp3",
+    "src": "/mnt/external/suno-playlist/input/HANPURI_SEOLHAN/tracks/07_winter_bonfire.mp3",
+    "ms": 183456,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "crackling fire, janggu alone",
+      "lines": []
+     },
+     {
+      "tag": "bass enters",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:20",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:20-0:58",
+      "lines": [
+       "눈 쌓인 마을 한가운데",
+       "장작 쌓아 불을 놓세",
+       "언 손 녹이러 하나둘",
+       "솜바지들 모여드네",
+       "올해 묵은 서러움은",
+       "종이 위에 적어 넣고",
+       "타닥타닥 불길 속에",
+       "훌훌 던져 보내 보자"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "call and response, village chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:30",
+      "lines": [
+       "에헤라 불이야",
+       "한을 사르는 불이야",
+       "에헤라 불이야",
+       "겨울밤이 환하구나"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:30-2:08",
+      "lines": [
+       "빚진 설움 아픈 이별",
+       "못다 한 말 한 줌까지",
+       "연기 되어 하늘 가면",
+       "별이 되어 반짝일까",
+       "할매도 손뼉 치고",
+       "꼬마도 발 구르니",
+       "매운 연기 눈물 나도",
+       "웃음부터 터지는걸"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "call and response, village chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:08-2:40",
+      "lines": [
+       "에헤라 불이야",
+       "한을 사르는 불이야",
+       "에헤라 불이야",
+       "겨울밤이 환하구나"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "bass and janggu breakdown, jajinmori to hwimori",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:10",
+      "lines": [
+       "얼씨구 좋다 지화자 좋다",
+       "불꽃 따라 한판 놀세",
+       "얼씨구 좋다 지화자 좋다"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full ensemble, ecstatic singalong",
+      "lines": []
+     },
+     {
+      "tag": "3:10-3:45",
+      "lines": [
+       "에헤라 불이야",
+       "천 년 한도 다 타거라",
+       "에헤라 불이야",
+       "새 아침이 밝아 오네"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "fire crackle, single janggu hit",
+      "lines": []
+     },
+     {
+      "tag": "3:45-4:00",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/한풀이-ii-설한-hanpuri-ii-songs-of-the-cold/07.mp3"
+   }
+  ],
+  "updated_at": 1794414499,
+  "cover_source": "https://i.ytimg.com/vi/wI2e-NFlXBQ/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1356144,
+  "cover_file": "한풀이-ii-설한-hanpuri-ii-songs-of-the-cold.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/한풀이-ii-설한-hanpuri-ii-songs-of-the-cold.jpg?v=d5d0277e"
+ },
+ {
   "folder": "HANYANG_AVENUE",
   "slug": "한양-애비뉴-hanyang-avenue",
   "title": "한양 애비뉴 (HANYANG AVENUE)",
@@ -29520,6 +31700,1049 @@
   "cover_url": "https://audio.yojosuknam.com/cover/미소-miso.jpg?v=d7c600f6"
  },
  {
+  "folder": "MISS_YOU_AGAIN",
+  "slug": "또-보고-싶어-장르-크로스오버-miss-you-again",
+  "title": "또 보고 싶어 - 장르 크로스오버 (Miss You Again)",
+  "genre": "장르 크로스오버 (보사노바·두왑·트로트·시티팝·탱고·경기민요·가스펠 소울)",
+  "channel": "Miso Beats (miso)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "또 보고 싶어 (보사노바 Ver.)",
+    "file": "01_miss_you_again_bossa_nova.mp3",
+    "src": "/mnt/external/suno-playlist/input/MISS_YOU_AGAIN/tracks/01_miss_you_again_bossa_nova.mp3",
+    "ms": 153096,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Opening Hook",
+      "lines": []
+     },
+     {
+      "tag": "male vocal enters at first beat, nylon guitar and brushes together",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:24",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "soft crooning, guitar comping",
+      "lines": []
+     },
+     {
+      "tag": "0:24-0:48",
+      "lines": [
+       "문 앞에서 손 흔들고",
+       "열 걸음도 못 갔는데",
+       "뒤돌아본 그 골목에",
+       "네가 아직 서 있더라"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "flute counter-melody enters",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:12",
+      "lines": [
+       "버스 타고 세 정거장",
+       "창에 비친 내 얼굴이",
+       "바보처럼 웃고 있어",
+       "폰을 켰다 또 꺼 봐"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "groove softens, Rhodes shimmer",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:32",
+      "lines": [
+       "집에 와서 불 끄고",
+       "눈을 감아 누웠는데",
+       "내일 아침 몇 시랬지",
+       "그때까지 어떻게 참아"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:32-1:56",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "Scat Break",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar solo, wordless male hum",
+      "lines": []
+     },
+     {
+      "tag": "1:56-2:16",
+      "lines": [
+       "pa ra ra ra",
+       "pa ra ra ra ra"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:16-2:42",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해",
+       "벌써 또 보고 싶어"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar last chord, soft flute",
+      "lines": []
+     },
+     {
+      "tag": "2:42-2:52",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/또-보고-싶어-장르-크로스오버-miss-you-again/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "또 보고 싶어 (두왑 Ver.)",
+    "file": "02_miss_you_again_doo_wop.mp3",
+    "src": "/mnt/external/suno-playlist/input/MISS_YOU_AGAIN/tracks/02_miss_you_again_doo_wop.mp3",
+    "ms": 172152,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Opening Hook",
+      "lines": []
+     },
+     {
+      "tag": "lead tenor and backing harmony enter at first beat, piano triplets",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:26",
+      "lines": [
+       "또 보고 싶어",
+       "shoo-bop sha-la-la",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "falsetto lift",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "bass voice bom-bom, finger snaps",
+      "lines": []
+     },
+     {
+      "tag": "0:26-0:52",
+      "lines": [
+       "문 앞에서 손 흔들고",
+       "열 걸음도 못 갔는데",
+       "뒤돌아본 그 골목에",
+       "네가 아직 서 있더라",
+       "ooh-wah ooh-wah"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "backing group answers each line",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:16",
+      "lines": [
+       "버스 타고 세 정거장",
+       "창에 비친 내 얼굴이",
+       "바보처럼 웃고 있어",
+       "폰을 켰다 또 꺼 봐"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "harmony swells, soft",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:36",
+      "lines": [
+       "집에 와서 불 끄고",
+       "눈을 감아 누웠는데",
+       "내일 아침 몇 시랬지",
+       "그때까지 어떻게 참아"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full harmony group",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:00",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "Sax Solo",
+      "lines": []
+     },
+     {
+      "tag": "warm tenor saxophone, shoo-bop backing",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:18",
+      "lines": []
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "lead falsetto peak, group stacked",
+      "lines": []
+     },
+     {
+      "tag": "2:18-2:44",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해",
+       "sha-la-la 또 보고 싶어"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "bass voice last bom, piano final triplet",
+      "lines": []
+     },
+     {
+      "tag": "2:44-2:56",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/또-보고-싶어-장르-크로스오버-miss-you-again/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "또 보고 싶어 (트로트 Ver.)",
+    "file": "03_miss_you_again_trot.mp3",
+    "src": "/mnt/external/suno-playlist/input/MISS_YOU_AGAIN/tracks/03_miss_you_again_trot.mp3",
+    "ms": 189336,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Opening Hook",
+      "lines": []
+     },
+     {
+      "tag": "male tenor enters at first beat, two-beat rhythm and sax together",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:26",
+      "lines": [
+       "아 또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "kkeokki bend",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "saxophone answers between lines",
+      "lines": []
+     },
+     {
+      "tag": "0:26-0:52",
+      "lines": [
+       "문 앞에서 손 흔들고",
+       "열 걸음도 못 갔는데",
+       "돌아보니 그 골목에",
+       "당신 아직 서 있더라"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "strings enter softly",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:16",
+      "lines": [
+       "버스 타고 세 정거장",
+       "창에 비친 내 얼굴이",
+       "바보처럼 웃고 있네",
+       "전화기만 만지작"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "accordion and tremolo guitar",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:36",
+      "lines": [
+       "집에 와서 불 끄고",
+       "눈을 감아 누웠는데",
+       "내일 아침 몇 시랬나",
+       "그때까지 어찌 참아"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:02",
+      "lines": [
+       "아 또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "Saxophone Interlude",
+      "lines": []
+     },
+     {
+      "tag": "alto saxophone solo, weeping melody",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:22",
+      "lines": []
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change half-step up, strings swell",
+      "lines": []
+     },
+     {
+      "tag": "2:22-2:50",
+      "lines": [
+       "아 또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해",
+       "당신 또 보고 싶어"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "sax final phrase, two-beat stops",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:02",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/또-보고-싶어-장르-크로스오버-miss-you-again/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "또 보고 싶어 (시티팝 Ver.)",
+    "file": "04_miss_you_again_city_pop.mp3",
+    "src": "/mnt/external/suno-playlist/input/MISS_YOU_AGAIN/tracks/04_miss_you_again_city_pop.mp3",
+    "ms": 196224,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Opening Hook",
+      "lines": []
+     },
+     {
+      "tag": "male vocal enters at first beat, slap bass and brass stab together",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:24",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해",
+       "miss you again"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "guitar cutting, electric piano bells",
+      "lines": []
+     },
+     {
+      "tag": "0:24-0:48",
+      "lines": [
+       "문 앞에서 손 흔들고",
+       "열 걸음도 못 갔는데",
+       "뒤돌아본 그 골목에",
+       "네가 아직 서 있더라"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "synth pads open",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:12",
+      "lines": [
+       "버스 타고 세 정거장",
+       "창에 비친 내 얼굴이",
+       "바보처럼 웃고 있어",
+       "폰을 켰다 또 꺼 봐"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "chromatic lift, falsetto ad-libs",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:32",
+      "lines": [
+       "집에 와서 불 끄고",
+       "눈을 감아 누웠는데",
+       "내일 아침 몇 시랬지",
+       "그때까지 어떻게 참아"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "layered backing harmonies",
+      "lines": []
+     },
+     {
+      "tag": "1:32-1:56",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해",
+       "miss you again"
+      ]
+     },
+     {
+      "tag": "Guitar Solo",
+      "lines": []
+     },
+     {
+      "tag": "bright clean guitar solo, brass hits",
+      "lines": []
+     },
+     {
+      "tag": "1:56-2:14",
+      "lines": []
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, gated snare, brass",
+      "lines": []
+     },
+     {
+      "tag": "2:14-2:42",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해",
+       "miss you again",
+       "oh miss you again"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "slap bass groove fades, electric piano last bell",
+      "lines": []
+     },
+     {
+      "tag": "2:42-2:54",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/또-보고-싶어-장르-크로스오버-miss-you-again/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "또 보고 싶어 (탱고 Ver.)",
+    "file": "05_miss_you_again_tango.mp3",
+    "src": "/mnt/external/suno-playlist/input/MISS_YOU_AGAIN/tracks/05_miss_you_again_tango.mp3",
+    "ms": 184728,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Opening Hook",
+      "lines": []
+     },
+     {
+      "tag": "baritone enters at first beat, bandoneon staccato and piano marcato together",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:26",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "sudden stop",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "half-spoken, violin chops",
+      "lines": []
+     },
+     {
+      "tag": "0:26-0:52",
+      "lines": [
+       "문 앞에서 손 흔들고",
+       "열 걸음도 못 갔는데",
+       "뒤돌아본 그 골목에",
+       "네가 아직 서 있더라"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "bandoneon sighing legato",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:16",
+      "lines": [
+       "버스 타고 세 정거장",
+       "창에 비친 내 얼굴이",
+       "바보처럼 웃고 있어",
+       "폰을 켰다 또 꺼 봐"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "spoken, dramatic pause",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:36",
+      "lines": [
+       "집에 와서 불 끄고",
+       "눈을 감아 누웠는데",
+       "내일 아침 몇 시랬지",
+       "그때까지 어떻게 참아"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "fervent full voice, violins soar",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:02",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "Bandoneon Solo",
+      "lines": []
+     },
+     {
+      "tag": "bandoneon solo, arrastre bass slides",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:22",
+      "lines": []
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "maximum drama, push-pull rubato",
+      "lines": []
+     },
+     {
+      "tag": "2:22-2:48",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "sudden stop",
+      "lines": [
+       "또 보고 싶어"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "single bandoneon chord, final piano hit",
+      "lines": []
+     },
+     {
+      "tag": "2:48-2:56",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/또-보고-싶어-장르-크로스오버-miss-you-again/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "또 보고 싶어 (민요 Ver.)",
+    "file": "06_miss_you_again_minyo.mp3",
+    "src": "/mnt/external/suno-playlist/input/MISS_YOU_AGAIN/tracks/06_miss_you_again_minyo.mp3",
+    "ms": 131256,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Opening Hook",
+      "lines": []
+     },
+     {
+      "tag": "male minyo voice enters at first beat, janggu and haegeum together",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:26",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해",
+       "[group chorus] 에헤야 데헤야"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "gutgeori lilt, daegeum trills",
+      "lines": []
+     },
+     {
+      "tag": "0:26-0:52",
+      "lines": [
+       "문 앞에서 손 흔들고",
+       "열 걸음도 못 갔는데",
+       "뒤돌아본 그 골목에",
+       "님이 아직 서 있더라",
+       "[chuimsae] 얼씨구"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "gayageum plucked runs",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:16",
+      "lines": [
+       "버스 타고 세 정거장",
+       "창에 비친 내 얼굴이",
+       "바보처럼 웃고 있네",
+       "전화기만 만지작"
+      ]
+     },
+     {
+      "tag": "Refrain",
+      "lines": []
+     },
+     {
+      "tag": "group call-and-response",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:36",
+      "lines": [
+       "집에 와서 불 끄고",
+       "에헤야 데헤야",
+       "내일 아침 몇 시랬나",
+       "그때까지 어찌 참아"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:02",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해",
+       "[group chorus] 에헤야 데헤야"
+      ]
+     },
+     {
+      "tag": "Jajinmori Final Refrain",
+      "lines": []
+     },
+     {
+      "tag": "janggu accelerates, all instruments peak",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:36",
+      "lines": [
+       "또 보고 싶어 또 보고 싶어",
+       "에헤야 데헤야 또 보고 싶어",
+       "웃는 얼굴도 삐진 얼굴도",
+       "또 보고 싶어 어떡해",
+       "[chuimsae] 얼씨구 좋다"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "daegeum long tone, janggu final stroke",
+      "lines": []
+     },
+     {
+      "tag": "2:36-2:48",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/또-보고-싶어-장르-크로스오버-miss-you-again/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "또 보고 싶어 (가스펠 Ver.)",
+    "file": "07_miss_you_again_gospel.mp3",
+    "src": "/mnt/external/suno-playlist/input/MISS_YOU_AGAIN/tracks/07_miss_you_again_gospel.mp3",
+    "ms": 175128,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Opening Hook",
+      "lines": []
+     },
+     {
+      "tag": "male lead enters at first beat, Hammond organ swell and choir together",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:26",
+      "lines": [
+       "또 보고 싶어",
+       "[choir] 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "melismatic run",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "organ and piano, choir hums",
+      "lines": []
+     },
+     {
+      "tag": "0:26-0:50",
+      "lines": [
+       "문 앞에서 손 흔들고",
+       "열 걸음도 못 갔는데",
+       "뒤돌아본 그 골목에",
+       "네가 아직 서 있더라"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "hand claps begin, groove lifts",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:14",
+      "lines": [
+       "버스 타고 세 정거장",
+       "창에 비친 내 얼굴이",
+       "바보처럼 웃고 있어",
+       "폰을 켰다 또 꺼 봐"
+      ]
+     },
+     {
+      "tag": "Call and Response",
+      "lines": []
+     },
+     {
+      "tag": "lead calls, choir answers",
+      "lines": []
+     },
+     {
+      "tag": "1:14-1:36",
+      "lines": [
+       "집에 와서 불 끄고",
+       "[choir] 불 끄고",
+       "눈을 감아 누웠는데",
+       "[choir] 누웠는데",
+       "내일 아침 몇 시랬지",
+       "그때까지 어떻게 참아"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full choir, tambourine",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:00",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해"
+      ]
+     },
+     {
+      "tag": "Vamp",
+      "lines": []
+     },
+     {
+      "tag": "key change up, choir shout",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:24",
+      "lines": [
+       "또 보고 싶어",
+       "[choir] 또 보고 싶어",
+       "벌써 보고 싶어",
+       "[choir] 벌써 보고 싶어",
+       "어떡해 어떡해"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up again, full choir peak",
+      "lines": []
+     },
+     {
+      "tag": "2:24-2:52",
+      "lines": [
+       "또 보고 싶어",
+       "방금 봤는데 또 보고 싶어",
+       "웃는 얼굴도 보고 싶어",
+       "삐진 얼굴도 보고 싶어",
+       "또 보고 싶어 어떡해",
+       "[choir] 또 보고 싶어"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "organ sustain, last hand clap",
+      "lines": []
+     },
+     {
+      "tag": "2:52-3:04",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/또-보고-싶어-장르-크로스오버-miss-you-again/07.mp3"
+   }
+  ],
+  "updated_at": 1794414496,
+  "cover_source": "https://i.ytimg.com/vi/erxxPi4DXfM/maxresdefault.jpg",
+  "cover_match": 0.9,
+  "cover_how": "album",
+  "total_ms": 1201920,
+  "cover_file": "또-보고-싶어-장르-크로스오버-miss-you-again.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/또-보고-싶어-장르-크로스오버-miss-you-again.jpg?v=b2588292"
+ },
+ {
   "folder": "MIXTAPE_DAYS",
   "slug": "그-시절-믹스테이프-that-era-s-mixtape",
   "title": "그 시절 믹스테이프 (That Era's Mixtape)",
@@ -37854,6 +41077,824 @@
   "cover_url": "https://audio.yojosuknam.com/cover/the-old-trades-still-waters-album.jpg?v=a3ccfb2f"
  },
  {
+  "folder": "OPEN_UNTIL_EIGHT",
+  "slug": "open-until-eight-guitar-jazz-for-a-winter-library",
+  "title": "Open Until Eight (Guitar Jazz for a Winter Library)",
+  "genre": "Lofi Jazz Guitar / Café-style Guitar Jazz / Bossa Nova (할로우바디·나일론 기타 리드 통일)",
+  "channel": "Lo-fi & Chill (lofi)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "Green Lamp",
+    "file": "01_green_lamp.mp3",
+    "src": "/mnt/external/suno-playlist/input/OPEN_UNTIL_EIGHT/tracks/01_green_lamp.mp3",
+    "ms": 198672,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar single notes emerging gently",
+      "lines": []
+     },
+     {
+      "tag": "bossa rhythm slowly establishing",
+      "lines": []
+     },
+     {
+      "tag": "upright bass entering softly underneath",
+      "lines": []
+     },
+     {
+      "tag": "vinyl crackle, dusk light fading",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:35",
+      "lines": []
+     },
+     {
+      "tag": "Main Theme",
+      "lines": []
+     },
+     {
+      "tag": "chord melody flowing naturally",
+      "lines": []
+     },
+     {
+      "tag": "bossa groove fully established",
+      "lines": []
+     },
+     {
+      "tag": "bass walking with gentle swing",
+      "lines": []
+     },
+     {
+      "tag": "brushed snare whispering texture",
+      "lines": []
+     },
+     {
+      "tag": "0:35-1:30",
+      "lines": []
+     },
+     {
+      "tag": "Development",
+      "lines": []
+     },
+     {
+      "tag": "guitar voicings richer and fuller",
+      "lines": []
+     },
+     {
+      "tag": "jazz substitutions subtle and warm",
+      "lines": []
+     },
+     {
+      "tag": "shaker pulse barely audible",
+      "lines": []
+     },
+     {
+      "tag": "lamps on, focus settling in",
+      "lines": []
+     },
+     {
+      "tag": "1:30-2:30",
+      "lines": []
+     },
+     {
+      "tag": "Return Theme",
+      "lines": []
+     },
+     {
+      "tag": "original melody returning, simpler",
+      "lines": []
+     },
+     {
+      "tag": "single note phrases breathing",
+      "lines": []
+     },
+     {
+      "tag": "bass softening to half-notes",
+      "lines": []
+     },
+     {
+      "tag": "2:30-3:20",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar to sparse chords only",
+      "lines": []
+     },
+     {
+      "tag": "bass slowing to roots",
+      "lines": []
+     },
+     {
+      "tag": "reverb bloom extending",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:50",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/open-until-eight-guitar-jazz-for-a-winter-library/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "Date Due",
+    "file": "02_date_due.mp3",
+    "src": "/mnt/external/suno-playlist/input/OPEN_UNTIL_EIGHT/tracks/02_date_due.mp3",
+    "ms": 183504,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "brushed snare establishing swing",
+      "lines": []
+     },
+     {
+      "tag": "soft rimshot clicks like a stamp",
+      "lines": []
+     },
+     {
+      "tag": "upright bass walking line entering",
+      "lines": []
+     },
+     {
+      "tag": "archtop guitar comping lightly",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:30",
+      "lines": []
+     },
+     {
+      "tag": "Main Groove",
+      "lines": []
+     },
+     {
+      "tag": "full trio swinging together",
+      "lines": []
+     },
+     {
+      "tag": "archtop chord melody friendly and clear",
+      "lines": []
+     },
+     {
+      "tag": "bass four-to-the-bar",
+      "lines": []
+     },
+     {
+      "tag": "busy but calm desk energy",
+      "lines": []
+     },
+     {
+      "tag": "0:30-1:25",
+      "lines": []
+     },
+     {
+      "tag": "Mid Section",
+      "lines": []
+     },
+     {
+      "tag": "guitar double-stops in eight-bar phrases",
+      "lines": []
+     },
+     {
+      "tag": "rimshot clicks on two and four",
+      "lines": []
+     },
+     {
+      "tag": "bass responding conversationally",
+      "lines": []
+     },
+     {
+      "tag": "1:25-2:20",
+      "lines": []
+     },
+     {
+      "tag": "Bridge - Lighter Touch",
+      "lines": []
+     },
+     {
+      "tag": "drums dropping to brushes only",
+      "lines": []
+     },
+     {
+      "tag": "guitar chord melody softer",
+      "lines": []
+     },
+     {
+      "tag": "bass half-notes",
+      "lines": []
+     },
+     {
+      "tag": "2:20-3:10",
+      "lines": []
+     },
+     {
+      "tag": "Return - Full Groove",
+      "lines": []
+     },
+     {
+      "tag": "main theme back, trio aligned",
+      "lines": []
+     },
+     {
+      "tag": "steady confident pulse",
+      "lines": []
+     },
+     {
+      "tag": "fading out gradually",
+      "lines": []
+     },
+     {
+      "tag": "3:10-3:45",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/open-until-eight-guitar-jazz-for-a-winter-library/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "Card Catalog",
+    "file": "03_card_catalog.mp3",
+    "src": "/mnt/external/suno-playlist/input/OPEN_UNTIL_EIGHT/tracks/03_card_catalog.mp3",
+    "ms": 183264,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "muted archtop single minor chord",
+      "lines": []
+     },
+     {
+      "tag": "faint wooden drawer clicks",
+      "lines": []
+     },
+     {
+      "tag": "tape hiss and vinyl crackle",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:35",
+      "lines": []
+     },
+     {
+      "tag": "Main Theme",
+      "lines": []
+     },
+     {
+      "tag": "thumb-picked chord melody, minor color",
+      "lines": []
+     },
+     {
+      "tag": "bass walking behind the beat",
+      "lines": []
+     },
+     {
+      "tag": "soft boom-bap kick and brushed ghost notes",
+      "lines": []
+     },
+     {
+      "tag": "curious searching mood",
+      "lines": []
+     },
+     {
+      "tag": "0:35-1:30",
+      "lines": []
+     },
+     {
+      "tag": "Section B",
+      "lines": []
+     },
+     {
+      "tag": "guitar phrase asks, bass answers",
+      "lines": []
+     },
+     {
+      "tag": "harmony brightening toward F major",
+      "lines": []
+     },
+     {
+      "tag": "drawer clicks returning softly",
+      "lines": []
+     },
+     {
+      "tag": "1:30-2:25",
+      "lines": []
+     },
+     {
+      "tag": "Return",
+      "lines": []
+     },
+     {
+      "tag": "main theme restated, warmer",
+      "lines": []
+     },
+     {
+      "tag": "found what it was looking for",
+      "lines": []
+     },
+     {
+      "tag": "2:25-3:15",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar alone, last minor ninth chord",
+      "lines": []
+     },
+     {
+      "tag": "bass sustaining low root",
+      "lines": []
+     },
+     {
+      "tag": "crackle fade",
+      "lines": []
+     },
+     {
+      "tag": "3:15-3:50",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/open-until-eight-guitar-jazz-for-a-winter-library/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "The Atlas Table",
+    "file": "04_the_atlas_table.mp3",
+    "src": "/mnt/external/suno-playlist/input/OPEN_UNTIL_EIGHT/tracks/04_the_atlas_table.mp3",
+    "ms": 244056,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Opening - Solo Guitar",
+      "lines": []
+     },
+     {
+      "tag": "solo nylon guitar only",
+      "lines": []
+     },
+     {
+      "tag": "single chord every few seconds",
+      "lines": []
+     },
+     {
+      "tag": "frost on the window, warm reverb",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:50",
+      "lines": []
+     },
+     {
+      "tag": "Theme - Solitary Voice",
+      "lines": []
+     },
+     {
+      "tag": "chord melody unfolding slowly",
+      "lines": []
+     },
+     {
+      "tag": "each phrase answered by silence",
+      "lines": []
+     },
+     {
+      "tag": "daydream of far places",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:45",
+      "lines": []
+     },
+     {
+      "tag": "Bass Appears - Very Soft",
+      "lines": []
+     },
+     {
+      "tag": "upright bass arco single low note",
+      "lines": []
+     },
+     {
+      "tag": "guitar melody continuing above",
+      "lines": []
+     },
+     {
+      "tag": "warmth expanding gently",
+      "lines": []
+     },
+     {
+      "tag": "1:45-2:40",
+      "lines": []
+     },
+     {
+      "tag": "Duo - Patient Dialogue",
+      "lines": []
+     },
+     {
+      "tag": "guitar and bass in slow conversation",
+      "lines": []
+     },
+     {
+      "tag": "harmonic colors shifting warmly",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:25",
+      "lines": []
+     },
+     {
+      "tag": "Outro - Return Solo",
+      "lines": []
+     },
+     {
+      "tag": "bass fading to silence",
+      "lines": []
+     },
+     {
+      "tag": "guitar alone, final sparse chords",
+      "lines": []
+     },
+     {
+      "tag": "long reverb decay",
+      "lines": []
+     },
+     {
+      "tag": "3:25-3:55",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/open-until-eight-guitar-jazz-for-a-winter-library/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "Returns Cart",
+    "file": "05_returns_cart.mp3",
+    "src": "/mnt/external/suno-playlist/input/OPEN_UNTIL_EIGHT/tracks/05_returns_cart.mp3",
+    "ms": 183408,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro - Rhythm Set",
+      "lines": []
+     },
+     {
+      "tag": "brushed snare rolling shuffle",
+      "lines": []
+     },
+     {
+      "tag": "bass walking line entering",
+      "lines": []
+     },
+     {
+      "tag": "archtop comping bright",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:30",
+      "lines": []
+     },
+     {
+      "tag": "Main Groove",
+      "lines": []
+     },
+     {
+      "tag": "trio rolling down the aisles",
+      "lines": []
+     },
+     {
+      "tag": "guitar chord melody cheerful",
+      "lines": []
+     },
+     {
+      "tag": "bass punchy four-to-the-bar",
+      "lines": []
+     },
+     {
+      "tag": "0:30-1:25",
+      "lines": []
+     },
+     {
+      "tag": "Mid Section - Drive",
+      "lines": []
+     },
+     {
+      "tag": "guitar double-stops brighter",
+      "lines": []
+     },
+     {
+      "tag": "hi-hat swing tightening",
+      "lines": []
+     },
+     {
+      "tag": "books sliding back into place",
+      "lines": []
+     },
+     {
+      "tag": "1:25-2:20",
+      "lines": []
+     },
+     {
+      "tag": "Bridge - Lighter Touch",
+      "lines": []
+     },
+     {
+      "tag": "brushes only, guitar softer",
+      "lines": []
+     },
+     {
+      "tag": "bass half-notes",
+      "lines": []
+     },
+     {
+      "tag": "2:20-3:05",
+      "lines": []
+     },
+     {
+      "tag": "Return - Full Groove",
+      "lines": []
+     },
+     {
+      "tag": "full shuffle returning",
+      "lines": []
+     },
+     {
+      "tag": "confident steady pulse",
+      "lines": []
+     },
+     {
+      "tag": "fade out gradually",
+      "lines": []
+     },
+     {
+      "tag": "3:05-3:40",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/open-until-eight-guitar-jazz-for-a-winter-library/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "Fifteen Minutes",
+    "file": "06_fifteen_minutes.mp3",
+    "src": "/mnt/external/suno-playlist/input/OPEN_UNTIL_EIGHT/tracks/06_fifteen_minutes.mp3",
+    "ms": 181992,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar, vinyl crackle",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:52",
+      "lines": [
+       "The speaker clicks above the stacks,",
+       "fifteen minutes, then the dark,",
+       "I'm halfway down a page I love",
+       "and the snow is on the cars."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:28",
+      "lines": [
+       "Fifteen minutes, let me stay,",
+       "one more chapter, then I'll go,",
+       "the green lamp hums a low hello,",
+       "fifteen minutes, nice and slow."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:28-2:02",
+      "lines": [
+       "The cart rolls by, the chairs go in,",
+       "she counts the windows one by one,",
+       "I tuck a ticket in the spine",
+       "so tomorrow knows the line."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:38",
+      "lines": [
+       "Fifteen minutes, let me stay,",
+       "one more chapter, then I'll go,",
+       "the green lamp hums a low hello,",
+       "fifteen minutes, nice and slow."
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar solo, half-time",
+      "lines": []
+     },
+     {
+      "tag": "2:38-2:58",
+      "lines": [
+       "Oh, slow, oh, slow,",
+       "the last few words before I go."
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar alone, crackle fade",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:20",
+      "lines": [
+       "fifteen minutes, nice and slow."
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/open-until-eight-guitar-jazz-for-a-winter-library/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "Book Drop",
+    "file": "07_book_drop.mp3",
+    "src": "/mnt/external/suno-playlist/input/OPEN_UNTIL_EIGHT/tracks/07_book_drop.mp3",
+    "ms": 174840,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Opening - Solo Archtop",
+      "lines": []
+     },
+     {
+      "tag": "solo hollow-body guitar, thumb-picked",
+      "lines": []
+     },
+     {
+      "tag": "one soft felt thud, book in the return slot",
+      "lines": []
+     },
+     {
+      "tag": "lights going off row by row",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:40",
+      "lines": []
+     },
+     {
+      "tag": "Theme",
+      "lines": []
+     },
+     {
+      "tag": "warm chord melody, unhurried",
+      "lines": []
+     },
+     {
+      "tag": "upright bass long root notes entering",
+      "lines": []
+     },
+     {
+      "tag": "contented tiredness",
+      "lines": []
+     },
+     {
+      "tag": "0:40-1:40",
+      "lines": []
+     },
+     {
+      "tag": "Walking Home",
+      "lines": []
+     },
+     {
+      "tag": "guitar and bass gentle slow swing",
+      "lines": []
+     },
+     {
+      "tag": "snowy street outside, quiet steps",
+      "lines": []
+     },
+     {
+      "tag": "harmony settling into Eb",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:40",
+      "lines": []
+     },
+     {
+      "tag": "Dissolving",
+      "lines": []
+     },
+     {
+      "tag": "guitar sparser, more reverb than note",
+      "lines": []
+     },
+     {
+      "tag": "bass single drone",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:20",
+      "lines": []
+     },
+     {
+      "tag": "Final Chord",
+      "lines": []
+     },
+     {
+      "tag": "last archtop chord placed",
+      "lines": []
+     },
+     {
+      "tag": "long sustain into silence",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:50",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/open-until-eight-guitar-jazz-for-a-winter-library/07.mp3"
+   }
+  ],
+  "updated_at": 1794414494,
+  "cover_source": "https://i.ytimg.com/vi/veMk3YzN7Mw/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1349736,
+  "cover_file": "open-until-eight-guitar-jazz-for-a-winter-library.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/open-until-eight-guitar-jazz-for-a-winter-library.jpg?v=244340bd"
+ },
+ {
   "folder": "ORDINARY_ALTARS",
   "slug": "ordinary-altars",
   "title": "Ordinary Altars",
@@ -44605,6 +48646,966 @@
   "total_ms": 1348632,
   "cover_file": "the-seventh-year-still-waters-album.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/the-seventh-year-still-waters-album.jpg?v=e4559ae8"
+ },
+ {
+  "folder": "SEVEN_MADANG_II",
+  "slug": "일곱-마당-2-seven-madang-ii",
+  "title": "일곱 마당 2 (SEVEN MADANG II)",
+  "genre": "정통 판소리 (아니리 없는 창 중심, 독립운동가 헌정 — 《일곱 마당》 후속)",
+  "channel": "굳이 송 (gudi)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "신채호 (Shin Chae-ho)",
+    "file": "01_shin_chae_ho.mp3",
+    "src": "/mnt/external/suno-playlist/input/SEVEN_MADANG_II/tracks/01_shin_chae_ho.mp3",
+    "ms": 188448,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "daegeum long breath, janggu jinyangjo enters slowly",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:30",
+      "lines": []
+     },
+     {
+      "tag": "Pansori Vocal – Madang 1",
+      "lines": []
+     },
+     {
+      "tag": "male sorikkun, slow and unbending",
+      "lines": []
+     },
+     {
+      "tag": "0:30-1:10",
+      "lines": [
+       "세수를 할 적에도",
+       "고개를 숙이지 않아",
+       "소매가 다 젖도록",
+       "꼿꼿이 섰다 하네"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "group calls, sparse",
+      "lines": []
+     },
+     {
+      "tag": "1:10-1:20",
+      "lines": [
+       "얼쑤",
+       "그렇지"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 2",
+      "lines": []
+     },
+     {
+      "tag": "wide pitch bend on the long notes",
+      "lines": []
+     },
+     {
+      "tag": "1:20-2:00",
+      "lines": [
+       "붓 한 자루 신문에 들고",
+       "빼앗긴 날을 적었고",
+       "바다 건너 떠난 뒤엔",
+       "옛 역사를 다시 썼네"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "gayageum tremolo",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:10",
+      "lines": [
+       "좋다",
+       "어이"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 3",
+      "lines": []
+     },
+     {
+      "tag": "emotional peak, sigimsae heavy",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:52",
+      "lines": [
+       "선언문을 써 내려가니",
+       "한 줄 한 줄이 불이로다",
+       "민중이 곧 길이라고",
+       "그 글 속에 새겼구나"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Closing",
+      "lines": []
+     },
+     {
+      "tag": "voice softens, daegeum answers each line",
+      "lines": []
+     },
+     {
+      "tag": "2:52-3:30",
+      "lines": [
+       "바다 끝 차가운 방에서",
+       "마지막 겨울 났더라",
+       "숙이지 않은 그 고개",
+       "그 이름 신채호라"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "daegeum final long breath, janggu resolves",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:50",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/일곱-마당-2-seven-madang-ii/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "이봉창 (Yi Bong-chang)",
+    "file": "02_yi_bong_chang.mp3",
+    "src": "/mnt/external/suno-playlist/input/SEVEN_MADANG_II/tracks/02_yi_bong_chang.mp3",
+    "ms": 147552,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "haegeum bright bent phrase, janggu jungmori",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:24",
+      "lines": []
+     },
+     {
+      "tag": "Pansori Vocal – Madang 1",
+      "lines": []
+     },
+     {
+      "tag": "male sorikkun, bright and easy",
+      "lines": []
+     },
+     {
+      "tag": "0:24-1:02",
+      "lines": [
+       "일본 말을 더 잘하여",
+       "처음에는 의심을 샀지",
+       "웃음 많던 그 사내가",
+       "속엣말은 따로 두었네"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "1:02-1:12",
+      "lines": [
+       "얼쑤",
+       "좋다"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 2",
+      "lines": []
+     },
+     {
+      "tag": "tempo begins to push",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:50",
+      "lines": [
+       "태극기를 등에 두고",
+       "선서문을 가슴에 달고",
+       "사진 한 장 찍던 날에",
+       "그 얼굴이 웃고 있었네"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "janggu accelerates into jajinmori",
+      "lines": []
+     },
+     {
+      "tag": "1:50-2:00",
+      "lines": [
+       "어이",
+       "그렇지"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 3",
+      "lines": []
+     },
+     {
+      "tag": "fast jajinmori, high register",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:40",
+      "lines": [
+       "새해 여드레 되던 날",
+       "도쿄 거리 한복판에서",
+       "뜻한 대로 못 되었어도",
+       "그 소리 바다 건넜구나"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Closing",
+      "lines": []
+     },
+     {
+      "tag": "tempo holds, wide pitch bend",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:22",
+      "lines": [
+       "서른둘에 멈춘 걸음",
+       "그 봄 상하이 공원에서",
+       "다음 사람이 받아 들고",
+       "끝까지 걸어 나갔소"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "haegeum long bend, janggu final strike",
+      "lines": []
+     },
+     {
+      "tag": "3:22-3:42",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/일곱-마당-2-seven-madang-ii/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "방정환 (Bang Jeong-hwan)",
+    "file": "03_bang_jeong_hwan.mp3",
+    "src": "/mnt/external/suno-playlist/input/SEVEN_MADANG_II/tracks/03_bang_jeong_hwan.mp3",
+    "ms": 105768,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "gayageum playful plucked run, janggu jungjungmori",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:26",
+      "lines": []
+     },
+     {
+      "tag": "Pansori Vocal – Madang 1",
+      "lines": []
+     },
+     {
+      "tag": "female sorikkun, warm storyteller voice",
+      "lines": []
+     },
+     {
+      "tag": "0:26-1:06",
+      "lines": [
+       "독립신문 몰래 찍다",
+       "붙들려 갔던 그 청년",
+       "풀려나서 고른 일이",
+       "아이들 이야기였지"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:16",
+      "lines": [
+       "어이",
+       "얼쑤"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 2",
+      "lines": []
+     },
+     {
+      "tag": "gayageum answers each phrase",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:56",
+      "lines": [
+       "이놈 저놈 하던 아이를",
+       "어린이라 높여 불렀네",
+       "오월 첫날 하루를 떼어",
+       "아이들 날로 열었구나"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "1:56-2:06",
+      "lines": [
+       "그렇지",
+       "좋다"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 3",
+      "lines": []
+     },
+     {
+      "tag": "voice rises, wide bends",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:48",
+      "lines": [
+       "내려다보지 마시고",
+       "쳐다보아 주시오",
+       "그 한 줄을 써서 들고",
+       "어른들께 부탁했대"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Closing",
+      "lines": []
+     },
+     {
+      "tag": "voice lowers, gayageum sparse",
+      "lines": []
+     },
+     {
+      "tag": "2:48-3:28",
+      "lines": [
+       "짧은 생을 다 쓰고도",
+       "이야기는 남았더라",
+       "해마다 오월이 오면",
+       "그 이름 방정환이요"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "gayageum bright final run, long decay",
+      "lines": []
+     },
+     {
+      "tag": "3:28-3:48",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/일곱-마당-2-seven-madang-ii/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "이육사 (Yi Yuk-sa)",
+    "file": "04_yi_yuk_sa.mp3",
+    "src": "/mnt/external/suno-playlist/input/SEVEN_MADANG_II/tracks/04_yi_yuk_sa.mp3",
+    "ms": 157200,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "janggu rolling strokes bursting into hwimori",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:20",
+      "lines": []
+     },
+     {
+      "tag": "Pansori Vocal – Madang 1",
+      "lines": []
+     },
+     {
+      "tag": "male sorikkun, rapid syllables",
+      "lines": []
+     },
+     {
+      "tag": "0:20-0:56",
+      "lines": [
+       "감옥에서 받은 번호",
+       "이백육십사 그 숫자",
+       "버리지도 아니하고",
+       "제 이름으로 삼았구나"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "loud calls",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:06",
+      "lines": [
+       "얼쑤",
+       "좋다"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 2",
+      "lines": []
+     },
+     {
+      "tag": "fastest passage, high register",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:46",
+      "lines": [
+       "붓을 들면 시가 되고",
+       "길에 서면 싸움이라",
+       "붙들리고 또 풀려나도",
+       "걸음 한 번 안 멈췄지"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "janggu solo break",
+      "lines": []
+     },
+     {
+      "tag": "1:46-1:58",
+      "lines": [
+       "그렇지",
+       "어이"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 3",
+      "lines": []
+     },
+     {
+      "tag": "peak volume, group chuimsae underneath",
+      "lines": []
+     },
+     {
+      "tag": "1:58-2:38",
+      "lines": [
+       "청포도 익는 칠월에",
+       "오실 손님 기다렸네",
+       "매운 계절 채찍 아래",
+       "무지개를 보았더라"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Closing",
+      "lines": []
+     },
+     {
+      "tag": "tempo holds, long final bends",
+      "lines": []
+     },
+     {
+      "tag": "2:38-3:16",
+      "lines": [
+       "베이징 차디찬 방에",
+       "마흔을 못 채우고 누워",
+       "광야에 뿌린 노래는",
+       "해방 뒤에 피었다네"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "janggu hwimori sprint, sudden stop",
+      "lines": []
+     },
+     {
+      "tag": "3:16-3:34",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/일곱-마당-2-seven-madang-ii/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "김마리아 (Kim Maria)",
+    "file": "05_kim_maria.mp3",
+    "src": "/mnt/external/suno-playlist/input/SEVEN_MADANG_II/tracks/05_kim_maria.mp3",
+    "ms": 138840,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "gayageum bright ostinato, janggu semachi triple",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:22",
+      "lines": []
+     },
+     {
+      "tag": "Pansori Vocal – Madang 1",
+      "lines": []
+     },
+     {
+      "tag": "young female sorikkun, clear and high",
+      "lines": []
+     },
+     {
+      "tag": "0:22-1:02",
+      "lines": [
+       "바다 건너 공부하던",
+       "겨울 도쿄 회관에서",
+       "선언문을 함께 읽고",
+       "그 종이를 품었구나"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "large group, crowd-like",
+      "lines": []
+     },
+     {
+      "tag": "1:02-1:14",
+      "lines": [
+       "얼쑤",
+       "좋다",
+       "그렇지"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 2",
+      "lines": []
+     },
+     {
+      "tag": "tempo lifts into jajinmori",
+      "lines": []
+     },
+     {
+      "tag": "1:14-1:54",
+      "lines": [
+       "허리띠에 깊이 감춰",
+       "겨울 바다 건너왔네",
+       "이 고을로 저 고을로",
+       "여학생을 불러 모아"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "loud crowd calls",
+      "lines": []
+     },
+     {
+      "tag": "1:54-2:06",
+      "lines": [
+       "어이",
+       "얼쑤"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 3",
+      "lines": []
+     },
+     {
+      "tag": "voice drops, sparse accompaniment",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:46",
+      "lines": [
+       "모진 매를 맞고서도",
+       "뜻 하나는 꺾지 않고",
+       "몸에 남은 그 상처를",
+       "평생토록 안고 갔네"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Closing",
+      "lines": []
+     },
+     {
+      "tag": "full ensemble, group answers",
+      "lines": []
+     },
+     {
+      "tag": "2:46-3:26",
+      "lines": [
+       "광복을 한 해 남짓 두고",
+       "그 걸음이 멈추었으나",
+       "못다 본 그 봄날은",
+       "우리가 대신 맞으리라"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "gayageum resolves, group chuimsae fades",
+      "lines": []
+     },
+     {
+      "tag": "3:26-3:46",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/일곱-마당-2-seven-madang-ii/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "한용운 (Han Yong-un)",
+    "file": "06_han_yong_un.mp3",
+    "src": "/mnt/external/suno-playlist/input/SEVEN_MADANG_II/tracks/06_han_yong_un.mp3",
+    "ms": 187464,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "daegeum long line, haegeum answers, janggu jungmori",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:26",
+      "lines": []
+     },
+     {
+      "tag": "Pansori Vocal – Madang 1",
+      "lines": []
+     },
+     {
+      "tag": "male sorikkun, calm and deep",
+      "lines": []
+     },
+     {
+      "tag": "0:26-1:06",
+      "lines": [
+       "산에 들어 머리 깎고",
+       "경을 읽던 그 스님이",
+       "서른셋 이름 가운데",
+       "한 자리를 맡았구나"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "soft measured calls",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:16",
+      "lines": [
+       "그렇지",
+       "어이"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 2",
+      "lines": []
+     },
+     {
+      "tag": "haegeum answers each line",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:56",
+      "lines": [
+       "갇힌 방에 붓을 들어",
+       "독립의 이치를 적고",
+       "묻는 말에 답을 해도",
+       "굽히는 말은 없었네"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "1:56-2:06",
+      "lines": [
+       "얼쑤",
+       "좋다"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 3",
+      "lines": []
+     },
+     {
+      "tag": "voice rises gently",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:46",
+      "lines": [
+       "님은 갔다 하였어도",
+       "보내지는 않았노라",
+       "그 님을 나라로 읽는",
+       "사람이 많았더라"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Closing",
+      "lines": []
+     },
+     {
+      "tag": "softest passage, daegeum sustains",
+      "lines": []
+     },
+     {
+      "tag": "2:46-3:26",
+      "lines": [
+       "성북동 언덕 작은 집",
+       "관청 쪽이 보기 싫어",
+       "북쪽으로 앉혔다지",
+       "그 방에서 눈을 감고"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "daegeum long bent note fading, janggu resolves",
+      "lines": []
+     },
+     {
+      "tag": "3:26-3:46",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/일곱-마당-2-seven-madang-ii/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "윤동주 (Yun Dong-ju)",
+    "file": "07_yun_dong_ju.mp3",
+    "src": "/mnt/external/suno-playlist/input/SEVEN_MADANG_II/tracks/07_yun_dong_ju.mp3",
+    "ms": 215760,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "daegeum alone, free time, janggu enters jinyangjo",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:30",
+      "lines": []
+     },
+     {
+      "tag": "Pansori Vocal – Madang 1",
+      "lines": []
+     },
+     {
+      "tag": "young male sorikkun, low and gentle",
+      "lines": []
+     },
+     {
+      "tag": "0:30-1:10",
+      "lines": [
+       "시를 묶어 책을 내려",
+       "일흔일곱 부를 꿈꿨네",
+       "끝내 찍지 못한 시집",
+       "손으로 세 벌 베꼈더라"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "sparse, low",
+      "lines": []
+     },
+     {
+      "tag": "1:10-1:20",
+      "lines": [
+       "어이",
+       "그렇지"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 2",
+      "lines": []
+     },
+     {
+      "tag": "jungmori, tempo begins to move",
+      "lines": []
+     },
+     {
+      "tag": "1:20-2:00",
+      "lines": [
+       "그중 한 벌 맡은 벗이",
+       "고향 집 마루 밑에 두니",
+       "사람은 오지 못해도",
+       "시는 살아 돌아왔소"
+      ]
+     },
+     {
+      "tag": "Chuimsae",
+      "lines": []
+     },
+     {
+      "tag": "janggu accelerates",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:10",
+      "lines": [
+       "얼쑤",
+       "좋다"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Madang 3",
+      "lines": []
+     },
+     {
+      "tag": "hwimori, high register, all instruments unison",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:52",
+      "lines": [
+       "부끄럼 하나 없기를",
+       "하늘 보며 빌던 이가",
+       "광복까지 여섯 달을",
+       "끝내 넘지 못하였네"
+      ]
+     },
+     {
+      "tag": "Pansori Vocal – Closing",
+      "lines": []
+     },
+     {
+      "tag": "peak then sudden softening, pyeongjo",
+      "lines": []
+     },
+     {
+      "tag": "2:52-3:34",
+      "lines": [
+       "일곱 마당 다시 불러",
+       "이름을 세어 보리라",
+       "신채호 이봉창 방정환",
+       "이육사 김마리아 한용운"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "all four instruments unison, then daegeum alone, final strike",
+      "lines": []
+     },
+     {
+      "tag": "3:34-3:56",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/일곱-마당-2-seven-madang-ii/07.mp3"
+   }
+  ],
+  "updated_at": 1794414496,
+  "cover_source": "https://i.ytimg.com/vi/0jlCKXR44L8/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1141032,
+  "cover_file": "일곱-마당-2-seven-madang-ii.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/일곱-마당-2-seven-madang-ii.jpg?v=67fc5bc6"
  },
  {
   "folder": "SIESTA_HOUR",
@@ -53835,6 +58836,1165 @@
   "total_ms": 1385088,
   "cover_file": "thursday-night-live.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/thursday-night-live.jpg?v=1ca8c155"
+ },
+ {
+  "folder": "TWO_NOTCHES_WARMER",
+  "slug": "두-칸-따뜻한-겨울-two-notches-warmer",
+  "title": "두 칸 따뜻한 겨울 (Two Notches Warmer)",
+  "genre": "90~00s 한국 겨울 발라드 (피아노·스트링 발라드·피아노밴드 발라드·남녀 듀엣, 80s 발라드 Lo-fi 2곡, 한겨울~설날)",
+  "channel": "쉬어가는 감성 음악 (gamseong)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "보일러 눈금 두 칸",
+    "file": "01_two_notches_on_the_boiler.mp3",
+    "src": "/mnt/external/suno-playlist/input/TWO_NOTCHES_WARMER/tracks/01_two_notches_on_the_boiler.mp3",
+    "ms": 233640,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano, soft bell tone",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:50",
+      "lines": [
+       "영하 십오 도래 엄마",
+       "뉴스 보고 전화했지",
+       "보일러는 틀었냐니",
+       "틀었지 걱정 말라고",
+       "수화기 너머 목소리",
+       "조금 떨린 것 같은데"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:04",
+      "lines": [
+       "괜찮다는 그 말이",
+       "제일 춥게 들려"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "strings enter",
+      "lines": []
+     },
+     {
+      "tag": "1:04-1:36",
+      "lines": [
+       "보일러 눈금 두 칸만",
+       "올려요 엄마 오늘은",
+       "아끼는 건 내가 할게",
+       "엄마는 따뜻하게",
+       "아랫목 그 온기만큼",
+       "나도 데워 줬잖아"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:06",
+      "lines": [
+       "설 전날 문을 열자",
+       "훅 끼치는 더운 바람",
+       "엄마 손은 찬데",
+       "방바닥만 뜨겁더라",
+       "몰래 본 보일러 눈금",
+       "나 온다고 두 칸이네"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:20",
+      "lines": [
+       "내가 가고 나면",
+       "다시 한 칸이겠지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:20-2:52",
+      "lines": [
+       "보일러 눈금 두 칸만",
+       "올려요 엄마 오늘은",
+       "아끼는 건 내가 할게",
+       "엄마는 따뜻하게",
+       "아랫목 그 온기만큼",
+       "나도 데워 줬잖아"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "strings swell, piano builds",
+      "lines": []
+     },
+     {
+      "tag": "2:52-3:16",
+      "lines": [
+       "현관에서 신발 신다",
+       "몰래 다시 올려 둬",
+       "엄마는 또 내리겠지",
+       "그래도 한 번만 더"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up a semitone, backing harmony",
+      "lines": []
+     },
+     {
+      "tag": "3:16-3:50",
+      "lines": [
+       "보일러 눈금 두 칸만",
+       "올려요 엄마 올겨울은",
+       "아끼는 건 내가 할게",
+       "엄마는 따뜻하게"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano, a last bell-tone note",
+      "lines": []
+     },
+     {
+      "tag": "3:50-4:04",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/두-칸-따뜻한-겨울-two-notches-warmer/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "넉가래 두 자루",
+    "file": "02_two_snow_shovels.mp3",
+    "src": "/mnt/external/suno-playlist/input/TWO_NOTCHES_WARMER/tracks/02_two_snow_shovels.mp3",
+    "ms": 257616,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "upright piano alone, tape hiss",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:22",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male baritone, plain and low",
+      "lines": []
+     },
+     {
+      "tag": "0:22-0:54",
+      "lines": [
+       "밤새 무릎까지 쌓였네",
+       "설 쇠러 온 첫 아침",
+       "아버지는 벌써 마당",
+       "넉가래 두 자루 세워 놓고",
+       "하나는 내 거라며",
+       "말없이 턱으로 가리켜"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "0:54-1:26",
+      "lines": [
+       "예전엔 내가 작은 거",
+       "아버지가 큰 거였지",
+       "올해는 아버지 손에",
+       "작은 자루가 들려 있어",
+       "언제 바꿔 쥐셨나",
+       "나는 묻지 못하고"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "strings enter, bass long notes",
+      "lines": []
+     },
+     {
+      "tag": "1:26-1:44",
+      "lines": [
+       "밀고 나간 자리마다",
+       "검은 흙이 나와"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "strings full, clarinet counter melody",
+      "lines": []
+     },
+     {
+      "tag": "1:44-2:18",
+      "lines": [
+       "넉가래 두 자루로",
+       "골목 끝까지 밀어",
+       "옆집 할머니 대문",
+       "거기까지가 우리 몫",
+       "숨이 하얗게 나와도",
+       "멈추지 않는 걸음"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "2:18-2:48",
+      "lines": [
+       "할머니가 창을 열고",
+       "커피 두 잔 내미시네",
+       "설탕 많이 탄 그 맛",
+       "아버지 웃는 걸 봤어",
+       "허리를 펴는 사이",
+       "눈이 또 내리더라"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "drums enter softly, piano fuller",
+      "lines": []
+     },
+     {
+      "tag": "2:48-3:16",
+      "lines": [
+       "효도라는 게 별거냐",
+       "무거운 쪽을 먼저 드는 거",
+       "내년엔 말하지 않고",
+       "큰 자루를 내가 들게요"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "backing chorus enters, key lifts to major",
+      "lines": []
+     },
+     {
+      "tag": "3:16-3:50",
+      "lines": [
+       "넉가래 두 자루로",
+       "골목 끝까지 밀어",
+       "옆집 할머니 대문",
+       "거기까지가 우리 몫"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "clarinet fades, piano last chord",
+      "lines": []
+     },
+     {
+      "tag": "3:50-4:04",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/두-칸-따뜻한-겨울-two-notches-warmer/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "새 돈 열 장",
+    "file": "03_ten_new_bills.mp3",
+    "src": "/mnt/external/suno-playlist/input/TWO_NOTCHES_WARMER/tracks/03_ten_new_bills.mp3",
+    "ms": 206784,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "piano and celesta",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:50",
+      "lines": [
+       "설 일주일 앞둔 은행",
+       "할머니는 맨 앞줄",
+       "지팡이를 무릎에 두고",
+       "번호 불릴 때까지",
+       "새 돈으로 열 장만",
+       "꼭 그렇게 말씀하셨대"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:04",
+      "lines": [
+       "접힌 자국 하나 없는",
+       "빳빳한 종이 냄새"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "strings rise",
+      "lines": []
+     },
+     {
+      "tag": "1:04-1:36",
+      "lines": [
+       "새 돈 열 장 봉투마다",
+       "삐뚤빼뚤 내 이름",
+       "세배하면 꺼내 주던",
+       "할머니 손 그 온도",
+       "나는 돈보다 그 봉투가",
+       "더 좋았던 것 같아"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:06",
+      "lines": [
+       "대학 가던 그해에도",
+       "봉투는 그대로였지",
+       "천 원짜리 시절부터",
+       "만 원짜리 될 때까지",
+       "액수는 바뀌었어도",
+       "글씨만은 그 모양"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:20",
+      "lines": [
+       "올해는 내가 줄 차례",
+       "은행 줄에 서 봐"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:20-2:52",
+      "lines": [
+       "새 돈 열 장 봉투마다",
+       "삐뚤빼뚤 내 이름",
+       "세배하면 꺼내 주던",
+       "할머니 손 그 온도",
+       "나는 돈보다 그 봉투가",
+       "더 좋았던 것 같아"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "strings and piano building",
+      "lines": []
+     },
+     {
+      "tag": "2:52-3:16",
+      "lines": [
+       "서랍 속 고무줄 묶음",
+       "버리지 못한 봉투들",
+       "한 장씩 펴 볼 때마다",
+       "할머니 냄새가 나"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up a semitone, celesta returns, backing chorus",
+      "lines": []
+     },
+     {
+      "tag": "3:16-3:50",
+      "lines": [
+       "새 돈 열 장 봉투마다",
+       "이번엔 내 글씨로",
+       "삐뚤빼뚤 써 내려가",
+       "할머니처럼 웃으며"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "piano alone",
+      "lines": []
+     },
+     {
+      "tag": "3:50-4:02",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/두-칸-따뜻한-겨울-two-notches-warmer/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "동그랑땡 백 개",
+    "file": "04_a_hundred_meat_patties.mp3",
+    "src": "/mnt/external/suno-playlist/input/TWO_NOTCHES_WARMER/tracks/04_a_hundred_meat_patties.mp3",
+    "ms": 197592,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "electric piano arpeggio, guitar motif",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:44",
+      "lines": [
+       "설 전날 거실 바닥",
+       "신문지 넓게 깔고",
+       "엄마는 반죽 한 대야",
+       "오빠는 계란 물 담당",
+       "나는 동그랗게 빚어",
+       "백 개는 해야 된대"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male",
+      "lines": []
+     },
+     {
+      "tag": "0:44-1:12",
+      "lines": [
+       "몰래 하나 집어 먹다",
+       "엄마 눈에 딱 걸려",
+       "뜨거워서 후후 불며",
+       "동생한테도 하나",
+       "기름 냄새 배어 가는",
+       "우리 집 겨울 오후"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, glockenspiel",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:44",
+      "lines": [
+       "동그랑땡 백 개 굽는 밤",
+       "지글지글 웃음소리",
+       "모양은 다 제각각",
+       "그래도 다 우리 거",
+       "내년에도 여기 모여",
+       "또 백 개 굽자 우리"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "male and female alternate lines",
+      "lines": []
+     },
+     {
+      "tag": "1:44-2:14",
+      "lines": [
+       "이젠 오빠 딸이",
+       "계란 물을 맡고",
+       "내 아들은 몰래 먹다",
+       "엄마한테 또 걸려",
+       "삼십 년 전 그 장면이",
+       "그대로 돌아왔네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:14-2:46",
+      "lines": [
+       "동그랑땡 백 개 굽는 밤",
+       "지글지글 웃음소리",
+       "모양은 다 제각각",
+       "그래도 다 우리 거",
+       "내년에도 여기 모여",
+       "또 백 개 굽자 우리"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "drums drop, electric piano and voices",
+      "lines": []
+     },
+     {
+      "tag": "2:46-3:10",
+      "lines": [
+       "엄마 손은 느려졌어도",
+       "간은 여전히 엄마 몫",
+       "싱겁다 짜다 하면서",
+       "결국 다 엄마 맛"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "family backing vocals, full band",
+      "lines": []
+     },
+     {
+      "tag": "3:10-3:44",
+      "lines": [
+       "동그랑땡 백 개 굽는 밤",
+       "지글지글 웃음소리",
+       "모양은 다 제각각",
+       "그래도 다 우리 거",
+       "내년에도 여기 모여",
+       "또 백 개 굽자 우리"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar motif fades",
+      "lines": []
+     },
+     {
+      "tag": "3:44-3:58",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/두-칸-따뜻한-겨울-two-notches-warmer/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "문고리에 건 봉지",
+    "file": "05_bag_on_the_door_handle.mp3",
+    "src": "/mnt/external/suno-playlist/input/TWO_NOTCHES_WARMER/tracks/05_bag_on_the_door_handle.mp3",
+    "ms": 217200,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "piano and acoustic guitar",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:48",
+      "lines": [
+       "설에도 출근이라",
+       "고향엔 못 간다 했지",
+       "야간 마치고 오는 길",
+       "복도 끝 우리 집 문",
+       "손잡이에 걸린 봉지",
+       "누가 두고 간 걸까"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:02",
+      "lines": [
+       "식혜 한 병 떡 한 줄",
+       "쪽지엔 삼공이호"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "strings enter",
+      "lines": []
+     },
+     {
+      "tag": "1:02-1:34",
+      "lines": [
+       "문고리에 건 봉지",
+       "아직 남은 온기",
+       "얼굴도 잘 모르는데",
+       "날 기억해 준 사람",
+       "혼자인 줄 알았던",
+       "내 설날이 데워져"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:34-2:04",
+      "lines": [
+       "다음 날 퇴근길에",
+       "핫팩 열 개를 샀어",
+       "할머니 문 손잡이에",
+       "살며시 걸어 두고",
+       "쪽지엔 꾹꾹 눌러",
+       "고마워요 삼공일호"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:04-2:18",
+      "lines": [
+       "그날부터 우리 문은",
+       "작은 우체통이 돼"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:18-2:50",
+      "lines": [
+       "문고리에 건 봉지",
+       "아직 남은 온기",
+       "얼굴도 잘 모르는데",
+       "날 기억해 준 사람",
+       "혼자인 줄 알았던",
+       "내 설날이 데워져"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "guitar and strings, building",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:14",
+      "lines": [
+       "닫힌 문 두 개 사이",
+       "겨우 다섯 걸음",
+       "그 거리를 건너온 게",
+       "봉지 하나였네"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up a semitone, backing harmony",
+      "lines": []
+     },
+     {
+      "tag": "3:14-3:48",
+      "lines": [
+       "문고리에 건 봉지",
+       "올해 설은 따뜻해",
+       "얼굴 보고 말할게요",
+       "복 많이 받으시라고"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "piano alone, guitar harmonic",
+      "lines": []
+     },
+     {
+      "tag": "3:48-4:00",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/두-칸-따뜻한-겨울-two-notches-warmer/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "열한 명의 가족사진",
+    "file": "06_family_photo_of_eleven.mp3",
+    "src": "/mnt/external/suno-playlist/input/TWO_NOTCHES_WARMER/tracks/06_family_photo_of_eleven.mp3",
+    "ms": 203736,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "piano, clean guitar arpeggio",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:48",
+      "lines": [
+       "세배 끝난 설날 오후",
+       "거실 벽 앞에 모여",
+       "삼각대 세운 큰형이",
+       "십 초 맞추고 뛰어와",
+       "앞줄은 앉고 뒷줄은",
+       "까치발을 드는 우리"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:02",
+      "lines": [
+       "해마다 같은 자리",
+       "해마다 같은 포즈"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "band and strings swell",
+      "lines": []
+     },
+     {
+      "tag": "1:02-1:34",
+      "lines": [
+       "열한 명의 가족사진",
+       "하나 둘 셋 김치",
+       "누가 눈을 감았어도",
+       "다시 찍진 않아",
+       "그해 그 얼굴 그대로",
+       "벽에 걸어 둘 거야"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:34-2:04",
+      "lines": [
+       "올해는 할아버지 자리",
+       "할머니 무릎 위에",
+       "웃고 있는 액자 하나",
+       "조심스레 안겨 드려",
+       "그 옆엔 작은누나가",
+       "안고 온 첫 아기"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:04-2:18",
+      "lines": [
+       "한 사람 떠난 자리",
+       "한 사람 와 앉았네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:18-2:50",
+      "lines": [
+       "열한 명의 가족사진",
+       "하나 둘 셋 김치",
+       "누가 눈을 감았어도",
+       "다시 찍진 않아",
+       "그해 그 얼굴 그대로",
+       "벽에 걸어 둘 거야"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "drums drop, piano and voice, then build",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:14",
+      "lines": [
+       "세어 보면 여전히",
+       "열한 명이 웃고 있어",
+       "빈자리는 없는 거래",
+       "서로 채워 앉으니까"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up a semitone, family singing together",
+      "lines": []
+     },
+     {
+      "tag": "3:14-3:48",
+      "lines": [
+       "열한 명의 가족사진",
+       "하나 둘 셋 김치",
+       "내년에도 이 벽 앞에",
+       "다 같이 모여",
+       "열한 명 그대로"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "piano, guitar fades",
+      "lines": []
+     },
+     {
+      "tag": "3:48-4:02",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/두-칸-따뜻한-겨울-two-notches-warmer/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "신문지에 싼 참기름",
+    "file": "07_sesame_oil_in_newspaper.mp3",
+    "src": "/mnt/external/suno-playlist/input/TWO_NOTCHES_WARMER/tracks/07_sesame_oil_in_newspaper.mp3",
+    "ms": 249960,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "piano, solo oboe phrase",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:48",
+      "lines": [
+       "설 지나고 가는 아침",
+       "새벽부터 부엌에서",
+       "참기름 병 하나를",
+       "신문지로 싸고 또 싸",
+       "흘릴까 봐 고무줄로",
+       "세 번을 꽁꽁 묶어"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:18",
+      "lines": [
+       "트렁크에 실을 때도",
+       "몇 번이나 일러 주던",
+       "세워 둬라 눕히지 마라",
+       "그 말이 귀에 남아",
+       "집에 와 풀어 보니",
+       "신문지가 여섯 겹"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, strings swell",
+      "lines": []
+     },
+     {
+      "tag": "1:18-1:52",
+      "lines": [
+       "신문지에 싼 참기름",
+       "고소한 엄마 냄새",
+       "한 숟갈 넣을 때마다",
+       "그 부엌이 생각나",
+       "아껴 먹지 말고",
+       "다 먹으면 또 와"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "male and female alternate lines",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:22",
+      "lines": [
+       "들기름은 왜 없냐니",
+       "그건 봄에 짜 준대",
+       "뭘 그렇게 많이 싸요",
+       "싸 주는 게 낙이란다",
+       "웃으며 손 흔들다",
+       "돌아서서 훔치는 눈"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:22-2:56",
+      "lines": [
+       "신문지에 싼 참기름",
+       "고소한 엄마 냄새",
+       "한 숟갈 넣을 때마다",
+       "그 부엌이 생각나",
+       "아껴 먹지 말고",
+       "다 먹으면 또 와"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "piano and strings build, call and answer",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:20",
+      "lines": []
+     },
+     {
+      "tag": "female",
+      "lines": [
+       "도착하면 전화해라"
+      ]
+     },
+     {
+      "tag": "male",
+      "lines": [
+       "응 금방 할게"
+      ]
+     },
+     {
+      "tag": "female",
+      "lines": [
+       "기름병은 세워 뒀니"
+      ]
+     },
+     {
+      "tag": "male",
+      "lines": [
+       "세워 뒀어 엄마"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up a semitone, full duet",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:54",
+      "lines": [
+       "신문지에 싼 참기름",
+       "고소한 엄마 냄새",
+       "한 병을 다 비우면",
+       "그때 또 갈게요",
+       "설보다 먼저 갈게요"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "piano alone, oboe fades",
+      "lines": []
+     },
+     {
+      "tag": "3:54-4:06",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/두-칸-따뜻한-겨울-two-notches-warmer/07.mp3"
+   }
+  ],
+  "updated_at": 1794414499,
+  "cover_source": "https://i.ytimg.com/vi/ugrOSyM0Rgs/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1566528,
+  "cover_file": "두-칸-따뜻한-겨울-two-notches-warmer.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/두-칸-따뜻한-겨울-two-notches-warmer.jpg?v=9421baa6"
  },
  {
   "folder": "UTPEUDA",

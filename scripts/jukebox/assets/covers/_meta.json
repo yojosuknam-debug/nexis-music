@@ -887,5 +887,41 @@
   "src": "/mnt/external/suno-playlist/output/겨울_리조트_(Winter_Resort)_project/thumbnail.png",
   "project": "겨울_리조트_(Winter_Resort)_project",
   "match_score": 1.0
+ },
+ "by-heart": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/By_Heart_project/thumbnail.png",
+  "project": "By_Heart_project",
+  "match_score": 1.0
+ },
+ "한풀이-ii-설한-hanpuri-ii-songs-of-the-cold": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/한풀이_II:_설한_(Hanpuri_II:_Songs_of_the_Cold)_project/thumbnail.png",
+  "project": "한풀이_II:_설한_(Hanpuri_II:_Songs_of_the_Cold)_project",
+  "match_score": 1.0
+ },
+ "또-보고-싶어-장르-크로스오버-miss-you-again": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/또_보고_싶어_-_장르_크로스오버_(Miss_You_Again)_project/thumbnail.png",
+  "project": "또_보고_싶어_-_장르_크로스오버_(Miss_You_Again)_project",
+  "match_score": 1.0
+ },
+ "open-until-eight-guitar-jazz-for-a-winter-library": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Open_Until_Eight_(Guitar_Jazz_for_a_Winter_Library)_project/thumbnail.png",
+  "project": "Open_Until_Eight_(Guitar_Jazz_for_a_Winter_Library)_project",
+  "match_score": 1.0
+ },
+ "일곱-마당-2-seven-madang-ii": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/일곱_마당_2_(SEVEN_MADANG_II)_project/thumbnail.png",
+  "project": "일곱_마당_2_(SEVEN_MADANG_II)_project",
+  "match_score": 1.0
+ },
+ "두-칸-따뜻한-겨울-two-notches-warmer": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/두_칸_따뜻한_겨울_(Two_Notches_Warmer)_project/thumbnail.png",
+  "project": "두_칸_따뜻한_겨울_(Two_Notches_Warmer)_project",
+  "match_score": 1.0
  }
 }
