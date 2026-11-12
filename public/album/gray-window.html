@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GRAY WINDOW — 넥시스 뮤직</title>
+<meta name="description" content="GRAY WINDOW — 8곡 · 19분 · 가사 수록 8곡">
+<link rel="canonical" href="https://music.yojosuknam.com/album/gray-window.html">
+<meta property="og:type" content="music.album">
+<meta property="og:title" content="GRAY WINDOW">
+<meta property="og:description" content="GRAY WINDOW — 8곡 · 19분 · 가사 수록 8곡">
+<meta property="og:image" content="https://music.yojosuknam.com/album/covers/cover-d81b8f2ab9a8.jpg">
+<meta property="og:url" content="https://music.yojosuknam.com/album/gray-window.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Instrument+Serif&display=swap">
+<link rel="stylesheet" href="/album/jukebox.css">
+<style>:root{--accent:rgb(200,143,65);--accent-rgb:200,143,65}</style>
+</head>
+<body>
+<div class="bg" style="background-image:url('/album/covers/cover-d81b8f2ab9a8.jpg')"></div>
+<div class="veil"></div>
+
+<header class="top">
+  <a class="back" href="/index.html">← 아카이브</a>
+</header>
+
+<main class="wrap">
+  <div class="art">
+    <img src="/album/covers/cover-d81b8f2ab9a8.jpg" alt="GRAY WINDOW 앨범 커버" width="800" height="800" onerror="this.onerror=null;this.src='/assets/cover-placeholder.svg';">
+    <p class="genre">Lo-fi Soul / Rainy Day Ambient Lofi (보컬 혼합)</p>
+    <p class="mood">가사 수록 8곡</p>
+  </div>
+
+  <div class="main">
+    <h1>GRAY WINDOW</h1>
+    <p class="sub"><b>8곡</b> · 19분</p>
+
+    <div class="transport">
+      <button class="play" id="play" aria-label="재생"></button>
+      <div class="scrub">
+        <div class="now" id="now"></div>
+        <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+        <div class="clock"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+      </div>
+    </div>
+    <a class="yt" id="yt" href="#" target="_blank" rel="noopener" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg>
+      <span id="ytText">YouTube에서 이 곡 듣기</span>
+    </a>
+
+    <div class="seg">
+      <button id="tabList" aria-selected="true">수록곡</button>
+      <button id="tabLyr" aria-selected="false">가사</button>
+    </div>
+    <div class="list" id="list"></div>
+    <div class="list lyr" id="lyrics" hidden></div>
+  </div>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script>window.ALBUM = {"title": "GRAY WINDOW", "cover": "/album/covers/cover-d81b8f2ab9a8.jpg", "video": "https://www.youtube.com/watch?v=1kZF2cl9Hb0", "tracks": [{"n": 1, "title": "Gray Glass (Instrumental)", "ms": 149832, "url": "https://audio.yojosuknam.com/audio/gray-window/01.mp3", "lyrics": [{"tag": "Intro - Rain on Glass", "lines": ["(Vinyl crackle, rain ambience faint)", "(Rhodes single chord, tremolo)", "(Drum loop enters, 76 BPM)"]}, {"tag": "Theme - Grey Outside", "lines": ["(Rhodes melody, minor jazz voicings)", "(Upright bass half-notes below)", "(Rain window mood)"]}, {"tag": "Development - Trumpet Passes", "lines": ["(Muted trumpet single distant phrase)", "(Rhodes responds, maj7 chords)", "(Bass walking slightly)"]}, {"tag": "Bridge - Rain Steady", "lines": ["(Rhodes chord melody only)", "(Drum loop half-time)", "(Cozy interior feeling)"]}, {"tag": "Outro - Glass Blurs", "lines": ["(Rhodes returns to opening chord)", "(Vinyl crackle, fade)"]}, {"tag": "End", "lines": []}], "instrumental": false, "youtube": "https://www.youtube.com/watch?v=1kZF2cl9Hb0&t=0s"}, {"n": 2, "title": "Stay In (Vocal)", "ms": 148560, "url": "https://audio.yojosuknam.com/audio/gray-window/02.mp3", "lyrics": [{"tag": "Verse 1", "lines": ["The rain said stay", "And I said alright", "Put the kettle on", "Turned off my notifications", "Pulled the blanket tight", "Nothing I have to do today", "that couldn't wait for sun"]}, {"tag": "Chorus", "lines": ["Stay in", "Let the grey take over", "Stay in", "Pull the curtains closer", "I don't need anywhere to be", "when the rain decides for me", "Stay in"]}, {"tag": "Verse 2", "lines": ["The city sounds are softer now", "like someone turned it down", "I read the same paragraph three times", "and didn't mind at all", "the rain's got its own sound"]}, {"tag": "Chorus", "lines": ["Stay in", "Let the grey take over", "Stay in"]}, {"tag": "Bridge", "lines": ["(Rhodes solo, warm)", "(Drum half-time)", "(Vocal hums)"]}, {"tag": "Outro", "lines": ["Stay in", "just stay in"]}, {"tag": "End", "lines": []}], "instrumental": false, "youtube": "https://www.youtube.com/watch?v=dM4GitszrLU"}, {"n": 3, "title": "Wet Pavement (Instrumental)", "ms": 148104, "url": "https://audio.yojosuknam.com/audio/gray-window/03.mp3", "lyrics": [{"tag": "Intro - First Step Out", "lines": ["(Acoustic guitar single note)", "(Drum loop, 80 BPM)", "(Vinyl crackle beneath)"]}, {"tag": "Theme - Walking in Rain", "lines": ["(Guitar melody, pentatonic minor)", "(Wet pavement reflection mood)", "(Bass walking below)"]}, {"tag": "Development - City in Rain", "lines": ["(Guitar chord melody, more complex)", "(Bass slightly more active)", "(Rain city imagery)"]}, {"tag": "Bridge - Shelter Pause", "lines": ["(Guitar slows, sparse)", "(Drum half-time)"]}, {"tag": "Outro - Home Again", "lines": ["(Guitar final melody phrase)", "(Fade to vinyl crackle)"]}, {"tag": "End", "lines": []}], "instrumental": false, "youtube": "https://www.youtube.com/watch?v=1kZF2cl9Hb0&t=299s"}, {"n": 4, "title": "Something Warm (Vocal)", "ms": 146400, "url": "https://audio.yojosuknam.com/audio/gray-window/04.mp3", "lyrics": [{"tag": "Verse 1", "lines": ["The window's cold against my hand", "The rain won't let me plan", "But there's coffee on the stove", "and something in the oven", "and that might be enough", "Not every day needs to mean something"]}, {"tag": "Chorus", "lines": ["Something warm", "that's all I'm looking for", "Something warm", "right here behind the door", "No grand design", "no better place to be", "Something warm", "is something, honestly"]}, {"tag": "Verse 2", "lines": ["My upstairs neighbor's cooking too", "I can smell it through the floor", "We've never really spoken much", "but on these days I'm glad", "there's someone else in here"]}, {"tag": "Chorus", "lines": ["Something warm"]}, {"tag": "Bridge", "lines": ["(Rhodes chord, minimal)", "(Male vocal hum)"]}, {"tag": "Outro", "lines": ["Something warm", "that's all"]}, {"tag": "End", "lines": []}], "instrumental": false, "youtube": "https://www.youtube.com/watch?v=1kZF2cl9Hb0&t=448s"}, {"n": 5, "title": "Old Rain (Instrumental)", "ms": 177672, "url": "https://audio.yojosuknam.com/audio/gray-window/05.mp3", "lyrics": [{"tag": "Intro - Memory Surfaces", "lines": ["(Vinyl crackle, single Rhodes chord)", "(Vibraphone distant note)", "(Drum loop 74 BPM)"]}, {"tag": "Theme - Old Rain", "lines": ["(Vibraphone melody, minor pentatonic)", "(Rhodes background shimmer)", "(Nostalgic quality, old photographs)"]}, {"tag": "Development - Memory Deepens", "lines": ["(Vibraphone and Rhodes in dialogue)", "(Bass slightly more present)", "(Bittersweet nostalgia)"]}, {"tag": "Bridge - Fading Memory", "lines": ["(Vibraphone three notes, long reverb)", "(Rhodes single chord, space)"]}, {"tag": "Outro - Rain Remains", "lines": ["(Final vibraphone note, long decay)", "(Vinyl crackle)"]}, {"tag": "End", "lines": []}], "instrumental": false, "youtube": "https://www.youtube.com/watch?v=1kZF2cl9Hb0&t=595s"}, {"n": 6, "title": "Keep the Light On (Vocal)", "ms": 101304, "url": "https://audio.yojosuknam.com/audio/gray-window/06.mp3", "lyrics": [{"tag": "Verse 1", "lines": ["I keep the light on when it rains", "in case you're on your way", "You probably aren't", "but the amber glow looks nice", "either way"]}, {"tag": "Chorus", "lines": ["Keep the light on", "through the grey", "Keep the light on", "just in case today", "you find yourself out in the rain", "and need a window", "shining in the lane", "Keep the light on"]}, {"tag": "Verse 2", "lines": ["The neighbors probably wonder", "who I'm waiting for", "I'm not sure either", "but the kettle's warm", "and the door's unlocked"]}, {"tag": "Chorus", "lines": ["Keep the light on"]}, {"tag": "Bridge", "lines": ["(Rhodes warm chord progression)", "(Female vocal hums)"]}, {"tag": "Outro", "lines": ["Keep the light on", "just keep it on"]}, {"tag": "End", "lines": []}], "instrumental": false, "youtube": "https://www.youtube.com/watch?v=1kZF2cl9Hb0&t=774s"}, {"n": 7, "title": "Between Showers (Instrumental)", "ms": 152472, "url": "https://audio.yojosuknam.com/audio/gray-window/07.mp3", "lyrics": [{"tag": "Intro - Pause in Rain", "lines": ["(Guitar single note, brighter tone)", "(Rhodes chord, pentatonic major)", "(Drum loop 84 BPM, lighter)"]}, {"tag": "Theme - Brief Clearing", "lines": ["(Guitar melody, major pentatonic)", "(After-rain freshness quality)", "(Rhodes supporting warmly)"]}, {"tag": "Development - Wet Air", "lines": ["(Guitar and Rhodes in dialogue)", "(Bass walking openly)", "(Brighter mood, hopeful)"]}, {"tag": "Bridge - Almost Sunny", "lines": ["(Guitar chord melody)", "(Drum slightly thinner)"]}, {"tag": "Outro - Rain Returns", "lines": ["(Guitar final phrase)", "(Vinyl crackle, gentle close)"]}, {"tag": "End", "lines": []}], "instrumental": false, "youtube": "https://www.youtube.com/watch?v=1kZF2cl9Hb0&t=876s"}, {"n": 8, "title": "After Rain (Vocal)", "ms": 129864, "url": "https://audio.yojosuknam.com/audio/gray-window/08.mp3", "lyrics": [{"tag": "Verse 1 - Female", "lines": ["The rain is done", "left everything a little cleaner", "Left me a little slower", "in a way I needed"]}, {"tag": "Verse 2 - Male", "lines": ["I got nothing done today", "and somehow that feels right", "The grey moved through", "and took the noise with it"]}, {"tag": "Chorus - Both", "lines": ["After rain", "the world looks different, slightly", "After rain", "I feel a little lighter", "Nothing changed", "and something shifted anyway", "After rain"]}, {"tag": "Bridge - Instrumental", "lines": ["(Rhodes duet feeling)", "(Drum simple groove)"]}, {"tag": "Final - Both", "lines": ["After rain"]}, {"tag": "Outro - Both humming", "lines": ["After rain", "after rain"]}, {"tag": "End", "lines": []}], "instrumental": false, "youtube": "https://www.youtube.com/watch?v=1kZF2cl9Hb0&t=1029s"}]};</script>
+<script src="/album/jukebox.js"></script>
+</body>
+</html>

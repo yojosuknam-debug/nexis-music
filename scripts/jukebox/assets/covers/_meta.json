@@ -776,9 +776,10 @@
   "match_score": 1.0
  },
  "between-two-midnights-sacred-chant-for-christmas-and-the-new-year": {
-  "kind": "designed_cover",
-  "src": "designed from BETWEEN_TWO_MIDNIGHTS image.md",
-  "auto_replace": true
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Between_Two_Midnights_project/thumbnail.png",
+  "project": "Between_Two_Midnights_project",
+  "match_score": 1.0
  },
  "성탄-메김소리-carols-in-minyo": {
   "kind": "project_thumbnail",
@@ -922,6 +923,16 @@
   "kind": "project_thumbnail",
   "src": "/mnt/external/suno-playlist/output/두_칸_따뜻한_겨울_(Two_Notches_Warmer)_project/thumbnail.png",
   "project": "두_칸_따뜻한_겨울_(Two_Notches_Warmer)_project",
+  "match_score": 1.0
+ },
+ "moonflow-night": {
+  "kind": "youtube",
+  "src": "https://i.ytimg.com/vi/drdStve13PM/maxresdefault.jpg"
+ },
+ "neon-echoes": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/NEON_ECHOES_project/thumbnail.png",
+  "project": "NEON_ECHOES_project",
   "match_score": 1.0
  }
 }
