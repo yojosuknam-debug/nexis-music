@@ -249,10 +249,15 @@ def scan_album(folder: Path, index, track_index) -> dict | None:
         n = int(h.group(1))
         f = audio.get(n)
         sections, instrumental = parse_lyrics(block)
+        # '## Track 01 — Moonlight …' 의 앞 대시는 구분자다(Moonflow Night)
+        raw_title = h.group(2).lstrip("—–-: \t")
+        if not raw_title:
+            # '## Track 1' 아래 '### Title' + 코드펜스에 제목이 있는 형식(SILK_VILLAGE)
+            tm = re.search(r"^###\s*Title\s*\n+```[a-z]*\n(.+?)\n", block, re.M | re.I)
+            raw_title = tm.group(1).strip() if tm else f"Track {n}"
         tracks.append({
             "n": n,
-            # '## Track 01 — Moonlight …' 의 앞 대시는 구분자다(Moonflow Night)
-            "title": clean_track_title(h.group(2).lstrip("—–-: \t")),
+            "title": clean_track_title(raw_title),
             "file": f.name if f else "",
             "src": str(f) if f else "",
             "ms": duration_ms(f) if f else 0,
