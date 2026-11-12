@@ -251,7 +251,8 @@ def scan_album(folder: Path, index, track_index) -> dict | None:
         sections, instrumental = parse_lyrics(block)
         tracks.append({
             "n": n,
-            "title": clean_track_title(h.group(2)),
+            # '## Track 01 — Moonlight …' 의 앞 대시는 구분자다(Moonflow Night)
+            "title": clean_track_title(h.group(2).lstrip("—–-: \t")),
             "file": f.name if f else "",
             "src": str(f) if f else "",
             "ms": duration_ms(f) if f else 0,
