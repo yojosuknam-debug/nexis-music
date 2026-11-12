@@ -1,5 +1,12 @@
 # HANDOFF — 창 인계 기록 (최근 5개, 새 항목이 맨 위)
 
+## 2026-11-12 23:10 · end — 옛 앨범 8개 주크박스·라디오 합류 + 곡제목 파싱 수정 (DESKTOP-8ISD10M)
+- 상태: 커밋 2c8f368·4b6987d·7e7d864 push · 미니PC 레포 pull 완료 · 발행은 미니PC `JUKEBOX_RELEASED_ONLY=1 bot_command._work` 로 실행 → Actions(Deploy to Vercel) 배포 · 라이브 156앨범·1133곡 확인(페이지·음원 9개 206, 라디오 22:50 '156앨범' 로드)
+- 한 일: 11-12 새벽 6앨범(TWO_NOTCHES_WARMER 등) 자동 발행·라디오 반영 점검(정상). 4~6월 앨범 8개(GRAY_WINDOW·LANGUAGE_OF_RAIN·RAIN_ON_THE_EAVES·small_joys_cafe·sonjeorilgi·mot_ij_eo·neon_echoes·Moonflow Night, 64곡)가 유튜브엔 있는데 0곡 파싱으로 빠져 있던 것 수정 — `scripts/jukebox/scan_albums.py`: mp3 `track01`/`Track 1_` 인식, `## 🎵 Track 01:` 이모지 제목, album 없는 설명 md 대체, 제목 앞 대시 제거, `### Title` 코드펜스 제목(SILK_VILLAGE·weightless 표시도 고쳐짐).
+- 확인 못 한 것: GUDI_SONG 은 데스크탑 input 사본이 미니PC와 달라 데스크탑 run_all 시 곡목록이 바뀜(기존 미결) — 발행은 미니PC에서만.
+- 다음 할 일: 없음. (auto_publish 는 '처음 보는 앨범'만 발행 — 카탈로그에 0곡으로 있던 앨범은 수동 RELEASED_ONLY 실행 필요, 메모리 nexis-music-jukebox-status)
+- 주의: 수동 /jukebox·run_all 은 유튜브 미공개 앨범도 발행함(Between Two Midnights 가 그렇게 먼저 공개돼 있었음).
+
 ## 2026-11-11 22:15 · end — Suno 곡 멜론 유통 준비: 마스터링·유통사 조사 (DESKTOP-8ISD10M)
 - 상태: 조사 문서 커밋·push(e4b1990 + 이번 커밋) · 문서만이라 사이트 변화 없음(push 시 Actions 배포는 돎)
 - 한 일: `/px` 조사 3건 — `docs/research/2026-11-11_suno-마스터링-에이전트.md`(규격 -14 LUFS·-1 dBTP·16bit/44.1k, 내 Suno 실측) · `2026-11-11_멜론-유통사-선정.md`(교차, 원문 `_퍼플렉시티.md`) · 10-27 유통 조사 미커밋분 함께 커밋. 마스터링 도구는 별도 레포 `D:\YH\APP\suno-master`(/master).
@@ -34,12 +41,3 @@
 - 확인 못 한 것: 영상·소리 실제 상태(스튜디오에서 사람 확인) · 재생목록 추가(시험은 keep=false라 안 돎 → 11-06 10시 ko·13시 en이 첫 실행) · 23:29 기준 `output/2026-11-06_*` 아직 없음(23:40 조립 예정이라 정상 범위).
 - 다음 할 일: 11-06 05:30 check·09:20 deadline 알림으로 11-06 영상 READY 확인 → 10:00 첫 방송·재생목록 확인 → 시험 크론 줄 삭제(승인 후, 백업 남기고).
 - 주의: 미커밋 `docs/research/*`는 이 창 것 아님.
-
-## 2026-11-04 23:40 · end — 온라인 예배 하루 8회 송출 등록 (DESKTOP-8ISD10M)
-- 상태: 이 메모와 함께 커밋·push · 미니PC `git pull` 반영(`scripts/worship/worship_onair.py`, `worship-onair.sh`) · 크론 등록됨 · 실제 방송은 아직 0회
-- 한 일: 예배 5분 전 크론이 방송 생성→재인코딩 없이 송출→다시보기 정리. 한 10·16·22·04 / 영 13·19·01·07. D일 영상은 D일 10시~다음 날 07시. READY 없으면 어제 영상 '재방송'+알림, 그것도 없으면 건너뜀+알림. 10시 ko·13시 en만 공개 보관+재생목록, 나머지 6회는 끝나면 비공개. 11-06 09:30 전엔 안 돔(FIRST_ON_AIR)
-- 레포 밖 변경: 미니PC 크론 `55 3,9,15,21`(ko)·`55 0,6,12,18`(en)·시험 1회 `5 23 5 11`(백업 `~/crontab.bak-onair-20261105`) · `/mnt/external/nexis-worship/.youtube_token_live.pickle`(600) · 예배 `.venv`에 구글 라이브러리 설치
-- 채널: '매일 온라인 예배' @online-worship-24(UCfc-DVXcjjFii_nhSdeORWQ). 라이브는 11-05 22:44쯤 켜짐(유튜브 카운트다운 기준)
-- 확인 못 한 것: 실제 라이브 송출 전체(11-05 23:05 비공개 180초 시험이 첫 확인, 결과 텔레그램) · 다시보기 비공개·재생목록 처리 · 할당량
-- 다음 할 일: 시험 성공 확인 후 크론의 `nexis-worship-onair-test` 줄 삭제 · 11-06 10:00 첫 방송 확인 · 채널에 '예정' 미리 띄우기(현재 5분 전 생성)는 안정 뒤 검토
-- 주의: `worship-stream.sh`는 옛 방식이라 쓰지 않음. 비밀값 없는 일정 로그 `logs/schedule.jsonl`(stage=onair). 미커밋 `docs/research/*`는 이 창 것 아님
