@@ -934,5 +934,11 @@
   "src": "/mnt/external/suno-playlist/output/NEON_ECHOES_project/thumbnail.png",
   "project": "NEON_ECHOES_project",
   "match_score": 1.0
+ },
+ "출근길-주연-main-character-commute-miso-beats-album": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/출근길_주연_(Main_Character_Commute)_project/thumbnail.png",
+  "project": "출근길_주연_(Main_Character_Commute)_project",
+  "match_score": 1.0
  }
 }

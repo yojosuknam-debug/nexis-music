@@ -3795,8 +3795,8 @@
    }
   ],
   "updated_at": 1793723452,
-  "cover_source": "https://i.ytimg.com/vi/a3nDvvyeLwo/maxresdefault.jpg",
-  "cover_match": 0.8,
+  "cover_source": "https://i.ytimg.com/vi/57EMJT4HD5s/maxresdefault.jpg",
+  "cover_match": 1.0,
   "cover_how": "album",
   "total_ms": 682920,
   "cover_file": "between-two-midnights-sacred-chant-for-christmas-and-the-new-year.jpg",
@@ -27805,6 +27805,122 @@
   "total_ms": 1720296,
   "cover_file": "곁에-오래-있던-것들-long-beside-me.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/곁에-오래-있던-것들-long-beside-me.jpg?v=a4539348"
+ },
+ {
+  "folder": "MAIN_CHARACTER_COMMUTE",
+  "slug": "출근길-주연-main-character-commute-miso-beats-album",
+  "title": "출근길 주연 (Main Character Commute) — Miso Beats Album",
+  "genre": "Cinematic Orchestral Beat (strings · brass · woodwinds × boom-bap / trap / breakbeat / funk drums)",
+  "channel": "Miso Beats (`miso`)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "오프닝 타이틀 (Opening Title)",
+    "file": "01_opening_title.mp3",
+    "src": "/mnt/external/suno-playlist/input/MAIN_CHARACTER_COMMUTE/tracks/01_opening_title.mp3",
+    "ms": 184440,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/출근길-주연-main-character-commute-miso-beats-album/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "신발끈 클로즈업 (Shoelace Close-Up)",
+    "file": "02_shoelace_close_up.mp3",
+    "src": "/mnt/external/suno-playlist/input/MAIN_CHARACTER_COMMUTE/tracks/02_shoelace_close_up.mp3",
+    "ms": 141672,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/출근길-주연-main-character-commute-miso-beats-album/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "7시 42분 추격씬 (Chase at 7:42)",
+    "file": "03_chase_at_742.mp3",
+    "src": "/mnt/external/suno-playlist/input/MAIN_CHARACTER_COMMUTE/tracks/03_chase_at_742.mp3",
+    "ms": 152880,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/출근길-주연-main-character-commute-miso-beats-album/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "환승역 롱테이크 (Transfer Long Take)",
+    "file": "04_transfer_long_take.mp3",
+    "src": "/mnt/external/suno-playlist/input/MAIN_CHARACTER_COMMUTE/tracks/04_transfer_long_take.mp3",
+    "ms": 144216,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/출근길-주연-main-character-commute-miso-beats-album/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "다리 위 슬로모션 (Slow Motion on the Bridge)",
+    "file": "05_slow_motion_on_the_bridge.mp3",
+    "src": "/mnt/external/suno-playlist/input/MAIN_CHARACTER_COMMUTE/tracks/05_slow_motion_on_the_bridge.mp3",
+    "ms": 212424,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/출근길-주연-main-character-commute-miso-beats-album/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "만원 열차 왈츠 (Rush-Hour Waltz)",
+    "file": "06_rush_hour_waltz.mp3",
+    "src": "/mnt/external/suno-playlist/input/MAIN_CHARACTER_COMMUTE/tracks/06_rush_hour_waltz.mp3",
+    "ms": 148848,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/출근길-주연-main-character-commute-miso-beats-album/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "출구 계단 몽타주 (Exit Stairs Montage)",
+    "file": "07_exit_stairs_montage.mp3",
+    "src": "/mnt/external/suno-playlist/input/MAIN_CHARACTER_COMMUTE/tracks/07_exit_stairs_montage.mp3",
+    "ms": 132456,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/출근길-주연-main-character-commute-miso-beats-album/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "회전문 장면전환 (Revolving Door Scene Change)",
+    "file": "08_revolving_door_scene_change.mp3",
+    "src": "/mnt/external/suno-playlist/input/MAIN_CHARACTER_COMMUTE/tracks/08_revolving_door_scene_change.mp3",
+    "ms": 98520,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/출근길-주연-main-character-commute-miso-beats-album/08.mp3"
+   },
+   {
+    "n": 9,
+    "title": "12층 클라이맥스 (Twelfth-Floor Climax)",
+    "file": "09_twelfth_floor_climax.mp3",
+    "src": "/mnt/external/suno-playlist/input/MAIN_CHARACTER_COMMUTE/tracks/09_twelfth_floor_climax.mp3",
+    "ms": 198024,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/출근길-주연-main-character-commute-miso-beats-album/09.mp3"
+   },
+   {
+    "n": 10,
+    "title": "엔딩 크레딧은 퇴근길에 (Credits Roll After Six)",
+    "file": "10_credits_roll_after_six.mp3",
+    "src": "/mnt/external/suno-playlist/input/MAIN_CHARACTER_COMMUTE/tracks/10_credits_roll_after_six.mp3",
+    "ms": 178872,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/출근길-주연-main-character-commute-miso-beats-album/10.mp3"
+   }
+  ],
+  "updated_at": 1794586381,
+  "cover_source": "https://i.ytimg.com/vi/OtWoVBPRm7k/maxresdefault.jpg",
+  "cover_match": 0.9,
+  "cover_how": "album",
+  "total_ms": 1592352,
+  "cover_file": "출근길-주연-main-character-commute-miso-beats-album.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/출근길-주연-main-character-commute-miso-beats-album.jpg?v=c316887f"
  },
  {
   "folder": "MANNA_AND_DUST",
