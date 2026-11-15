@@ -940,5 +940,17 @@
   "src": "/mnt/external/suno-playlist/output/출근길_주연_(Main_Character_Commute)_project/thumbnail.png",
   "project": "출근길_주연_(Main_Character_Commute)_project",
   "match_score": 1.0
+ },
+ "hymns-for-the-daily-walk-vol-3": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Hymns_for_the_Daily_Walk,_Vol._3_project/thumbnail.png",
+  "project": "Hymns_for_the_Daily_Walk,_Vol._3_project",
+  "match_score": 1.0
+ },
+ "아침-찬송-3집-morning-hymns-vol-3": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/아침_찬송_3집_(Morning_Hymns,_Vol._3)_project/thumbnail.png",
+  "project": "아침_찬송_3집_(Morning_Hymns,_Vol._3)_project",
+  "match_score": 1.0
  }
 }

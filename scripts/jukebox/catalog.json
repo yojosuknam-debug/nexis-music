@@ -8493,7 +8493,7 @@
    }
   ],
   "updated_at": 1793724777,
-  "cover_source": "https://i.ytimg.com/vi/HxysZ-IYcBM/maxresdefault.jpg",
+  "cover_source": "https://i.ytimg.com/vi/bCae767yzx0/maxresdefault.jpg",
   "cover_match": 0.8,
   "cover_how": "album",
   "total_ms": 1870067,
@@ -9154,12 +9154,673 @@
    }
   ],
   "updated_at": 1793979148,
-  "cover_source": "https://i.ytimg.com/vi/HxysZ-IYcBM/maxresdefault.jpg",
+  "cover_source": "https://i.ytimg.com/vi/bCae767yzx0/maxresdefault.jpg",
   "cover_match": 0.8,
   "cover_how": "album",
   "total_ms": 1427880,
   "cover_file": "hymns-for-the-daily-walk-vol-2.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/hymns-for-the-daily-walk-vol-2.jpg?v=8077dda6"
+ },
+ {
+  "folder": "DAILY_WALK_HYMNS_VOL3",
+  "slug": "hymns-for-the-daily-walk-vol-3",
+  "title": "Hymns for the Daily Walk, Vol. 3",
+  "genre": "Traditional English Congregational Hymn (자작 찬송가 — 보컬판 5 + 기도 연주곡 5)",
+  "channel": "Still Waters (`stillwaters`)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "Our Refuge When the Mountains Shake",
+    "file": "01_refuge_when_mountains_shake.mp3",
+    "src": "/mnt/external/suno-playlist/input/DAILY_WALK_HYMNS_VOL3/tracks/01_refuge_when_mountains_shake.mp3",
+    "ms": 97008,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "short two-bar introduction",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:06",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "full choir in unison, organ and piano",
+      "lines": []
+     },
+     {
+      "tag": "0:06-0:31",
+      "lines": [
+       "Our God, our shelter and our strength,",
+       "Is near when troubles press us round;",
+       "Though mountains tremble in the sea,",
+       "In Him our steady hope is found."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, softer",
+      "lines": []
+     },
+     {
+      "tag": "0:31-0:55",
+      "lines": [
+       "When nations rage and kingdoms fall,",
+       "Our anxious hearts are quick to run;",
+       "We hear the noise and fear the storm,",
+       "And soon forget what God has done."
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "organ plays the last two lines",
+      "lines": []
+     },
+     {
+      "tag": "0:55-1:02",
+      "lines": []
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, calm and steady",
+      "lines": []
+     },
+     {
+      "tag": "1:02-1:26",
+      "lines": [
+       "A quiet river makes us glad,",
+       "It runs where God Himself abides;",
+       "So let us rest and wait on Him,",
+       "And shelter those the storm has tried."
+      ]
+     },
+     {
+      "tag": "Verse 4",
+      "lines": []
+     },
+     {
+      "tag": "full choir and organ, same melody",
+      "lines": []
+     },
+     {
+      "tag": "1:26-1:51",
+      "lines": [
+       "He breaks the spear and ends the war,",
+       "And calls the restless earth to peace;",
+       "Exalted high in all the lands,",
+       "His praise from us will never cease."
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final cadence, held chord",
+      "lines": []
+     },
+     {
+      "tag": "1:51-1:58",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/hymns-for-the-daily-walk-vol-3/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "The Bread That Came from Heaven",
+    "file": "02_bread_from_heaven.mp3",
+    "src": "/mnt/external/suno-playlist/input/DAILY_WALK_HYMNS_VOL3/tracks/02_bread_from_heaven.mp3",
+    "ms": 114360,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "short two-bar introduction",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:06",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "congregation in unison, piano",
+      "lines": []
+     },
+     {
+      "tag": "0:06-0:31",
+      "lines": [
+       "Christ, the bread that came from heaven,",
+       "Freely He delights to give;",
+       "All who come are fed and welcomed,",
+       "Given life that they may live."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, humble",
+      "lines": []
+     },
+     {
+      "tag": "0:31-0:56",
+      "lines": [
+       "We have filled our hands with harvest,",
+       "Still our souls are hungry, Lord;",
+       "Like the crowds who followed after",
+       "Bread, but would not hear Your word."
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "piano plays the last two lines",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:02",
+      "lines": []
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, warm",
+      "lines": []
+     },
+     {
+      "tag": "1:02-1:27",
+      "lines": [
+       "Feed us, Lord, with living manna,",
+       "Day by day by mercy fed;",
+       "Make us glad to share with others",
+       "All the gifts of broken bread."
+      ]
+     },
+     {
+      "tag": "Verse 4",
+      "lines": []
+     },
+     {
+      "tag": "full choir and soft organ, same melody",
+      "lines": []
+     },
+     {
+      "tag": "1:27-1:52",
+      "lines": [
+       "When the final day is dawning,",
+       "You will raise us from the dust;",
+       "Christ, the Bread of life forever,",
+       "You alone deserve our trust."
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final cadence, held chord",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:00",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/hymns-for-the-daily-walk-vol-3/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "Through River and Through Flame",
+    "file": "03_through_river_and_flame.mp3",
+    "src": "/mnt/external/suno-playlist/input/DAILY_WALK_HYMNS_VOL3/tracks/03_through_river_and_flame.mp3",
+    "ms": 105024,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "short two-bar introduction",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:06",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "full choir in unison, piano and organ",
+      "lines": []
+     },
+     {
+      "tag": "0:06-0:31",
+      "lines": [
+       "The Lord who made us, Jacob's God,",
+       "Who shaped us with His hand,",
+       "Has bought us back and called us His;",
+       "In Him secure we stand."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, quiet",
+      "lines": []
+     },
+     {
+      "tag": "0:31-0:56",
+      "lines": [
+       "We fear the river rising high,",
+       "We dread the burning way;",
+       "We count the dangers, not His love,",
+       "And tremble and delay."
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "organ plays the last two lines",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:02",
+      "lines": []
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, steady and warm",
+      "lines": []
+     },
+     {
+      "tag": "1:02-1:27",
+      "lines": [
+       "Yet through the waters He is near,",
+       "The flood will not prevail;",
+       "So let us walk with those who fear",
+       "And hold them when they fail."
+      ]
+     },
+     {
+      "tag": "Verse 4",
+      "lines": []
+     },
+     {
+      "tag": "full choir and organ, same melody",
+      "lines": []
+     },
+     {
+      "tag": "1:27-1:52",
+      "lines": [
+       "The flame will find no hold on us,",
+       "Its heat will pass us by;",
+       "Our Savior, Holy One, our God,",
+       "We praise You, Lord Most High."
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final cadence, held chord",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:00",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/hymns-for-the-daily-walk-vol-3/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "Wait for Light, My Troubled Soul",
+    "file": "04_wait_for_light.mp3",
+    "src": "/mnt/external/suno-playlist/input/DAILY_WALK_HYMNS_VOL3/tracks/04_wait_for_light.mp3",
+    "ms": 128472,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "short two-bar introduction, piano and cello",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:07",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "small choir in unison, soft piano, gentle three-beat lilt",
+      "lines": []
+     },
+     {
+      "tag": "0:07-0:33",
+      "lines": [
+       "Living God, my soul is dry,",
+       "Like a field that waits for rain;",
+       "Day and night I wake and weep,",
+       "When will I see You again?"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, quiet and aching",
+      "lines": []
+     },
+     {
+      "tag": "0:33-0:59",
+      "lines": [
+       "I remember singing loud,",
+       "Walking with the joyful crowd;",
+       "Now my heart has sunk so low,",
+       "Waves of sorrow overflow."
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "cello plays the last line",
+      "lines": []
+     },
+     {
+      "tag": "0:59-1:06",
+      "lines": []
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, a little warmer",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:32",
+      "lines": [
+       "Though the roaring waters sweep,",
+       "Still Your love will come by day;",
+       "In the night Your song I keep,",
+       "For the weary, Lord, I pray."
+      ]
+     },
+     {
+      "tag": "Verse 4",
+      "lines": []
+     },
+     {
+      "tag": "full choir and soft organ, hopeful, same melody",
+      "lines": []
+     },
+     {
+      "tag": "1:32-1:58",
+      "lines": [
+       "Why so troubled, O my soul?",
+       "Hope in God and wait for light;",
+       "I will praise Him, who makes whole,",
+       "Morning breaks beyond the night."
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final cadence, held major chord",
+      "lines": []
+     },
+     {
+      "tag": "1:58-2:06",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/hymns-for-the-daily-walk-vol-3/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "He Goes with Us Each Day",
+    "file": "05_he_goes_with_us.mp3",
+    "src": "/mnt/external/suno-playlist/input/DAILY_WALK_HYMNS_VOL3/tracks/05_he_goes_with_us.mp3",
+    "ms": 93840,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "short two-bar introduction",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:05",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "full choir in unison, organ, bright",
+      "lines": []
+     },
+     {
+      "tag": "0:05-0:25",
+      "lines": [
+       "The risen Lord now reigns,",
+       "All earth and sky are His;",
+       "On hillside green He meets His own",
+       "And tells them who He is."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, humble",
+      "lines": []
+     },
+     {
+      "tag": "0:25-0:45",
+      "lines": [
+       "We worship, yet we doubt,",
+       "Our faith is weak and small;",
+       "Yet still He calls the ones who fear",
+       "And sends us, one and all."
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "organ plays the last line",
+      "lines": []
+     },
+     {
+      "tag": "0:45-0:50",
+      "lines": []
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, steady",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:10",
+      "lines": [
+       "So go to all the lands,",
+       "To near and distant door;",
+       "Make friends of strangers, teach His ways,",
+       "And serve the weak and poor."
+      ]
+     },
+     {
+      "tag": "Verse 4",
+      "lines": []
+     },
+     {
+      "tag": "full choir and organ, resolved, same melody",
+      "lines": []
+     },
+     {
+      "tag": "1:10-1:30",
+      "lines": [
+       "He goes with us each day,",
+       "Until the age is done;",
+       "Then praise the Father and the Son",
+       "And Spirit, Three in One."
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final cadence, held chord",
+      "lines": []
+     },
+     {
+      "tag": "1:30-1:37",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/hymns-for-the-daily-walk-vol-3/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "Morning by the Broken Spear",
+    "file": "06_morning_by_the_broken_spear.mp3",
+    "src": "/mnt/external/suno-playlist/input/DAILY_WALK_HYMNS_VOL3/tracks/06_morning_by_the_broken_spear.mp3",
+    "ms": 164760,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/hymns-for-the-daily-walk-vol-3/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "Green Grass by the Lake",
+    "file": "07_green_grass_by_the_lake.mp3",
+    "src": "/mnt/external/suno-playlist/input/DAILY_WALK_HYMNS_VOL3/tracks/07_green_grass_by_the_lake.mp3",
+    "ms": 196560,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/hymns-for-the-daily-walk-vol-3/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "Reeds Along the Wide River",
+    "file": "08_reeds_along_the_wide_river.mp3",
+    "src": "/mnt/external/suno-playlist/input/DAILY_WALK_HYMNS_VOL3/tracks/08_reeds_along_the_wide_river.mp3",
+    "ms": 210024,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/hymns-for-the-daily-walk-vol-3/08.mp3"
+   },
+   {
+    "n": 9,
+    "title": "A Song Kept in the Night",
+    "file": "09_a_song_kept_in_the_night.mp3",
+    "src": "/mnt/external/suno-playlist/input/DAILY_WALK_HYMNS_VOL3/tracks/09_a_song_kept_in_the_night.mp3",
+    "ms": 163128,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/hymns-for-the-daily-walk-vol-3/09.mp3"
+   },
+   {
+    "n": 10,
+    "title": "The Hill in Galilee",
+    "file": "10_the_hill_in_galilee.mp3",
+    "src": "/mnt/external/suno-playlist/input/DAILY_WALK_HYMNS_VOL3/tracks/10_the_hill_in_galilee.mp3",
+    "ms": 184344,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/hymns-for-the-daily-walk-vol-3/10.mp3"
+   }
+  ],
+  "updated_at": 1794661957,
+  "cover_source": "https://i.ytimg.com/vi/bCae767yzx0/maxresdefault.jpg",
+  "cover_match": 0.8,
+  "cover_how": "album",
+  "total_ms": 1457520,
+  "cover_file": "hymns-for-the-daily-walk-vol-3.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/hymns-for-the-daily-walk-vol-3.jpg?v=df9766de"
  },
  {
   "folder": "DAY_SHIFT",
@@ -35398,6 +36059,667 @@
   "total_ms": 1290912,
   "cover_file": "아침-찬송-2집-morning-hymns-vol-2.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/아침-찬송-2집-morning-hymns-vol-2.jpg?v=969f6cb0"
+ },
+ {
+  "folder": "MORNING_HYMNS_VOL3",
+  "slug": "아침-찬송-3집-morning-hymns-vol-3",
+  "title": "아침 찬송 3집 (Morning Hymns, Vol. 3)",
+  "genre": "Traditional Korean Congregational Hymn (자작 찬송가 — 보컬판 5 + 기도 연주곡 5)",
+  "channel": "Still Waters (`stillwaters`)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "온 땅이여 기쁨으로",
+    "file": "01_all_the_earth_with_joy.mp3",
+    "src": "/mnt/external/suno-playlist/input/MORNING_HYMNS_VOL3/tracks/01_all_the_earth_with_joy.mp3",
+    "ms": 97584,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "short two-bar introduction",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:06",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "full choir in unison, organ and piano",
+      "lines": []
+     },
+     {
+      "tag": "0:06-0:29",
+      "lines": [
+       "온 땅이여 기쁨으로",
+       "주를 섬겨 노래하세",
+       "그 앞으로 나아가서",
+       "한 목소리 경배하세"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, a little softer",
+      "lines": []
+     },
+     {
+      "tag": "0:29-0:52",
+      "lines": [
+       "주 하나님 알지어다",
+       "우리 지으신 주시니",
+       "주의 백성 주의 양 떼",
+       "그 손으로 기르시네"
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "organ plays the last two lines",
+      "lines": []
+     },
+     {
+      "tag": "0:52-0:58",
+      "lines": []
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, warm and steady",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:21",
+      "lines": [
+       "감사하며 문에 들고",
+       "찬송하며 뜰에 서서",
+       "그 이름을 송축하며",
+       "이웃 손도 잡고 가세"
+      ]
+     },
+     {
+      "tag": "Verse 4",
+      "lines": []
+     },
+     {
+      "tag": "full choir and organ, same melody",
+      "lines": []
+     },
+     {
+      "tag": "1:21-1:44",
+      "lines": [
+       "선하시고 인자하신",
+       "주의 사랑 영원하네",
+       "성실하심 대대 이어",
+       "영원토록 찬송하세"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final cadence, held chord",
+      "lines": []
+     },
+     {
+      "tag": "1:44-1:52",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/아침-찬송-3집-morning-hymns-vol-3/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "물 위로 오라 하시니",
+    "file": "02_come_upon_the_water.mp3",
+    "src": "/mnt/external/suno-playlist/input/MORNING_HYMNS_VOL3/tracks/02_come_upon_the_water.mp3",
+    "ms": 108912,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "short two-bar introduction",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:06",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "small choir in unison, piano",
+      "lines": []
+     },
+     {
+      "tag": "0:06-0:28",
+      "lines": [
+       "산에서 기도하신",
+       "우리 배 보시고",
+       "밤 사경 물결 위로",
+       "걸어오신 주님"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, low and anxious",
+      "lines": []
+     },
+     {
+      "tag": "0:28-0:50",
+      "lines": [
+       "거센 바람 불어와",
+       "우리 배 흔들려",
+       "놀라서 소리칠 때",
+       "내니 두려 말라"
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "piano plays the last line",
+      "lines": []
+     },
+     {
+      "tag": "0:50-0:56",
+      "lines": []
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, steady, stepping out",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:18",
+      "lines": [
+       "오라 하신 그 말씀",
+       "물 위로 나서네",
+       "바람 보다 빠질 때",
+       "주가 손을 잡네"
+      ]
+     },
+     {
+      "tag": "Verse 4",
+      "lines": []
+     },
+     {
+      "tag": "full choir and organ, calm and sure, same melody",
+      "lines": []
+     },
+     {
+      "tag": "1:18-1:40",
+      "lines": [
+       "주 배에 오르시니",
+       "바람 잔잔하네",
+       "주는 하나님 아들",
+       "우리 경배하네"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final cadence, held major chord",
+      "lines": []
+     },
+     {
+      "tag": "1:40-1:48",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/아침-찬송-3집-morning-hymns-vol-3/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "위로하라 내 백성을",
+    "file": "03_comfort_my_people.mp3",
+    "src": "/mnt/external/suno-playlist/input/MORNING_HYMNS_VOL3/tracks/03_comfort_my_people.mp3",
+    "ms": 92040,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "short two-bar introduction",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:06",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "full choir in unison, organ, tender",
+      "lines": []
+     },
+     {
+      "tag": "0:06-0:30",
+      "lines": [
+       "위로하라 내 백성을",
+       "주 음성 들리네",
+       "광야에 주의 길 내라",
+       "골짜기 돋우라"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, quiet and humble",
+      "lines": []
+     },
+     {
+      "tag": "0:30-0:54",
+      "lines": [
+       "모든 육체 풀과 같고",
+       "그 영광 꽃 같아",
+       "풀 마르고 꽃 시드나",
+       "주 말씀 서리라"
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "organ plays the last two lines",
+      "lines": []
+     },
+     {
+      "tag": "0:54-1:00",
+      "lines": []
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, warm, the shepherd gathers",
+      "lines": []
+     },
+     {
+      "tag": "1:00-1:24",
+      "lines": [
+       "목자 같이 양 무리를",
+       "품에 안으시네",
+       "무거운 짐 나눠 지고",
+       "서로 안아 주리"
+      ]
+     },
+     {
+      "tag": "Verse 4",
+      "lines": []
+     },
+     {
+      "tag": "full choir and organ, rising with strength, same melody",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:48",
+      "lines": [
+       "주를 앙망하는 우리",
+       "새 힘을 얻으리",
+       "날개 치며 솟아올라",
+       "지치지 않으리"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final cadence, held chord",
+      "lines": []
+     },
+     {
+      "tag": "1:48-1:56",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/아침-찬송-3집-morning-hymns-vol-3/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "우슬초로 씻으소서",
+    "file": "04_wash_me_with_hyssop.mp3",
+    "src": "/mnt/external/suno-playlist/input/MORNING_HYMNS_VOL3/tracks/04_wash_me_with_hyssop.mp3",
+    "ms": 113736,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "short two-bar introduction",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:07",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "small choir in unison, soft piano",
+      "lines": []
+     },
+     {
+      "tag": "0:07-0:35",
+      "lines": [
+       "주의 인자 따라 나를",
+       "불쌍히 여기소서",
+       "많은 긍휼 따라 내 죄",
+       "깨끗이 지우소서"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, quiet and contrite",
+      "lines": []
+     },
+     {
+      "tag": "0:35-1:03",
+      "lines": [
+       "내 죄 항상 앞에 있어",
+       "숨길 곳이 없으니",
+       "주께만 범죄한 나를",
+       "주여 고쳐 주소서"
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "piano alone, two quiet bars",
+      "lines": []
+     },
+     {
+      "tag": "1:03-1:10",
+      "lines": []
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, a little warmer",
+      "lines": []
+     },
+     {
+      "tag": "1:10-1:38",
+      "lines": [
+       "우슬초로 나를 씻어",
+       "눈보다 희게 하사",
+       "정한 마음 새로 지어",
+       "새 영 부어 주소서"
+      ]
+     },
+     {
+      "tag": "Verse 4",
+      "lines": []
+     },
+     {
+      "tag": "full choir and soft organ, restored, same melody",
+      "lines": []
+     },
+     {
+      "tag": "1:38-2:06",
+      "lines": [
+       "구원의 기쁨 돌리사",
+       "내 입 찬송하리니",
+       "길 잃은 이 만날 때에",
+       "주의 길 전하리라"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final cadence, held chord",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:15",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/아침-찬송-3집-morning-hymns-vol-3/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "마음을 새롭게 하사",
+    "file": "05_renew_our_minds.mp3",
+    "src": "/mnt/external/suno-playlist/input/MORNING_HYMNS_VOL3/tracks/05_renew_our_minds.mp3",
+    "ms": 96504,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "short two-bar introduction",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:06",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "full choir in unison, organ and piano",
+      "lines": []
+     },
+     {
+      "tag": "0:06-0:26",
+      "lines": [
+       "주 크신 자비로",
+       "우리 부르시니",
+       "이 몸 산 제물로 드려",
+       "거룩히 섬기세"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, thoughtful",
+      "lines": []
+     },
+     {
+      "tag": "0:26-0:46",
+      "lines": [
+       "세상 닮지 않고",
+       "새 마음 받아서",
+       "주의 선한 뜻 분별해",
+       "그 길 따라가세"
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "organ plays the last line",
+      "lines": []
+     },
+     {
+      "tag": "0:46-0:52",
+      "lines": []
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "SATB harmony, warm and tender",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:12",
+      "lines": [
+       "우는 이와 울고",
+       "웃는 이와 웃고",
+       "주린 이웃 떡을 나눠",
+       "선으로 이기세"
+      ]
+     },
+     {
+      "tag": "Verse 4",
+      "lines": []
+     },
+     {
+      "tag": "full choir and organ, resolved, same melody",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:32",
+      "lines": [
+       "오늘 이 하루도",
+       "주 앞에 드리니",
+       "우리 삶 산 예배 되어",
+       "주 영광 빛나리"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final cadence, held chord",
+      "lines": []
+     },
+     {
+      "tag": "1:32-1:40",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/아침-찬송-3집-morning-hymns-vol-3/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "양 우리의 아침",
+    "file": "06_morning_at_the_sheepfold.mp3",
+    "src": "/mnt/external/suno-playlist/input/MORNING_HYMNS_VOL3/tracks/06_morning_at_the_sheepfold.mp3",
+    "ms": 214944,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/아침-찬송-3집-morning-hymns-vol-3/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "잔잔해진 바다",
+    "file": "07_the_sea_grown_still.mp3",
+    "src": "/mnt/external/suno-playlist/input/MORNING_HYMNS_VOL3/tracks/07_the_sea_grown_still.mp3",
+    "ms": 258000,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/아침-찬송-3집-morning-hymns-vol-3/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "광야에 난 길",
+    "file": "08_road_through_the_wilderness.mp3",
+    "src": "/mnt/external/suno-playlist/input/MORNING_HYMNS_VOL3/tracks/08_road_through_the_wilderness.mp3",
+    "ms": 154320,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/아침-찬송-3집-morning-hymns-vol-3/08.mp3"
+   },
+   {
+    "n": 9,
+    "title": "눈 내린 돌담",
+    "file": "09_snow_on_the_stone_wall.mp3",
+    "src": "/mnt/external/suno-playlist/input/MORNING_HYMNS_VOL3/tracks/09_snow_on_the_stone_wall.mp3",
+    "ms": 165000,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/아침-찬송-3집-morning-hymns-vol-3/09.mp3"
+   },
+   {
+    "n": 10,
+    "title": "새 하루의 떡",
+    "file": "10_bread_for_a_new_day.mp3",
+    "src": "/mnt/external/suno-playlist/input/MORNING_HYMNS_VOL3/tracks/10_bread_for_a_new_day.mp3",
+    "ms": 174144,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/아침-찬송-3집-morning-hymns-vol-3/10.mp3"
+   }
+  ],
+  "updated_at": 1794661956,
+  "cover_source": "https://i.ytimg.com/vi/7mYh2fJZIdo/maxresdefault.jpg",
+  "cover_match": 0.88,
+  "cover_how": "album",
+  "total_ms": 1475184,
+  "cover_file": "아침-찬송-3집-morning-hymns-vol-3.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/아침-찬송-3집-morning-hymns-vol-3.jpg?v=47ab1507"
  },
  {
   "folder": "Moonflow Night",
