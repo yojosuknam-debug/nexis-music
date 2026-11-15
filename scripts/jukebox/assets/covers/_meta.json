@@ -164,8 +164,10 @@
   "match_score": 1.0
  },
  "굳이-이게-명곡이야-is-this-really-a-masterpiece-gudi_song2": {
-  "kind": "youtube",
-  "src": "https://i.ytimg.com/vi/aFe9q11aMBw/maxresdefault.jpg"
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Gudi_Ige_Myeonggogiya_project/thumbnail.png",
+  "project": "Gudi_Ige_Myeonggogiya_project",
+  "match_score": 1.0
  },
  "han-heung-jeong-한-흥-정": {
   "kind": "project_thumbnail",
@@ -951,6 +953,18 @@
   "kind": "project_thumbnail",
   "src": "/mnt/external/suno-playlist/output/아침_찬송_3집_(Morning_Hymns,_Vol._3)_project/thumbnail.png",
   "project": "아침_찬송_3집_(Morning_Hymns,_Vol._3)_project",
+  "match_score": 1.0
+ },
+ "헌금송-1집-offering-hymns-songs-vol-1": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/헌금송_1집_(Offering_Hymns_&_Songs,_Vol._1)_project/thumbnail.png",
+  "project": "헌금송_1집_(Offering_Hymns_&_Songs,_Vol._1)_project",
+  "match_score": 1.0
+ },
+ "헌금송-2집-offering-hymns-songs-vol-2": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/헌금송_2집_(Offering_Hymns_&_Songs,_Vol._2)_project/thumbnail.png",
+  "project": "헌금송_2집_(Offering_Hymns_&_Songs,_Vol._2)_project",
   "match_score": 1.0
  }
 }
