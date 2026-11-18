@@ -1,0 +1,7 @@
+# Vercel 배포에 올리지 않는 것 — 사이트(app·public·data)는 안 쓰는 작업용 파일.
+# 배포 저장공간 10GB 한도 절약(2026-11-18). 앱 코드가 아래 폴더를 import 하면 여기서 빼야 함.
+scripts/
+output/
+docs/
+.github/
+*.md

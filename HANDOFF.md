@@ -1,5 +1,10 @@
 # HANDOFF — 창 인계 기록 (최근 5개, 새 항목이 맨 위)
 
+## 2026-11-18 · end — Vercel 배포 저장공간 절약: .vercelignore 신설 (DESKTOP-8ISD10M)
+- 상태: 이번 커밋(`.vercelignore` 신규) push → Actions(Deploy to Vercel) 자동 배포
+- 한 일: Vercel 무료 팀 배포 저장공간 10GB 도달 메일 대응. music 배포에 사이트가 안 쓰는 `scripts/`·`output/`·`docs/`·`.github/`·`*.md` 제외(배포 1회 약 40MB 절감). app 코드·next.config가 이 폴더를 참조 안 함 확인.
+- 주의: 앞으로 app 코드가 scripts/ 등을 import 하면 `.vercelignore`에서 빼야 빌드가 깨지지 않음.
+
 ## 2026-11-15 · end — 헌금송 1·2집 주크박스·예배 대장 반영 + /px 헌금송 조사 (DESKTOP-8ISD10M)
 - 상태: 커밋 21bd3ee(주크박스, 데스크탑 `run_all.py --no-push` 후 수동 커밋)·49682d8(music.json)·이번 커밋(조사 문서) push · Vercel 배포 → radio.json에 헌금송 반영 확인
 - 한 일: `/px` 조사 `docs/research/2026-11-15_헌금송-성가대특송-작법.md`. youtube-playlist 헌금송 1·2집(stillwaters, 15곡) 업로드 후 주크박스 반영. `music_library.py sync` → 35곡 신규(밀려 있던 아침 찬송 3집·Daily Walk 3집 20곡 + 헌금송 15곡). **헌금송 15곡은 license.status=hold**(예배 선곡 제외, 사용자 결정 — 온라인 예배엔 헌금 순서 없음). 14일×한·영 pick_songs 모의에서 헌금송 0회.
@@ -29,13 +34,3 @@
 - 확인 못 한 것: 매일 유튜브 목록 갱신→deploy.yml 호출(첫 실전 11-10 오후, 그날 새 영상이 있어야 돎) · 11-10 18:30 크론 자동 실행 · 새 앨범 음원을 귀로 듣는 확인.
 - 다음 할 일: 11-10 저녁 `gh run list`와 미니PC `~/jukebox-auto.log` 확인. 미조치: GUDI_SONG2 페이지 주소가 발행 때 바뀌는 문제(제목이 '굳이 이걸 노래로'·'굳이 이게 명곡이야'로 번갈아 잡힘).
 - 주의: `/jukebox`·`run_all.py`를 손으로 돌리면 유튜브 공개 여부와 상관없이 폴더 전체를 발행(유튜브 필터는 자동 실행만). 표지 되돌리기 = f3b3cfb revert. 미커밋 `docs/research/*`는 이 창 것 아님.
-
-## 2026-11-07 00:40 · end — 예배 채널에 예배 찬송 곡별 업로드(가사·해설) (DESKTOP-8ISD10M)
-- 상태: 이 커밋(`scripts/worship/hymn_upload.py` 신규 + 이 메모) · 미니PC 실행본은 `/mnt/external/nexis-worship/hymn_upload.py`(레포와 같은 내용, scp 복사)
-- 한 일: 예배에서 실제로 쓴 10곡(보컬 6 + 기도 연주 4: 1집·Daily Walk 각 2·4·5·6·8번)을 '매일 온라인 예배' 채널에 공개 업로드. 영상 = Still Waters 업로드 때 만든 `/mnt/external/suno-playlist/output/<앨범>_project/tracks_mp4/track_NN.mp4`(mp3와 길이 대조 OK). 설명 = 가사 전 절 + 곡 해설(album.md Track Notes 기준) + 방송 시간표 + AI 제작 표기. 재생목록 '예배 찬송 · 가사'·'Worship Hymns with Lyrics' 새로 만듦. 채널에 기존 찬송 영상 없음 → 중복 0.
-  - 11-07 00:20 2곡 올림: 마르지 않는 샘 https://youtu.be/Cc4u6xBvmZw · As Watchmen Wait for Morning https://youtu.be/NyPFIZWsJmE (public 확인)
-- 레포 밖 변경: 미니PC `/mnt/external/nexis-worship/hymn_upload.py`·`hymn_uploads_state.json`(올린 곡 기록)·`hymn_upload_loop.sh`(nohup 백그라운드, 매일 16:25 최대 5곡, 다 올리면 종료, 최대 7일) · 로그 `logs/hymn_upload.log`. 크론·컨테이너 안 건드림.
-- 할당량: 예배 토큰 = autovid GCP 프로젝트(16채널 공유), 업로드 1곡≈1,650유닛 → 송출 보호 위해 16:25(초기화 17:00 직전, 방송 없는 시간)에만 올림.
-- 확인 못 한 것: 남은 8곡 실제 업로드(11-07 16:25 5곡, 11-08 16:25 3곡 예정 — 텔레그램 알림) · containsSyntheticMedia 값이 조회 응답에 안 나옴(설명엔 AI 표기 있음) · 영상 처리 완료 후 화면·소리.
-- 다음 할 일: 텔레그램 알림 확인. 미니PC 재부팅되면 루프가 죽음 → `nohup setsid /mnt/external/nexis-worship/hymn_upload_loop.sh &` 다시(이미 올린 곡은 건너뜀). 새 찬송이 예배에 쓰이면 `SONGS`에 추가.
-- 주의: 미커밋 `docs/research/*`는 이 창 것 아님.
