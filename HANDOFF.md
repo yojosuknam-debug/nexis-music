@@ -1,7 +1,7 @@
 # HANDOFF — 창 인계 기록 (최근 5개, 새 항목이 맨 위)
 
 ## 2026-11-18 · end — Vercel 배포 저장공간 절약: .vercelignore 신설 (DESKTOP-8ISD10M)
-- 상태: 이번 커밋(`.vercelignore` 신규) push → Actions(Deploy to Vercel) 자동 배포
+- 상태: e594019(`.vercelignore` 신규) push · 배포는 안 돌았음(deploy.yml paths 필터에 .vercelignore 없음) → 다음 app/public 변경 배포 때 자동 적용. 화면 변화 없는 변경이라 강제 배포 안 함
 - 한 일: Vercel 무료 팀 배포 저장공간 10GB 도달 메일 대응. music 배포에 사이트가 안 쓰는 `scripts/`·`output/`·`docs/`·`.github/`·`*.md` 제외(배포 1회 약 40MB 절감). app 코드·next.config가 이 폴더를 참조 안 함 확인.
 - 주의: 앞으로 app 코드가 scripts/ 등을 import 하면 `.vercelignore`에서 빼야 빌드가 깨지지 않음.
 
