@@ -966,5 +966,41 @@
   "src": "/mnt/external/suno-playlist/output/헌금송_2집_(Offering_Hymns_&_Songs,_Vol._2)_project/thumbnail.png",
   "project": "헌금송_2집_(Offering_Hymns_&_Songs,_Vol._2)_project",
   "match_score": 1.0
+ },
+ "every-voice-tonight": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Every_Voice_Tonight_project/thumbnail.png",
+  "project": "Every_Voice_Tonight_project",
+  "match_score": 1.0
+ },
+ "cozy-lofi-christmas-snowy-window-beats-to-study-relax": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Cozy_Lofi_Christmas_(Snowy_Window_Beats_to_Study_&_Relax)_project/thumbnail.png",
+  "project": "Cozy_Lofi_Christmas_(Snowy_Window_Beats_to_Study_&_Relax)_project",
+  "match_score": 1.0
+ },
+ "눈-내린-한옥의-캐럴-hanok-snow-carols": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/눈_내린_한옥의_캐럴_(Hanok_Snow_Carols)_project/thumbnail.png",
+  "project": "눈_내린_한옥의_캐럴_(Hanok_Snow_Carols)_project",
+  "match_score": 1.0
+ },
+ "같이-불러요-메리-크리스마스-sing-along-merry-christmas": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/같이_불러요,_메리_크리스마스_(Sing_Along,_Merry_Christmas)_project/thumbnail.png",
+  "project": "같이_불러요,_메리_크리스마스_(Sing_Along,_Merry_Christmas)_project",
+  "match_score": 1.0
+ },
+ "merry-glow-k-pop-크리스마스-시즌송-k-pop-winter-carols": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Merry_Glow_-_K-Pop_크리스마스_시즌송_(K-Pop_Winter_Carols)_project/thumbnail.png",
+  "project": "Merry_Glow_-_K-Pop_크리스마스_시즌송_(K-Pop_Winter_Carols)_project",
+  "match_score": 1.0
+ },
+ "오래도록-크리스마스-christmas-through-the-decades": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/오래도록_크리스마스_(Christmas_Through_the_Decades)_project/thumbnail.png",
+  "project": "오래도록_크리스마스_(Christmas_Through_the_Decades)_project",
+  "match_score": 1.0
  }
 }
