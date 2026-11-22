@@ -25,7 +25,16 @@ BASE = Path("/mnt/external/nexis-worship")
 TOKEN = BASE / ".youtube_token_live.pickle"
 STATE = BASE / "hymn_uploads_state.json"
 SUNO = Path("/mnt/external/suno-playlist/output")
-ALBUM_DIR = {"ko": "아침_찬송_1집_(Morning_Hymns,_Vol._1)_project", "en": "Hymns_for_the_Daily_Walk,_Vol._1_project"}
+# 앨범 id → (언어, suno-playlist output 프로젝트 폴더, 앨범 이름). 1집 10곡은 아래 SONGS 에 손으로, 나머지는 hymn_songs.json.
+ALBUMS = {
+    "ko1": ("ko", "아침_찬송_1집_(Morning_Hymns,_Vol._1)_project", "아침 찬송 1집 (Morning Hymns, Vol. 1)"),
+    "en1": ("en", "Hymns_for_the_Daily_Walk,_Vol._1_project", "Hymns for the Daily Walk, Vol. 1"),
+    "ko2": ("ko", "아침_찬송_2집_(Morning_Hymns,_Vol._2)_project", "아침 찬송 2집 (Morning Hymns, Vol. 2)"),
+    "en2": ("en", "Hymns_for_the_Daily_Walk,_Vol._2_project", "Hymns for the Daily Walk, Vol. 2"),
+    "ko3": ("ko", "아침_찬송_3집_(Morning_Hymns,_Vol._3)_project", "아침 찬송 3집 (Morning Hymns, Vol. 3)"),
+    "en3": ("en", "Hymns_for_the_Daily_Walk,_Vol._3_project", "Hymns for the Daily Walk, Vol. 3"),
+}
+EXTRA = Path(__file__).resolve().parent / "hymn_songs.json"   # 2·3집 등 추가 곡(예배에서 실제로 부른 곡)
 PLAYLIST = {"ko": ("예배 찬송 · 가사", "매일 온라인 예배에서 함께 부른 찬송과 기도 연주곡입니다. 가사와 곡 해설은 각 영상 설명에 있습니다."),
             "en": ("Worship Hymns with Lyrics", "Hymns and prayer pieces we sing and pray with in the Daily Online Worship. Lyrics and notes are in each description.")}
 
@@ -35,12 +44,20 @@ SCHED_KO = ["⛪ 매일 온라인 예배 — 날마다 새 예배를 드립니�
 SCHED_EN = ["⛪ Daily Online Worship — a new service every day (Korea time)",
             "English  1 PM · 7 PM · 1 AM · 7 AM",
             "한국어  10 AM · 4 PM · 10 PM · 4 AM"]
-MADE_KO = ["ℹ️ 만든 과정",
-           "가사는 성경 본문을 바탕으로 새로 썼습니다(기존 찬송가·CCM 가사는 쓰지 않았습니다). 곡과 노래는 AI 음악 도구(Suno 유료 플랜)로 만든 자작곡입니다.",
-           "🎵 Still Waters (yojosuknam) · 앨범 「아침 찬송 1집 (Morning Hymns, Vol. 1)」"]
-MADE_EN = ["ℹ️ How this was made",
-           "The words are newly written from Scripture (no existing hymn or CCM text is used). The music and voices were made with an AI music tool (Suno, paid plan) as original songs.",
-           "🎵 Still Waters (yojosuknam) · album “Hymns for the Daily Walk, Vol. 1”"]
+def made(album: str) -> list[str]:
+    lang, _, name = ALBUMS[album]
+    if lang == "ko":
+        return ["ℹ️ 만든 과정",
+                "가사는 성경 본문을 바탕으로 새로 썼습니다(기존 찬송가·CCM 가사는 쓰지 않았습니다). 곡과 노래는 AI 음악 도구(Suno 유료 플랜)로 만든 자작곡입니다.",
+                f"🎵 Still Waters (yojosuknam) · 앨범 「{name}」"]
+    return ["ℹ️ How this was made",
+            "The words are newly written from Scripture (no existing hymn or CCM text is used). The music and voices were made with an AI music tool (Suno, paid plan) as original songs.",
+            f"🎵 Still Waters (yojosuknam) · album “{name}”"]
+
+
+def key_of(album: str, n: int) -> str:
+    """1집 처음 10곡은 처음 올릴 때 쓴 키(ko04 등) 그대로 — 상태 파일과 맞아야 다시 안 올린다."""
+    return f"{ALBUMS[album][0]}{n:02d}" if album in ("ko1", "en1") and n in (2, 4, 5, 6, 8) else f"{album}-{n:02d}"
 TAGS_KO = ["찬송가", "자작 찬송가", "새 찬송", "찬송 가사", "예배 찬송", "온라인 예배", "매일 예배", "아침 예배", "회중 찬송",
            "오르간 찬송", "피아노 찬송", "기도 음악", "묵상 음악", "Still Waters", "Korean hymn"]
 TAGS_EN = ["hymn", "hymns", "new hymns", "original hymns", "hymn with lyrics", "congregational hymn", "traditional hymn",
@@ -55,8 +72,9 @@ def verses(text: str, ko: bool) -> list[str]:
     return out
 
 
-def vocal(lang, n, title, sub, ref, about, lyrics, confess, flow, music, place, sing, extra_tags):
+def vocal(lang, n, title, sub, ref, about, lyrics, confess, flow, music, place, sing, extra_tags, album=None):
     ko = lang == "ko"
+    album = album or lang + "1"
     t = (f"{title} (가사) · {ref} | 자작 찬송가 · 매일 온라인 예배" if ko
          else f"{title} (Lyrics) · {ref} | New Hymn · Daily Online Worship")
     d = [f"{title} — {sub}", "", about, "",
@@ -69,17 +87,21 @@ def vocal(lang, n, title, sub, ref, about, lyrics, confess, flow, music, place, 
          f"• {'예배에서' if ko else 'In our worship'}: {place}", "",
          f"🙏 {'이렇게 불러 보세요' if ko else 'How to sing it'}", sing, "",
          *(SCHED_KO if ko else SCHED_EN), "",
-         *(MADE_KO if ko else MADE_EN), "",
+         *made(album), "",
          ("#찬송가 #자작찬송가 #찬송가사 #온라인예배 #매일예배 " if ko else "#hymn #newhymn #hymnlyrics #onlineworship #dailyworship ")
          + " ".join("#" + x.replace(" ", "") for x in extra_tags)]
-    return {"key": f"{lang}{n:02d}", "lang": lang, "n": n, "title": t, "desc": "\n".join(d),
+    return {"key": key_of(album, n), "lang": lang, "n": n, "dir": ALBUMS[album][1], "title": t, "desc": "\n".join(d),
             "tags": (TAGS_KO if ko else TAGS_EN) + extra_tags}
 
 
-def instr(lang, n, title, sub, about, scene, music, place, pray, ref, extra_tags):
+def instr(lang, n, title, sub, about, scene, music, place, pray, ref, extra_tags, album=None, label=None):
     ko = lang == "ko"
-    t = (f"{title} · 기도 연주곡 (피아노·{'현악' if '현악' in music else '오르간'}) | 매일 온라인 예배" if ko
-         else f"{title} · Prayer Piano Hymn | Daily Online Worship")
+    album = album or lang + "1"
+    if label:
+        t = f"{title} · 기도 연주곡 ({label}) | 매일 온라인 예배" if ko else f"{title} · Prayer {label} | Daily Online Worship"
+    else:   # 1집 처음 10곡 — 이미 올린 제목 그대로
+        t = (f"{title} · 기도 연주곡 (피아노·{'현악' if '현악' in music else '오르간'}) | 매일 온라인 예배" if ko
+             else f"{title} · Prayer Piano Hymn | Daily Online Worship")
     d = [f"{title} — {sub}", "", about, "",
          f"🖼 {'장면' if ko else 'The scene'}", scene, "",
          f"✍️ {'곡 해설' if ko else 'About this piece'}",
@@ -90,10 +112,10 @@ def instr(lang, n, title, sub, about, scene, music, place, pray, ref, extra_tags
          ("가사가 없는 곡입니다. 위 기도 제목을 하나씩 떠올리며 조용히 기도하거나, 말씀을 읽는 동안 배경으로 틀어 두세요." if ko
           else "There are no words in this piece. Take the prayers above one at a time, or let it play quietly while you read Scripture."), "",
          *(SCHED_KO if ko else SCHED_EN), "",
-         *(MADE_KO if ko else MADE_EN), "",
+         *made(album), "",
          ("#기도음악 #기도연주곡 #찬송피아노 #묵상음악 #온라인예배 " if ko else "#prayermusic #hymnpiano #devotionalmusic #onlineworship #dailyworship ")
          + " ".join("#" + x.replace(" ", "") for x in extra_tags)]
-    return {"key": f"{lang}{n:02d}", "lang": lang, "n": n, "title": t, "desc": "\n".join(d),
+    return {"key": key_of(album, n), "lang": lang, "n": n, "dir": ALBUMS[album][1], "title": t, "desc": "\n".join(d),
             "tags": (TAGS_KO if ko else TAGS_EN) + extra_tags}
 
 
@@ -316,6 +338,20 @@ Source and end of every light.""",
 ]
 
 
+def load_extra() -> list[dict]:
+    out = []
+    for x in (json.loads(EXTRA.read_text(encoding="utf-8")) if EXTRA.exists() else []):
+        x = dict(x)
+        kind = x.pop("kind")
+        assert x["lang"] == ALBUMS[x["album"]][0], (x["album"], x["n"])
+        out.append(vocal(**x) if kind == "vocal" else instr(**x))
+    return out
+
+
+SONGS += load_extra()
+assert len({s["key"] for s in SONGS}) == len(SONGS), "곡 키 중복"
+
+
 def youtube():
     from google.auth.transport.requests import Request
     from googleapiclient.discovery import build
@@ -373,7 +409,7 @@ def main() -> int:
     todo = [s for s in SONGS if s["key"] not in state]
     if a.dry_run:
         for s in SONGS:
-            v = SUNO / ALBUM_DIR[s["lang"]] / "tracks_mp4" / f"track_{s['n']:02d}.mp4"
+            v = SUNO / s["dir"] / "tracks_mp4" / f"track_{s['n']:02d}.mp4"
             print(("done " if s["key"] in state else "todo ") + s["key"], "mp4" if v.exists() else "NO-MP4", len(s["desc"]), s["title"])
         return 0
     if not todo:
@@ -391,7 +427,7 @@ def main() -> int:
         if s["title"] in have:                       # 채널에 이미 같은 제목 → 중복 업로드 안 함
             state[s["key"]] = "exists"
             continue
-        v = SUNO / ALBUM_DIR[s["lang"]] / "tracks_mp4" / f"track_{s['n']:02d}.mp4"
+        v = SUNO / s["dir"] / "tracks_mp4" / f"track_{s['n']:02d}.mp4"
         body = {"snippet": {"title": s["title"], "description": s["desc"], "tags": s["tags"], "categoryId": "10",
                             "defaultLanguage": s["lang"], "defaultAudioLanguage": s["lang"]},
                 "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False,

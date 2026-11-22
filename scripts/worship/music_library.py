@@ -15,6 +15,7 @@
 """
 from __future__ import annotations
 
+import datetime as dt
 import json
 import re
 import sys
@@ -27,6 +28,27 @@ LEDGER = HERE / "music.json"
 RADIO_JSON = "https://music.yojosuknam.com/album/radio.json"
 OWN_BASIS = "자작곡(Still Waters 채널, Suno 유료 플랜 공식 다운로드 — 운영자 확인)"
 HYMN_ALBUM = re.compile(r"찬송|hymn", re.I)   # 앨범 제목에 있으면 그 앨범 보컬 곡 = 자작 찬송가(hymn.md 5장)
+# 절기 곡(season) — 그 기간에만 예배에 나오고, 기간 중엔 여는 찬송·기도회 배경에 먼저 쓰인다(11-22 사용자: 성탄 찬송은 12월에만).
+SEASON_ALBUM = {"christmas": re.compile(r"성탄|대림|christmas|advent", re.I)}
+
+
+def season_window(season: str, year: int) -> tuple[dt.date, dt.date]:
+    """christmas = 대림절 첫 주일(성탄 전 넷째 주일) ~ 1월 5일(성탄 12일)."""
+    if season != "christmas":
+        raise ValueError(season)
+    xmas = dt.date(year, 12, 25)
+    advent1 = xmas - dt.timedelta(days=(xmas.weekday() + 1) % 7 or 7) - dt.timedelta(weeks=3)
+    return advent1, dt.date(year + 1, 1, 5)
+
+
+def in_season(season: str | None, day: dt.date) -> bool:
+    if not season:
+        return True
+    for y in (day.year - 1, day.year):
+        a, b = season_window(season, y)
+        if a <= day <= b:
+            return True
+    return False
 
 # 예배 자리별 쓸 수 있는 종류(앞쪽 우선). 비면 FALLBACK 으로.
 SLOT_TYPES = {"open": ["hymn_pd", "hymn_own"], "response": ["hymn_own", "ccm"], "prayer": ["instrumental"]}
@@ -92,7 +114,9 @@ def sync() -> None:
                 have[key].update(base)
                 continue
             hymn_album = bool(HYMN_ALBUM.search(a["title"]))
-            have[key] = {**base, "type": "instrumental" if inst else ("hymn_own" if hymn_album else "ccm"),
+            season = next((k for k, r in SEASON_ALBUM.items() if hymn_album and r.search(a["title"])), None)
+            have[key] = {**base, **({"season": season} if season else {}),
+                         "type": "instrumental" if inst else ("hymn_own" if hymn_album else "ccm"),
                          "lang": "none" if inst else guess_lang(lines),
                          "credits": {"lyricist": "운영자", "composer": "운영자(Suno)", "arranger": "", "translator": ""},
                          "license": {"status": "verified", "basis": OWN_BASIS, "evidence": t.get("youtube", "")}}
@@ -140,11 +164,14 @@ def lyrics_cues(folder: Path, lyrics_file: str, total_sec: float) -> list[dict]:
     return out
 
 
-def candidates(slot: str, lang: str, types: list[str]) -> list[dict]:
+def candidates(slot: str, lang: str, types: list[str], day: dt.date | None = None) -> list[dict]:
+    """day 를 주면 절기 밖 절기 곡은 빼고, 절기 중이면 그 절기 곡이 있는 한 그것만(prefer_season=True 인 자리)."""
     lo, hi = SLOT_SEC[slot]
     out = []
     for x in load():
         if x.get("license", {}).get("status") != "verified" or x["type"] not in types:
+            continue
+        if day and not in_season(x.get("season"), day):
             continue
         if x["type"] != "instrumental" and x.get("lang") != lang:
             continue
@@ -155,10 +182,22 @@ def candidates(slot: str, lang: str, types: list[str]) -> list[dict]:
     return sorted(out, key=lambda x: x["id"])
 
 
+SEASON_FIRST = {"open", "prayer"}   # 절기 중 절기 곡을 먼저 쓰는 자리(응답 찬양은 평소 곡과 섞음)
+
+
+def season_first(cand: list[dict], slot: str, day: dt.date) -> list[dict]:
+    if slot in SEASON_FIRST:
+        sea = [x for x in cand if x.get("season")]
+        if sea:
+            return sea
+    return cand
+
+
 def pick(slot: str, lang: str, ordinal: int, avoid: set[str] = frozenset()) -> dict:
-    """그날 그 자리의 곡 1개 — 종류 우선순위대로, 날짜로 돌려 가며. 없으면 FALLBACK."""
+    """그날 그 자리의 곡 1개 — 종류 우선순위대로, 날짜로 돌려 가며. 없으면 FALLBACK. 절기 곡은 그 기간에만."""
+    day = dt.date.fromordinal(ordinal)
     for types in [[t] for t in SLOT_TYPES[slot]] + ([FALLBACK[slot]] if FALLBACK[slot] else []):
-        cand = [x for x in candidates(slot, lang, types) if x["id"] not in avoid]
+        cand = season_first([x for x in candidates(slot, lang, types, day) if x["id"] not in avoid], slot, day)
         if cand:
             return dict(cand[(ordinal * 7 + len(slot)) % len(cand)])
     raise RuntimeError(f"'{slot}' 자리에 쓸 {lang} 곡이 대장에 없습니다(verified)")
@@ -170,8 +209,10 @@ def prayer_bed(lang: str, ordinal: int, items: list[dict]) -> dict | None:
     lo, hi = SLOT_SEC["prayer"]
     cand = sorted((x for x in items if x.get("type") == "instrumental" and x.get("source") == "stillwaters"
                    and langs.get(x.get("slug")) == lang and not x.get("instrumental_of")
-                   and x.get("license", {}).get("status") == "verified" and lo <= (x.get("ms") or 0) / 1000 <= hi),
+                   and x.get("license", {}).get("status") == "verified" and lo <= (x.get("ms") or 0) / 1000 <= hi
+                   and in_season(x.get("season"), dt.date.fromordinal(ordinal))),
                   key=lambda x: x["id"])
+    cand = season_first(cand, "prayer", dt.date.fromordinal(ordinal))
     return dict(cand[(ordinal * 7 + 6) % len(cand)]) if cand else None
 
 
