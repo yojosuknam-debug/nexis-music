@@ -8732,6 +8732,1377 @@
   "cover_url": "https://audio.yojosuknam.com/cover/도시-굿판-city-gut-party.jpg?v=45937424"
  },
  {
+  "folder": "COAT_POCKETS",
+  "slug": "외투-주머니-속에-what-the-pockets-kept",
+  "title": "외투 주머니 속에 (What the Pockets Kept)",
+  "genre": "90~00s 한국 겨울 발라드 (피아노·스트링 발라드·통기타 포크·보사노바·모던록 발라드·R&B 발라드·남녀 듀엣·챔버 포크 왈츠·피아노밴드 파워 발라드, 첫 추위)",
+  "channel": "쉬어가는 감성 음악 (gamseong)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "알사탕 세 알",
+    "file": "01_three_hard_candies.mp3",
+    "src": "/mnt/external/suno-playlist/input/COAT_POCKETS/tracks/01_three_hard_candies.mp3",
+    "ms": 257880,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano, soft bell tone",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:20",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:20-0:58",
+      "lines": [
+       "첫 추위가 온 아침",
+       "엄마 외투를 꺼냈어",
+       "세탁소 가는 길에",
+       "주머니가 바스락",
+       "손을 넣어 보니까",
+       "알사탕 세 알이 있네"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:14",
+      "lines": [
+       "기침하던 버스 안",
+       "내 입에 하나 넣어 주던",
+       "그 손이 떠올라서",
+       "한참을 서 있었어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:14-1:48",
+      "lines": [
+       "엄마 아직 있어요",
+       "알사탕 세 알",
+       "나 이제 서른다섯인데",
+       "아직도 날 위한 거야",
+       "엄마 고마워요",
+       "말로는 못 해도",
+       "주머니 속 작은 달콤함",
+       "오늘은 내가 받을게"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:48-2:22",
+      "lines": [
+       "포장지는 빛이 바래",
+       "글씨도 다 지워졌고",
+       "언제 넣어 둔 건지",
+       "엄마도 모르겠대",
+       "전화기 너머 웃음",
+       "괜히 목이 메더라"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:22-2:38",
+      "lines": [
+       "추운 날엔 꼭 한 알",
+       "녹여 먹으라던 말",
+       "그 말이 이렇게",
+       "따뜻한 줄 몰랐지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:38-3:12",
+      "lines": [
+       "엄마 아직 있어요",
+       "알사탕 세 알",
+       "나 이제 서른다섯인데",
+       "아직도 날 위한 거야",
+       "엄마 고마워요",
+       "말로는 못 해도",
+       "주머니 속 작은 달콤함",
+       "오늘은 내가 받을게"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "strings swell, emotional",
+      "lines": []
+     },
+     {
+      "tag": "3:12-3:34",
+      "lines": [
+       "이번엔 내 코트에",
+       "세 알을 넣어 둘게",
+       "엄마가 기침하면",
+       "내가 꺼내 줄 거야"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, emotional crescendo",
+      "lines": []
+     },
+     {
+      "tag": "3:34-3:58",
+      "lines": [
+       "엄마 여기 있어요",
+       "알사탕 세 알",
+       "우리 둘이 나눠 먹자",
+       "겨울이 다 녹도록"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano, fade out",
+      "lines": []
+     },
+     {
+      "tag": "3:58-4:06",
+      "lines": [
+       "바스락 그 소리"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/외투-주머니-속에-what-the-pockets-kept/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "토큰 두 개",
+    "file": "02_two_bus_tokens.mp3",
+    "src": "/mnt/external/suno-playlist/input/COAT_POCKETS/tracks/02_two_bus_tokens.mp3",
+    "ms": 249096,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "fingerpicked guitar, harmonica",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:56",
+      "lines": [
+       "아버지 회색 점퍼",
+       "옷장 맨 안쪽에 있어",
+       "지퍼를 내려 보니",
+       "안주머니가 묵직해",
+       "동전인가 했는데",
+       "버스 토큰 두 개야"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:12",
+      "lines": [
+       "없어진 지가 언젠데",
+       "아직 여기 있었네요",
+       "반짝이던 구리색",
+       "손때만 남았네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:46",
+      "lines": [
+       "아버지 토큰 두 개",
+       "그때 왜 안 쓰셨어요",
+       "두 정거장 걸으시고",
+       "한 개는 남겨 두셨죠",
+       "길 잃으면 타고 오라",
+       "내 손에 쥐여 주던 말",
+       "이제야 들려요",
+       "그 걸음 소리가"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:46-2:20",
+      "lines": [
+       "비 오는 퇴근길에도",
+       "우산 하나 들고 걸어",
+       "집에 오면 웃으면서",
+       "운동 삼아 걸었대",
+       "그 말을 그냥 믿고",
+       "나는 철없이 컸지"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:20-2:36",
+      "lines": [
+       "이제 버스는 카드로",
+       "삑 하고 지나가는데",
+       "아버지 그 두 개는",
+       "어디에도 못 쓰네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:36-3:10",
+      "lines": [
+       "아버지 토큰 두 개",
+       "그때 왜 안 쓰셨어요",
+       "두 정거장 걸으시고",
+       "한 개는 남겨 두셨죠",
+       "길 잃으면 타고 오라",
+       "내 손에 쥐여 주던 말",
+       "이제야 들려요",
+       "그 걸음 소리가"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "harmonica solo, soft",
+      "lines": []
+     },
+     {
+      "tag": "3:10-3:32",
+      "lines": [
+       "이번 주말엔 아버지",
+       "제가 모시러 갈게요",
+       "걷지 마시고 이번엔",
+       "제 차에 타세요"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "double-tracked harmony, major-key lift",
+      "lines": []
+     },
+     {
+      "tag": "3:32-3:58",
+      "lines": [
+       "아버지 토큰 두 개",
+       "제 지갑에 넣을게요",
+       "길 잃을 일 없어도",
+       "늘 갖고 다닐게요"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "fingerpicked guitar, harmonica fade",
+      "lines": []
+     },
+     {
+      "tag": "3:58-4:06",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/외투-주머니-속에-what-the-pockets-kept/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "옷핀 다섯 개",
+    "file": "03_five_safety_pins.mp3",
+    "src": "/mnt/external/suno-playlist/input/COAT_POCKETS/tracks/03_five_safety_pins.mp3",
+    "ms": 223032,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar, soft shaker",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:52",
+      "lines": [
+       "할머니 누비 조끼",
+       "장롱 위에 접혀 있어",
+       "펼쳐 보니 안쪽에",
+       "옷핀이 줄을 섰네",
+       "하나 둘 셋 넷 다섯",
+       "반짝반짝 은빛"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:08",
+      "lines": [
+       "장에 가는 날이면",
+       "주머니를 꼭 잠그고",
+       "떨어질라 흘릴라",
+       "꼭꼭 여며 두셨지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:08-1:40",
+      "lines": [
+       "옷핀 다섯 개",
+       "할머니 비밀 상자",
+       "떨어진 내 단추도",
+       "터진 내 치맛단도",
+       "옷핀 하나면 돼",
+       "걱정 말라 하시고",
+       "할머니 손끝에서",
+       "겨울이 여며졌어"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:14",
+      "lines": [
+       "소풍 가던 아침엔",
+       "가방끈이 끊어져서",
+       "울먹이던 나에게",
+       "옷핀 하나 꺼내 줬지",
+       "그날 김밥보다도",
+       "그 옷핀이 좋았어"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:14-2:30",
+      "lines": [
+       "지금도 전화하면",
+       "밥은 먹었냐 묻고",
+       "아픈 데는 없냐고",
+       "그 말만 하시네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:30-3:02",
+      "lines": [
+       "옷핀 다섯 개",
+       "할머니 비밀 상자",
+       "떨어진 내 단추도",
+       "터진 내 치맛단도",
+       "옷핀 하나면 돼",
+       "걱정 말라 하시고",
+       "할머니 손끝에서",
+       "겨울이 여며졌어"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "soft nylon guitar solo, flute",
+      "lines": []
+     },
+     {
+      "tag": "3:02-3:24",
+      "lines": [
+       "이번 겨울 오시면",
+       "제가 꼭 여며 드릴게",
+       "할머니 외투 끝에",
+       "옷핀 하나 꽂아 둘게"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "two-voice harmony",
+      "lines": []
+     },
+     {
+      "tag": "3:24-3:56",
+      "lines": [
+       "옷핀 다섯 개",
+       "이제 내가 가질게",
+       "할머니처럼 나도",
+       "누군가를 여밀래"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar, fade out",
+      "lines": []
+     },
+     {
+      "tag": "3:56-4:04",
+      "lines": [
+       "하나 둘 셋 넷 다섯"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/외투-주머니-속에-what-the-pockets-kept/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "별사탕 일곱 개",
+    "file": "04_seven_star_candies.mp3",
+    "src": "/mnt/external/suno-playlist/input/COAT_POCKETS/tracks/04_seven_star_candies.mp3",
+    "ms": 237384,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "clean guitar arpeggio",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:50",
+      "lines": [
+       "형이 두고 간 야상",
+       "베란다 옷장 구석에",
+       "팔을 넣어 입어 보니",
+       "아직 형 냄새가 나",
+       "가슴 주머니 안에",
+       "작은 비닐 한 봉지"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:06",
+      "lines": [
+       "노란 분홍 하얀 별",
+       "일곱 개가 들어 있어",
+       "휴가 나올 때마다",
+       "내 손에 쏟아 주던"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, emotional crescendo",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:40",
+      "lines": [
+       "형 별사탕 일곱 개",
+       "아직 여기 남았어",
+       "건빵은 형이 먹고",
+       "별은 다 나를 줬지",
+       "형 그때 몰랐어",
+       "그게 형의 단 하나",
+       "힘든 밤 달래 주던",
+       "작은 별이었단 걸"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:14",
+      "lines": [
+       "지금은 형도 아빠",
+       "퇴근하면 녹초가 돼",
+       "전화해도 바쁘다며",
+       "짧게 끊고 말지만",
+       "목소리 끝에 묻은",
+       "그 웃음은 그대로야"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:14-2:30",
+      "lines": [
+       "이번엔 내가 갈게",
+       "조카 손에 쥐여 줄게",
+       "형이 나한테 했듯",
+       "일곱 개 별을"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:30-3:04",
+      "lines": [
+       "형 별사탕 일곱 개",
+       "아직 여기 남았어",
+       "건빵은 형이 먹고",
+       "별은 다 나를 줬지",
+       "형 그때 몰랐어",
+       "그게 형의 단 하나",
+       "힘든 밤 달래 주던",
+       "작은 별이었단 걸"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "soaring guitar solo",
+      "lines": []
+     },
+     {
+      "tag": "3:04-3:26",
+      "lines": [
+       "형 고마웠어",
+       "그 말을 이제야 해"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, gang backing vocals",
+      "lines": []
+     },
+     {
+      "tag": "3:26-3:58",
+      "lines": [
+       "형 별사탕 일곱 개",
+       "이젠 내가 나눌게",
+       "우리 둘 사이에",
+       "별이 계속 뜨도록"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "clean guitar, fade out",
+      "lines": []
+     },
+     {
+      "tag": "3:58-4:06",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/외투-주머니-속에-what-the-pockets-kept/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "필름 스물네 장",
+    "file": "05_twenty_four_frames.mp3",
+    "src": "/mnt/external/suno-playlist/input/COAT_POCKETS/tracks/05_twenty_four_frames.mp3",
+    "ms": 241320,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "electric piano, soft rimshot",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:54",
+      "lines": [
+       "언니 떡볶이 코트",
+       "나무 단추 그대로야",
+       "주머니에 손 넣으니",
+       "필름 한 통이 굴러",
+       "이천삼 년 겨울에",
+       "멈춰 있던 시간"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:54-1:10",
+      "lines": [
+       "사진관 아저씨가",
+       "아직 나온다 하길래",
+       "일주일을 기다려",
+       "봉투를 열었어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:10-1:44",
+      "lines": [
+       "필름 스물네 장",
+       "아빠 낮잠 자는 얼굴",
+       "엄마 김 오른 부엌",
+       "교복 입은 나까지",
+       "근데 언니는 없어",
+       "어느 장에도",
+       "늘 뒤에 서 있던",
+       "언니의 겨울"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:44-2:18",
+      "lines": [
+       "셔터 누르던 소리",
+       "찰칵 하던 그 겨울",
+       "웃어 보라 손짓하고",
+       "언니만 안 웃었지",
+       "그땐 그게 언니의",
+       "버릇인 줄 알았어"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:18-2:34",
+      "lines": [
+       "이제야 알 것 같아",
+       "찍는 사람 마음을",
+       "남기고 싶은 걸",
+       "다 담으려던 걸"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:34-3:08",
+      "lines": [
+       "필름 스물네 장",
+       "아빠 낮잠 자는 얼굴",
+       "엄마 김 오른 부엌",
+       "교복 입은 나까지",
+       "근데 언니는 없어",
+       "어느 장에도",
+       "늘 뒤에 서 있던",
+       "언니의 겨울"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "ad-lib run, warm harmonies",
+      "lines": []
+     },
+     {
+      "tag": "3:08-3:30",
+      "lines": [
+       "이번 주말 와 줘",
+       "이번엔 내가 찍을게",
+       "언니 웃는 얼굴로",
+       "스물다섯 번째 장"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "three-voice harmony",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:58",
+      "lines": [
+       "필름 스물네 장",
+       "그리고 한 장 더",
+       "이번엔 언니가",
+       "맨 가운데 서"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "electric piano fade, camera shutter click",
+      "lines": []
+     },
+     {
+      "tag": "3:58-4:06",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/외투-주머니-속에-what-the-pockets-kept/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "삼각김밥 비닐 두 장",
+    "file": "06_two_rice_ball_wrappers.mp3",
+    "src": "/mnt/external/suno-playlist/input/COAT_POCKETS/tracks/06_two_rice_ball_wrappers.mp3",
+    "ms": 240816,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "piano and strings",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:52",
+      "lines": [
+       "당신 남색 코트를",
+       "세탁소에 맡기려다",
+       "주머니에 손 넣으니",
+       "비닐 두 장이 나와",
+       "편의점 삼각김밥",
+       "점심이 이거였어"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:08",
+      "lines": [
+       "괜찮다고 웃던 얼굴",
+       "배부르다던 그 저녁",
+       "그 말이 거짓인 걸",
+       "왜 몰랐을까"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, harmony",
+      "lines": []
+     },
+     {
+      "tag": "1:08-1:42",
+      "lines": [
+       "비닐 두 장",
+       "접어서 넣어 둔 마음",
+       "당신 하루가 여기",
+       "고스란히 있네",
+       "미안해 고마워",
+       "오늘 밤엔 따뜻한 밥",
+       "마주 앉아 먹어요",
+       "천천히 오래"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:42-2:16",
+      "lines": [
+       "그냥 맛있어서 그래",
+       "바빠서 그런 거야",
+       "당신 걱정할까 봐",
+       "버리지도 못했어",
+       "들킨 김에 하나만",
+       "말해도 될까"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "2:16-2:32",
+      "lines": [
+       "올해도 버텼어",
+       "당신이 있어서",
+       "현관문 열 때마다",
+       "밥 냄새가 나서"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, harmony",
+      "lines": []
+     },
+     {
+      "tag": "2:32-3:06",
+      "lines": [
+       "비닐 두 장",
+       "접어서 넣어 둔 마음",
+       "당신 하루가 여기",
+       "고스란히 있네",
+       "미안해 고마워",
+       "오늘 밤엔 따뜻한 밥",
+       "마주 앉아 먹어요",
+       "천천히 오래"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "call and response",
+      "lines": []
+     },
+     {
+      "tag": "3:06-3:28",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": [
+       "내일 도시락 쌀게"
+      ]
+     },
+     {
+      "tag": "male vocal",
+      "lines": [
+       "그럼 나도 일찍 올게"
+      ]
+     },
+     {
+      "tag": "female vocal",
+      "lines": [
+       "약속해"
+      ]
+     },
+     {
+      "tag": "male vocal",
+      "lines": [
+       "약속해"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, duet",
+      "lines": []
+     },
+     {
+      "tag": "3:28-3:58",
+      "lines": [
+       "비닐 두 장",
+       "이제 그만 접어요",
+       "우리 하루는",
+       "둘이 나눠 먹어요"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano",
+      "lines": []
+     },
+     {
+      "tag": "3:58-4:06",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/외투-주머니-속에-what-the-pockets-kept/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "도토리 열한 개",
+    "file": "07_eleven_acorns.mp3",
+    "src": "/mnt/external/suno-playlist/input/COAT_POCKETS/tracks/07_eleven_acorns.mp3",
+    "ms": 231336,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "celesta, pizzicato strings, waltz",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:50",
+      "lines": [
+       "작년 겨울 분홍 패딩",
+       "소매가 짧아졌구나",
+       "작아진 옷 정리하다",
+       "주머니가 불룩해",
+       "쏟아 보니 데구루루",
+       "도토리 열한 개"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:06",
+      "lines": [
+       "공원 벤치 아래서",
+       "하나씩 주워 담던",
+       "다람쥐 겨울 밥이라",
+       "네가 그랬었지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:38",
+      "lines": [
+       "도토리 열한 개",
+       "네 작은 겨울 약속",
+       "아빠는 잊었는데",
+       "너는 다 기억하네",
+       "데구루루 굴러가",
+       "한 해가 지나가도",
+       "아빠 주머니에",
+       "넣어 둘게 하나"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:38-2:12",
+      "lines": [
+       "올해는 손을 잡고",
+       "그 공원에 다시 가자",
+       "벤치 아래 살짝 놓고",
+       "멀리서 지켜보자",
+       "다람쥐가 오면은",
+       "소리 없이 웃기"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:12-2:28",
+      "lines": [
+       "옷은 해마다 작아지고",
+       "너는 자꾸 커 가도",
+       "그 마음 하나만은",
+       "오래 그대로 있길"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:28-3:00",
+      "lines": [
+       "도토리 열한 개",
+       "네 작은 겨울 약속",
+       "아빠는 잊었는데",
+       "너는 다 기억하네",
+       "데구루루 굴러가",
+       "한 해가 지나가도",
+       "아빠 주머니에",
+       "넣어 둘게 하나"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "celesta solo, music box",
+      "lines": []
+     },
+     {
+      "tag": "3:00-3:22",
+      "lines": [
+       "열하나 중에 하나",
+       "아빠가 몰래 가질게",
+       "네가 다 크고 나면",
+       "꺼내 보여 줄게"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "sparse harmony",
+      "lines": []
+     },
+     {
+      "tag": "3:22-3:54",
+      "lines": [
+       "도토리 열한 개",
+       "우리 둘의 겨울",
+       "데구루루 굴러도",
+       "다시 너에게로"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "celesta, fade out",
+      "lines": []
+     },
+     {
+      "tag": "3:54-4:02",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/외투-주머니-속에-what-the-pockets-kept/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "여벌 단추 한 개",
+    "file": "08_one_spare_button.mp3",
+    "src": "/mnt/external/suno-playlist/input/COAT_POCKETS/tracks/08_one_spare_button.mp3",
+    "ms": 244872,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano, warm pad",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:20",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:20-0:56",
+      "lines": [
+       "할아버지 낙타색 코트",
+       "올겨울 내 몫이 됐어",
+       "할머니가 건네주며",
+       "품이 맞을 거라 했지",
+       "안감을 쓸어 보니",
+       "단추 하나 달려 있어"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:12",
+      "lines": [
+       "떨어질 날을 위해",
+       "미리 달아 둔 여벌",
+       "늘 하시던 그 말이",
+       "실밥처럼 남았네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, emotional crescendo",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:46",
+      "lines": [
+       "여벌 단추 한 개",
+       "할아버지 그 자리",
+       "누가 떨어져 나가도",
+       "다시 꿰매 주던 손",
+       "우리 집 겨울마다",
+       "풀린 데를 여미던",
+       "그 단추 하나가",
+       "이제 내 안에 있어요"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:46-2:20",
+      "lines": [
+       "고장 난 라디오도",
+       "삐걱대던 대문도",
+       "싸우고 온 내 마음도",
+       "할아버지 앞에선",
+       "하룻밤 자고 나면",
+       "멀쩡히 돌아왔지"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:20-2:36",
+      "lines": [
+       "이번 겨울 현관엔",
+       "코트들이 나란히",
+       "엄마 아빠 할머니",
+       "그 옆에 나도 서"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:36-3:10",
+      "lines": [
+       "여벌 단추 한 개",
+       "할아버지 그 자리",
+       "누가 떨어져 나가도",
+       "다시 꿰매 주던 손",
+       "우리 집 겨울마다",
+       "풀린 데를 여미던",
+       "그 단추 하나가",
+       "이제 내 안에 있어요"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "soft family choir",
+      "lines": []
+     },
+     {
+      "tag": "3:10-3:30",
+      "lines": [
+       "여미고 또 여며서",
+       "서로의 단추가 되자"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, full family choir",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:58",
+      "lines": [
+       "여벌 단추 한 개",
+       "이젠 내가 될게요",
+       "누가 떨어져 나가도",
+       "꼭 다시 꿰매 줄게"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano, fade out",
+      "lines": []
+     },
+     {
+      "tag": "3:58-4:08",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/외투-주머니-속에-what-the-pockets-kept/08.mp3"
+   }
+  ],
+  "updated_at": 1795331713,
+  "cover_source": "https://i.ytimg.com/vi/plXfbVuzCsE/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1925736,
+  "cover_file": "외투-주머니-속에-what-the-pockets-kept.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/외투-주머니-속에-what-the-pockets-kept.jpg?v=0029922f"
+ },
+ {
   "folder": "COPPER_COAST",
   "slug": "copper-coast",
   "title": "COPPER COAST",
@@ -15140,6 +16511,426 @@
   "total_ms": 1079184,
   "cover_file": "먼-종소리-distant-bells.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/먼-종소리-distant-bells.jpg?v=3d195fda"
+ },
+ {
+  "folder": "FEAR_NOT",
+  "slug": "fear-not",
+  "title": "Fear Not",
+  "genre": "Soaking Piano Worship (piano + pad) × Christian Lofi × CCM Piano Ballad / Acoustic Worship",
+  "channel": "Still Waters (`stillwaters`)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "Fear Not, for I Am with You",
+    "file": "01_fear_not_for_i_am_with_you.mp3",
+    "src": "/mnt/external/suno-playlist/input/FEAR_NOT/tracks/01_fear_not_for_i_am_with_you.mp3",
+    "ms": 218712,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/fear-not/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "Peace I Leave with You",
+    "file": "02_peace_i_leave_with_you.mp3",
+    "src": "/mnt/external/suno-playlist/input/FEAR_NOT/tracks/02_peace_i_leave_with_you.mp3",
+    "ms": 242040,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/fear-not/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "The Lord Bless You and Keep You",
+    "file": "03_the_lord_bless_you_and_keep_you.mp3",
+    "src": "/mnt/external/suno-playlist/input/FEAR_NOT/tracks/03_the_lord_bless_you_and_keep_you.mp3",
+    "ms": 296808,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "solo felt piano, rocking 6/8 arpeggios",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "soft female alto, close and breathy",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:50",
+      "lines": [
+       "The hallway clock gets louder after ten",
+       "Your shoes are lying sideways by the door",
+       "A paper sun still taped above your bed",
+       "Tomorrow's spelling words across the floor",
+       "I don't know half the roads you'll have to walk",
+       "But I know who has walked them all before"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:04",
+      "lines": [
+       "So I lean down in the lamplight",
+       "And I say it like a prayer"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:04-1:36",
+      "lines": [
+       "The Lord bless you and keep you",
+       "Through every night I cannot see",
+       "May the One who made the morning",
+       "Turn His face toward you",
+       "And give you peace",
+       "Give you peace"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "cello countermelody enters",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:08",
+      "lines": [
+       "Someday you'll pack a car I didn't buy",
+       "And learn the streets of towns I'll never see",
+       "You'll sign your name on things I'll never read",
+       "And fall asleep in rooms too far from me",
+       "But every mile you go is mapped in Him",
+       "And every door you lock, He holds the key"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:08-2:20",
+      "lines": [
+       "So I lean down in the lamplight",
+       "And I say it like a prayer"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:20-2:52",
+      "lines": [
+       "The Lord bless you and keep you",
+       "Through every night I cannot see",
+       "May the One who made the morning",
+       "Turn His face toward you",
+       "And give you peace",
+       "Give you peace"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "string pad swells, voice opens up",
+      "lines": []
+     },
+     {
+      "tag": "2:52-3:22",
+      "lines": [
+       "I can't keep you from the weather",
+       "I can't follow where you go",
+       "So I give you back to Jesus",
+       "Who knew your name before I could",
+       "And holds you where my hands can't hold"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft harmony, faint brushed pulse",
+      "lines": []
+     },
+     {
+      "tag": "3:22-3:50",
+      "lines": [
+       "The Lord bless you and keep you",
+       "Through every night I cannot see",
+       "May the One who made the morning",
+       "Turn His face toward you",
+       "And give you peace"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano, cello's last low note",
+      "lines": []
+     },
+     {
+      "tag": "3:50-4:02",
+      "lines": [
+       "Give you peace"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/fear-not/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "He Will Cover You with His Feathers",
+    "file": "04_he_will_cover_you_with_his_feathers.mp3",
+    "src": "/mnt/external/suno-playlist/input/FEAR_NOT/tracks/04_he_will_cover_you_with_his_feathers.mp3",
+    "ms": 232824,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/fear-not/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "In Peace I Will Lie Down and Sleep",
+    "file": "05_in_peace_i_will_lie_down_and_sleep.mp3",
+    "src": "/mnt/external/suno-playlist/input/FEAR_NOT/tracks/05_in_peace_i_will_lie_down_and_sleep.mp3",
+    "ms": 227712,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/fear-not/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "Do Not Worry About Tomorrow",
+    "file": "06_do_not_worry_about_tomorrow.mp3",
+    "src": "/mnt/external/suno-playlist/input/FEAR_NOT/tracks/06_do_not_worry_about_tomorrow.mp3",
+    "ms": 191880,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/fear-not/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "Be Strong and Courageous",
+    "file": "07_be_strong_and_courageous.mp3",
+    "src": "/mnt/external/suno-playlist/input/FEAR_NOT/tracks/07_be_strong_and_courageous.mp3",
+    "ms": 200880,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "fingerpicked acoustic guitar, room ambience",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "warm male tenor, conversational, acoustic and piano",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:46",
+      "lines": [
+       "An old man's sandals by the river",
+       "A nation waiting on the bank",
+       "A young man holding someone's mantle",
+       "Hearing words he didn't think he'd need",
+       "Not be ready, not be perfect",
+       "Just a promise and a step"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:46-1:00",
+      "lines": [
+       "And the same voice finds me",
+       "In a parking lot at nine"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "kick drum and bass enter",
+      "lines": []
+     },
+     {
+      "tag": "1:00-1:32",
+      "lines": [
+       "Be strong and courageous",
+       "Do not be afraid",
+       "Wherever I am going",
+       "You have gone the way",
+       "Be strong and courageous",
+       "I can hear You say",
+       "You are with me, You are with me",
+       "Every single day"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:32-2:04",
+      "lines": [
+       "Learner's permit damp inside my fist",
+       "Orange cones, a clipboard and a pen",
+       "Monday there'll be thirty names to learn",
+       "Chalk on a lesson plan I borrowed from a friend",
+       "Every first I've ever had has shaken me",
+       "But not a single one has shaken You"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:04-2:16",
+      "lines": [
+       "And the same voice finds me",
+       "Every time I start again"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:16-2:48",
+      "lines": [
+       "Be strong and courageous",
+       "Do not be afraid",
+       "Wherever I am going",
+       "You have gone the way",
+       "Be strong and courageous",
+       "I can hear You say",
+       "You are with me, You are with me",
+       "Every single day"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "floor tom build, group vocals",
+      "lines": []
+     },
+     {
+      "tag": "2:48-3:20",
+      "lines": [
+       "I will take the step",
+       "I will cross the line",
+       "Not because I'm brave enough",
+       "But because You're by my side",
+       "I will take the step",
+       "I will cross the line",
+       "Not because I'm strong enough",
+       "But because You're by my side"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, soft harmonies",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:52",
+      "lines": [
+       "Be strong and courageous",
+       "Do not be afraid",
+       "Wherever I am going",
+       "You have gone the way",
+       "Be strong and courageous",
+       "I can hear You say",
+       "You are with me, You are with me",
+       "Every single day"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "acoustic guitar alone",
+      "lines": []
+     },
+     {
+      "tag": "3:52-4:04",
+      "lines": [
+       "Wherever I go"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/fear-not/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "You Will Keep Them in Perfect Peace",
+    "file": "08_you_will_keep_them_in_perfect_peace.mp3",
+    "src": "/mnt/external/suno-playlist/input/FEAR_NOT/tracks/08_you_will_keep_them_in_perfect_peace.mp3",
+    "ms": 202872,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/fear-not/08.mp3"
+   }
+  ],
+  "updated_at": 1795331714,
+  "cover_source": "https://i.ytimg.com/vi/8p4FQYJ0S3s/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1813728,
+  "cover_file": "fear-not.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/fear-not.jpg?v=d3a9a461"
  },
  {
   "folder": "FIRST_CAROL_DAY",
@@ -26128,6 +27919,796 @@
   "cover_url": "https://audio.yojosuknam.com/cover/조선-힙합-클럽-joseon-hip-hop-club.jpg?v=3998b3ab"
  },
  {
+  "folder": "KEEPERS_HOURS",
+  "slug": "the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study",
+  "title": "The Keeper's Hours (Lighthouse Guitar Jazz for Late-Night Study)",
+  "genre": "Lofi Jazz Guitar / Jazz Hop / Bossa Nova / Lo-fi Soul (나일론·아치탑 기타 리드 통일)",
+  "channel": "Lo-fi & Chill (lofi)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "Eight P.M. Lamp Lit",
+    "file": "01_eight_pm_lamp_lit.mp3",
+    "src": "/mnt/external/suno-playlist/input/KEEPERS_HOURS/tracks/01_eight_pm_lamp_lit.mp3",
+    "ms": 197640,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar single notes, soft sea wind",
+      "lines": []
+     },
+     {
+      "tag": "bossa rhythm slowly settling in",
+      "lines": []
+     },
+     {
+      "tag": "vinyl crackle, lamp warming",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:35",
+      "lines": []
+     },
+     {
+      "tag": "Main Theme",
+      "lines": []
+     },
+     {
+      "tag": "nylon chord melody flowing",
+      "lines": []
+     },
+     {
+      "tag": "upright bass two-feel underneath",
+      "lines": []
+     },
+     {
+      "tag": "brushed snare whispering",
+      "lines": []
+     },
+     {
+      "tag": "0:35-1:30",
+      "lines": []
+     },
+     {
+      "tag": "Development",
+      "lines": []
+     },
+     {
+      "tag": "guitar voicings fuller, 6/9 colors",
+      "lines": []
+     },
+     {
+      "tag": "shaker pulse barely audible",
+      "lines": []
+     },
+     {
+      "tag": "the beam begins to turn",
+      "lines": []
+     },
+     {
+      "tag": "1:30-2:30",
+      "lines": []
+     },
+     {
+      "tag": "Return Theme",
+      "lines": []
+     },
+     {
+      "tag": "original melody returning, simpler",
+      "lines": []
+     },
+     {
+      "tag": "single note phrases breathing",
+      "lines": []
+     },
+     {
+      "tag": "2:30-3:20",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "sparse chords, wind fading",
+      "lines": []
+     },
+     {
+      "tag": "bass to long roots",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:45",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "Ten O'Clock Log Book",
+    "file": "02_ten_oclock_log_book.mp3",
+    "src": "/mnt/external/suno-playlist/input/KEEPERS_HOURS/tracks/02_ten_oclock_log_book.mp3",
+    "ms": 204840,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "brushed snare establishing swing",
+      "lines": []
+     },
+     {
+      "tag": "archtop guitar comping lightly",
+      "lines": []
+     },
+     {
+      "tag": "faint pen-scratch texture",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:30",
+      "lines": []
+     },
+     {
+      "tag": "Main Theme",
+      "lines": []
+     },
+     {
+      "tag": "archtop chord melody, steady swing",
+      "lines": []
+     },
+     {
+      "tag": "upright bass walking",
+      "lines": []
+     },
+     {
+      "tag": "0:30-1:25",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "Rhodes pad rising softly",
+      "lines": []
+     },
+     {
+      "tag": "guitar double-stops answering",
+      "lines": []
+     },
+     {
+      "tag": "1:25-2:20",
+      "lines": []
+     },
+     {
+      "tag": "Main Theme Return",
+      "lines": []
+     },
+     {
+      "tag": "melody restated, tighter groove",
+      "lines": []
+     },
+     {
+      "tag": "2:20-3:15",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "bass and brushes thinning",
+      "lines": []
+     },
+     {
+      "tag": "last chord ringing out",
+      "lines": []
+     },
+     {
+      "tag": "3:15-3:40",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "Somebody Out at Sea",
+    "file": "03_somebody_out_at_sea.mp3",
+    "src": "/mnt/external/suno-playlist/input/KEEPERS_HOURS/tracks/03_somebody_out_at_sea.mp3",
+    "ms": 207312,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar, distant sea wash",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:52",
+      "lines": [
+       "A light goes by, a little red,",
+       "way out past the harbor wall,",
+       "I never learn the captain's name,",
+       "I keep the lamp on anyway."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:28",
+      "lines": [
+       "Somebody out at sea,",
+       "somebody far from me,",
+       "the beam goes round, so slow,",
+       "I'm here, I'm here, I know."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:28-2:02",
+      "lines": [
+       "The stove gone low, the window hums,",
+       "the only voice is wind and spray,",
+       "you'll never see this room I'm in,",
+       "you only see the light I made."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:38",
+      "lines": [
+       "Somebody out at sea,",
+       "somebody far from me,",
+       "the beam goes round, so slow,",
+       "I'm here, I'm here, I know."
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar solo, half-time",
+      "lines": []
+     },
+     {
+      "tag": "2:38-3:00",
+      "lines": [
+       "Oh, go on, go on,",
+       "I'll hold the night till dawn."
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar alone, crackle fade",
+      "lines": []
+     },
+     {
+      "tag": "3:00-3:25",
+      "lines": [
+       "I'm here, I'm here, I know."
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "One A.M. Foghorn",
+    "file": "04_one_am_foghorn.mp3",
+    "src": "/mnt/external/suno-playlist/input/KEEPERS_HOURS/tracks/04_one_am_foghorn.mp3",
+    "ms": 193800,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "low cello drone like a foghorn",
+      "lines": []
+     },
+     {
+      "tag": "archtop single notes in the fog",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:35",
+      "lines": []
+     },
+     {
+      "tag": "Main Groove",
+      "lines": []
+     },
+     {
+      "tag": "boom-bap kick soft and dusty",
+      "lines": []
+     },
+     {
+      "tag": "archtop chord melody, behind the beat",
+      "lines": []
+     },
+     {
+      "tag": "upright bass walking",
+      "lines": []
+     },
+     {
+      "tag": "0:35-1:35",
+      "lines": []
+     },
+     {
+      "tag": "Fog Section",
+      "lines": []
+     },
+     {
+      "tag": "cello drone returns, longer",
+      "lines": []
+     },
+     {
+      "tag": "guitar phrases asking, bass answering",
+      "lines": []
+     },
+     {
+      "tag": "1:35-2:35",
+      "lines": []
+     },
+     {
+      "tag": "Main Groove Return",
+      "lines": []
+     },
+     {
+      "tag": "groove steady, melody simpler",
+      "lines": []
+     },
+     {
+      "tag": "2:35-3:25",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "drums drop out, drone alone",
+      "lines": []
+     },
+     {
+      "tag": "one guitar chord fading",
+      "lines": []
+     },
+     {
+      "tag": "3:25-3:50",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "The Lens Turns Slow",
+    "file": "05_the_lens_turns_slow.mp3",
+    "src": "/mnt/external/suno-playlist/input/KEEPERS_HOURS/tracks/05_the_lens_turns_slow.mp3",
+    "ms": 197400,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "solo nylon guitar, circular motif",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:45",
+      "lines": []
+     },
+     {
+      "tag": "Theme",
+      "lines": []
+     },
+     {
+      "tag": "motif turning, chords ringing",
+      "lines": []
+     },
+     {
+      "tag": "0:45-1:50",
+      "lines": []
+     },
+     {
+      "tag": "Vibraphone Halo",
+      "lines": []
+     },
+     {
+      "tag": "soft vibraphone entering, long decay",
+      "lines": []
+     },
+     {
+      "tag": "guitar and mallets circling together",
+      "lines": []
+     },
+     {
+      "tag": "1:50-2:50",
+      "lines": []
+     },
+     {
+      "tag": "Return",
+      "lines": []
+     },
+     {
+      "tag": "guitar alone again, slower",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:30",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "last chord left to ring",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:50",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "Three A.M. Company",
+    "file": "06_three_am_company.mp3",
+    "src": "/mnt/external/suno-playlist/input/KEEPERS_HOURS/tracks/06_three_am_company.mp3",
+    "ms": 187656,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "archtop guitar, soft clarinet",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:52",
+      "lines": [
+       "Three o'clock and the sea is flat,",
+       "I trim the wick, I check the glass,",
+       "somewhere a window's lit like mine,",
+       "a page, a pencil, one more line."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:28",
+      "lines": [
+       "We're keeping company,",
+       "you and the light and me,",
+       "nobody else is up,",
+       "and that's enough, enough."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:28-2:02",
+      "lines": [
+       "You turn a page, I turn the brass,",
+       "the gulls are sleeping on the rocks,",
+       "we'll never meet, but that's alright,",
+       "we're on the same shift tonight."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:38",
+      "lines": [
+       "We're keeping company,",
+       "you and the light and me,",
+       "nobody else is up,",
+       "and that's enough, enough."
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "archtop solo, clarinet answering",
+      "lines": []
+     },
+     {
+      "tag": "2:38-3:00",
+      "lines": [
+       "Oh, hold on, hold on,",
+       "the long part's almost gone."
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar alone, crackle fade",
+      "lines": []
+     },
+     {
+      "tag": "3:00-3:25",
+      "lines": [
+       "and that's enough, enough."
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "Four A.M. Second Wind",
+    "file": "07_four_am_second_wind.mp3",
+    "src": "/mnt/external/suno-playlist/input/KEEPERS_HOURS/tracks/07_four_am_second_wind.mp3",
+    "ms": 168816,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "finger snaps, brushed swing",
+      "lines": []
+     },
+     {
+      "tag": "archtop guitar comping brightly",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:28",
+      "lines": []
+     },
+     {
+      "tag": "Main Groove",
+      "lines": []
+     },
+     {
+      "tag": "archtop chord melody swinging",
+      "lines": []
+     },
+     {
+      "tag": "upright bass walking punchy",
+      "lines": []
+     },
+     {
+      "tag": "0:28-1:25",
+      "lines": []
+     },
+     {
+      "tag": "Stair Climb",
+      "lines": []
+     },
+     {
+      "tag": "melody rising step by step",
+      "lines": []
+     },
+     {
+      "tag": "dim7 passing chords",
+      "lines": []
+     },
+     {
+      "tag": "1:25-2:20",
+      "lines": []
+     },
+     {
+      "tag": "Main Groove Return",
+      "lines": []
+     },
+     {
+      "tag": "full groove, playful double-stops",
+      "lines": []
+     },
+     {
+      "tag": "2:20-3:15",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "snaps fading, bass to roots",
+      "lines": []
+     },
+     {
+      "tag": "final bright chord",
+      "lines": []
+     },
+     {
+      "tag": "3:15-3:35",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "Six Forty, Lamp Off",
+    "file": "08_six_forty_lamp_off.mp3",
+    "src": "/mnt/external/suno-playlist/input/KEEPERS_HOURS/tracks/08_six_forty_lamp_off.mp3",
+    "ms": 188784,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "solo nylon guitar, soft thumb",
+      "lines": []
+     },
+     {
+      "tag": "faint gulls far away",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:40",
+      "lines": []
+     },
+     {
+      "tag": "Theme",
+      "lines": []
+     },
+     {
+      "tag": "warm chord melody, slow swing",
+      "lines": []
+     },
+     {
+      "tag": "upright bass arco entering",
+      "lines": []
+     },
+     {
+      "tag": "0:40-1:45",
+      "lines": []
+     },
+     {
+      "tag": "Sunrise",
+      "lines": []
+     },
+     {
+      "tag": "voicings opening, add6 colors",
+      "lines": []
+     },
+     {
+      "tag": "melody rising gently",
+      "lines": []
+     },
+     {
+      "tag": "1:45-2:50",
+      "lines": []
+     },
+     {
+      "tag": "Return",
+      "lines": []
+     },
+     {
+      "tag": "theme simpler, slower",
+      "lines": []
+     },
+     {
+      "tag": "one soft felt click",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:30",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final chord sustained into silence",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:50",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study/08.mp3"
+   }
+  ],
+  "updated_at": 1795331718,
+  "cover_source": "https://i.ytimg.com/vi/Z8Xo23Mb8i4/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1546248,
+  "cover_file": "the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study.jpg?v=4e6fdffd"
+ },
+ {
   "folder": "KIDS_CHRISTMAS_SONGS",
   "slug": "같이-불러요-메리-크리스마스-sing-along-merry-christmas",
   "title": "같이 불러요, 메리 크리스마스 (Sing Along, Merry Christmas)",
@@ -32818,6 +35399,1421 @@
   "total_ms": 1424568,
   "cover_file": "last-seat-on-the-train.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/last-seat-on-the-train.jpg?v=a1c3bb8d"
+ },
+ {
+  "folder": "LEGENDS_SUNG_ANYWAY",
+  "slug": "굳이-노래로-위인전-legends-sung-anyway",
+  "title": "굳이 노래로 위인전 (Legends, Sung Anyway)",
+  "genre": "코믹 역사송 (트로트·붐뱁 힙합·시티팝·디스코 펑크·보사노바·씨 섄티·모타운 가스펠·하트랜드 록 — 한 곡 한 장르)",
+  "channel": "굳이 송 (gudi)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "문익점, 붓두껍에 쏙",
+    "file": "01_mun_ikjeom_brush_cap.mp3",
+    "src": "/mnt/external/suno-playlist/input/LEGENDS_SUNG_ANYWAY/tracks/01_mun_ikjeom_brush_cap.mp3",
+    "ms": 209904,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "brass fanfare, bright organ",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": []
+     },
+     {
+      "tag": "spoken narrator",
+      "lines": [
+       "고려 말 어느 겨울",
+       "작은 씨앗 하나가 왔어"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:38",
+      "lines": [
+       "나는야 문익점",
+       "먼 원나라 다녀온 길",
+       "겨울 바람 차가운데",
+       "백성들은 삼베옷",
+       "저기 하얀 솜꽃 보니",
+       "마음이 콩닥콩닥"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:38-0:50",
+      "lines": [
+       "이 씨앗 하나면",
+       "온 나라가 따뜻해",
+       "어디에 넣어갈까",
+       "옳지 여기 있네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:16",
+      "lines": [
+       "붓두껍에 쏙 쏙 쏙",
+       "목화씨를 쏙 쏙 쏙",
+       "작은 씨앗 하나가",
+       "겨울을 바꿔 놓아",
+       "붓두껍에 쏙 쏙 쏙",
+       "따뜻하라 쏙 쏙 쏙",
+       "솜이불 덮는 그날",
+       "다 같이 얼쑤 좋아"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:42",
+      "lines": [
+       "장인어른 정천익과",
+       "밭에 씨를 뿌렸지",
+       "싹이 나고 시들고",
+       "딱 한 그루 살았네",
+       "한 그루가 열 그루로",
+       "삼 년 만에 온 고을"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:42-1:54",
+      "lines": [
+       "이 씨앗 하나면",
+       "온 나라가 따뜻해",
+       "꽃 피고 솜 터지면",
+       "옳지 이제 됐어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:54-2:20",
+      "lines": [
+       "붓두껍에 쏙 쏙 쏙",
+       "목화씨를 쏙 쏙 쏙",
+       "작은 씨앗 하나가",
+       "겨울을 바꿔 놓아",
+       "붓두껍에 쏙 쏙 쏙",
+       "따뜻하라 쏙 쏙 쏙",
+       "솜이불 덮는 그날",
+       "다 같이 얼쑤 좋아"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:20-2:48",
+      "lines": []
+     },
+     {
+      "tag": "organ solo, light brass",
+      "lines": [
+       "씨아로 씨를 빼고",
+       "물레로 실을 뽑아",
+       "베틀 위에 무명 한 필",
+       "어머니 손이 바빠",
+       "솜바지 솜저고리",
+       "이 겨울 끄떡없어"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:48-3:20",
+      "lines": []
+     },
+     {
+      "tag": "full brass, group shouts",
+      "lines": [
+       "붓두껍에 쏙 쏙 쏙",
+       "목화씨를 쏙 쏙 쏙",
+       "작은 씨앗 하나가",
+       "겨울을 바꿔 놓아",
+       "솜이불 덮는 그날",
+       "다 같이 얼쑤 좋아"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "brass fade",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:35",
+      "lines": [
+       "쏙 쏙 쏙",
+       "따뜻하게 쏙"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/굳이-노래로-위인전-legends-sung-anyway/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "을지문덕, 시 한 수 받아라",
+    "file": "02_eulji_mundeok_one_poem.mp3",
+    "src": "/mnt/external/suno-playlist/input/LEGENDS_SUNG_ANYWAY/tracks/02_eulji_mundeok_one_poem.mp3",
+    "ms": 135840,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "record scratch, war drum",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:10",
+      "lines": []
+     },
+     {
+      "tag": "spoken narrator",
+      "lines": [
+       "서기 육백십이 년",
+       "수나라 대군이 왔어"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:10-0:42",
+      "lines": [
+       "백만 대군 끝도 없이",
+       "깃발이 산을 덮어",
+       "근데 나는 웃었지",
+       "싸움은 머리로 해",
+       "하루에 일곱 번 붙고",
+       "일곱 번 다 져줬어",
+       "쫓아와 쫓아와",
+       "더 깊이 들어와 봐"
+      ]
+     },
+     {
+      "tag": "Hook",
+      "lines": []
+     },
+     {
+      "tag": "0:42-1:08",
+      "lines": [
+       "시 한 수 받아라",
+       "우중문 장군 받아",
+       "공은 이미 높으니",
+       "이만 돌아가 봐",
+       "시 한 수 받아라",
+       "읽고 나면 알 거야",
+       "여기까지 온 길이",
+       "전부 나의 그림"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:08-1:40",
+      "lines": [
+       "하늘 이치 다 꿰고",
+       "땅의 이치 다 알아",
+       "칭찬처럼 들리지",
+       "근데 뭔가 찜찜해",
+       "배고픈 병사들",
+       "지친 말발굽 소리",
+       "돌아가는 길 끝에",
+       "살수 강물 기다려"
+      ]
+     },
+     {
+      "tag": "Hook",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:06",
+      "lines": [
+       "시 한 수 받아라",
+       "우중문 장군 받아",
+       "공은 이미 높으니",
+       "이만 돌아가 봐",
+       "시 한 수 받아라",
+       "읽고 나면 알 거야",
+       "여기까지 온 길이",
+       "전부 나의 그림"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:36",
+      "lines": []
+     },
+     {
+      "tag": "beat drops out, river ambience",
+      "lines": []
+     },
+     {
+      "tag": "spoken, calm",
+      "lines": [
+       "칼로만 싸우는 게 아냐",
+       "한 줄의 시",
+       "한 번의 여유",
+       "그게 고구려의 배짱"
+      ]
+     },
+     {
+      "tag": "beat returns, war drums",
+      "lines": []
+     },
+     {
+      "tag": "Final Hook",
+      "lines": []
+     },
+     {
+      "tag": "2:36-3:06",
+      "lines": [
+       "시 한 수 받아라",
+       "우중문 장군 받아",
+       "공은 이미 높으니",
+       "이만 돌아가 봐",
+       "여기까지 온 길이",
+       "전부 나의 그림"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "river ambience, scratch",
+      "lines": []
+     },
+     {
+      "tag": "3:06-3:20",
+      "lines": [
+       "살수의 물결 소리",
+       "시 한 수 끝"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/굳이-노래로-위인전-legends-sung-anyway/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "서희, 말로 합시다",
+    "file": "03_seo_hui_lets_talk.mp3",
+    "src": "/mnt/external/suno-playlist/input/LEGENDS_SUNG_ANYWAY/tracks/03_seo_hui_lets_talk.mp3",
+    "ms": 227352,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "sax lick, shimmering synth",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": []
+     },
+     {
+      "tag": "spoken narrator",
+      "lines": [
+       "구백구십삼 년",
+       "거란 장수가 문을 두드렸어"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:40",
+      "lines": [
+       "팔십만 대군이래",
+       "진짜인지 몰라도",
+       "다들 땅을 내주자며",
+       "고개를 숙일 때",
+       "나 혼자 손을 들었지",
+       "잠깐만요 제가 갈게"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-0:52",
+      "lines": [
+       "칼 대신 웃음 하나",
+       "화 대신 차 한 잔",
+       "마주 앉아 보면",
+       "길이 보일 거야"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:20",
+      "lines": [
+       "말로 합시다 말로 해요",
+       "마주 앉아 얘기해요",
+       "고구려를 이어받은",
+       "고려라는 이름",
+       "말로 합시다 말로 해요",
+       "길을 막은 건 여진",
+       "그 길 열어 주신다면",
+       "친구가 돼 드릴게"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:48",
+      "lines": [
+       "뜰에서 절을 하라기에",
+       "그건 좀 곤란해요",
+       "같은 신하끼리라면",
+       "마주 보고 앉아야죠",
+       "버티고 또 버텨서",
+       "나란히 앉았지"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:48-2:00",
+      "lines": [
+       "칼 대신 웃음 하나",
+       "화 대신 차 한 잔",
+       "마주 앉아 보면",
+       "길이 보일 거야"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:28",
+      "lines": [
+       "말로 합시다 말로 해요",
+       "마주 앉아 얘기해요",
+       "고구려를 이어받은",
+       "고려라는 이름",
+       "말로 합시다 말로 해요",
+       "길을 막은 건 여진",
+       "그 길 열어 주신다면",
+       "친구가 돼 드릴게"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:28-2:55",
+      "lines": []
+     },
+     {
+      "tag": "sax solo, soft",
+      "lines": [
+       "칼 한 번 안 뽑고",
+       "강동의 여섯 고을",
+       "웃으며 받아 왔네",
+       "이게 바로 외교"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:55-3:25",
+      "lines": []
+     },
+     {
+      "tag": "key change up",
+      "lines": [
+       "말로 합시다 말로 해요",
+       "마주 앉아 얘기해요",
+       "고구려를 이어받은",
+       "고려라는 이름",
+       "그 길 열어 주신다면",
+       "친구가 돼 드릴게"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "sax fade",
+      "lines": []
+     },
+     {
+      "tag": "3:25-3:38",
+      "lines": [
+       "말로 합시다",
+       "차 한 잔 더"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/굳이-노래로-위인전-legends-sung-anyway/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "최무선, 한 번만 알려줘",
+    "file": "04_choe_museon_just_once.mp3",
+    "src": "/mnt/external/suno-playlist/input/LEGENDS_SUNG_ANYWAY/tracks/04_choe_museon_just_once.mp3",
+    "ms": 190296,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "funky guitar riff, synth boom hit",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:10",
+      "lines": []
+     },
+     {
+      "tag": "spoken narrator",
+      "lines": [
+       "고려 말 바닷가",
+       "한 사람이 비법을 찾고 있었어"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:10-0:38",
+      "lines": [
+       "바닷가 마을마다",
+       "왜구가 또 왔대",
+       "쌀도 뺏고 배도 태워",
+       "이대로는 안 되지",
+       "불을 뿜는 약이 있대",
+       "근데 비법은 비밀"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:38-0:50",
+      "lines": [
+       "누구 아는 사람",
+       "어디 없나요",
+       "저기 이원 선생",
+       "오셨다는 소문"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:18",
+      "lines": [
+       "알려줘 알려줘",
+       "염초 굽는 법",
+       "밥도 차려 드릴게",
+       "방도 내어 드릴게",
+       "알려줘 알려줘",
+       "딱 한 번만요",
+       "펑 펑 터지는",
+       "그 비밀 하나"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:18-1:46",
+      "lines": [
+       "매일매일 대접하고",
+       "매일매일 졸랐지",
+       "어느 날 웃으며",
+       "선생이 입을 열어",
+       "흙을 긁고 끓이고",
+       "드디어 하얀 가루"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:46-1:58",
+      "lines": [
+       "이제 됐어 됐어",
+       "가슴이 두근두근",
+       "화통도감 문을",
+       "활짝 열어 볼까"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:58-2:26",
+      "lines": [
+       "알려줘 알려줘",
+       "염초 굽는 법",
+       "밥도 차려 드릴게",
+       "방도 내어 드릴게",
+       "알려줘 알려줘",
+       "딱 한 번만요",
+       "펑 펑 터지는",
+       "그 비밀 하나"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:26-2:54",
+      "lines": []
+     },
+     {
+      "tag": "battle drums, horn crescendo",
+      "lines": [
+       "화포를 실은 배",
+       "진포 앞바다로",
+       "바람 타고 나가",
+       "펑 펑 펑 불꽃"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:54-3:24",
+      "lines": []
+     },
+     {
+      "tag": "full brass, handclaps",
+      "lines": [
+       "알려줘 알려줘",
+       "염초 굽는 법",
+       "알려줘 알려줘",
+       "딱 한 번만요",
+       "펑 펑 터지는",
+       "그 비밀 하나"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "funk vamp fade",
+      "lines": []
+     },
+     {
+      "tag": "3:24-3:36",
+      "lines": [
+       "고마워요 선생님",
+       "펑"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/굳이-노래로-위인전-legends-sung-anyway/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "황희, 네 말도 옳다",
+    "file": "05_hwang_hui_you_are_right.mp3",
+    "src": "/mnt/external/suno-playlist/input/LEGENDS_SUNG_ANYWAY/tracks/05_hwang_hui_you_are_right.mp3",
+    "ms": 201336,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar, soft brush",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": []
+     },
+     {
+      "tag": "spoken narrator",
+      "lines": [
+       "세종 임금 곁을 지킨",
+       "영의정 황희 대감 댁"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:40",
+      "lines": [
+       "마당에서 두 사람",
+       "목소리가 높아져",
+       "먼저 온 한 사람이",
+       "제 말이 맞지요",
+       "가만히 듣던 나",
+       "고개를 끄덕여"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-1:06",
+      "lines": [
+       "네 말도 옳다",
+       "그래 그 말 맞아",
+       "천천히 차 한 잔",
+       "마시고 가렴",
+       "네 말도 옳다",
+       "화낼 일 없어",
+       "바람도 쉬어 가는",
+       "우리 집 마루"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:34",
+      "lines": [
+       "뒤에 온 한 사람",
+       "억울하다 하길래",
+       "듣고 보니 그 말도",
+       "틀린 데가 없네",
+       "그럼 너도 옳구나",
+       "허허 웃어 주고"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:34-1:46",
+      "lines": []
+     },
+     {
+      "tag": "soft female voice",
+      "lines": [
+       "부엌에서 부인이",
+       "나와서 하는 말",
+       "둘 다 옳다니요",
+       "그게 말이 되나요"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:46-2:14",
+      "lines": [
+       "부인 말도 옳소",
+       "그래 그 말 맞아",
+       "세 사람이 웃는",
+       "늦은 오후 마루",
+       "부인 말도 옳소",
+       "화낼 일 없어",
+       "바람도 쉬어 가는",
+       "우리 집 마루"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:14-2:44",
+      "lines": []
+     },
+     {
+      "tag": "flute solo, gentle",
+      "lines": [
+       "열여덟 해 정승 자리",
+       "고집보다 귀를 열고",
+       "다 듣고 나서야",
+       "길이 보이더라"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:44-3:14",
+      "lines": [
+       "네 말도 옳다",
+       "그래 그 말 맞아",
+       "천천히 차 한 잔",
+       "마시고 가렴",
+       "바람도 쉬어 가는",
+       "우리 집 마루"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar fade, amused hum",
+      "lines": []
+     },
+     {
+      "tag": "3:14-3:30",
+      "lines": [
+       "네 말도 옳다",
+       "음 옳지"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/굳이-노래로-위인전-legends-sung-anyway/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "장보고, 바다 건너 배송 완료",
+    "file": "06_jang_bogo_delivered.mp3",
+    "src": "/mnt/external/suno-playlist/input/LEGENDS_SUNG_ANYWAY/tracks/06_jang_bogo_delivered.mp3",
+    "ms": 160896,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "waves, fiddle, stomping",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": []
+     },
+     {
+      "tag": "spoken narrator",
+      "lines": [
+       "신라 흥덕왕 시절",
+       "완도 앞바다"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:40",
+      "lines": [
+       "바다에 해적들이",
+       "사람을 잡아간대",
+       "당나라 다녀온 나",
+       "그 꼴은 못 보겠어",
+       "임금님께 청했지",
+       "군사 만 명만 주오"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-0:52",
+      "lines": [
+       "청해진 깃발 올려",
+       "노 저어라 영차",
+       "바람아 불어라",
+       "돛 올려라 영차"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:20",
+      "lines": [
+       "바다 건너 배송 완료",
+       "신라에서 당나라",
+       "당나라서 일본까지",
+       "돛을 펴고 달려가",
+       "바다 건너 배송 완료",
+       "비단 싣고 도자기",
+       "해적 없는 바닷길",
+       "오늘도 무사 도착"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:48",
+      "lines": [
+       "도자기는 조심조심",
+       "비단은 보송하게",
+       "일본 상인 손 흔들고",
+       "당나라 항구 북적여",
+       "바다 위 네거리",
+       "우리가 지켰네"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:48-2:00",
+      "lines": [
+       "청해진 깃발 올려",
+       "노 저어라 영차",
+       "바람아 불어라",
+       "돛 올려라 영차"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:28",
+      "lines": [
+       "바다 건너 배송 완료",
+       "신라에서 당나라",
+       "당나라서 일본까지",
+       "돛을 펴고 달려가",
+       "바다 건너 배송 완료",
+       "비단 싣고 도자기",
+       "해적 없는 바닷길",
+       "오늘도 무사 도착"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:28-2:56",
+      "lines": []
+     },
+     {
+      "tag": "crew call-and-response",
+      "lines": [
+       "어디로 가나",
+       "당나라 항구",
+       "뭘 싣고 가나",
+       "비단 한 바다",
+       "누가 지키나",
+       "청해진 사람",
+       "언제 닿나",
+       "내일 아침"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:26",
+      "lines": []
+     },
+     {
+      "tag": "tempo lifts, full crew",
+      "lines": [
+       "바다 건너 배송 완료",
+       "신라에서 당나라",
+       "당나라서 일본까지",
+       "돛을 펴고 달려가",
+       "해적 없는 바닷길",
+       "오늘도 무사 도착"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "waves fade",
+      "lines": []
+     },
+     {
+      "tag": "3:26-3:40",
+      "lines": [
+       "영차 영차",
+       "배송 완료"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/굳이-노래로-위인전-legends-sung-anyway/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "김만덕, 곳간을 열어라",
+    "file": "07_kim_mandeok_open_storehouse.mp3",
+    "src": "/mnt/external/suno-playlist/input/LEGENDS_SUNG_ANYWAY/tracks/07_kim_mandeok_open_storehouse.mp3",
+    "ms": 198168,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "tambourine, organ swell",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": []
+     },
+     {
+      "tag": "spoken narrator",
+      "lines": [
+       "정조 임금 시절",
+       "제주 바닷바람 속에서"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:40",
+      "lines": [
+       "제주 바람 맞으며",
+       "장사로 일어선 나",
+       "미역 팔고 말총 팔고",
+       "한 푼 두 푼 모았지",
+       "그런데 흉년이 와",
+       "솥마다 텅 비었네"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-0:52",
+      "lines": [
+       "굶는 이웃 두고",
+       "내 곳간 배부르면",
+       "그게 무슨 소용",
+       "문을 활짝 열자"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:20",
+      "lines": []
+     },
+     {
+      "tag": "choir answers",
+      "lines": [
+       "곳간을 열어라",
+       "쌀가마 나간다",
+       "배고픈 집마다",
+       "따끈한 밥 냄새",
+       "곳간을 열어라",
+       "손에 손 건네라",
+       "제주 온 섬에",
+       "웃음이 돌아와"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:48",
+      "lines": [
+       "뭍에서 사 온 쌀",
+       "배에 싣고 오너라",
+       "한 줌도 아끼지 말고",
+       "골고루 나눠 줘",
+       "내 재산 다 써도",
+       "아깝지 않더라"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:48-2:00",
+      "lines": [
+       "굶는 이웃 두고",
+       "내 곳간 배부르면",
+       "그게 무슨 소용",
+       "문을 활짝 열자"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:28",
+      "lines": []
+     },
+     {
+      "tag": "choir answers",
+      "lines": [
+       "곳간을 열어라",
+       "쌀가마 나간다",
+       "배고픈 집마다",
+       "따끈한 밥 냄새",
+       "곳간을 열어라",
+       "손에 손 건네라",
+       "제주 온 섬에",
+       "웃음이 돌아와"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:28-2:58",
+      "lines": []
+     },
+     {
+      "tag": "organ, soft choir hum",
+      "lines": [
+       "임금님이 물으셨지",
+       "소원이 무엇이냐",
+       "한양 구경 한 번",
+       "금강산도 한 번",
+       "바다 건너 그 길",
+       "꿈만 같았어"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:28",
+      "lines": []
+     },
+     {
+      "tag": "key change up, full choir",
+      "lines": [
+       "곳간을 열어라",
+       "쌀가마 나간다",
+       "배고픈 집마다",
+       "따끈한 밥 냄새",
+       "제주 온 섬에",
+       "웃음이 돌아와"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "choir fade, tambourine",
+      "lines": []
+     },
+     {
+      "tag": "3:28-3:42",
+      "lines": [
+       "곳간을 열어라",
+       "활짝"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/굳이-노래로-위인전-legends-sung-anyway/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "이순신, 오늘도 맑음",
+    "file": "08_yi_sunsin_clear_today.mp3",
+    "src": "/mnt/external/suno-playlist/input/LEGENDS_SUNG_ANYWAY/tracks/08_yi_sunsin_clear_today.mp3",
+    "ms": 197760,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "snare roll, warm clean guitar",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "spoken narrator",
+      "lines": [
+       "칠 년의 전쟁",
+       "장군의 일기장 첫 줄은",
+       "늘 하늘이었어"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "아침에 눈을 뜨면",
+       "먼저 하늘을 봐",
+       "맑음 한 줄 적고",
+       "활을 몇 순 쏘고",
+       "배를 살피고",
+       "군사들 밥도 챙겨"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:54",
+      "lines": [
+       "바람이 거세도",
+       "붓은 멈추지 않아",
+       "오늘의 날씨부터",
+       "천천히 한 줄"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:54-1:22",
+      "lines": []
+     },
+     {
+      "tag": "gang vocals",
+      "lines": [
+       "오늘도 맑음",
+       "한 줄 또 적어",
+       "지친 밤에도",
+       "붓을 들어",
+       "오늘도 맑음",
+       "내일도 써야지",
+       "바다를 지키는",
+       "나의 일기장"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:22-1:50",
+      "lines": [
+       "비 오는 날은 비",
+       "흐린 날은 흐림",
+       "어머니 생각에",
+       "잠 못 든 밤도",
+       "있는 그대로",
+       "적어 두었네"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:50-2:02",
+      "lines": [
+       "바람이 거세도",
+       "붓은 멈추지 않아",
+       "오늘의 날씨부터",
+       "천천히 한 줄"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:30",
+      "lines": []
+     },
+     {
+      "tag": "gang vocals",
+      "lines": [
+       "오늘도 맑음",
+       "한 줄 또 적어",
+       "지친 밤에도",
+       "붓을 들어",
+       "오늘도 맑음",
+       "내일도 써야지",
+       "바다를 지키는",
+       "나의 일기장"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:30-3:00",
+      "lines": []
+     },
+     {
+      "tag": "war drums build",
+      "lines": [
+       "신에게는 아직",
+       "열두 척 배가 있어",
+       "작은 배 한 척도",
+       "헛되지 않게",
+       "물살을 읽고",
+       "때를 기다려"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "3:00-3:32",
+      "lines": []
+     },
+     {
+      "tag": "emotional crescendo, full band",
+      "lines": [
+       "오늘도 맑음",
+       "한 줄 또 적어",
+       "지친 밤에도",
+       "붓을 들어",
+       "바다를 지키는",
+       "나의 일기장"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "clean guitar, soft",
+      "lines": []
+     },
+     {
+      "tag": "3:32-3:48",
+      "lines": []
+     },
+     {
+      "tag": "spoken",
+      "lines": [
+       "오늘도 맑음"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/굳이-노래로-위인전-legends-sung-anyway/08.mp3"
+   }
+  ],
+  "updated_at": 1795331717,
+  "cover_source": "https://i.ytimg.com/vi/_g2NLLjPqi8/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1521552,
+  "cover_file": "굳이-노래로-위인전-legends-sung-anyway.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/굳이-노래로-위인전-legends-sung-anyway.jpg?v=2a3f2295"
  },
  {
   "folder": "LONG_BESIDE_ME",
@@ -65833,6 +69829,1533 @@
   "total_ms": 1562784,
   "cover_file": "still-waters-vol-2.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/still-waters-vol-2.jpg?v=2a957ad7"
+ },
+ {
+  "folder": "TEA_ROOM_DAY",
+  "slug": "다실의-하루-a-day-in-the-tea-room",
+  "title": "다실의 하루 (A Day in the Tea Room)",
+  "genre": "Korean Traditional Gugak Meditation / Tea House Instrumental (전곡 연주곡, 2~3악기 실내악)",
+  "channel": "Hanguk Sounds (hanji)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "첫물 긷기 (Drawing the First Water)",
+    "file": "01_drawing_the_first_water.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEA_ROOM_DAY/tracks/01_drawing_the_first_water.mp3",
+    "ms": 207984,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/다실의-하루-a-day-in-the-tea-room/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "숯불 지피기 (Kindling the Charcoal)",
+    "file": "02_kindling_the_charcoal.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEA_ROOM_DAY/tracks/02_kindling_the_charcoal.mp3",
+    "ms": 207792,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/다실의-하루-a-day-in-the-tea-room/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "솔바람 물소리 (Pine Wind in the Kettle)",
+    "file": "03_pine_wind_in_the_kettle.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEA_ROOM_DAY/tracks/03_pine_wind_in_the_kettle.mp3",
+    "ms": 138096,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/다실의-하루-a-day-in-the-tea-room/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "찻잎 덖기 (Roasting the Tea Leaves)",
+    "file": "04_roasting_the_tea_leaves.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEA_ROOM_DAY/tracks/04_roasting_the_tea_leaves.mp3",
+    "ms": 152448,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/다실의-하루-a-day-in-the-tea-room/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "첫 잔을 식히며 (Cooling the First Cup)",
+    "file": "05_cooling_the_first_cup.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEA_ROOM_DAY/tracks/05_cooling_the_first_cup.mp3",
+    "ms": 152256,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/다실의-하루-a-day-in-the-tea-room/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "우려지는 동안 (While It Steeps)",
+    "file": "06_while_it_steeps.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEA_ROOM_DAY/tracks/06_while_it_steeps.mp3",
+    "ms": 174720,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/다실의-하루-a-day-in-the-tea-room/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "빈 찻잔 (The Empty Cup)",
+    "file": "07_the_empty_cup.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEA_ROOM_DAY/tracks/07_the_empty_cup.mp3",
+    "ms": 219792,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/다실의-하루-a-day-in-the-tea-room/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "찻물 식는 밤 (When the Tea Grows Cold)",
+    "file": "08_when_the_tea_grows_cold.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEA_ROOM_DAY/tracks/08_when_the_tea_grows_cold.mp3",
+    "ms": 199680,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/다실의-하루-a-day-in-the-tea-room/08.mp3"
+   }
+  ],
+  "updated_at": 1795331715,
+  "cover_source": "https://i.ytimg.com/vi/Tpm5JaGzAro/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1452768,
+  "cover_file": "다실의-하루-a-day-in-the-tea-room.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/다실의-하루-a-day-in-the-tea-room.jpg?v=0691ef5f"
+ },
+ {
+  "folder": "THIRTY_MINUTES_BEFORE",
+  "slug": "약속-30분-전-30-minutes-before-we-meet",
+  "title": "약속 30분 전 (30 Minutes Before We Meet)",
+  "genre": "K-Pop 상황 플레이리스트 (댄스팝·저지클럽·아프로팝·K-R&B·누디스코·멜로딕 힙합·밴드 팝펑크·로파이 베드룸팝)",
+  "channel": "Miso Beats (miso)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "30분 전",
+    "file": "01_thirty_minutes_before.mp3",
+    "src": "/mnt/external/suno-playlist/input/THIRTY_MINUTES_BEFORE/tracks/01_thirty_minutes_before.mp3",
+    "ms": 129864,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "hook first, vocal on beat one, phone alert chime",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": [
+       "삼십 분 전 thirty minutes",
+       "알람이 울려 지금",
+       "젖은 머리 그대로",
+       "Let's go, let's go"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "소파에 누워 딱 오 분",
+       "그게 벌써 한 시간",
+       "답장 온 거 이제 봤어",
+       "이따 일곱 시 반",
+       "수건 하나 머리에 감고",
+       "양말 한 짝 찾는 중",
+       "거울 속 나랑 눈 맞춰",
+       "오늘은 좀 빠르게"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "시계는 째깍 내 맘은 두근",
+       "늦을까 봐 웃음이 나",
+       "Count it down with me"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:24",
+      "lines": [
+       "삼십 분 전 thirty minutes",
+       "다 할 수 있어 나",
+       "삼십 분 전 thirty minutes",
+       "세상에서 제일 빠른 나",
+       "Hair up, lights on",
+       "볼륨 올려 지금",
+       "삼십 분 전 thirty minutes",
+       "Ready or not, here I go"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:50",
+      "lines": [
+       "화장대 위 도구들",
+       "다 나와서 줄을 서",
+       "드라이기는 뜨겁게",
+       "노래는 더 크게",
+       "엄마는 물어보지",
+       "누구 만나길래 그래",
+       "대답은 대충 웃음",
+       "그냥 친구야 친구"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:50-2:04",
+      "lines": [
+       "시계는 째깍 내 맘은 두근",
+       "늦을까 봐 웃음이 나",
+       "Count it down with me"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:04-2:32",
+      "lines": [
+       "삼십 분 전 thirty minutes",
+       "다 할 수 있어 나",
+       "삼십 분 전 thirty minutes",
+       "세상에서 제일 빠른 나",
+       "Hair up, lights on",
+       "볼륨 올려 지금",
+       "삼십 분 전 thirty minutes",
+       "Ready or not, here I go"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "half-time breakdown, claps only",
+      "lines": []
+     },
+     {
+      "tag": "2:32-2:52",
+      "lines": [
+       "스물아홉 스물여덟",
+       "Breathe in, breathe out",
+       "스물일곱 스물여섯",
+       "I got this, I got this"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, full energy",
+      "lines": []
+     },
+     {
+      "tag": "2:52-3:22",
+      "lines": [
+       "삼십 분 전 thirty minutes",
+       "다 할 수 있어 나",
+       "삼십 분 전 thirty minutes",
+       "세상에서 제일 빠른 나",
+       "Hair up, lights on",
+       "볼륨 올려 지금",
+       "삼십 분 전 thirty minutes",
+       "Ready or not, here I go"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "phone alert chime, beat cuts",
+      "lines": []
+     },
+     {
+      "tag": "3:22-3:32",
+      "lines": [
+       "Let's go"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/약속-30분-전-30-minutes-before-we-meet/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "Louder Than the Dryer",
+    "file": "02_louder_than_the_dryer.mp3",
+    "src": "/mnt/external/suno-playlist/input/THIRTY_MINUTES_BEFORE/tracks/02_louder_than_the_dryer.mp3",
+    "ms": 132456,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "hook first, chopped vocal chant, Jersey club kicks",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": [
+       "Louder than the dryer",
+       "위잉 위잉 더 크게",
+       "Louder than the dryer",
+       "나 지금 노래해"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:38",
+      "lines": [
+       "뜨거운 바람 쏟아져",
+       "앞머리는 말 안 들어",
+       "전화벨이 울렸나 봐",
+       "근데 하나도 안 들려",
+       "롤빗 하나 손에 쥐고",
+       "마이크처럼 잡았지",
+       "오늘 무대는 욕실 앞",
+       "관객은 거울 하나"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:38-0:52",
+      "lines": [
+       "Turn it up, turn it up",
+       "바람 소리보다 위로",
+       "Turn it up, turn it up"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "stuttered vocal chops, full drop",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:18",
+      "lines": [
+       "Louder than the dryer",
+       "위잉 위잉 더 크게",
+       "Louder than the dryer",
+       "나 지금 노래해",
+       "뜨거워도 괜찮아",
+       "I'm on fire, on fire",
+       "Louder than the dryer",
+       "고음까지 가볼래"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:18-1:44",
+      "lines": [
+       "김 서린 거울 닦아",
+       "하트 하나 그려두고",
+       "옆집에선 벽을 쿵",
+       "미안 이번 한 곡만",
+       "앞머리 드디어 섰어",
+       "이게 바로 기적이지",
+       "드라이기 딱 끄는 순간",
+       "조용한 게 더 어색해"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:44-1:58",
+      "lines": [
+       "Turn it up, turn it up",
+       "바람 소리보다 위로",
+       "Turn it up, turn it up"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:58-2:24",
+      "lines": [
+       "Louder than the dryer",
+       "위잉 위잉 더 크게",
+       "Louder than the dryer",
+       "나 지금 노래해",
+       "뜨거워도 괜찮아",
+       "I'm on fire, on fire",
+       "Louder than the dryer",
+       "고음까지 가볼래"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "switch click, beat drops out, a cappella",
+      "lines": []
+     },
+     {
+      "tag": "2:24-2:44",
+      "lines": [
+       "딸깍 끄면 들려",
+       "카톡 열두 개",
+       "다들 어디냐고",
+       "나 아직 머리 말려"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full drop returns, group vocals",
+      "lines": []
+     },
+     {
+      "tag": "2:44-3:12",
+      "lines": [
+       "Louder than the dryer",
+       "위잉 위잉 더 크게",
+       "Louder than the dryer",
+       "나 지금 노래해",
+       "뜨거워도 괜찮아",
+       "I'm on fire, on fire",
+       "Louder than the dryer",
+       "고음까지 가볼래"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "dryer whoosh fades",
+      "lines": []
+     },
+     {
+      "tag": "3:12-3:22",
+      "lines": [
+       "Louder than the dryer"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/약속-30분-전-30-minutes-before-we-meet/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "Outfit Check",
+    "file": "03_outfit_check.mp3",
+    "src": "/mnt/external/suno-playlist/input/THIRTY_MINUTES_BEFORE/tracks/03_outfit_check.mp3",
+    "ms": 153144,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "hook first, female and male together, log drum",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": [
+       "Outfit check, outfit check",
+       "이거 아님 저거야",
+       "Outfit check, outfit check",
+       "골라줘 지금 당장"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:40",
+      "lines": [
+       "침대 위에 옷 산더미",
+       "산꼭대기 니트 하나",
+       "청바지는 너무 무난",
+       "치마는 좀 과한가",
+       "영상통화 버튼 눌러",
+       "화면 너머 친구 얼굴",
+       "한 바퀴 돌아볼게",
+       "솔직하게 말해줘"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:40-0:54",
+      "lines": [
+       "첫 번째 거 괜찮았대",
+       "아니 세 번째 게 낫대",
+       "결국 다시 처음으로"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, call and response",
+      "lines": []
+     },
+     {
+      "tag": "0:54-1:22",
+      "lines": [
+       "Outfit check, outfit check",
+       "이거 아님 저거야",
+       "Outfit check, outfit check",
+       "골라줘 지금 당장",
+       "One, two, three, four, five",
+       "다섯 번째 갈아입어",
+       "Outfit check, outfit check",
+       "처음 거가 제일 예뻐"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:22-1:48",
+      "lines": [
+       "화면 속에 니가 묻네",
+       "아까 그거 어땠냐고",
+       "아니 그거 말고 그 전",
+       "줄무늬 그거 있잖아",
+       "솔직히 다 예뻤어",
+       "근데 넌 안 믿겠지",
+       "시간 봐 벌써 몇 시",
+       "그냥 입고 나가 얼른"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:48-2:02",
+      "lines": [
+       "첫 번째 거 괜찮았대",
+       "아니 세 번째 게 낫대",
+       "결국 다시 처음으로"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, call and response",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:30",
+      "lines": [
+       "Outfit check, outfit check",
+       "이거 아님 저거야",
+       "Outfit check, outfit check",
+       "골라줘 지금 당장",
+       "One, two, three, four, five",
+       "다섯 번째 갈아입어",
+       "Outfit check, outfit check",
+       "처음 거가 제일 예뻐"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "log drum solo, whispered",
+      "lines": []
+     },
+     {
+      "tag": "2:30-2:50",
+      "lines": [
+       "양말은 짝짝이로",
+       "아무도 모를 거야",
+       "신발이 다 살려줄 걸"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, full groove",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:18",
+      "lines": [
+       "Outfit check, outfit check",
+       "이거 아님 저거야",
+       "Outfit check, outfit check",
+       "골라줘 지금 당장",
+       "One, two, three, four, five",
+       "다섯 번째 갈아입어",
+       "Outfit check, outfit check",
+       "처음 거가 제일 예뻐"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "log drum fades",
+      "lines": []
+     },
+     {
+      "tag": "3:18-3:28",
+      "lines": [
+       "처음 거가 제일 예뻐"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/약속-30분-전-30-minutes-before-we-meet/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "립 한 번 더",
+    "file": "04_one_more_coat.mp3",
+    "src": "/mnt/external/suno-playlist/input/THIRTY_MINUTES_BEFORE/tracks/04_one_more_coat.mp3",
+    "ms": 197664,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "hook first, soft vocal over Rhodes, no drums yet",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": [
+       "립 한 번 더 one more coat",
+       "거울 앞에 조금 더",
+       "립 한 번 더 one more coat",
+       "떨리는 손 들킬까 봐"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "drums enter softly",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:44",
+      "lines": [
+       "연한 색은 너무 얌전",
+       "진한 색은 너무 티 나",
+       "두 개를 섞어 바르면",
+       "딱 오늘 같은 색",
+       "너를 만나는 날엔",
+       "작은 것도 고민돼",
+       "입꼬리를 올려 보고",
+       "다시 내려놓기도"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:44-0:58",
+      "lines": [
+       "아무렇지 않은 척",
+       "그게 제일 어려워",
+       "너는 알까 이 마음"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:28",
+      "lines": [
+       "립 한 번 더 one more coat",
+       "너무 티 나면 어떡해",
+       "립 한 번 더 one more coat",
+       "닦았다가 또 발라",
+       "Baby, it's just a little color",
+       "근데 마음은 다 묻어나",
+       "립 한 번 더 one more coat",
+       "오늘은 좀 예뻐 보일까"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:28-1:56",
+      "lines": [
+       "휴지에 살짝 찍어서",
+       "입술 자국 하나 남겨",
+       "네가 웃던 그 얘기",
+       "혼자 떠올리다 웃음",
+       "커피 마시면 지워질까",
+       "그래도 상관없어",
+       "네 앞에서 웃을 때",
+       "그게 진짜 내 색이니까"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:56-2:10",
+      "lines": [
+       "아무렇지 않은 척",
+       "그게 제일 어려워",
+       "너는 알까 이 마음"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:40",
+      "lines": [
+       "립 한 번 더 one more coat",
+       "너무 티 나면 어떡해",
+       "립 한 번 더 one more coat",
+       "닦았다가 또 발라",
+       "Baby, it's just a little color",
+       "근데 마음은 다 묻어나",
+       "립 한 번 더 one more coat",
+       "오늘은 좀 예뻐 보일까"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "falsetto, sparse Rhodes",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:00",
+      "lines": [
+       "지우고 또 바르고",
+       "결국 처음 그 색",
+       "너도 그렇게 봐 줄래"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft ad-libs, layered harmonies",
+      "lines": []
+     },
+     {
+      "tag": "3:00-3:28",
+      "lines": [
+       "립 한 번 더 one more coat",
+       "너무 티 나면 어떡해",
+       "립 한 번 더 one more coat",
+       "닦았다가 또 발라",
+       "Baby, it's just a little color",
+       "근데 마음은 다 묻어나",
+       "립 한 번 더 one more coat",
+       "오늘은 좀 예뻐 보일까"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "Rhodes only, fade out",
+      "lines": []
+     },
+     {
+      "tag": "3:28-3:40",
+      "lines": [
+       "립 한 번 더",
+       "one more coat"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/약속-30분-전-30-minutes-before-we-meet/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "Elevator Mirror",
+    "file": "05_elevator_mirror.mp3",
+    "src": "/mnt/external/suno-playlist/input/THIRTY_MINUTES_BEFORE/tracks/05_elevator_mirror.mp3",
+    "ms": 188712,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "hook first, four-on-the-floor kick, filtered disco strings",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": [
+       "Elevator mirror",
+       "십오 층부터 일 층까지",
+       "Elevator mirror",
+       "마지막 체크 one more time"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:40",
+      "lines": [
+       "문이 닫히고 혼자야",
+       "이 작은 방이 무대",
+       "조명은 위에서 딱",
+       "누가 봐도 좋은 각",
+       "머리 한 번 넘기고",
+       "셔츠 깃도 세워 봐",
+       "십사 층 아무도 없고",
+       "십삼 층 그대로 가"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-0:54",
+      "lines": [
+       "Ten, nine, 숫자가 내려가",
+       "내 기분은 올라가",
+       "Eight, seven, six"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:54-1:22",
+      "lines": [
+       "Elevator mirror",
+       "오늘 나 좀 괜찮지",
+       "Elevator mirror",
+       "Going down, but I'm going up",
+       "사진 한 장 찰칵",
+       "아무도 모르게",
+       "Elevator mirror",
+       "일 층 문 열리면 시작"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:22-1:48",
+      "lines": [
+       "칠 층에서 문 열리고",
+       "강아지랑 아저씨",
+       "갑자기 차렷 자세",
+       "거울 안 본 척하기",
+       "강아지가 날 보네",
+       "꼬리 흔들어 주네",
+       "아저씨 내리시고",
+       "다시 포즈 잡아 볼까"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:48-2:02",
+      "lines": [
+       "Ten, nine, 숫자가 내려가",
+       "내 기분은 올라가",
+       "Eight, seven, six"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:30",
+      "lines": [
+       "Elevator mirror",
+       "오늘 나 좀 괜찮지",
+       "Elevator mirror",
+       "Going down, but I'm going up",
+       "사진 한 장 찰칵",
+       "아무도 모르게",
+       "Elevator mirror",
+       "일 층 문 열리면 시작"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "filter sweep, slap bass solo, elevator ding",
+      "lines": []
+     },
+     {
+      "tag": "2:30-2:50",
+      "lines": [
+       "띵 문이 열려",
+       "바람이 불어와",
+       "Here we go"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full strings, falsetto ad-libs",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:18",
+      "lines": [
+       "Elevator mirror",
+       "오늘 나 좀 괜찮지",
+       "Elevator mirror",
+       "Going down, but I'm going up",
+       "사진 한 장 찰칵",
+       "아무도 모르게",
+       "Elevator mirror",
+       "일 층 문 열리면 시작"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "elevator ding, strings fade",
+      "lines": []
+     },
+     {
+      "tag": "3:18-3:28",
+      "lines": [
+       "Elevator mirror"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/약속-30분-전-30-minutes-before-we-meet/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "향수 두 번",
+    "file": "06_two_sprays.mp3",
+    "src": "/mnt/external/suno-playlist/input/THIRTY_MINUTES_BEFORE/tracks/06_two_sprays.mp3",
+    "ms": 122784,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "hook first, female vocal, bell synths, soft 808",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": [
+       "칙 칙 두 번이면 돼",
+       "손목 하나 목에 하나",
+       "칙 칙 두 번이면 돼",
+       "지나가면 남는 향"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male rap, relaxed melodic flow",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:44",
+      "lines": [
+       "현관 앞에 서서 마지막 단계",
+       "선반 위 작은 유리병 하나",
+       "세 번은 과해 한 번은 아쉬워",
+       "딱 두 번 그게 내 계산",
+       "공중에 뿌리고 그 안을 걸어",
+       "누가 알려준 비법 같은 거",
+       "엘베 안에 남겨둔 향기",
+       "다음 사람 기분 좋아지길"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:44-1:12",
+      "lines": [
+       "칙 칙 두 번이면 돼",
+       "손목 하나 목에 하나",
+       "칙 칙 두 번이면 돼",
+       "지나가면 남는 향",
+       "Two sprays, that's all I need",
+       "너무 많으면 티 나",
+       "칙 칙 두 번이면 돼",
+       "기억은 향으로 남아"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male rap",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:44",
+      "lines": [
+       "처음 만났던 날도 이 향",
+       "너는 기억 못 해도 괜찮아",
+       "어느 날 길에서 문득",
+       "비슷한 향에 고개 돌리면",
+       "그게 나야 그때 생각해 줘",
+       "작은 병에 담긴 내 이름",
+       "두 번이면 충분한 이유",
+       "오래 남는 건 진한 게 아니라서"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:44-2:12",
+      "lines": [
+       "칙 칙 두 번이면 돼",
+       "손목 하나 목에 하나",
+       "칙 칙 두 번이면 돼",
+       "지나가면 남는 향",
+       "Two sprays, that's all I need",
+       "너무 많으면 티 나",
+       "칙 칙 두 번이면 돼",
+       "기억은 향으로 남아"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "808 drops out, bells only, female whisper",
+      "lines": []
+     },
+     {
+      "tag": "2:12-2:34",
+      "lines": [
+       "손목을 맞대고",
+       "살짝 문질러",
+       "이제 나가 볼까"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "female vocal, male ad-libs",
+      "lines": []
+     },
+     {
+      "tag": "2:34-3:02",
+      "lines": [
+       "칙 칙 두 번이면 돼",
+       "손목 하나 목에 하나",
+       "칙 칙 두 번이면 돼",
+       "지나가면 남는 향",
+       "Two sprays, that's all I need",
+       "너무 많으면 티 나",
+       "칙 칙 두 번이면 돼",
+       "기억은 향으로 남아"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "spray hiss, bells fade",
+      "lines": []
+     },
+     {
+      "tag": "3:02-3:12",
+      "lines": [
+       "칙 칙"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/약속-30분-전-30-minutes-before-we-meet/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "5분 뒤 도착",
+    "file": "07_five_minutes_away.mp3",
+    "src": "/mnt/external/suno-playlist/input/THIRTY_MINUTES_BEFORE/tracks/07_five_minutes_away.mp3",
+    "ms": 174648,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "hook first, full band hit, drum fill",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:10",
+      "lines": [
+       "오 분 뒤 도착 almost there",
+       "진짜야 거의 다 왔어",
+       "오 분 뒤 도착 almost there",
+       "조금만 기다려 줘"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "palm-muted guitars",
+      "lines": []
+     },
+     {
+      "tag": "0:10-0:36",
+      "lines": [
+       "택시 문 쾅 닫고서",
+       "기사님 빨리요",
+       "신호등은 다 빨강",
+       "내 맘은 다 초록",
+       "지도 앱 속 작은 점",
+       "왜 이렇게 느려",
+       "메시지 창 열어 놓고",
+       "뭐라고 쓸까 고민"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:36-0:50",
+      "lines": [
+       "조금 늦을 것 같아",
+       "아니 거의 다 왔어",
+       "지우고 또 써"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "gang vocals, power chords",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:16",
+      "lines": [
+       "오 분 뒤 도착 almost there",
+       "진짜야 거의 다 왔어",
+       "오 분 뒤 도착 almost there",
+       "조금만 기다려 줘",
+       "창밖으로 불빛이 와",
+       "네가 있는 그 거리로",
+       "오 분 뒤 도착 almost there",
+       "뛰어갈게 지금 나"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:42",
+      "lines": [
+       "다리 위를 건너가",
+       "강 위에 노을 한 줄",
+       "예쁘다 사진 찍을까",
+       "아냐 그럴 때 아냐",
+       "기사님 여기 세워 주세요",
+       "카드 찍고 문 열어",
+       "마지막 백 미터는",
+       "내 두 발로 달려"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:42-1:56",
+      "lines": [
+       "조금 늦을 것 같아",
+       "아니 거의 다 왔어",
+       "지우고 또 써"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "gang vocals, power chords",
+      "lines": []
+     },
+     {
+      "tag": "1:56-2:22",
+      "lines": [
+       "오 분 뒤 도착 almost there",
+       "진짜야 거의 다 왔어",
+       "오 분 뒤 도착 almost there",
+       "조금만 기다려 줘",
+       "창밖으로 불빛이 와",
+       "네가 있는 그 거리로",
+       "오 분 뒤 도착 almost there",
+       "뛰어갈게 지금 나"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "half-time, bass and voice only",
+      "lines": []
+     },
+     {
+      "tag": "2:22-2:40",
+      "lines": [
+       "저기 네가 보여",
+       "손 흔드는 너",
+       "숨 고르고 웃자"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "double-time drums, full band",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:06",
+      "lines": [
+       "오 분 뒤 도착 almost there",
+       "진짜야 거의 다 왔어",
+       "오 분 뒤 도착 almost there",
+       "조금만 기다려 줘",
+       "창밖으로 불빛이 와",
+       "네가 있는 그 거리로",
+       "오 분 뒤 도착 almost there",
+       "뛰어갈게 지금 나"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "final band hit",
+      "lines": []
+     },
+     {
+      "tag": "3:06-3:14",
+      "lines": [
+       "도착"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/약속-30분-전-30-minutes-before-we-meet/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "아직 집이야",
+    "file": "08_still_at_home.mp3",
+    "src": "/mnt/external/suno-playlist/input/THIRTY_MINUTES_BEFORE/tracks/08_still_at_home.mp3",
+    "ms": 130872,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "hook first, soft male vocal, fingerpicked guitar",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": [
+       "아직 집이야 사실은",
+       "나도 방금 일어났어",
+       "아직 집이야 사실은",
+       "너 늦는다니 다행이야"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "drum machine enters",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:42",
+      "lines": [
+       "오 분 뒤 도착한다는",
+       "네 문자에 벌떡 일어나",
+       "잠옷 바람 그대로",
+       "양치부터 할게",
+       "나도 거의 다 왔다고",
+       "답장 보내 놓고서",
+       "신발 한 짝 들고서",
+       "나머지 한 짝 찾아"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "우리 둘 다 똑같네",
+       "늦는 건 비밀로 해",
+       "먼저 온 척해야지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "doubled vocals",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:24",
+      "lines": [
+       "아직 집이야 사실은",
+       "나도 방금 일어났어",
+       "아직 집이야 사실은",
+       "너 늦는다니 다행이야",
+       "Running late, running late",
+       "We're both running late",
+       "아직 집이야 사실은",
+       "그래도 빨리 갈게"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:52",
+      "lines": [
+       "약속 장소 앞까지",
+       "전력으로 달려가",
+       "도착하니 저기 너",
+       "너도 숨이 차 보여",
+       "둘이 동시에 웃음",
+       "누가 먼저 말할래",
+       "괜찮아 방금 왔어",
+       "그 말 둘이 겹쳐"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:06",
+      "lines": [
+       "우리 둘 다 똑같네",
+       "늦는 건 비밀로 해",
+       "먼저 온 척해야지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "doubled vocals",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:34",
+      "lines": [
+       "아직 집이야 사실은",
+       "나도 방금 일어났어",
+       "아직 집이야 사실은",
+       "너 늦는다니 다행이야",
+       "Running late, running late",
+       "We're both running late",
+       "아직 집이야 사실은",
+       "그래도 빨리 갈게"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "acoustic guitar only, soft laughing",
+      "lines": []
+     },
+     {
+      "tag": "2:34-2:56",
+      "lines": [
+       "방금 왔어 나도",
+       "우리 그냥 비긴 걸로"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/약속-30분-전-30-minutes-before-we-meet/08.mp3"
+   }
+  ],
+  "updated_at": 1795331717,
+  "cover_source": "https://i.ytimg.com/vi/a93yCA9OpBs/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1230144,
+  "cover_file": "약속-30분-전-30-minutes-before-we-meet.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/약속-30분-전-30-minutes-before-we-meet.jpg?v=cf4586aa"
  },
  {
   "folder": "THREE_DAY_ABS",

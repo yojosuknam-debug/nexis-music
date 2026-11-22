@@ -1002,5 +1002,41 @@
   "src": "/mnt/external/suno-playlist/output/오래도록_크리스마스_(Christmas_Through_the_Decades)_project/thumbnail.png",
   "project": "오래도록_크리스마스_(Christmas_Through_the_Decades)_project",
   "match_score": 1.0
+ },
+ "외투-주머니-속에-what-the-pockets-kept": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/외투_주머니_속에_(What_the_Pockets_Kept)_project/thumbnail.png",
+  "project": "외투_주머니_속에_(What_the_Pockets_Kept)_project",
+  "match_score": 1.0
+ },
+ "fear-not": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Fear_Not_project/thumbnail.png",
+  "project": "Fear_Not_project",
+  "match_score": 1.0
+ },
+ "the-keeper-s-hours-lighthouse-guitar-jazz-for-late-night-study": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/The_Keeper's_Hours_(Lighthouse_Guitar_Jazz_for_Late-Night_Study)_project/thumbnail.png",
+  "project": "The_Keeper's_Hours_(Lighthouse_Guitar_Jazz_for_Late-Night_Study)_project",
+  "match_score": 1.0
+ },
+ "굳이-노래로-위인전-legends-sung-anyway": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/굳이_노래로_위인전_(Legends,_Sung_Anyway)_project/thumbnail.png",
+  "project": "굳이_노래로_위인전_(Legends,_Sung_Anyway)_project",
+  "match_score": 1.0
+ },
+ "다실의-하루-a-day-in-the-tea-room": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/다실의_하루_(A_Day_in_the_Tea_Room)_project/thumbnail.png",
+  "project": "다실의_하루_(A_Day_in_the_Tea_Room)_project",
+  "match_score": 1.0
+ },
+ "약속-30분-전-30-minutes-before-we-meet": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/약속_30분_전_(30_Minutes_Before_We_Meet)_project/thumbnail.png",
+  "project": "약속_30분_전_(30_Minutes_Before_We_Meet)_project",
+  "match_score": 1.0
  }
 }
