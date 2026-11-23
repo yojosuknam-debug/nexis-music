@@ -119,6 +119,28 @@ def build_text(o: Path, lang: str, service: dt.datetime, rerun: bool, test: bool
     return title[:100], "\n".join(lines)[:4900]
 
 
+RETRY_WAITS = (10, 30, 60)          # 유튜브 일시 장애(5xx) 때 다시 시도 간격(초) — 예배 앞 5분 대기 화면 안에 끝난다
+RETRY_STATUS = {500, 502, 503, 504}
+
+
+def call(req):
+    """API 요청 실행 — 5xx·연결 끊김이면 RETRY_WAITS 간격으로 다시 시도(2026-11-23 22시 bind 503 사고)"""
+    from googleapiclient.errors import HttpError
+    for i, wait in enumerate((*RETRY_WAITS, None)):
+        try:
+            return req.execute()
+        except HttpError as e:
+            if wait is None or getattr(e.resp, "status", 0) not in RETRY_STATUS:
+                raise
+            why = f"HTTP {e.resp.status}"
+        except (ConnectionError, TimeoutError, OSError) as e:
+            if wait is None:
+                raise
+            why = type(e).__name__
+        print(f"유튜브 일시 오류({why}) — {wait}초 뒤 다시 시도 {i + 1}/{len(RETRY_WAITS)}")
+        time.sleep(wait)
+
+
 def youtube():
     from google.auth.transport.requests import Request
     from googleapiclient.discovery import build
@@ -131,7 +153,7 @@ def youtube():
 
 def get_stream(y, lang: str) -> dict:
     name = f"nexis-online-worship-{lang}"
-    for s in y.liveStreams().list(part="id,snippet,cdn", mine=True, maxResults=50).execute().get("items", []):
+    for s in call(y.liveStreams().list(part="id,snippet,cdn", mine=True, maxResults=50)).get("items", []):
         if s["snippet"]["title"] == name:
             return s
     return y.liveStreams().insert(part="snippet,cdn,contentDetails", body={
@@ -261,18 +283,19 @@ def main() -> int:
         print(desc)
         return 0
 
-    bid = ""
+    bid, bound = "", False
     try:
         y = youtube()
         st = get_stream(y, lang)
         start = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(seconds=30)).isoformat()
-        bc = y.liveBroadcasts().insert(part="snippet,status,contentDetails", body={
+        bc = call(y.liveBroadcasts().insert(part="snippet,status,contentDetails", body={
             "snippet": {"title": title, "description": desc, "scheduledStartTime": start},
             "status": {"privacyStatus": "private" if a.test else "public", "selfDeclaredMadeForKids": False},
             "contentDetails": {"enableAutoStart": True, "enableAutoStop": True, "enableDvr": True, "recordFromStart": True,
-                               "enableEmbed": True, "latencyPreference": "normal", "monitorStream": {"enableMonitorStream": False}}}).execute()
+                               "enableEmbed": True, "latencyPreference": "normal", "monitorStream": {"enableMonitorStream": False}}}))
         bid = bc["id"]
-        y.liveBroadcasts().bind(part="id,contentDetails", id=bid, streamId=st["id"]).execute()
+        call(y.liveBroadcasts().bind(part="id,contentDetails", id=bid, streamId=st["id"]))
+        bound = True
         ing = st["cdn"]["ingestionInfo"]
         url = f"{ing['ingestionAddress']}/{ing['streamName']}"
         link = f"https://youtu.be/{bid}"
@@ -298,6 +321,13 @@ def main() -> int:
         return 0
     except Exception as e:
         why = f"{type(e).__name__}: {ops.clean(str(e), 160)}"
+        if bid and not bound:  # 만들기만 하고 연결 못 한 방송 = 채널에 빈 '예정 방송'으로 남는다 → 지운다
+            try:
+                call(y.liveBroadcasts().delete(id=bid))
+                why += " (만들다 만 방송은 삭제함)"
+                bid = ""
+            except Exception as e2:
+                why += f" (빈 예정 방송 {bid} 삭제 실패: {type(e2).__name__} — 스튜디오에서 지워 주세요)"
         ev("fail", why, url=f"https://youtu.be/{bid}" if bid else "")
         ops.notify(("🚨 예배 시험 방송 실패 — 첫 방송 전에 확인 필요: " if a.test else f"🚨 {slot} {name} 예배 방송을 시작하지 못했습니다: ") + why)
         print("실패", why)
