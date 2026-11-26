@@ -40576,6 +40576,1089 @@
   "cover_url": "https://audio.yojosuknam.com/cover/merry-quietly-original-lo-fi-carols.jpg?v=11dad9e9"
  },
  {
+  "folder": "MERRY_TEMPLESTAY",
+  "slug": "메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz",
+  "title": "메리 템플스테이 — 절에서 보내는 크리스마스 재즈 (Merry Templestay: Buddhist Christmas Jazz)",
+  "genre": "Buddhist Jazz × Christmas Carol Jazz × K-Jazz Pop (Swing / Bossa Nova / K-R&B Jazz / City-pop Jazz Funk / Piano Trio)",
+  "channel": "Miso Beats (miso)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "메리 템플스테이 (Merry Templestay)",
+    "file": "01_merry_templestay.mp3",
+    "src": "/mnt/external/suno-playlist/input/MERRY_TEMPLESTAY/tracks/01_merry_templestay.mp3",
+    "ms": 142776,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells, moktak on two and four, piano riff",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:36",
+      "lines": [
+       "이브 밤엔 약속 대신",
+       "산길 따라 버스 한 대",
+       "가방에는 털양말 셋",
+       "머릿속엔 할 일 백 개"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "female vocal, softer",
+      "lines": []
+     },
+     {
+      "tag": "0:36-0:50",
+      "lines": [
+       "입구에선 스님 미소",
+       "휴대폰은 바구니에",
+       "알림 소리 꺼지니까",
+       "눈 오는 소리 들려"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "group vocals",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:14",
+      "lines": [
+       "메리 메리 템플스테이",
+       "캐럴 대신 목탁 소리",
+       "Merry merry templestay",
+       "오늘 밤은 천천히"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:14-1:36",
+      "lines": [
+       "회색 조끼 맞춰 입고",
+       "고무신에 발을 쏙",
+       "트리 대신 소나무엔",
+       "연등 하나 걸려 있어"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:36-1:50",
+      "lines": [
+       "누가 뭐래도 오늘은",
+       "아무 데도 안 가도 돼",
+       "급한 일은 산 아래",
+       "여기선 숨만 쉬면 돼"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "group vocals",
+      "lines": []
+     },
+     {
+      "tag": "1:50-2:14",
+      "lines": [
+       "메리 메리 템플스테이",
+       "캐럴 대신 목탁 소리",
+       "Merry merry templestay",
+       "오늘 밤은 천천히"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "soft, piano and vibraphone only",
+      "lines": []
+     },
+     {
+      "tag": "2:14-2:36",
+      "lines": [
+       "하나 둘 숨을 쉬고",
+       "셋 넷 눈을 감아",
+       "Merry Christmas",
+       "나한테도 한마디"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full group, sleigh bells return",
+      "lines": []
+     },
+     {
+      "tag": "2:36-3:06",
+      "lines": [
+       "메리 메리 템플스테이",
+       "캐럴 대신 목탁 소리",
+       "Merry merry templestay",
+       "오늘 밤은 천천히",
+       "천천히, 천천히"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "moktak alone, one soft bell shake",
+      "lines": []
+     },
+     {
+      "tag": "3:06-3:20",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "목탁 보사노바 (Moktak Bossa)",
+    "file": "02_moktak_bossa.mp3",
+    "src": "/mnt/external/suno-playlist/input/MERRY_TEMPLESTAY/tracks/02_moktak_bossa.mp3",
+    "ms": 204432,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "발우 한 그릇 (Nothing Left in the Bowl)",
+    "file": "03_nothing_left_in_the_bowl.mp3",
+    "src": "/mnt/external/suno-playlist/input/MERRY_TEMPLESTAY/tracks/03_nothing_left_in_the_bowl.mp3",
+    "ms": 216288,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "felt piano, brushes, one wooden clapper clack",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male baritone crooner",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:40",
+      "lines": [
+       "칠면조도 케이크도 없는",
+       "크리스마스 이브 저녁",
+       "그릇 네 개 포개 놓고",
+       "죽비 소리에 시작"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-0:52",
+      "lines": [
+       "말소리는 하나 없고",
+       "숟가락만 달그락"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "wooden clapper clack",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:16",
+      "lines": [
+       "발우 한 그릇, 메리 크리스마스",
+       "밥알 하나 남김없이",
+       "배부른 건 조금만",
+       "고마운 건 그릇 가득"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:42",
+      "lines": [
+       "나물 한 줄 김치 한 쪽",
+       "천천히 씹어 보니",
+       "엄마가 싸 준 반찬 맛",
+       "문득 생각이 나네"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:42-1:54",
+      "lines": [
+       "마지막엔 단무지로",
+       "그릇 싹 닦아 내고"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "wooden clapper clack",
+      "lines": []
+     },
+     {
+      "tag": "1:54-2:18",
+      "lines": [
+       "발우 한 그릇, 메리 크리스마스",
+       "밥알 하나 남김없이",
+       "배부른 건 조금만",
+       "고마운 건 그릇 가득"
+      ]
+     },
+     {
+      "tag": "Trumpet Solo",
+      "lines": []
+     },
+     {
+      "tag": "muted trumpet, soft and bluesy",
+      "lines": []
+     },
+     {
+      "tag": "2:18-2:40",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "piano alone underneath",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:00",
+      "lines": [
+       "작년엔 남긴 케이크",
+       "반은 버렸었는데",
+       "올해는 깨끗한 그릇",
+       "그게 선물이야"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "3:00-3:20",
+      "lines": [
+       "발우 한 그릇, 메리 크리스마스",
+       "고마운 건 그릇 가득"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "one moktak knock, last piano chord",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:28",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "단청 위에 내리는 눈 (Snow on the Dancheong)",
+    "file": "04_snow_on_the_dancheong.mp3",
+    "src": "/mnt/external/suno-playlist/input/MERRY_TEMPLESTAY/tracks/04_snow_on_the_dancheong.mp3",
+    "ms": 218472,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "소등 후 소곤소곤 캐럴 (Whisper Carol After Lights Out)",
+    "file": "05_whisper_carol_after_lights_out.mp3",
+    "src": "/mnt/external/suno-playlist/input/MERRY_TEMPLESTAY/tracks/05_whisper_carol_after_lights_out.mp3",
+    "ms": 187032,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "Rhodes chords, rim clicks, faint moktak",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "whispered female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:40",
+      "lines": [
+       "밤 아홉 시 불이 꺼지고",
+       "이불 속에 둘이 누워",
+       "창호지에 달빛 비쳐",
+       "너 혹시 아직 깨 있니"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-0:52",
+      "lines": [
+       "쉿, 아주 작게만",
+       "스님 깨시면 안 되니까"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "whisper harmonies",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:18",
+      "lines": [
+       "소곤소곤 캐럴",
+       "이불 밑에 merry Christmas",
+       "작게 불러도 들려",
+       "하얀 눈은 다 알아"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:18-1:44",
+      "lines": [
+       "온돌방은 뜨끈하고",
+       "코끝은 아직 시려",
+       "서울에선 이 시간에",
+       "야근하던 우리였지"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:44-1:56",
+      "lines": [
+       "쉿, 웃음 참고",
+       "베개에 얼굴 묻고"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "whisper harmonies",
+      "lines": []
+     },
+     {
+      "tag": "1:56-2:22",
+      "lines": [
+       "소곤소곤 캐럴",
+       "이불 밑에 merry Christmas",
+       "작게 불러도 들려",
+       "하얀 눈은 다 알아"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "Rhodes and voice only",
+      "lines": []
+     },
+     {
+      "tag": "2:22-2:44",
+      "lines": [
+       "크게 안 불러도 돼",
+       "가까이 있으면 다 들려",
+       "잘 자, 메리 크리스마스",
+       "내일 새벽에 봐"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "softest, whisper harmonies",
+      "lines": []
+     },
+     {
+      "tag": "2:44-3:12",
+      "lines": [
+       "소곤소곤 캐럴",
+       "이불 밑에 merry Christmas",
+       "작게 불러도 들려",
+       "하얀 눈은 다 알아"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "vibraphone last note, one moktak knock",
+      "lines": []
+     },
+     {
+      "tag": "3:12-3:24",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "연등 트리 아래 가야금 (Gayageum Under the Lantern Tree)",
+    "file": "06_gayageum_under_the_lantern_tree.mp3",
+    "src": "/mnt/external/suno-playlist/input/MERRY_TEMPLESTAY/tracks/06_gayageum_under_the_lantern_tree.mp3",
+    "ms": 191880,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "마당 눈 쓸기 (Sweeping Snow, Sweeping Mind)",
+    "file": "07_sweeping_snow_sweeping_mind.mp3",
+    "src": "/mnt/external/suno-playlist/input/MERRY_TEMPLESTAY/tracks/07_sweeping_snow_sweeping_mind.mp3",
+    "ms": 146808,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "brush swishes like a broom, walking bass, piano riff",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:26",
+      "lines": [
+       "아침 공양 끝나자마자",
+       "빗자루 하나씩 받아"
+      ]
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:26-0:38",
+      "lines": [
+       "밤새 쌓인 하얀 눈이",
+       "마당 가득 수북해"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet",
+      "lines": []
+     },
+     {
+      "tag": "0:38-0:48",
+      "lines": [
+       "누가 먼저 끝내나 내기",
+       "지는 사람 설거지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "gang vocals, sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:12",
+      "lines": [
+       "쓱싹 쓱싹 눈을 쓸면",
+       "마음도 쓱싹 쓸려",
+       "쓱싹 쓱싹 메리 크리스마스",
+       "어제 일도 같이 가"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:24",
+      "lines": [
+       "다 쓸고서 뒤를 보면",
+       "또 눈이 내려와"
+      ]
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:36",
+      "lines": [
+       "그럼 다시 쓸면 되지",
+       "그게 오늘 할 일이야"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet",
+      "lines": []
+     },
+     {
+      "tag": "1:36-1:46",
+      "lines": [
+       "누가 먼저 끝내나 내기",
+       "결국 둘 다 설거지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "gang vocals, sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "1:46-2:10",
+      "lines": [
+       "쓱싹 쓱싹 눈을 쓸면",
+       "마음도 쓱싹 쓸려",
+       "쓱싹 쓱싹 메리 크리스마스",
+       "어제 일도 같이 가"
+      ]
+     },
+     {
+      "tag": "Horn Break",
+      "lines": []
+     },
+     {
+      "tag": "trumpet and clarinet trade riffs, brush swishes",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:30",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "slower, piano and duet only",
+      "lines": []
+     },
+     {
+      "tag": "2:30-2:50",
+      "lines": [
+       "깨끗해진 마당 위",
+       "첫 발자국 하나",
+       "네가 먼저 찍어 봐",
+       "오늘은 너한테 줄게"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, gang vocals, sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:16",
+      "lines": [
+       "쓱싹 쓱싹 눈을 쓸면",
+       "마음도 쓱싹 쓸려",
+       "쓱싹 쓱싹 메리 크리스마스",
+       "Merry merry Christmas"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "3:16-3:26",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "해금으로 여는 성탄 새벽 (Haegeum at Christmas Dawn)",
+    "file": "08_haegeum_at_christmas_dawn.mp3",
+    "src": "/mnt/external/suno-playlist/input/MERRY_TEMPLESTAY/tracks/08_haegeum_at_christmas_dawn.mp3",
+    "ms": 217488,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz/08.mp3"
+   },
+   {
+    "n": 9,
+    "title": "눈사람도 참선 중 (Snowman in Meditation)",
+    "file": "09_snowman_in_meditation.mp3",
+    "src": "/mnt/external/suno-playlist/input/MERRY_TEMPLESTAY/tracks/09_snowman_in_meditation.mp3",
+    "ms": 200880,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "funk guitar chops, horn stab, moktak backbeat",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female lead",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:38",
+      "lines": [
+       "점심 먹고 마당 한쪽",
+       "눈사람을 만들었지",
+       "다리 꼬고 손 모으고",
+       "솔방울로 눈을 감겨"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:38-0:50",
+      "lines": [
+       "일 분, 십 분, 한 시간",
+       "꼼짝도 안 하네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "group vocals, horns",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:14",
+      "lines": [
+       "눈사람도 참선 중",
+       "휴대폰도 안 봐요",
+       "눈사람도 참선 중",
+       "한 번도 안 졸아"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female lead",
+      "lines": []
+     },
+     {
+      "tag": "1:14-1:38",
+      "lines": [
+       "우린 오 분 앉았다가",
+       "다리 저려 데굴데굴",
+       "저 녀석은 해가 져도",
+       "눈썹 하나 까딱 않고"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:38-1:50",
+      "lines": [
+       "스님이 지나가다",
+       "껄껄 웃고 가시네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "group vocals, horns",
+      "lines": []
+     },
+     {
+      "tag": "1:50-2:14",
+      "lines": [
+       "눈사람도 참선 중",
+       "휴대폰도 안 봐요",
+       "눈사람도 참선 중",
+       "한 번도 안 졸아"
+      ]
+     },
+     {
+      "tag": "Horn Break",
+      "lines": []
+     },
+     {
+      "tag": "trumpet and sax riffs, funk guitar",
+      "lines": []
+     },
+     {
+      "tag": "2:14-2:34",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "slower, Rhodes and voice",
+      "lines": []
+     },
+     {
+      "tag": "2:34-2:56",
+      "lines": [
+       "내일 해가 뜨고 나면",
+       "조금씩 녹아 가겠지",
+       "그래도 웃는 얼굴",
+       "그게 내려놓는 법"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full group, horns",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:18",
+      "lines": [
+       "눈사람도 참선 중",
+       "휴대폰도 안 봐요",
+       "눈사람이 일등",
+       "오늘 참선 일등"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "3:18-3:28",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz/09.mp3"
+   },
+   {
+    "n": 10,
+    "title": "내려가는 길이 가벼워 (Lighter on the Way Down)",
+    "file": "10_lighter_on_the_way_down.mp3",
+    "src": "/mnt/external/suno-playlist/input/MERRY_TEMPLESTAY/tracks/10_lighter_on_the_way_down.mp3",
+    "ms": 214080,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "singing bowl, Rhodes chords",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female vocal, tender",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:46",
+      "lines": [
+       "보관함에서 받은 휴대폰",
+       "알림이 마흔일곱 개",
+       "하나도 급하지 않게",
+       "주머니에 넣어 두고"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:46-0:58",
+      "lines": [
+       "일주문을 나서는데",
+       "눈이 또 내리네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:26",
+      "lines": [
+       "내려가는 길이 가벼워",
+       "올라올 땐 무거웠는데",
+       "Merry Christmas, 모두에게",
+       "따뜻한 밤이 오기를"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:26-1:54",
+      "lines": [
+       "버스 창에 이마 대고",
+       "멀어지는 산을 봐",
+       "누군가는 오늘 밤도",
+       "일하고 있을 거야"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:54-2:06",
+      "lines": [
+       "그 사람의 창가에도",
+       "작은 불이 켜지길"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:34",
+      "lines": [
+       "내려가는 길이 가벼워",
+       "올라올 땐 무거웠는데",
+       "Merry Christmas, 모두에게",
+       "따뜻한 밤이 오기를"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "humming group joins softly",
+      "lines": []
+     },
+     {
+      "tag": "2:34-2:56",
+      "lines": [
+       "음, 천천히",
+       "음, 따뜻하게",
+       "음, 모두 다",
+       "음, 오늘 밤"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "voice and soft humming group",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:26",
+      "lines": [
+       "내려가는 길이 가벼워",
+       "올라올 땐 무거웠는데",
+       "Merry Christmas, 모두에게",
+       "따뜻한 밤이 오기를"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "singing bowl, last Rhodes chord, silence",
+      "lines": []
+     },
+     {
+      "tag": "3:26-3:38",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz/10.mp3"
+   }
+  ],
+  "updated_at": 1795616561,
+  "cover_source": "https://i.ytimg.com/vi/CS5KSUZlqAI/maxresdefault.jpg",
+  "cover_match": 0.8,
+  "cover_how": "album",
+  "total_ms": 1940136,
+  "cover_file": "메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz.jpg?v=f0eca458"
+ },
+ {
   "folder": "MINCHO",
   "slug": "민초-mincho-조선-힙합-vol-2",
   "title": "민초 (MINCHO) — 조선 힙합 Vol.2",
@@ -46987,6 +48070,962 @@
   "total_ms": 284184,
   "cover_file": "남이섬-nami-island-album.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/남이섬-nami-island-album.jpg?v=6c0f07ea"
+ },
+ {
+  "folder": "NAMU_MERRY_CHRISTMAS",
+  "slug": "나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz",
+  "title": "나무 메리 크리스마스 — 불교 캐럴 재즈 (Namu Merry Christmas: Buddhist Carol Jazz)",
+  "genre": "Buddhist Jazz × Christmas Carol Jazz (Lofi Jazz / Jazz Hop / Swing / Bossa Nova)",
+  "channel": "Lo-fi & Chill (lofi)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "Namu Merry Christmas (나무 아래서 메리 크리스마스)",
+    "file": "01_namu_merry_christmas.mp3",
+    "src": "/mnt/external/suno-playlist/input/NAMU_MERRY_CHRISTMAS/tracks/01_namu_merry_christmas.mp3",
+    "ms": 178656,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells, moktak on two and four, Rhodes chords, vinyl crackle",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "Snow on the temple roof, lights on the pine",
+       "Somebody hung a lantern where the star should shine",
+       "Someone in the kitchen stirring something sweet",
+       "And a little wooden fish keeping time with the beat"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "group vocals",
+      "lines": []
+     },
+     {
+      "tag": "0:42-1:08",
+      "lines": [
+       "Namu, namu, merry Christmas",
+       "Under the tree we breathe in slow",
+       "Namu, namu, merry Christmas",
+       "Nothing to chase and nowhere to go"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:08-1:34",
+      "lines": [
+       "No need to hurry, no list to check",
+       "Just a cup of barley tea and a scarf round your neck",
+       "If the gift is late, well, so is the snow",
+       "Every little thing arrives when it's ready to go"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "group vocals",
+      "lines": []
+     },
+     {
+      "tag": "1:34-2:00",
+      "lines": [
+       "Namu, namu, merry Christmas",
+       "Under the tree we breathe in slow",
+       "Namu, namu, merry Christmas",
+       "Nothing to chase and nowhere to go"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "soft, Rhodes and vibraphone only",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:24",
+      "lines": [
+       "Breathe in the pine, breathe out the cold",
+       "A wish for the young and a wish for the old"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full group, sleigh bells return",
+      "lines": []
+     },
+     {
+      "tag": "2:24-3:02",
+      "lines": [
+       "Namu, namu, merry Christmas",
+       "Under the tree we breathe in slow",
+       "Namu, namu, merry Christmas",
+       "Nothing to chase and nowhere to go",
+       "Namu, namu, merry merry Christmas",
+       "Nowhere to go"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "moktak alone, one soft bell shake, vinyl fades",
+      "lines": []
+     },
+     {
+      "tag": "3:02-3:18",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "Wooden Fish Swing (목탁이 리듬 담당)",
+    "file": "02_wooden_fish_swing.mp3",
+    "src": "/mnt/external/suno-playlist/input/NAMU_MERRY_CHRISTMAS/tracks/02_wooden_fish_swing.mp3",
+    "ms": 188544,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "Santa Sits in Lotus (산타도 오늘은 가부좌)",
+    "file": "03_santa_sits_in_lotus.mp3",
+    "src": "/mnt/external/suno-playlist/input/NAMU_MERRY_CHRISTMAS/tracks/03_santa_sits_in_lotus.mp3",
+    "ms": 224904,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "singing bowl rings, felt piano, brushes",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male baritone crooner",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:46",
+      "lines": [
+       "Five minutes to midnight, the sleigh's at the door",
+       "Eight hundred chimneys and maybe some more",
+       "But the old man in red sits down on the floor",
+       "Folds up his legs and he breathes like before"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "singing bowl rings",
+      "lines": []
+     },
+     {
+      "tag": "0:46-1:12",
+      "lines": [
+       "Santa sits in lotus",
+       "Just for a minute or two",
+       "Before he flies the whole world over",
+       "He's gonna sit here with you"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:40",
+      "lines": [
+       "The reindeer are restless, the elves check the clock",
+       "He smiles with his eyes closed and lets them all knock",
+       "A sack full of presents can wait one more breath",
+       "The calmest delivery still travels best"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "singing bowl rings",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:06",
+      "lines": [
+       "Santa sits in lotus",
+       "Just for a minute or two",
+       "Before he flies the whole world over",
+       "He's gonna sit here with you"
+      ]
+     },
+     {
+      "tag": "Trumpet Solo",
+      "lines": []
+     },
+     {
+      "tag": "muted trumpet, soft and bluesy",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:34",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "piano alone underneath",
+      "lines": []
+     },
+     {
+      "tag": "2:34-2:54",
+      "lines": [
+       "Breathe in for the children",
+       "Breathe out for the rest",
+       "A heart that is quiet",
+       "Can carry the rest"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:54-3:18",
+      "lines": [
+       "Santa sits in lotus",
+       "Just for a minute or two",
+       "Then off goes the sleigh in silence",
+       "And the moon is waving too"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "singing bowl fades, one piano chord",
+      "lines": []
+     },
+     {
+      "tag": "3:18-3:28",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "Snowfall Sermon (눈 내리는 소리도 설법)",
+    "file": "04_snowfall_sermon.mp3",
+    "src": "/mnt/external/suno-playlist/input/NAMU_MERRY_CHRISTMAS/tracks/04_snowfall_sermon.mp3",
+    "ms": 233736,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "All I Want Is Nothing (갖고 싶은 게 없는 게 소원)",
+    "file": "05_all_i_want_is_nothing.mp3",
+    "src": "/mnt/external/suno-playlist/input/NAMU_MERRY_CHRISTMAS/tracks/05_all_i_want_is_nothing.mp3",
+    "ms": 188352,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "nylon guitar bossa pattern, rim clicks, moktak light",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "breathy female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:44",
+      "lines": [
+       "They asked me for a wishlist, I handed back the pen",
+       "I've had a lot of somethings, now I'd like a little zen",
+       "No ribbon and no boxes, no shiny new machine",
+       "Just the quiet of the morning and the space in between"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:44-1:10",
+      "lines": [
+       "All I want is nothing",
+       "Wrapped in winter light",
+       "A cup of tea, a candle",
+       "And nowhere else tonight"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:10-1:40",
+      "lines": [
+       "My closet's full of sweaters that I swore would make me glad",
+       "My phone is full of pictures of the mornings that I had",
+       "So this year, dear old Santa, you can skip my little street",
+       "Leave an extra cookie for the ones with colder feet"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:06",
+      "lines": [
+       "All I want is nothing",
+       "Wrapped in winter light",
+       "A cup of tea, a candle",
+       "And nowhere else tonight"
+      ]
+     },
+     {
+      "tag": "Flute Solo",
+      "lines": []
+     },
+     {
+      "tag": "alto flute over bossa groove",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:30",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "guitar and voice only",
+      "lines": []
+     },
+     {
+      "tag": "2:30-2:50",
+      "lines": [
+       "Empty hands are open hands",
+       "And open hands can hold",
+       "The whole of winter, softly",
+       "Without a thing to own"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:14",
+      "lines": [
+       "All I want is nothing",
+       "Wrapped in winter light",
+       "A cup of tea, a candle",
+       "And you beside me tonight"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar alone, one moktak knock",
+      "lines": []
+     },
+     {
+      "tag": "3:14-3:24",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "Unwrap the Present Moment (지금 이 순간 포장 뜯기)",
+    "file": "06_unwrap_the_present_moment.mp3",
+    "src": "/mnt/external/suno-playlist/input/NAMU_MERRY_CHRISTMAS/tracks/06_unwrap_the_present_moment.mp3",
+    "ms": 176304,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "piano comping, clarinet call, moktak off-beats",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:28",
+      "lines": [
+       "The paper's on the floor and the ribbon's on the cat",
+       "You're laughing at the sweater, well, I'll give you that"
+      ]
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "0:28-0:42",
+      "lines": [
+       "The cocoa's getting cold but the window's getting bright",
+       "And nobody is checking any phone tonight"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, harmonies",
+      "lines": []
+     },
+     {
+      "tag": "0:42-1:08",
+      "lines": [
+       "Unwrap the present moment",
+       "It's the only gift in town",
+       "No receipt and no returning",
+       "So let's just sit right down"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:08-1:22",
+      "lines": [
+       "Tomorrow's got a meeting and yesterday's a bill"
+      ]
+     },
+     {
+      "tag": "male vocal",
+      "lines": [
+       "But right here in the kitchen the whole world's standing still"
+      ]
+     },
+     {
+      "tag": "female vocal",
+      "lines": []
+     },
+     {
+      "tag": "1:22-1:36",
+      "lines": [
+       "You burned the second batch"
+      ]
+     },
+     {
+      "tag": "male vocal",
+      "lines": [
+       "You ate the first one too"
+      ]
+     },
+     {
+      "tag": "duet",
+      "lines": [
+       "The best thing by the tree tonight is me and you"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, harmonies",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:02",
+      "lines": [
+       "Unwrap the present moment",
+       "It's the only gift in town",
+       "No receipt and no returning",
+       "So let's just sit right down"
+      ]
+     },
+     {
+      "tag": "Clarinet Solo",
+      "lines": []
+     },
+     {
+      "tag": "clarinet and vibraphone trade",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:28",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "slower, piano only",
+      "lines": []
+     },
+     {
+      "tag": "2:28-2:50",
+      "lines": [
+       "Not last year's Christmas",
+       "Not next year's either",
+       "Just this one, my love",
+       "Just this breath, right here"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "duet, full band",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:16",
+      "lines": [
+       "Unwrap the present moment",
+       "It's the only gift in town",
+       "No receipt and no returning",
+       "So let's just sit right down"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "clarinet last note, moktak, vinyl",
+      "lines": []
+     },
+     {
+      "tag": "3:16-3:26",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "Daegeum Under the Mistletoe (겨우살이 아래 대금 한 소절)",
+    "file": "07_daegeum_under_the_mistletoe.mp3",
+    "src": "/mnt/external/suno-playlist/input/NAMU_MERRY_CHRISTMAS/tracks/07_daegeum_under_the_mistletoe.mp3",
+    "ms": 212832,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "One Hundred Eight Jingle Bells (방울 백여덟 개, 번뇌 백여덟 개)",
+    "file": "08_one_hundred_eight_jingle_bells.mp3",
+    "src": "/mnt/external/suno-playlist/input/NAMU_MERRY_CHRISTMAS/tracks/08_one_hundred_eight_jingle_bells.mp3",
+    "ms": 147048,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "sleigh bells, walking bass, piano riff",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female lead",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "I've got worries in my pockets, worries in my shoes",
+       "Worries in my inbox and the evening news",
+       "So I tied a little bell to every worry that I've got",
+       "And the count came to one hundred eight, believe it or not"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "gang vocals, sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "0:42-1:08",
+      "lines": [
+       "One hundred eight jingle bells",
+       "Ringing out the worries one by one",
+       "Jingle, let it go, jingle, let it go",
+       "Till the very last one is done"
+      ]
+     },
+     {
+      "tag": "temple bell strike",
+      "lines": []
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female lead",
+      "lines": []
+     },
+     {
+      "tag": "1:08-1:36",
+      "lines": [
+       "Number one was money and number two was rent",
+       "Number three was wondering where the summer went",
+       "Number fifty-seven was the turkey in the oven",
+       "Number one hundred seven was the ones that I've been loving"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "gang vocals, sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:02",
+      "lines": [
+       "One hundred eight jingle bells",
+       "Ringing out the worries one by one",
+       "Jingle, let it go, jingle, let it go",
+       "Till the very last one is done"
+      ]
+     },
+     {
+      "tag": "temple bell strike",
+      "lines": []
+     },
+     {
+      "tag": "Horn Break",
+      "lines": []
+     },
+     {
+      "tag": "trumpet and clarinet trade riffs",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:24",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "slower, piano only, deep temple bell",
+      "lines": []
+     },
+     {
+      "tag": "2:24-2:48",
+      "lines": [
+       "And the last one, the hundred and eighth",
+       "Is the worry that I worry way too much",
+       "So I ring it extra gently",
+       "With the softest little touch"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, gang vocals, sleigh bells",
+      "lines": []
+     },
+     {
+      "tag": "2:48-3:20",
+      "lines": [
+       "One hundred eight jingle bells",
+       "Ringing out the worries one by one",
+       "Jingle, let it go, jingle, let it go",
+       "Till the very last one is done"
+      ]
+     },
+     {
+      "tag": "temple bell strike, long decay",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:30",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz/08.mp3"
+   },
+   {
+    "n": 9,
+    "title": "Empty Stocking, Full Moon (빈 양말에 보름달 담기)",
+    "file": "09_empty_stocking_full_moon.mp3",
+    "src": "/mnt/external/suno-playlist/input/NAMU_MERRY_CHRISTMAS/tracks/09_empty_stocking_full_moon.mp3",
+    "ms": 211536,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz/09.mp3"
+   },
+   {
+    "n": 10,
+    "title": "Peace on the Cushion (방석 위에도 평화)",
+    "file": "10_peace_on_the_cushion.mp3",
+    "src": "/mnt/external/suno-playlist/input/NAMU_MERRY_CHRISTMAS/tracks/10_peace_on_the_cushion.mp3",
+    "ms": 229056,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "singing bowl, Rhodes chords, vinyl crackle",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female vocal, tender",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:50",
+      "lines": [
+       "The lights are going out along the hill",
+       "The last bus gone, the kettle's still",
+       "Somewhere a nurse is working through the night",
+       "Somewhere a window keeps a single light"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:20",
+      "lines": [
+       "Peace on the cushion, peace on the street",
+       "Peace for the tired with the cold in their feet",
+       "May every being sleep warm tonight",
+       "Merry Christmas, and may all be light"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:52",
+      "lines": [
+       "To the one who sits beside an empty chair",
+       "To the one in a crowd who's barely there",
+       "To the old dog dreaming by the stove",
+       "You're held inside this little song of love"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:22",
+      "lines": [
+       "Peace on the cushion, peace on the street",
+       "Peace for the tired with the cold in their feet",
+       "May every being sleep warm tonight",
+       "Merry Christmas, and may all be light"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "humming group joins softly",
+      "lines": []
+     },
+     {
+      "tag": "2:22-2:46",
+      "lines": [
+       "Mmm, breathe in",
+       "Mmm, breathe out",
+       "Mmm, let it be warm",
+       "Mmm, all around"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "voice and soft humming group",
+      "lines": []
+     },
+     {
+      "tag": "2:46-3:22",
+      "lines": [
+       "Peace on the cushion, peace on the street",
+       "Peace for the tired with the cold in their feet",
+       "May every being sleep warm tonight",
+       "Merry Christmas, and may all be light"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "singing bowl, last Rhodes chord, silence",
+      "lines": []
+     },
+     {
+      "tag": "3:22-3:40",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz/10.mp3"
+   }
+  ],
+  "updated_at": 1795528820,
+  "cover_source": "https://i.ytimg.com/vi/oXG7U9OhHd4/maxresdefault.jpg",
+  "cover_match": 0.8,
+  "cover_how": "album",
+  "total_ms": 1990968,
+  "cover_file": "나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz.jpg?v=92e2f45f"
  },
  {
   "folder": "NEON_HANJUNG",
@@ -69925,6 +71964,789 @@
   "total_ms": 1452768,
   "cover_file": "다실의-하루-a-day-in-the-tea-room.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/다실의-하루-a-day-in-the-tea-room.jpg?v=0691ef5f"
+ },
+ {
+  "folder": "TEMPLE_BELL_CAROLS",
+  "slug": "산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols",
+  "title": "산사 캐럴 — 이웃의 생일을 축하하며 (Temple Bell Carols)",
+  "genre": "Korean Buddhist Music × Christmas Carol Fusion (범패·화청·사찰 악기 × 캐럴, 국악 퓨전)",
+  "channel": "Hanguk Sounds (hanji)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "도량석, 성탄 새벽 (Moktak Round at Christmas Dawn)",
+    "file": "01_moktak_round_at_christmas_dawn.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEMPLE_BELL_CAROLS/tracks/01_moktak_round_at_christmas_dawn.mp3",
+    "ms": 210216,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "일주문에 건 현수막 (A Banner at the Temple Gate)",
+    "file": "02_a_banner_at_the_temple_gate.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEMPLE_BELL_CAROLS/tracks/02_a_banner_at_the_temple_gate.mp3",
+    "ms": 181440,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "janggu eotmori groove, kkwaenggwari, haegeum call",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Lead Call",
+      "lines": []
+     },
+     {
+      "tag": "male lead",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:40",
+      "lines": [
+       "섣달 초하루 아침",
+       "일주문 앞이 분주하네",
+       "사다리 하나 세워 놓고",
+       "긴 천 한 장 펼쳐 들고"
+      ]
+     },
+     {
+      "tag": "Chorus Answer",
+      "lines": []
+     },
+     {
+      "tag": "village chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-1:00",
+      "lines": [
+       "에헤라 축하하세",
+       "아랫마을 생일이로세",
+       "아기 예수 오신 날을",
+       "산문 열고 반겨 보세"
+      ]
+     },
+     {
+      "tag": "Lead Call",
+      "lines": []
+     },
+     {
+      "tag": "male lead",
+      "lines": []
+     },
+     {
+      "tag": "1:00-1:24",
+      "lines": [
+       "오월 초파일 그날에는",
+       "아랫마을 교회 마당",
+       "우리 부처님 오신 날을",
+       "축하한다 걸어 줬지"
+      ]
+     },
+     {
+      "tag": "Lead Call",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:46",
+      "lines": [
+       "받은 마음 그냥 두랴",
+       "이번에는 우리 차례",
+       "붓 잡은 보살님 손끝",
+       "먹물 아직 덜 말랐어"
+      ]
+     },
+     {
+      "tag": "Chorus Answer",
+      "lines": []
+     },
+     {
+      "tag": "village chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:46-2:06",
+      "lines": [
+       "에헤라 축하하세",
+       "아랫마을 생일이로세",
+       "아기 예수 오신 날을",
+       "산문 열고 반겨 보세"
+      ]
+     },
+     {
+      "tag": "Instrumental Break",
+      "lines": []
+     },
+     {
+      "tag": "haegeum and piri trade the melody, kkwaenggwari sparkle",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:28",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "male lead alone, slower, haegeum",
+      "lines": []
+     },
+     {
+      "tag": "2:28-2:52",
+      "lines": [
+       "누구 생일인들 어떠리",
+       "등불 같고 별빛 같은",
+       "태어남은 다 귀하니",
+       "손뼉 치며 맞아 주소"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full village chorus, festive, kkwaenggwari",
+      "lines": []
+     },
+     {
+      "tag": "2:52-3:30",
+      "lines": [
+       "에헤라 축하하세",
+       "아랫마을 생일이로세",
+       "아기 예수 오신 날을",
+       "산문 열고 반겨 보세",
+       "에헤라 메리 크리스마스",
+       "한 아름씩 받아 가소"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "janggu slows, one last kkwaenggwari hit",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:44",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "긴 소리, 깊은 밤 (Long Chant, Deep Night)",
+    "file": "03_long_chant_deep_night.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEMPLE_BELL_CAROLS/tracks/03_long_chant_deep_night.mp3",
+    "ms": 240312,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Wordless chant",
+      "lines": []
+     },
+     {
+      "tag": "Deep male hum, no words",
+      "lines": []
+     },
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "ajaeng low drone, one soft taejing gong stroke",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:35",
+      "lines": []
+     },
+     {
+      "tag": "Chant A",
+      "lines": []
+     },
+     {
+      "tag": "deep male wordless hum, very long held tones, slow ornament at the end of each",
+      "lines": []
+     },
+     {
+      "tag": "0:35-1:20",
+      "lines": [
+       "Mmm",
+       "Ohhh"
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "haegeum sliding melody over ajaeng drone",
+      "lines": []
+     },
+     {
+      "tag": "1:20-2:00",
+      "lines": []
+     },
+     {
+      "tag": "Chant B",
+      "lines": []
+     },
+     {
+      "tag": "male hum rises a fourth, holds, then falls slowly with melisma",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:50",
+      "lines": [
+       "Ohhh",
+       "Aaah"
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "daegeum breathy long tones, taejing far away",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:20",
+      "lines": []
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "drone only, hum fades into silence",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:50",
+      "lines": [
+       "Mmm"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "동지 팥죽 한 솥 (A Pot of Red Bean Porridge)",
+    "file": "04_a_pot_of_red_bean_porridge.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEMPLE_BELL_CAROLS/tracks/04_a_pot_of_red_bean_porridge.mp3",
+    "ms": 183744,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "janggu 3+2+3 groove, gayageum riff, sogeum sparkle",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Lead Call",
+      "lines": []
+     },
+     {
+      "tag": "female lead",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:38",
+      "lines": [
+       "동짓달 스무이튿날",
+       "해가 제일 짧은 날",
+       "공양간 가마솥에",
+       "팥 삶는 김이 오르네"
+      ]
+     },
+     {
+      "tag": "Chorus Answer",
+      "lines": []
+     },
+     {
+      "tag": "neighborhood chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:38-0:58",
+      "lines": [
+       "저어라 저어 팥죽을 저어",
+       "새알심 동동 띄워라",
+       "한 그릇은 아랫마을",
+       "한 그릇은 윗마을로"
+      ]
+     },
+     {
+      "tag": "Lead Call",
+      "lines": []
+     },
+     {
+      "tag": "female lead",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:20",
+      "lines": [
+       "대문 밖이 시끌벅적",
+       "교회 집사님 오셨구나",
+       "성당 수녀님 손에는",
+       "생강차 한 병 따끈해"
+      ]
+     },
+     {
+      "tag": "Lead Call",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:42",
+      "lines": [
+       "나이만큼 새알 먹자",
+       "아이고 반만 주시게",
+       "나흘 뒤면 성탄이니",
+       "배는 남겨 둬야지"
+      ]
+     },
+     {
+      "tag": "Chorus Answer",
+      "lines": []
+     },
+     {
+      "tag": "neighborhood chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:42-2:02",
+      "lines": [
+       "저어라 저어 팥죽을 저어",
+       "새알심 동동 띄워라",
+       "한 그릇은 아랫마을",
+       "한 그릇은 윗마을로"
+      ]
+     },
+     {
+      "tag": "Instrumental Break",
+      "lines": []
+     },
+     {
+      "tag": "gayageum and haegeum trade riffs, janggu playful",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:24",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "female lead, slower, tender",
+      "lines": []
+     },
+     {
+      "tag": "2:24-2:50",
+      "lines": [
+       "밤이 제일 길 때가",
+       "해 돌아올 채비라지",
+       "팥죽 한 술 뜨는 사이",
+       "어둠 조금 물러나요"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full chorus, bright and fast",
+      "lines": []
+     },
+     {
+      "tag": "2:50-3:32",
+      "lines": [
+       "저어라 저어 팥죽을 저어",
+       "새알심 동동 띄워라",
+       "한 그릇은 아랫마을",
+       "한 그릇은 윗마을로",
+       "메리 크리스마스 미리 하소",
+       "뜨끈할 때 들고 가소"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "janggu final pattern, buk hit",
+      "lines": []
+     },
+     {
+      "tag": "3:32-3:46",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "한 골짜기 두 종소리 (Two Bells in One Valley)",
+    "file": "05_two_bells_in_one_valley.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEMPLE_BELL_CAROLS/tracks/05_two_bells_in_one_valley.mp3",
+    "ms": 218832,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "연등과 별 (Lotus Lanterns and a Star)",
+    "file": "06_lotus_lanterns_and_a_star.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEMPLE_BELL_CAROLS/tracks/06_lotus_lanterns_and_a_star.mp3",
+    "ms": 191688,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "gayageum arpeggios in 3/4, daegeum soft call",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female solo, soft",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:46",
+      "lines": [
+       "오월이면 우리 마당",
+       "연등 줄이 출렁이고",
+       "아랫마을 사람들이",
+       "등 하나씩 달아 줬죠"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "0:46-1:14",
+      "lines": [
+       "섣달이면 그 마당엔",
+       "트리 위에 별 하나",
+       "이번에는 우리 손이",
+       "그 별 올려 드려요"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "unison choir joins, warm",
+      "lines": []
+     },
+     {
+      "tag": "1:14-1:44",
+      "lines": [
+       "등불이든 별빛이든",
+       "어둠 밝히는 건 하나",
+       "당신 날엔 내가 켜고",
+       "내 날엔 그대가 켜요"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "female solo",
+      "lines": []
+     },
+     {
+      "tag": "1:44-2:12",
+      "lines": [
+       "연꽃 모양 등 속에",
+       "작은 촛불 흔들리면",
+       "반짝이는 별 아래",
+       "아기 잠이 고와라"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "hushed, haegeum alone underneath",
+      "lines": []
+     },
+     {
+      "tag": "2:12-2:40",
+      "lines": [
+       "이름은 달라도",
+       "기도는 닮아서",
+       "추운 밤 누군가",
+       "덜 춥기를 바라"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir and solo together, gentle swell",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:24",
+      "lines": [
+       "등불이든 별빛이든",
+       "어둠 밝히는 건 하나",
+       "당신 날엔 내가 켜고",
+       "내 날엔 그대가 켜요",
+       "오늘 밤은 별을 켜요"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "gayageum alone, soft hum fades",
+      "lines": []
+     },
+     {
+      "tag": "3:24-3:50",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "바라와 법고의 잔치 (Cymbals and Dharma Drum Festival)",
+    "file": "07_cymbals_and_dharma_drum_festival.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEMPLE_BELL_CAROLS/tracks/07_cymbals_and_dharma_drum_festival.mp3",
+    "ms": 152208,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "백여덟 번째 종소리 (The Hundred and Eighth Bell)",
+    "file": "08_the_hundred_and_eighth_bell.mp3",
+    "src": "/mnt/external/suno-playlist/input/TEMPLE_BELL_CAROLS/tracks/08_the_hundred_and_eighth_bell.mp3",
+    "ms": 191760,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "one deep temple bell strike, long decay, daegeum",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:22",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male lead, slow and free",
+      "lines": []
+     },
+     {
+      "tag": "0:22-0:50",
+      "lines": [
+       "성탄 밤도 지나가고",
+       "섣달 그믐 자정 무렵",
+       "종각 앞에 줄이 길어",
+       "절 식구도 이웃들도"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female lead",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:16",
+      "lines": [
+       "아랫마을 목사님도",
+       "성당 신부님도 오셨네",
+       "당목 한 번 밀 때마다",
+       "한 해 짐을 내려놓지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "community chorus, eotmori groove begins, temple bell",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:40",
+      "lines": [
+       "뎅 하고 울려라",
+       "백여덟 번 울려라",
+       "미움 하나 내려놓고",
+       "고마움 하나 들고 가세"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "male lead",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:04",
+      "lines": [
+       "성탄 밤에 받은 웃음",
+       "동짓날 나눈 팥죽",
+       "오월 연등 그 불빛까지",
+       "종소리에 실어 보내"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "community chorus, temple bell",
+      "lines": []
+     },
+     {
+      "tag": "2:04-2:28",
+      "lines": [
+       "뎅 하고 울려라",
+       "백여덟 번 울려라",
+       "미움 하나 내려놓고",
+       "고마움 하나 들고 가세"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "female lead, slow and gentle",
+      "lines": []
+     },
+     {
+      "tag": "2:28-2:56",
+      "lines": [
+       "백일곱 번 지나고",
+       "마지막 한 번 남았을 때",
+       "누구 손이 먼저랄까",
+       "다 같이 잡아 봐요"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full chorus, male and female leads together, temple bell",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:42",
+      "lines": [
+       "뎅 하고 울려라",
+       "백여덟 번 울려라",
+       "미움 하나 내려놓고",
+       "고마움 하나 들고 가세",
+       "새해 아침 오거들랑",
+       "또 이웃으로 만나세"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "last temple bell strike, long decay, chorus hums",
+      "lines": []
+     },
+     {
+      "tag": "3:42-4:05",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols/08.mp3"
+   }
+  ],
+  "updated_at": 1795528819,
+  "cover_source": "https://i.ytimg.com/vi/XnGPfvS-Gfw/maxresdefault.jpg",
+  "cover_match": 0.9,
+  "cover_how": "album",
+  "total_ms": 1570200,
+  "cover_file": "산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols.jpg?v=e06e5e43"
  },
  {
   "folder": "THIRTY_MINUTES_BEFORE",

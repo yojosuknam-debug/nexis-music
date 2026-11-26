@@ -1038,5 +1038,23 @@
   "src": "/mnt/external/suno-playlist/output/약속_30분_전_(30_Minutes_Before_We_Meet)_project/thumbnail.png",
   "project": "약속_30분_전_(30_Minutes_Before_We_Meet)_project",
   "match_score": 1.0
+ },
+ "메리-템플스테이-절에서-보내는-크리스마스-재즈-merry-templestay-buddhist-christmas-jazz": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/메리_템플스테이_—_절에서_보내는_크리스마스_재즈_(Merry_Templestay:_Buddhist_Christmas_Jazz)_project/thumbnail.png",
+  "project": "메리_템플스테이_—_절에서_보내는_크리스마스_재즈_(Merry_Templestay:_Buddhist_Christmas_Jazz)_project",
+  "match_score": 1.0
+ },
+ "나무-메리-크리스마스-불교-캐럴-재즈-namu-merry-christmas-buddhist-carol-jazz": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/나무_메리_크리스마스_—_불교_캐럴_재즈_(Namu_Merry_Christmas:_Buddhist_Carol_Jazz)_project/thumbnail.png",
+  "project": "나무_메리_크리스마스_—_불교_캐럴_재즈_(Namu_Merry_Christmas:_Buddhist_Carol_Jazz)_project",
+  "match_score": 1.0
+ },
+ "산사-캐럴-이웃의-생일을-축하하며-temple-bell-carols": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/산사_캐럴_—_이웃의_생일을_축하하며_(Temple_Bell_Carols)_project/thumbnail.png",
+  "project": "산사_캐럴_—_이웃의_생일을_축하하며_(Temple_Bell_Carols)_project",
+  "match_score": 1.0
  }
 }
