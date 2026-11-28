@@ -16513,6 +16513,1512 @@
   "cover_url": "https://audio.yojosuknam.com/cover/먼-종소리-distant-bells.jpg?v=3d195fda"
  },
  {
+  "folder": "ECHO_BATTLE_PEAK",
+  "slug": "메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat",
+  "title": "메아리 배틀: 요들 대 흐미 (Echo Battle: Yodel vs Throat)",
+  "genre": "실험 보컬 퓨전 코믹송 (알파인 요들 폴카·몽골 흐미/카르그이라·모린 호르 포크록·조지아식 남성 다성부·불가리아식 여성 합창 — 한 곡 1~2개 창법 초점)",
+  "channel": "굳이 송 (gudi)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "새벽 네 시, 아이젠 착",
+    "file": "01_four_am_crampons_on.mp3",
+    "src": "/mnt/external/suno-playlist/input/ECHO_BATTLE_PEAK/tracks/01_four_am_crampons_on.mp3",
+    "ms": 151032,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "distant alphorn call, cowbells",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "spoken",
+      "lines": [
+       "새벽 네 시 사십 분",
+       "굳이 겨울산 간다"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:40",
+      "lines": [
+       "알람 세 개 끄고서",
+       "양말은 두 겹으로",
+       "보온병엔 뜨거운 물",
+       "배낭끈 꽉 조여 봐",
+       "엄마는 자꾸 묻지",
+       "그 추운 데 왜 가냐고"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-0:52",
+      "lines": [
+       "대답 대신 나는",
+       "목을 가다듬어"
+      ]
+     },
+     {
+      "tag": "rapid yodel",
+      "lines": [
+       "요 로 레 이 디"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:20",
+      "lines": []
+     },
+     {
+      "tag": "group shouts, cowbells",
+      "lines": [
+       "아이젠 착 착 착",
+       "눈길 위에 콱 콱 콱",
+       "요들레이 요들레이",
+       "요들레이 히 호",
+       "아이젠 착 착 착",
+       "겨울산이 날 불러",
+       "요들레이 요들레이",
+       "정상까지 가 보자"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:46",
+      "lines": [
+       "주차장엔 차가 셋",
+       "다들 표정 비장해",
+       "헤드랜턴 불빛 따라",
+       "한 줄로 올라가네",
+       "숨 쉬면 입김 한 줌",
+       "코끝은 벌써 빨개"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:46-1:58",
+      "lines": [
+       "힘들 때 나는",
+       "목을 가다듬어"
+      ]
+     },
+     {
+      "tag": "rapid yodel",
+      "lines": [
+       "요 로 레 이 디"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:58-2:26",
+      "lines": []
+     },
+     {
+      "tag": "group shouts, cowbells",
+      "lines": [
+       "아이젠 착 착 착",
+       "눈길 위에 콱 콱 콱",
+       "요들레이 요들레이",
+       "요들레이 히 호",
+       "아이젠 착 착 착",
+       "겨울산이 날 불러",
+       "요들레이 요들레이",
+       "정상까지 가 보자"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:26-2:54",
+      "lines": []
+     },
+     {
+      "tag": "cowbells only, boot stomps",
+      "lines": [
+       "야호는 하지 말래",
+       "산짐승이 놀란대",
+       "그래서 연습했지",
+       "석 달 동안 욕실에서"
+      ]
+     },
+     {
+      "tag": "yodel break, high head voice",
+      "lines": [
+       "요오 레이 요 로 레이 히"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:54-3:24",
+      "lines": []
+     },
+     {
+      "tag": "full accordion, tuba, group shouts",
+      "lines": [
+       "아이젠 착 착 착",
+       "눈길 위에 콱 콱 콱",
+       "요들레이 요들레이",
+       "요들레이 히 호",
+       "겨울산이 날 불러",
+       "정상까지 가 보자"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "alphorn fades, wind",
+      "lines": []
+     },
+     {
+      "tag": "3:24-3:38",
+      "lines": [
+       "저기 능선 너머로",
+       "누가 대답하는데"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "메아리가 이상해",
+    "file": "02_the_echo_is_weird.mp3",
+    "src": "/mnt/external/suno-playlist/input/ECHO_BATTLE_PEAK/tracks/02_the_echo_is_weird.mp3",
+    "ms": 193992,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "wind, lone alphorn",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "solo yodel call",
+      "lines": [
+       "요 로 레 이 히 호"
+      ]
+     },
+     {
+      "tag": "deep throat-singing drone answers",
+      "lines": [
+       "흐음 음 음 음"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:42",
+      "lines": [
+       "중턱 바위 위에서",
+       "힘껏 한번 불렀지",
+       "메아리면 똑같이",
+       "돌아와야 맞는데",
+       "돌아온 건 낮은 소리",
+       "목 안에서 피리 소리"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:42-1:10",
+      "lines": [
+       "메아리가 이상해",
+       "내가 보낸 건 요들",
+       "돌아온 건 흐미",
+       "이건 반칙 아니야",
+       "메아리가 이상해",
+       "높게 던진 내 목소리",
+       "낮게 받아 버리네",
+       "저 산엔 누가 사나"
+      ]
+     },
+     {
+      "tag": "Call and Response",
+      "lines": []
+     },
+     {
+      "tag": "1:10-1:36",
+      "lines": []
+     },
+     {
+      "tag": "yodel",
+      "lines": [
+       "요 로 레 이 디"
+      ]
+     },
+     {
+      "tag": "throat drone with whistle overtone",
+      "lines": [
+       "흐음 이이 우우"
+      ]
+     },
+     {
+      "tag": "spoken",
+      "lines": [
+       "어 진짜 대답하네"
+      ]
+     },
+     {
+      "tag": "yodel higher",
+      "lines": [
+       "요 로 레 이 히 호"
+      ]
+     },
+     {
+      "tag": "throat drone deeper",
+      "lines": [
+       "흐으음 오오"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:02",
+      "lines": [
+       "망원경을 꺼내니",
+       "건너편 능선 끝에",
+       "털모자 쓴 아저씨",
+       "팔짱 끼고 서 있어",
+       "손 흔들어 보니까",
+       "목으로 또 응답해"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:30",
+      "lines": [
+       "메아리가 이상해",
+       "내가 보낸 건 요들",
+       "돌아온 건 흐미",
+       "이건 반칙 아니야",
+       "메아리가 이상해",
+       "높게 던진 내 목소리",
+       "낮게 받아 버리네",
+       "저 산엔 누가 사나"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:30-2:56",
+      "lines": []
+     },
+     {
+      "tag": "only wind and drone",
+      "lines": [
+       "요들은 위로 날고",
+       "흐미는 땅을 울려",
+       "둘을 합쳐 보면",
+       "산 하나가 꽉 차"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:22",
+      "lines": []
+     },
+     {
+      "tag": "frame drum builds",
+      "lines": [
+       "메아리가 이상해",
+       "내가 보낸 건 요들",
+       "돌아온 건 흐미",
+       "좋아 한판 붙자",
+       "높게 던진 내 목소리",
+       "낮게 받아 보라고"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "yodel and drone overlap, fading echo",
+      "lines": []
+     },
+     {
+      "tag": "3:22-3:36",
+      "lines": [
+       "요 로 레 이",
+       "흐음"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "건너편 능선의 흐미 아저씨",
+    "file": "03_throat_singer_across_the_ridge.mp3",
+    "src": "/mnt/external/suno-playlist/input/ECHO_BATTLE_PEAK/tracks/03_throat_singer_across_the_ridge.mp3",
+    "ms": 211440,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "morin khuur gallop, frame drums",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": []
+     },
+     {
+      "tag": "whistling overtone",
+      "lines": [
+       "이이이 우우"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:40",
+      "lines": [
+       "건너편 능선에서",
+       "인사 한번 할게",
+       "등산 경력 삼십 년",
+       "겨울마다 이 자리",
+       "보온병 대신 나는",
+       "목 안에 난로 있지"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-0:52",
+      "lines": [
+       "낮게 낮게 깔아",
+       "땅이 울리게"
+      ]
+     },
+     {
+      "tag": "deep kargyraa growl",
+      "lines": [
+       "흐 으 으 음"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:52-1:20",
+      "lines": []
+     },
+     {
+      "tag": "gang shouts",
+      "lines": [
+       "흐미 흐미 목에 피리",
+       "한 사람이 두 목소리",
+       "요들 친구 들어 봐",
+       "낮은 데도 산이 있어",
+       "흐미 흐미 말발굽 소리",
+       "눈밭 위로 달려 가",
+       "높은 소리 좋다만",
+       "깊은 소리 나와 봐"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:48",
+      "lines": [
+       "아이젠은 안 차도",
+       "미끄러진 적 없어",
+       "털모자에 털장갑",
+       "수염엔 고드름 셋",
+       "젊은 친구 요들은",
+       "귀엽긴 하더라만"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:48-2:00",
+      "lines": [
+       "낮게 낮게 깔아",
+       "산이 대답하게"
+      ]
+     },
+     {
+      "tag": "deep kargyraa growl",
+      "lines": [
+       "흐 으 으 음"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:28",
+      "lines": []
+     },
+     {
+      "tag": "gang shouts",
+      "lines": [
+       "흐미 흐미 목에 피리",
+       "한 사람이 두 목소리",
+       "요들 친구 들어 봐",
+       "낮은 데도 산이 있어",
+       "흐미 흐미 말발굽 소리",
+       "눈밭 위로 달려 가",
+       "높은 소리 좋다만",
+       "깊은 소리 나와 봐"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:28-2:56",
+      "lines": []
+     },
+     {
+      "tag": "morin khuur solo, galloping",
+      "lines": []
+     },
+     {
+      "tag": "spoken",
+      "lines": [
+       "자 이제 네 차례",
+       "한번 높이 던져 봐"
+      ]
+     },
+     {
+      "tag": "distant yodel answers",
+      "lines": [
+       "요 로 레 이 히"
+      ]
+     },
+     {
+      "tag": "spoken",
+      "lines": [
+       "오호 제법인걸"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:26",
+      "lines": []
+     },
+     {
+      "tag": "full gallop, whistle overtones",
+      "lines": [
+       "흐미 흐미 목에 피리",
+       "한 사람이 두 목소리",
+       "흐미 흐미 말발굽 소리",
+       "눈밭 위로 달려 가",
+       "높은 소리 좋다만",
+       "깊은 소리 나와 봐"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "whistle overtone fades, wind",
+      "lines": []
+     },
+     {
+      "tag": "3:26-3:40",
+      "lines": [
+       "이이이 우우",
+       "내일도 이 자리"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "정상석 앞 스무 명",
+    "file": "04_twenty_at_the_summit_stone.mp3",
+    "src": "/mnt/external/suno-playlist/input/ECHO_BATTLE_PEAK/tracks/04_twenty_at_the_summit_stone.mp3",
+    "ms": 198024,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "low drone, three male voices enter one by one",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": [
+       "음 음 음",
+       "오 오 오"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:46",
+      "lines": [
+       "드디어 정상인데",
+       "정상석이 안 보여",
+       "사람들이 둘러싸",
+       "줄은 벌써 스무 명",
+       "앞사람은 포즈를",
+       "일곱 개나 준비했네"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:46-1:16",
+      "lines": []
+     },
+     {
+      "tag": "full three-part harmony",
+      "lines": [
+       "기다리네 기다려",
+       "정상석 앞 한 장 위해",
+       "바람은 귀를 베고",
+       "손가락은 얼어 가",
+       "기다리네 기다려",
+       "산은 높고 줄은 길어",
+       "올라온 건 세 시간",
+       "사진 한 장 삼십 분"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:44",
+      "lines": [
+       "브이 하고 하트 하고",
+       "점프샷도 찍으시네",
+       "뒤에 선 등산객들",
+       "서로 눈만 마주쳐",
+       "누구도 말은 못 해",
+       "여기까지 온 마음"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:44-2:14",
+      "lines": []
+     },
+     {
+      "tag": "full three-part harmony",
+      "lines": [
+       "기다리네 기다려",
+       "정상석 앞 한 장 위해",
+       "바람은 귀를 베고",
+       "손가락은 얼어 가",
+       "기다리네 기다려",
+       "산은 높고 줄은 길어",
+       "올라온 건 세 시간",
+       "사진 한 장 삼십 분"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:14-2:44",
+      "lines": []
+     },
+     {
+      "tag": "drone only, solemn",
+      "lines": [
+       "드디어 내 차례",
+       "배터리가 꺼졌어",
+       "휴대폰은 추위에 약해",
+       "나는 더 약해"
+      ]
+     },
+     {
+      "tag": "spoken, deadpan",
+      "lines": [
+       "뒷분 한 장만 부탁해요"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:44-3:14",
+      "lines": []
+     },
+     {
+      "tag": "harmony swells, open fifth",
+      "lines": [
+       "기다렸네 기다렸어",
+       "남의 폰에 담긴 나",
+       "바람은 귀를 베도",
+       "웃는 얼굴 한 장 남아",
+       "산은 높고 줄은 길어",
+       "그래도 정상이야"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "voices resolve to open fifth, long reverb",
+      "lines": []
+     },
+     {
+      "tag": "3:14-3:30",
+      "lines": [
+       "음 음 음",
+       "오"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "컵라면 삼 분",
+    "file": "05_three_minute_cup_noodles.mp3",
+    "src": "/mnt/external/suno-playlist/input/ECHO_BATTLE_PEAK/tracks/05_three_minute_cup_noodles.mp3",
+    "ms": 200328,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "cowbell ticks, wind",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "deep kargyraa growl",
+      "lines": [
+       "흐 으 으 음"
+      ]
+     },
+     {
+      "tag": "spoken",
+      "lines": [
+       "정상 바위 뒤편",
+       "물을 부었어"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:44",
+      "lines": [
+       "보온병 물 콸콸",
+       "뚜껑 위에 젓가락",
+       "영하 십이 도의 바람",
+       "김이 금세 사라져",
+       "세상에서 제일 긴",
+       "삼 분이 시작돼"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:44-1:12",
+      "lines": []
+     },
+     {
+      "tag": "kargyraa drone under",
+      "lines": [
+       "일 분 그리고 이 분",
+       "아직 덜 익었어",
+       "바람아 잠깐만",
+       "뚜껑 날아가겠어",
+       "일 분 그리고 이 분",
+       "배 속에서 흐미 소리",
+       "꼬르륵 흐 으 음",
+       "조금만 더 버텨"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:40",
+      "lines": [
+       "건너편 아저씨도",
+       "컵라면 들고 있네",
+       "서로 눈이 마주쳐",
+       "고개만 끄덕끄덕",
+       "말없이 기다리는",
+       "겨울산의 동지애"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:08",
+      "lines": []
+     },
+     {
+      "tag": "kargyraa drone under",
+      "lines": [
+       "일 분 그리고 이 분",
+       "아직 덜 익었어",
+       "바람아 잠깐만",
+       "뚜껑 날아가겠어",
+       "일 분 그리고 이 분",
+       "배 속에서 흐미 소리",
+       "꼬르륵 흐 으 음",
+       "조금만 더 버텨"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:08-2:30",
+      "lines": []
+     },
+     {
+      "tag": "everything stops, silence, single cowbell",
+      "lines": []
+     },
+     {
+      "tag": "spoken, whisper",
+      "lines": [
+       "이 분 오십칠",
+       "오십팔",
+       "오십구"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:30-3:06",
+      "lines": []
+     },
+     {
+      "tag": "explosive bright yodel, full band, major key",
+      "lines": [
+       "삼 분이다 요들레이",
+       "뚜껑 열어 히 호",
+       "국물 한입 요들레이",
+       "세상이 녹아내려",
+       "삼 분이다 요들레이",
+       "면발 한입 히 호",
+       "겨울산 꼭대기",
+       "여기가 맛집이야"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "slurping, wind, cowbell",
+      "lines": []
+     },
+     {
+      "tag": "3:06-3:20",
+      "lines": []
+     },
+     {
+      "tag": "deep kargyraa growl, satisfied",
+      "lines": [
+       "흐 으 음",
+       "잘 먹었습니다"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "엉덩이 썰매 하산",
+    "file": "06_butt_sled_descent.mp3",
+    "src": "/mnt/external/suno-playlist/input/ECHO_BATTLE_PEAK/tracks/06_butt_sled_descent.mp3",
+    "ms": 154464,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "slide whistle swoop, accordion run",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:10",
+      "lines": []
+     },
+     {
+      "tag": "spoken",
+      "lines": [
+       "비닐 한 장 깔고",
+       "출발"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:10-0:34",
+      "lines": [
+       "올라올 땐 세 시간",
+       "내려갈 땐 삼 분 컷",
+       "등산로는 미끄럼틀",
+       "엉덩이는 썰매 날",
+       "왼쪽 나무 피해서",
+       "오른쪽 바위 넘어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:34-1:00",
+      "lines": []
+     },
+     {
+      "tag": "group shouts",
+      "lines": [
+       "슝 슝 슝 요들레이",
+       "엉덩이 썰매 히 호",
+       "눈보라를 가르며",
+       "요들레이 히 호 호",
+       "슝 슝 슝 요들레이",
+       "바지는 젖어 가도",
+       "웃음이 멈추질 않아",
+       "요들레이 히 호 호"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:00-1:24",
+      "lines": [
+       "뒤에 오던 아저씨",
+       "흐미로 브레이크",
+       "흐으음 하고 멈추니",
+       "눈이 다 튀어올라",
+       "나는 요들 경적으로",
+       "비켜요 비켜 주세요"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:50",
+      "lines": []
+     },
+     {
+      "tag": "group shouts",
+      "lines": [
+       "슝 슝 슝 요들레이",
+       "엉덩이 썰매 히 호",
+       "눈보라를 가르며",
+       "요들레이 히 호 호",
+       "슝 슝 슝 요들레이",
+       "바지는 젖어 가도",
+       "웃음이 멈추질 않아",
+       "요들레이 히 호 호"
+      ]
+     },
+     {
+      "tag": "Yodel Break",
+      "lines": []
+     },
+     {
+      "tag": "1:50-2:16",
+      "lines": []
+     },
+     {
+      "tag": "rapid-fire yodel trills, accordion duel",
+      "lines": [
+       "요 들 레 이 요 들 레 이",
+       "요 들 레 이 히 호",
+       "레 이 디 레 이 디",
+       "요 로 레 이 히 호"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:16-2:40",
+      "lines": []
+     },
+     {
+      "tag": "sudden stop, then crash sound",
+      "lines": []
+     },
+     {
+      "tag": "spoken",
+      "lines": [
+       "어 어 어",
+       "눈더미에 쿵"
+      ]
+     },
+     {
+      "tag": "laughing group",
+      "lines": [
+       "하하하 괜찮아",
+       "다시 한 번 가자"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:10",
+      "lines": []
+     },
+     {
+      "tag": "faster, full band",
+      "lines": [
+       "슝 슝 슝 요들레이",
+       "엉덩이 썰매 히 호",
+       "눈보라를 가르며",
+       "요들레이 히 호 호",
+       "바지는 젖어 가도",
+       "웃음이 멈추질 않아"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "accordion final run, whip crack",
+      "lines": []
+     },
+     {
+      "tag": "3:10-3:22",
+      "lines": [
+       "요들레이 히 호",
+       "도착"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "무릎이 하는 말",
+    "file": "07_what_my_knees_say.mp3",
+    "src": "/mnt/external/suno-playlist/input/ECHO_BATTLE_PEAK/tracks/07_what_my_knees_say.mp3",
+    "ms": 143160,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "female drone, single whoop",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": [
+       "아 아 아",
+       "이 이 이 히"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:44",
+      "lines": []
+     },
+     {
+      "tag": "solo female lead",
+      "lines": [
+       "주인아 내 말 좀 들어",
+       "나는 너의 무릎이야",
+       "올라갈 땐 참았지",
+       "내려올 땐 소리 질러",
+       "계단 하나 내려갈 때",
+       "삐걱 하고 우는 거 알아"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:44-1:12",
+      "lines": []
+     },
+     {
+      "tag": "full women's choir, tight dissonant harmony",
+      "lines": [
+       "무릎이 하는 말",
+       "다음엔 둘레길 가자",
+       "무릎이 하는 말",
+       "정상은 사진으로 봐",
+       "요들도 좋고 흐미도 좋아",
+       "근데 나는 하나뿐이야",
+       "무릎이 하는 말",
+       "오늘 밤엔 파스 붙여 줘"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:40",
+      "lines": []
+     },
+     {
+      "tag": "solo female lead",
+      "lines": [
+       "엉덩이 썰매 탈 때",
+       "누가 제일 놀랐을까",
+       "눈더미에 쿵 할 때",
+       "누가 제일 아팠을까",
+       "너는 웃고 있었지",
+       "나는 혼자 울었어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:40-2:08",
+      "lines": []
+     },
+     {
+      "tag": "full women's choir, tight dissonant harmony",
+      "lines": [
+       "무릎이 하는 말",
+       "다음엔 둘레길 가자",
+       "무릎이 하는 말",
+       "정상은 사진으로 봐",
+       "요들도 좋고 흐미도 좋아",
+       "근데 나는 하나뿐이야",
+       "무릎이 하는 말",
+       "오늘 밤엔 파스 붙여 줘"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:08-2:38",
+      "lines": []
+     },
+     {
+      "tag": "drone and barrel drum only, 7/8 pulse",
+      "lines": [
+       "왼쪽 무릎 오른쪽 무릎",
+       "둘이서 화음 넣어",
+       "삐걱 삐걱 아이고",
+       "삐걱 삐걱 아이고"
+      ]
+     },
+     {
+      "tag": "high whoop",
+      "lines": [
+       "이 히"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:38-3:10",
+      "lines": []
+     },
+     {
+      "tag": "choir at full power, ringing",
+      "lines": [
+       "무릎이 하는 말",
+       "다음엔 둘레길 가자",
+       "요들도 좋고 흐미도 좋아",
+       "근데 나는 하나뿐이야",
+       "그래도 또 가겠다면",
+       "아이젠은 꼭 챙겨 줘"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "drone fades, one soft whoop",
+      "lines": []
+     },
+     {
+      "tag": "3:10-3:24",
+      "lines": [
+       "아 아",
+       "파스 냄새"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "메아리 화해, 다음 겨울에",
+    "file": "08_echo_truce_next_winter.mp3",
+    "src": "/mnt/external/suno-playlist/input/ECHO_BATTLE_PEAK/tracks/08_echo_truce_next_winter.mp3",
+    "ms": 183288,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "alphorn and horsehead fiddle in unison",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "yodel",
+      "lines": [
+       "요 로 레 이"
+      ]
+     },
+     {
+      "tag": "throat drone with whistle overtone",
+      "lines": [
+       "흐음 이이 우"
+      ]
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:44",
+      "lines": []
+     },
+     {
+      "tag": "tenor",
+      "lines": [
+       "해가 지는 주차장",
+       "아저씨를 만났어",
+       "털모자를 벗으니",
+       "생각보다 젊으셔"
+      ]
+     },
+     {
+      "tag": "baritone",
+      "lines": [
+       "네 요들 듣고 나서",
+       "나도 밤새 연습했지"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:44-0:56",
+      "lines": []
+     },
+     {
+      "tag": "both",
+      "lines": [
+       "높은 소리 낮은 소리",
+       "따로 놀 땐 몰랐어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:26",
+      "lines": []
+     },
+     {
+      "tag": "duet, full band",
+      "lines": [
+       "메아리 화해",
+       "요들레이 흐음",
+       "한 산을 같이 채워",
+       "위에서 아래까지",
+       "메아리 화해",
+       "요들레이 흐음",
+       "다음 겨울 이 자리",
+       "아이젠 차고 만나"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:26-1:52",
+      "lines": []
+     },
+     {
+      "tag": "baritone",
+      "lines": [
+       "컵라면 국물 맛",
+       "아직도 생각나"
+      ]
+     },
+     {
+      "tag": "tenor",
+      "lines": [
+       "무릎은 삐걱대도",
+       "마음은 가벼워"
+      ]
+     },
+     {
+      "tag": "both",
+      "lines": [
+       "명함 대신 주고받은",
+       "요들 한 줄 흐미 한 줄"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:04",
+      "lines": []
+     },
+     {
+      "tag": "both",
+      "lines": [
+       "높은 소리 낮은 소리",
+       "같이 하니 산이 웃어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:04-2:34",
+      "lines": []
+     },
+     {
+      "tag": "duet, full band",
+      "lines": [
+       "메아리 화해",
+       "요들레이 흐음",
+       "한 산을 같이 채워",
+       "위에서 아래까지",
+       "메아리 화해",
+       "요들레이 흐음",
+       "다음 겨울 이 자리",
+       "아이젠 차고 만나"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:34-3:02",
+      "lines": []
+     },
+     {
+      "tag": "yodel and throat singing interlocking, no words",
+      "lines": [
+       "요 로 레 이 히 호",
+       "흐음 이이 우우",
+       "요 로 레 이 디",
+       "흐으음 오오"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "3:02-3:36",
+      "lines": []
+     },
+     {
+      "tag": "group choir joins, key lift, emotional crescendo",
+      "lines": [
+       "메아리 화해",
+       "요들레이 흐음",
+       "한 산을 같이 채워",
+       "위에서 아래까지",
+       "다음 겨울 이 자리",
+       "아이젠 차고 만나"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "alphorn final call, cowbells fade",
+      "lines": []
+     },
+     {
+      "tag": "3:36-3:50",
+      "lines": [
+       "요 로 레 이",
+       "흐음",
+       "또 봐요"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat/08.mp3"
+   }
+  ],
+  "updated_at": 1795791064,
+  "cover_source": "https://i.ytimg.com/vi/PNjObEhY3f4/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1435728,
+  "cover_file": "메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat.jpg?v=06fc4db8"
+ },
+ {
   "folder": "FEAR_NOT",
   "slug": "fear-not",
   "title": "Fear Not",
@@ -17664,6 +19170,1455 @@
   "total_ms": 931128,
   "cover_file": "12월이-오는-소리-the-sound-of-december-coming.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/12월이-오는-소리-the-sound-of-december-coming.jpg?v=d39bf834"
+ },
+ {
+  "folder": "FIVE_WEEKS_NO1",
+  "slug": "다섯-주-연속-1위-five-weeks-at-number-one",
+  "title": "다섯 주 연속 1위 (Five Weeks at Number One)",
+  "genre": "90년대 중반 한국 가요 시대 사운드 — 레게 팝·스윙 댄스 팝·재즈 펑크 팝·소울 발라드·R&B 발라드·하우스 피아노 댄스·빅밴드 스윙 (허스키한 소울 남성 보컬 한 사람의 시대)",
+  "channel": "쉬어가는 감성 음악 (gamseong)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "롤라장 세 바퀴",
+    "file": "01_three_laps_roller_rink.mp3",
+    "src": "/mnt/external/suno-playlist/input/FIVE_WEEKS_NO1/tracks/01_three_laps_roller_rink.mp3",
+    "ms": 196560,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "brass fanfare, shuffle drums",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:12",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:12-0:34",
+      "lines": [
+       "토요일 오후 세 시",
+       "지하로 내려가는 계단",
+       "바퀴 소리 쏴아 쏴아",
+       "빙글 도는 색색 조명",
+       "디제이 목소리 한마디",
+       "지금부터 둘씩 타래"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:34-0:46",
+      "lines": [
+       "저기 노란 머리띠",
+       "혼자 난간 잡은 너",
+       "뒤로는 못 가는 나",
+       "그래도 손을 내밀어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:46-1:14",
+      "lines": [
+       "세 바퀴만 같이 돌자",
+       "넘어져도 괜찮아",
+       "손 꼭 잡고 한 바퀴",
+       "웃음소리 두 바퀴",
+       "마지막 세 바퀴째엔",
+       "내 이름 알려 줄게",
+       "음악 끝나기 전까지",
+       "놓지 마 놓지 마"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:14-1:38",
+      "lines": [
+       "첫 코너에 휘청",
+       "두 번째엔 철퍼덕",
+       "너는 배꼽 잡고",
+       "나는 무릎이 얼얼",
+       "그래도 손은 안 놨지",
+       "이건 내 자존심이야"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:38-1:50",
+      "lines": [
+       "천 원짜리 콜라",
+       "반씩 나눠 마시고",
+       "다음 곡도 느린 곡",
+       "디제이 형 고마워요"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:50-2:18",
+      "lines": [
+       "세 바퀴만 같이 돌자",
+       "넘어져도 괜찮아",
+       "손 꼭 잡고 한 바퀴",
+       "웃음소리 두 바퀴",
+       "마지막 세 바퀴째엔",
+       "내 이름 알려 줄게",
+       "음악 끝나기 전까지",
+       "놓지 마 놓지 마"
+      ]
+     },
+     {
+      "tag": "Brass Break",
+      "lines": []
+     },
+     {
+      "tag": "8-bar brass break, scat ad-libs",
+      "lines": []
+     },
+     {
+      "tag": "2:18-2:38",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:38-2:58",
+      "lines": [
+       "뒤로 타는 법은",
+       "다음 주에 알려 줘",
+       "토요일 세 시에",
+       "이 난간 앞에서"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, group shouts",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:34",
+      "lines": [
+       "세 바퀴만 같이 돌자",
+       "이번엔 안 넘어져",
+       "손 꼭 잡고 한 바퀴",
+       "네 이름 두 바퀴",
+       "마지막 세 바퀴째엔",
+       "다음 주를 약속해",
+       "음악 끝나기 전까지",
+       "놓지 마 놓지 마"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "brass hit, rink crowd cheer",
+      "lines": []
+     },
+     {
+      "tag": "3:34-3:50",
+      "lines": [
+       "쏴아 쏴아 한 바퀴 더"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/다섯-주-연속-1위-five-weeks-at-number-one/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "삼십 분째 기다리는 중",
+    "file": "02_thirty_minutes_waiting.mp3",
+    "src": "/mnt/external/suno-playlist/input/FIVE_WEEKS_NO1/tracks/02_thirty_minutes_waiting.mp3",
+    "ms": 216408,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "organ bubble, offbeat guitar skank",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:46",
+      "lines": [
+       "창가 두 번째 자리",
+       "약속은 두 시 정각",
+       "잡지 한 권 들고 있을게",
+       "친구가 그렇게 일렀지",
+       "시계는 두 시 삼십",
+       "물만 벌써 세 잔째"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:46-1:00",
+      "lines": [
+       "문 열릴 때마다",
+       "허리를 펴는 나",
+       "아니네 또 아니네",
+       "종소리만 딸랑"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:00-1:30",
+      "lines": [
+       "삼십 분째 기다리는 중",
+       "가도 되는데 안 가",
+       "혹시 버스가 막히나",
+       "혹시 길을 헤매나",
+       "삼십 분째 기다리는 중",
+       "웃는 연습만 열 번",
+       "오기만 하면 돼",
+       "늦은 건 내가 잊을게"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:30-1:58",
+      "lines": [
+       "옆자리 커플은 벌써",
+       "파르페를 다 비웠고",
+       "웨이터 아저씨가",
+       "물병 들고 또 와요",
+       "괜찮다고 웃었지만",
+       "속으론 땀이 삐질"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:58-2:12",
+      "lines": [
+       "그때 문이 열리고",
+       "숨이 찬 목소리",
+       "잡지 들고 계신 분",
+       "혹시 맞으세요"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:12-2:42",
+      "lines": [
+       "삼십 분 늦은 사람아",
+       "뛰어온 게 보여",
+       "머리는 다 헝클어지고",
+       "구두 끈도 풀렸네",
+       "삼십 분 늦은 사람아",
+       "앉아 숨부터 쉬어",
+       "물은 내가 시켜 놨어",
+       "세 잔이나 남았거든"
+      ]
+     },
+     {
+      "tag": "Interlude",
+      "lines": []
+     },
+     {
+      "tag": "8-bar brass interlude, organ bubble",
+      "lines": []
+     },
+     {
+      "tag": "2:42-2:58",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:18",
+      "lines": [
+       "버스가 고장 났대",
+       "두 정거장 뛰었대",
+       "그 말에 웃음이 터져",
+       "기다린 게 다 녹아"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "3:18-3:48",
+      "lines": [
+       "삼십 분째 기다린 보람",
+       "너 웃는 거 하나",
+       "다음엔 내가 늦을게",
+       "그땐 네가 기다려",
+       "삼십 분째 기다린 보람",
+       "창가 두 번째 자리",
+       "오늘부터 여기가",
+       "우리 자리 할까"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "scat ad-libs, organ fade",
+      "lines": []
+     },
+     {
+      "tag": "3:48-4:00",
+      "lines": [
+       "딸랑 종소리"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/다섯-주-연속-1위-five-weeks-at-number-one/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "일요일엔 세차를",
+    "file": "03_sunday_car_wash.mp3",
+    "src": "/mnt/external/suno-playlist/input/FIVE_WEEKS_NO1/tracks/03_sunday_car_wash.mp3",
+    "ms": 238200,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "saxophone hook, chicken-scratch guitar",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:36",
+      "lines": [
+       "일요일 아침 아홉 시",
+       "아버지 차 열쇠 받고",
+       "골목 끝 수도꼭지",
+       "호스를 길게 끌어와",
+       "양동이엔 비눗물",
+       "마음엔 설렘 한가득"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:36-0:48",
+      "lines": [
+       "아버지는 창문에서",
+       "왁스는 살살 하라네",
+       "꼬마들은 몰려와",
+       "물 좀 뿌려 달래"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:16",
+      "lines": [
+       "일요일엔 세차를 해",
+       "반짝반짝 해 줄게",
+       "열두 시에 너를 태우러",
+       "이 낡은 차 몰고 갈게",
+       "일요일엔 세차를 해",
+       "거울처럼 닦을게",
+       "네가 옆자리에 앉으면",
+       "이 동네가 다 환해"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:16-1:40",
+      "lines": [
+       "마지막 걸레질",
+       "한 발짝 물러서는데",
+       "머리 위로 푸드덕",
+       "비둘기 한 마리",
+       "보닛 위에 하얀 점",
+       "아이고 이걸 어째"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:40-1:52",
+      "lines": [
+       "시계는 열한 시 반",
+       "다시 닦을 시간 없어",
+       "에라 모르겠다",
+       "휘파람 불며 출발"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:20",
+      "lines": [
+       "일요일엔 세차를 해",
+       "반짝반짝 해 줄게",
+       "열두 시에 너를 태우러",
+       "이 낡은 차 몰고 갈게",
+       "일요일엔 세차를 해",
+       "거울처럼 닦을게",
+       "네가 옆자리에 앉으면",
+       "이 동네가 다 환해"
+      ]
+     },
+     {
+      "tag": "Sax Solo",
+      "lines": []
+     },
+     {
+      "tag": "8-bar tenor saxophone solo",
+      "lines": []
+     },
+     {
+      "tag": "2:20-2:40",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:40-3:00",
+      "lines": [
+       "너는 타자마자",
+       "보닛을 보고 웃었지",
+       "행운이래 그런 거",
+       "그 말에 나도 웃음이"
+      ]
+     },
+     {
+      "tag": "Scat Break",
+      "lines": []
+     },
+     {
+      "tag": "vocal scat break, horns answer",
+      "lines": []
+     },
+     {
+      "tag": "3:00-3:12",
+      "lines": [
+       "두비 두바 샤바 두",
+       "두비 두바 샤바 두"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "3:12-3:44",
+      "lines": [
+       "일요일엔 세차를 해",
+       "안 닦여도 괜찮아",
+       "네가 웃어 준 그 점 하나",
+       "그게 오늘 광택이야",
+       "일요일엔 세차를 해",
+       "다음 주도 또 할게",
+       "비둘기야 고마워",
+       "이번만 봐줄게"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "horn hit, laughter",
+      "lines": []
+     },
+     {
+      "tag": "3:44-3:56",
+      "lines": [
+       "반짝반짝 일요일"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/다섯-주-연속-1위-five-weeks-at-number-one/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "머리 깎던 날",
+    "file": "04_the_buzz_cut_day.mp3",
+    "src": "/mnt/external/suno-playlist/input/FIVE_WEEKS_NO1/tracks/04_the_buzz_cut_day.mp3",
+    "ms": 244152,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano, gospel voicings",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:50",
+      "lines": [
+       "동네 이발소 의자",
+       "삐걱 소리가 나고",
+       "바리캉이 지나간 자리",
+       "서늘한 바람이 불어",
+       "거울 속엔 낯선 나",
+       "너는 창밖에 서 있네"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:50-1:04",
+      "lines": [
+       "들어오지 말랬는데",
+       "유리문에 손을 대고",
+       "웃으려다 마는 너",
+       "나도 따라 그래"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:04-1:38",
+      "lines": [
+       "머리 깎던 날",
+       "아무 말도 못 했어",
+       "기다리지 말란 말이",
+       "목에 걸려 안 나와",
+       "머리 깎던 날",
+       "너는 내 뒷머리를",
+       "가만히 쓸어 주며",
+       "까끌하다 웃었지"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:38-2:10",
+      "lines": [
+       "가위 소리 멈추고",
+       "아저씨가 어깨를 털며",
+       "잘 다녀오라 하시네",
+       "천 원을 깎아 주시고",
+       "문 열고 나오니까",
+       "골목이 온통 주황빛"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:24",
+      "lines": [
+       "너는 손을 내밀어",
+       "내 머리를 쓸어 봐",
+       "이 느낌 기억할래",
+       "그 말에 눈이 뜨거워"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:24-2:58",
+      "lines": [
+       "머리 깎던 날",
+       "아무 말도 못 했어",
+       "기다리지 말란 말이",
+       "목에 걸려 안 나와",
+       "머리 깎던 날",
+       "너는 내 뒷머리를",
+       "가만히 쓸어 주며",
+       "까끌하다 웃었지"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "strings swell, emotional",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:20",
+      "lines": [
+       "머리가 다시 자라",
+       "귀를 덮을 때쯤",
+       "그때도 네가 거기서",
+       "웃어 준다면 좋겠어"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, soft choir",
+      "lines": []
+     },
+     {
+      "tag": "3:20-3:56",
+      "lines": [
+       "머리 깎던 날",
+       "이제야 말할게",
+       "기다려 달란 말",
+       "그게 진짜 내 마음",
+       "머리 깎던 날",
+       "까끌한 내 머리에",
+       "네 손이 남긴 온기",
+       "그걸로 버텨 볼게"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "solo piano, fade out",
+      "lines": []
+     },
+     {
+      "tag": "3:56-4:06",
+      "lines": [
+       "까끌하다 웃던 너"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/다섯-주-연속-1위-five-weeks-at-number-one/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "탬버린 흔들어",
+    "file": "05_shake_the_tambourine.mp3",
+    "src": "/mnt/external/suno-playlist/input/FIVE_WEEKS_NO1/tracks/05_shake_the_tambourine.mp3",
+    "ms": 199656,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "house piano, brass stabs, tambourine",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:34",
+      "lines": [
+       "금요일 밤 열 시",
+       "지하 노래방 삼 번 방",
+       "리모컨은 내 차지",
+       "번호책은 너덜너덜",
+       "다들 한 곡씩 끝나고",
+       "드디어 내 차례야"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:34-0:46",
+      "lines": [
+       "너는 구석 소파",
+       "탬버린을 들고 있고",
+       "나는 마이크 잡고",
+       "숨을 크게 들이쉬어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:46-1:12",
+      "lines": [
+       "탬버린 흔들어",
+       "더 크게 흔들어",
+       "백 점 나오면",
+       "너한테 말할게",
+       "탬버린 흔들어",
+       "박자 놓치지 마",
+       "이 노래 끝나면",
+       "내 마음도 들려줄게"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:12-1:34",
+      "lines": [
+       "간주 중에 친구들",
+       "괜히 휘파람 불고",
+       "화면 속엔 바닷가",
+       "엉뚱한 뮤직비디오",
+       "목이 살짝 갈라져도",
+       "끝까지 올라가 볼래"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:34-1:46",
+      "lines": [
+       "마지막 고음 앞에서",
+       "네 눈이 날 보네",
+       "그래 지금이야",
+       "눈 딱 감고 질러"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:46-2:12",
+      "lines": [
+       "탬버린 흔들어",
+       "더 크게 흔들어",
+       "백 점 나오면",
+       "너한테 말할게",
+       "탬버린 흔들어",
+       "박자 놓치지 마",
+       "이 노래 끝나면",
+       "내 마음도 들려줄게"
+      ]
+     },
+     {
+      "tag": "Break",
+      "lines": []
+     },
+     {
+      "tag": "spoken break, friends cheering, drum roll",
+      "lines": []
+     },
+     {
+      "tag": "2:12-2:26",
+      "lines": [
+       "점수 나온다 점수",
+       "빰빠밤 빰빠라밤"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:26-2:48",
+      "lines": [
+       "구십팔 점이래",
+       "아쉬운 박수 소리",
+       "근데 네가 웃으며",
+       "탬버린을 내밀어"
+      ]
+     },
+     {
+      "tag": "Breakdown",
+      "lines": []
+     },
+     {
+      "tag": "house piano breakdown, handclaps",
+      "lines": []
+     },
+     {
+      "tag": "2:48-3:02",
+      "lines": []
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "3:02-3:36",
+      "lines": [
+       "탬버린 흔들어",
+       "이번엔 너랑 나",
+       "백 점 아니어도",
+       "그냥 말할게 좋아해",
+       "탬버린 흔들어",
+       "연장 한 시간 더",
+       "이 노래 끝나도",
+       "우리 노래는 이제 시작"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "brass hit, tambourine, cheers",
+      "lines": []
+     },
+     {
+      "tag": "3:36-3:50",
+      "lines": [
+       "빰빠밤 빰빠라밤"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/다섯-주-연속-1위-five-weeks-at-number-one/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "전화번호부 삼백십이 쪽",
+    "file": "06_phone_book_page_312.mp3",
+    "src": "/mnt/external/suno-playlist/input/FIVE_WEEKS_NO1/tracks/06_phone_book_page_312.mp3",
+    "ms": 268320,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "electric piano, soft saxophone",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:46",
+      "lines": [
+       "두꺼운 전화번호부",
+       "책상 위에 펼쳐 놓고",
+       "네 성을 찾아가다",
+       "삼백십이 쪽에서 멈춰",
+       "아버님 이름 석 자",
+       "손가락이 떨려 와"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:46-1:00",
+      "lines": [
+       "연락은 끊겼지만",
+       "이 동네 이 번지는",
+       "아직 그대로네",
+       "한 줄로 남아 있어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:00-1:32",
+      "lines": [
+       "삼백십이 쪽",
+       "그 한 줄을 몇 번이나",
+       "손끝으로 따라가다",
+       "수화기를 들었어",
+       "신호가 두 번 가고",
+       "어머님 목소리",
+       "여보세요 그 말에",
+       "아무 말도 못 하고"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:32-2:00",
+      "lines": [
+       "조용히 내려놓은",
+       "수화기가 무거워",
+       "네 방 불이 켜졌을까",
+       "그 창가 아직 있을까",
+       "괜히 미안해져서",
+       "한참을 앉아 있어"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:14",
+      "lines": [
+       "모서리를 접어 둘게",
+       "다시는 안 걸게",
+       "그래도 버리진 못해",
+       "이 두꺼운 책"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:14-2:46",
+      "lines": [
+       "삼백십이 쪽",
+       "그 한 줄을 몇 번이나",
+       "손끝으로 따라가다",
+       "수화기를 들었어",
+       "신호가 두 번 가고",
+       "어머님 목소리",
+       "여보세요 그 말에",
+       "아무 말도 못 하고"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:46-3:06",
+      "lines": [
+       "언젠가 네가 먼저",
+       "날 찾을 일은 없겠지",
+       "그래도 괜찮을 거야",
+       "잘 지내면 그걸로 돼"
+      ]
+     },
+     {
+      "tag": "Sax Solo",
+      "lines": []
+     },
+     {
+      "tag": "alto saxophone solo",
+      "lines": []
+     },
+     {
+      "tag": "3:06-3:22",
+      "lines": []
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "3:22-3:56",
+      "lines": [
+       "삼백십이 쪽",
+       "접힌 모서리 하나",
+       "네가 사는 곳이 아직",
+       "여기 있다는 것만",
+       "그것만 알면 돼",
+       "더는 안 넘길게",
+       "잘 있어 그 한 줄",
+       "내 손끝의 너"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "electric piano, fade out",
+      "lines": []
+     },
+     {
+      "tag": "3:56-4:06",
+      "lines": [
+       "여보세요 그 목소리"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/다섯-주-연속-1위-five-weeks-at-number-one/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "파라솔 접는 날",
+    "file": "07_folding_the_parasols.mp3",
+    "src": "/mnt/external/suno-playlist/input/FIVE_WEEKS_NO1/tracks/07_folding_the_parasols.mp3",
+    "ms": 203112,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "steel drum melody, offbeat guitar skank",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:42",
+      "lines": [
+       "팔월 마지막 일요일",
+       "해수욕장 아르바이트",
+       "빨간 파라솔 백 개",
+       "오늘은 다 접는 날",
+       "옆집 튜브 가게",
+       "너도 짐을 싸고 있네"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "여름 내내 그늘 아래",
+       "얼음 커피 나눠 먹고",
+       "선크림 냄새 속에",
+       "수다만 늘어 갔지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:26",
+      "lines": [
+       "파라솔 접는 날",
+       "하나 둘 셋 접을 때마다",
+       "여름이 한 칸씩",
+       "모래 위로 내려앉아",
+       "파라솔 접는 날",
+       "마지막 하나만 남겨 둘게",
+       "그 그늘 아래",
+       "조금만 더 앉아 있자"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:26-1:52",
+      "lines": [
+       "사장님은 트럭에",
+       "튜브를 쌓아 올리고",
+       "갈매기는 끼룩끼룩",
+       "파도는 모른 척해",
+       "그을린 네 어깨에",
+       "모래가 반짝이네"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:06",
+      "lines": [
+       "서울 가면 연락해",
+       "주소는 모래에 쓰지 마",
+       "너는 웃으며 내 손바닥에",
+       "볼펜으로 적어 줬지"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:36",
+      "lines": [
+       "파라솔 접는 날",
+       "하나 둘 셋 접을 때마다",
+       "여름이 한 칸씩",
+       "모래 위로 내려앉아",
+       "파라솔 접는 날",
+       "마지막 하나만 남겨 둘게",
+       "그 그늘 아래",
+       "조금만 더 앉아 있자"
+      ]
+     },
+     {
+      "tag": "Break",
+      "lines": []
+     },
+     {
+      "tag": "steel drum and brass break, scat ad-libs",
+      "lines": []
+     },
+     {
+      "tag": "2:36-2:54",
+      "lines": []
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:54-3:14",
+      "lines": [
+       "손바닥 숫자가",
+       "땀에 번질까 봐",
+       "주먹을 꼭 쥐고",
+       "버스에 올랐어"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "3:14-3:46",
+      "lines": [
+       "파라솔 접는 날",
+       "여름은 트럭에 실려 가도",
+       "주먹 속 일곱 자리",
+       "그건 안 접을게",
+       "파라솔 접는 날",
+       "내년에도 이 바다",
+       "빨간 그늘 아래",
+       "또 만나 여기서"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "steel drum, waves, fade out",
+      "lines": []
+     },
+     {
+      "tag": "3:46-3:58",
+      "lines": [
+       "끼룩끼룩 여름 안녕"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/다섯-주-연속-1위-five-weeks-at-number-one/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "앵콜은 한 번 더",
+    "file": "08_one_more_encore.mp3",
+    "src": "/mnt/external/suno-playlist/input/FIVE_WEEKS_NO1/tracks/08_one_more_encore.mp3",
+    "ms": 223008,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "brass fanfare, live applause",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:10",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "0:10-0:30",
+      "lines": [
+       "조명이 한 번 꺼지고",
+       "진행자가 숨을 고르면",
+       "쿵 쿵 북소리",
+       "이번 주 일 위는",
+       "내 이름이 터져 나와",
+       "다섯째 주 그 자리"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:30-0:40",
+      "lines": [
+       "꽃가루가 쏟아지고",
+       "금빛 트로피 무거워",
+       "목은 벌써 쉬었지만",
+       "마이크를 다시 들어"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "0:40-1:06",
+      "lines": [
+       "앵콜은 한 번 더",
+       "다섯 주째 이 자리",
+       "방청석 너희 목소리",
+       "내 노래보다 커",
+       "앵콜은 한 번 더",
+       "목이 다 쉬어도 좋아",
+       "이 무대 내려가기 전",
+       "한 번만 더 불러 볼게"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:26",
+      "lines": [
+       "첫 주엔 떨려서",
+       "가사를 두 번 틀렸고",
+       "셋째 주엔 비 맞으며",
+       "줄 서던 너희를 봤어",
+       "노란 풍선 하나하나",
+       "다 기억하고 있어"
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:26-1:36",
+      "lines": [
+       "엄마는 시장 골목",
+       "상인들께 자랑 중",
+       "아버지는 말없이",
+       "테이프에 녹화 중"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "1:36-2:02",
+      "lines": [
+       "앵콜은 한 번 더",
+       "다섯 주째 이 자리",
+       "방청석 너희 목소리",
+       "내 노래보다 커",
+       "앵콜은 한 번 더",
+       "목이 다 쉬어도 좋아",
+       "이 무대 내려가기 전",
+       "한 번만 더 불러 볼게"
+      ]
+     },
+     {
+      "tag": "Sax Soli",
+      "lines": []
+     },
+     {
+      "tag": "8-bar saxophone soli, horn shouts",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:18",
+      "lines": []
+     },
+     {
+      "tag": "Scat Break",
+      "lines": []
+     },
+     {
+      "tag": "scat call-and-response with gospel choir",
+      "lines": []
+     },
+     {
+      "tag": "2:18-2:34",
+      "lines": [
+       "샤바 두비두 바",
+       "샤바 두비두 바"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "2:34-2:54",
+      "lines": [
+       "다음 주엔 내려와도",
+       "이 노래는 남겠지",
+       "너희가 따라 부른",
+       "이 후렴만큼은"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "key change up, full gospel choir",
+      "lines": []
+     },
+     {
+      "tag": "2:54-3:30",
+      "lines": [
+       "앵콜은 한 번 더",
+       "다섯 주의 기적",
+       "방청석 너희 목소리",
+       "그게 나의 트로피",
+       "앵콜은 한 번 더",
+       "목이 다 쉬어도 좋아",
+       "이 무대 내려가도",
+       "너희 노래로 남을게"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "big band final hit, roaring applause",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:44",
+      "lines": [
+       "고마워 한 번 더"
+      ]
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/다섯-주-연속-1위-five-weeks-at-number-one/08.mp3"
+   }
+  ],
+  "updated_at": 1795791063,
+  "cover_source": "https://i.ytimg.com/vi/ZaNNicqbNR4/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 1789416,
+  "cover_file": "다섯-주-연속-1위-five-weeks-at-number-one.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/다섯-주-연속-1위-five-weeks-at-number-one.jpg?v=19f5c3f8"
  },
  {
   "folder": "FOREIGN_GODS",
@@ -74178,6 +77133,1374 @@
   "total_ms": 1230144,
   "cover_file": "약속-30분-전-30-minutes-before-we-meet.jpg",
   "cover_url": "https://audio.yojosuknam.com/cover/약속-30분-전-30-minutes-before-we-meet.jpg?v=cf4586aa"
+ },
+ {
+  "folder": "THOUSAND_HILLS_PRAISE",
+  "slug": "praise-from-a-thousand-hills",
+  "title": "Praise from a Thousand Hills",
+  "genre": "East African Gospel / Great Lakes Praise & Worship (Afro gospel — 밝은 클린 일렉 기타 아르페지오·둥근 베이스·키보드 패드·가벼운 드럼과 손 타악기·콜앤리스폰스 합창)",
+  "channel": "Still Waters (`stillwaters`)",
+  "tracks": [
+   {
+    "n": 1,
+    "title": "Morning on a Thousand Hills",
+    "file": "01_morning_on_a_thousand_hills.mp3",
+    "src": "/mnt/external/suno-playlist/input/THOUSAND_HILLS_PRAISE/tracks/01_morning_on_a_thousand_hills.mp3",
+    "ms": 214848,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "deep drum hits, then bright guitar arpeggio enters",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female lead, light groove",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:44",
+      "lines": [
+       "Mist is lifting off the valley,",
+       "Roosters calling down the line,",
+       "All the hills put on their green and gold,",
+       "Every leaf is catching light."
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir hums underneath",
+      "lines": []
+     },
+     {
+      "tag": "0:44-0:58",
+      "lines": [
+       "And the cattle on the mountains,",
+       "And the birds along the ridge,",
+       "They belong to You, they belong to You!"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full choir answers the lead",
+      "lines": []
+     },
+     {
+      "tag": "0:58-1:26",
+      "lines": [
+       "Morning on a thousand hills (we sing, we sing!)",
+       "You are Lord of every valley (Lord of everything!)",
+       "From the lakeshore to the highlands (let the whole world ring!)",
+       "Morning on a thousand hills, we sing!"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female lead, guitars a little brighter",
+      "lines": []
+     },
+     {
+      "tag": "1:26-1:54",
+      "lines": [
+       "Mama walking with her basket,",
+       "Children racing up the road,",
+       "Every hand that works the red earth",
+       "Knows the One who holds the load."
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir hums underneath",
+      "lines": []
+     },
+     {
+      "tag": "1:54-2:08",
+      "lines": [
+       "And the cattle on the mountains,",
+       "And the birds along the ridge,",
+       "They belong to You, they belong to You!"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full choir answers the lead",
+      "lines": []
+     },
+     {
+      "tag": "2:08-2:36",
+      "lines": [
+       "Morning on a thousand hills (we sing, we sing!)",
+       "You are Lord of every valley (Lord of everything!)",
+       "From the lakeshore to the highlands (let the whole world ring!)",
+       "Morning on a thousand hills, we sing!"
+      ]
+     },
+     {
+      "tag": "Guitar Break",
+      "lines": []
+     },
+     {
+      "tag": "dance break, two guitars interlocking, choir chant",
+      "lines": []
+     },
+     {
+      "tag": "2:36-3:04",
+      "lines": [
+       "Who made the mountains? (God made the mountains!)",
+       "Who feeds the sparrow? (God feeds the sparrow!)",
+       "Who wakes the morning? (God wakes the morning!)",
+       "Give Him the glory! (Give Him the glory!)"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full choir and lead, joyful",
+      "lines": []
+     },
+     {
+      "tag": "3:04-3:32",
+      "lines": [
+       "Morning on a thousand hills (we sing, we sing!)",
+       "You are Lord of every valley (Lord of everything!)",
+       "From the lakeshore to the highlands (let the whole world ring!)",
+       "Morning on a thousand hills, we sing!"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar arpeggio, last deep drum hit",
+      "lines": []
+     },
+     {
+      "tag": "3:32-3:44",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/praise-from-a-thousand-hills/01.mp3"
+   },
+   {
+    "n": 2,
+    "title": "Lanterns on the Lake",
+    "file": "02_lanterns_on_the_lake.mp3",
+    "src": "/mnt/external/suno-playlist/input/THOUSAND_HILLS_PRAISE/tracks/02_lanterns_on_the_lake.mp3",
+    "ms": 252960,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "guitar arpeggio like light on water",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male lead, soft groove",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "All night long we kept the lanterns burning,",
+       "Little boats out on the open lake,",
+       "Pulled the nets and found them empty,",
+       "Tired hands and hearts about to break."
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir joins softly",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "Then the morning came across the water,",
+       "And a voice said, go a little deeper."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir answers the lead",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:24",
+      "lines": [
+       "You fill the empty nets (You fill them, Lord)",
+       "You turn the night to day (You turn it, Lord)",
+       "When I have nothing left to bring,",
+       "You meet me on the lake (You meet me, Lord)"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male lead, guitars brighter",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:52",
+      "lines": [
+       "So I'll row out where the water's deeper,",
+       "I will trust the word that You have said,",
+       "Though my arms are aching from the darkness,",
+       "You will give us daily bread."
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir joins softly",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:06",
+      "lines": [
+       "Then the morning came across the water,",
+       "And a voice said, go a little deeper."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir answers the lead",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:34",
+      "lines": [
+       "You fill the empty nets (You fill them, Lord)",
+       "You turn the night to day (You turn it, Lord)",
+       "When I have nothing left to bring,",
+       "You meet me on the lake (You meet me, Lord)"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "guitars drop low, choir hums",
+      "lines": []
+     },
+     {
+      "tag": "2:34-3:02",
+      "lines": [
+       "Lanterns going out one by one,",
+       "Now the shore is shining in the sun,",
+       "What I could not catch in all the night,",
+       "You gave me in the morning light."
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full choir and lead",
+      "lines": []
+     },
+     {
+      "tag": "3:02-3:30",
+      "lines": [
+       "You fill the empty nets (You fill them, Lord)",
+       "You turn the night to day (You turn it, Lord)",
+       "When I have nothing left to bring,",
+       "You meet me on the lake (You meet me, Lord)"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar arpeggio fades",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:42",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/praise-from-a-thousand-hills/02.mp3"
+   },
+   {
+    "n": 3,
+    "title": "Red Road Hallelujah",
+    "file": "03_red_road_hallelujah.mp3",
+    "src": "/mnt/external/suno-playlist/input/THOUSAND_HILLS_PRAISE/tracks/03_red_road_hallelujah.mp3",
+    "ms": 187584,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "fast guitar lead line, claps",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male lead",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:40",
+      "lines": [
+       "Shoes are shining, Sunday's calling,",
+       "Dust is rising red and warm,",
+       "Neighbors waving from the doorways,",
+       "Coming in from every farm."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female lead",
+      "lines": []
+     },
+     {
+      "tag": "0:40-1:06",
+      "lines": [
+       "Grandpa singing with his walking stick,",
+       "Babies riding on a back,",
+       "Every step is getting lighter",
+       "On this narrow red earth track."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir answers the leads",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:34",
+      "lines": [
+       "Red road hallelujah (hallelujah!)",
+       "Every step a song of praise (hallelujah!)",
+       "Beautiful the feet that carry (hallelujah!)",
+       "Good news down the road today!"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "male and female leads together",
+      "lines": []
+     },
+     {
+      "tag": "1:34-2:00",
+      "lines": [
+       "We were walking all alone once,",
+       "Lost along a broken way,",
+       "Then You found us, then You turned us,",
+       "Now we're walking in the day."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir answers the leads",
+      "lines": []
+     },
+     {
+      "tag": "2:00-2:28",
+      "lines": [
+       "Red road hallelujah (hallelujah!)",
+       "Every step a song of praise (hallelujah!)",
+       "Beautiful the feet that carry (hallelujah!)",
+       "Good news down the road today!"
+      ]
+     },
+     {
+      "tag": "Guitar Break",
+      "lines": []
+     },
+     {
+      "tag": "dance break, guitar lead runs over the groove, choir shouts",
+      "lines": []
+     },
+     {
+      "tag": "2:28-2:56",
+      "lines": [
+       "Left foot, right foot (walk it out!)",
+       "Clap your hands now (shout it out!)",
+       "Tell your neighbor (He is good!)",
+       "Tell the whole world (He is good!)"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full choir, both leads",
+      "lines": []
+     },
+     {
+      "tag": "2:56-3:24",
+      "lines": [
+       "Red road hallelujah (hallelujah!)",
+       "Every step a song of praise (hallelujah!)",
+       "Beautiful the feet that carry (hallelujah!)",
+       "Good news down the road today!"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar line and claps, ending hit",
+      "lines": []
+     },
+     {
+      "tag": "3:24-3:36",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/praise-from-a-thousand-hills/03.mp3"
+   },
+   {
+    "n": 4,
+    "title": "Written on His Hand",
+    "file": "04_written_on_his_hand.mp3",
+    "src": "/mnt/external/suno-playlist/input/THOUSAND_HILLS_PRAISE/tracks/04_written_on_his_hand.mp3",
+    "ms": 233136,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "soft guitar arpeggio and keys",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female lead, gentle",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:48",
+      "lines": [
+       "Can a mother lose her baby,",
+       "Leave the little one she bore?",
+       "Even if a mother wandered,",
+       "You would love me all the more."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female lead, keys fuller",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:20",
+      "lines": [
+       "When I feel like I'm forgotten",
+       "In the corner of the night,",
+       "You hold out Your open hands, Lord,",
+       "And my name is there in sight."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft choir answers",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:56",
+      "lines": [
+       "I'm written on Your hand (written on Your hand)",
+       "You will not let me go (You will not let me go)",
+       "Through every passing year,",
+       "My name is safe with You (safe with You)"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "female lead, quieter",
+      "lines": []
+     },
+     {
+      "tag": "1:56-2:28",
+      "lines": [
+       "Every scar and every story,",
+       "Every tear I couldn't say,",
+       "You have held them in Your keeping,",
+       "You will wipe them all away."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft choir answers",
+      "lines": []
+     },
+     {
+      "tag": "2:28-3:04",
+      "lines": [
+       "I'm written on Your hand (written on Your hand)",
+       "You will not let me go (You will not let me go)",
+       "Through every passing year,",
+       "My name is safe with You (safe with You)"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar arpeggio, lead hums softly, choir holds a chord",
+      "lines": []
+     },
+     {
+      "tag": "3:04-3:22",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/praise-from-a-thousand-hills/04.mp3"
+   },
+   {
+    "n": 5,
+    "title": "Rain Is Coming to the Hills",
+    "file": "05_rain_is_coming_to_the_hills.mp3",
+    "src": "/mnt/external/suno-playlist/input/THOUSAND_HILLS_PRAISE/tracks/05_rain_is_coming_to_the_hills.mp3",
+    "ms": 214992,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "rain stick, guitar arpeggio enters",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male lead",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:42",
+      "lines": [
+       "Seed is waiting in the basket,",
+       "Ground is hard and cracked and dry,",
+       "Every morning we are watching",
+       "For a cloud across the sky."
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir joins",
+      "lines": []
+     },
+     {
+      "tag": "0:42-0:56",
+      "lines": [
+       "But I hear it in the distance,",
+       "Like a whisper on the wind."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir answers the lead",
+      "lines": []
+     },
+     {
+      "tag": "0:56-1:24",
+      "lines": [
+       "Rain is coming to the hills (rain is coming!)",
+       "You are faithful as the dawn (faithful as the dawn!)",
+       "Like the spring rain on the gardens,",
+       "You will come, Lord, You will come (You will come!)"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male lead, groove fuller",
+      "lines": []
+     },
+     {
+      "tag": "1:24-1:52",
+      "lines": [
+       "So we plant before we see it,",
+       "Sow in hope and not in fear,",
+       "Every furrow is a prayer, Lord,",
+       "Every seed says You are near."
+      ]
+     },
+     {
+      "tag": "Pre-Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir joins",
+      "lines": []
+     },
+     {
+      "tag": "1:52-2:06",
+      "lines": [
+       "And I hear it in the distance,",
+       "Like a whisper on the wind."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir answers the lead",
+      "lines": []
+     },
+     {
+      "tag": "2:06-2:34",
+      "lines": [
+       "Rain is coming to the hills (rain is coming!)",
+       "You are faithful as the dawn (faithful as the dawn!)",
+       "Like the spring rain on the gardens,",
+       "You will come, Lord, You will come (You will come!)"
+      ]
+     },
+     {
+      "tag": "Bridge",
+      "lines": []
+     },
+     {
+      "tag": "drums drop to hand percussion, choir builds",
+      "lines": []
+     },
+     {
+      "tag": "2:34-3:02",
+      "lines": [
+       "Drop by drop on the banana leaves,",
+       "Drop by drop on the thirsty ground,",
+       "Drop by drop You are pouring out,",
+       "Hear the sound, hear the sound!"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band and choir",
+      "lines": []
+     },
+     {
+      "tag": "3:02-3:30",
+      "lines": [
+       "Rain is coming to the hills (rain is coming!)",
+       "You are faithful as the dawn (faithful as the dawn!)",
+       "Like the spring rain on the gardens,",
+       "You will come, Lord, You will come (You will come!)"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar arpeggio, soft rain stick",
+      "lines": []
+     },
+     {
+      "tag": "3:30-3:42",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/praise-from-a-thousand-hills/05.mp3"
+   },
+   {
+    "n": 6,
+    "title": "Ten Thousand Thank-Yous",
+    "file": "06_ten_thousand_thank_yous.mp3",
+    "src": "/mnt/external/suno-playlist/input/THOUSAND_HILLS_PRAISE/tracks/06_ten_thousand_thank_yous.mp3",
+    "ms": 187416,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "guitar riff and claps",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:14",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female lead",
+      "lines": []
+     },
+     {
+      "tag": "0:14-0:40",
+      "lines": [
+       "Woke up with breath inside my body,",
+       "Bread and water on the floor,",
+       "Light came in across the window,",
+       "Love was knocking at my door."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male lead",
+      "lines": []
+     },
+     {
+      "tag": "0:40-1:06",
+      "lines": [
+       "He forgave the things I carried,",
+       "Healed the places I was sore,",
+       "Lifted me from out the ditch, Lord,",
+       "Set my feet upon the shore."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir answers the leads",
+      "lines": []
+     },
+     {
+      "tag": "1:06-1:34",
+      "lines": [
+       "Ten thousand thank-yous (thank You, Lord!)",
+       "Will never be enough (thank You, Lord!)",
+       "Bless the Lord, my soul, don't forget it,",
+       "Every good thing comes from love (thank You, Lord!)"
+      ]
+     },
+     {
+      "tag": "Call and Response",
+      "lines": []
+     },
+     {
+      "tag": "leads call, choir counts back",
+      "lines": []
+     },
+     {
+      "tag": "1:34-2:02",
+      "lines": [
+       "For the morning (thank You!)",
+       "For the harvest (thank You!)",
+       "For my mother (thank You!)",
+       "For my neighbor (thank You!)",
+       "For the healing (thank You!)",
+       "For forgiveness (thank You!)",
+       "For the Savior (thank You, thank You, Lord!)"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir answers the leads",
+      "lines": []
+     },
+     {
+      "tag": "2:02-2:30",
+      "lines": [
+       "Ten thousand thank-yous (thank You, Lord!)",
+       "Will never be enough (thank You, Lord!)",
+       "Bless the Lord, my soul, don't forget it,",
+       "Every good thing comes from love (thank You, Lord!)"
+      ]
+     },
+     {
+      "tag": "Guitar Break",
+      "lines": []
+     },
+     {
+      "tag": "dance break, guitars interlocking, claps",
+      "lines": []
+     },
+     {
+      "tag": "2:30-2:58",
+      "lines": []
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full choir, both leads",
+      "lines": []
+     },
+     {
+      "tag": "2:58-3:26",
+      "lines": [
+       "Ten thousand thank-yous (thank You, Lord!)",
+       "Will never be enough (thank You, Lord!)",
+       "Bless the Lord, my soul, don't forget it,",
+       "Every good thing comes from love (thank You, Lord!)"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar riff, final clap",
+      "lines": []
+     },
+     {
+      "tag": "3:26-3:38",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/praise-from-a-thousand-hills/06.mp3"
+   },
+   {
+    "n": 7,
+    "title": "Under the Mango Tree",
+    "file": "07_under_the_mango_tree.mp3",
+    "src": "/mnt/external/suno-playlist/input/THOUSAND_HILLS_PRAISE/tracks/07_under_the_mango_tree.mp3",
+    "ms": 202704,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "soft guitar arpeggio, distant birds",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "male lead, gentle",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:48",
+      "lines": [
+       "When the noon sun burns the pathway",
+       "And the dust is in my eyes,",
+       "There's a place where I can sit down,",
+       "There's a shade where I can rise."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "male lead",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:20",
+      "lines": [
+       "Like a mother hen and chickens,",
+       "Like the wide arms of a tree,",
+       "You have spread Your wings around me,",
+       "You have made a home for me."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft choir answers",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:56",
+      "lines": [
+       "Under the mango tree (under Your shade)",
+       "I rest my heart in You (I rest in You)",
+       "The Most High is my shelter,",
+       "My hiding place is You (my hiding place)"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "male lead, softer",
+      "lines": []
+     },
+     {
+      "tag": "1:56-2:28",
+      "lines": [
+       "I will tell the weary stranger",
+       "Walking on the road alone,",
+       "There is room beneath these branches,",
+       "Come and rest, you're not alone."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "soft choir answers",
+      "lines": []
+     },
+     {
+      "tag": "2:28-3:04",
+      "lines": [
+       "Under the mango tree (under Your shade)",
+       "I rest my heart in You (I rest in You)",
+       "The Most High is my shelter,",
+       "My hiding place is You (my hiding place)"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar arpeggio, choir holds a soft chord",
+      "lines": []
+     },
+     {
+      "tag": "3:04-3:22",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/praise-from-a-thousand-hills/07.mp3"
+   },
+   {
+    "n": 8,
+    "title": "The Drum Before the Dawn",
+    "file": "08_the_drum_before_the_dawn.mp3",
+    "src": "/mnt/external/suno-playlist/input/THOUSAND_HILLS_PRAISE/tracks/08_the_drum_before_the_dawn.mp3",
+    "ms": 192696,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "deep traditional drums alone, then guitar enters",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:18",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female lead calls, choir answers",
+      "lines": []
+     },
+     {
+      "tag": "0:18-0:46",
+      "lines": [
+       "Wake up, harp and wake up, guitar (wake up, wake up!)",
+       "Wake up, voices, one and all (wake up, wake up!)",
+       "Before the rooster finds his morning,",
+       "We will sing the first song of all!"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full choir",
+      "lines": []
+     },
+     {
+      "tag": "0:46-1:14",
+      "lines": [
+       "We will wake the dawn with praise (wake the dawn!)",
+       "Lift His name above the skies (above the skies!)",
+       "Let the hills and valleys answer,",
+       "Our God reigns and our God is wise!"
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female lead calls, choir answers",
+      "lines": []
+     },
+     {
+      "tag": "1:14-1:42",
+      "lines": [
+       "From the lake up to the mountains (sing it out, sing it out!)",
+       "From the market to the field (sing it out, sing it out!)",
+       "Every heart that He has carried,",
+       "Every wound that He has healed!"
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full choir",
+      "lines": []
+     },
+     {
+      "tag": "1:42-2:10",
+      "lines": [
+       "We will wake the dawn with praise (wake the dawn!)",
+       "Lift His name above the skies (above the skies!)",
+       "Let the hills and valleys answer,",
+       "Our God reigns and our God is wise!"
+      ]
+     },
+     {
+      "tag": "Drum Break",
+      "lines": []
+     },
+     {
+      "tag": "traditional drums and hand claps, choir chants",
+      "lines": []
+     },
+     {
+      "tag": "2:10-2:38",
+      "lines": [
+       "Strike the drum (praise Him!)",
+       "Lift your hands (praise Him!)",
+       "Dance for joy (praise Him!)",
+       "Through the lands (praise Him!)"
+      ]
+     },
+     {
+      "tag": "Final Chorus",
+      "lines": []
+     },
+     {
+      "tag": "full band, choir and lead",
+      "lines": []
+     },
+     {
+      "tag": "2:38-3:06",
+      "lines": [
+       "We will wake the dawn with praise (wake the dawn!)",
+       "Lift His name above the skies (above the skies!)",
+       "Let the hills and valleys answer,",
+       "Our God reigns and our God is wise!"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitars and one last drum hit",
+      "lines": []
+     },
+     {
+      "tag": "3:06-3:18",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/praise-from-a-thousand-hills/08.mp3"
+   },
+   {
+    "n": 9,
+    "title": "Peace Like the Evening Lake",
+    "file": "09_peace_like_the_evening_lake.mp3",
+    "src": "/mnt/external/suno-playlist/input/THOUSAND_HILLS_PRAISE/tracks/09_peace_like_the_evening_lake.mp3",
+    "ms": 238824,
+    "instrumental": false,
+    "lyrics": [
+     {
+      "tag": "Intro",
+      "lines": []
+     },
+     {
+      "tag": "guitar arpeggio, soft keys, evening insects",
+      "lines": []
+     },
+     {
+      "tag": "0:00-0:16",
+      "lines": []
+     },
+     {
+      "tag": "Verse 1",
+      "lines": []
+     },
+     {
+      "tag": "female lead, gentle",
+      "lines": []
+     },
+     {
+      "tag": "0:16-0:48",
+      "lines": [
+       "All the boats are home and resting,",
+       "All the market sounds are gone,",
+       "And the sky is pink and golden",
+       "Where the day has carried on."
+      ]
+     },
+     {
+      "tag": "Verse 2",
+      "lines": []
+     },
+     {
+      "tag": "female lead",
+      "lines": []
+     },
+     {
+      "tag": "0:48-1:20",
+      "lines": [
+       "I have carried every worry",
+       "Up and down the road today,",
+       "Now I lay them at Your feet, Lord,",
+       "And I let them float away."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir hums and echoes",
+      "lines": []
+     },
+     {
+      "tag": "1:20-1:56",
+      "lines": [
+       "Peace like the evening lake (peace like the lake)",
+       "Deeper than I understand (deeper than I know)",
+       "Guarding my heart tonight,",
+       "I'm resting in Your hand (resting in Your hand)"
+      ]
+     },
+     {
+      "tag": "Verse 3",
+      "lines": []
+     },
+     {
+      "tag": "female lead, softer",
+      "lines": []
+     },
+     {
+      "tag": "1:56-2:28",
+      "lines": [
+       "For the ones who cannot sleep, Lord,",
+       "For the sick and for the poor,",
+       "Let Your quiet fill their houses,",
+       "Let it settle on each door."
+      ]
+     },
+     {
+      "tag": "Chorus",
+      "lines": []
+     },
+     {
+      "tag": "choir hums and echoes",
+      "lines": []
+     },
+     {
+      "tag": "2:28-3:04",
+      "lines": [
+       "Peace like the evening lake (peace like the lake)",
+       "Deeper than I understand (deeper than I know)",
+       "Guarding my heart tonight,",
+       "I'm resting in Your hand (resting in Your hand)"
+      ]
+     },
+     {
+      "tag": "Outro",
+      "lines": []
+     },
+     {
+      "tag": "guitar arpeggio fades, choir hums",
+      "lines": []
+     },
+     {
+      "tag": "3:04-3:24",
+      "lines": []
+     },
+     {
+      "tag": "End",
+      "lines": []
+     }
+    ],
+    "url": "https://audio.yojosuknam.com/audio/praise-from-a-thousand-hills/09.mp3"
+   },
+   {
+    "n": 10,
+    "title": "Guitar at Sundown",
+    "file": "10_guitar_at_sundown.mp3",
+    "src": "/mnt/external/suno-playlist/input/THOUSAND_HILLS_PRAISE/tracks/10_guitar_at_sundown.mp3",
+    "ms": 263520,
+    "instrumental": true,
+    "lyrics": [],
+    "url": "https://audio.yojosuknam.com/audio/praise-from-a-thousand-hills/10.mp3"
+   }
+  ],
+  "updated_at": 1795791066,
+  "cover_source": "https://i.ytimg.com/vi/9Y7rFg8Kunw/maxresdefault.jpg",
+  "cover_match": 1.0,
+  "cover_how": "album",
+  "total_ms": 2188680,
+  "cover_file": "praise-from-a-thousand-hills.jpg",
+  "cover_url": "https://audio.yojosuknam.com/cover/praise-from-a-thousand-hills.jpg?v=1ca46efe"
  },
  {
   "folder": "THREE_DAY_ABS",

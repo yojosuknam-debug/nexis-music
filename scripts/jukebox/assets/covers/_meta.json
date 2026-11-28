@@ -1056,5 +1056,23 @@
   "src": "/mnt/external/suno-playlist/output/산사_캐럴_—_이웃의_생일을_축하하며_(Temple_Bell_Carols)_project/thumbnail.png",
   "project": "산사_캐럴_—_이웃의_생일을_축하하며_(Temple_Bell_Carols)_project",
   "match_score": 1.0
+ },
+ "메아리-배틀-요들-대-흐미-echo-battle-yodel-vs-throat": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/메아리_배틀:_요들_대_흐미_(Echo_Battle:_Yodel_vs_Throat)_project/thumbnail.png",
+  "project": "메아리_배틀:_요들_대_흐미_(Echo_Battle:_Yodel_vs_Throat)_project",
+  "match_score": 1.0
+ },
+ "다섯-주-연속-1위-five-weeks-at-number-one": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/다섯_주_연속_1위_(Five_Weeks_at_Number_One)_project/thumbnail.png",
+  "project": "다섯_주_연속_1위_(Five_Weeks_at_Number_One)_project",
+  "match_score": 1.0
+ },
+ "praise-from-a-thousand-hills": {
+  "kind": "project_thumbnail",
+  "src": "/mnt/external/suno-playlist/output/Praise_from_a_Thousand_Hills_project/thumbnail.png",
+  "project": "Praise_from_a_Thousand_Hills_project",
+  "match_score": 1.0
  }
 }
